@@ -6,6 +6,7 @@
 !/pack/
 !/mods-src/
 !/docs/
+!/launcher/
 
 # copies of other mods' English texts and leftovers of removed mods
 /pack/_removed/
@@ -17,6 +18,9 @@
 **/__pycache__/
 **/.cache/
 /mods-src/*/build/
+/launcher/dist/
+**/bin/
+**/obj/
 *.jar
 *.log
 

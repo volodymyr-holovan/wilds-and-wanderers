@@ -89,7 +89,7 @@ MODRINTH = {
     # faster chunk generation on a weak server
     "lithium": "both", "noisiumforked": "server", "c2me-neoforge": "server",
     # --- optional for stronger PCs ---
-    "distanthorizons": "client", "iris": "opt-client",
+    "distanthorizons": "client", "iris": "client",
 }
 
 # CurseForge-only projects: project id -> placement (files come from the public CFWidget API)

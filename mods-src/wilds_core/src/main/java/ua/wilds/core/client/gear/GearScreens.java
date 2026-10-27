@@ -276,6 +276,7 @@ public final class GearScreens {
         if (t < 0 && mc.screen != null) return;
         t++;
         switch (t) {
+            case 290 -> shot(mc, "0_world");
             case 300 -> mc.setScreen(new InventoryScreen(mc.player));
             case 380 -> shot(mc, "1_inventory");
             case 390 -> call(mc.screen, "showCosmeticState", true);

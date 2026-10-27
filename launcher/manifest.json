@@ -1,0 +1,2933 @@
+{
+ "version": "2026.10.27.2",
+ "minecraft": "1.21.1",
+ "neoforge": {
+  "version": "21.1.264",
+  "installer": {
+   "file": "neoforge-21.1.264-installer.jar",
+   "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.264/neoforge-21.1.264-installer.jar",
+   "sha1": "f801601bafa7f5957295353930e2cb61dcfddc6c",
+   "size": 6992411
+  }
+ },
+ "mods": [
+  {
+   "file": "accessories-neoforge-1.1.0-beta.54+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/dy9BbDEy/accessories-neoforge-1.1.0-beta.54%2B1.21.1.jar",
+   "sha1": "0d0b07fa319a9f93c82873f9851ad35e100031f6",
+   "size": 1086553
+  },
+  {
+   "file": "accessories_compat_layer-neoforge-0.1.13+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/ySnjMzLg/versions/UB8bxpVn/accessories_compat_layer-neoforge-0.1.13%2B1.21.1.jar",
+   "sha1": "87032a586140cded332c0240a4aed13b50f28a44",
+   "size": 405559
+  },
+  {
+   "file": "ae2wtlib-19.5.1.jar",
+   "url": "https://cdn.modrinth.com/data/pNabrMMw/versions/CxSEpEnO/ae2wtlib-19.5.1.jar",
+   "sha1": "b1bee01393b15f1eb0f46d58862ef99234e1d337",
+   "size": 252091
+  },
+  {
+   "file": "aether-1.21.1-1.5.10-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/YhmgMVyu/versions/K5X5qMwG/aether-1.21.1-1.5.10-neoforge.jar",
+   "sha1": "7554b1dd391b8dd06a810918ec705d0493f693eb",
+   "size": 40223909
+  },
+  {
+   "file": "alexscaves-1.1.3-neoforge+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/cO2CvXug/versions/ReYW4B9C/alexscaves-1.1.3-neoforge%2B1.21.1.jar",
+   "sha1": "830099d350b8e80860a952e8491714ff7d78d957",
+   "size": 75290877
+  },
+  {
+   "file": "alexsmobs-2.2.4-neoforge+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/kYIaHHfw/versions/9yycc4XZ/alexsmobs-2.2.4-neoforge%2B1.21.1.jar",
+   "sha1": "9e7c7e11be880cd6106819f6c7bed829e45b5754",
+   "size": 27466197
+  },
+  {
+   "file": "almostunified-neoforge-1.21.1-1.4.2.jar",
+   "url": "https://cdn.modrinth.com/data/sdaSaQEz/versions/e8iYxxI3/almostunified-neoforge-1.21.1-1.4.2.jar",
+   "sha1": "f9a58fa95780f4b045d30559c1fdaedaa7f0fba3",
+   "size": 295093
+  },
+  {
+   "file": "Apotheosis-1.21.1-8.9.0.jar",
+   "url": "https://cdn.modrinth.com/data/rqFWfVlz/versions/veL1ccTb/Apotheosis-1.21.1-8.9.0.jar",
+   "sha1": "2d8b59070a221bcc2e3ea08b3b48cbf034b77c71",
+   "size": 7184314
+  },
+  {
+   "file": "ApothicAttributes-1.21.1-2.11.0.jar",
+   "url": "https://cdn.modrinth.com/data/DGaH8Rh0/versions/64fZbLnj/ApothicAttributes-1.21.1-2.11.0.jar",
+   "sha1": "7ff0e452e10cb582c188626a413037e63db9ca04",
+   "size": 319609
+  },
+  {
+   "file": "ApothicEnchanting-1.21.1-1.6.4.jar",
+   "url": "https://cdn.modrinth.com/data/pL8MtgqY/versions/JAQJkLJ1/ApothicEnchanting-1.21.1-1.6.4.jar",
+   "sha1": "d88e75b60e97dae8054ee10f3a92aa2bb812b8b9",
+   "size": 5422885
+  },
+  {
+   "file": "ApothicSpawners-1.21.1-1.4.0.jar",
+   "url": "https://cdn.modrinth.com/data/DfxVkOAO/versions/pWfxcfO2/ApothicSpawners-1.21.1-1.4.0.jar",
+   "sha1": "b3be29751daea738e691db8949cce079e5aae3be",
+   "size": 129784
+  },
+  {
+   "file": "appleskin-neoforge-mc1.21-3.0.9.jar",
+   "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar",
+   "sha1": "81cf0e668f991f83ac8820c386fbd6c9c3602246",
+   "size": 75804
+  },
+  {
+   "file": "Applied-Mekanistics-1.6.3.jar",
+   "url": "https://cdn.modrinth.com/data/IiATswDj/versions/TpUCzFaW/Applied-Mekanistics-1.6.3.jar",
+   "sha1": "bec4a47269ec23bca2329742e13409bfde69c5c3",
+   "size": 149709
+  },
+  {
+   "file": "appliedenergistics2-19.2.18.jar",
+   "url": "https://cdn.modrinth.com/data/XxWD5pD3/versions/KDnFUmMm/appliedenergistics2-19.2.18.jar",
+   "sha1": "bcd04bc7f181b2ffa314625f284c8eca6fee7fe4",
+   "size": 8236552
+  },
+  {
+   "file": "architectury-13.0.11-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar",
+   "sha1": "008656a0702801174b8ec245ed7aad1921d6e9f1",
+   "size": 584734
+  },
+  {
+   "file": "ars_n_spells-3.3.5.jar",
+   "url": "https://cdn.modrinth.com/data/NlMT8pQt/versions/5OeZngO7/ars_n_spells-3.3.5.jar",
+   "sha1": "2f7507857bed9f493b6b86d5289d15957de8a2e7",
+   "size": 2325760
+  },
+  {
+   "file": "ars_nouveau-1.21.1-5.13.3.jar",
+   "url": "https://cdn.modrinth.com/data/TKB6INcv/versions/yWDnir1o/ars_nouveau-1.21.1-5.13.3.jar",
+   "sha1": "541b3286d187deeb9a1297a509d0d3539d8af0f6",
+   "size": 19841105
+  },
+  {
+   "file": "BadOptimizations-2.4.1-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/S2qthD5S/BadOptimizations-2.4.1-1.21.1.jar",
+   "sha1": "1461d8e46391efd32a3085150e86094c9f6f5c9d",
+   "size": 283566
+  },
+  {
+   "file": "balm-neoforge-1.21.1-21.0.66.jar",
+   "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/CquiaiDj/balm-neoforge-1.21.1-21.0.66.jar",
+   "sha1": "dd3606a349f4a3c8fb5bd0ab22905675c02b0d74",
+   "size": 783793
+  },
+  {
+   "file": "better-advanced-tooltips-2101.1.0-build.5.jar",
+   "url": "https://cdn.modrinth.com/data/iHLDc0eo/versions/uPFbnD32/better-advanced-tooltips-2101.1.0-build.5.jar",
+   "sha1": "5b73537b908764f2d3fd593a0f56a8b1b034bc50",
+   "size": 37653
+  },
+  {
+   "file": "bettercombat-neoforge-2.4.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/VhIOvcXP/bettercombat-neoforge-2.4.0%2B1.21.1.jar",
+   "sha1": "bacbc8c86671663e9998b141c5732250c1f4d4fb",
+   "size": 1045389
+  },
+  {
+   "file": "blockui-1.0.209-1.21.1.jar",
+   "url": "https://mediafilez.forgecdn.net/files/7541/336/blockui-1.0.209-1.21.1.jar",
+   "sha1": "01cba16a7d71521b81d791a07740464e6d70d0a6",
+   "size": 468001
+  },
+  {
+   "file": "blueprint-1.21.1-8.2.0.jar",
+   "url": "https://cdn.modrinth.com/data/VsM5EDoI/versions/FHOjk8Ez/blueprint-1.21.1-8.2.0.jar",
+   "sha1": "b947d5faef872a3f4c856a814c994d70f2065666",
+   "size": 1214507
+  },
+  {
+   "file": "bountiful-neoforge-8.0.0-beta.2.jar",
+   "url": "https://cdn.modrinth.com/data/BpwWFOVM/versions/swTb6NU9/bountiful-neoforge-8.0.0-beta.2.jar",
+   "sha1": "8c1786d2850bd15c3a2dd0f50fccfda09125faa5",
+   "size": 721006
+  },
+  {
+   "file": "chat_heads-0.15.7-neoforge-1.21.jar",
+   "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar",
+   "sha1": "536b2af675229d2a33eb4cf5afbe7148a62d5f3f",
+   "size": 91948
+  },
+  {
+   "file": "chefsdelight-1.0.6.jar",
+   "url": "https://cdn.modrinth.com/data/pvcsfne4/versions/N8hZwT7r/chefsdelight-1.0.6.jar",
+   "sha1": "9e5992b895dbde9f31fd2f0590dcac925adfcc55",
+   "size": 98747
+  },
+  {
+   "file": "cloth-config-15.0.140-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar",
+   "sha1": "c3e5733ba4503b102589a026000fd5ce0212f6f2",
+   "size": 1163890
+  },
+  {
+   "file": "Clumps-neoforge-1.21.1-19.0.0.1.jar",
+   "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/jo7lDoK4/Clumps-neoforge-1.21.1-19.0.0.1.jar",
+   "sha1": "fa2576297c7bd12b28aa7070e8141792bd66da4c",
+   "size": 18382
+  },
+  {
+   "file": "codxlib-1.6.1-neoforge+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/6oyMM4yX/versions/MMcDASmX/codxlib-1.6.1-neoforge%2B1.21.1.jar",
+   "sha1": "d11c51c10d86420c4ba9a18ce42b5b7bbc1fd3ca",
+   "size": 193045
+  },
+  {
+   "file": "collective-1.21.1-8.65.jar",
+   "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/d78uVgbq/collective-1.21.1-8.65.jar",
+   "sha1": "1dae6347808f50485e281624260dbd9c8ee146eb",
+   "size": 1309960
+  },
+  {
+   "file": "comforts-neoforge-9.0.5+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/SaCpeal4/versions/3kpPjcTc/comforts-neoforge-9.0.5%2B1.21.1.jar",
+   "sha1": "21d6bee3821d62fe3356c51fb1d697871a3087ff",
+   "size": 422658
+  },
+  {
+   "file": "Controlling-neoforge-1.21.1-19.0.5.jar",
+   "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/FaNppCJJ/Controlling-neoforge-1.21.1-19.0.5.jar",
+   "sha1": "8a34424fc1428778be2fdbfa4da67b21b70bcbfe",
+   "size": 77555
+  },
+  {
+   "file": "copycats-3.0.9+mc.1.21.1-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar",
+   "sha1": "74de17876c43f5f780bac478b9f9eb11e687b8d7",
+   "size": 1799381
+  },
+  {
+   "file": "corpse-neoforge-1.21.1-1.1.22.jar",
+   "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/SElnDbg1/corpse-neoforge-1.21.1-1.1.22.jar",
+   "sha1": "0d73e082e4d5c0f185aa8030bcefb68c259d1107",
+   "size": 256780
+  },
+  {
+   "file": "create-1.21.1-6.0.10.jar",
+   "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+   "sha1": "0e97e49837bed766e6f28a4c95b04885d6acc353",
+   "size": 19123767
+  },
+  {
+   "file": "create-aeronautics-bundled-1.21.1-1.3.2.jar",
+   "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/44pLdPGg/create-aeronautics-bundled-1.21.1-1.3.2.jar",
+   "sha1": "ddbe9cbc25e8f663218aa1e9fdfc4b99f0e11e4b",
+   "size": 33123131
+  },
+  {
+   "file": "create-enchantment-industry-2.4.2.jar",
+   "url": "https://cdn.modrinth.com/data/JWGBpFUP/versions/qUpvzZ83/create-enchantment-industry-2.4.2.jar",
+   "sha1": "4ad5c181c805a548e15892500b07c0c0f88f0734",
+   "size": 1283517
+  },
+  {
+   "file": "createaddition-1.6.0.jar",
+   "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/qPr8V4G2/createaddition-1.6.0.jar",
+   "sha1": "87b539d41ed238e98b26c607c0c81a973323147e",
+   "size": 1661802
+  },
+  {
+   "file": "CreateDragonsPlus-1.11.9.jar",
+   "url": "https://cdn.modrinth.com/data/dzb1a5WV/versions/b0u9vk8C/CreateDragonsPlus-1.11.9.jar",
+   "sha1": "67ffcb61207a7dbc6b1e70f0473ddbacb19d44eb",
+   "size": 1085674
+  },
+  {
+   "file": "cristellib-neoforge-1.21.1-3.1.7.jar",
+   "url": "https://cdn.modrinth.com/data/cl223EMc/versions/Sduz0AWP/cristellib-neoforge-1.21.1-3.1.7.jar",
+   "sha1": "d250804b7ecea365bc736ec36ec6fc3f933917f1",
+   "size": 583525
+  },
+  {
+   "file": "curios-neoforge-9.5.1+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/vvuO3ImH/versions/yohfFbgD/curios-neoforge-9.5.1%2B1.21.1.jar",
+   "sha1": "418fcd42e3a7844c9bdc71c9b6401fdb3894e0c4",
+   "size": 410690
+  },
+  {
+   "file": "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/uCdwusMi/versions/9w34y8ai/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+   "sha1": "4357b4d19fab818780c94f0e43dad1cc931634b2",
+   "size": 28289212
+  },
+  {
+   "file": "domum-ornamentum-1.0.231-main.jar",
+   "url": "https://mediafilez.forgecdn.net/files/7789/217/domum-ornamentum-1.0.231-main.jar",
+   "sha1": "a8ec9660788133676fd440ce6998d813184cd486",
+   "size": 1143596
+  },
+  {
+   "file": "dungeons-and-taverns-v4.4.4.jar",
+   "url": "https://cdn.modrinth.com/data/tpehi7ww/versions/BYUUUeZA/dungeons-and-taverns-v4.4.4.jar",
+   "sha1": "249a5bdd0e8622b8a11f88758e6f5fd5fda036a3",
+   "size": 24859622
+  },
+  {
+   "file": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/T238FZpQ/dynamic-fps-3.11.4%2Bminecraft-1.21.0-neoforge.jar",
+   "sha1": "35b17e95b2b65930116ccc83e0cc358ac1bfcf9e",
+   "size": 220193
+  },
+  {
+   "file": "easy-villagers-neoforge-1.21.1-1.1.49.jar",
+   "url": "https://cdn.modrinth.com/data/Kaov2qgi/versions/Z8Z2WZUm/easy-villagers-neoforge-1.21.1-1.1.49.jar",
+   "sha1": "bb021918037fb2ceba03456948eaa966c7f28d53",
+   "size": 456636
+  },
+  {
+   "file": "entityculling-neoforge-1.11.3-mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/eieYbWYb/entityculling-neoforge-1.11.3-mc1.21.1.jar",
+   "sha1": "f122f84f329793675b2625d51b77f990d7de3579",
+   "size": 1510075
+  },
+  {
+   "file": "ExplorersCompass-1.21.1-3.4.0-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/RV1qfVQ8/versions/hIJ2Ev1Q/ExplorersCompass-1.21.1-3.4.0-neoforge.jar",
+   "sha1": "9f62af344988a6e2d855b113e61cf0e1611c7e0f",
+   "size": 174668
+  },
+  {
+   "file": "FallingTree-1.21.1-1.21.1.11.jar",
+   "url": "https://cdn.modrinth.com/data/Fb4jn8m6/versions/wxGXaJMA/FallingTree-1.21.1-1.21.1.11.jar",
+   "sha1": "7e1b3ee0ba89b556d5a468797bb1b5f4e2b8ccb7",
+   "size": 496356
+  },
+  {
+   "file": "FarmersDelight-1.21.1-1.3.4.jar",
+   "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/XTVZDOol/FarmersDelight-1.21.1-1.3.4.jar",
+   "sha1": "27675ddfcb8cc37e6ea1ab6c15051c7949d94657",
+   "size": 3160490
+  },
+  {
+   "file": "FastSuite-1.21.1-6.0.7.jar",
+   "url": "https://cdn.modrinth.com/data/roccmqou/versions/OQZRQcDM/FastSuite-1.21.1-6.0.7.jar",
+   "sha1": "9dd867fe29642d9e3f2f9059f1abf372936fbabc",
+   "size": 28192
+  },
+  {
+   "file": "ferritecore-7.0.3-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
+   "sha1": "9563692efb708b6b568df27a01ec52f6311928ef",
+   "size": 121559
+  },
+  {
+   "file": "fish_of_thieves-mc1.21.1-v21.1.2.2-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/BzOTnuqM/versions/ttj6ROuG/fish_of_thieves-mc1.21.1-v21.1.2.2-neoforge.jar",
+   "sha1": "7f8712e20634ddd5d9a494ce7867fa1500da74c0",
+   "size": 1892848
+  },
+  {
+   "file": "friendsandfoes-neoforge-5.0.3+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/BOCJKD49/versions/LH88lfnK/friendsandfoes-neoforge-5.0.3%2Bmc1.21.1.jar",
+   "sha1": "74b448afe8e9915d73a2993d67f56ebb0a1aeaf5",
+   "size": 5271544
+  },
+  {
+   "file": "ftb-library-neoforge-2101.1.37.jar",
+   "url": "https://mediafilez.forgecdn.net/files/9008/89/ftb-library-neoforge-2101.1.37.jar",
+   "sha1": "b6e503587afcd678ec257e4abdc6362ff18c2fef",
+   "size": 1439881
+  },
+  {
+   "file": "ftb-quests-neoforge-2101.1.37.jar",
+   "url": "https://mediafilez.forgecdn.net/files/9298/629/ftb-quests-neoforge-2101.1.37.jar",
+   "sha1": "770938e5907cc91be2f89ac00aea2e87b51e1c87",
+   "size": 1635351
+  },
+  {
+   "file": "ftb-teams-neoforge-2101.1.11.jar",
+   "url": "https://mediafilez.forgecdn.net/files/8724/782/ftb-teams-neoforge-2101.1.11.jar",
+   "sha1": "62b65f752d0326edd13244e58d5f2aec035da4e9",
+   "size": 308236
+  },
+  {
+   "file": "fzzy_config-0.7.7+fix1+1.21+neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/hYykXjDp/versions/jRuOkBAG/fzzy_config-0.7.7%2Bfix1%2B1.21%2Bneoforge.jar",
+   "sha1": "aa04a2ddbce2f50b21d667d2f3e589f9e043e472",
+   "size": 2392720
+  },
+  {
+   "file": "geckolib-neoforge-1.21.1-4.9.3.jar",
+   "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/Grwn5rUB/geckolib-neoforge-1.21.1-4.9.3.jar",
+   "sha1": "5cfe835472a5c5457ae9ac192d9d7b317454d5ac",
+   "size": 634531
+  },
+  {
+   "file": "gew2-0.1.5-neoforge-1.21_1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/wvRxgIb5/versions/J9t2EBZr/gew2-0.1.5-neoforge-1.21_1.21.1.jar",
+   "sha1": "e3742b72123f0291502bafce3c743c8074ac6e4a",
+   "size": 517653
+  },
+  {
+   "file": "GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
+   "url": "https://cdn.modrinth.com/data/s3dmwKy5/versions/S2TfWrZR/GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
+   "sha1": "e3d4bb80a06f619be989ab529d0cd4e33e076943",
+   "size": 90717
+  },
+  {
+   "file": "goblins_tyranny-1.2.4-neoforge-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/pR2fUOHY/versions/VjcZbZjq/goblins_tyranny-1.2.4-neoforge-1.21.1.jar",
+   "sha1": "a7e7d4bb9f7abcadfcc1ac0063108488b71ec7ce",
+   "size": 7650180
+  },
+  {
+   "file": "guardvillagers-2.4.12-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/H1sntfo8/versions/JyXugpy2/guardvillagers-2.4.12-1.21.1.jar",
+   "sha1": "a817f2263e93aad5bdbe65eeafd2f27489b47ccf",
+   "size": 283407
+  },
+  {
+   "file": "guideme-21.1.20.jar",
+   "url": "https://cdn.modrinth.com/data/Ck4E7v7R/versions/mUlgxNj8/guideme-21.1.20.jar",
+   "sha1": "3003020c170cc84ea307fa1d212d80268806a9be",
+   "size": 9325132
+  },
+  {
+   "file": "hapi-neoforge-1.21.1-1.1.3.jar",
+   "url": "https://cdn.modrinth.com/data/yv9f5EAG/versions/4HsWNhJz/hapi-neoforge-1.21.1-1.1.3.jar",
+   "sha1": "18a1da3fba0b84ab6a17c74081feb2dd4aff2475",
+   "size": 688773
+  },
+  {
+   "file": "hybrid_aquatic-neoforge-1.21.1-1.7.4.jar",
+   "url": "https://cdn.modrinth.com/data/HH4FjUqN/versions/jdOU7Pzu/hybrid_aquatic-neoforge-1.21.1-1.7.4.jar",
+   "sha1": "9feffbffb1ce1a249b2002b5480ab9af56922aa6",
+   "size": 7338389
+  },
+  {
+   "file": "iceandfire-2.0.jar",
+   "url": "https://cdn.modrinth.com/data/VpmCsizY/versions/soR168tk/iceandfire-2.0.jar",
+   "sha1": "84ba205550ed3b963a5bcc333d9bc18a0b820e5f",
+   "size": 20774271
+  },
+  {
+   "file": "iceandfire_create-1.21.1-Neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/HuZZUARA/versions/hLfHYYgY/iceandfire_create-1.21.1-Neoforge.jar",
+   "sha1": "8df672049df01c45aaabcf2b1b06c4c526e0b49e",
+   "size": 190935
+  },
+  {
+   "file": "ImmediatelyFast-NeoForge-1.6.15+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/EJzmEPZV/ImmediatelyFast-NeoForge-1.6.15%2B1.21.1.jar",
+   "sha1": "f991166f7c82b493481c876e3c83c9fac4159671",
+   "size": 368896
+  },
+  {
+   "file": "inventoryessentials-neoforge-1.21.1-21.1.20.jar",
+   "url": "https://cdn.modrinth.com/data/Boon8xwi/versions/B2gBjJSj/inventoryessentials-neoforge-1.21.1-21.1.20.jar",
+   "sha1": "7a3d6c52ae45491581a97bf09053cd0bd14d4a82",
+   "size": 201140
+  },
+  {
+   "file": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
+   "sha1": "1bd129cf7bce65d6b1c0543045f0620c98a0f885",
+   "size": 2540723
+  },
+  {
+   "file": "irons_lib-1.21.1-2.2.0.jar",
+   "url": "https://cdn.modrinth.com/data/9nfaJPtX/versions/lUwUKYPl/irons_lib-1.21.1-2.2.0.jar",
+   "sha1": "33ca1a58dc0b384a6de26171f34b3bf608aaeeb2",
+   "size": 462255
+  },
+  {
+   "file": "irons_spellbooks-1.21.1-3.16.3.jar",
+   "url": "https://cdn.modrinth.com/data/s4OWxYQQ/versions/slKLosTb/irons_spellbooks-1.21.1-3.16.3.jar",
+   "sha1": "e8832385c01db56b9fcb19c48fcedc76a3a70d92",
+   "size": 13890045
+  },
+  {
+   "file": "Jade-1.21.1-NeoForge-15.10.6.jar",
+   "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/eYz2YBGT/Jade-1.21.1-NeoForge-15.10.6.jar",
+   "sha1": "88ee316e68900080b017f60c12162e2731924cf8",
+   "size": 726853
+  },
+  {
+   "file": "jei-1.21.1-neoforge-19.64.0.455.jar",
+   "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/iv3KiVkE/jei-1.21.1-neoforge-19.64.0.455.jar",
+   "sha1": "f6d6fc08d54c40752926b570a2220471e8c45c1a",
+   "size": 2375741
+  },
+  {
+   "file": "jupiter-2.3.7-1.21.1-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/XbiLGMMU/versions/Jpcw76rq/jupiter-2.3.7-1.21.1-neoforge.jar",
+   "sha1": "569fb484ea5c8e8d690945ad4cd132131a719751",
+   "size": 278988
+  },
+  {
+   "file": "kambrik-neoforge-8.0.0-beta.2.jar",
+   "url": "https://cdn.modrinth.com/data/zfbCkvdZ/versions/rCSmCZpX/kambrik-neoforge-8.0.0-beta.2.jar",
+   "sha1": "9e41688287925e7a65375d96f32eefca7ab2a821",
+   "size": 436428
+  },
+  {
+   "file": "Kobolds-4.0.2.jar",
+   "url": "https://cdn.modrinth.com/data/ufaxN0Ay/versions/TiHomHFQ/Kobolds-4.0.2.jar",
+   "sha1": "2def971eb96cd44625913c859517a483fd500904",
+   "size": 2306462
+  },
+  {
+   "file": "kotlinforforge-5.12.0-all.jar",
+   "url": "https://cdn.modrinth.com/data/ordsPcFz/versions/uhJhCT7X/kotlinforforge-5.12.0-all.jar",
+   "sha1": "d10d062caf1aad9aec82d7852f2fee1781735c1f",
+   "size": 7279264
+  },
+  {
+   "file": "Ksyxis-1.4.6.jar",
+   "url": "https://cdn.modrinth.com/data/2ecVyZ49/versions/kzLBJQLn/Ksyxis-1.4.6.jar",
+   "sha1": "6de6271329e0c83e3ccc0512a0d3cfcc3e790d3f",
+   "size": 23873
+  },
+  {
+   "file": "kubejs-create-neoforge-2101.3.1-build.18.jar",
+   "url": "https://cdn.modrinth.com/data/T38eAZQC/versions/1qmcLagN/kubejs-create-neoforge-2101.3.1-build.18.jar",
+   "sha1": "f54d9ff53909771d27e4d9d135c3707cd5d5f855",
+   "size": 38629
+  },
+  {
+   "file": "kubejs-mekanism-neoforge-2101.1.7-build.18.jar",
+   "url": "https://cdn.modrinth.com/data/sY2Fy24K/versions/sbx1D4Jz/kubejs-mekanism-neoforge-2101.1.7-build.18.jar",
+   "sha1": "e605f4ef57395cb91f4438165c59f8536223ae10",
+   "size": 58054
+  },
+  {
+   "file": "kubejs-neoforge-2101.7.2-build.377.jar",
+   "url": "https://cdn.modrinth.com/data/umyGl7zF/versions/THIGFPwf/kubejs-neoforge-2101.7.2-build.377.jar",
+   "sha1": "7313fcd99318834c642ee9f3a05ed7fd7bcb6ef4",
+   "size": 2294111
+  },
+  {
+   "file": "L_Ender's Cataclysm 1.21.1-3.33.jar",
+   "url": "https://cdn.modrinth.com/data/46KJle7n/versions/PsPYpoCC/L_Ender%27s%20Cataclysm%201.21.1-3.33.jar",
+   "sha1": "f0310277167c82fd16a5c2bab220b5c5c262f133",
+   "size": 73375667
+  },
+  {
+   "file": "lionfishapi-3.1.jar",
+   "url": "https://cdn.modrinth.com/data/FoVacERa/versions/fTRMVgyZ/lionfishapi-3.1.jar",
+   "sha1": "353ca00ed118eb67cf11085abbbd699884722326",
+   "size": 91596
+  },
+  {
+   "file": "lithium-neoforge-0.15.4+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/DDUrRVCA/lithium-neoforge-0.15.4%2Bmc1.21.1.jar",
+   "sha1": "97212e45c963730bbfc7c44780df99317814c21b",
+   "size": 774220
+  },
+  {
+   "file": "lithostitched-1.8.1-neoforge-21.1.jar",
+   "url": "https://cdn.modrinth.com/data/XaDC71GB/versions/cZu4cHY3/lithostitched-1.8.1-neoforge-21.1.jar",
+   "sha1": "88cdded5b617e19b4d2676948b5550699de23578",
+   "size": 1023751
+  },
+  {
+   "file": "lootr-neoforge-1.21.1-1.11.38.127.jar",
+   "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/SPOrIzX8/lootr-neoforge-1.21.1-1.11.38.127.jar",
+   "sha1": "7a305b581abd90e1a8b7c1bb5eb4511d2653aa58",
+   "size": 1075929
+  },
+  {
+   "file": "mcef-neoforge-2.1.6-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/TObQ0HxZ/versions/euXLgkSB/mcef-neoforge-2.1.6-1.21.1.jar",
+   "sha1": "efc74c3bf0784f2c75004440bb1ea4ed15e2385c",
+   "size": 215373
+  },
+  {
+   "file": "Mekanism-1.21.1-10.7.19.85.jar",
+   "url": "https://cdn.modrinth.com/data/Ce6I4WUE/versions/5KzzycBT/Mekanism-1.21.1-10.7.19.85.jar",
+   "sha1": "b78945c40cfe7640408f3fd1e44da385a8c8b805",
+   "size": 11976009
+  },
+  {
+   "file": "MekanismGenerators-1.21.1-10.7.19.85.jar",
+   "url": "https://cdn.modrinth.com/data/OFVYKsAk/versions/a6gl7srE/MekanismGenerators-1.21.1-10.7.19.85.jar",
+   "sha1": "44c4d8006597580ff7e4101b5a22f7b426cdcaf6",
+   "size": 1114598
+  },
+  {
+   "file": "MekanismTools-1.21.1-10.7.19.85.jar",
+   "url": "https://cdn.modrinth.com/data/tqQpq1lt/versions/v5zlSE9s/MekanismTools-1.21.1-10.7.19.85.jar",
+   "sha1": "4433b3eec0a5a0bf415d873e710a1cecea5850bc",
+   "size": 526620
+  },
+  {
+   "file": "mezz_config-1.21.1-neoforge-0.6.8-standalone.jar",
+   "url": "https://cdn.modrinth.com/data/7tEfOcA7/versions/idpM3DKC/mezz_config-1.21.1-neoforge-0.6.8-standalone.jar",
+   "sha1": "d99ed592d8ab7105c00444047be7d8346d694ba3",
+   "size": 327173
+  },
+  {
+   "file": "minecolonies-1.1.1403-1.21.1.jar",
+   "url": "https://mediafilez.forgecdn.net/files/9058/295/minecolonies-1.1.1403-1.21.1.jar",
+   "sha1": "3be2b5521f45271c77671673e834c57c2296d3e4",
+   "size": 78325447
+  },
+  {
+   "file": "modernfix-neoforge-5.27.26+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/7Jy58lnT/modernfix-neoforge-5.27.26%2Bmc1.21.1.jar",
+   "sha1": "69d468b70e53f6a014c778a81116a41a38fbab33",
+   "size": 611043
+  },
+  {
+   "file": "moreculling-neoforge-1.21.1-1.0.10.jar",
+   "url": "https://cdn.modrinth.com/data/51shyZVL/versions/5M4T2FfG/moreculling-neoforge-1.21.1-1.0.10.jar",
+   "sha1": "7e2d906031fdba883649eef6ef48a4dbdbb0f6cf",
+   "size": 335699
+  },
+  {
+   "file": "morejs-neoforge-1.21.1-0.16.0.jar",
+   "url": "https://cdn.modrinth.com/data/mo64mR1W/versions/kyNrtsUY/morejs-neoforge-1.21.1-0.16.0.jar",
+   "sha1": "7e8aea4f03b18076cab5555f6d30e35ff919b342",
+   "size": 157690
+  },
+  {
+   "file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+   "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+   "sha1": "6dae57f4f50f7808d2ed9a18f6cd1c0d4640c6bc",
+   "size": 73938
+  },
+  {
+   "file": "mowziesmobs-1.21.1-1.8.2.jar",
+   "url": "https://cdn.modrinth.com/data/BFbX9xcm/versions/xgAXTl17/mowziesmobs-1.21.1-1.8.2.jar",
+   "sha1": "d64475cd77444b056ece6472c79d40293dc63c6c",
+   "size": 36042925
+  },
+  {
+   "file": "multipiston-1.2.58-1.21.1.jar",
+   "url": "https://mediafilez.forgecdn.net/files/7097/877/multipiston-1.2.58-1.21.1.jar",
+   "sha1": "2b63be739da24247328e4052ec91c928230d0390",
+   "size": 34139
+  },
+  {
+   "file": "naturalist-2.0.7-neoforge-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/F8BQNPWX/versions/9Yn8ig4c/naturalist-2.0.7-neoforge-1.21.1.jar",
+   "sha1": "a7f9f6d9991880c377d2248af5c1ea05a0aa1039",
+   "size": 11347884
+  },
+  {
+   "file": "NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/fPetb5Kh/versions/nFniEtJV/NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+   "sha1": "e19721873bebc4dbc1674bb101af39d0ea406b95",
+   "size": 224657
+  },
+  {
+   "file": "nomadictents-21.1.0.jar",
+   "url": "https://mediafilez.forgecdn.net/files/7401/669/nomadictents-21.1.0.jar",
+   "sha1": "49d4ad2de88a9e86143a948ba9744e9ea34d3d8e",
+   "size": 702008
+  },
+  {
+   "file": "ocean_lily_pad_village-1.0.1-neoforge-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/rf0JE0fv/versions/LeimYgNR/ocean_lily_pad_village-1.0.1-neoforge-1.21.1.jar",
+   "sha1": "e5a0f27697ba71f2b41559404947703e04a4fd50",
+   "size": 495382
+  },
+  {
+   "file": "oceansdelight-neoforge-1.0.4-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/DGiq4ZSW/versions/ja5Qg1xw/oceansdelight-neoforge-1.0.4-1.21.1.jar",
+   "sha1": "2246edd8fc1bbf60422f5099854c1de0b2a439c9",
+   "size": 117108
+  },
+  {
+   "file": "open-parties-and-claims-neoforge-1.21.1-0.33.0.jar",
+   "url": "https://cdn.modrinth.com/data/gF3BGWvG/versions/yWmXD7GW/open-parties-and-claims-neoforge-1.21.1-0.33.0.jar",
+   "sha1": "6075cf36ac8d70bd1fd870e0eb9ac84685388df7",
+   "size": 1903256
+  },
+  {
+   "file": "orc_hut-1.0.3-neoforge-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/x41Rekja/versions/wnjCyZzO/orc_hut-1.0.3-neoforge-1.21.1.jar",
+   "sha1": "d7c5a386cfc6623415ba88fc2dd1f3cc137b7fde",
+   "size": 46900
+  },
+  {
+   "file": "owo-lib-neoforge-0.12.15.6-beta.1+1.21.jar",
+   "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/wbdHEItB/owo-lib-neoforge-0.12.15.6-beta.1%2B1.21.jar",
+   "sha1": "3a7f843ce3a4d24f8765a74bc5dde914b316b992",
+   "size": 1223197
+  },
+  {
+   "file": "particle_core-0.3.3+1.21+neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/2QF4NhZD/particle_core-0.3.3%2B1.21%2Bneoforge.jar",
+   "sha1": "f859d68818e522fb00056d3ed1603ca4300eb681",
+   "size": 138375
+  },
+  {
+   "file": "Patchouli-1.21.1-93-NEOFORGE.jar",
+   "url": "https://cdn.modrinth.com/data/nU0bVIaL/versions/BIogJv2D/Patchouli-1.21.1-93-NEOFORGE.jar",
+   "sha1": "5413bb9b8fc35ebe46b06b48bf9afafbd8471140",
+   "size": 646777
+  },
+  {
+   "file": "pipbrowser-neoforge-1.21.1-1.2.1.jar",
+   "url": "https://cdn.modrinth.com/data/DAEHtH8c/versions/OQemqdMR/pipbrowser-neoforge-1.21.1-1.2.1.jar",
+   "sha1": "f950ad69f7e35176ebe07be52cbfd674ba486440",
+   "size": 61359
+  },
+  {
+   "file": "Placebo-1.21.1-9.9.4.jar",
+   "url": "https://cdn.modrinth.com/data/tCkE8p2N/versions/B5zbSVlT/Placebo-1.21.1-9.9.4.jar",
+   "sha1": "007d52a42020a331d5272495f6d676e0ad1a2c13",
+   "size": 326063
+  },
+  {
+   "file": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/gedNE4y2/versions/HJZB6bmA/player-animation-lib-forge-2.0.4%2B1.21.1.jar",
+   "sha1": "05be8ddcc78532b9a5520c718edc6c971cd0057c",
+   "size": 203149
+  },
+  {
+   "file": "puffish_skills-0.19.2-1.21-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/hqQqvaa4/versions/8tfcI2wU/puffish_skills-0.19.2-1.21-neoforge.jar",
+   "sha1": "e7439fa56036bfacf228269b8b89f10cbbba13fd",
+   "size": 652840
+  },
+  {
+   "file": "reactivemusic-neoforge-1.3.5+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/Bqnfeesx/versions/bqvWqBAp/reactivemusic-neoforge-1.3.5%2B1.21.1.jar",
+   "sha1": "97626925107054b11c658f9cc59e17f60fda6f4a",
+   "size": 294837148
+  },
+  {
+   "file": "reeses-sodium-options-neoforge-2.2.4+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/XjF2IkL8/reeses-sodium-options-neoforge-2.2.4%2Bmc1.21.1.jar",
+   "sha1": "e9e6d101b31acb51539141937ad5b069ff2ccc4d",
+   "size": 258894
+  },
+  {
+   "file": "resourcefullib-neoforge-1.21-3.0.12.jar",
+   "url": "https://cdn.modrinth.com/data/G1hIVOrD/versions/x99nCLTm/resourcefullib-neoforge-1.21-3.0.12.jar",
+   "sha1": "24389c8e48ff0e8594e4686b750c494c66a5f8df",
+   "size": 484332
+  },
+  {
+   "file": "rhino-2101.2.7-build.85.jar",
+   "url": "https://cdn.modrinth.com/data/sk9knFPE/versions/cQ4POTah/rhino-2101.2.7-build.85.jar",
+   "sha1": "3c8d34c7efe9e42fc90506acbf9fc842d36f9a42",
+   "size": 882075
+  },
+  {
+   "file": "sable-neoforge-1.21.1-2.0.6.jar",
+   "url": "https://cdn.modrinth.com/data/T9PomCSv/versions/fg9dTRz9/sable-neoforge-1.21.1-2.0.6.jar",
+   "sha1": "cf46f7e8c1511f170abcdbee739944f0540549bf",
+   "size": 12986135
+  },
+  {
+   "file": "seamlessores-neoforge-5.1.0.jar",
+   "url": "https://cdn.modrinth.com/data/oWpIIBJu/versions/oF8jXewA/seamlessores-neoforge-5.1.0.jar",
+   "sha1": "573f10d9dc868ffff5bc04a072aea9c23558c440",
+   "size": 2172300
+  },
+  {
+   "file": "Searchables-neoforge-1.21.1-1.0.2.jar",
+   "url": "https://cdn.modrinth.com/data/fuuu3xnx/versions/iEE85X0w/Searchables-neoforge-1.21.1-1.0.2.jar",
+   "sha1": "5b8a0b43a474c066371b2e16f9bfb88622552a74",
+   "size": 77326
+  },
+  {
+   "file": "SereneSeasons-neoforge-1.21.1-10.1.0.9.jar",
+   "url": "https://cdn.modrinth.com/data/e0bNACJD/versions/pHEgQQUE/SereneSeasons-neoforge-1.21.1-10.1.0.9.jar",
+   "sha1": "6b98eb4e64344bb8aba424187ed08bf04e59dccf",
+   "size": 163020
+  },
+  {
+   "file": "shulkerboxtooltip-neoforge-5.1.9+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/2M01OLQq/versions/IuqNIoAi/shulkerboxtooltip-neoforge-5.1.9%2B1.21.1.jar",
+   "sha1": "bddbccd689529f7f7ab04479e62c5e09b0be6be5",
+   "size": 381204
+  },
+  {
+   "file": "simplytents-5.0-1.21.1.neo.jar",
+   "url": "https://cdn.modrinth.com/data/yWY7WWmg/versions/N0G2HeTa/simplytents-5.0-1.21.1.neo.jar",
+   "sha1": "2f5fc24182a3e7802189ed5760ad106dd77a59b7",
+   "size": 1022684
+  },
+  {
+   "file": "smallships-neoforge-1.21.1-2.0.2.jar",
+   "url": "https://cdn.modrinth.com/data/rGWEHQrP/versions/2iLK0Wz6/smallships-neoforge-1.21.1-2.0.2.jar",
+   "sha1": "4d5235f78d94a0feddb58d27546350ca3c999f1e",
+   "size": 2815793
+  },
+  {
+   "file": "sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/ufpcXU9c/sodium-extra-neoforge-0.9.4%2Bmc1.21.1.jar",
+   "sha1": "75f9c202e8384cb5de039cdcc47d5e1c8fde8fe5",
+   "size": 472060
+  },
+  {
+   "file": "sodium-neoforge-0.8.13+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar",
+   "sha1": "1757289be21ed18db5b0d90703fa3db1b2de5693",
+   "size": 1292934
+  },
+  {
+   "file": "sophisticatedbackpacks-1.21.1-3.26.14.2222.jar",
+   "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/eg9lPtG4/sophisticatedbackpacks-1.21.1-3.26.14.2222.jar",
+   "sha1": "ccaaa38967d561a4c49f26364ec0ba68d593b95d",
+   "size": 1257036
+  },
+  {
+   "file": "sophisticatedcore-1.21.1-1.5.17.2426.jar",
+   "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/gtPF4VTh/sophisticatedcore-1.21.1-1.5.17.2426.jar",
+   "sha1": "2fec77e21c5da32b32e1be543a0f191a6db62291",
+   "size": 1819706
+  },
+  {
+   "file": "sophisticatedstorage-1.21.1-1.6.9.2199.jar",
+   "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/wVZfDecJ/sophisticatedstorage-1.21.1-1.6.9.2199.jar",
+   "sha1": "61deca3634456771b3fe063fb48696f9ab7bd051",
+   "size": 1932968
+  },
+  {
+   "file": "spark-1.10.124-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/v5qtqRQi/spark-1.10.124-neoforge.jar",
+   "sha1": "9430cc2ab64ff89d698be593769fb9f9ee4efae6",
+   "size": 3642581
+  },
+  {
+   "file": "structurize-1.0.832-1.21.1.jar",
+   "url": "https://mediafilez.forgecdn.net/files/8610/535/structurize-1.0.832-1.21.1.jar",
+   "sha1": "be15d6924bcca76bf5ac107e2ce5ac4d948d82e2",
+   "size": 1063849
+  },
+  {
+   "file": "t_and_t-fabric-neoforge-1.13.11.jar",
+   "url": "https://cdn.modrinth.com/data/DjLobEOy/versions/DZxwgj6V/t_and_t-fabric-neoforge-1.13.11.jar",
+   "sha1": "8f00e36a11568c0b66bbdf5c0e9ee492e511b303",
+   "size": 3553006
+  },
+  {
+   "file": "tectonic-3.0.28-neoforge-21.1.jar",
+   "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/n4iyW7aB/tectonic-3.0.28-neoforge-21.1.jar",
+   "sha1": "db15156eec4320c2997c4dd4948119472de01224",
+   "size": 451757
+  },
+  {
+   "file": "Terralith_1.21.1_v2.6.2_Neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/IY93YaEe/Terralith_1.21.1_v2.6.2_Neoforge.jar",
+   "sha1": "d4a9fe71b841f70edfb4b280f9bf5c58e4a28224",
+   "size": 2814865
+  },
+  {
+   "file": "twilightforest-1.21.1-4.8.3345-universal.jar",
+   "url": "https://mediafilez.forgecdn.net/files/7797/302/twilightforest-1.21.1-4.8.3345-universal.jar",
+   "sha1": "9cfd4154928433e2f1f6cfc3deb48c284debb580",
+   "size": 27154121
+  },
+  {
+   "file": "upgrade_aquatic-1.21.1-7.0.2.jar",
+   "url": "https://cdn.modrinth.com/data/gTuTFFyz/versions/9zf6y4e4/upgrade_aquatic-1.21.1-7.0.2.jar",
+   "sha1": "b60f38a304dd29e6c6caf187d4abb8d1d4a15845",
+   "size": 4924493
+  },
+  {
+   "file": "uranus-2.4.1-1.21.1-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/3Acxy864/versions/1YdU56pR/uranus-2.4.1-1.21.1-neoforge.jar",
+   "sha1": "2d689d2d9e5861ea0a382a459fa8fb0a3e4b5091",
+   "size": 847732
+  },
+  {
+   "file": "villagernames-1.21.1-8.9.jar",
+   "url": "https://cdn.modrinth.com/data/gqRXDo8B/versions/2rssTlyX/villagernames-1.21.1-8.9.jar",
+   "sha1": "320bbb0903cfba836f07ee2dd10ae2df36cfd01a",
+   "size": 79350
+  },
+  {
+   "file": "villagersplus-neoforge-mc1.21.1-4.1.0.jar",
+   "url": "https://cdn.modrinth.com/data/oHGMwNDR/versions/ScevmljB/villagersplus-neoforge-mc1.21.1-4.1.0.jar",
+   "sha1": "ed95bccf7533a815a9c8481042fe62ba4975f1ec",
+   "size": 464267
+  },
+  {
+   "file": "villagertradingplus-neoforge-mc1.21.1-1.1.0.jar",
+   "url": "https://cdn.modrinth.com/data/DhOXUfnP/versions/Ytd38SYV/villagertradingplus-neoforge-mc1.21.1-1.1.0.jar",
+   "sha1": "d684e8b8e9c29ae5a029552bb36099e74d6a36e8",
+   "size": 237684
+  },
+  {
+   "file": "waystones-neoforge-1.21.1-21.1.46.jar",
+   "url": "https://cdn.modrinth.com/data/LOpKHB2A/versions/6Z6MQ6os/waystones-neoforge-1.21.1-21.1.46.jar",
+   "sha1": "75718161662d9ec957ba22e10e497788ec1687ba",
+   "size": 1223229
+  },
+  {
+   "file": "wilds_core-0.1.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.2/wilds_core-0.1.0.jar",
+   "sha1": "39865ee3502a61ef792d1f77e48b8852b58c6cad",
+   "size": 187828
+  },
+  {
+   "file": "wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.2/wilds_wiki-0.2.0.jar",
+   "sha1": "f6fa3b6a09d152703537211e3bc39e15df1c9ace",
+   "size": 799575
+  },
+  {
+   "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
+   "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/irjR7dHk/xaerominimap-neoforge-1.21.1-26.6.0.jar",
+   "sha1": "551e8e2aa3498b506cc949a74606cdc0380e5e00",
+   "size": 2186351
+  },
+  {
+   "file": "xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+   "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/SnQ4SoDe/xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+   "sha1": "2936c9cb9dfbdab145fe6f1e8ae2c68915246a5f",
+   "size": 1427078
+  },
+  {
+   "file": "YungsApi-1.21.1-NeoForge-5.1.9.jar",
+   "url": "https://cdn.modrinth.com/data/Ua7DFN59/versions/2prKITKh/YungsApi-1.21.1-NeoForge-5.1.9.jar",
+   "sha1": "2c4b740c8ad27bbcb2a21b85b64f011b809aed91",
+   "size": 413763
+  },
+  {
+   "file": "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+   "url": "https://cdn.modrinth.com/data/o1C1Dkj5/versions/D6aZn0Em/YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+   "sha1": "73a660c13063450e555e5e2c015ae24d606b32b4",
+   "size": 782160
+  },
+  {
+   "file": "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+   "url": "https://cdn.modrinth.com/data/HjmxVlSr/versions/Go3nbneL/YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+   "sha1": "6a14e1d8201f068ca87ef8333e471c5378955906",
+   "size": 493967
+  },
+  {
+   "file": "YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+   "url": "https://cdn.modrinth.com/data/kidLKymU/versions/8U0dIfSM/YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+   "sha1": "5d06a5850af7c577612d4592706a8e156bbe1cbf",
+   "size": 461244
+  }
+ ],
+ "files": {
+  "zip": {
+   "file": "overrides.zip",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.2/overrides.zip",
+   "sha1": "b729412346c7d996d9fb8f845de273d30d7605b4",
+   "size": 772737
+  },
+  "overrides": [
+   {
+    "path": "config/accessories.json5",
+    "sha1": "1bc6742834e9fcb9f4c5b03111e99c167d8128d4",
+    "size": 967
+   },
+   {
+    "path": "config/aether-common.toml",
+    "sha1": "30847b10bdaf971a203ecff7ac58e2b6be4f7db3",
+    "size": 1378
+   },
+   {
+    "path": "config/almostunified/startup.json",
+    "sha1": "9a77571e45e73b06581d1acc13e558c0ffc371a2",
+    "size": 60
+   },
+   {
+    "path": "config/almostunified/unification/materials.json",
+    "sha1": "2c804e22615de25be7403df65a83f040f45f13d2",
+    "size": 926
+   },
+   {
+    "path": "config/chunky/config.json",
+    "sha1": "245415c002e38caedf412f8755b851f8ce373a6f",
+    "size": 147
+   },
+   {
+    "path": "config/curios-client.toml",
+    "sha1": "a11c1ebd1f824f85ec4b08a68c2a30958c69757f",
+    "size": 742
+   },
+   {
+    "path": "config/easylogin/config.toml",
+    "sha1": "75c366044a75a2e059281f5a7f3275bc531ccb9d",
+    "size": 4261
+   },
+   {
+    "path": "config/fallingtree.json",
+    "sha1": "eba9f6b66e08f42a7047eb2d852723064479e243",
+    "size": 1363
+   },
+   {
+    "path": "config/ftbessentials.snbt",
+    "sha1": "8fad6afe0343e2b4324a2d7aba3a6e9076a3e696",
+    "size": 10749
+   },
+   {
+    "path": "config/ftbquests/quests/chapter_groups.snbt",
+    "sha1": "f6d3856b3cb043b24da2afe9c8f30aeaec3aa1ed",
+    "size": 252
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/ae2.snbt",
+    "sha1": "3aff9ea96f85d9710e037ec9f9f657f2f5cfc0ad",
+    "size": 15148
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/aether.snbt",
+    "sha1": "e21c7300e7fce9760996aee6308b036658bcd804",
+    "size": 6785
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/apotheosis.snbt",
+    "sha1": "1cc811ea66c94cc0bdcd36bac99a853f45779b75",
+    "size": 3794
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/ars.snbt",
+    "sha1": "d86cfb5d6d458bd8cf01a29378fb785550c8c469",
+    "size": 13297
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/bosses.snbt",
+    "sha1": "ac709285c44dc2c0a18c933c126b3ff43c98fc4d",
+    "size": 14172
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/camping.snbt",
+    "sha1": "c650581b3f96b5916021d98ce88d8a4faef937c7",
+    "size": 6795
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/caves.snbt",
+    "sha1": "3bc30789826161b2c2fef06f20e5d31a53bffba9",
+    "size": 9077
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/colonies.snbt",
+    "sha1": "a443d9bf92710606ac2f21bbd278bf33de09deb4",
+    "size": 13319
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/create.snbt",
+    "sha1": "04c277696e056f1de9baaf1439f44cd2d13a52af",
+    "size": 25008
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/create_addons.snbt",
+    "sha1": "a7d772ad45be2e4b2c0d6e1b7f7b69b994b6544d",
+    "size": 3883
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/dragons.snbt",
+    "sha1": "5a670327c303e0fe141c5b19311d48d3bc73296f",
+    "size": 7351
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/errands.snbt",
+    "sha1": "055e80180131b2a730887f8fc6fbdd5e4b31f0e0",
+    "size": 57282
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/irons.snbt",
+    "sha1": "2380220f9dcb301c50f0a607f4ec6909724bad11",
+    "size": 13751
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/links.snbt",
+    "sha1": "6924354ed0d18d95c697e661feb7014cf13142b2",
+    "size": 4398
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/mekanism.snbt",
+    "sha1": "732cc2e810f0b23d3006f9873960a55e060df7c4",
+    "size": 24259
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/peoples.snbt",
+    "sha1": "1a626b5e827cc5edcdc8cab85f571c91c5c84a64",
+    "size": 9273
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/seas.snbt",
+    "sha1": "112a4b08216afbe55654d714cf8e4c886ab3421c",
+    "size": 13673
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/start.snbt",
+    "sha1": "4f49fe739c249740a70c06e897b1c54524de9bd5",
+    "size": 7310
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/survival.snbt",
+    "sha1": "cab238133306451db1e2b7b0cfd6ffc22ba37037",
+    "size": 4417
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/twilight.snbt",
+    "sha1": "de5c5c97c77f19c0dc2d3cb221b365b11578f708",
+    "size": 10770
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/welcome.snbt",
+    "sha1": "8cc35605f8dfddb07eb1aa46cf104bbc0a64968f",
+    "size": 5144
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/wildlife.snbt",
+    "sha1": "5823a845bba92baad26f46709bf36ae4ac565fde",
+    "size": 5236
+   },
+   {
+    "path": "config/ftbquests/quests/data.snbt",
+    "sha1": "2bfcc209a4c3bc0195f24f9ca5951f3a772ced58",
+    "size": 514
+   },
+   {
+    "path": "config/ftbquests/quests/lang/en_us.snbt",
+    "sha1": "344bc2a64a0c602c443c4b7bb73b82c033f870cc",
+    "size": 573815
+   },
+   {
+    "path": "config/ftbquests/quests/lang/uk_ua.snbt",
+    "sha1": "344bc2a64a0c602c443c4b7bb73b82c033f870cc",
+    "size": 573815
+   },
+   {
+    "path": "config/minecolonies-server.toml",
+    "sha1": "0c759bc93f3ba83eee8a69a1e5ba94d79f25619f",
+    "size": 9355
+   },
+   {
+    "path": "config/nomadictents-common.toml",
+    "sha1": "4976cd691d9991be3458a7a62ecba5d1cc2604e6",
+    "size": 2119
+   },
+   {
+    "path": "config/sereneseasons/seasons.toml",
+    "sha1": "c0826cb146e32ff091ba400a060fb538b64fa587",
+    "size": 21212
+   },
+   {
+    "path": "defaultconfigs/openpartiesandclaims-default-player-config.toml",
+    "sha1": "2e10541433bcfeed4e5965666ccdb41c68dc11f7",
+    "size": 49178
+   },
+   {
+    "path": "kubejs/assets/accessories/lang/uk_ua.json",
+    "sha1": "5df3b00dbb5d2e2d1954111fd871fb2d965a64b9",
+    "size": 12627
+   },
+   {
+    "path": "kubejs/assets/ae2/lang/uk_ua.json",
+    "sha1": "203671ac8316477712760880bf503398b5b722d5",
+    "size": 168
+   },
+   {
+    "path": "kubejs/assets/ae2wtlib/lang/uk_ua.json",
+    "sha1": "0fad0374ac27523d60d0059b77521077703eee3f",
+    "size": 1458
+   },
+   {
+    "path": "kubejs/assets/ae2wtlib_api/lang/uk_ua.json",
+    "sha1": "232faa185594f42e3d912625d20a6dd5d6ae521e",
+    "size": 568
+   },
+   {
+    "path": "kubejs/assets/aether/lang/uk_ua.json",
+    "sha1": "fa60e2eb8101c084d9e25b5c837e7fe45a566538",
+    "size": 16689
+   },
+   {
+    "path": "kubejs/assets/alexscaves/lang/uk_ua.json",
+    "sha1": "5603291db0d64f6f8e4658264419c773545ca0e2",
+    "size": 36116
+   },
+   {
+    "path": "kubejs/assets/alexsmobs/lang/uk_ua.json",
+    "sha1": "3101a6c9274b5df8215796afcf0ba20f022b52f5",
+    "size": 605
+   },
+   {
+    "path": "kubejs/assets/almostunified/lang/uk_ua.json",
+    "sha1": "a429a14b0c8fe7dd85ccc4ecbad813a0cea6653a",
+    "size": 411
+   },
+   {
+    "path": "kubejs/assets/apollib/lang/uk_ua.json",
+    "sha1": "4222090a1c55777a7c1f59a0837cf53e3e0a21d5",
+    "size": 518
+   },
+   {
+    "path": "kubejs/assets/apotheosis/lang/uk_ua.json",
+    "sha1": "dfe984f17907019639e99f26eee78a639ee34406",
+    "size": 2434
+   },
+   {
+    "path": "kubejs/assets/apothic_attributes/lang/uk_ua.json",
+    "sha1": "3067483076980f1598c150e730c756f7c56c55c5",
+    "size": 220
+   },
+   {
+    "path": "kubejs/assets/apothic_enchanting/lang/uk_ua.json",
+    "sha1": "47feee2b9c584c300db97d997aeb9efa5af71f48",
+    "size": 308
+   },
+   {
+    "path": "kubejs/assets/appleskin/lang/uk_ua.json",
+    "sha1": "7aa0c3d7e4c22594771de52d6d76d4bbba22a886",
+    "size": 2143
+   },
+   {
+    "path": "kubejs/assets/ars_n_spells/lang/uk_ua.json",
+    "sha1": "c7bcd8f2ec11c508c16cf0b743a023fabeaa4a16",
+    "size": 72386
+   },
+   {
+    "path": "kubejs/assets/ars_nouveau/lang/uk_ua.json",
+    "sha1": "2cf63bf013dd251a2412687e26f852bce03626d4",
+    "size": 12720
+   },
+   {
+    "path": "kubejs/assets/balm/lang/uk_ua.json",
+    "sha1": "dbebc7ef5c0734e3e627e72397d90bbebb54b7ed",
+    "size": 2440
+   },
+   {
+    "path": "kubejs/assets/betteradvancedtooltips/lang/uk_ua.json",
+    "sha1": "5424454b8cf26f58b652ec5ec35c9c134415b446",
+    "size": 590
+   },
+   {
+    "path": "kubejs/assets/bettercombat/lang/uk_ua.json",
+    "sha1": "f1e8852936a21e4d3e47b1451c5affe64fc7586c",
+    "size": 2459
+   },
+   {
+    "path": "kubejs/assets/betterdungeons/lang/uk_ua.json",
+    "sha1": "07baf3f4a504ee0b83063c0cf3688a135bd84ef3",
+    "size": 2637
+   },
+   {
+    "path": "kubejs/assets/betteroceanmonuments/lang/en_us.json",
+    "sha1": "2d1b1da2629c6ec5ea261b33439702bad0d92d79",
+    "size": 534
+   },
+   {
+    "path": "kubejs/assets/betteroceanmonuments/lang/uk_ua.json",
+    "sha1": "f806f92481e12dc75e9caf6f878de6fd5058e23b",
+    "size": 664
+   },
+   {
+    "path": "kubejs/assets/betterstrongholds/lang/uk_ua.json",
+    "sha1": "311b1061cfdcf3e91ec9f9be5e019dceacfc161f",
+    "size": 959
+   },
+   {
+    "path": "kubejs/assets/blockui/lang/uk_ua.json",
+    "sha1": "c2889ffe7a8a99466ac3318892e13381703eb71c",
+    "size": 658
+   },
+   {
+    "path": "kubejs/assets/blueprint/lang/uk_ua.json",
+    "sha1": "977a1eb5535cf7bdf4ecda8580aba6011375a8fd",
+    "size": 68
+   },
+   {
+    "path": "kubejs/assets/bountiful/lang/uk_ua.json",
+    "sha1": "a2910f2a5225f7e350790eb4efd655a70c5ad01e",
+    "size": 7362
+   },
+   {
+    "path": "kubejs/assets/cataclysm/lang/uk_ua.json",
+    "sha1": "efbbddad9ee7f7551c2dba0880ad5d7795b5895c",
+    "size": 525
+   },
+   {
+    "path": "kubejs/assets/chat_heads/lang/uk_ua.json",
+    "sha1": "b3b20bcb557fc9995961dee8de7e1ba477660b55",
+    "size": 348
+   },
+   {
+    "path": "kubejs/assets/chefsdelight/lang/uk_ua.json",
+    "sha1": "5faa82d86c4caf0c4ccce0a625deb68253209150",
+    "size": 1381
+   },
+   {
+    "path": "kubejs/assets/cloth-config2/lang/uk_ua.json",
+    "sha1": "236a1328be42897624d4e2acf6093b8359c0852a",
+    "size": 233
+   },
+   {
+    "path": "kubejs/assets/codxlib/lang/uk_ua.json",
+    "sha1": "3a2be74dc31372ec7497c79fed69bb9778822748",
+    "size": 45
+   },
+   {
+    "path": "kubejs/assets/collective/lang/uk_ua.json",
+    "sha1": "1807d9eee252264441845a345f7aeb54e8d731d7",
+    "size": 4161
+   },
+   {
+    "path": "kubejs/assets/controlling/lang/uk_ua.json",
+    "sha1": "c1c16e887b7b3e7fab9f637409201116fb111505",
+    "size": 101
+   },
+   {
+    "path": "kubejs/assets/copycats/lang/uk_ua.json",
+    "sha1": "2ef2ac9a4afeed839ebda10ac669358b65b573a5",
+    "size": 88
+   },
+   {
+    "path": "kubejs/assets/create/lang/uk_ua.json",
+    "sha1": "0bd7cb6067c00530b7279b7d26b970b8678dc35c",
+    "size": 1493
+   },
+   {
+    "path": "kubejs/assets/create_dragons_plus/lang/uk_ua.json",
+    "sha1": "f10e0877ba2376dae86a9feabeef403ae652bcc3",
+    "size": 38643
+   },
+   {
+    "path": "kubejs/assets/create_enchantment_industry/lang/uk_ua.json",
+    "sha1": "0289c511f8f71db958ab44453f843deca419f9c6",
+    "size": 53968
+   },
+   {
+    "path": "kubejs/assets/createaddition/lang/uk_ua.json",
+    "sha1": "674107471ba99162389e4bca0772db8e8f879129",
+    "size": 3977
+   },
+   {
+    "path": "kubejs/assets/cristellib/lang/uk_ua.json",
+    "sha1": "ccf826e5dfcce7612bec22b61da1be340bc90ad3",
+    "size": 502
+   },
+   {
+    "path": "kubejs/assets/ctov/lang/en_us.json",
+    "sha1": "29a16a1dbf598ddf2583536e377d092d537f32de",
+    "size": 5538
+   },
+   {
+    "path": "kubejs/assets/ctov/lang/uk_ua.json",
+    "sha1": "75b5267b05bd57a8f101261be2e71ce4d1aebfcd",
+    "size": 2916
+   },
+   {
+    "path": "kubejs/assets/cumulus_menus/lang/uk_ua.json",
+    "sha1": "e471bda4af953576801bea74dd89c2167a5c28ef",
+    "size": 2111
+   },
+   {
+    "path": "kubejs/assets/curios/lang/uk_ua.json",
+    "sha1": "50aeeaf70476dec6752368817fa48477a7d88d40",
+    "size": 271
+   },
+   {
+    "path": "kubejs/assets/distanthorizons/lang/uk_ua.json",
+    "sha1": "c91ad4d5f94a80c3833ae0525ea8aad9ede1d490",
+    "size": 84162
+   },
+   {
+    "path": "kubejs/assets/dnt/lang/uk_ua.json",
+    "sha1": "63cd2c7e624dcd0d63e03baba727604ebaa5785e",
+    "size": 12492
+   },
+   {
+    "path": "kubejs/assets/domum_ornamentum/lang/uk_ua.json",
+    "sha1": "93956b14e49782e6a0ac97db03e83781832e43b4",
+    "size": 16677
+   },
+   {
+    "path": "kubejs/assets/dungeons_arise/lang/en_us.json",
+    "sha1": "d53b6bc187a8360000186144c6857bca9a1b55e4",
+    "size": 9853
+   },
+   {
+    "path": "kubejs/assets/dungeons_arise/lang/uk_ua.json",
+    "sha1": "9be95319228c69778a834980728a551173ffd2a8",
+    "size": 12304
+   },
+   {
+    "path": "kubejs/assets/easy_villagers/lang/uk_ua.json",
+    "sha1": "a8679ca5e83b59d4b4b7e0ad37c227b79c5348f2",
+    "size": 331
+   },
+   {
+    "path": "kubejs/assets/entityculling/lang/uk_ua.json",
+    "sha1": "89425e095ca8d3657a0e5e02a8591efa73baba0a",
+    "size": 530
+   },
+   {
+    "path": "kubejs/assets/fallingtree/lang/uk_ua.json",
+    "sha1": "9ee10a66265461590a4aab38d94c45bfe18be715",
+    "size": 8043
+   },
+   {
+    "path": "kubejs/assets/farmersdelight/lang/uk_ua.json",
+    "sha1": "751b35182ea6819f9f971b211c1d0893a363c788",
+    "size": 327
+   },
+   {
+    "path": "kubejs/assets/flywheel/lang/uk_ua.json",
+    "sha1": "2ac14743ec523d6c0cb49383284c05162522a844",
+    "size": 1219
+   },
+   {
+    "path": "kubejs/assets/friendsandfoes/lang/uk_ua.json",
+    "sha1": "9b8dc89198ef45c99509f91be3c973a36be821bb",
+    "size": 7485
+   },
+   {
+    "path": "kubejs/assets/ftbessentials/lang/en_us.json",
+    "sha1": "e58930466d653afb9e4487344118a764d1c5b5b2",
+    "size": 5966
+   },
+   {
+    "path": "kubejs/assets/ftbessentials/lang/uk_ua.json",
+    "sha1": "22cd53cf9c73d543b81814521df077ff22ae0c6d",
+    "size": 8035
+   },
+   {
+    "path": "kubejs/assets/ftblibrary/lang/uk_ua.json",
+    "sha1": "36ef518f82e95df1c7dec63dfbc95d7c2f077bcd",
+    "size": 7152
+   },
+   {
+    "path": "kubejs/assets/ftbquests/lang/uk_ua.json",
+    "sha1": "d5783d4a27773ca483326fa238f7b83c5465c9c0",
+    "size": 28924
+   },
+   {
+    "path": "kubejs/assets/ftbteams/lang/uk_ua.json",
+    "sha1": "85e088ec98a880023b13e4f8db3bdf545c8fecfe",
+    "size": 3179
+   },
+   {
+    "path": "kubejs/assets/goblins_tyranny/lang/uk_ua.json",
+    "sha1": "497fb7632cf93981e106e8df15b7e7c374c89f47",
+    "size": 23430
+   },
+   {
+    "path": "kubejs/assets/grieflogger/lang/en_us.json",
+    "sha1": "e3b54d4c9191d6ff5938c55437709aedcc3e9051",
+    "size": 2302
+   },
+   {
+    "path": "kubejs/assets/grieflogger/lang/uk_ua.json",
+    "sha1": "5c2479512a1421cc21156e647b5106b12dbdb188",
+    "size": 2577
+   },
+   {
+    "path": "kubejs/assets/griefloggerrollbackaddon/lang/en_us.json",
+    "sha1": "be17f2c86ea923ffd35acb605d9d269c882bd02f",
+    "size": 6000
+   },
+   {
+    "path": "kubejs/assets/griefloggerrollbackaddon/lang/uk_ua.json",
+    "sha1": "d04ed2b58f472e4ca5526ef295bcf26d50ba54fd",
+    "size": 7306
+   },
+   {
+    "path": "kubejs/assets/guardvillagers/lang/uk_ua.json",
+    "sha1": "eefdc53dc4dbae604820286b303db9914c213a5a",
+    "size": 8799
+   },
+   {
+    "path": "kubejs/assets/guideme/lang/uk_ua.json",
+    "sha1": "7df5ae9792da1b8eca8645ed1d8f1283bad767db",
+    "size": 2796
+   },
+   {
+    "path": "kubejs/assets/hapi/lang/uk_ua.json",
+    "sha1": "117e3b70113bbae530717ed7d142f26ad0a3850e",
+    "size": 355
+   },
+   {
+    "path": "kubejs/assets/hybrid_aquatic/lang/uk_ua.json",
+    "sha1": "5fb035c2aae3a1b9a578a8b1fc418bf5812308bc",
+    "size": 4110
+   },
+   {
+    "path": "kubejs/assets/iceandfire/lang/uk_ua.json",
+    "sha1": "81d2c3707d3fa03f7ff974edd1942b8db296b67b",
+    "size": 52441
+   },
+   {
+    "path": "kubejs/assets/inventoryessentials/lang/uk_ua.json",
+    "sha1": "32f474eccce19e043a46a9ee5f9e5eee00ecc1cc",
+    "size": 5909
+   },
+   {
+    "path": "kubejs/assets/irons_lib/lang/uk_ua.json",
+    "sha1": "2f01f0961faf2a96d90e5c505bb2c29591a8609e",
+    "size": 5942
+   },
+   {
+    "path": "kubejs/assets/irons_patreon_lib/lang/uk_ua.json",
+    "sha1": "7aabd1de5c0b56d397bc6974ea35e0964a6c9c0c",
+    "size": 173
+   },
+   {
+    "path": "kubejs/assets/irons_spellbooks/lang/uk_ua.json",
+    "sha1": "45c8e7de4f5c4f0b54025911dd04723f00eeb0fb",
+    "size": 28361
+   },
+   {
+    "path": "kubejs/assets/jade/lang/uk_ua.json",
+    "sha1": "f596da630dee1013276c819662ab372cedd2169b",
+    "size": 2042
+   },
+   {
+    "path": "kubejs/assets/jei/lang/uk_ua.json",
+    "sha1": "935589fae716f3e142882517b98c9c8e37ff30ac",
+    "size": 50453
+   },
+   {
+    "path": "kubejs/assets/jupiter/lang/uk_ua.json",
+    "sha1": "72f5bae69426255252513ccf3e1e2347d008cc10",
+    "size": 4285
+   },
+   {
+    "path": "kubejs/assets/kobolds/lang/uk_ua.json",
+    "sha1": "1111a0ada232040b7d0cde6c099394d87ce1d78e",
+    "size": 1712
+   },
+   {
+    "path": "kubejs/assets/lionfishapi/lang/uk_ua.json",
+    "sha1": "2402417614d453042b1d35f08f4c166d480bb38c",
+    "size": 434
+   },
+   {
+    "path": "kubejs/assets/mekanism/lang/uk_ua.json",
+    "sha1": "d7fc04496a75bb7b9311ce2e136582453215041b",
+    "size": 203553
+   },
+   {
+    "path": "kubejs/assets/mekanismgenerators/lang/uk_ua.json",
+    "sha1": "39b7a91c9a0ebeb77b190ef5ce29758819754a00",
+    "size": 25576
+   },
+   {
+    "path": "kubejs/assets/mekanismtools/lang/uk_ua.json",
+    "sha1": "b178d0938fa6f48e5af775836adfca5044ba353f",
+    "size": 94076
+   },
+   {
+    "path": "kubejs/assets/mezz_config/lang/uk_ua.json",
+    "sha1": "82cabc720e64ba773ef15b62d3ce692b8a03e908",
+    "size": 2388
+   },
+   {
+    "path": "kubejs/assets/minecraft/font/alt.json",
+    "sha1": "28e29fe067498fb9c44682080d1aaea423182d2c",
+    "size": 7491
+   },
+   {
+    "path": "kubejs/assets/minecraft/font/illageralt.json",
+    "sha1": "dc179b9709394aefa54d13734c71afc34cf79b9c",
+    "size": 5764
+   },
+   {
+    "path": "kubejs/assets/modernfix/lang/uk_ua.json",
+    "sha1": "5e458510cdeeb55fa365118649bb8ad35d6802f1",
+    "size": 43430
+   },
+   {
+    "path": "kubejs/assets/moogs_structures/lang/en_us.json",
+    "sha1": "d6d7dec9e60656d888d4e07d4a73fdd61634749a",
+    "size": 1266
+   },
+   {
+    "path": "kubejs/assets/moogs_structures/lang/uk_ua.json",
+    "sha1": "f3287346994f30cc5335ee69e6b0823554c09396",
+    "size": 1602
+   },
+   {
+    "path": "kubejs/assets/moreculling/lang/uk_ua.json",
+    "sha1": "b33f76112799fbc720b1574e736b28225dc9a542",
+    "size": 157
+   },
+   {
+    "path": "kubejs/assets/mos/lang/en_us.json",
+    "sha1": "d0c46ab7a261927c3db6edfb0bc2d22b06e4def1",
+    "size": 768
+   },
+   {
+    "path": "kubejs/assets/mos/lang/uk_ua.json",
+    "sha1": "9902a204b7b0868ba85472e0dfaf2b4e4a8e157d",
+    "size": 906
+   },
+   {
+    "path": "kubejs/assets/mowziesmobs/lang/uk_ua.json",
+    "sha1": "d25a608062e37b584634b35b5951041e46059119",
+    "size": 17516
+   },
+   {
+    "path": "kubejs/assets/multipiston/lang/uk_ua.json",
+    "sha1": "fd03c09bcf56165ae4fe9109c10d73fd3b9d8feb",
+    "size": 188
+   },
+   {
+    "path": "kubejs/assets/mvs/lang/en_us.json",
+    "sha1": "32aafef9c21d06b1ecfa2cbe1d797254138f26a1",
+    "size": 853
+   },
+   {
+    "path": "kubejs/assets/mvs/lang/uk_ua.json",
+    "sha1": "fe7d38e3da8471a1cd0da882bf2ce5b0ca07e881",
+    "size": 813
+   },
+   {
+    "path": "kubejs/assets/naturalist/lang/uk_ua.json",
+    "sha1": "e1281dcaf71f6b227723b79f565b96aa7b02fec9",
+    "size": 25860
+   },
+   {
+    "path": "kubejs/assets/nitrogen_internals/lang/uk_ua.json",
+    "sha1": "6c2fe167683d2c73d4abe5cde96d2300e851dc9b",
+    "size": 461
+   },
+   {
+    "path": "kubejs/assets/nomadictents/lang/uk_ua.json",
+    "sha1": "9f56aa68a3e09f2c93bb3a8bf4c0aff1c7654a5d",
+    "size": 11781
+   },
+   {
+    "path": "kubejs/assets/nuggets/lang/uk_ua.json",
+    "sha1": "d6b3a2e2055479e83a3e730bde9712ad2c42f174",
+    "size": 2171
+   },
+   {
+    "path": "kubejs/assets/oceansdelight/lang/uk_ua.json",
+    "sha1": "62f705bbd50e1df75cccba0b4bda88cfeeaa4d50",
+    "size": 270
+   },
+   {
+    "path": "kubejs/assets/openpartiesandclaims/lang/uk_ua.json",
+    "sha1": "4367085d4b3a1de943a9feee8a8529423b664f64",
+    "size": 92736
+   },
+   {
+    "path": "kubejs/assets/orc_hut/lang/uk_ua.json",
+    "sha1": "09ef2eb6fdb3fb2636f9696099221880f807dc96",
+    "size": 155
+   },
+   {
+    "path": "kubejs/assets/owo/lang/uk_ua.json",
+    "sha1": "fbe56ec5e88de7fc1710081e107562bef7b813d3",
+    "size": 1191
+   },
+   {
+    "path": "kubejs/assets/patchouli/lang/uk_ua.json",
+    "sha1": "ec97ff54a7d1d6181f2556438b311134ed0d92c1",
+    "size": 217
+   },
+   {
+    "path": "kubejs/assets/ponder/lang/uk_ua.json",
+    "sha1": "de4d0911bed0dfb082b3bf9bd82eaf85a6860e7f",
+    "size": 4070
+   },
+   {
+    "path": "kubejs/assets/puffish_skills/lang/uk_ua.json",
+    "sha1": "1101940b2504c9ecf9d5bb24ea5a449dbd170bcd",
+    "size": 874
+   },
+   {
+    "path": "kubejs/assets/reactivemusic/lang/uk_ua.json",
+    "sha1": "033c46537e0a5c7a3d30939deb3b38cf304a39f6",
+    "size": 355
+   },
+   {
+    "path": "kubejs/assets/reeses-sodium-options/lang/uk_ua.json",
+    "sha1": "b214552803da0af429990ce14e6be9c0f0f5aee7",
+    "size": 8976
+   },
+   {
+    "path": "kubejs/assets/resourcefulconfig/lang/en_us.json",
+    "sha1": "c75d15d88bd1f93675970ee68302502a95cda68e",
+    "size": 2030
+   },
+   {
+    "path": "kubejs/assets/resourcefulconfig/lang/uk_ua.json",
+    "sha1": "d175c6b56b838990b4e389b457a1e53b960b78c4",
+    "size": 2652
+   },
+   {
+    "path": "kubejs/assets/sable/lang/uk_ua.json",
+    "sha1": "55827ab2c434a31cc422efa93a1d25bbf6e9344b",
+    "size": 12942
+   },
+   {
+    "path": "kubejs/assets/shulkerboxtooltip/lang/uk_ua.json",
+    "sha1": "9efaefb229d63fc3688498b4cded44539784c55d",
+    "size": 3040
+   },
+   {
+    "path": "kubejs/assets/skinrestorer/lang/en_us.json",
+    "sha1": "8773af2ee9cd54f4477c6854f2bcb49165e29fe0",
+    "size": 664
+   },
+   {
+    "path": "kubejs/assets/skinrestorer/lang/uk_ua.json",
+    "sha1": "d4407097b61457da8c20c1f4ee681a4616e4540b",
+    "size": 934
+   },
+   {
+    "path": "kubejs/assets/smallships/lang/uk_ua.json",
+    "sha1": "9d49dd81b94688ea666391284cab05fad9c21f42",
+    "size": 20792
+   },
+   {
+    "path": "kubejs/assets/sodium-extra/lang/uk_ua.json",
+    "sha1": "3e1acf84a25c56b6c76840c27ae83f7fb189edbc",
+    "size": 7970
+   },
+   {
+    "path": "kubejs/assets/sodium/lang/uk_ua.json",
+    "sha1": "2fa8197f4c1680ef36e657503983a1a5cd8124bb",
+    "size": 15780
+   },
+   {
+    "path": "kubejs/assets/sophisticatedbackpacks/lang/uk_ua.json",
+    "sha1": "75c71bc489593121e193a00bb250d87585e147df",
+    "size": 189
+   },
+   {
+    "path": "kubejs/assets/sophisticatedcore/lang/uk_ua.json",
+    "sha1": "5a4fdb548d8f82c9a0ee801fbc7c02a6d7738336",
+    "size": 15137
+   },
+   {
+    "path": "kubejs/assets/sophisticatedstorage/lang/uk_ua.json",
+    "sha1": "5452b35cdd633a050fff424ccadf7b664ba9f361",
+    "size": 22437
+   },
+   {
+    "path": "kubejs/assets/spectrelib/lang/uk_ua.json",
+    "sha1": "7313e738e4df277685638c534fe397b6fdf33b40",
+    "size": 83
+   },
+   {
+    "path": "kubejs/assets/structure_layout_optimizer/lang/en_us.json",
+    "sha1": "1b8b39cb20ac86221ea081c2f157c099407c878b",
+    "size": 1340
+   },
+   {
+    "path": "kubejs/assets/structure_layout_optimizer/lang/uk_ua.json",
+    "sha1": "0ff938c86cd86b865deda533b5009cece0e9f478",
+    "size": 1847
+   },
+   {
+    "path": "kubejs/assets/structurize/lang/uk_ua.json",
+    "sha1": "b45e4a3cf2c8fc00c78fb3a420b42d1fd31348e0",
+    "size": 27247
+   },
+   {
+    "path": "kubejs/assets/tectonic/lang/uk_ua.json",
+    "sha1": "1ce1a03e2d3bf4c4158258c68317e78549fcaf72",
+    "size": 13949
+   },
+   {
+    "path": "kubejs/assets/twilightforest/lang/uk_ua.json",
+    "sha1": "48358d6b2734e0ffc3097db8bc76c462bcb4a85c",
+    "size": 1084
+   },
+   {
+    "path": "kubejs/assets/upgrade_aquatic/lang/uk_ua.json",
+    "sha1": "232a2bd273f82522fc76211d2d38434934d1b1e1",
+    "size": 4132
+   },
+   {
+    "path": "kubejs/assets/veil/lang/uk_ua.json",
+    "sha1": "d748132e528991e6f3335a3a08a10298247dd2af",
+    "size": 3002
+   },
+   {
+    "path": "kubejs/assets/villagertradingplus/lang/uk_ua.json",
+    "sha1": "3b4249ea4a60f089b3a4c114bd0d3e8cd82cbe90",
+    "size": 161
+   },
+   {
+    "path": "kubejs/assets/waystones/lang/uk_ua.json",
+    "sha1": "691cc1e44b7ec1470012dc582bb2df0517c95212",
+    "size": 12197
+   },
+   {
+    "path": "kubejs/assets/wilds/lang/en_us.json",
+    "sha1": "7793c347b187dd9f24f062730e6f7a0db87409bc",
+    "size": 1443
+   },
+   {
+    "path": "kubejs/assets/wilds/lang/uk_ua.json",
+    "sha1": "00c30562affe87567bff46b2ce90b0980774b20e",
+    "size": 2228
+   },
+   {
+    "path": "kubejs/assets/wilds/sidebar_buttons/skills.json",
+    "sha1": "92e89c1a30b83bdaf87d702f9e7f1540d00bd6fc",
+    "size": 268
+   },
+   {
+    "path": "kubejs/assets/xaerobetterpvp/lang/uk_ua.json",
+    "sha1": "83c972002197f01434bb907ecd388f83ef1a2a6d",
+    "size": 971
+   },
+   {
+    "path": "kubejs/assets/xaerolib/lang/uk_ua.json",
+    "sha1": "aea448f3d541d2194cc12c972459ffe08ca17666",
+    "size": 4154
+   },
+   {
+    "path": "kubejs/assets/xaerominimap/lang/uk_ua.json",
+    "sha1": "f40fbb259717f42c051d74d0cf821b877a5cb7d1",
+    "size": 15701
+   },
+   {
+    "path": "kubejs/assets/xaeroworldmap/lang/uk_ua.json",
+    "sha1": "d70b2749bc9b8be0e9ca84ecf3bdc4b0f9c425da",
+    "size": 43763
+   },
+   {
+    "path": "kubejs/assets/yungsapi/lang/uk_ua.json",
+    "sha1": "6d4afea0514714766853a2f006df2bd621b511a9",
+    "size": 276
+   },
+   {
+    "path": "kubejs/client_scripts/wilds_jei.js",
+    "sha1": "80b9fa7f63f867b89666e262944aa4ea8882b4fa",
+    "size": 908
+   },
+   {
+    "path": "kubejs/data/accessories/tags/item/belt.json",
+    "sha1": "18ffb6f313408b41aadc32add991b27156bcb735",
+    "size": 117
+   },
+   {
+    "path": "kubejs/data/accessories/tags/item/ring.json",
+    "sha1": "cff5e51744ff3837d343398dfa99c04eb6c42161",
+    "size": 78
+   },
+   {
+    "path": "kubejs/data/cataclysm/curios/entities/slots.json",
+    "sha1": "b50c02f4bb12f8b4d6ffc9d66dd893a1d8b34da1",
+    "size": 133
+   },
+   {
+    "path": "kubejs/data/cataclysm/curios/slots/hands.json",
+    "sha1": "42ec1e7df8b0f70e8dd4d4642d6fc9d89347d1fa",
+    "size": 17
+   },
+   {
+    "path": "kubejs/data/curios/tags/item/belt.json",
+    "sha1": "18ffb6f313408b41aadc32add991b27156bcb735",
+    "size": 117
+   },
+   {
+    "path": "kubejs/data/curios/tags/item/ring.json",
+    "sha1": "cff5e51744ff3837d343398dfa99c04eb6c42161",
+    "size": 78
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/advancement/find_fishing_hut.json",
+    "sha1": "ec19726a473dbdb86785efddd805ef87ef5fa26a",
+    "size": 882
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/advancement/find_thornborn_towers.json",
+    "sha1": "d734d6244be330fc352c66fedcbb2e35d02eeffc",
+    "size": 896
+   },
+   {
+    "path": "kubejs/data/minecraft/advancement/give_quest_trader_trade.json",
+    "sha1": "b30f3b2b530e06cd1ae179d0fd43235feb434d4e",
+    "size": 297
+   },
+   {
+    "path": "kubejs/data/minecraft/advancement/wander_add_map.json",
+    "sha1": "e22ec57b2a01d91411b04c13cae14e4584e8d9f7",
+    "size": 88
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/bedouin_section.json",
+    "sha1": "b0b002cd06bba41b6c6e5f89b52ac437d7065489",
+    "size": 721
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/bedouin_wall.json",
+    "sha1": "c9c47f88c2dc93512fc67623102383f8183d0799",
+    "size": 792
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/black_shamiyana.json",
+    "sha1": "19b9f6b0de97f22a8caa6b843c6b44b26bae27ac",
+    "size": 938
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/black_shamiyana_wall.json",
+    "sha1": "e6d156ad2f9b964987209e0b503d893ff8aef705",
+    "size": 1016
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/blank_tepee_wall.json",
+    "sha1": "d4053a941639306d10461ce685b180bbe8f3a10a",
+    "size": 796
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/blue_shamiyana.json",
+    "sha1": "2a47481bc15af03f6d934fc71c90fe4eb36ef8ea",
+    "size": 934
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/blue_shamiyana_wall.json",
+    "sha1": "f6cc7c992f30f7c2b3f9e9b1e86b8d02f8e43d4c",
+    "size": 1013
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/brown_shamiyana.json",
+    "sha1": "9fe1c8e0de60d3d037c6f7751627830fe9caac09",
+    "size": 938
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/brown_shamiyana_wall.json",
+    "sha1": "e25e8b708e3bb0acd83b52c10d0a376be8773220",
+    "size": 1016
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/channel_tepee_wall.json",
+    "sha1": "cb0a445ac10b2084380399b9d758881aa089841d",
+    "size": 1028
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/creeper_tepee_wall.json",
+    "sha1": "cf01b0f6926723d423af99e055c8cefa401e972b",
+    "size": 1029
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/cyan_shamiyana.json",
+    "sha1": "c606a3c8404954d908ed9b98a2433a695897a8d8",
+    "size": 934
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/cyan_shamiyana_wall.json",
+    "sha1": "cabae5bd3a8c33d671bc01f7629c90ffb4c25051",
+    "size": 1013
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/diamond_crossbeams.json",
+    "sha1": "a556dc4ebc77f3a02763ee4168d1797d825c0c4f",
+    "size": 1208
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/diamond_tent_shovel.json",
+    "sha1": "1bc3d9d7d30943820cda8621739c87c23ce6feb7",
+    "size": 1452
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/dreamcatcher_tepee_wall.json",
+    "sha1": "343f141dbfbd312c7b2d0bc8c9110a4a2c68092e",
+    "size": 1036
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/eagle_tepee_wall.json",
+    "sha1": "88a63cb67e70f318d4bed80468aa4676ffcd484f",
+    "size": 1023
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_bedouin.json",
+    "sha1": "97bed0b7d1f72b66ee80bb5e2275ae2670c36a97",
+    "size": 562
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_bedouin_layer1.json",
+    "sha1": "c02ba323ac37834905519320bcb953ba7819758f",
+    "size": 1428
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_bedouin_layer2.json",
+    "sha1": "ee504b738e26e14f1958dd26b0241969b690d66c",
+    "size": 1414
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_bedouin_layer3.json",
+    "sha1": "7925f3264672dcdcb584197ef985a580eedf31b4",
+    "size": 1416
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_bedouin_layer4.json",
+    "sha1": "50073edfb25de304d23486ec6bf7c3e3e1f7f214",
+    "size": 1433
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_indlu.json",
+    "sha1": "7f43226e3bb34b1590ac092fef4cdb8a3c3f8b1c",
+    "size": 556
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_indlu_layer1.json",
+    "sha1": "45a6bcf32d5e999ac3587a8190fa847cf6ff33b9",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_indlu_layer2.json",
+    "sha1": "991d61f8397ffb3f8db0f6e66f7c94eb3da5727a",
+    "size": 1408
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_indlu_layer3.json",
+    "sha1": "10f0940c3f8470635450e46643a743c6b04d50a7",
+    "size": 1410
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_indlu_layer4.json",
+    "sha1": "37001663a8a9b47c0d0591dd03770e245ca462ab",
+    "size": 1427
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_shamiyana.json",
+    "sha1": "527b6ea5ffc90416ce45a4f1ff56a290ffa2d6ed",
+    "size": 568
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_shamiyana_layer1.json",
+    "sha1": "7db07a269eb54851e997446d2b68d86c2d0a7383",
+    "size": 1434
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_shamiyana_layer2.json",
+    "sha1": "985d0104767c000bef151ea6564365db9aab1a8a",
+    "size": 1420
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_shamiyana_layer3.json",
+    "sha1": "e29d469f538c6a40020ab0be28cad5ff0f7eb199",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_shamiyana_layer4.json",
+    "sha1": "b3003b3a9e1ccdb18028092e2b152010bd83455c",
+    "size": 1439
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_tepee.json",
+    "sha1": "46d07cdc86efee30f0fdcd9837151be2ca285c6e",
+    "size": 556
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_tepee_layer1.json",
+    "sha1": "9d6e54917c88db9e28282c9602838b6ee1d176d8",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_tepee_layer2.json",
+    "sha1": "3e269c67e6f08b06a3bc597438f55c8d6e14f832",
+    "size": 1408
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_tepee_layer3.json",
+    "sha1": "a7b9839982a58c8c85d98b290bf2e560957f59c6",
+    "size": 1410
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_tepee_layer4.json",
+    "sha1": "fef9da0f3462593b4f074cdb672ea0b1816c17d6",
+    "size": 1427
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_yurt.json",
+    "sha1": "21ecf29cdaebff105722b46969c7b080f01a2d3a",
+    "size": 553
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_yurt2.json",
+    "sha1": "6a458469c1fb06fd559803ba93f304c1addc156b",
+    "size": 1247
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_yurt_layer1.json",
+    "sha1": "0b4a7328b8d0b2d4ed1fed29c7784467c83fbc05",
+    "size": 1419
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_yurt_layer2.json",
+    "sha1": "0f65e9cd9370211191b38c2bac2201bafdd4772a",
+    "size": 1405
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_yurt_layer3.json",
+    "sha1": "c03f4e3448a698c7957b37451b49fa5c37fafbe2",
+    "size": 1407
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/giant_yurt_layer4.json",
+    "sha1": "0ec1f73aa06427cc4d1a77c2942fd235310dcdd8",
+    "size": 1424
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/golden_crossbeams.json",
+    "sha1": "83849c2bbffaa22f52f4a944c063c609a6b10ac1",
+    "size": 1209
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/golden_mallet.json",
+    "sha1": "0ebccb0affc4e0f2619a8454df28ae71817b25b5",
+    "size": 926
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/golden_tent_shovel.json",
+    "sha1": "0f553e9a65c76fb04c6da65e72303306bbafd0ad",
+    "size": 1456
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/golem_tepee_wall.json",
+    "sha1": "12d8f63fcb94372596b9f560262aaafbc6877d83",
+    "size": 1026
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/gray_shamiyana.json",
+    "sha1": "ea86fcaa308850d0d5420d95d679454f826479c9",
+    "size": 934
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/gray_shamiyana_wall.json",
+    "sha1": "3c040383ef897e53a01e2c06454054061d18bbca",
+    "size": 1013
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/green_shamiyana.json",
+    "sha1": "d33554b6c68069c0e5116c6d886882fdcb0888da",
+    "size": 938
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/green_shamiyana_wall.json",
+    "sha1": "f4a68954b344666175f7f63ca1dba2c0cc538000",
+    "size": 1016
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/hope_tepee_wall.json",
+    "sha1": "62cb7b79cc627056655d257a0be0af2f3493cedd",
+    "size": 1023
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/indlu_section.json",
+    "sha1": "02f2f35509ad0a020986741f1fa6f4a68c511473",
+    "size": 719
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/indlu_wall.json",
+    "sha1": "64f87b6ee6ba5d8460b8f8e98b09be60de26aa5a",
+    "size": 784
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/iron_tent_shovel.json",
+    "sha1": "f12480c37dd366ca4d113f0a25930da00c578391",
+    "size": 1452
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_bedouin.json",
+    "sha1": "8347438ab0c03cd2c0c0d771b4b6a8c0d4c120d4",
+    "size": 563
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_bedouin_layer1.json",
+    "sha1": "3382640af5d9c74172904cbd9d49c533655bb349",
+    "size": 1428
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_bedouin_layer2.json",
+    "sha1": "0eb2c918193174cb2e6bd11e5b4e96efde90692f",
+    "size": 1414
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_bedouin_layer3.json",
+    "sha1": "54e23fd9a886e81141736a3168c2a4ed8da2068e",
+    "size": 1416
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_indlu.json",
+    "sha1": "47c615c89685d57b56daee0fee9e53e993a288ea",
+    "size": 557
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_indlu_layer1.json",
+    "sha1": "36698cb6ecf96d44677ee5dfbe006ac61aecb897",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_indlu_layer2.json",
+    "sha1": "0720431fcbbb92e9ef1749c55d1c9de098e6b1ae",
+    "size": 1408
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_indlu_layer3.json",
+    "sha1": "4adbd828b136036f29c6a29789eecf3db934f4b7",
+    "size": 1410
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_shamiyana.json",
+    "sha1": "72a50ecd6ef33fbee79f031f6107900e0f27e5ce",
+    "size": 569
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_shamiyana_layer1.json",
+    "sha1": "020cbc28aa998b7e39ebca0d16866bb7ad5ae4c4",
+    "size": 1434
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_shamiyana_layer2.json",
+    "sha1": "a9f9d2dc3e5483e8aa396d0d5d4a4811271345e8",
+    "size": 1420
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_shamiyana_layer3.json",
+    "sha1": "d3c2d174553ad2e6f5447ec3ccd122b71c4dba4d",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_tepee.json",
+    "sha1": "59ec69eb69d08283c6294f4e10f4776fd8266c14",
+    "size": 557
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_tepee_layer1.json",
+    "sha1": "d12d07674b284cfd0f4e78991736f190269861f6",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_tepee_layer2.json",
+    "sha1": "4b7a077debc65a3cb29a674c4dd28bafbffe35fe",
+    "size": 1408
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_tepee_layer3.json",
+    "sha1": "e7f4621071918dcde89c41f42cce757a6c3fb197",
+    "size": 1410
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_yurt.json",
+    "sha1": "4b93cf3f387068103d2037f3c6609d0be3f3f68f",
+    "size": 554
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_yurt2.json",
+    "sha1": "25e33360a6897b8ddce679bebe90ba51df73497a",
+    "size": 1246
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_yurt_layer1.json",
+    "sha1": "50ae4afb8973a38c6438c709ab485c9821204da9",
+    "size": 1419
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_yurt_layer2.json",
+    "sha1": "3964f63d9319c62e9c5c524497da88a063585a05",
+    "size": 1405
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/large_yurt_layer3.json",
+    "sha1": "4227f9f96d50a43a6eff29f22a7a97fc7c75c654",
+    "size": 1407
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/light_blue_shamiyana.json",
+    "sha1": "142d3c1c560851b2c48e1ff1483c48da56b91b61",
+    "size": 958
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/light_blue_shamiyana_wall.json",
+    "sha1": "3f316ea6a66fcab50af2b43d8af5f85d995b434d",
+    "size": 1031
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/light_gray_shamiyana.json",
+    "sha1": "105db1aef013f0705c84b84a71fd172fd65748c4",
+    "size": 958
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/light_gray_shamiyana_wall.json",
+    "sha1": "ba0f319a41634891973842d691d2439e0beeb253",
+    "size": 1031
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/lime_shamiyana.json",
+    "sha1": "b4c8d8b45f891620a14d83ec7399146a8b73d6f0",
+    "size": 934
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/lime_shamiyana_wall.json",
+    "sha1": "bc89f1895af52b5e0f748f9f5a79b347d946300e",
+    "size": 1013
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/magenta_shamiyana.json",
+    "sha1": "cc6f7379a89fbc2b626609e8e5fdfd03045abdb3",
+    "size": 946
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/magenta_shamiyana_wall.json",
+    "sha1": "32fc150e16b2f395e3701eb5ef9ec69b987daec3",
+    "size": 1022
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/magic_tepee_wall.json",
+    "sha1": "ef82552651fd6ba32fab32eab903f3507d3c4e2c",
+    "size": 1028
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mallet.json",
+    "sha1": "60cf31c80e9b645446b5b77f39098530e408f4b9",
+    "size": 908
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_bedouin.json",
+    "sha1": "abe3fc453d0c035bc9df2e197bf6732e561f60a3",
+    "size": 564
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_bedouin_layer1.json",
+    "sha1": "27addf9258961664e3382147f1362c06a401ae70",
+    "size": 1431
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_bedouin_layer2.json",
+    "sha1": "99974382f7226ee820b1fc12d1cf5ae501536086",
+    "size": 1417
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_indlu.json",
+    "sha1": "203270e2084fe23a1bf5e5dbbcd65b892934c1d3",
+    "size": 558
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_indlu_layer1.json",
+    "sha1": "b199667b2d6b051b5b48eb4999c1f788b4ecb1ac",
+    "size": 1425
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_indlu_layer2.json",
+    "sha1": "ffb3bc1b46a27041dd7336b89e3ffbcd5a124718",
+    "size": 1411
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_shamiyana.json",
+    "sha1": "7b75d5c8001c5054e33152c87bcbe434b4874912",
+    "size": 570
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_shamiyana_layer1.json",
+    "sha1": "a10697ef377808cd4f24f309e1ffd5a5f8306067",
+    "size": 1437
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_shamiyana_layer2.json",
+    "sha1": "c5e418dfb6e89f0bf142326158e48e452c2fa809",
+    "size": 1423
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_tepee.json",
+    "sha1": "f21384a1f1a26de6ae92ba82528df0bc99dd8a5b",
+    "size": 558
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_tepee_layer1.json",
+    "sha1": "b47a85385f6044671e6d7130398de25795528386",
+    "size": 1425
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_tepee_layer2.json",
+    "sha1": "de03b564b7d007c48dc29d7bcaac4992109170fc",
+    "size": 1411
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_yurt.json",
+    "sha1": "167414a3949364a4fa263385cf70d8a9a915342d",
+    "size": 555
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_yurt_layer1.json",
+    "sha1": "bbfa3148b90f6bb3fd60acd17a5aa61cec26831a",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/medium_yurt_layer2.json",
+    "sha1": "587be33066e289ccd6cf22ce64823775fd32129b",
+    "size": 1408
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_bedouin.json",
+    "sha1": "aee11d1d98699730f1b03e831eb54e380337984c",
+    "size": 560
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_bedouin_layer1.json",
+    "sha1": "7dd974815974cebc568741594d841ea043009e3d",
+    "size": 1425
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_bedouin_layer2.json",
+    "sha1": "06e733e90309590f502cd30f0a9ac68bd820a0ea",
+    "size": 1411
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_bedouin_layer3.json",
+    "sha1": "32de96df16bcb99882e2bcc954ce3e43453c5392",
+    "size": 1413
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_bedouin_layer4.json",
+    "sha1": "65b5e4f67212365b841162addb3c18e66df74bd9",
+    "size": 1430
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_bedouin_layer5.json",
+    "sha1": "0272b59b723d215ae409caceefa4602c96cc278f",
+    "size": 1417
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_indlu.json",
+    "sha1": "3257ecd18f613032c78c211a05d9c3a58dc77343",
+    "size": 554
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_indlu_layer1.json",
+    "sha1": "12c8d28a96402d989ea5822b931675f5dbd997c3",
+    "size": 1419
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_indlu_layer2.json",
+    "sha1": "625f2cd7ad4193234765a1ce87e6dd024ba714f9",
+    "size": 1405
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_indlu_layer3.json",
+    "sha1": "9149afa2051089ac323abea870a8c22f0565b384",
+    "size": 1407
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_indlu_layer4.json",
+    "sha1": "31de8b7cc4c68aead319a17bd3ebb66a3c3e0125",
+    "size": 1424
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_indlu_layer5.json",
+    "sha1": "5b2a7d15204741a8b1fae8fa87abfab52f6597c8",
+    "size": 1411
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_shamiyana.json",
+    "sha1": "a03f4df162cc71f908f00535c2de226acca6cbb6",
+    "size": 566
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_shamiyana_layer1.json",
+    "sha1": "5be14732f4d71f929acf86b9df0d1e23a3217a9f",
+    "size": 1431
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_shamiyana_layer2.json",
+    "sha1": "9879bc3b432a5b9d758008f2409ac0ecec9a2633",
+    "size": 1417
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_shamiyana_layer3.json",
+    "sha1": "4aafe6d133c049f28e44622be66e3246bba1d704",
+    "size": 1419
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_shamiyana_layer4.json",
+    "sha1": "9061fcc5ec0ce78e31c3e1293f6b4b9390c3cbfc",
+    "size": 1436
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_shamiyana_layer5.json",
+    "sha1": "f467faa028b525b20619fc66fe1d1af2a6555cf7",
+    "size": 1423
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_tepee.json",
+    "sha1": "1f2d7a1734d50ea10f8e9fdf5da76cc9a29a8b32",
+    "size": 554
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_tepee_layer1.json",
+    "sha1": "81c80218f0c14ffbcd2722bc68af0ab5e0b3ba98",
+    "size": 1419
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_tepee_layer2.json",
+    "sha1": "af2f89115fbd6c967b9fb14761e81bb8933b3953",
+    "size": 1405
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_tepee_layer3.json",
+    "sha1": "c9dc2cb19100c430041bb43dbbabd770636aba24",
+    "size": 1407
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_tepee_layer4.json",
+    "sha1": "ee1a30b1c3400d915910b3a589fbeb5626d408df",
+    "size": 1424
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_tepee_layer5.json",
+    "sha1": "b2e2f08754477f7e90af9317e72b891f3043d775",
+    "size": 1411
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt.json",
+    "sha1": "11f629f9341956af79394dbfdf898c65237783f0",
+    "size": 551
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt2.json",
+    "sha1": "3b2f352bc2a415e5816d09a201a00b96be2fd40f",
+    "size": 1244
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt_layer1.json",
+    "sha1": "2018eaaaa5bb3ca31c97366cafe291c70b5bae2b",
+    "size": 1416
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt_layer2.json",
+    "sha1": "b46bec97621cf183aad81391c66bd7b863fb4d06",
+    "size": 1402
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt_layer3.json",
+    "sha1": "c968442018fb89bb090f38264ef058569af8d79f",
+    "size": 1404
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt_layer4.json",
+    "sha1": "2d7b761273f83b05726609caec948901e9f5e184",
+    "size": 1421
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/mega_yurt_layer5.json",
+    "sha1": "066d67c6e0d1392056bb4aeff20657166f8a59bc",
+    "size": 1408
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/obsidian_crossbeams.json",
+    "sha1": "4a47379d98e0d3f9436c882304c5afa03a498ef6",
+    "size": 985
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/obsidian_tent_shovel.json",
+    "sha1": "626a129d078e88dba9ca215717bb005aae22d15c",
+    "size": 1456
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/orange_shamiyana.json",
+    "sha1": "bd2f11874359a2ad7f25855f2e553c072db1765f",
+    "size": 942
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/orange_shamiyana_wall.json",
+    "sha1": "e25ec1d4aae4bf8f4bb66b01de68dd8aeefdcc46",
+    "size": 1019
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/pink_shamiyana.json",
+    "sha1": "e36f3a5d771364d0e80be82cc5149aed64fd5103",
+    "size": 934
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/pink_shamiyana_wall.json",
+    "sha1": "a542e8edfee017deaa8668635602b369eddf54a9",
+    "size": 1013
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/purple_shamiyana.json",
+    "sha1": "21a2791dacdfebc65a24031466f7de7b0f3ec6bd",
+    "size": 942
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/purple_shamiyana_wall.json",
+    "sha1": "5df64ec2f133e45836daa29414c2050f52961aa7",
+    "size": 1019
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/radial_tepee_wall.json",
+    "sha1": "5f5003fbbf53edcf3af28089e41e9397d9ff8f35",
+    "size": 1026
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/rain_tepee_wall.json",
+    "sha1": "dad68f5108e18f01f1101a66a1249148b3115b3f",
+    "size": 1026
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/red_shamiyana.json",
+    "sha1": "15e10d8c0c8970885f6750b061b4adc5604075ce",
+    "size": 930
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/red_shamiyana_wall.json",
+    "sha1": "e7344ddb672b1bab527a8d338b2ba9ff7b35e91a",
+    "size": 1010
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/rigid_dirt.json",
+    "sha1": "165de0e57bb44009fa10a6ef0ee5339922a5092e",
+    "size": 980
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/shamiyana_section.json",
+    "sha1": "6e84e94b65a437835a191088220b179f6dee99dd",
+    "size": 753
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/shamiyana_section2.json",
+    "sha1": "3b8a38597c909da6f626401712a211a1662fda10",
+    "size": 1167
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_bedouin.json",
+    "sha1": "d943ee9b6d767e5612e4088f071ad709fd8b1645",
+    "size": 561
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_bedouin_layer1.json",
+    "sha1": "9ecfc59566cd54186d1872d09127e6d8f828f31e",
+    "size": 1428
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_indlu.json",
+    "sha1": "0eeabe99c66225db5401a057af04eab979def473",
+    "size": 555
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_indlu_layer1.json",
+    "sha1": "7de2268c7e93f32de51bb45413336597e7385f1c",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_shamiyana.json",
+    "sha1": "eb02fd7e64e3c9b1dd1ee862753322468d6c7328",
+    "size": 567
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_shamiyana_layer1.json",
+    "sha1": "e64cd1c3a0840d57ee45ec3ae1926401ff8d2a4e",
+    "size": 1434
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_tepee.json",
+    "sha1": "fbc8f1426cfc43559c63e6b525c554de7b7556d7",
+    "size": 555
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_tepee_layer1.json",
+    "sha1": "d5da00384b576c4c63cc623e7c1ff554a6b1ffab",
+    "size": 1422
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_yurt.json",
+    "sha1": "8fcaf9c9517edfeba020a52d81af89c3eb117301",
+    "size": 552
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/small_yurt_layer1.json",
+    "sha1": "bc30546d6c5ca67c1030d2abdf446d27e231254b",
+    "size": 1419
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/space_tepee_wall.json",
+    "sha1": "ef127e103ad08fe9935975ac875c914330c40ed9",
+    "size": 1027
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/stone_tent_shovel.json",
+    "sha1": "c6292de89bce42e28f27634b2d9aabac069723f3",
+    "size": 1456
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/sun_tepee_wall.json",
+    "sha1": "b45db5ac0edaca20b42a6638ede398e8894dfd7f",
+    "size": 1023
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tent_canvas.json",
+    "sha1": "1d68c5886043fb0e2a68207859c92d467a0380e5",
+    "size": 528
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tepee_section.json",
+    "sha1": "6231958c9503b2aba9b48ffd53413461aaa9640f",
+    "size": 738
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tepee_section2.json",
+    "sha1": "f1f9f0a07de99583150d3c470673390ee4299b04",
+    "size": 744
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tiny_bedouin.json",
+    "sha1": "f2df73f25a35780e9bf1479dc0caf3bcad5b1ece",
+    "size": 562
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tiny_indlu.json",
+    "sha1": "e651a663448681f17449fe90f9af68c814567972",
+    "size": 556
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tiny_shamiyana.json",
+    "sha1": "3b706d6bb398566bc8d30d45f17ba176c6f0e18a",
+    "size": 568
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tiny_tepee.json",
+    "sha1": "e3a0d03f63fd5bdc9c337a09653ae99e574a56b1",
+    "size": 556
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/tiny_yurt.json",
+    "sha1": "fa713c0d022d97fa1abdaecb6c15cf2edfa4e972",
+    "size": 553
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/triforce_tepee_wall.json",
+    "sha1": "ecac69e340344e6aa1449ba842de8ef3c1dc5032",
+    "size": 1032
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/wedge_tepee_wall.json",
+    "sha1": "5d55e55eeebbe65dcfc2e3c92d82b1d27ec463ed",
+    "size": 1021
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/white_shamiyana.json",
+    "sha1": "edbf4b3214d91cc8ff27c785589384803c4d2d16",
+    "size": 724
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/white_shamiyana_wall.json",
+    "sha1": "6d3de8dd2ce4fa47ff845343908a7f3a161874a8",
+    "size": 812
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/yellow_shamiyana.json",
+    "sha1": "fa0ca162918c2aa8be8c41468e8b22c6ee846c08",
+    "size": 942
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/yellow_shamiyana_wall.json",
+    "sha1": "90e7a55648256023a409d85c0326c9db1311cb46",
+    "size": 1019
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/yurt_section.json",
+    "sha1": "ec574ff4d02b005dfdfe55f952f97020d5770b96",
+    "size": 743
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/yurt_wall.json",
+    "sha1": "91996f9c5bd5d0a53daf1d68aaabd09fa5ff58ea",
+    "size": 780
+   },
+   {
+    "path": "kubejs/data/nomadictents/advancement/recipes/zigzag_tepee_wall.json",
+    "sha1": "01be488983d0292bd4914f602f465a9c8fadfa61",
+    "size": 1023
+   },
+   {
+    "path": "kubejs/data/wilds/accessories/slot/hand.json",
+    "sha1": "380edd6ca726eaf8639f9f5acde832ec97fc80cd",
+    "size": 197
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/inject/common.json",
+    "sha1": "79b383c3715388dfc511e453f721ccc4ede46177",
+    "size": 5779
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/inject/nether.json",
+    "sha1": "2e68b21204cb34dd2dd99bfceb1697d09d9d1503",
+    "size": 2823
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/inject/ocean.json",
+    "sha1": "32cfbf0e8f6263558ed7c687d86882c33251f02b",
+    "size": 4317
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/inject/rare.json",
+    "sha1": "e304394baf22fb06d81d33e34acfc7bf9574c0b2",
+    "size": 5835
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/reward/boss.json",
+    "sha1": "806d038f33c21b3aa80beac3391f5b17cff26f88",
+    "size": 4131
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/reward/explorer.json",
+    "sha1": "44a021a2f47908d533eec6417f64ff649b8d2135",
+    "size": 4097
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/reward/fantasy.json",
+    "sha1": "50f690c69307f2fb8ca0e5289816733d073f295e",
+    "size": 3487
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/reward/magic.json",
+    "sha1": "fc38c490aacc64ac041245a32b184a47a476f65c",
+    "size": 3510
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/reward/sea.json",
+    "sha1": "462be0cbf7982f4444a6269b0f16fbc15451dfae",
+    "size": 3797
+   },
+   {
+    "path": "kubejs/data/wilds/loot_table/reward/tech.json",
+    "sha1": "698dee09191b26caeab913105b6b2d4a597ade0b",
+    "size": 3531
+   },
+   {
+    "path": "kubejs/data/wilds/puffish_skills/categories/path/category.json",
+    "sha1": "5a0553e53b3b64a05ce5ae326fc4ed74e17bbd34",
+    "size": 633
+   },
+   {
+    "path": "kubejs/data/wilds/puffish_skills/categories/path/connections.json",
+    "sha1": "54968892222b6815df5af27b9b532036a8806b7e",
+    "size": 15019
+   },
+   {
+    "path": "kubejs/data/wilds/puffish_skills/categories/path/definitions.json",
+    "sha1": "19272da63bb45aa78f1f04a89117b2531e4ec5b5",
+    "size": 107867
+   },
+   {
+    "path": "kubejs/data/wilds/puffish_skills/categories/path/experience.json",
+    "sha1": "1bb2ac855c95a8292cb50f5e9f1dfabddbf86bd3",
+    "size": 1849
+   },
+   {
+    "path": "kubejs/data/wilds/puffish_skills/categories/path/skills.json",
+    "sha1": "41dc5f8db89a67c3c38d1b6f5fe0c73ef5431faa",
+    "size": 23471
+   },
+   {
+    "path": "kubejs/data/wilds/puffish_skills/config.json",
+    "sha1": "93aa1db8421a9e6371b9b0baef0431bd6813ce38",
+    "size": 52
+   },
+   {
+    "path": "kubejs/data/wilds_core/npc_quests/all.json",
+    "sha1": "66f222fd31c6019742ca2f64c9c84b06a0091854",
+    "size": 175394
+   },
+   {
+    "path": "kubejs/data/wilds_core/npc_rumors/rumors.json",
+    "sha1": "1e045d9a552992d349a6f97c96245bde9e7645cb",
+    "size": 2978
+   },
+   {
+    "path": "kubejs/data/wilds_core/quests/gates.json",
+    "sha1": "0a1c9606089c88f456c2147bd37278a3063ac487",
+    "size": 8711
+   },
+   {
+    "path": "kubejs/data/wilds_core/quests/onboarding.json",
+    "sha1": "660a89337338a485beab1109b7c37b58b7ea055a",
+    "size": 157
+   },
+   {
+    "path": "kubejs/data/wilds_core/quests/tutorial.json",
+    "sha1": "31a87a6f969bddf5a8ab199c2ddd0d3d57c62c46",
+    "size": 509
+   },
+   {
+    "path": "kubejs/server_scripts/wilds_commands.js",
+    "sha1": "f8d7499a1ddc6f85830944c01c13d0b35820fca0",
+    "size": 550
+   },
+   {
+    "path": "kubejs/server_scripts/wilds_links.js",
+    "sha1": "39d4e1b84383dc16420852072235b10ffce76265",
+    "size": 6561
+   },
+   {
+    "path": "kubejs/server_scripts/wilds_loot.js",
+    "sha1": "32fa85566d5e64c05fcb3895fb5f217438109b8f",
+    "size": 1471
+   },
+   {
+    "path": "kubejs/server_scripts/wilds_ore_magnet.js",
+    "sha1": "b0a32d00f1abfad7d75ea258ee28d447c98572ce",
+    "size": 9148
+   },
+   {
+    "path": "kubejs/server_scripts/wilds_spawn.js",
+    "sha1": "7e5e5965475fbe1cc64e774a39f048944e495659",
+    "size": 3618
+   },
+   {
+    "path": "kubejs/server_scripts/wilds_trades.js",
+    "sha1": "6dddb5ac460c8e6297923934e6c02587120a1a7a",
+    "size": 5172
+   }
+  ],
+  "initial": [
+   {
+    "path": "config/DistantHorizons.toml",
+    "sha1": "d348318fb146f7e82561a5fa9688b9f860ad244b",
+    "size": 775
+   },
+   {
+    "path": "config/ftbquests-client.snbt",
+    "sha1": "d35cbdec1d3eb57f37505aed38984374f7817f7c",
+    "size": 351
+   },
+   {
+    "path": "config/sodium-extra-options.json",
+    "sha1": "9998b45d8cc2fd103012f446a05ebad56cc98b68",
+    "size": 2260
+   },
+   {
+    "path": "options.txt",
+    "sha1": "e61bac1d328bde861b40e758a04154c456813d11",
+    "size": 374
+   },
+   {
+    "path": "servers.dat",
+    "sha1": "de343cb0a9c9fb447b8e55c1132a0729f1992799",
+    "size": 100
+   }
+  ]
+ },
+ "shaders": [
+  {
+   "file": "ComplementaryReimagined_r5.9.3.zip",
+   "url": "https://cdn.modrinth.com/data/HVnmMxH1/versions/Bqen1mJX/ComplementaryReimagined_r5.9.3.zip",
+   "sha1": "838139b54cddb56b2e83cd260d8efd960ac536d6",
+   "size": 553397
+  },
+  {
+   "file": "ComplementaryUnbound_r5.9.3.zip",
+   "url": "https://cdn.modrinth.com/data/R6NEzAwj/versions/B1kyfoUZ/ComplementaryUnbound_r5.9.3.zip",
+   "sha1": "2ee08300e1d6f039e63eae8484dddf57b3aaaf67",
+   "size": 553400
+  }
+ ],
+ "removed": [
+  "kubejs/data/questborne",
+  "kubejs/data/easy_npc",
+  "kubejs/assets/questborne",
+  "kubejs/assets/easy_npc",
+  "kubejs/assets/easy_npc_config_ui",
+  "kubejs/assets/easy_npc_example",
+  "kubejs/assets/easynpc_ftbq_compat",
+  "kubejs/server_scripts/wilds_npcs.js",
+  "config/ftbquests/quests/lang/uk_ua",
+  "config/ftbquests/quests/lang/en_us"
+ ]
+}
