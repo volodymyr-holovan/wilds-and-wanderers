@@ -1,5 +1,5 @@
 {
- "version": "2026.10.27.4",
+ "version": "2026.10.27.5",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -865,13 +865,13 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.4/wilds_core-0.1.0.jar",
-   "sha1": "9a9dfdc37e03e6a4ee569445ac84ed5d92af7486",
-   "size": 187922
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.5/wilds_core-0.1.0.jar",
+   "sha1": "b9181d5f469c4960bfec97f715db367c5a97d3fa",
+   "size": 191240
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.4/wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.5/wilds_wiki-0.2.0.jar",
    "sha1": "f6fa3b6a09d152703537211e3bc39e15df1c9ace",
    "size": 799575
   },
@@ -915,15 +915,15 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.4/overrides.zip",
-   "sha1": "e2c2ac5a9db1fced8d800dfa3b138aaf9092a05c",
-   "size": 772640
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.5/overrides.zip",
+   "sha1": "a2362f6bbc28c9769f86ea87001bc11850ea7daf",
+   "size": 772638
   },
   "overrides": [
    {
     "path": "config/accessories.json5",
-    "sha1": "1bc6742834e9fcb9f4c5b03111e99c167d8128d4",
-    "size": 967
+    "sha1": "b8e1933159079f30c0215ed942c23b144ca2c872",
+    "size": 926
    },
    {
     "path": "config/aether-common.toml",

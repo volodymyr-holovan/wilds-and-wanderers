@@ -72,6 +72,11 @@ public final class AttributesPanel {
         return isOpen();
     }
 
+    /** for the pack's UI self-test */
+    static int[] buttonCenter() {
+        return button == null || !button.visible ? null : new int[]{button.getX() + button.getWidth() / 2, button.getY() + button.getHeight() / 2};
+    }
+
     static void placeButton(int x, int y) {
         if (button == null) return;
         button.visible = x > Integer.MIN_VALUE;

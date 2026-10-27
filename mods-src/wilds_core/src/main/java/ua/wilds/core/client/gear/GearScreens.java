@@ -100,7 +100,9 @@ public final class GearScreens {
      * bigger crafting grid or other columns of slots move everything along.
      */
     public static void onRender(ScreenEvent.Render.Pre e) {
-        if (isGearScreen(e.getScreen())) layout(e.getScreen());
+        if (!isGearScreen(e.getScreen())) return;
+        layout(e.getScreen());
+        GearLayout.poseBefore(e.getScreen(), e.getMouseX(), e.getMouseY());
     }
 
     static void layout(Screen s) {
@@ -146,13 +148,44 @@ public final class GearScreens {
     }
 
     public static void afterRender(ScreenEvent.Render.Post e) {
-        if (isGearScreen(e.getScreen())) RecipeBookPanel.render(e);
+        if (!isGearScreen(e.getScreen())) return;
+        GearLayout.poseAfter();
+        RecipeBookPanel.render(e);
     }
+
+    /** the plain button that took the last press (its release and drags go to it too) */
+    private static net.minecraft.client.gui.components.AbstractWidget pressed;
 
     public static void onClick(ScreenEvent.MouseButtonPressed.Pre e) {
         if (!isGearScreen(e.getScreen())) return;
+        pressed = null;
+        // owo's layout spans the whole screen and is asked first: buttons other mods add to inventory screens (FTB's
+        // sidebar: quests, teams, settings...) and the pack's own never got a click. They are asked before it.
+        for (var child : e.getScreen().children()) {
+            if (!(child instanceof net.minecraft.client.gui.components.AbstractWidget w) || child.getClass().getName().startsWith("io.wispforest.")) continue;
+            if (!w.visible || !w.isMouseOver(e.getMouseX(), e.getMouseY())) continue;
+            if (w.mouseClicked(e.getMouseX(), e.getMouseY(), e.getButton())) {
+                pressed = w;
+                e.getScreen().setFocused(w);
+                e.setCanceled(true);
+                return;
+            }
+        }
         RecipeBookPanel.onClick(e);
         if (!e.isCanceled()) AttributesPanel.onClick(e);
+    }
+
+    public static void onRelease(ScreenEvent.MouseButtonReleased.Pre e) {
+        if (pressed == null || !isGearScreen(e.getScreen())) return;
+        pressed.mouseReleased(e.getMouseX(), e.getMouseY(), e.getButton());
+        pressed = null;
+        e.setCanceled(true);
+    }
+
+    public static void onDrag(ScreenEvent.MouseDragged.Pre e) {
+        if (pressed == null || !isGearScreen(e.getScreen())) return;
+        pressed.mouseDragged(e.getMouseX(), e.getMouseY(), e.getMouseButton(), e.getDragX(), e.getDragY());
+        e.setCanceled(true);
     }
 
     public static void afterClick(ScreenEvent.MouseButtonPressed.Post e) {
@@ -217,6 +250,7 @@ public final class GearScreens {
     private static final boolean SHOTS = Boolean.getBoolean("wilds_core.uishot");
     private static int t = -1, talk = -1, scaleWas, menu;
     private static boolean bookWas, attrsWas;
+    private static int[] sidebar;
 
     /** the equipment slots this player has, by kind, as the server set them up (e.g. one «hand» slot, not two) */
     private static void logSlots(Minecraft mc) {
@@ -327,6 +361,38 @@ public final class GearScreens {
                 if (RecipeBookPanel.open() != bookWas) RecipeBookPanel.toggle();
                 if (AttributesPanel.shown() != attrsWas) AttributesPanel.toggle();
             }
+            case 555 -> look(mc, -110);
+            case 562 -> shot(mc, "8_look_left");
+            case 565 -> look(mc, 110);
+            case 572 -> shot(mc, "8_look_right");
+            case 574 -> {
+                // a real click (through the mouse, like a player's) on the attributes button
+                boolean before = AttributesPanel.shown();
+                int[] b = AttributesPanel.buttonCenter();
+                if (b != null) click(mc, b[0], b[1]);
+                WildsCore.LOG.info("Wilds Core: UI self-test: attributes button click {}", AttributesPanel.shown() != before ? "works" : "DOES NOTHING");
+                if (AttributesPanel.shown() != before) AttributesPanel.toggle();
+            }
+            case 575 -> {
+                // and on the first button of FTB's sidebar (top left): it must open its screen. FTB finds the button
+                // under the cursor while drawing, so the cursor goes there first, the click comes after a frame
+                try {
+                    var area = (net.minecraft.client.renderer.Rect2i) Class.forName("dev.ftb.mods.ftblibrary.sidebar.SidebarGroupGuiButton").getField("lastDrawnArea").get(null);
+                    WildsCore.LOG.info("Wilds Core: UI self-test: FTB sidebar at {},{} {}x{}", area.getX(), area.getY(), area.getWidth(), area.getHeight());
+                    sidebar = new int[]{area.getX() + 8, area.getY() + 8};
+                    mouse(mc, "onMove", sidebar[0], sidebar[1], -1);
+                } catch (ReflectiveOperationException | RuntimeException | LinkageError ex) {
+                    WildsCore.LOG.info("Wilds Core: UI self-test: no FTB sidebar: {}", ex.toString());
+                }
+            }
+            case 577 -> {
+                if (sidebar != null) {
+                    mouse(mc, "onPress", sidebar[0], sidebar[1], org.lwjgl.glfw.GLFW.GLFW_PRESS);
+                    mouse(mc, "onPress", sidebar[0], sidebar[1], org.lwjgl.glfw.GLFW.GLFW_RELEASE);
+                }
+            }
+            case 579 -> WildsCore.LOG.info("Wilds Core: UI self-test: after a click on the sidebar the screen is {}",
+                    mc.screen == null ? "none" : mc.screen.getClass().getName());
             case 580 -> mc.setScreen(null);
             case 590 -> {
                 // the illager runes (Iron's Spells' archevoker logbook): Cyrillic must not fall back to squares
@@ -377,6 +443,37 @@ public final class GearScreens {
             s.getClass().getMethod(name, boolean.class).invoke(s, arg);
         } catch (ReflectiveOperationException | RuntimeException ex) {
             WildsCore.LOG.info("Wilds Core: UI self-test: {} has no {}", s.getClass().getSimpleName(), name);
+        }
+    }
+
+    private static void look(Minecraft mc, int dx) {
+        int[] c = GearLayout.entityCenter(mc.screen);
+        if (c != null) mouse(mc, "onMove", c[0] + dx, c[1] - 20, -1);
+    }
+
+    private static void click(Minecraft mc, double x, double y) {
+        mouse(mc, "onMove", x, y, -1);
+        mouse(mc, "onPress", x, y, org.lwjgl.glfw.GLFW.GLFW_PRESS);
+        mouse(mc, "onPress", x, y, org.lwjgl.glfw.GLFW.GLFW_RELEASE);
+    }
+
+    /** the game's own mouse handling, as if the mouse moved or the left button went down/up at (x, y) of the GUI */
+    private static void mouse(Minecraft mc, String what, double x, double y, int action) {
+        try {
+            long window = mc.getWindow().getWindow();
+            double k = mc.getWindow().getGuiScale();
+            var handler = mc.mouseHandler;
+            if (what.equals("onMove")) {
+                Method m = net.minecraft.client.MouseHandler.class.getDeclaredMethod("onMove", long.class, double.class, double.class);
+                m.setAccessible(true);
+                m.invoke(handler, window, x * k, y * k);
+            } else {
+                Method m = net.minecraft.client.MouseHandler.class.getDeclaredMethod("onPress", long.class, int.class, int.class, int.class);
+                m.setAccessible(true);
+                m.invoke(handler, window, org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT, action, 0);
+            }
+        } catch (ReflectiveOperationException | RuntimeException ex) {
+            WildsCore.LOG.info("Wilds Core: UI self-test: mouse {} failed: {}", what, ex.toString());
         }
     }
 

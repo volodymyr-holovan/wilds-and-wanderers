@@ -42,6 +42,8 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::afterRender);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onClick);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::afterClick);
+        NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onRelease);
+        NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onDrag);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onKey);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onKeyUp);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onChar);

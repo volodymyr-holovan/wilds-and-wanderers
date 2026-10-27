@@ -24,8 +24,10 @@ import java.lang.reflect.Field;
  * (JEI asks the screen for the areas of its layout's top-level parts);</li>
  * <li>the button that left it for the vanilla inventory is removed: everything that screen had is here now, and the
  * vanilla one has the old troubles (two buttons in one spot, a player model looking past the cursor);</li>
- * <li>the «look at the cursor» option is removed: owo turns only the head after the cursor while the body keeps its
- * angle, so the player stared sideways.</li>
+ * <li>the player always looks at the cursor, done right: owo turns only the head (and only its previous-frame
+ * angle) while the body keeps its angle in the world, so the player nodded up and down but stared sideways. Around
+ * the screen's drawing the player's head and body angles are set as the vanilla inventory sets them, then put back
+ * ({@link #poseBefore}, {@link #poseAfter}); the option for it is removed, it is simply on.</li>
  * </ul>
  */
 final class GearLayout {
@@ -99,6 +101,64 @@ final class GearLayout {
         if (c.width() != w || c.height() != h) c.sizing(Sizing.fixed(w), Sizing.fixed(h));
     }
 
+    private static net.minecraft.world.entity.LivingEntity posed;
+    private static final float[] saved = new float[8];
+
+    /** the player in the screen faces the cursor: head fully, body halfway, like the vanilla inventory */
+    static void poseBefore(Screen s, int mouseX, int mouseY) {
+        ParentComponent root = root(s);
+        if (root == null) return;
+        EntityComponent<?>[] found = new EntityComponent<?>[1];
+        root.forEachDescendant(c -> {
+            if (found[0] == null && c instanceof EntityComponent<?> e && e.lookAtCursor()) found[0] = e;
+        });
+        if (found[0] == null || !(found[0].entity() instanceof net.minecraft.world.entity.LivingEntity living)) return;
+        var c = found[0];
+        float yaw = (float) Math.toDegrees(Math.atan((mouseX - c.x() - c.width() / 2f) / 40f));
+        float pitch = (float) Math.toDegrees(Math.atan((mouseY - c.y() - c.height() / 2f) / 40f));
+        posed = living;
+        saved[0] = living.yBodyRot;
+        saved[1] = living.yBodyRotO;
+        saved[2] = living.yHeadRot;
+        saved[3] = living.yHeadRotO;
+        saved[4] = living.getYRot();
+        saved[5] = living.yRotO;
+        saved[6] = living.getXRot();
+        saved[7] = living.xRotO;
+        // owo's own rule for the head (yaw -angle, pitch 0.65 x angle) for the current and the previous frame alike
+        living.yBodyRot = living.yBodyRotO = -yaw * 0.5f;
+        living.yHeadRot = living.yHeadRotO = -yaw;
+        living.setYRot(-yaw);
+        living.yRotO = -yaw;
+        living.setXRot(pitch * 0.65f);
+        living.xRotO = pitch * 0.65f;
+    }
+
+    /** the middle of the player in the screen (for the pack's UI self-test); null if none */
+    static int[] entityCenter(Screen s) {
+        ParentComponent root = root(s);
+        if (root == null) return null;
+        int[][] at = new int[1][];
+        root.forEachDescendant(c -> {
+            if (at[0] == null && c instanceof EntityComponent<?>) at[0] = new int[]{c.x() + c.width() / 2, c.y() + c.height() / 2};
+        });
+        return at[0];
+    }
+
+    static void poseAfter() {
+        var living = posed;
+        if (living == null) return;
+        posed = null;
+        living.yBodyRot = saved[0];
+        living.yBodyRotO = saved[1];
+        living.yHeadRot = saved[2];
+        living.yHeadRotO = saved[3];
+        living.setYRot(saved[4]);
+        living.yRotO = saved[5];
+        living.setXRot(saved[6]);
+        living.xRotO = saved[7];
+    }
+
     /** removes what the pack replaces (see the class comment); cheap enough to run every frame (options are built late) */
     static void tidy(Screen s) {
         ParentComponent root = root(s);
@@ -120,7 +180,7 @@ final class GearLayout {
                         b.active = false;
                     }
                 }
-                if (c instanceof EntityComponent<?> e && e.lookAtCursor()) e.lookAtCursor(false);
+                if (c instanceof EntityComponent<?> e && !e.lookAtCursor()) e.lookAtCursor(true);
             });
         } catch (RuntimeException e) {
             WildsCore.LOG.debug("Wilds Core: equipment screen tidy-up skipped", e);
