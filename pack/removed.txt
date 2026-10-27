@@ -1,0 +1,15 @@
+# Paths (relative to a game folder) that the pack no longer ships. sync_overrides.py moves them into
+# <game folder>/_removed_by_pack/ (kept, not deleted) so an old copy cannot keep loading.
+# 2026-10-27: one NPC system (Wilds Core quest givers) instead of three: Questborne and Easy NPC are gone
+kubejs/data/questborne
+kubejs/data/easy_npc
+kubejs/assets/questborne
+kubejs/assets/easy_npc
+kubejs/assets/easy_npc_config_ui
+kubejs/assets/easy_npc_example
+kubejs/assets/easynpc_ftbq_compat
+kubejs/server_scripts/wilds_npcs.js
+# 2026-10-27: per-chapter lang folders left by an older FTB Quests; it loads one table per language and took the
+# stale folder before the current lang/<locale>.snbt, so new chapters showed as «Без імені»
+config/ftbquests/quests/lang/uk_ua
+config/ftbquests/quests/lang/en_us

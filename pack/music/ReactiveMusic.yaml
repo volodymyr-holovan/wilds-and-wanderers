@@ -1,0 +1,168 @@
+name: "Wilds & Wanderers"
+description: "Музика для кожного краю світу, без пауз, з бойовою музикою для босів."
+version: "1.0"
+author: "Wilds & Wanderers"
+credits: "Music by Vindsvept, Adrian von Ziegler and Mufaya, from the Reactive Music mod's built-in pack."
+
+# no silence between songs; a short crossfade when the place or the situation changes
+musicDelayLength: NONE
+musicSwitchSpeed: SHORT
+
+# Entries are checked from the top: the first one that matches picks the song.
+entries:
+
+  - events: [ "MAIN_MENU" ]
+    forceStopMusicOnChanged: true
+    forceStartMusicOnValid: true
+    songs: [ "DuNock-Street-TitleEdit", "TheShapersRealm", "Mirrormere", "FrozenInTime", "Reverie" ]
+
+  # --- boss fights: Wilds Core sets BOSS for any boss of the c:bosses tag or its list that is fighting (also bosses with their
+  # own bars, like Twilight Forest). Bosses with a theme of their own or of Wilds Core mute this through soundsMuteMusic.
+  # When the boss dies, loses you or you walk away, the music goes back to the place you are in.
+  - events: [ "BOSS" ]
+    forceStopMusicOnChanged: true
+    forceStartMusicOnValid: true
+    songs: [ "LastStand", "Ruthless", "WildfireP1", "WildfireP2", "Mufaya-DarkAscension", "CrannNaBeatha" ]
+
+  - events: [ "DYING" ]
+    forceStopMusicOnChanged: true
+    forceStartMusicOnValid: true
+    songs: [ "OdeToTheFallen", "Mourning" ]
+
+  # --- any fight: Wilds Core sets this flag while the player is fighting (hit something or got hit with an enemy near,
+  # in the last 8 seconds, or an enemy close by is attacking), not merely when a monster is around
+  - events: [ "NEARBY_MOBS" ]
+    forceStopMusicOnChanged: true
+    forceStartMusicOnValid: true
+    songs: [ "ForTheKing", "UnsungHeroes", "Deliverance", "Freedom", "IntoTheUnknown" ]
+
+  # --- other worlds ---
+  - events: [ "DIM=NETHER", "BLOCK=nether_bricks,1000", "BLOCK=nether_brick_fence,2" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Mufaya-DarkAscension", "Storm" ]
+
+  - events: [ "DIM=NETHER" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Mufaya-DarkAscension", "TheShapersRealm", "Storm", "CrannNaBeatha", "WorldUnbound" ]
+
+  - events: [ "DIM=END" ]
+    forceStopMusicOnChanged: true
+    songs: [ "DuNock-Street-TitleEdit", "TheShapersRealm", "WintersBreath", "WorldUnbound", "IntoSilenceP2" ]
+
+  - events: [ "DIM=twilightforest:twilight_forest" ]
+    forceStopMusicOnChanged: true
+    songs: [ "TheShapersRealm", "Mirrormere", "CrystalForest", "IntoSilenceP2", "Moonsong", "Sleeper" ]
+
+  - events: [ "DIM=aether:the_aether" ]
+    forceStopMusicOnChanged: true
+    songs: [ "CastleInTheSky", "Clarity", "BeautifulDreams", "LastLight", "FairyTale" ]
+
+  # --- water and depth ---
+  - events: [ "UNDERWATER" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Eventide", "ShimmeringInTheShallows", "ASongFromTheDeep" ]
+
+  - events: [ "DEEP_UNDERGROUND" ]
+    forceStopMusicOnChanged: true
+    songs: [ "IntoSilenceP1", "IntoSilenceP2", "Sleeper", "WintersBreath", "WorldUnbound" ]
+
+  - events: [ "UNDERGROUND" ]
+    forceStopMusicOnChanged: true
+    songs: [ "WintersBreath", "IntoSilenceP1", "WorldUnbound", "Storm", "Sleeper", "CrystalForest" ]
+
+  # --- home and villages ---
+  - events: [ "HOME", "SNOW", "NIGHT" ]
+    forceStopMusicOnChanged: true
+    forceStartMusicOnValid: true
+    songs: [ "WintersNight" ]
+
+  - events: [ "HOME" ]
+    songs: [ "KeeperOfTheForest", "CastleInTheSky", "CircleOfLife" ]
+
+  - events: [ "VILLAGE" ]
+    forceStopMusicOnChanged: true
+    songs: [ "KingdomOfBards", "NightAtTheEolian", "CircleOfLife", "WhereIBelong" ]
+
+  # --- dawn and dusk everywhere in the Overworld ---
+  - events: [ "DIM=OVERWORLD", "SUNSET" ]
+    forceStopMusicOnChanged: true
+    forceChance: 0.5
+    songs: [ "Alvae", "SiochainShuthain", "Sombre", "FallOfTheLeaf" ]
+
+  - events: [ "DIM=OVERWORLD", "SUNRISE" ]
+    forceStopMusicOnChanged: true
+    forceChance: 0.5
+    songs: [ "Alvae", "SiochainShuthain", "SpringMorning" ]
+
+  # --- every kind of land has its own music ---
+  - events: [ "biometag=snowy" ]
+    forceStopMusicOnChanged: true
+    songs: [ "WintersBreath", "FrozenInTime", "WintersNight", "CrystalForest" ]
+
+  - events: [ "biometag=mountain" ]
+    forceStopMusicOnChanged: true
+    songs: [ "ForTheKing", "Freedom", "IntoTheUnknown", "UnsungHeroes", "Myth" ]
+
+  - events: [ "biometag=ocean" ]
+    forceStopMusicOnChanged: true
+    songs: [ "CliffsOfMoher", "Eventide", "ShimmeringInTheShallows", "NeverToReturn" ]
+
+  - events: [ "biometag=beach" ]
+    forceStopMusicOnChanged: true
+    songs: [ "CliffsOfMoher", "Eventide", "LastLight" ]
+
+  - events: [ "biometag=river" ]
+    forceStopMusicOnChanged: true
+    songs: [ "ShimmeringInTheShallows", "Reverie", "Clarity" ]
+
+  - events: [ "biometag=swamp" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Sleeper", "Moonsong", "Sombre", "IntoSilenceP2" ]
+
+  - events: [ "biometag=jungle" ]
+    forceStopMusicOnChanged: true
+    songs: [ "TheGateToAvalon", "MufayaSong1", "ASongFromTheDeep", "CrannNaBeatha" ]
+
+  - events: [ "biometag=mushroom" ]
+    forceStopMusicOnChanged: true
+    songs: [ "FairyTale", "BeautifulDreams", "Clarity" ]
+
+  - events: [ "biometag=desert" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Myth", "Deliverance", "WhatLiesBeyond", "NeverToReturn" ]
+
+  - events: [ "biometag=badlands" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Deliverance", "WhatLiesBeyond", "ForTheKing", "Freedom" ]
+
+  - events: [ "biometag=savanna" ]
+    forceStopMusicOnChanged: true
+    songs: [ "WhatLiesBeyond", "CircleOfLife", "Deliverance", "Wanderer" ]
+
+  - events: [ "biometag=taiga" ]
+    forceStopMusicOnChanged: true
+    songs: [ "CelticLore", "Alpha", "NightAtTheEolian", "OdeToTheFallen" ]
+
+  - events: [ "biometag=forest" ]
+    forceStopMusicOnChanged: true
+    songs: [ "KeeperOfTheForest", "WoodlandTales", "SacredEarth", "BreathOfTheForest", "CelticLore" ]
+
+  - events: [ "biometag=plains" ]
+    forceStopMusicOnChanged: true
+    songs: [ "Wanderer", "WandererP2", "SpringMorning", "WhereIBelong", "KingdomOfBards", "ACelticTale" ]
+
+  # --- anything else: by the time of day ---
+  - events: [ "RAIN" ]
+    songs: [ "WorldUnbound", "Storm", "Moonsong", "KeeperOfTheForest", "IntoSilenceP1", "CrystalForest", "FrozenInTime" ]
+
+  - events: [ "DAY" ]
+    songs: [ "ACelticTale", "Alpha", "BeautifulDreams", "CelticLore", "Deliverance", "IntoTheUnknown", "KingdomOfBards",
+             "NeverToReturn", "OdeToTheFallen", "Reverie", "SacredEarth", "WoodlandTales", "WhereIBelong", "WhatLiesBeyond",
+             "Wanderer", "UnsungHeroes", "Mirrormere", "NightAtTheEolian", "LastLight", "WandererP2", "SpringMorning", "FairyTale" ]
+
+  - events: [ "NIGHT" ]
+    songs: [ "IntoSilenceP1", "Moonsong", "CrystalForest", "Storm", "Alvae", "CelticLore", "FallOfTheLeaf", "IntoSilenceP2",
+             "Sleeper", "Sombre", "TheShapersRealm", "FrozenInTime", "QuestsEnd", "ShimmeringInTheShallows" ]
+
+  - events: [ "GENERIC" ]
+    songs: [ "Wanderer", "Reverie", "Mirrormere" ]

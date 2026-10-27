@@ -1,0 +1,703 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bosses"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "cataclysm:the_incinerator"
+	}
+	id: "7A25D1A2C851F11B"
+	order_index: 14
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:golden_apple"
+			}
+			id: "673091ACD2ADBB9E"
+			rewards: [
+				{
+					count: 2
+					id: "3AD6AA04BFAB8D8E"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6113E019CED9888C"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "178192FA30A595D4"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "3F3F66714C5467CF"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "5E18EEC31594E900"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"673091ACD2ADBB9E"
+			]
+			icon: {
+				id: "mowziesmobs:wrought_axe"
+			}
+			id: "652CAA6481C63C1A"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1F98FAA1FAE2DF6A"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "191DB1A6BD6F43F2"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "741992DA6405448D"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "mowziesmobs:ferrous_wroughtnaut"
+					id: "763E729D8784CFB9"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -4.375d
+		}
+		{
+			dependencies: [
+				"673091ACD2ADBB9E"
+			]
+			icon: {
+				id: "mowziesmobs:ice_crystal"
+			}
+			id: "6A6C2AFE53AEB661"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "13D0C38FA081C4DE"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "376209E80D177D37"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "37359E3DF39FA5BE"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "mowziesmobs:frostmaw"
+					id: "539784CB9D2A0C08"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"673091ACD2ADBB9E"
+			]
+			icon: {
+				id: "mowziesmobs:sol_visage"
+			}
+			id: "114EB85000044D1E"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "72C984771695B77A"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "511F7394779C5AE6"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					id: "4F60C7A87C9CA067"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "617FB567B2A27D42"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "mowziesmobs:umvuthi"
+					id: "438381488157B7B7"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"673091ACD2ADBB9E"
+			]
+			icon: {
+				id: "mowziesmobs:earthrend_gauntlet"
+			}
+			id: "1FE73C1622B549CC"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2FEF08E22ACB6C40"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "4C8FA037F8A6CCB9"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "5AC4F658544F0B16"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "mowziesmobs:sculptor"
+					id: "517E50AB1E526A6E"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"652CAA6481C63C1A"
+			]
+			icon: {
+				id: "cataclysm:monstrous_horn"
+			}
+			id: "72AB27FF44A05AF9"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "42809576CA56D519"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6739A0BB0942EEF1"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "3E485D24EEE4B3B9"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "49B13730D5643AF1"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					id: "14BA01059E319D13"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"72AB27FF44A05AF9"
+			]
+			icon: {
+				id: "cataclysm:ignitium_ingot"
+			}
+			id: "3A093C25F12ABE17"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6A4BF26EAADEC054"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "57C3F34EBE496927"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "1E375EA5B6F5E4EB"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "6EAD488CA5952660"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ignis"
+					id: "6313920C5803D3F8"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"72AB27FF44A05AF9"
+			]
+			icon: {
+				id: "cataclysm:witherite_ingot"
+			}
+			id: "502371386B2DC7B8"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "79FAB6D6A7546B0F"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4C12567898785E9B"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "414582AD5FDBD3D0"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "1CBC81E4E6F21ACE"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:the_harbinger"
+					id: "2D726A0160EEA3B5"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"673091ACD2ADBB9E"
+			]
+			icon: {
+				id: "cataclysm:necklace_of_the_desert"
+			}
+			id: "795EC7E25A05ABFA"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "75AF59791EC36AC3"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "487068EB1E6DDDE9"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "76050ED096B78908"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "7D244A6CD4F034D8"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ancient_remnant"
+					id: "3D2149269DC51CE3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"673091ACD2ADBB9E"
+			]
+			icon: {
+				id: "cataclysm:cursium_ingot"
+			}
+			id: "447DACEC13F05C6B"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4F1169B54782FFC0"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "454C6182FAE5B8B9"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "51735AB0474EFEBF"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "5C0C6F4956F55F31"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:maledictus"
+					id: "6BBC26CF88F9880B"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 4.375d
+		}
+		{
+			dependencies: [
+				"502371386B2DC7B8"
+			]
+			icon: {
+				id: "cataclysm:tidal_claws"
+			}
+			id: "602F4CCF2594D07B"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "57DEE88A1634210E"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "7F5267D769087908"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "62A1766A3D2ABB2E"
+					type: "xp"
+					xp: 800
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 400"
+					elevate_perms: true
+					id: "504552287229741B"
+					silent: true
+					title: "+400 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:the_leviathan"
+					id: "30EE80FCD71BE983"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"602F4CCF2594D07B"
+			]
+			icon: {
+				id: "cataclysm:storm_eye"
+			}
+			id: "1DB2FA86AFBD563B"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "65AA2FED39A8CC0A"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1F92B071749DB1CF"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "4518AE081A0AD947"
+					type: "xp"
+					xp: 800
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 400"
+					elevate_perms: true
+					id: "198B96ACE206007B"
+					silent: true
+					title: "+400 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:scylla"
+					id: "2798382A2531E41E"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3A093C25F12ABE17"
+			]
+			icon: {
+				id: "cataclysm:void_eye"
+			}
+			id: "558D4D5D23D0E2EC"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "51527AC3D7FDDE31"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1F8EB50D37108D28"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "677E6CE755D8ADE1"
+					type: "xp"
+					xp: 800
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 400"
+					elevate_perms: true
+					id: "60AE1DC44A5952EA"
+					silent: true
+					title: "+400 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ender_guardian"
+					id: "3C4B387210AB9AA8"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.875d
+		}
+	]
+}

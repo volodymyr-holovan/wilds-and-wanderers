@@ -1,0 +1,711 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "seas"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "smallships:cannon"
+	}
+	id: "1E64422DEC6BFC0D"
+	order_index: 16
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "smallships:dockyard"
+			}
+			id: "6CBDFCD22B595363"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1ED389D20C04D17F"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "26245F8DE7E90D6B"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "47EA9B77B2CB1471"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "20B33DB8ED9115C8"
+					item: {
+						count: 1
+						id: "smallships:dockyard"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6CBDFCD22B595363"
+			]
+			icon: {
+				id: "smallships:oak_cog"
+			}
+			id: "18C990156988DB4F"
+			rewards: [
+				{
+					id: "141002201B2E8A56"
+					item: {
+						count: 1
+						id: "smallships:cotton_sails"
+					}
+					type: "item"
+				}
+				{
+					id: "5004D7324C0FEC4B"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "509DC1C942689394"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5E2467AF5186F368"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"18C990156988DB4F"
+			]
+			icon: {
+				id: "smallships:cannon"
+			}
+			id: "46D334DCD21AD77A"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "59AE665A76078C18"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "7D975589C60A612A"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "41D5D8C284AC21B7"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "534A96E3A3269784"
+					item: {
+						count: 1
+						id: "smallships:cannon"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "284087075DB8B5F7"
+					item: {
+						count: 1
+						id: "smallships:cannon_ball"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -4.375d
+		}
+		{
+			dependencies: [
+				"46D334DCD21AD77A"
+			]
+			icon: {
+				id: "minecraft:skeleton_skull"
+			}
+			id: "1A860B113ED91254"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2FC6CDE9FA8C3A41"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6C37921280119F5A"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "7638208918568F5C"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "4C8ED40C64025790"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "101D54915BB834F7"
+					structure: "dungeons_arise:undead_pirate_ship"
+					type: "structure"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"6CBDFCD22B595363"
+			]
+			icon: {
+				id: "hybrid_aquatic:diving_helmet"
+			}
+			id: "55B0697D6C4F26A1"
+			rewards: [
+				{
+					count: 4
+					id: "5C5FB6096B995D25"
+					item: {
+						count: 1
+						id: "hybrid_aquatic:glowstick"
+					}
+					type: "item"
+				}
+				{
+					id: "2F94E60B3A484043"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "15124DA5A9927D9B"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "38522D4068258143"
+					item: {
+						count: 1
+						id: "hybrid_aquatic:diving_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "1CB98AE117BB6D84"
+					item: {
+						count: 1
+						id: "hybrid_aquatic:diving_suit"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"55B0697D6C4F26A1"
+			]
+			icon: {
+				id: "minecraft:prismarine_bricks"
+			}
+			id: "7E7D9635D39F2C39"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "470C16098E85BE51"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "75E1C06A7EEB3773"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "47E10C7570FA0ACB"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42D07FA2498E8543"
+					structure: "hopo:underwater/underwater_city"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"55B0697D6C4F26A1"
+			]
+			icon: {
+				id: "minecraft:bone_block"
+			}
+			id: "4AFFED01D2C16218"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6C06E0812EF0D63B"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "682F5DAD50B7A96A"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "193A7E429BBA2ADE"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1FDB363EE1C58A8F"
+					structure: "hybrid_aquatic:whale_fall"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"7E7D9635D39F2C39"
+			]
+			icon: {
+				id: "minecraft:prismarine_crystals"
+			}
+			id: "4419BAEE2267E7DA"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "25570444B68BA57E"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "5D0D570025062A2E"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "230C595CEC1BB7C8"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "1A9C61345FBB2EA5"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:elder_guardian"
+					id: "4BE4F55CC8D60955"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"4419BAEE2267E7DA"
+			]
+			icon: {
+				id: "upgrade_aquatic:thrasher_tooth"
+			}
+			id: "72AEE9F13EF91EC9"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "7FC9404B445802D9"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "18032CD1FF612F47"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "262110D3ADC01D7F"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "upgrade_aquatic:thrasher"
+					id: "4BF83D4E7A7663DE"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"55B0697D6C4F26A1"
+			]
+			icon: {
+				id: "hybrid_aquatic:ominous_conch"
+			}
+			id: "1429AB275B508821"
+			rewards: [
+				{
+					id: "76F023AB419580EB"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "28166D8A7C9A5C74"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "25AB837D2EA37099"
+					item: {
+						count: 1
+						id: "hybrid_aquatic:ominous_conch"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"6CBDFCD22B595363"
+			]
+			icon: {
+				id: "fishofthieves:splashtail"
+			}
+			id: "19662D7C24479FE2"
+			rewards: [
+				{
+					id: "236E7D8DA20AA16D"
+					item: {
+						count: 1
+						id: "hybrid_aquatic:barbed_hook"
+					}
+					type: "item"
+				}
+				{
+					id: "1CA826EC6AF988F3"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "3BA02A7A3795DA9D"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "57850BD4884AA8B4"
+					item: {
+						count: 1
+						id: "fishofthieves:splashtail"
+					}
+					type: "item"
+				}
+				{
+					id: "3355FC297CEDAA10"
+					item: {
+						count: 1
+						id: "fishofthieves:pondie"
+					}
+					type: "item"
+				}
+				{
+					id: "77859EA0E49D1304"
+					item: {
+						count: 1
+						id: "fishofthieves:islehopper"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"19662D7C24479FE2"
+			]
+			icon: {
+				id: "oceansdelight:fugu_roll"
+			}
+			id: "7C8A3BFD7A9F15FB"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "717FCF20A3FC1AB1"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "25212BE559C4F9BF"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "73FE4D648222263A"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6F947914164324EE"
+					item: {
+						count: 1
+						id: "oceansdelight:fugu_roll"
+					}
+					type: "item"
+				}
+				{
+					id: "3D1ED533092085BE"
+					item: {
+						count: 1
+						id: "oceansdelight:squid_rings"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"18C990156988DB4F"
+			]
+			icon: {
+				id: "minecraft:lily_pad"
+			}
+			id: "54AEE8D377E51873"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2D8E5B9234778E99"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "31A011D825E63E47"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "108D64E06B71BF43"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "34CF4382C1763ACD"
+					structure: "ocean_lily_pad_village:market"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 4.375d
+		}
+		{
+			dependencies: [
+				"4419BAEE2267E7DA"
+				"602F4CCF2594D07B"
+			]
+			icon: {
+				id: "cataclysm:tidal_claws"
+			}
+			id: "48FFC60749B6D51D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "18300B1C574D1A74"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "37DD941FDC218CF8"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "1682B5D59FF09189"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "177757CB9DC7A9F0"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:the_leviathan"
+					id: "1C2E8B4FC8C75A15"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:scylla"
+					id: "19E0AEB95ED0F6A3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.875d
+		}
+	]
+}

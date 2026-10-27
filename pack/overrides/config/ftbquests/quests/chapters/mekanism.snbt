@@ -1,0 +1,1336 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mekanism"
+	group: "2D0358AC52F60020"
+	icon: {
+		id: "mekanism:metallurgic_infuser"
+	}
+	id: "10138904D2605D92"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "mekanism:ingot_osmium"
+			}
+			id: "2FFB22C0A92AC872"
+			rewards: [
+				{
+					count: 8
+					id: "124F74007B328BD0"
+					item: {
+						count: 1
+						id: "mekanism:ingot_osmium"
+					}
+					type: "item"
+				}
+				{
+					id: "5CB8C26A8AED49D5"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "55E1CA656258B69F"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 16L
+					id: "3C50F0526B1597C3"
+					item: {
+						count: 1
+						id: "mekanism:ingot_osmium"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2FFB22C0A92AC872"
+			]
+			icon: {
+				id: "mekanism:metallurgic_infuser"
+			}
+			id: "413043436901FC89"
+			rewards: [
+				{
+					id: "6F01293B39FD398D"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "18421AA9A43B158C"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6F11ADBDB8F29BF0"
+					item: {
+						count: 1
+						id: "mekanism:metallurgic_infuser"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "63926BCD71CF0355"
+					item: {
+						count: 1
+						id: "mekanism:ingot_steel"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4095198AEB417201"
+					item: {
+						count: 1
+						id: "mekanism:alloy_infused"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7D517A5366DA1DCA"
+					item: {
+						count: 1
+						id: "mekanism:basic_control_circuit"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"2FFB22C0A92AC872"
+			]
+			icon: {
+				id: "mekanismgenerators:heat_generator"
+			}
+			id: "39832A1BF377750A"
+			rewards: [
+				{
+					id: "7022A3F829728B9E"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "2F1A79B07761B226"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1EE0F49964A034E6"
+					item: {
+						count: 1
+						id: "mekanismgenerators:heat_generator"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "36E98EEDAD15C076"
+					item: {
+						count: 1
+						id: "mekanism:basic_universal_cable"
+					}
+					type: "item"
+				}
+				{
+					id: "724FC03B8CA71DDF"
+					item: {
+						count: 1
+						id: "mekanism:basic_energy_cube"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"413043436901FC89"
+				"39832A1BF377750A"
+			]
+			icon: {
+				id: "mekanism:enrichment_chamber"
+			}
+			id: "5B2012F494AA9FD1"
+			rewards: [
+				{
+					id: "18CD2D9839CCF86D"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "1C58F9CC02A8C242"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "66BA8049232AA888"
+					item: {
+						count: 1
+						id: "mekanism:enrichment_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "36CEB3B9A72C4C4E"
+					item: {
+						count: 1
+						id: "mekanism:energized_smelter"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"5B2012F494AA9FD1"
+			]
+			icon: {
+				id: "mekanism:configurator"
+			}
+			id: "5B66EAD512974B1C"
+			rewards: [
+				{
+					id: "797F494F19576385"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "35A49E684CF751FD"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4FA3583DAC79FEC1"
+					item: {
+						count: 1
+						id: "mekanism:configurator"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -5.25d
+		}
+		{
+			dependencies: [
+				"5B2012F494AA9FD1"
+			]
+			icon: {
+				id: "mekanism:purification_chamber"
+			}
+			id: "68634AF527B8D1B6"
+			rewards: [
+				{
+					id: "2E8C1296CDAFE0AF"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "34191D922C2A5EA6"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "25F569E3F23FF0E4"
+					item: {
+						count: 1
+						id: "mekanism:purification_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "6BA3FB3ECA838116"
+					item: {
+						count: 1
+						id: "mekanism:electrolytic_separator"
+					}
+					type: "item"
+				}
+				{
+					id: "2AB3DD6FB5F8B979"
+					item: {
+						count: 1
+						id: "mekanism:electric_pump"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"413043436901FC89"
+			]
+			icon: {
+				id: "mekanism:advanced_control_circuit"
+			}
+			id: "39D714F252160877"
+			rewards: [
+				{
+					id: "4AF1ACA739284A3F"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "4B46E6E0A2CBCDB8"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1B90F8F6700DE88A"
+					item: {
+						count: 1
+						id: "mekanism:advanced_control_circuit"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6C89636B71FEA6FF"
+					item: {
+						count: 1
+						id: "mekanism:alloy_reinforced"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "565FE8CB51C4FFBA"
+					item: {
+						count: 1
+						id: "mekanism:elite_control_circuit"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4CA2F790CABCAB8D"
+					item: {
+						count: 1
+						id: "mekanism:alloy_atomic"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"68634AF527B8D1B6"
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:jetpack"
+			}
+			id: "5834D7EFBA5EBAD1"
+			rewards: [
+				{
+					id: "1658551C5470B00B"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "41F37F4AB4C1E814"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E520E08BC77BF14"
+					item: {
+						count: 1
+						id: "mekanism:jetpack"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"68634AF527B8D1B6"
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:chemical_injection_chamber"
+			}
+			id: "4B6DEB35841B67C8"
+			rewards: [
+				{
+					id: "55F6C27FA578F604"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "7B49C85723B610F1"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "61E2CC23665A388A"
+					item: {
+						count: 1
+						id: "mekanism:chemical_injection_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "116DF4B7B95950CE"
+					item: {
+						count: 1
+						id: "mekanism:chemical_infuser"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4B6DEB35841B67C8"
+			]
+			icon: {
+				id: "mekanism:chemical_crystallizer"
+			}
+			id: "4C66DAA45F962751"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "68A825D55844366D"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "318980ED3D336E4B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 180"
+					elevate_perms: true
+					id: "1EE3ED9F113357D4"
+					silent: true
+					title: "+180 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5EE4004A8F734DED"
+					item: {
+						count: 1
+						id: "mekanism:chemical_dissolution_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "1081721B4B324A2E"
+					item: {
+						count: 1
+						id: "mekanism:chemical_washer"
+					}
+					type: "item"
+				}
+				{
+					id: "254D1BC176162E27"
+					item: {
+						count: 1
+						id: "mekanism:chemical_crystallizer"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"68634AF527B8D1B6"
+			]
+			icon: {
+				id: "mekanism:thermal_evaporation_controller"
+			}
+			id: "17D0656FAD6AEFB4"
+			rewards: [
+				{
+					id: "4DA06D39BA7A74D3"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "15CF00C3A6F42EC1"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5A626E5E4574B10C"
+					item: {
+						count: 1
+						id: "mekanism:thermal_evaporation_controller"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "60E6D2062E57587B"
+					item: {
+						count: 1
+						id: "mekanism:thermal_evaporation_valve"
+					}
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "44230E2F17C6724E"
+					item: {
+						count: 1
+						id: "mekanism:thermal_evaporation_block"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:induction_port"
+			}
+			id: "3B7E4423F12FACFD"
+			rewards: [
+				{
+					id: "66A6F390CACB4762"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "405EBE117718418F"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "440EDE312C1B82DD"
+					item: {
+						count: 1
+						id: "mekanism:induction_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "17C0FA25ABB31792"
+					item: {
+						count: 1
+						id: "mekanism:induction_port"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3927269A20153912"
+					item: {
+						count: 1
+						id: "mekanism:basic_induction_cell"
+					}
+					type: "item"
+				}
+				{
+					id: "135A2BCF20E49067"
+					item: {
+						count: 1
+						id: "mekanism:basic_induction_provider"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"39832A1BF377750A"
+			]
+			icon: {
+				id: "mekanismgenerators:wind_generator"
+			}
+			id: "3A3782D6733B36D5"
+			optional: true
+			rewards: [
+				{
+					id: "4E37130DEA5CCE39"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "4C0B95E0E79740B4"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "13321E3034AC6628"
+					item: {
+						count: 1
+						id: "mekanismgenerators:wind_generator"
+					}
+					type: "item"
+				}
+				{
+					id: "60CD841AF4DBA7C4"
+					item: {
+						count: 1
+						id: "mekanismgenerators:solar_generator"
+					}
+					type: "item"
+				}
+				{
+					id: "5DC5B9F7648C504B"
+					item: {
+						count: 1
+						id: "mekanismgenerators:gas_burning_generator"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:digital_miner"
+			}
+			id: "150F7B10715DC46E"
+			rewards: [
+				{
+					id: "146239290C2CCEB1"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "1C2BD1EC34467806"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "11AEADBF0AA86171"
+					item: {
+						count: 1
+						id: "mekanism:digital_miner"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:teleporter"
+			}
+			id: "6A68A0DFD3EFE9B8"
+			rewards: [
+				{
+					id: "42D99EC48D103816"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "708FC799C0392CB4"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "794ABBB1898FD0AC"
+					item: {
+						count: 1
+						id: "mekanism:teleporter"
+					}
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "173D3CCE0B646059"
+					item: {
+						count: 1
+						id: "mekanism:teleporter_frame"
+					}
+					type: "item"
+				}
+				{
+					id: "61C83D0B62F93496"
+					item: {
+						count: 1
+						id: "mekanism:portable_teleporter"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"4B6DEB35841B67C8"
+				"3B7E4423F12FACFD"
+			]
+			icon: {
+				id: "mekanismgenerators:fission_reactor_casing"
+			}
+			id: "450FD4F2B4192C24"
+			rewards: [
+				{
+					id: "3EA94B6C43326EBE"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "5C1B70F2E1395902"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 24L
+					id: "7845EF1B3159CDBD"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fission_reactor_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "43C29C3A07488B7D"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fission_fuel_assembly"
+					}
+					type: "item"
+				}
+				{
+					id: "4405E3CA5CF2DA8E"
+					item: {
+						count: 1
+						id: "mekanismgenerators:control_rod_assembly"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "5A9B247744DE96D9"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fission_reactor_port"
+					}
+					type: "item"
+				}
+				{
+					id: "550C54A4E2314EAF"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fission_reactor_logic_adapter"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"450FD4F2B4192C24"
+			]
+			icon: {
+				id: "mekanismgenerators:turbine_rotor"
+			}
+			id: "213057252DB3BB90"
+			rewards: [
+				{
+					id: "6977718C1D9E28DB"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "4AF46E3763C6D09D"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 32L
+					id: "1947DF9E4E59D366"
+					item: {
+						count: 1
+						id: "mekanismgenerators:turbine_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "779252463517ECE7"
+					item: {
+						count: 1
+						id: "mekanismgenerators:turbine_rotor"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "716C0A08D0B40FAA"
+					item: {
+						count: 1
+						id: "mekanismgenerators:turbine_blade"
+					}
+					type: "item"
+				}
+				{
+					id: "1AA78285AA0D6B23"
+					item: {
+						count: 1
+						id: "mekanismgenerators:rotational_complex"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3EC614FA4F94EDCA"
+					item: {
+						count: 1
+						id: "mekanismgenerators:electromagnetic_coil"
+					}
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "5E1DA5C1534CA9A9"
+					item: {
+						count: 1
+						id: "mekanism:pressure_disperser"
+					}
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "61957A9F27279ED5"
+					item: {
+						count: 1
+						id: "mekanismgenerators:saturating_condenser"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"450FD4F2B4192C24"
+			]
+			icon: {
+				id: "mekanism:pellet_polonium"
+			}
+			id: "71D2BD5535739D9F"
+			rewards: [
+				{
+					id: "32B6F01195BE6691"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 180"
+					elevate_perms: true
+					id: "2C3E32EC8122DC44"
+					silent: true
+					title: "+180 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4EE4AACE92E5032B"
+					item: {
+						count: 1
+						id: "mekanism:isotopic_centrifuge"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1C71EFFC23F5B4C6"
+					item: {
+						count: 1
+						id: "mekanism:pellet_polonium"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6766F8A7B6389D82"
+					item: {
+						count: 1
+						id: "mekanism:pellet_plutonium"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"71D2BD5535739D9F"
+				"213057252DB3BB90"
+			]
+			icon: {
+				id: "mekanism:pellet_antimatter"
+			}
+			id: "7962AB82AD302E11"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3FFBDF83B539E29F"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "6205B38ADFF9CBB8"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 350"
+					elevate_perms: true
+					id: "158464CD6955687F"
+					silent: true
+					title: "+350 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 24L
+					id: "753E635D9513A191"
+					item: {
+						count: 1
+						id: "mekanism:sps_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3F3F1D13A7EF755B"
+					item: {
+						count: 1
+						id: "mekanism:sps_port"
+					}
+					type: "item"
+				}
+				{
+					id: "6B1C3932811F21E3"
+					item: {
+						count: 1
+						id: "mekanism:supercharged_coil"
+					}
+					type: "item"
+				}
+				{
+					id: "4E478612590C8F3D"
+					item: {
+						count: 1
+						id: "mekanism:pellet_antimatter"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"213057252DB3BB90"
+				"17D0656FAD6AEFB4"
+			]
+			icon: {
+				id: "mekanismgenerators:fusion_reactor_controller"
+			}
+			id: "418978ACFC21C8F0"
+			rewards: [
+				{
+					id: "66D21A84918365E3"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 450"
+					elevate_perms: true
+					id: "2990E22FCE2BD413"
+					silent: true
+					title: "+450 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "28E4EB2B503CB44A"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fusion_reactor_controller"
+					}
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "16A0EA29C301AABB"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fusion_reactor_frame"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "15BA17841781DA08"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fusion_reactor_port"
+					}
+					type: "item"
+				}
+				{
+					id: "3312CF7707DD12C0"
+					item: {
+						count: 1
+						id: "mekanismgenerators:hohlraum"
+					}
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "55DCF9916C7C5A44"
+					item: {
+						count: 1
+						id: "mekanism:laser"
+					}
+					type: "item"
+				}
+				{
+					id: "1EAFB0C410EEBA7D"
+					item: {
+						count: 1
+						id: "mekanism:laser_amplifier"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:qio_dashboard"
+			}
+			id: "178B34D3803D3C16"
+			rewards: [
+				{
+					id: "11EFB4C9AE2D6212"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 180"
+					elevate_perms: true
+					id: "5884D224995D6E50"
+					silent: true
+					title: "+180 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B0D4E7C82FC7A8F"
+					item: {
+						count: 1
+						id: "mekanism:qio_drive_array"
+					}
+					type: "item"
+				}
+				{
+					id: "5323F95F715027B6"
+					item: {
+						count: 1
+						id: "mekanism:qio_dashboard"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2A4AE13F34C580C7"
+					item: {
+						count: 1
+						id: "mekanism:qio_drive_base"
+					}
+					type: "item"
+				}
+				{
+					id: "383A6C5253ADF1F7"
+					item: {
+						count: 1
+						id: "mekanism:portable_qio_dashboard"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"39D714F252160877"
+			]
+			icon: {
+				id: "mekanism:atomic_disassembler"
+			}
+			id: "59A4A7CF1DE61FBB"
+			rewards: [
+				{
+					id: "24041CB135772FB1"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 90"
+					elevate_perms: true
+					id: "42BD910197350AE4"
+					silent: true
+					title: "+90 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "46D1D106040A2020"
+					item: {
+						count: 1
+						id: "mekanism:atomic_disassembler"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 5.25d
+		}
+		{
+			dependencies: [
+				"7962AB82AD302E11"
+				"418978ACFC21C8F0"
+			]
+			icon: {
+				id: "mekanism:mekasuit_helmet"
+			}
+			id: "7D3FCF5342B7F7D8"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "596EE68CA73E35EB"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					count: 2
+					id: "67B9E9D8656B01C2"
+					item: {
+						count: 1
+						id: "mekanism:module_energy_unit"
+					}
+					type: "item"
+				}
+				{
+					id: "2F565F365BEE3C4B"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 700"
+					elevate_perms: true
+					id: "17ABCE8F2AB8C6E7"
+					silent: true
+					title: "+700 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.75d
+			tasks: [
+				{
+					id: "2BCE958EFD81AD11"
+					item: {
+						count: 1
+						id: "mekanism:mekasuit_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "13FBF0B5F55C59C6"
+					item: {
+						count: 1
+						id: "mekanism:mekasuit_bodyarmor"
+					}
+					type: "item"
+				}
+				{
+					id: "52B95D9EA97CF418"
+					item: {
+						count: 1
+						id: "mekanism:mekasuit_pants"
+					}
+					type: "item"
+				}
+				{
+					id: "2896820709B0AE96"
+					item: {
+						count: 1
+						id: "mekanism:mekasuit_boots"
+					}
+					type: "item"
+				}
+				{
+					id: "1584EA87176FE01C"
+					item: {
+						count: 1
+						id: "mekanism:meka_tool"
+					}
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 0.0d
+		}
+	]
+}

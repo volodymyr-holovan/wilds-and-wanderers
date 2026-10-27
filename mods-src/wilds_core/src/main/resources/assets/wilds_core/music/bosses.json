@@ -1,0 +1,44 @@
+{
+  "_comment": "Boss themes of the music director. 'own_theme': mods that play their bosses' themes themselves (Reactive Music mutes for them through its config). 'themes': a theme for every other boss, each a different track; a missing sound (mod not installed) falls back to Reactive Music's boss songs. 'bosses': big foes outside the c:bosses tag that deserve boss music.",
+  "own_theme": [
+    "cataclysm:*", "mowziesmobs:*", "aether:*", "irons_spellbooks:dead_king", "irons_spellbooks:fire_boss",
+    "alexscaves:luxtructosaurus", "alexsmobs:void_worm"
+  ],
+  "themes": {
+    "twilightforest:naga": "twilightforest:music_disc.twilightforest.steps",
+    "twilightforest:lich": "twilightforest:music_disc.twilightforest.superstitious",
+    "twilightforest:minoshroom": "twilightforest:music_disc.twilightforest.maker",
+    "twilightforest:hydra": "twilightforest:music_disc.twilightforest.thread",
+    "twilightforest:knight_phantom": "twilightforest:music_disc.twilightforest.motion",
+    "twilightforest:ur_ghast": "twilightforest:music_disc.twilightforest.findings",
+    "twilightforest:alpha_yeti": "twilightforest:music_disc.twilightforest.wayfarer",
+    "twilightforest:snow_queen": "twilightforest:music_disc.twilightforest.radiance",
+    "twilightforest:plateau_boss": "twilightforest:music_disc.twilightforest.home",
+    "minecraft:ender_dragon": "minecraft:music.dragon",
+    "minecraft:wither": "minecraft:music_disc.creator",
+    "minecraft:warden": "minecraft:music_disc.5",
+    "minecraft:elder_guardian": "minecraft:music_disc.relic",
+    "iceandfire:fire_dragon": "irons_spellbooks:music.flame_still_burns",
+    "iceandfire:ice_dragon": "irons_spellbooks:music.whispers_of_ice",
+    "iceandfire:lightning_dragon": "aether:item.music_disc.sliders_wrath",
+    "iceandfire:sea_serpent": "naturalist:music_disc.wild_ones",
+    "iceandfire:hydra": "apothic_enchanting:music_disc.quanta",
+    "iceandfire:cyclops": "apothic_enchanting:music_disc.arcana",
+    "iceandfire:gorgon": "apothic_enchanting:music_disc.eterna",
+    "iceandfire:dread_lich": "irons_spellbooks:music.dead_king_lullaby",
+    "alexsmobs:warped_mosco": "alexsmobs:music_disc_daze",
+    "ars_nouveau:wilden_boss": "apotheosis:music_disc_glimmer",
+    "goblins_tyranny:leader_goblin": "friendsandfoes:music_disc.around_the_corner",
+    "minecolonies:chiefbarbarian": "apotheosis:music_disc_flash",
+    "minecolonies:chiefpirate": "apotheosis:music_disc_shimmer",
+    "upgrade_aquatic:great_thrasher": "upgrade_aquatic:music_disc.atlantis",
+    "mowziesmobs:naga": "mowziesmobs:music.petiole"
+  },
+  "bosses": [
+    "minecraft:ender_dragon", "minecraft:wither", "minecraft:warden", "minecraft:elder_guardian",
+    "iceandfire:fire_dragon", "iceandfire:ice_dragon", "iceandfire:lightning_dragon", "iceandfire:sea_serpent",
+    "iceandfire:hydra", "iceandfire:cyclops", "iceandfire:gorgon", "iceandfire:dread_lich",
+    "alexsmobs:void_worm", "alexsmobs:warped_mosco", "goblins_tyranny:leader_goblin",
+    "minecolonies:chiefbarbarian", "minecolonies:chiefpirate", "upgrade_aquatic:great_thrasher", "mowziesmobs:naga"
+  ]
+}

@@ -1,0 +1,413 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "start"
+	group: "53F26294B0C486BB"
+	icon: {
+		id: "minecraft:oak_sapling"
+	}
+	id: "22E1A37F318050E4"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:book"
+			}
+			id: "1BD29F9EBE206381"
+			rewards: [
+				{
+					count: 6
+					id: "42ABAE061688B5BF"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "3F5CE1BB2198B62F"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "1036D8FCC2D2C429"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "22B4D331A3E8339F"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1BD29F9EBE206381"
+			]
+			icon: {
+				id: "minecraft:knowledge_book"
+			}
+			id: "7B4743A248E46AF1"
+			rewards: [
+				{
+					id: "3DBC5C0BECA043EA"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "181F390E19630B4E"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5FC93AE4A6CFC901"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"1BD29F9EBE206381"
+			]
+			icon: {
+				id: "minecraft:compass"
+			}
+			id: "77215B6E09402AA4"
+			rewards: [
+				{
+					id: "46A6931907A6205D"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "5D28AB4804F4FCFA"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "63EF98AE8618B608"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"7B4743A248E46AF1"
+			]
+			icon: {
+				id: "minecraft:filled_map"
+			}
+			id: "7E869C5832BD6B12"
+			rewards: [
+				{
+					id: "1D228C1E3651937D"
+					type: "xp"
+					xp: 15
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "1EC9A8AD4B6CF49D"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1798168496956DA4"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 4.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"7B4743A248E46AF1"
+			]
+			icon: {
+				id: "minecraft:crafting_table"
+			}
+			id: "6D6EF2E6F0E90114"
+			rewards: [
+				{
+					id: "5E4525EC5460DD95"
+					type: "xp"
+					xp: 15
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "483D4260C53E9244"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42B08382FA16889B"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"77215B6E09402AA4"
+			]
+			icon: {
+				id: "minecraft:writable_book"
+			}
+			id: "22DA537DF48FBCE6"
+			rewards: [
+				{
+					count: 3
+					id: "699106D7D5A4FEA1"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "36393FF63D556DA8"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "398D9AEFD8F6419B"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "205AD8E5E2AE5994"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"6D6EF2E6F0E90114"
+			]
+			icon: {
+				id: "minecraft:chest"
+			}
+			id: "60B32C5A3603EFB3"
+			rewards: [
+				{
+					id: "4037DA03614900B6"
+					type: "xp"
+					xp: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "244040648F0134CD"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "41D3E08EB62BBF2C"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"60B32C5A3603EFB3"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:backpack"
+			}
+			id: "7829119C307B5373"
+			rewards: [
+				{
+					count: 4
+					id: "162A6C4A954E9F8D"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "18B2A04330E3E7E8"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "5755CD7BAE0F5DF8"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "186E3CADCD57831E"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 8.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"60B32C5A3603EFB3"
+			]
+			icon: {
+				id: "minecraft:totem_of_undying"
+			}
+			id: "327BB2A5C7FEDC53"
+			rewards: [
+				{
+					id: "4DC99020E85F54EA"
+					type: "xp"
+					xp: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "2F9AC88EBED5B427"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "544E936B2E2F9B20"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 8.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"7E869C5832BD6B12"
+			]
+			icon: {
+				id: "waystones:waystone"
+			}
+			id: "7511EFC45985112D"
+			rewards: [
+				{
+					count: 4
+					id: "3C19EE946D93FD71"
+					item: {
+						count: 1
+						id: "waystones:warp_dust"
+					}
+					type: "item"
+				}
+				{
+					id: "459D4F7A3B5FDE55"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "7EF16BBE857D5401"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "54224D6514B79246"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"7B4743A248E46AF1"
+			]
+			icon: {
+				id: "minecraft:glass_pane"
+			}
+			id: "108FA0C6C6A8E789"
+			optional: true
+			rewards: [
+				{
+					id: "3075FC89311B3675"
+					type: "xp"
+					xp: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 10"
+					elevate_perms: true
+					id: "4100AD5D7BF80C95"
+					silent: true
+					title: "+10 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "510AB9BCE5590BA9"
+					max_progress: 1L
+					type: "custom"
+				}
+			]
+			x: 4.0d
+			y: 2.625d
+		}
+	]
+}

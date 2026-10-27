@@ -1,0 +1,250 @@
+~gear.meka_suit.charge_rate.inventory.tooltip	Швидкість заряджання предметів інвентаря (Дж/т) модулем розподілу заряду.
+~gear.meka_suit.charge_rate.solar	Сонячне заряджання
+~gear.meka_suit.charge_rate.solar.tooltip	Швидкість сонячного заряджання шолома (Дж/т) за кожне встановлене покращення.
+~gear.meka_suit.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти МекаКостюм. З покращеннями зростає квадратично.
+~gear.meka_suit.damage_absorption	Поглинання шкоди МекаКостюмом
+~gear.meka_suit.damage_absorption.button	Налаштувати поглинання
+~gear.meka_suit.damage_absorption.fall	Частка падіння
+~gear.meka_suit.damage_absorption.fall.tooltip	Яку частку шкоди від падіння поглинають чоботи МекаКостюма, коли мають досить енергії.
+~gear.meka_suit.damage_absorption.magic	Частка магії
+~gear.meka_suit.damage_absorption.magic.tooltip	Яку частку магічної шкоди поглинає шолом МекаКостюма з модулем очищення, коли має досить енергії.
+~gear.meka_suit.damage_absorption.tooltip	Налаштування поглинання шкоди МекаКостюмом
+~gear.meka_suit.damage_absorption.unspecified	Частка іншої шкоди
+~gear.meka_suit.damage_absorption.unspecified.tooltip	Яку частку іншої шкоди (що не оминає броню) поглинає повний МекаКостюм з досить енергії. Примітка: окремі види шкоди можна додати в мапу даних mekanism:mekasuit_absorption.
+~gear.meka_suit.energy_usage	Витрата енергії
+~gear.meka_suit.energy_usage.button	Налаштувати витрату енергії
+~gear.meka_suit.energy_usage.damage	Зменшення шкоди
+~gear.meka_suit.energy_usage.damage.tooltip	Витрата енергії (Дж) МекаКостюма на одиницю отриманої шкоди.
+~gear.meka_suit.energy_usage.elytra	Елітри
+~gear.meka_suit.energy_usage.elytra.tooltip	Витрата енергії (Дж) МекаКостюма за секунду польоту з модулем елітр.
+~gear.meka_suit.energy_usage.fall	Зменшення падіння
+~gear.meka_suit.energy_usage.fall.tooltip	Множник ціни в Дж за зменшення шкоди від падіння чоботами МекаКостюма. Ціна: FallDamage * fall. (1 FallDamage — половинка серця)
+~gear.meka_suit.energy_usage.flight	Гравітаційна модуляція
+~gear.meka_suit.energy_usage.flight.tooltip	Витрата енергії (Дж) МекаКостюма за такт польоту з гравітаційною модуляцією.
+~gear.meka_suit.energy_usage.food	Поживна ін'єкція
+~gear.meka_suit.energy_usage.food.tooltip	Витрата енергії (Дж) МекаКостюма на половинку їжі поживної ін'єкції.
+~gear.meka_suit.energy_usage.jump	Посилення стрибка
+~gear.meka_suit.energy_usage.jump.tooltip	Витрата енергії (Дж) МекаКостюма на кожні 0,1 сили стрибка.
+~gear.meka_suit.energy_usage.magic	Захист від магії
+~gear.meka_suit.energy_usage.magic.tooltip	Множник ціни в Дж за зменшення магічної шкоди модулем очищення дихання. Ціна: MagicDamage * magicReduce. (1 MagicDamage — половинка серця).
+~gear.meka_suit.energy_usage.magnet	Магнітне притягання
+~gear.meka_suit.energy_usage.magnet.tooltip	Витрата енергії (Дж) МекаКостюма за такт притягання одного предмета.
+~gear.meka_suit.energy_usage.potion	Прискорення ефектів зілль
+~gear.meka_suit.energy_usage.potion.tooltip	Витрата енергії (Дж) МекаКостюма на скорочення ефекту зілля.
+~gear.meka_suit.energy_usage.sprint	Посилення бігу
+~gear.meka_suit.energy_usage.sprint.tooltip	Витрата енергії (Дж) МекаКостюма на кожні 0,1 швидкості бігу.
+~gear.meka_suit.energy_usage.swim	Гідростатичне відштовхування
+~gear.meka_suit.energy_usage.swim.tooltip	Витрата енергії (Дж) МекаКостюма за такт гідростатичного відштовхування.
+~gear.meka_suit.energy_usage.tooltip	Налаштування витрати енергії МекаКостюма
+~gear.meka_suit.energy_usage.vision	Покращення зору
+~gear.meka_suit.energy_usage.vision.tooltip	Витрата енергії (Дж) МекаКостюма за такт покращення зору.
+~gear.meka_suit.gravitational_vibrations	Гравітаційні вібрації
+~gear.meka_suit.gravitational_vibrations.tooltip	Чи створює модуль гравітаційної модуляції вібрації, які чують сенсори й крикуни скалку.
+~gear.meka_suit.jetpack.capacity	Місткість водню ранця
+~gear.meka_suit.jetpack.capacity.tooltip	Скільки мБ водню найбільше вміщує кожен встановлений модуль реактивного ранця.
+~gear.meka_suit.jetpack.transfer_rate	Швидкість наповнення ранця
+~gear.meka_suit.jetpack.transfer_rate.tooltip	Швидкість (мБ/т), з якою водень надходить у модуль реактивного ранця.
+~gear.meka_suit.knockback_resistance	Опір відкиданню
+~gear.meka_suit.knockback_resistance.tooltip	Опір відкиданню МекаКостюма.
+~gear.meka_suit.paste.capacity	Місткість поживної пасти
+~gear.meka_suit.paste.capacity.tooltip	Скільки мБ поживної пасти найбільше вміщує модуль поживної ін'єкції.
+~gear.meka_suit.paste.transfer_rate	Швидкість наповнення пастою
+~gear.meka_suit.paste.transfer_rate.tooltip	Швидкість (мБ/т), з якою поживна паста надходить у модуль поживної ін'єкції.
+~gear.meka_suit.tooltip	Налаштування МекаКостюма
+~gear.meka_tool	Мека-інструмент
+~gear.meka_tool.attack_speed	Швидкість атаки
+~gear.meka_tool.attack_speed.tooltip	Швидкість атаки мека-інструмента.
+~gear.meka_tool.axe	Сокира
+~gear.meka_tool.axe.tooltip	Ціна в Дж дії мека-інструментом як сокирою: обдирання кори, зішкрябування, зняття воску.
+~gear.meka_tool.button	Налаштувати мека-інструмент
+~gear.meka_tool.capacity	Найбільший запас енергії
+~gear.meka_tool.capacity.tooltip	Запас енергії (Дж) мека-інструмента без покращень. З покращеннями зростає квадратично.
+~gear.meka_tool.charge_rate	Швидкість заряджання
+~gear.meka_tool.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти мека-інструмент. З покращеннями зростає квадратично.
+~gear.meka_tool.damage	Базова шкода
+~gear.meka_tool.damage.tooltip	Додаткова шкода мека-інструмента без витрати енергії.
+~gear.meka_tool.efficiency	Ефективність
+~gear.meka_tool.efficiency.tooltip	Ефективність мека-інструмента з енергією, але без покращень.
+~gear.meka_tool.energy_usage	Витрата енергії
+~gear.meka_tool.energy_usage.base	Базова
+~gear.meka_tool.energy_usage.base.tooltip	Базова витрата енергії (Дж) мека-інструмента. (Множиться на швидкість)
+~gear.meka_tool.energy_usage.button	Налаштувати витрату енергії
+~gear.meka_tool.energy_usage.silk	Шовковий дотик
+~gear.meka_tool.energy_usage.silk.tooltip	Витрата енергії (Дж) мека-інструмента з шовковим дотиком. (Множиться на швидкість)
+~gear.meka_tool.energy_usage.teleport	Витрата на телепорт
+~gear.meka_tool.energy_usage.teleport.tooltip	Ціна в Дж телепорту мека-інструментом на 10 блоків.
+~gear.meka_tool.energy_usage.tooltip	Налаштування витрати енергії мека-інструмента
+~gear.meka_tool.energy_usage.weapon	Зброя
+~gear.meka_tool.energy_usage.weapon.tooltip	Ціна в Дж удару мека-інструментом на 4 одиниці шкоди.
+~gear.meka_tool.extended_vein	Розширений видобуток жили
+~gear.meka_tool.extended_vein.tooltip	Дозволити режим «розширеної жили» мека-інструмента: видобувати жилою будь-що, а не лише руду й колоди.
+~gear.meka_tool.hoe	Мотика
+~gear.meka_tool.hoe.tooltip	Ціна в Дж дії мека-інструментом як мотикою.
+~gear.meka_tool.shear.block	Стригти блоки
+~gear.meka_tool.shear.block.tooltip	Ціна в Дж акуратного стриження й підрізання блоків мека-інструментом.
+~gear.meka_tool.shear.entity	Стригти істот
+~gear.meka_tool.shear.entity.tooltip	Ціна в Дж стриження істот мека-інструментом.
+~gear.meka_tool.shovel	Лопата
+~gear.meka_tool.shovel.tooltip	Ціна в Дж дії мека-інструментом як лопатою: стежки, гасіння вогнищ.
+~gear.meka_tool.teleportation_distance	Найбільша відстань телепорту
+~gear.meka_tool.teleportation_distance.tooltip	На яку найбільшу відстань гравець телепортується мека-інструментом.
+~gear.meka_tool.tooltip	Налаштування мека-інструмента
+~gear.network_reader	Мережевий зчитувач
+~gear.network_reader.button	Налаштувати мережевий зчитувач
+~gear.network_reader.charge_rate	Швидкість заряджання
+~gear.network_reader.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти мережевий зчитувач.
+~gear.network_reader.energy_usage	Витрата енергії
+~gear.network_reader.energy_usage.tooltip	Витрата енергії (Дж) на кожне зчитування мережі.
+~gear.network_reader.max_energy	Найбільший запас енергії
+~gear.network_reader.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщує мережевий зчитувач.
+~gear.network_reader.tooltip	Налаштування мережевих зчитувачів
+~gear.portable_teleporter	Портативний телепорт
+~gear.portable_teleporter.button	Налаштувати портативний телепорт
+~gear.portable_teleporter.charge_rate	Швидкість заряджання
+~gear.portable_teleporter.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти портативний телепорт.
+~gear.portable_teleporter.delay	Затримка телепорту
+~gear.portable_teleporter.delay.tooltip	Затримка в тактах між натисканням кнопки телепорту й самим телепортом.
+~gear.portable_teleporter.max_energy	Найбільший запас енергії
+~gear.portable_teleporter.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщує портативний телепорт.
+~gear.portable_teleporter.tooltip	Налаштування портативного телепорту
+~gear.scuba_tank	Акваланг
+~gear.scuba_tank.button	Налаштувати акваланг
+~gear.scuba_tank.capacity	Місткість
+~gear.scuba_tank.capacity.tooltip	Місткість акваланга в мБ.
+~gear.scuba_tank.fill_rate	Швидкість наповнення
+~gear.scuba_tank.fill_rate.tooltip	Швидкість (мБ/т), з якою акваланг приймає кисень.
+~gear.scuba_tank.tooltip	Налаштування аквалангів
+~gear.seismic_reader	Сейсмічний зчитувач
+~gear.seismic_reader.button	Налаштувати сейсмічний зчитувач
+~gear.seismic_reader.charge_rate	Швидкість заряджання
+~gear.seismic_reader.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти сейсмічний зчитувач.
+~gear.seismic_reader.energy_usage	Витрата енергії
+~gear.seismic_reader.energy_usage.tooltip	Скільки енергії (Дж) треба на одне користування сейсмічним зчитувачем.
+~gear.seismic_reader.max_energy	Найбільший запас енергії
+~gear.seismic_reader.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщує сейсмічний зчитувач.
+~gear.seismic_reader.tooltip	Налаштування сейсмічних зчитувачів
+~general.auto_eject	Автовивантаження
+~general.auto_eject.button	Налаштувати вивантаження
+~general.auto_eject.excess	Відсоток залишку
+~general.auto_eject.excess.tooltip	Яку частку місткості бака лишати, коли ввімкнено скидання надлишку.
+~general.auto_eject.rate.chemical	Швидкість для хімікатів
+~general.auto_eject.rate.chemical.tooltip	Швидкість (мБ/т) автовивантаження хімікатів із блоків.
+~general.auto_eject.rate.fluid	Швидкість для рідин
+~general.auto_eject.rate.fluid.tooltip	Швидкість (мБ/т) автовивантаження рідин із блоків.
+~general.auto_eject.tooltip	Налаштування автовивантаження з блоків
+~general.boiler	Термоелектричний котел
+~general.boiler.button	Налаштувати котел
+~general.boiler.capacity.cooled_coolant	Охолодженого теплоносія на блок
+~general.boiler.capacity.cooled_coolant.tooltip	Скільки мБ додає до об'єму кожен блок частини котла з охолодженим теплоносієм. Найбільше = об'єм * cooledCoolantPerTank
+~general.boiler.capacity.heated_coolant	Нагрітого теплоносія на блок
+~general.boiler.capacity.heated_coolant.tooltip	Скільки мБ додає до об'єму кожен блок частини котла з нагрітим теплоносієм. Найбільше = об'єм * heatedCoolantPerTank
+~general.boiler.capacity.steam	Пари на блок
+~general.boiler.capacity.steam.tooltip	Скільки мБ пари додає до об'єму кожен блок парової частини котла. Найбільше = об'єм * steamPerTank
+~general.boiler.capacity.water	Води на блок
+~general.boiler.capacity.water.tooltip	Скільки мБ рідини додає до об'єму кожен блок водяної частини котла. Найбільше = об'єм * waterPerTank
+~general.boiler.heat_transfer	Теплопередача перегріву
+~general.boiler.heat_transfer.tooltip	Скільки тепла дає кожен нагрівальний елемент котла.
+~general.boiler.tooltip	Налаштування котлів
+~general.boiler.water_conductivity	Теплопровідність води
+~general.boiler.water_conductivity.tooltip	Яка частка тепла котла одразу перетворює воду на пару.
+~general.cardboard	Картонна коробка
+~general.cardboard.button	Налаштувати коробку
+~general.cardboard.mod_blacklist	Моди, недоступні коробці
+~general.cardboard.mod_blacklist.button	Змінити список
+~general.cardboard.mod_blacklist.tooltip	Блоки модів із цього списку не можна підняти картонною коробкою. Напр.: ["mekanism"]
+~general.cardboard.strict_unboxing	Суворе розпакування
+~general.cardboard.strict_unboxing.tooltip	Якщо увімкнено, не можна розпакувати блок із рідиною, що випарувалася б при ставленні (замість випаровування). Напр. без цього затоплена плита в Незері стане просто плитою, а з цим коробка не відкриється.
+~general.cardboard.tooltip	Налаштування картонних коробок
+~general.dynamic_tank	Динамічний бак
+~general.dynamic_tank.button	Налаштувати динамічний бак
+~general.dynamic_tank.capacity.chemical	Хімікатів на блок
+~general.dynamic_tank.capacity.chemical.tooltip	Скільки мБ хімікату додає до об'єму кожен блок динамічного бака. Загалом = об'єм * chemicalPerTank
+~general.dynamic_tank.capacity.fluid	Рідини на блок
+~general.dynamic_tank.capacity.fluid.tooltip	Скільки мБ рідини додає до об'єму кожен блок динамічного бака. Загалом = об'єм * fluidPerTank
+~general.dynamic_tank.tooltip	Налаштування динамічних баків
+~general.energy_conversion	Перетворення енергії
+~general.energy_conversion.blacklist.fluxnetworks	Вимкнути Flux Networks
+~general.energy_conversion.blacklist.fluxnetworks.tooltip	Вимикає швидку інтеграцію Forge Energy (FE/RF) з Flux Networks. Примітка: вимкнення Forge Energy теж її вимикає.
+~general.energy_conversion.blacklist.grandpower	Вимкнути GrandPower
+~general.energy_conversion.blacklist.grandpower.tooltip	Вимикає швидку інтеграцію Forge Energy (FE/RF) з Grand Power. Примітка: вимкнення Forge Energy теж її вимикає.
+~general.energy_conversion.blacklist.neoforge	Вимкнути Forge Energy
+~general.energy_conversion.blacklist.neoforge.tooltip	Вимикає інтеграцію енергії Forge Energy (FE/RF).
+~general.energy_conversion.button	Налаштувати перетворення
+~general.energy_conversion.forge_energy	Курс FE
+~general.energy_conversion.forge_energy.tooltip	Множник перетворення Forge Energy на джоулі (FE * feConversionRate = Дж)
+~general.energy_conversion.steam	Енергоємність пари
+~general.energy_conversion.steam.tooltip	Найбільше джоулів на мБ пари. Також впливає на термоелектричний котел.
+~general.energy_conversion.tooltip	Налаштування перетворення енергії
+~general.fill_rate	Наповнення предметів
+~general.fill_rate.button	Налаштувати наповнення
+~general.fill_rate.chemical	Наповнення хімікатами
+~general.fill_rate.chemical.tooltip	Швидкість (мБ/т) наповнення чи спорожнення предметів-сховищ хімікатів.
+~general.fill_rate.fluid	Наповнення рідинами
+~general.fill_rate.fluid.tooltip	Швидкість (мБ/т) наповнення чи спорожнення предметів-сховищ рідин.
+~general.fill_rate.tooltip	Налаштування швидкості наповнення баків у предметах.
+~general.heater	Нагрівачі
+~general.heater.button	Налаштувати нагрівачі
+~general.heater.fuelwood.duration	Тривалість горіння в дров'яному нагрівачі
+~general.heater.fuelwood.duration.tooltip	Скільки тактів горить предмет у дров'яному нагрівачі. Так нагрівач горить швидше, але дає стільки ж тепла з предмета.
+~general.heater.fuelwood.heat	Тепло дров'яного нагрівача за такт
+~general.heater.fuelwood.heat.tooltip	Скільки тепла дає дров'яний нагрівач за такт горіння палива.
+~general.heater.resistive.efficiency	Ефективність резистивного нагрівача
+~general.heater.resistive.efficiency.tooltip	Скільки тепла дає резистивний нагрівач з одного джоуля звичайної енергії.
+~general.heater.tooltip	Налаштування нагрівачів
+~general.laser	Лазери
+~general.laser.button	Налаштувати лазери
+~general.laser.energy.damage	Енергія на шкоду
+~general.laser.energy.damage.tooltip	Енергія на половинку серця шкоди, що лазер завдає істотам.
+~general.laser.energy.hardness	Енергія на твердість
+~general.laser.energy.hardness.tooltip	Енергія, щоб лазер зламав чи притягнув блок (на рівень твердості блока).
+~general.laser.range	Дальність
+~general.laser.range.tooltip	На скільки блоків б'є лазер.
+~general.laser.tooltip	Налаштування лазерів
+~general.miner	Цифровий шахтар
+~general.miner.button	Налаштувати цифрового шахтаря
+~general.miner.easy_filters	Прості фільтри шахтаря
+~general.miner.easy_filters.tooltip	Дозволяє перетягувати предмети з JEI у фільтри цифрового шахтаря. Так можна вибрати блок, не маючи його.
+~general.miner.max_radius	Найбільший радіус
+~general.miner.max_radius.tooltip	Найбільший радіус (у блоках) цифрового шахтаря. Збільшення може погіршити стабільність і пам'ять. Дуже радимо лишити типове значення.
+~general.miner.silk	Множник енергії шовкового дотику
+~general.miner.silk.tooltip	Множник енергії для режиму шовкового дотику цифрового шахтаря.
+~general.miner.ticks_per_mine	Тактів на блок
+~general.miner.ticks_per_mine.tooltip	Скільки тактів цифровий шахтар без покращень видобуває один блок.
+~general.miner.tooltip	Налаштування цифрового шахтаря
+~general.misc.aesthetic_damage	Естетична шкода світу
+~general.misc.aesthetic_damage.tooltip	Якщо увімкнено, лазери ламають блоки, а вогнемет підпалює.
+~general.misc.alloy_upgrading	Покращення передавачів сплавом
+~general.misc.alloy_upgrading.tooltip	Дозволяє покращувати кабелі, труби, трубки, транспортери й провідники, клацнувши по них сплавом наступного рівня.
+~general.misc.alpha_warning	Попередження про альфу
+~general.misc.alpha_warning.tooltip	Показувати попередження, якщо Mekanism в альфа-версії. Лише для розробки.
+~general.misc.chunkloading	Дозволити завантаження чанків
+~general.misc.chunkloading.tooltip	Чи дозволяє Mekanism гравцям тримати чанки завантаженими. Якщо вимкнено, покращення «Якір» і стабілізатор вимірів не працюють.
+~general.misc.deactivation_delay.block	Затримка вимкнення блока
+~general.misc.deactivation_delay.block.tooltip	Скільки тактів мине, перш ніж клієнт дізнається, що блок перестав працювати. Запобігає частим змінам стану, що гальмують гру. Примітка: увімкнення синхронізується одразу, це лише для вимкнення.
+~general.misc.packet_logging	Журнал пакетів
+~general.misc.packet_logging.tooltip	Записувати назви пакетів Mekanism. Для налагодження.
+~general.misc.rate.sna	Найбільша швидкість СНА
+~general.misc.rate.sna.tooltip	Найбільша швидкість обробки (мБ/т) сонячного нейтронного активатора. Примітка: в екстремальних умовах може бути вищою.
+~general.misc.upgrade_multiplier	Найбільший множник покращень
+~general.misc.upgrade_multiplier.tooltip	Базовий множник продуктивності машин з покращеннями: UpgradeModifier * (UpgradesInstalled/UpgradesPossible).
+~general.oredictionificator	Уніфікатор руд
+~general.oredictionificator.button	Налаштувати уніфікатор
+~general.oredictionificator.tooltip	Налаштування уніфікатора руд
+~general.oredictionificator.valid_filters.item	Дозволені фільтри предметів
+~general.oredictionificator.valid_filters.item.button	Змінити фільтри
+~general.oredictionificator.valid_filters.item.tooltip	Дозволені префікси тегів для уніфікатора руд. Примітка: краще лишати лише відомі префікси, інакше легко отримати перетворення речей, які насправді не рівнозначні.
+~general.paste	Поживна паста
+~general.paste.button	Налаштувати пасту
+~general.paste.per_food	Пасти на їжу
+~general.paste.per_food.tooltip	Скільки мБ поживної пасти дорівнює половинці їжі.
+~general.paste.saturation	Насичення
+~general.paste.saturation.tooltip	Рівень насичення від поживної пасти.
+~general.paste.tooltip	Налаштування поживної пасти
+~general.prefilled_tanks	Заповнені баки
+~general.prefilled_tanks.button	Налаштувати заповнені баки
+~general.prefilled_tanks.chemical	Баки хімікатів
+~general.prefilled_tanks.chemical.tooltip	Додати в творчий режим і JEI заповнені творчі баки хімікатів для всіх хімікатів. Примітка: зокрема радіоактивних, які зазвичай у баки не вміщаються.
+~general.prefilled_tanks.fluid	Баки рідин
+~general.prefilled_tanks.fluid.tooltip	Додати в творчий режим і JEI заповнені творчі баки рідин для всіх рідин.
+~general.prefilled_tanks.tooltip	Налаштування заповнених баків
+~general.pump	Насос

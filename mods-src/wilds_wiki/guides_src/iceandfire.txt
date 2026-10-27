@@ -1,0 +1,36 @@
+=== dragon_corpse.md
+---
+for: iceandfire:dragonbone, entity:iceandfire:fire_dragon, entity:iceandfire:ice_dragon, entity:iceandfire:lightning_dragon, iceandfire:fire_dragon_blood, iceandfire:ice_dragon_blood, iceandfire:lightning_dragon_blood, iceandfire:fire_dragon_heart, iceandfire:ice_dragon_heart, iceandfire:lightning_dragon_heart, iceandfire:dragonscales_red, iceandfire:dragonscales_blue, iceandfire:dragonscales_electric, iceandfire:dragon_skull_fire, iceandfire:dragon_skull_ice, iceandfire:dragon_skull_lightning, iceandfire:fire_dragon_flesh, iceandfire:ice_dragon_flesh, iceandfire:lightning_dragon_flesh
+keywords: кістка дракона, скелет дракона, тіло дракона, кров дракона, серце дракона, луска, як отримати кістки, dragon bone, dragon skeleton, corpse
+---
+# Тіло й скелет дракона
+Переможений дракон не зникає: його тіло лишається лежати там, де він упав. Уся здобич — не з убивства, а з цього тіла.
+
+- **Клацайте по тілу ПКМ.** Кожне клацання знімає частину здобичі: луску, драконяче м'ясо, кістки, а наостанок — серце й череп. Тіло поступово перетворюється на обгризений скелет.
+- **Кров дракона** збирають у порожню пляшечку: клацніть по тілу ПКМ, тримаючи [[minecraft:glass_bottle]]. Кров потрібна для зачарованої драконячої зброї й драконячої сталі.
+- **Скелет** розбийте — з нього сиплються [[iceandfire:dragonbone]].
+- Скелети давніх драконів трапляються й просто неба: вогняних — у спекотних краях, крижаних — у засніжених, громових — у сухих степах. Їх розбивають так само, і це найлегший спосіб дістати кістки, не воюючи з живим драконом.
+> З кісток роблять [[iceandfire:dragonbone_sword]], лук, стріли й інструменти — міцніші за алмазні. Окунувши кістяний меч у кров дракона відповідної стихії, отримаєте полум'яний, крижаний чи громовий меч.
+=== dragon_care.md
+---
+for: iceandfire:dragon_horn, iceandfire:dragon_meal, iceandfire:sickly_dragon_meal, iceandfire:dragon_stick, iceandfire:dragon_flute
+keywords: ріг дракона, драконяча їжа, жезл дракона, флейта, приручений дракон, як вигодувати дракона
+---
+# Приручений дракон
+- [[iceandfire:dragon_meal]] — ласощі, від яких приручений дракон швидше росте. [[iceandfire:sickly_dragon_meal]] навпаки зупиняє ріст: так можна лишити дракона маленьким.
+- Дракони також їдять кістки й кістяне борошно, а ще сире м'ясо, рибу (крижані) чи будь-яку здобич, яку вполюють самі.
+- [[iceandfire:dragon_horn]]: клацніть ним по своєму дракону — він сховається в ріг, і його можна носити з собою. Ще одне клацання по землі — дракон вийде назовні.
+- [[iceandfire:dragon_stick]] (драконячий жезл) задає дракону дім: клацання по дракону ставить чи прибирає точку, куди він повертається.
+- [[iceandfire:dragon_flute]] кличе всіх ваших драконів поблизу, щоб вони приземлилися.
+- Присядьте й клацніть ПКМ по дракону порожньою рукою, щоб він сів, стояв або йшов за вами. Осідлати можна дракона з третьої стадії: сідло — звичайне.
+=== dragonforge.md
+---
+for: iceandfire:dragonforge_fire_core_disabled, iceandfire:dragonforge_ice_core_disabled, iceandfire:dragonforge_lightning_core_disabled, iceandfire:dragonforge_fire_brick, iceandfire:dragonforge_ice_brick, iceandfire:dragonforge_lightning_brick, iceandfire:dragonforge_fire_input, iceandfire:dragonforge_ice_input, iceandfire:dragonforge_lightning_input, iceandfire:dragonsteel_fire_ingot, iceandfire:dragonsteel_ice_ingot, iceandfire:dragonsteel_lightning_ingot
+keywords: драконяча кузня, драконяча сталь, dragonforge, dragonsteel, як зробити драконячу сталь
+---
+# Драконяча кузня
+Драконячу сталь плавлять подихом дорослого дракона.
+- Складіть куб 3×3×3 з цегли кузні потрібної стихії, у центр поставте ядро кузні, а з одного боку — вхідний отвір (input). Кузня спалахне, коли зібрана правильно.
+- Покладіть у ядро [[minecraft:iron_ingot]] і кров дракона цієї ж стихії.
+- Приручений дракон з **третьої стадії** чи старший має дихати у вхідний отвір — тоді ядро плавить сталь. Можна й заманити дикого.
+> Зі сталі виходять найміцніші броня й зброя мода: [[iceandfire:dragonsteel_fire_ingot]], [[iceandfire:dragonsteel_ice_ingot]], [[iceandfire:dragonsteel_lightning_ingot]].

@@ -1,0 +1,2 @@
+gamemode creative {p}
+execute at {p} run fill ~3 ~5 ~3 ~6 ~5 ~6 aeronautics:levitite

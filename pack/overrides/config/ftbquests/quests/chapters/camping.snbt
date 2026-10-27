@@ -1,0 +1,377 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "camping"
+	group: "3C6D5B8B49BE1899"
+	icon: {
+		id: "simplytents:tent"
+	}
+	id: "1411BE41EE7975F4"
+	order_index: 19
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "comforts:sleeping_bag_brown"
+			}
+			id: "47292410B032CA71"
+			rewards: [
+				{
+					count: 2
+					id: "1911BBC9E7D2C991"
+					item: {
+						count: 1
+						id: "comforts:rope_and_nail"
+					}
+					type: "item"
+				}
+				{
+					id: "56DA004B2A31DF17"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "5FFE309D810126AE"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "361545435658EFB5"
+					item: {
+						count: 1
+						id: "comforts:sleeping_bag_brown"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"47292410B032CA71"
+			]
+			icon: {
+				id: "simplytents:tent"
+			}
+			id: "3D4B0FC59AE5247B"
+			rewards: [
+				{
+					count: 8
+					id: "6F38179FCB1C0E2B"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "7F0F64A9E82A9159"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "5EE0E8AC88D4BB57"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "46F457BD48FA97AC"
+					item: {
+						count: 1
+						id: "simplytents:tent"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3D4B0FC59AE5247B"
+			]
+			icon: {
+				id: "simplytents:large_tent"
+			}
+			id: "73961506A299498D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "50752AE88E1965E2"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "3586544D9480F4D2"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "235ACD936BD46E0F"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7DB8F7F00229B393"
+					item: {
+						count: 1
+						id: "simplytents:large_tent"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"3D4B0FC59AE5247B"
+			]
+			icon: {
+				id: "nomadictents:tent_canvas"
+			}
+			id: "30E44BAFD7B7089F"
+			rewards: [
+				{
+					count: 16
+					id: "2B89CAC9C7117807"
+					item: {
+						count: 1
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "13F83AE3DEC4F037"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "617F1D368F789F8A"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "2F1D56171CC4AB2A"
+					item: {
+						count: 1
+						id: "nomadictents:yurt_section"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"30E44BAFD7B7089F"
+			]
+			icon: {
+				id: "nomadictents:mallet"
+			}
+			id: "54F0CEB696FD7B47"
+			rewards: [
+				{
+					id: "5CB2E6A7D94E2C32"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "4FC0937134A53424"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6812F899BBEE741F"
+					item: {
+						count: 1
+						id: "nomadictents:tiny_yurt"
+					}
+					type: "item"
+				}
+				{
+					id: "1DB46A27FFE968F1"
+					item: {
+						count: 1
+						id: "nomadictents:mallet"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"54F0CEB696FD7B47"
+			]
+			icon: {
+				id: "nomadictents:medium_yurt"
+			}
+			id: "6B64D42766285B99"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3C689C09975D41C2"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "46FBE3F33F292DCA"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "12BD738D038D665E"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1F7922DD000C8033"
+					item: {
+						count: 1
+						id: "nomadictents:medium_yurt"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3D4B0FC59AE5247B"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:backpack"
+			}
+			id: "46C87D2FEBB383BF"
+			rewards: [
+				{
+					count: 2
+					id: "646108BB4CDA8D2E"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:upgrade_base"
+					}
+					type: "item"
+				}
+				{
+					id: "480220856B5A887B"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "5A6225C44F12DEB5"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6F75F0F58786C37E"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:backpack"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"46C87D2FEBB383BF"
+			]
+			icon: {
+				id: "waystones:waystone"
+			}
+			id: "4B313CB4D81F20C8"
+			rewards: [
+				{
+					count: 8
+					id: "4026EE3CE5C73A36"
+					item: {
+						count: 1
+						id: "waystones:warp_dust"
+					}
+					type: "item"
+				}
+				{
+					id: "3F9FCCF48AE6966A"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "5526C78E5D90070E"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31D77F69D958C5D2"
+					item: {
+						count: 1
+						id: "waystones:return_scroll"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+	]
+}

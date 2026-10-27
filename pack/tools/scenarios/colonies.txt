@@ -1,0 +1,9 @@
+gamemode survival {p}
+give {p} minecolonies:supplycampdeployer 1
+give {p} twilightforest:ore_magnet 1
+give {p} minecraft:diamond_axe 1
+loot give {p} loot wilds:reward/boss
+loot give {p} loot wilds:reward/sea
+summon questborne:quest_npc ~3 ~ ~
+summon goblins_tyranny:merchant ~-3 ~ ~
+ftbquests reload

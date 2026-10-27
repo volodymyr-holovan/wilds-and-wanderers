@@ -1,0 +1,16 @@
+{
+ "moogs_structures.cloth_required.message": "Екран налаштувань Moog's Structure Lib потребує Cloth Config API. Встановіть його, щоб налаштовувати в грі.",
+ "moogs_structures.cloth_required.title": "Moog's Structure Lib",
+ "moogs_structures.config.all_of_mod": "Усі: %s",
+ "moogs_structures.config.category.replace_vanilla": "Заміна звичайних споруд",
+ "moogs_structures.config.category.structures": "Споруди",
+ "moogs_structures.config.disabled": "Вимкнено",
+ "moogs_structures.config.enabled": "Увімкнено",
+ "moogs_structures.config.mod_frequency.tooltip": "Наскільки часті всі споруди %s. 2x — приблизно вдвічі більше, 0.5x — удвічі менше.",
+ "moogs_structures.config.preview": "Перегляд",
+ "moogs_structures.config.preview.unavailable": "Немає перегляду: мод не вказав посилання (mod_slug).",
+ "moogs_structures.config.reload_notice": "Зміни діють після перезавантаження світу (вийдіть у меню й зайдіть знову або /reload) і лише для нових чанків.",
+ "moogs_structures.config.title": "Moog's Structures",
+ "moogs_structures.config.universal_frequency": "Загальна частота",
+ "moogs_structures.config.universal_frequency.tooltip": "Наскільки часті всі споруди Moog. 2x — приблизно вдвічі більше, 0.5x — удвічі менше."
+}

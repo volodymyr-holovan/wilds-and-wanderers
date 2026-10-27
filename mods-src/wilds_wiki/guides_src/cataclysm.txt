@@ -1,0 +1,131 @@
+=== leviathan.md
+---
+for: entity:cataclysm:the_leviathan, cataclysm:altar_of_abyss, cataclysm:abyssal_sacrifice, cataclysm:abyss_eye, structure:cataclysm:sunken_city
+keywords: левіафан, leviathan, вівтар безодні, жертва безодні, затонуле місто, sunken city, як викликати левіафана
+---
+# Як викликати Левіафана
+[[entity:cataclysm:the_leviathan]] — підводний бос **Затонулого міста** (Sunken City) на дні глибоких океанів. Сам він не з'являється: його кличуть ритуалом.
+
+- **Знайдіть місто.** Киньте [[cataclysm:abyss_eye]] — як Око Енду, воно летить у бік найближчого Затонулого міста.
+- **Зберіть жертву.** [[cataclysm:abyssal_sacrifice]] крафтиться без форми з дев'яти предметів: мушля наутилуса, [[cataclysm:athame]], [[cataclysm:crystallized_coral]], серце моря та блоки алмазу, смарагду, заліза, аметисту й золота.
+- [[cataclysm:athame]] випадає з глибинних чаклунів і жерців (Deepling Warlock, Deepling Priest), які живуть у самому місті. [[cataclysm:crystallized_coral]] складається з уламків, що падають з коралових големів.
+- **Проведіть ритуал.** У куполі в центрі міста стоїть [[cataclysm:altar_of_abyss]]. Клацніть по ньому ПКМ, тримаючи жертву: вона ляже в пащу вівтаря, почнеться ритуал і з'явиться Левіафан. Жертва згорає — на кожен новий бій потрібна нова.
+- Поки ритуал не почався, жертву можна забрати назад: присядьте й клацніть по вівтарю порожньою рукою.
+- Вівтар не можна зламати чи перенести — бій завжди відбувається у місті, під водою.
+
+!recipe cataclysm:abyssal_sacrifice
+
+# Підготовка
+- Візьміть [[cataclysm:blessed_amethyst_crab_meat]]: поки діє благословення, вас не беруть **темрява**, **безодній страх** і **безодній опік** — найнебезпечніші ефекти Левіафана. Звичайне [[cataclysm:amethyst_crab_meat]] (з аметистових крабів) освячують у [[cataclysm:altar_of_amethyst]] — він теж стоїть у Затонулому місті: покладіть м'ясо й зачекайте.
+- Чари «Підводна хода», зілля підводного дихання й нічного бачення, тризуб із «Течією» або «Пронизуванням».
+>! Коли здоров'я Левіафана падає до нуля вперше, він відновлює половину й переходить у другу фазу — частіше атакує й випускає самонавідні заряди. Не витрачайте всі запаси на першу фазу.
+
+# Нагорода
+Із Левіафана падають [[cataclysm:tidal_claws]] і [[cataclysm:abyssal_egg]]. Яйце покладіть у воду: приблизно за добу з нього вилупиться [[entity:cataclysm:the_baby_leviathan]], якого приручають тропічною рибою.
+> Після першої перемоги в океанах почнуть з'являтися коралові големи.
+=== amethyst_altar.md
+---
+for: cataclysm:altar_of_amethyst, cataclysm:amethyst_crab_meat, cataclysm:blessed_amethyst_crab_meat, entity:cataclysm:amethyst_crab
+keywords: вівтар аметисту, освячене м'ясо, аметистовий краб, благословення аметисту
+---
+# Освячення м'яса
+[[cataclysm:altar_of_amethyst]] стоїть лише в Затонулому місті, скрафтити його не можна. Покладіть у нього [[cataclysm:amethyst_crab_meat]] (ПКМ) — за деякий час вівтар перетворить його на [[cataclysm:blessed_amethyst_crab_meat]].
+- Освячене м'ясо дає **благословення аметисту**: поки воно діє, на вас не діють темрява, безодній страх і безодній опік. Це головний захист у бою з [[entity:cataclysm:the_leviathan]].
+- М'ясо падає з [[entity:cataclysm:amethyst_crab|аметистових крабів]], що живуть біля аметистових жеод під землею.
+=== ignis.md
+---
+for: entity:cataclysm:ignis, cataclysm:altar_of_fire, cataclysm:burning_ashes, cataclysm:dying_ember, cataclysm:flame_eye, structure:cataclysm:burning_arena, entity:cataclysm:ignited_revenant, entity:cataclysm:ignited_berserker
+keywords: ігніс, ignis, вівтар вогню, палаючий попіл, палаюча арена, burning arena, як викликати ігніса
+---
+# Як викликати Ігніса
+[[entity:cataclysm:ignis]] — вогняний лицар **Палаючої арени** (Burning Arena), схожої на римський колізей у Пустках Незеру.
+
+- **Знайдіть арену.** [[cataclysm:flame_eye]] (порошок іфрита, незеритові уламки, Око Енду, пісок душ) летить до найближчої арени.
+- **Добудьте попіл.** Верхні поверхи стережуть [[entity:cataclysm:ignited_revenant|розпечені ревенанти]] — з них падає [[cataclysm:burning_ashes]]. Їхні щити розбиваються критичним ударом сокири.
+- Ще [[cataclysm:burning_ashes]] складають із чотирьох [[cataclysm:dying_ember]]. Жарини випадають із [[entity:cataclysm:ignited_berserker|розпечених берсерків]], але ті з'являються в незерських фортецях лише після першої перемоги над Ігнісом.
+- **Розпаліть вівтар.** На вершині арени стоїть [[cataclysm:altar_of_fire]]. Клацніть по ньому ПКМ, тримаючи попіл, — почнеться виклик, і зупинити його вже не можна.
+
+# Бій
+- Перша фаза: меч і щит. Щит прикриває **ліву** сторону Ігніса — заходьте з його правого боку.
+- Рожеві вогняні кулі можна відбити назад ударом; три влучання розбивають щит.
+- Удари накладають **Палаюче тавро**: кожен рівень знімає 4 одиниці броні. Відро молока знімає тавро.
+- З двох третин здоров'я він охоплюється синім полум'ям і частіше стрибає, з третини — кидає щит і б'є зверху, здіймаючи вогняні стовпи.
+>! Підлога арени під час бою руйнується, відкриваючи лаву. Візьміть зілля вогнестійкості, золоті яблука й перли Енду.
+
+# Нагорода
+[[cataclysm:ignitium_ingot]] — з нього роблять [[cataclysm:the_incinerator]], [[cataclysm:bulwark_of_the_flame]] та ігнітієву броню.
+=== harbinger.md
+---
+for: entity:cataclysm:the_harbinger, cataclysm:mech_eye, structure:cataclysm:ancient_factory, cataclysm:emp
+keywords: вісник, harbinger, стародавня фабрика, ancient factory, зоря незеру, як викликати вісника
+---
+# Як пробудити Вісника
+[[entity:cataclysm:the_harbinger]] — бойова машина, що спить у **Стародавній фабриці** (Ancient Factory) глибоко під землею звичайного світу.
+
+- **Знайдіть фабрику.** [[cataclysm:mech_eye]] веде до найближчої.
+- **Увімкніть машину.** Вісник стоїть вимкнений. Клацніть по ньому ПКМ, тримаючи [[minecraft:nether_star]] (зорю з Візера) — машина оживе й почне бій.
+- На фабриці стоять блоки [[cataclysm:emp]]: заряджений імпульс ненадовго оглушує Вісника — це найкращий момент для атаки.
+=== ancient_remnant.md
+---
+for: entity:cataclysm:ancient_remnant, cataclysm:necklace_of_the_desert, cataclysm:desert_eye, structure:cataclysm:cursed_pyramid
+keywords: стародавній залишок, ancient remnant, проклята піраміда, cursed pyramid, намисто пустелі, як викликати
+---
+# Як пробудити Стародавній залишок
+[[entity:cataclysm:ancient_remnant]] спить у серці **Проклятої піраміди** (Cursed Pyramid) у пустелі.
+
+- **Знайдіть піраміду.** [[cataclysm:desert_eye]] летить до найближчої.
+- **Добудьте намисто.** У піраміді є підозрілий пісок. Почистіть його щіткою — з одного з них випадає [[cataclysm:necklace_of_the_desert]].
+- **Розбудіть боса.** Клацніть по сплячому скелету ПКМ, тримаючи намисто, — він прокинеться.
+>! У піраміді повно пасток: отруйні дротики, падаюча й запальна кладка. Дивіться під ноги.
+=== maledictus.md
+---
+for: entity:cataclysm:maledictus, cataclysm:cursed_tombstone, cataclysm:cursed_eye, structure:cataclysm:frosted_prison
+keywords: маледиктус, maledictus, проклятий надгробок, морозна в'язниця, frosted prison, як викликати
+---
+# Як викликати Маледиктуса
+[[entity:cataclysm:maledictus]] — проклятий воїн **Морозної в'язниці** (Frosted Prison) у засніжених краях.
+
+- **Знайдіть в'язницю.** [[cataclysm:cursed_eye]] веде до найближчої.
+- **Зверніться до надгробка.** На найнижчому рівні стоїть [[cataclysm:cursed_tombstone]]. Клацніть по ньому ПКМ: надгробок спалахне, і невдовзі з нього постане Маледиктус.
+- Якщо надгробок пише «Його сила ще слабка…», він ще не набрався сили після попереднього виклику — зачекайте й спробуйте пізніше.
+=== ender_guardian.md
+---
+for: entity:cataclysm:ender_guardian, cataclysm:altar_of_void, cataclysm:void_eye, cataclysm:void_core, structure:cataclysm:ruined_citadel, entity:cataclysm:ender_golem
+keywords: охоронець енду, ender guardian, вівтар порожнечі, зруйнована цитадель, ruined citadel, як викликати
+---
+# Як викликати Охоронця Енду
+[[entity:cataclysm:ender_guardian]] стереже **Зруйновану цитадель** (Ruined Citadel) на зовнішніх островах Енду — туди потрапляють після перемоги над драконом.
+
+- **Знайдіть цитадель.** [[cataclysm:void_eye]] (пурпур, панцирі шалкерів, цегла з каменю Енду, Око Енду) веде до неї.
+- **Спустіться вниз.** Дорогу стережуть [[entity:cataclysm:ender_golem|ендер-големи]]. З них падає [[cataclysm:void_core]] — ПКМ ним викликає руни порожнечі, що б'ють ворогів, а це добра підмога проти Охоронця.
+- На найнижчому рівні стоїть [[cataclysm:altar_of_void]]. Щойно гравець підходить до нього, вівтар руйнується й постає Охоронець. На мирній складності він не з'явиться.
+>! На половині здоров'я Охоронець проламує підлогу — і ви, і він падаєте на рівень нижче.
+=== netherite_monstrosity.md
+---
+for: entity:cataclysm:netherite_monstrosity, cataclysm:monstrous_eye, structure:cataclysm:soul_black_smith
+keywords: незеритове чудовисько, netherite monstrosity, кузня душ, soul forge, як викликати
+---
+# Як знайти Незеритове чудовисько
+[[entity:cataclysm:netherite_monstrosity]] спить у головній залі **Кузні душ** (Soul Forge) у Незері.
+
+- [[cataclysm:monstrous_eye]] веде до найближчої кузні.
+- Ніякого ритуалу не потрібно: чудовисько прокидається, коли до нього підходять або б'ють його.
+>! Воно кидає лавові бомби й здіймає лаву з-під землі — без вогнестійкості не підходьте.
+=== scylla.md
+---
+for: entity:cataclysm:scylla, cataclysm:storm_eye, structure:cataclysm:acropolis
+keywords: сцилла, scylla, імператриця бурі, акрополь, acropolis, як викликати
+---
+# Як викликати Сциллу
+[[entity:cataclysm:scylla]], Імператриця бурі, чекає в **Акрополі** (Acropolis) посеред океану.
+
+- **Знайдіть Акрополь.** [[cataclysm:storm_eye]] (призмаринові уламки й кристали, громовідвід, алмази, відро води, Око Енду) веде до нього.
+- **Почніть бій.** Сцилла стоїть нерухомо, поки до неї не звернуться: клацніть по ній ПКМ. Вона пробудиться з повним здоров'ям.
+>! Вона кидає блискавичні списи й скликає бурю. Візьміть зілля лікування й тримайтеся подалі від громовідводів.
+=== boss_respawner.md
+---
+for: cataclysm:boss_respawner
+keywords: відроджувач боса, boss respawner, повторний бій
+---
+# Повторний бій
+[[cataclysm:boss_respawner]] з'являється в лігвах босів Cataclysm, щоб бій можна було повторити. На ньому видно предмет, який він приймає: клацніть по ньому ПКМ саме цим предметом, і бос постане знову. На мирній складності відроджувач не працює.

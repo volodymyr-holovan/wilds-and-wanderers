@@ -1,0 +1,18 @@
+{
+  "icon": [
+    "minecraft:item/compass_19"
+  ],
+  "sort_index": 576,
+  "click": [
+    "command:/wilds skills"
+  ],
+  "required_server_mods": [
+    "puffish_skills",
+    "kubejs"
+  ],
+  "tooltip": [
+    {
+      "translate": "sidebar_button.wilds.skills"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:shipwreck", "minecraft:shipwreck_beached", "minecraft:ocean_ruin_cold", "minecraft:ocean_ruin_warm",
+    "minecraft:buried_treasure", "minecraft:monument",
+    {"id": "betteroceanmonuments:ocean_monument", "required": false},
+    {"id": "cataclysm:sunken_city", "required": false}, {"id": "cataclysm:acropolis", "required": false},
+    {"id": "dungeons_arise:undead_pirate_ship", "required": false}, {"id": "dungeons_arise:lighthouse", "required": false},
+    {"id": "dungeons_arise:illager_corsair", "required": false}, {"id": "dungeons_arise:illager_galley", "required": false},
+    {"id": "dungeons_arise_seven_seas:corsair_corvette", "required": false}, {"id": "dungeons_arise_seven_seas:pirate_junk", "required": false},
+    {"id": "dungeons_arise_seven_seas:small_yacht", "required": false}, {"id": "dungeons_arise_seven_seas:unicorn_galleon", "required": false},
+    {"id": "dungeons_arise_seven_seas:victory_frigate", "required": false},
+    {"id": "hopo:underwater/underwater_city", "required": false}, {"id": "hopo:underwater/underwater_small_ruins", "required": false},
+    {"id": "hopo:underwater/underwater_warm_small_ruins", "required": false}, {"id": "hopo:underwater/underwater_fossils", "required": false},
+    {"id": "mos:ruins_atlantis", "required": false}, {"id": "mos:sunken_ship", "required": false}, {"id": "mos:small_ocean_temple", "required": false},
+    {"id": "mos:underwater_shrine", "required": false}, {"id": "mos:ship_wreck_oak", "required": false}, {"id": "mos:ship_wreck_spruce", "required": false},
+    {"id": "mos:ship_wreck_dark_oak", "required": false}, {"id": "mos:buried_treasure", "required": false}, {"id": "mos:atlantis_tribune", "required": false},
+    {"id": "mos:long_ship", "required": false}, {"id": "mos:hauling_ship_1", "required": false}, {"id": "mos:rare_travel_ship", "required": false},
+    {"id": "fishofthieves:seapost", "required": false}, {"id": "hybrid_aquatic:whale_fall", "required": false},
+    {"id": "iceandfire:siren_island", "required": false}, {"id": "minecolonies:ship", "required": false},
+    {"id": "joshie:village_ocean", "required": false}, {"id": "alexscaves:abyssal_ruins", "required": false}
+  ]
+}

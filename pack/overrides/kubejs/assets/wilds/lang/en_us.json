@@ -1,0 +1,16 @@
+{
+  "sidebar_button.wilds.skills": "Skill Tree",
+  "sidebar_button.wilds.skills.tooltip": "Open the Wanderer's Path",
+  "tag.item.wilds.ancient_bones": "Ancient Bones (dragon bone, heavy bone)",
+  "tag.item.wilds.fiery_blood": "Fiery Blood",
+  "tag.item.wilds.beast_hearts": "Beast Hearts",
+  "tag.item.c.bones": "Bones",
+  "tag.item.c.leathers": "Leathers",
+  "jei.wilds.ancient_bones": "Dragon bone and heavy bone from the Primordial Caves are interchangeable in Ice and Fire and Alex's Caves recipes. Mill them with Create millstones or enrich them in a Mekanism Enrichment Chamber for lots of bone meal.",
+  "jei.wilds.fiery_blood": "Fiery blood from the Twilight Forest and fire dragon blood are interchangeable in both mods' recipes.",
+  "jei.wilds.beast_hearts": "A dragon or hydra heart plus an upgrade orb makes a mana upgrade orb (Iron's Spells), replacing the eight arcane runes.",
+  "jei.wilds.arcane_bridge": "The two schools of magic are linked: an Ars Nouveau Imbuement Chamber turns an amethyst shard into arcane essence, and arcane essence into a source gem. Mana is shared between both mods.",
+  "jei.wilds.amber": "Amber is fossilised resin: a Mekanism Enrichment Chamber turns two pieces into a slime ball.",
+  "jei.wilds.tough_hide": "Tough dinosaur hide can be pressed by a Create Mechanical Press into 3 leather.",
+  "wilds.spawn.protected": "The spawn is protected: nothing can be broken or built here"
+}

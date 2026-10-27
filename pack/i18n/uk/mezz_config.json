@@ -1,0 +1,20 @@
+{
+ "mezz_config.config.defaultValue": "Типове значення: %s",
+ "mezz_config.config.description": "Опис: %s",
+ "mezz_config.config.fileWatcher": "Стеження за файлами",
+ "mezz_config.config.fileWatcher.changeSettlingDelayMilliseconds": "Затримка після змін",
+ "mezz_config.config.fileWatcher.changeSettlingDelayMilliseconds.description": "Скільки мілісекунд чекати після останньої зміни файлу перед перезавантаженням налаштувань.",
+ "mezz_config.config.fileWatcher.description": "Керує автоматичним стеженням за файлами налаштувань і часом їх перезавантаження.",
+ "mezz_config.config.fileWatcher.enabled": "Автоматичне стеження",
+ "mezz_config.config.fileWatcher.enabled.description": "Автоматично стежити за файлами налаштувань і перезавантажувати їх, якщо їх змінено поза грою.",
+ "mezz_config.config.fileWatcher.missingDirectoryRetryIntervalMilliseconds": "Інтервал повтору для відсутніх тек",
+ "mezz_config.config.fileWatcher.missingDirectoryRetryIntervalMilliseconds.description": "Мілісекунди між спробами стежити за ще не створеними теками налаштувань.",
+ "mezz_config.config.logging": "Журнал",
+ "mezz_config.config.logging.description": "Керує необов'язковим діагностичним журналом MezzConfig.",
+ "mezz_config.config.logging.logUntranslatedKeys": "Записувати неперекладені ключі",
+ "mezz_config.config.logging.logUntranslatedKeys.description": "Записувати в журнал ключі категорій і значень, яких бракує в активній мові. Типово ввімкнено в середовищі розробки.",
+ "mezz_config.config.name": "Назва: %s",
+ "mezz_config.config.requiresGameRestart": "Запрацює після перезапуску гри.",
+ "mezz_config.config.requiresWorldRestart": "Запрацює після перезапуску світу.",
+ "mezz_config.config.valueValues": "Допустимі значення: %s"
+}

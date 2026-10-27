@@ -1,0 +1,17 @@
+{
+ "chefsdelight.configuration.chefHouseDesert": "Будинок шеф-кухаря: пустеля",
+ "chefsdelight.configuration.chefHousePlains": "Будинок шеф-кухаря: рівнини",
+ "chefsdelight.configuration.chefHouseSavanna": "Будинок шеф-кухаря: савана",
+ "chefsdelight.configuration.chefHouseSnowy": "Будинок шеф-кухаря: сніги",
+ "chefsdelight.configuration.chefHouseTaiga": "Будинок шеф-кухаря: тайга",
+ "chefsdelight.configuration.cookHouseDesert": "Будинок кухаря: пустеля",
+ "chefsdelight.configuration.cookHousePlains": "Будинок кухаря: рівнини",
+ "chefsdelight.configuration.cookHouseSavanna": "Будинок кухаря: савана",
+ "chefsdelight.configuration.cookHouseSnowy": "Будинок кухаря: сніги",
+ "chefsdelight.configuration.cookHouseTaiga": "Будинок кухаря: тайга",
+ "chefsdelight.configuration.section.chefsdelight.common.toml": "Будиночки в селах",
+ "chefsdelight.configuration.section.chefsdelight.common.toml.title": "Будиночки в селах",
+ "chefsdelight.configuration.title": "Будиночки в селах",
+ "entity.minecraft.villager.chefsdelight.chef": "Шеф-кухар",
+ "entity.minecraft.villager.chefsdelight.cook": "Кухар"
+}

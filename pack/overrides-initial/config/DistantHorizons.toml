@@ -1,0 +1,15 @@
+# Wilds & Wanderers: light Distant Horizons defaults, so weak PCs keep a steady frame rate.
+# Distant Horizons builds far terrain on the CPU in the background; with several threads on a weak CPU it takes time
+# from the game itself and the frame rate jumps. One thread at half the time is smooth everywhere; a strong PC can raise
+# both in Distant Horizons' settings (threads 3-4, ratio 1.0, radius 128+).
+# Copied only on first install; your own changes in the game's settings are kept on updates.
+# Distant Horizons fills in every other option with its defaults on first start.
+
+[common.multiThreading]
+	numberOfThreads = 1
+	threadRunTimeRatio = 0.5
+
+[client.advanced.graphics.quality]
+	lodChunkRenderDistanceRadius = 64
+	horizontalQuality = "LOW"
+	verticalQuality = "LOW"

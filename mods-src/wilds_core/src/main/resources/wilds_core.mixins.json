@@ -1,0 +1,20 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "ua.wilds.core.mixin",
+  "plugin": "ua.wilds.core.mixin.WildsMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "client.RMSongPickerMixin",
+    "client.CameraMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "mixins": [
+    "MobAccessor",
+    "ItemStackDurabilityMixin",
+    "VillagerPricesMixin",
+    "AccessoriesResultSlotMixin"
+  ]
+}

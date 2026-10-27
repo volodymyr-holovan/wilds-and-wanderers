@@ -1,0 +1,15 @@
+{
+ "create.gui.stock_keeper.click_to_cycle": "Натисніть, щоб перемкнути",
+ "create.gui.stock_keeper.jei_sync.none": "Без синхронізації",
+ "create.gui.stock_keeper.jei_sync.none.description": "Пошук у комірника й у переглядачі рецептів незалежні",
+ "create.gui.stock_keeper.jei_sync.sync_both": "Синхронізувати з переглядачем рецептів в обидва боки ",
+ "create.gui.stock_keeper.jei_sync.sync_both.description": "Пошук у комірника й у переглядачі рецептів синхронізується",
+ "create.gui.stock_keeper.jei_sync.sync_from_jei": "Брати пошук із переглядача рецептів",
+ "create.gui.stock_keeper.jei_sync.sync_from_jei.description": "Пошук у переглядачі рецептів повторюється в комірника",
+ "create.gui.stock_keeper.jei_sync.sync_from_stock_keeper": "Брати пошук у комірника",
+ "create.gui.stock_keeper.jei_sync.sync_from_stock_keeper.description": "Пошук у комірника повторюється в переглядачі рецептів",
+ "create.keyinfo.alt_modifier": "Модифікатор Alt",
+ "create.keyinfo.ctrl_modifier": "Модифікатор Ctrl",
+ "create.keyinfo.shift_modifier": "Модифікатор Shift",
+ "tag.item.c.foods.dough.wheat": "Пшеничне тісто"
+}

@@ -1,0 +1,14 @@
+# Wilds & Wanderers: pinned quests (the start quests and any you pin) sit under the minimap, top left.
+# Copied only on first install.
+{
+	pinned: {
+		pinned_quests_pos: "top_left"
+		pinned_quests_inset_x: 4
+		pinned_quests_inset_y: 132
+		pinned_quests_scale: 0.75d
+		pinned_visibility: "all"
+	}
+	ui: {
+		chapter_panel_pinned: false
+	}
+}

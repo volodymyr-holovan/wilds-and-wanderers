@@ -1,0 +1,740 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ars"
+	group: "44D3C4821D0FE8BB"
+	icon: {
+		id: "ars_nouveau:novice_spell_book"
+	}
+	id: "1772A1F000AC15F1"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "ars_nouveau:worn_notebook"
+			}
+			id: "4CF85D080C33CE5F"
+			rewards: [
+				{
+					id: "7A991268CDF6B17A"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "41DF066E1CAEEBC4"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "2107ED6904226E14"
+					item: {
+						count: 1
+						id: "ars_nouveau:worn_notebook"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4CF85D080C33CE5F"
+			]
+			icon: {
+				id: "ars_nouveau:novice_spell_book"
+			}
+			id: "539CE100BBA877FD"
+			rewards: [
+				{
+					id: "7A623FC9758C60AA"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "6A5E3195C8C40580"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "28DFBAFB5116C331"
+					item: {
+						count: 1
+						id: "ars_nouveau:novice_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"4CF85D080C33CE5F"
+			]
+			icon: {
+				id: "ars_nouveau:source_jar"
+			}
+			id: "361E505468F31D6C"
+			rewards: [
+				{
+					id: "4BB5D3D2E43561C6"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "45636705F51A146A"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "1B7AEECE2B7BBED3"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_jar"
+					}
+					type: "item"
+				}
+				{
+					id: "2EDDB0C782B5B6D9"
+					item: {
+						count: 1
+						id: "ars_nouveau:volcanic_sourcelink"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"361E505468F31D6C"
+			]
+			icon: {
+				id: "ars_nouveau:source_gem"
+			}
+			id: "1F6601F83CC123DE"
+			rewards: [
+				{
+					id: "72542EA7362F9A27"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "5E5A41EE7EC2CB5B"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1C62EE8C44B6FFCC"
+					item: {
+						count: 1
+						id: "ars_nouveau:imbuement_chamber"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "18EC96FB98B10B35"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_gem"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"1F6601F83CC123DE"
+			]
+			icon: {
+				id: "ars_nouveau:scribes_table"
+			}
+			id: "764A83CB244C44E3"
+			rewards: [
+				{
+					id: "6937466CA7B2F02B"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "28866FDE34F412F4"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "249372A4863AC4ED"
+					item: {
+						count: 1
+						id: "ars_nouveau:scribes_table"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"764A83CB244C44E3"
+			]
+			icon: {
+				id: "ars_nouveau:glyph_harm"
+			}
+			id: "545A6871A3313282"
+			rewards: [
+				{
+					id: "1C7C9E486AEE8655"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "319037E5D52D6EB3"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6720B47CB76662C7"
+					item: {
+						count: 1
+						id: "ars_nouveau:glyph_projectile"
+					}
+					type: "item"
+				}
+				{
+					id: "5B3C7E836BEC6663"
+					item: {
+						count: 1
+						id: "ars_nouveau:glyph_touch"
+					}
+					type: "item"
+				}
+				{
+					id: "24A2786789D96933"
+					item: {
+						count: 1
+						id: "ars_nouveau:glyph_harm"
+					}
+					type: "item"
+				}
+				{
+					id: "501AEC03F7C4D3F6"
+					item: {
+						count: 1
+						id: "ars_nouveau:glyph_break"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"764A83CB244C44E3"
+			]
+			icon: {
+				id: "ars_nouveau:enchanting_apparatus"
+			}
+			id: "2D4F93F82FA247E7"
+			rewards: [
+				{
+					id: "61CDAC6C7DBC7CA2"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "6CCFF66C1EE17B1B"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "75078D3DF2F7663E"
+					item: {
+						count: 1
+						id: "ars_nouveau:enchanting_apparatus"
+					}
+					type: "item"
+				}
+				{
+					id: "720BD5863DCA002C"
+					item: {
+						count: 1
+						id: "ars_nouveau:arcane_core"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "56723FE226292EBE"
+					item: {
+						count: 1
+						id: "ars_nouveau:arcane_pedestal"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2D4F93F82FA247E7"
+				"545A6871A3313282"
+			]
+			icon: {
+				id: "ars_nouveau:apprentice_spell_book"
+			}
+			id: "43A0497E42EE7260"
+			rewards: [
+				{
+					id: "3C21C8842B7E973D"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "486FFC0FF47C7956"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1EE6938DDC322461"
+					item: {
+						count: 1
+						id: "ars_nouveau:apprentice_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"361E505468F31D6C"
+			]
+			icon: {
+				id: "ars_nouveau:relay"
+			}
+			id: "13D2843AA2AA243D"
+			rewards: [
+				{
+					id: "17549E6A2B208C64"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "1719DCDB01D63F4D"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "1F50D793D8E17A01"
+					item: {
+						count: 1
+						id: "ars_nouveau:relay"
+					}
+					type: "item"
+				}
+				{
+					id: "31BF99B0705C492A"
+					item: {
+						count: 1
+						id: "ars_nouveau:dominion_wand"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"1F6601F83CC123DE"
+			]
+			icon: {
+				id: "ars_nouveau:starbuncle_charm"
+			}
+			id: "661CA20A9F288824"
+			rewards: [
+				{
+					id: "5154BE309815DAD7"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "2F6FEBA7A8408F1F"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "186A64455820DC44"
+					item: {
+						count: 1
+						id: "ars_nouveau:starbuncle_charm"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"661CA20A9F288824"
+			]
+			icon: {
+				id: "ars_nouveau:drygmy_charm"
+			}
+			id: "1FFB73BC2F7FCF54"
+			rewards: [
+				{
+					id: "33C310A15C27F146"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "5EE12BBBC33E6635"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6EB1D231DD15101F"
+					item: {
+						count: 1
+						id: "ars_nouveau:drygmy_charm"
+					}
+					type: "item"
+				}
+				{
+					id: "4AAC807CF64AB2D0"
+					item: {
+						count: 1
+						id: "ars_nouveau:whirlisprig_charm"
+					}
+					type: "item"
+				}
+				{
+					id: "4B430E96949D04D1"
+					item: {
+						count: 1
+						id: "ars_nouveau:wixie_charm"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"2D4F93F82FA247E7"
+			]
+			icon: {
+				id: "ars_nouveau:sorcerer_robes"
+			}
+			id: "41FBF525341CAAEF"
+			rewards: [
+				{
+					id: "6E8318D2022DED70"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 90"
+					elevate_perms: true
+					id: "2F46DC358CAC01AD"
+					silent: true
+					title: "+90 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "303FD481873F22AC"
+					item: {
+						count: 1
+						id: "ars_nouveau:magebloom_fiber"
+					}
+					type: "item"
+				}
+				{
+					id: "2BA4E6A730D7F5A6"
+					item: {
+						count: 1
+						id: "ars_nouveau:sorcerer_robes"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2D4F93F82FA247E7"
+			]
+			icon: {
+				id: "ars_nouveau:ritual_brazier"
+			}
+			id: "1C219BA2A7F29E2F"
+			rewards: [
+				{
+					id: "1DFAB2CE2E8FA6C1"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 90"
+					elevate_perms: true
+					id: "13270AA6C4C5DA7A"
+					silent: true
+					title: "+90 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1DBCB4A756783CAF"
+					item: {
+						count: 1
+						id: "ars_nouveau:ritual_brazier"
+					}
+					type: "item"
+				}
+				{
+					id: "3ECDBFD59B3D60CF"
+					item: {
+						count: 1
+						id: "ars_nouveau:ritual_sunrise"
+					}
+					type: "item"
+				}
+				{
+					id: "661D5616F35C4393"
+					item: {
+						count: 1
+						id: "ars_nouveau:ritual_flight"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"43A0497E42EE7260"
+			]
+			icon: {
+				id: "ars_nouveau:wilden_horn"
+			}
+			id: "1AEB4D1DDAB1D650"
+			rewards: [
+				{
+					id: "3ECD199FDD456C6A"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "30E35C44F0AF23C9"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "189AA7287E643EA2"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_horn"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3A3977CF6E5E1C2A"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_spike"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "16FD32BE216E44ED"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_wing"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1AEB4D1DDAB1D650"
+				"1C219BA2A7F29E2F"
+			]
+			icon: {
+				id: "ars_nouveau:wilden_tribute"
+			}
+			id: "3C3DB2DEFED2D39B"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1248C80376F1FEEE"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "370F8B255389479A"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "705C1C497BA77A69"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "ars_nouveau:wilden_boss"
+					id: "1396BF16279CD631"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "7D03597F4B95FC38"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_tribute"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3C3DB2DEFED2D39B"
+			]
+			icon: {
+				id: "ars_nouveau:archmage_spell_book"
+			}
+			id: "4CF6CE6BADD27998"
+			rewards: [
+				{
+					id: "2966CC82618D48FA"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "2B2EA8EAF6EE5577"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "59A14D2AF771B2DE"
+					item: {
+						count: 1
+						id: "ars_nouveau:archmage_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 0.0d
+		}
+	]
+}

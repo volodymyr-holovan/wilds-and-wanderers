@@ -1,0 +1,21 @@
+{
+  "entity.wilds_core.thrown_weapon": "Кинута зброя",
+  "wilds_core.skill.cooldown": "Ще не готово: %s с",
+  "wilds_core.skill.last_stand.used": "Останній рубіж! Ви вистояли.",
+  "wilds_core.skill.free_spell.used": "Подих мани: це закляття нічого не коштувало.",
+  "wilds_core.skill.prospector.found": "Рудознатець: поруч %s блоків руди",
+  "wilds_core.skill.thrifty_crafter.saved": "Ощадливий майстер: зберегли %s",
+  "wilds_core.skill.sea_gifts.found": "Дари моря: %s",
+  "wilds_core.skill.well_rested.used": "Ви добре відпочили.",
+  "wilds_core.skill.goblin_friend.gift": "Гоблін подарував вам %s",
+  "wilds_core.skill.peacemaker.used": "Миротворець: заспокоєно істот — %s",
+  "wilds_core.skill.generous_deal.used": "Щедра угода: сьогодні цей обмін вам подарували.",
+  "wilds_core.skill.mercenaries.hired": "Найманець іде за вами до наступного дня.",
+  "wilds_core.skill.mercenaries.limit": "Більше найманців водночас не можна: %s",
+  "wilds_core.skill.mercenaries.price": "Найманець коштує %s смарагдів.",
+  "key.wilds_core.heavy_strike": "Нищівний удар (затиснути)",
+  "key.categories.wilds_core": "Wilds & Wanderers: навички",
+  "entity.wilds_core.wanderer": "Мандрівник з дорученням",
+  "wilds_core.npc.died": "%s загинув. Доручення провалено. %s",
+  "wilds_core.npc.reward": "%s віддає вам нагороду."
+}

@@ -1,0 +1,4 @@
+{
+ "patchouli.networking.open_book.failed": "Не вдалося відкрити книгу %s",
+ "patchouli.networking.reload_contents.failed": "Не вдалося перезавантажити вміст %S"
+}

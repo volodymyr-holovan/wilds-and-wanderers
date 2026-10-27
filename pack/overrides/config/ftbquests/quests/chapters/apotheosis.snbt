@@ -1,0 +1,214 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "apotheosis"
+	group: "44D3C4821D0FE8BB"
+	icon: {
+		id: "apotheosis:gem"
+	}
+	id: "3340A80A91A38798"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:diamond_sword"
+			}
+			id: "6912F3F4A5C7E07F"
+			rewards: [
+				{
+					id: "1F7B673ABC18A62B"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "680E53E79A917D52"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "5D05085E4D449D5E"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6912F3F4A5C7E07F"
+			]
+			icon: {
+				id: "apotheosis:gem"
+			}
+			id: "5775B1A1874FD00B"
+			rewards: [
+				{
+					id: "36F0BC8A1B4E5513"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "791D844C856C73A1"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5B1370F16776C059"
+					item: {
+						count: 1
+						id: "apotheosis:gem"
+					}
+					type: "item"
+				}
+				{
+					id: "46655DAE9407BCC3"
+					item: {
+						count: 1
+						id: "apotheosis:sigil_of_socketing"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"6912F3F4A5C7E07F"
+			]
+			icon: {
+				id: "apotheosis:salvaging_table"
+			}
+			id: "7915A14939B27E20"
+			rewards: [
+				{
+					id: "6037088745238A1A"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "13DA5A4032E532ED"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "762950F7087E16E9"
+					item: {
+						count: 1
+						id: "apotheosis:salvaging_table"
+					}
+					type: "item"
+				}
+				{
+					id: "64C7913C78B2263A"
+					item: {
+						count: 1
+						id: "apotheosis:reforging_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6912F3F4A5C7E07F"
+			]
+			icon: {
+				id: "apothic_enchanting:hellshelf"
+			}
+			id: "2E2BA7F9BC8CB774"
+			rewards: [
+				{
+					id: "575CBBA1424B19A5"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "2E076ECED062ACF0"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "6EAEFF8D96C48B5E"
+					item: {
+						count: 1
+						id: "apothic_enchanting:hellshelf"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "29D80DBC98F36B28"
+					item: {
+						count: 1
+						id: "apothic_enchanting:seashelf"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"2E2BA7F9BC8CB774"
+			]
+			icon: {
+				id: "apothic_enchanting:library"
+			}
+			id: "5FBEA03AE870BA9C"
+			rewards: [
+				{
+					id: "3564598DBCF81306"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "1A1732A30A5B3BF2"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1821BCB5260EEF43"
+					item: {
+						count: 1
+						id: "apothic_enchanting:library"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+	]
+}

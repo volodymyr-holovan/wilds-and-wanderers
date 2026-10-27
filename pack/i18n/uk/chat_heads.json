@@ -1,0 +1,3 @@
+{
+ "text.autoconfig.chat_heads.option.renderPosition.@Tooltip": "Де показувати голови в чаті\n\nПримітка: «Перед ім'ям» може бути несумісне з деякими модами.\nДля Caxton і Modern UI автоматично використовується «Перед рядком»."
+}

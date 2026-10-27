@@ -1,0 +1,291 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "wildlife"
+	group: "3C6D5B8B49BE1899"
+	icon: {
+		id: "naturalist:capture_net"
+	}
+	id: "7D2F7748380711AD"
+	order_index: 20
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "gew2:pebble"
+			}
+			id: "75DD4FF10BEB44DE"
+			rewards: [
+				{
+					id: "1770BBE5B142281D"
+					item: {
+						count: 1
+						id: "minecraft:stone_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "7FEE8B261FF2FE41"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "3C2C23656FC299AE"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					count: 8L
+					id: "3244550EF6F569F7"
+					item: {
+						count: 1
+						id: "gew2:pebble"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4CF9E541020F9527"
+					item: {
+						count: 1
+						id: "gew2:twigs"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"75DD4FF10BEB44DE"
+			]
+			icon: {
+				id: "naturalist:capture_net"
+			}
+			id: "19409746A6FD9BCC"
+			rewards: [
+				{
+					id: "61262BE65B646E26"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "162E03BCCED33224"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6B7A532B4BA5EDF2"
+					item: {
+						count: 1
+						id: "naturalist:capture_net"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"75DD4FF10BEB44DE"
+			]
+			icon: {
+				id: "naturalist:venison"
+			}
+			id: "54F518DCEF80B223"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2AAF6E25E013D7D2"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "49F7757FE26D38B1"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "62888E33AC5EA297"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "492939B86DA3E4B4"
+					item: {
+						count: 1
+						id: "naturalist:venison"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4AA6D0BEFCAC2855"
+					item: {
+						count: 1
+						id: "naturalist:fur"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"54F518DCEF80B223"
+			]
+			icon: {
+				id: "naturalist:antler"
+			}
+			id: "65D09AD132204495"
+			rewards: [
+				{
+					count: 16
+					id: "1A34EE8AF9195998"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "606F96B4E238A276"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "2AA7FF1AC79624CF"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4FAD11F8CD4B228A"
+					item: {
+						count: 1
+						id: "naturalist:antler"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"54F518DCEF80B223"
+			]
+			icon: {
+				id: "naturalist:ostrich_egg"
+			}
+			id: "592A87E7FB826A3C"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "504570D530083B4F"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "5ED1EDD554ED5965"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "1B4DC774C018C63B"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:savanna"
+					id: "324836E63F3897D1"
+					type: "biome"
+				}
+				{
+					entity: "naturalist:lion"
+					id: "5740FBE50500ACB6"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"54F518DCEF80B223"
+			]
+			icon: {
+				id: "naturalist:alligator_egg"
+			}
+			id: "35125E2D4F08DBA3"
+			rewards: [
+				{
+					id: "59B33B78C11D4DAF"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "59021122A27326C7"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1E2A31F439A6B815"
+					item: {
+						count: 1
+						id: "naturalist:alligator_egg"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+	]
+}

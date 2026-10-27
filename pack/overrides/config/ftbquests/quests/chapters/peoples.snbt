@@ -1,0 +1,466 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "peoples"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "goblins_tyranny:coin"
+	}
+	id: "204CF9B6DEB92A50"
+	order_index: 17
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "goblins_tyranny:hut_logs"
+			}
+			id: "13105751B35D9192"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3EC03580478C935C"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					id: "7DFADFB72730B528"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "7DA3EB9F50ED04A5"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "63C8C7446B9B5BBE"
+					structure: "goblins_tyranny:goblinscamp"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"13105751B35D9192"
+			]
+			icon: {
+				id: "goblins_tyranny:fake_goblin_ears_helmet"
+			}
+			id: "358E9E5BE8439169"
+			rewards: [
+				{
+					count: 16
+					id: "16F0354C75A23D43"
+					item: {
+						count: 1
+						id: "minecraft:red_mushroom"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "453E290CFDEA7371"
+					item: {
+						count: 1
+						id: "minecraft:brown_mushroom"
+					}
+					type: "item"
+				}
+				{
+					id: "65760701327CC98C"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "1FA4CF7DE00B60C1"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "117EEEF7D1DB6981"
+					item: {
+						count: 1
+						id: "goblins_tyranny:fake_goblin_ears_helmet"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"13105751B35D9192"
+			]
+			icon: {
+				id: "goblins_tyranny:goblin_upgraded_mace"
+			}
+			id: "15D3F3415C3EBCAD"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "573473E7249C341A"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "59E69F8CBBAA667C"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "57A73AD2D439C81D"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "273DF7B82FB954FE"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "goblins_tyranny:leader_goblin"
+					id: "61CA61C9455AB5B6"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "goblins_tyranny:shaman_goblin"
+					id: "36267ABB60992CFE"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"15D3F3415C3EBCAD"
+			]
+			icon: {
+				id: "goblins_tyranny:goblins_prototype_chestplate"
+			}
+			id: "1845461FE739127F"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "736A1A9929BD9098"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "4474123BB55F4855"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "50E457173BABAC91"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4CF8F157E42FE10D"
+					item: {
+						count: 1
+						id: "goblins_tyranny:goblins_prototype_chestplate"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"13105751B35D9192"
+			]
+			icon: {
+				id: "kobolds:kobold_iron_pickaxe"
+			}
+			id: "7B7078750BB1F1EE"
+			rewards: [
+				{
+					id: "37C8A40F690B5D98"
+					item: {
+						count: 1
+						id: "kobolds:kobold_template"
+					}
+					type: "item"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "72D3E82F3E2F373F"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					id: "1D104088D64BBCE7"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "1543825104700FBA"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7830736569086438"
+					structure: "kobolds:kobold_den"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"13105751B35D9192"
+			]
+			icon: {
+				id: "minecraft:iron_axe"
+			}
+			id: "426A1D5C1725A5FE"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6E09372992442654"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					id: "74EBD61E35611D33"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "1EA770A9D9A7AF16"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "orc_hut:orc"
+					id: "6F271F080166E9F6"
+					type: "kill"
+					value: 3L
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"15D3F3415C3EBCAD"
+			]
+			icon: {
+				id: "minecraft:totem_of_undying"
+			}
+			id: "14038EE3F653F0D0"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "39DFC5B2840DA22D"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "4C4B5948C1DD0A95"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "361A573755D8C9DA"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2DB2982274D6D0FE"
+					structure: "dungeons_arise:illager_fort"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"14038EE3F653F0D0"
+			]
+			icon: {
+				id: "minecraft:crossbow"
+			}
+			id: "3E1ECC59C27AA30D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1345CD81A53D6354"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "47DCD14A0B26F208"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "63212C07CE3A5D41"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "63A88D9A392E8E6A"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "33B94606DBE53F72"
+					structure: "dungeons_arise:bandit_village"
+					type: "structure"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3E1ECC59C27AA30D"
+			]
+			icon: {
+				id: "minecolonies:scepterguard"
+			}
+			id: "73F5B9111A174AD1"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1AF6C18E53FC8D72"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "1945A0DCABC264EE"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "3F45D669E3D65A90"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "14A0F09F84D3F710"
+					structure: "minecolonies:barbarian_camp"
+					type: "structure"
+				}
+				{
+					entity: "minecolonies:chiefbarbarian"
+					id: "7289C928343F5E06"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+	]
+}

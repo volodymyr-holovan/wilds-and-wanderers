@@ -1,0 +1,178 @@
+~general.pump.button	Налаштувати насоси
+~general.pump.heavy_water	Кількість важкої води
+~general.pump.heavy_water.tooltip	Скільки мБ важкої води добуває електричний насос із фільтром з кожного блока води.
+~general.pump.infinite_fluids	Викачувати нескінченні рідини
+~general.pump.infinite_fluids.tooltip	Якщо увімкнено й діє правило waterSourceConversion, насос прибирає блоки води зі світу. Так само для lavaSourceConversion і лави
+~general.pump.plenisher.max_nodes	Найбільше вузлів заповнювача
+~general.pump.plenisher.max_nodes.tooltip	У скільки блоків рідинний заповнювач наливає рідину, перш ніж зупинитися.
+~general.pump.range	Дальність
+~general.pump.range.tooltip	З якої найбільшої відстані (у блоках) електричний насос качає рідину.
+~general.pump.tooltip	Налаштування електричних насосів і рідинних заповнювачів
+~general.qe	Квантовий заплутувач
+~general.qe.buffer.chemical	Буфер хімікатів
+~general.qe.buffer.chemical.tooltip	Найбільший буфер хімікатів (мБ) частоти заплутувача, тобто найбільше перенесення за такт на частоту. Типово — місткість найкращого бака хімікатів.
+~general.qe.buffer.energy	Буфер енергії
+~general.qe.buffer.energy.tooltip	Найбільший буфер енергії (Дж) частоти заплутувача, тобто найбільше перенесення за такт на частоту. Типово — місткість найкращого енергокуба.
+~general.qe.buffer.fluid	Буфер рідин
+~general.qe.buffer.fluid.tooltip	Найбільший буфер рідин (мБ) частоти заплутувача, тобто найбільше перенесення за такт на частоту. Типово — місткість найкращого бака рідин.
+~general.qe.button	Налаштувати заплутувачі
+~general.qe.tooltip	Налаштування квантових заплутувачів
+~general.radiation	Радіація
+~general.radiation.barrel.capacity	Місткість бочки відходів
+~general.radiation.barrel.capacity.tooltip	Скільки мБ хімікату вміщує бочка радіоактивних відходів.
+~general.radiation.barrel.decay.amount	Розпад у бочці
+~general.radiation.barrel.decay.amount.tooltip	Скільки мБ хімікату в бочці радіоактивних відходів розпадається кожні radioactiveWasteBarrelProcessTicks тактів. 0 — без розпаду. (Хімікати з тегом mekanism:waste_barrel_decay_blacklist не розпадаються).
+~general.radiation.barrel.decay.frequency	Частота розпаду в бочці
+~general.radiation.barrel.decay.frequency.tooltip	За скільки тактів у бочці радіоактивних відходів розпадається radioactiveWasteBarrelDecayAmount мБ.
+~general.radiation.button	Налаштувати радіацію
+~general.radiation.chunk_radius	Радіус перевірки чанків
+~general.radiation.chunk_radius.tooltip	Радіус чанків, які перевіряються при розрахунку радіації. Алгоритм швидкий, але не ставте шалених значень.
+~general.radiation.decay_rate.source	Розпад джерел
+~general.radiation.decay_rate.source.tooltip	Джерела радіації приблизно раз на секунду множаться на це число — так згасає випромінювання. Типово джерело 1000 Зв/год (шалено багато) зникає приблизно за 10 годин.
+~general.radiation.decay_rate.target	Розпад опромінення
+~general.radiation.decay_rate.target.tooltip	Опромінені предмети й істоти приблизно раз на секунду множаться на це число — так згасає доза.
+~general.radiation.enabled	Увімкнено
+~general.radiation.enabled.tooltip	Увімкнути радіацію в усьому світі.
+~general.radiation.min_severity	Поріг шкідливих ефектів
+~general.radiation.min_severity.tooltip	Найменша тяжкість дози (від 0 до 1), від якої діють шкідливі ефекти. 1 — без шкідливих ефектів.
+~general.radiation.tooltip	Налаштування радіації
+~general.security	Захист блоків
+~general.security.button	Налаштувати захист блоків
+~general.security.enabled	Дозволити захист
+~general.security.enabled.tooltip	Увімкнути систему захисту: гравці можуть не пускати інших до своїх машин. Частоти НЕ зачіпає.
+~general.security.ops_bypass	Обхід для операторів
+~general.security.ops_bypass.tooltip	Якщо увімкнено, гравці з дозволом 'mekanism.bypass_security' (типово оператори) оминають захист блоків і предметів.
+~general.security.tooltip	Налаштування системи захисту Mekanism
+~general.sps	СФЗ
+~general.sps.antimatter_cost	Полонію на антиматерію
+~general.sps.antimatter_cost.tooltip	Скільки мБ полонію треба обробити на 1 мБ антиматерії. Місткість вхідного бака — удвічі більша.
+~general.sps.button	Налаштувати СФЗ
+~general.sps.capacity.output	Місткість вихідного бака
+~general.sps.capacity.output.tooltip	Скільки мБ антиматерії вміщує СФЗ.
+~general.sps.energy_per	Енергія на полоній
+~general.sps.energy_per.tooltip	Енергія на обробку 1 мБ входу (inputPerAntimatter * energyPerInput = енергія на 1 мБ антиматерії).
+~general.sps.tooltip	Налаштування надкритичного фазового зсувача
+~general.tep	Установка термічного випаровування
+~general.tep.button	Налаштувати установку
+~general.tep.capacity.heat	Теплоємність
+~general.tep.capacity.heat.tooltip	Теплоємність шарів установки термічного випаровування. Більше — більше енергії на нагрів.
+~general.tep.capacity.input	Вхідного бака на блок
+~general.tep.capacity.input.tooltip	Скільки мБ рідини додає кожен блок установки до місткості вхідного бака. Найбільше = об'єм * fluidPerTank
+~general.tep.capacity.output	Місткість вихідного бака
+~general.tep.capacity.output.tooltip	Скільки мБ отриманої рідини вміщує установка.
+~general.tep.heat.loss	Втрати тепла
+~general.tep.heat.loss.tooltip	Втрати тепла установки термічного випаровування за такт.
+~general.tep.heat.solar	Тепло від сонця
+~general.tep.heat.solar.tooltip	Скільки тепла дає кожен блок сонячних панелей на установці термічного випаровування.
+~general.tep.temperature_multiplier	Множник температури
+~general.tep.temperature_multiplier.tooltip	Співвідношення температури й кількості продукту.
+~general.tep.tooltip	Налаштування установок термічного випаровування
+~projecte.data_component_processor.contents	Обробник вмісту Mekanism
+~projecte.data_component_processor.contents.button	Налаштувати обробник вмісту
+~projecte.data_component_processor.contents.tooltip	Збільшує EMC предметів Mekanism на вартість вмісту чи встановлених модулів
+~projecte.mapper.chemical_chemical_to_chemical	Mekanism CC2C
+~projecte.mapper.chemical_chemical_to_chemical.button	Налаштувати Mekanism CC2C
+~projecte.mapper.chemical_chemical_to_chemical.tooltip	Враховує рецепти хімічного вливача й змішувача пігментів.
+~projecte.mapper.chemical_crystallizer	Кристалізатор Mekanism
+~projecte.mapper.chemical_crystallizer.button	Налаштувати кристалізатор
+~projecte.mapper.chemical_crystallizer.tooltip	Враховує рецепти кристалізації.
+~projecte.mapper.chemical_dissolution	Розчинення Mekanism
+~projecte.mapper.chemical_dissolution.button	Налаштувати розчинення
+~projecte.mapper.chemical_dissolution.tooltip	Враховує рецепти розчинення.
+~projecte.mapper.chemical_to_chemical	Mekanism C2C
+~projecte.mapper.chemical_to_chemical.button	Налаштувати Mekanism C2C
+~projecte.mapper.chemical_to_chemical.tooltip	Враховує рецепти активації й центрифугування.
+~projecte.mapper.combiner	Комбінатор Mekanism
+~projecte.mapper.combiner.button	Налаштувати комбінатор
+~projecte.mapper.combiner.tooltip	Враховує рецепти комбінатора.
+~projecte.mapper.electrolysis	Електроліз Mekanism
+~projecte.mapper.electrolysis.button	Налаштувати електроліз
+~projecte.mapper.electrolysis.tooltip	Враховує рецепти електролітичного сепаратора.
+~projecte.mapper.evaporating	Випаровування Mekanism
+~projecte.mapper.evaporating.button	Налаштувати випаровування
+~projecte.mapper.evaporating.tooltip	Враховує рецепти випаровування.
+~projecte.mapper.item_chemical_to_item	Mekanism IC2I
+~projecte.mapper.item_chemical_to_item.button	Налаштувати Mekanism IC2I
+~projecte.mapper.item_chemical_to_item.tooltip	Враховує рецепти машин «предмет + хімікат → предмет» (стискання, очищення, впорскування, металургійне вливання, фарбування, нуклеосинтез)
+~projecte.mapper.item_to_chemical	Mekanism I2C
+~projecte.mapper.item_to_chemical.button	Налаштувати Mekanism I2C
+~projecte.mapper.item_to_chemical.tooltip	Враховує рецепти «предмет → хімікат» (хімічне перетворення, окиснення, видобуток пігменту)
+~projecte.mapper.item_to_item	Mekanism «предмет → предмет»
+~projecte.mapper.item_to_item.button	Налаштувати «предмет → предмет»
+~projecte.mapper.item_to_item.tooltip	Враховує рецепти машин «предмет → предмет» (дроблення, збагачення, плавлення)
+~projecte.mapper.pressurized_reaction	Mekanism PRC
+~projecte.mapper.pressurized_reaction.button	Налаштувати Mekanism PRC
+~projecte.mapper.pressurized_reaction.tooltip	Враховує рецепти реакцій під тиском. (Типово вимкнено)
+~projecte.mapper.rotary	Ротаційний конденсатор Mekanism
+~projecte.mapper.rotary.button	Налаштувати ротаційний конденсатор
+~projecte.mapper.rotary.tooltip	Враховує рецепти ротаційного конденсатора.
+~projecte.mapper.sawing	Пилорама Mekanism
+~projecte.mapper.sawing.button	Налаштувати пилораму
+~projecte.mapper.sawing.tooltip	Враховує рецепти точної пилорами. (Типово вимкнено, бо прибирає різні значення EMC для деревного вугілля й дерева)
+~projecte.mapper.todo	Промивання Mekanism
+~projecte.mapper.todo.button	Налаштувати промивання
+~projecte.mapper.todo.tooltip	Враховує рецепти промивання.
+~side.clear.all	Затисніть Shift, щоб очистити сторони одразу для всіх речовин
+~side.increment	Перемкнути налаштування сторін (усі сторони — на наступний чи попередній тип)
+~startup.gear	Спорядження
+~startup.gear.button	Налаштувати спорядження
+~startup.gear.tooltip	Налаштування спорядження Mekanism. Це налаштування не синхронізується між клієнтом і сервером, тож дуже радимо мати однакові значення на обох.
+~storage.nucleosynthesizer.energy	Запас енергії: антипротонний нуклеосинтезатор
+~storage.nucleosynthesizer.energy.tooltip	Базовий запас енергії (Дж): антипротонний нуклеосинтезатор. Також визначає найбільшу швидкість обробки.
+~usage.nucleosynthesizer.energy	Витрата енергії: антипротонний нуклеосинтезатор
+~usage.nucleosynthesizer.energy.tooltip	Енергія (Дж) на одну операцію: антипротонний нуклеосинтезатор
+~usage.secondary.chemical.random	Випадкова витрата додаткового хімікату
+~usage.secondary.chemical.random.tooltip	Якщо увімкнено, камери впорскування й очищення витрачають за операцію трохи випадкову кількість хімікату.
+~usage.stabilizer.energy	Витрата енергії: стабілізатор вимірів
+~usage.stabilizer.energy.tooltip	Енергія (Дж) на чанк за такт.
+~usage.teleporter	Телепорт
+~usage.teleporter.base	Базова витрата енергії
+~usage.teleporter.base.tooltip	Базова ціна в Дж телепорту однієї істоти.
+~usage.teleporter.button	Налаштувати телепорт
+~usage.teleporter.distance	Витрата на відстань
+~usage.teleporter.distance.tooltip	Дж на одиницю відстані телепорту — sqrt(xDiff^2 + yDiff^2 + zDiff^2).
+~usage.teleporter.penalty.dimension	Надбавка за вимір
+~usage.teleporter.penalty.dimension.tooltip	Стала додаткова ціна телепорту між вимірами. Відстань теж враховується з поправкою на масштаб вимірів.
+~usage.teleporter.tooltip	Налаштування витрати енергії телепорту
+~world.height_range.anchor.type	Тип якоря
+~world.height_range.anchor.type.tooltip	Тип якоря: як значення використовується для розрахунку рівня Y.
+~world.height_range.anchor.value	Значення
+~world.height_range.anchor.value.tooltip	Значення для розрахунку рівня Y якоря залежно від типу.
+~world.height_range.plateau	Плато
+~world.height_range.plateau.tooltip	Половина короткої сторони трапеції, лише для форми «трапеція». 0 — форма трикутника.
+~world.retrogen	Догенерація
+~world.retrogen.tooltip	Дозволяє догенеровувати сіль і руди Mekanism у старих чанках. Зазвичай разом із цим збільшують userWorldGenVersion.
+~world.salt	Генерація солі
+~world.salt.button	Налаштувати сіль
+~world.salt.generate	Генерувати
+~world.salt.generate.tooltip	Чи додавати сіль у генерацію світу.
+~world.salt.half_height	Половина висоти
+~world.salt.half_height.tooltip	На скільки блоків угору й униз простягається жила солі.
+~world.salt.per_chunk	На чанк
+~world.salt.per_chunk.tooltip	Шанс, що в чанку з'явиться сіль.
+~world.salt.radius.max	Розкид радіуса
+~world.salt.radius.max.tooltip	Додатковий розкид радіуса жили солі.
+~world.salt.radius.min	Найменший радіус
+~world.salt.radius.min.tooltip	Базовий радіус жили солі.
+~world.salt.tooltip	Налаштування генерації солі.
+~world.world_version	Версія світу
+~world.world_version.tooltip	Змініть, щоб Mekanism перегенерував руди в усіх завантажених чанках з нижчою версією.
+mekanism.configuration.section.mekanism.client.toml	Клієнт
+mekanism.configuration.section.mekanism.client.toml.title	Mekanism — налаштування клієнта
+mekanism.configuration.section.mekanism.common.toml	Спільне
+mekanism.configuration.section.mekanism.common.toml.title	Mekanism — спільні налаштування
+mekanism.configuration.section.mekanism.gear.toml	Спорядження
+mekanism.configuration.section.mekanism.gear.toml.title	Mekanism — спорядження
+mekanism.configuration.section.mekanism.general.toml	Загальне
+mekanism.configuration.section.mekanism.general.toml.title	Mekanism — загальні налаштування
+mekanism.configuration.section.mekanism.machine.storage.toml	Запаси енергії
+mekanism.configuration.section.mekanism.machine.storage.toml.title	Mekanism — запаси енергії машин
+mekanism.configuration.section.mekanism.machine.usage.toml	Витрата енергії
+mekanism.configuration.section.mekanism.machine.usage.toml.title	Mekanism — витрата енергії машин
+mekanism.configuration.section.mekanism.startup.toml	Запуск
+mekanism.configuration.section.mekanism.startup.toml.title	Mekanism — налаштування запуску
+mekanism.configuration.section.mekanism.tiers.toml	Рівні
+mekanism.configuration.section.mekanism.tiers.toml.title	Mekanism — рівні
+mekanism.configuration.section.mekanism.world.toml	Світ
+mekanism.configuration.section.mekanism.world.toml.title	Mekanism — генерація світу
+mekanism.configuration.title	Налаштування Mekanism

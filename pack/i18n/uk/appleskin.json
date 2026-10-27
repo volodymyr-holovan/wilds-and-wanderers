@@ -1,0 +1,12 @@
+{
+ "appleskin.configuration.maxHudOverlayFlashAlpha.tooltip": "Прозорість мигаючих значків у найяскравішій точці (1.0 — повністю непрозорі, 0.0 — повністю прозорі)",
+ "appleskin.configuration.showFoodExhaustionHudUnderlay.tooltip": "Якщо ввімкнено, показує виснаження як смужку позаду шкали голоду",
+ "appleskin.configuration.showFoodHealthHudOverlay.tooltip": "Якщо ввімкнено, показує на шкалі здоров'я, скільки його відновить їжа",
+ "appleskin.configuration.showFoodStatsInDebugOverlay.tooltip": "Якщо ввімкнено, показує голод, насиченість і виснаження на екрані налагодження (F3)",
+ "appleskin.configuration.showFoodValuesHudOverlay.tooltip": "Якщо ввімкнено, показує на шкалі голоду, скільки ситості (і насиченості, якщо ввімкнено її показ) поверне їжа в руці",
+ "appleskin.configuration.showFoodValuesHudOverlayWhenOffhand.tooltip": "Якщо ввімкнено, показує ці підказки й для їжі в другій руці",
+ "appleskin.configuration.showFoodValuesInTooltip.tooltip": "Якщо ввімкнено, показує ситність і насиченість їжі в підказці, поки затиснуто SHIFT",
+ "appleskin.configuration.showFoodValuesInTooltipAlways.tooltip": "Якщо ввімкнено, показує ситність і насиченість їжі в підказці завжди (без SHIFT)",
+ "appleskin.configuration.showSaturationHudOverlay.tooltip": "Якщо ввімкнено, показує поточну насиченість поверх шкали голоду",
+ "appleskin.configuration.showVanillaAnimationsOverlay.tooltip": "Якщо ввімкнено, підказки на шкалах здоров'я й голоду тремтять разом зі значками Minecraft"
+}

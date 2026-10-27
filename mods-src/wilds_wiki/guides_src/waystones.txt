@@ -1,0 +1,40 @@
+=== waystones.md
+---
+for: waystones:waystone, waystones:mossy_waystone, waystones:sandy_waystone, waystones:deepslate_waystone, waystones:blackstone_waystone, waystones:end_stone_waystone, waystones:mud_bricks_waystone, waystones:prismarine_waystone, waystones:purpur_waystone, waystones:red_nether_bricks_waystone, waystones:warp_stone, waystones:warp_dust
+keywords: путівний камінь, телепорт, вейстоун, waystone, warp stone, як телепортуватися
+---
+# Путівні камені
+- **Відкрийте камінь:** клацніть ПКМ по путівному каменю — він запам'ятається, і до нього можна буде переноситися з будь-якого іншого каменя.
+- Дикі камені стоять у світі приблизно раз на 25 чанків (їхній вигляд залежить від біому) і в селах. Свій камінь можна скрафтити й поставити — тоді назва ваша, і змінювати його можете лише ви.
+- **Ціна переміщення:** 1 рівень досвіду за кожні 100 блоків, між вимірами — 27 рівнів (більше 27 не буває). До **глобальних** каменів, з плит і сувоїв — безкоштовно.
+- [[waystones:warp_stone]] — камінь у кишені: затисніть ПКМ на півтори секунди, і відкриється список ваших каменів. Він зношується й має перезарядку.
+- Тварин-улюбленців камені не переносять, а тварин на повідку — так.
+=== scrolls.md
+---
+for: waystones:blank_scroll, waystones:bound_scroll, waystones:warp_scroll, waystones:return_scroll, waystones:portal_scroll
+keywords: сувій, сувій повернення, сувій переміщення, scroll
+---
+# Сувої
+- [[waystones:blank_scroll]]: клацніть ним по путівному каменю — вийде [[waystones:bound_scroll]], прив'язаний до цього каменя. Затисніть ПКМ із ним — і ви там.
+- [[waystones:warp_scroll]] — одноразовий: відкриває список каменів, як путівний камінь.
+- [[waystones:return_scroll]] повертає до останнього відкритого вами каменя.
+- Перенесення сувоями досвіду не коштує; читання триває півтори секунди.
+=== sharestones.md
+---
+for: waystones:white_portstone, waystones:orange_sharestone, waystones:magenta_sharestone, waystones:light_blue_sharestone, waystones:yellow_sharestone, waystones:lime_sharestone, waystones:pink_sharestone, waystones:gray_sharestone, waystones:light_gray_sharestone, waystones:cyan_sharestone, waystones:purple_sharestone, waystones:blue_sharestone, waystones:brown_sharestone, waystones:green_sharestone, waystones:red_sharestone, waystones:black_sharestone, waystones:black_portstone, waystones:red_portstone
+keywords: камінь спільного шляху, портовий камінь, sharestone, portstone
+---
+# Спільні й портові камені
+- **Камінь спільного шляху** (sharestone) переносить до будь-якого іншого такого ж каменя **того ж кольору** — зручно для мережі між базами друзів.
+- **Портовий камінь** (portstone) — лише точка відправлення: з нього переносяться, а до нього — ні.
+=== warp_plate.md
+---
+for: waystones:warp_plate, waystones:dormant_shard, waystones:attuned_shard, waystones:crumbling_attuned_shard, waystones:deepslate_shard
+keywords: плита переміщення, уламок, warp plate, shard
+---
+# Плита переміщення
+Дві плити, з'єднані уламком, переносять усіх, хто постоїть на одній із них три чверті секунди.
+- Вставте [[waystones:dormant_shard]] у плиту — уламок налаштується на неї й стане [[waystones:attuned_shard]].
+- Віднесіть налаштований уламок до іншої плити й вставте туди — тепер плити з'єднані.
+- [[waystones:crumbling_attuned_shard]] спрацює лише раз і розсиплеться. [[waystones:deepslate_shard]] замикає плиту.
+- Переміщення плитами досвіду не коштує.

@@ -1,0 +1,1 @@
+execute at {p} run summon wilds_core:wanderer ^ ^ ^3 {WildsQuest:"zombie_plague",WildsSkin:"minecraft:textures/entity/player/slim/makena.png",WildsSlim:1b,CustomName:'"Лукія, сільська лікарка"',CustomNameVisible:1b,PersistenceRequired:1b}

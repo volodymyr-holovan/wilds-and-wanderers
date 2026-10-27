@@ -1,0 +1,4647 @@
+{
+ "root": {
+  "title": "Мандрівник",
+  "description": "Початок шляху. +1 серце. Звідси вісім гілок: Воїн, Мисливець, Маг, Майстер, Мореплавець, Слідопит, Дипломат, Торговець.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:compass"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 2,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "in_0": {
+  "title": "Витривалість",
+  "description": "+1 серце",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 2,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "in_1": {
+  "title": "Легка хода",
+  "description": "+2% швидкості руху",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:feather"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.movement_speed",
+     "value": 0.02,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "in_2": {
+  "title": "Щаслива зірка",
+  "description": "+0,25 удачі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:rabbit_foot"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.25,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "in_3": {
+  "title": "Цікавість",
+  "description": "+3% досвіду",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:experience_bottle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "in_4": {
+  "title": "Шкіра",
+  "description": "+1 броні",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:leather_chestplate"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.armor",
+     "value": 1,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "in_5": {
+  "title": "Міцні руки",
+  "description": "+3% швидкості видобутку",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_pickaxe"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.block_break_speed",
+     "value": 0.03,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "in_6": {
+  "title": "Іскра магії",
+  "description": "+10 мани",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lapis_lazuli"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:max_mana",
+     "value": 10,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "in_7": {
+  "title": "Загоєння",
+  "description": "Поки ви ситі, повільно загоюєтеся",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:glistering_melon_slice"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "regen",
+     "value": 0.25
+    }
+   }
+  ]
+ },
+ "war_0_m0": {
+  "title": "Важка рука",
+  "description": "Воїн · Сила. +3% шкоди в ближньому бою",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_sword"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.attack_damage",
+     "value": 0.03,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "war_0_m1": {
+  "title": "Влучний удар",
+  "description": "Воїн · Сила. +6% критичної шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:flint"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:crit_damage",
+     "value": 0.06,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "war_0_m2": {
+  "title": "Розмах",
+  "description": "Воїн · Сила. +6% шкоди розмаху мечем",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:golden_sword"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.sweeping_damage_ratio",
+     "value": 0.06,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "war_0_notable": {
+  "title": "Важка рука II",
+  "description": "Помітний вузол гілки «Воїн» (Сила): у 2,5 раза більше. +3% шкоди в ближньому бою",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_sword"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.attack_damage",
+     "value": 0.075,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "war_u_heavy_strike": {
+  "title": "Нищівний удар",
+  "description": "Велика навичка гілки «Воїн». Затисніть клавішу зліва від 1 (`; її можна змінити в Керуванні), дивлячись на ворога: коли під прицілом наповниться смужка (не швидше, ніж перезаряджається зброя, мінімум 1 с), ви завдасте потрійної шкоди й виб'єте щит із рук.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:mace"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "heavy_strike"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "war_mastery_heavy_strike": {
+  "title": "Нищівний удар II",
+  "description": "Майстерність: «Нищівний удар» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:mace"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "heavy_strike"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "war_1_m0": {
+  "title": "Міцне тіло",
+  "description": "Воїн · Захист. +1 серце",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:golden_apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 2,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "war_1_m1": {
+  "title": "Загартування",
+  "description": "Воїн · Захист. +1 броні",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_chestplate"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.armor",
+     "value": 1,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "war_1_m2": {
+  "title": "Непохитність",
+  "description": "Воїн · Захист. +4% опору відкиданню",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:anvil"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.knockback_resistance",
+     "value": 0.04,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "war_1_m3": {
+  "title": "Сталь",
+  "description": "Воїн · Захист. +0,5 міцності броні",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_block"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.armor_toughness",
+     "value": 0.5,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "war_1_notable": {
+  "title": "Міцне тіло II",
+  "description": "Помітний вузол гілки «Воїн» (Захист): у 2,5 раза більше. +1 серце",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:golden_apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 5.0,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "war_u_last_stand": {
+  "title": "Останній рубіж",
+  "description": "Велика навичка гілки «Воїн». Раз на 20 хвилин смертельний удар залишає вам одне серце, а кілька секунд ви майже невразливі й відновлюєтеся.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:totem_of_undying"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "last_stand"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "war_2_m0": {
+  "title": "Швидкий клинок",
+  "description": "Воїн · Спритність. +3% швидкості атаки",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:feather"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.attack_speed",
+     "value": 0.03,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "war_2_m1": {
+  "title": "Ухильність",
+  "description": "Воїн · Спритність. +1,5% шансу ухилитися",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:phantom_membrane"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:dodge_chance",
+     "value": 0.015,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "war_2_m2": {
+  "title": "Довгий випад",
+  "description": "Воїн · Спритність. +0,2 блока дальності удару",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:stick"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.entity_interaction_range",
+     "value": 0.2,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "war_2_m3": {
+  "title": "Легкі ноги",
+  "description": "Воїн · Спритність. +1,5% швидкості руху",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:sugar"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.movement_speed",
+     "value": 0.015,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "war_2_notable": {
+  "title": "Швидкий клинок II",
+  "description": "Помітний вузол гілки «Воїн» (Спритність): у 2,5 раза більше. +3% швидкості атаки",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:feather"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.attack_speed",
+     "value": 0.075,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "war_u_weapon_throw": {
+  "title": "Метальник",
+  "description": "Велика навичка гілки «Воїн». Затисніть праву кнопку з мечем чи сокирою в руці й натисніть ліву: зброя полетить у ціль і завдасть подвійної шкоди, а тоді повернеться до вас.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_axe"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "weapon_throw"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "war_mastery_weapon_throw": {
+  "title": "Метальник II",
+  "description": "Майстерність: «Метальник» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_axe"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "weapon_throw"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "war_keystone": {
+  "title": "Берсерк",
+  "description": "Ключова навичка. Відплата: 10% отриманої шкоди повертається нападнику. +10% шкоди, +2 серця.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:netherite_axe"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "retribution"
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.attack_damage",
+     "value": 0.1,
+     "operation": "add_multiplied_base"
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 4,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "hun_0_m0": {
+  "title": "Тятива",
+  "description": "Мисливець · Лучник. +5% шкоди стріл",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:string"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:arrow_damage",
+     "value": 0.05,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "hun_0_m1": {
+  "title": "Далекий постріл",
+  "description": "Мисливець · Лучник. Стріли, тризуби й снаряди заклинань летять на 6% швидше й далі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:spectral_arrow"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "far_shot",
+     "value": 0.06
+    }
+   }
+  ]
+ },
+ "hun_0_m2": {
+  "title": "Пробиття",
+  "description": "Мисливець · Лучник. +3% шкоди всіх снарядів",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:arrow"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:projectile_damage",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "hun_0_notable": {
+  "title": "Тятива II",
+  "description": "Помітний вузол гілки «Мисливець» (Лучник): у 2,5 раза більше. +5% шкоди стріл",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:string"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:arrow_damage",
+     "value": 0.125,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.05,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "hun_u_volley": {
+  "title": "Залп",
+  "description": "Велика навичка гілки «Мисливець». Кожна п'ята стріла летить разом із двома сусідніми (на 2-му рівні — кожна четверта).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:crossbow"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "volley"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "hun_mastery_volley": {
+  "title": "Залп II",
+  "description": "Майстерність: «Залп» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:crossbow"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "volley"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "hun_1_m0": {
+  "title": "Вірний звір",
+  "description": "Мисливець · Звіролов. Ваші приручені звірі й коні: +8% здоров'я і шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bone"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "tamer",
+     "value": 0.08
+    }
+   }
+  ]
+ },
+ "hun_1_m1": {
+  "title": "Нюх мисливця",
+  "description": "Мисливець · Звіролов. +0,25 удачі (кращий лут і улов)",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:rabbit_foot"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.25,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "hun_1_m2": {
+  "title": "Досвід слідопита",
+  "description": "Мисливець · Звіролов. +3% досвіду з мобів і блоків",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:experience_bottle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "hun_1_notable": {
+  "title": "Вірний звір II",
+  "description": "Помітний вузол гілки «Мисливець» (Звіролов): у 2,5 раза більше. Ваші приручені звірі й коні: +8% здоров'я і шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bone"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "tamer",
+     "value": 0.2
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "hun_u_beast_master": {
+  "title": "Володар звірів",
+  "description": "Велика навичка гілки «Мисливець». Ваші приручені тварини й коні мають на 25% більше здоров'я і шкоди за кожен рівень.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bone"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "beast_master"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "hun_mastery_beast_master": {
+  "title": "Володар звірів II",
+  "description": "Майстерність: «Володар звірів» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bone"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "beast_master"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "hun_2_m0": {
+  "title": "Око хижака",
+  "description": "Мисливець · Хижак. +4% критичної шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:spider_eye"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:crit_damage",
+     "value": 0.04,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "hun_2_m1": {
+  "title": "Бронебій",
+  "description": "Мисливець · Хижак. Ігнорує 0,5 броні ворога",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_nugget"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:armor_pierce",
+     "value": 0.5,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "hun_2_m2": {
+  "title": "Тихі кроки",
+  "description": "Мисливець · Хижак. +1,5% швидкості руху",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:leather_boots"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.movement_speed",
+     "value": 0.015,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "hun_2_notable": {
+  "title": "Око хижака II",
+  "description": "Помітний вузол гілки «Мисливець» (Хижак): у 2,5 раза більше. +4% критичної шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:spider_eye"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:crit_damage",
+     "value": 0.1,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.05,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "hun_u_hunters_mark": {
+  "title": "Мітка мисливця",
+  "description": "Велика навичка гілки «Мисливець». Ворог, у якого влучив ваш постріл, світиться 10 секунд і отримує на 15% більше шкоди від усіх.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:spectral_arrow"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "hunters_mark"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "hun_keystone": {
+  "title": "Господар зграї",
+  "description": "Ключова навичка. Двійня: тварини, яких ви розводите, з шансом 25% народжують двох. Звірі на 25% сильніші, +10% шкоди стріл.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lead"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "twin_births"
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "tamer",
+     "value": 0.25
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:arrow_damage",
+     "value": 0.1,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "mag_0_m0": {
+  "title": "Сила заклять",
+  "description": "Маг · Сила чар. +3% сили заклинань",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:blaze_powder"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:spell_power",
+     "value": 0.03,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_0_m1": {
+  "title": "Школа: Вогонь",
+  "description": "Маг · Сила чар. +5% сили школи «Вогонь»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:fire_charge"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:fire_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_0_m2": {
+  "title": "Школа: Лід",
+  "description": "Маг · Сила чар. +5% сили школи «Лід»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:packed_ice"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:ice_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_0_m3": {
+  "title": "Школа: Блискавка",
+  "description": "Маг · Сила чар. +5% сили школи «Блискавка»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lightning_rod"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:lightning_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_0_m4": {
+  "title": "Школа: Світло",
+  "description": "Маг · Сила чар. +5% сили школи «Світло»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:golden_apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:holy_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_0_notable": {
+  "title": "Сила заклять II",
+  "description": "Помітний вузол гілки «Маг» (Сила чар): у 2,5 раза більше. +3% сили заклинань",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:blaze_powder"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:spell_power",
+     "value": 0.075,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 2.5,
+      "operation": "add_value"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "mag_u_spell_reflect": {
+  "title": "Дзеркало чар",
+  "description": "Велика навичка гілки «Маг». Замахніться зброєю чи підніміть щит, коли у вас летить закляття, вогняна куля чи інший магічний снаряд, — він полетить назад у того, хто його випустив.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:glass"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "spell_reflect"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "mag_1_m0": {
+  "title": "Резервуар мани",
+  "description": "Маг · Мана. +15 мани",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lapis_lazuli"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:max_mana",
+     "value": 15,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_1_m1": {
+  "title": "Потік мани",
+  "description": "Маг · Мана. +5% відновлення мани",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:amethyst_shard"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:mana_regen",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_1_m2": {
+  "title": "Школа: Природа",
+  "description": "Маг · Мана. +5% сили школи «Природа»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:oak_sapling"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:nature_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_1_m3": {
+  "title": "Школа: Енд",
+  "description": "Маг · Мана. +5% сили школи «Енд»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:ender_pearl"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:ender_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_1_m4": {
+  "title": "Школа: Кров",
+  "description": "Маг · Мана. +5% сили школи «Кров»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:redstone"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:blood_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_1_notable": {
+  "title": "Резервуар мани II",
+  "description": "Помітний вузол гілки «Маг» (Мана): у 2,5 раза більше. +15 мани",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lapis_lazuli"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:max_mana",
+     "value": 37.5,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 2.5,
+      "operation": "add_value"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "mag_u_mana_harvest": {
+  "title": "Жнива мани",
+  "description": "Велика навичка гілки «Маг». Кожне вбивство відновлює 10% мани за рівень. Без Iron's Spells — лікує ½ серця.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lapis_block"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "mana_harvest",
+     "fallback": "soul_siphon"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "mag_mastery_mana_harvest": {
+  "title": "Жнива мани II",
+  "description": "Майстерність: «Жнива мани» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:lapis_block"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "mana_harvest",
+     "fallback": "soul_siphon"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "mag_2_m0": {
+  "title": "Магічний щит",
+  "description": "Маг · Захист чар. +3% опору заклинанням",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:shield"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:spell_resist",
+     "value": 0.03,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_2_m1": {
+  "title": "Відвернення",
+  "description": "Маг · Захист чар. Магічна шкода менша на 5%",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:prismarine_shard"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "magic_guard",
+     "value": 0.05
+    }
+   }
+  ]
+ },
+ "mag_2_m2": {
+  "title": "Плинні жести",
+  "description": "Маг · Захист чар. -3% часу творення заклять",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:clock"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:cast_time_reduction",
+     "value": 0.03,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_2_m3": {
+  "title": "Швидкий розум",
+  "description": "Маг · Захист чар. -3% перезаряджання заклять",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:redstone_torch"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:cooldown_reduction",
+     "value": 0.03,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_2_m4": {
+  "title": "Школа: Закликання",
+  "description": "Маг · Захист чар. +5% сили школи «Закликання»",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:totem_of_undying"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:evocation_spell_power",
+     "value": 0.05,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ]
+ },
+ "mag_2_notable": {
+  "title": "Магічний щит II",
+  "description": "Помітний вузол гілки «Маг» (Захист чар): у 2,5 раза більше. +3% опору заклинанням",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:shield"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:spell_resist",
+     "value": 0.075,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 2.5,
+      "operation": "add_value"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "mag_u_mana_shield": {
+  "title": "Щит мани",
+  "description": "Велика навичка гілки «Маг». 15% отриманої шкоди сплачується маною, поки її вистачає. Без Iron's Spells — Чарівний захист: -20% магічної шкоди.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:amethyst_block"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "mana_shield",
+     "fallback": "arcane_ward"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "mag_keystone": {
+  "title": "Архімаг",
+  "description": "Ключова навичка. Подих мани: раз на годину одне закляття не коштує мани (без Iron's Spells — Чарівний захист: -20% магічної шкоди). +10% сили заклять, +60 мани.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:nether_star"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "free_spell",
+     "fallback": "arcane_ward"
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:spell_power",
+     "value": 0.1,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_spellbooks:max_mana",
+     "value": 60,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.max_health",
+      "value": 1,
+      "operation": "add_value"
+     }
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "cra_0_m0": {
+  "title": "Міцні руки",
+  "description": "Майстер · Шахтар. +4% швидкості видобутку",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_pickaxe"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.block_break_speed",
+     "value": 0.04,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "cra_0_m1": {
+  "title": "Багата жила",
+  "description": "Майстер · Шахтар. 2% шанс, що руда дасть ще один шматок",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:raw_iron"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "extra_ore",
+     "value": 0.02
+    }
+   }
+  ]
+ },
+ "cra_0_m2": {
+  "title": "Кам'яне серце",
+  "description": "Майстер · Шахтар. +3% швидкості копання",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:cobblestone"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:mining_speed",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "cra_0_notable": {
+  "title": "Міцні руки II",
+  "description": "Помітний вузол гілки «Майстер» (Шахтар): у 2,5 раза більше. +4% швидкості видобутку",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_pickaxe"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.block_break_speed",
+     "value": 0.1,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "cra_u_vein_miner": {
+  "title": "Жила",
+  "description": "Велика навичка гілки «Майстер». Копайте руду присівши — разом із нею зламаються ще до 6 таких самих блоків руди, що торкаються (на 2-му рівні — до 10).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:diamond_ore"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "vein_miner"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "cra_mastery_vein_miner": {
+  "title": "Жила II",
+  "description": "Майстерність: «Жила» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:diamond_ore"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "vein_miner"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "cra_1_m0": {
+  "title": "Дбайливість",
+  "description": "Майстер · Ремісник. 5% шанс, що інструмент не зноситься від удару",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:anvil"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "tool_saver",
+     "value": 0.05
+    }
+   }
+  ]
+ },
+ "cra_1_m1": {
+  "title": "Довгі руки",
+  "description": "Майстер · Ремісник. +0,25 блока дальності з блоками",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:stick"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.block_interaction_range",
+     "value": 0.25,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "cra_1_m2": {
+  "title": "Учень майстра",
+  "description": "Майстер · Ремісник. +3% досвіду",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:book"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "cra_1_notable": {
+  "title": "Дбайливість II",
+  "description": "Помітний вузол гілки «Майстер» (Ремісник): у 2,5 раза більше. 5% шанс, що інструмент не зноситься від удару",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:anvil"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "tool_saver",
+     "value": 0.125
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "cra_u_thrifty_crafter": {
+  "title": "Ощадливий майстер",
+  "description": "Велика навичка гілки «Майстер». Під час крафту з шансом 8% за рівень один інгредієнт повертається.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:crafting_table"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "thrifty_crafter"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "cra_mastery_thrifty_crafter": {
+  "title": "Ощадливий майстер II",
+  "description": "Майстерність: «Ощадливий майстер» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:crafting_table"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "thrifty_crafter"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "cra_2_m0": {
+  "title": "Нюх на руду",
+  "description": "Майстер · Рудознавець. 2% шанс додаткової руди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "extra_ore",
+     "value": 0.02
+    }
+   }
+  ]
+ },
+ "cra_2_m1": {
+  "title": "Щаслива кирка",
+  "description": "Майстер · Рудознавець. +0,25 удачі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:gold_ingot"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.25,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "cra_2_m2": {
+  "title": "Водолаз-шахтар",
+  "description": "Майстер · Рудознавець. +15% видобутку під водою",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:turtle_helmet"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.submerged_mining_speed",
+     "value": 0.15,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "cra_2_notable": {
+  "title": "Нюх на руду II",
+  "description": "Помітний вузол гілки «Майстер» (Рудознавець): у 2,5 раза більше. 2% шанс додаткової руди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "extra_ore",
+     "value": 0.05
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "cra_u_prospector": {
+  "title": "Рудознатець",
+  "description": "Велика навичка гілки «Майстер». Присядьте й клацніть ПКМ киркою по каменю — уся руда в радіусі 8 блоків (10 на 2-му рівні) заблищить для вас. Раз на хвилину.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:amethyst_shard"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "prospector"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "cra_mastery_prospector": {
+  "title": "Рудознатець II",
+  "description": "Майстерність: «Рудознатець» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:amethyst_shard"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "prospector"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "cra_keystone": {
+  "title": "Дотик горна",
+  "description": "Ключова навичка. Сира руда з шансом 20% одразу випадає виплавленою. +6% шансу додаткової руди, інструменти зношуються на 10% рідше.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:blast_furnace"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "smelters_touch"
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "extra_ore",
+     "value": 0.06
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "tool_saver",
+     "value": 0.1
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "sea_0_m0": {
+  "title": "Плавці",
+  "description": "Мореплавець · Плавець. +6% швидкості плавання",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:tropical_fish"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "neoforge:swim_speed",
+     "value": 0.06,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.movement_speed",
+      "value": 0.01,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "sea_0_m1": {
+  "title": "Глибокий вдих",
+  "description": "Мореплавець · Плавець. Довше без повітря під водою",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:glass_bottle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.oxygen_bonus",
+     "value": 0.5,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "sea_0_m2": {
+  "title": "Течія",
+  "description": "Мореплавець · Плавець. Вода менше сповільнює",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:kelp"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.water_movement_efficiency",
+     "value": 0.05,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "sea_0_notable": {
+  "title": "Плавці II",
+  "description": "Помітний вузол гілки «Мореплавець» (Плавець): у 2,5 раза більше. +6% швидкості плавання",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:tropical_fish"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "neoforge:swim_speed",
+     "value": 0.15,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.movement_speed",
+      "value": 0.025,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "sea_u_deep_sight": {
+  "title": "Очі глибин",
+  "description": "Велика навичка гілки «Мореплавець». Під водою ви бачите ясно, як удень.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:sea_lantern"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "deep_sight"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "sea_1_m0": {
+  "title": "Шкіра акули",
+  "description": "Мореплавець · Мисливець глибин. Морські істоти завдають на 5% менше шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:prismarine_shard"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "aqua_guard",
+     "value": 0.05
+    }
+   }
+  ]
+ },
+ "sea_1_m1": {
+  "title": "Підводний шахтар",
+  "description": "Мореплавець · Мисливець глибин. +15% видобутку під водою",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:prismarine"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.submerged_mining_speed",
+     "value": 0.15,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "sea_1_m2": {
+  "title": "Гарпунер",
+  "description": "Мореплавець · Мисливець глибин. Тризуби й стріли летять на 5% далі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:trident"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "far_shot",
+     "value": 0.05
+    }
+   }
+  ]
+ },
+ "sea_1_notable": {
+  "title": "Шкіра акули II",
+  "description": "Помітний вузол гілки «Мореплавець» (Мисливець глибин): у 2,5 раза більше. Морські істоти завдають на 5% менше шкоди",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:prismarine_shard"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "aqua_guard",
+     "value": 0.125
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "sea_u_battle_breath": {
+  "title": "Подих бою",
+  "description": "Велика навичка гілки «Мореплавець». Кожен ваш удар під водою повертає три бульбашки повітря (за рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:pufferfish"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "battle_breath"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "sea_mastery_battle_breath": {
+  "title": "Подих бою II",
+  "description": "Майстерність: «Подих бою» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:pufferfish"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "battle_breath"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "sea_2_m0": {
+  "title": "Морська удача",
+  "description": "Мореплавець · Шукач скарбів. +0,3 удачі (краща риболовля й скрині)",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:nautilus_shell"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.3,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "sea_2_m1": {
+  "title": "Розповіді моряків",
+  "description": "Мореплавець · Шукач скарбів. +3% досвіду",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:map"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "sea_2_m2": {
+  "title": "Солоний вітер",
+  "description": "Мореплавець · Шукач скарбів. Довше без повітря під водою",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:oak_boat"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.oxygen_bonus",
+     "value": 0.5,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "sea_2_notable": {
+  "title": "Морська удача II",
+  "description": "Помітний вузол гілки «Мореплавець» (Шукач скарбів): у 2,5 раза більше. +0,3 удачі (краща риболовля й скрині)",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:nautilus_shell"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.75,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "sea_u_sea_gifts": {
+  "title": "Дари моря",
+  "description": "Велика навичка гілки «Мореплавець». Коли вперше відкриваєте скриню в затонулому кораблі, океанських руїнах чи іншій морській споруді, часто знаходите ще раковину наутилуса, смарагди, призмарин, а зрідка — серце моря.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:nautilus_shell"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "sea_gifts"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "sea_mastery_sea_gifts": {
+  "title": "Дари моря II",
+  "description": "Майстерність: «Дари моря» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:nautilus_shell"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "sea_gifts"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "sea_keystone": {
+  "title": "Тінь глибин",
+  "description": "Ключова навичка. Морські істоти бачать вас у воді вдвічі гірше й швидше втрачають. -15% шкоди від них, +15% швидкості плавання.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:heart_of_the_sea"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "deep_shadow"
+    }
+   },
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "deep_shadow"
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "aqua_guard",
+     "value": 0.15
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "neoforge:swim_speed",
+     "value": 0.15,
+     "operation": "add_multiplied_base",
+     "fallback": {
+      "attribute": "generic.movement_speed",
+      "value": 0.01,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "exp_0_m0": {
+  "title": "Легка хода",
+  "description": "Слідопит · Мандрівник. +1,5% швидкості руху",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:feather"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.movement_speed",
+     "value": 0.015,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "exp_0_m1": {
+  "title": "М'яке приземлення",
+  "description": "Слідопит · Мандрівник. -5% шкоди від падіння, +0,5 блока безпечного падіння",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:leather_boots"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.fall_damage_multiplier",
+     "value": -0.05,
+     "operation": "add_value"
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.safe_fall_distance",
+     "value": 0.5,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "exp_0_m2": {
+  "title": "Сходинка",
+  "description": "Слідопит · Мандрівник. Легше заходите на сходинки",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:oak_stairs"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.step_height",
+     "value": 0.1,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "exp_0_notable": {
+  "title": "Легка хода II",
+  "description": "Помітний вузол гілки «Слідопит» (Мандрівник): у 2,5 раза більше. +1,5% швидкості руху",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:feather"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.movement_speed",
+     "value": 0.0375,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "exp_u_pathfinder": {
+  "title": "Дорожня хода",
+  "description": "Велика навичка гілки «Слідопит». На дорогах — стежках, гравії, бруківці, кам'яній цеглі — ви на 20% швидші за рівень.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:dirt_path"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "pathfinder"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "exp_mastery_pathfinder": {
+  "title": "Дорожня хода II",
+  "description": "Майстерність: «Дорожня хода» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:dirt_path"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "pathfinder"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "exp_1_m0": {
+  "title": "Вогнетривкість",
+  "description": "Слідопит · Виживальник. -5% шкоди від вогню, горите на 8% коротше",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:magma_cream"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "fire_guard",
+     "value": 0.05
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.burning_time",
+     "value": -0.08,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "exp_1_m1": {
+  "title": "Загоєння",
+  "description": "Слідопит · Виживальник. Поки ви ситі, кожні 5 с загоюєтеся (¼ серця за кожен такий вузол)",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:glistering_melon_slice"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "regen",
+     "value": 0.25
+    }
+   }
+  ]
+ },
+ "exp_1_m2": {
+  "title": "Ситний обід",
+  "description": "Слідопит · Виживальник. +10% насичення від їжі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:cooked_beef"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "hearty",
+     "value": 0.1
+    }
+   }
+  ]
+ },
+ "exp_1_m3": {
+  "title": "Витривалість",
+  "description": "Слідопит · Виживальник. +½ серця",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 1,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "exp_1_notable": {
+  "title": "Вогнетривкість II",
+  "description": "Помітний вузол гілки «Слідопит» (Виживальник): у 2,5 раза більше. -5% шкоди від вогню, горите на 8% коротше",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:magma_cream"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "fire_guard",
+     "value": 0.125
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.burning_time",
+     "value": -0.2,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "exp_u_well_rested": {
+  "title": "Добрий відпочинок",
+  "description": "Велика навичка гілки «Слідопит». Проспавши ніч у ліжку чи наметі, прокидаєтеся з регенерацією й поглинанням шкоди.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:red_bed"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "well_rested"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "exp_2_m0": {
+  "title": "Вірний кінь",
+  "description": "Слідопит · Вершник. Ваш скакун на 6% швидший",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:saddle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "mount",
+     "value": 0.06
+    }
+   }
+  ]
+ },
+ "exp_2_m1": {
+  "title": "Стрибун",
+  "description": "Слідопит · Вершник. +3% висоти стрибка",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:rabbit_hide"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.jump_strength",
+     "value": 0.03,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "exp_2_m2": {
+  "title": "Дорожній досвід",
+  "description": "Слідопит · Вершник. +2% досвіду",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:map"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.02,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "exp_2_notable": {
+  "title": "Вірний кінь II",
+  "description": "Помітний вузол гілки «Слідопит» (Вершник): у 2,5 раза більше. Ваш скакун на 6% швидший",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:saddle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "mount",
+     "value": 0.15
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "exp_u_rider": {
+  "title": "Вершник",
+  "description": "Велика навичка гілки «Слідопит». Ваш скакун на 15% швидший за рівень, і ні він, ні ви не отримуєте шкоди від падіння під час їзди.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:saddle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "rider"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "exp_mastery_rider": {
+  "title": "Вершник II",
+  "description": "Майстерність: «Вершник» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:saddle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "rider"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "exp_keystone": {
+  "title": "Чуття небезпеки",
+  "description": "Ключова навичка. Над кожним монстром, що полює на вас, видно сердиті іскри — навіть крізь стіни. -15% шкоди від вогню й падіння.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:spyglass"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "danger_sense"
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "fire_guard",
+     "value": 0.15
+    }
+   },
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.fall_damage_multiplier",
+     "value": -0.15,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "dip_0_m0": {
+  "title": "Нечутні кроки",
+  "description": "Дипломат · Тінь. Швидше крадетеся",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:white_wool"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.sneaking_speed",
+     "value": 0.05,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "dip_0_m1": {
+  "title": "Непомітність",
+  "description": "Дипломат · Тінь. +1% швидкості руху",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:black_dye"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.movement_speed",
+     "value": 0.01,
+     "operation": "add_multiplied_base"
+    }
+   }
+  ]
+ },
+ "dip_0_m2": {
+  "title": "Спокій",
+  "description": "Дипломат · Тінь. +4% отримуваного лікування",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:honey_bottle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:healing_received",
+     "value": 0.04,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "dip_0_notable": {
+  "title": "Нечутні кроки II",
+  "description": "Помітний вузол гілки «Дипломат» (Тінь): у 2,5 раза більше. Швидше крадетеся",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:white_wool"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "player.sneaking_speed",
+     "value": 0.125,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "dip_u_quiet_step": {
+  "title": "Тиха хода",
+  "description": "Велика навичка гілки «Дипломат». Монстри помічають вас на 20% пізніше.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:sculk_sensor"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "quiet_step"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "dip_mastery_quiet_step": {
+  "title": "Тиха хода II",
+  "description": "Майстерність: «Тиха хода» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:sculk_sensor"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "quiet_step"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "dip_1_m0": {
+  "title": "Переконливість",
+  "description": "Дипломат · Посередник. +5% до шансу виторгувати плату чи переконати квестодавця",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:paper"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "persuasion",
+     "value": 0.05
+    }
+   }
+  ]
+ },
+ "dip_1_m1": {
+  "title": "Добре ім'я",
+  "description": "Дипломат · Посередник. +0,2 удачі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:name_tag"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.2,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "dip_1_m2": {
+  "title": "Мудрість",
+  "description": "Дипломат · Посередник. +3% досвіду",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:book"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "dip_1_notable": {
+  "title": "Переконливість II",
+  "description": "Помітний вузол гілки «Дипломат» (Посередник): у 2,5 раза більше. +5% до шансу виторгувати плату чи переконати квестодавця",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:paper"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "persuasion",
+     "value": 0.125
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "dip_u_silver_tongue": {
+  "title": "Красномовство",
+  "description": "Велика навичка гілки «Дипломат». У розмовах із мандрівниками-квестодавцями з'являється варіант «збрехати, що все вже зроблено» — лише в найцінніших дорученнях і з невеликим шансом (на провал замовник ображається й більше не дає вам доручень). Також +15% за рівень до шансу виторгувати кращу плату.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:writable_book"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "silver_tongue"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "dip_mastery_silver_tongue": {
+  "title": "Красномовство II",
+  "description": "Майстерність: «Красномовство» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:writable_book"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "silver_tongue"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "dip_2_m0": {
+  "title": "Відкрите серце",
+  "description": "Дипломат · Друг народів. +½ серця",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:golden_apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 1,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "dip_2_m1": {
+  "title": "Гостинність",
+  "description": "Дипломат · Друг народів. +6% насичення від їжі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bread"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "hearty",
+     "value": 0.06
+    }
+   }
+  ]
+ },
+ "dip_2_m2": {
+  "title": "Довіра",
+  "description": "Дипломат · Друг народів. +4% до шансу виторгувати плату чи переконати квестодавця",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "persuasion",
+     "value": 0.04
+    }
+   }
+  ]
+ },
+ "dip_2_notable": {
+  "title": "Відкрите серце II",
+  "description": "Помітний вузол гілки «Дипломат» (Друг народів): у 2,5 раза більше. +½ серця",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:golden_apple"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.max_health",
+     "value": 2.5,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "dip_u_goblin_friend": {
+  "title": "Друг гоблінів",
+  "description": "Велика навичка гілки «Дипломат». Гобліни-вояки більше не нападають першими, а корчмар, купець і коваль гоблінів раз на день дарують вам гоблінські монети. Без мода гоблінів — Друг піглінів: пігліни спокійні й без золотої броні.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:gold_nugget"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "goblin_friend",
+     "fallback": "piglin_friend"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "dip_keystone": {
+  "title": "Миротворець",
+  "description": "Ключова навичка. Присядьте 4 рази поспіль — усі нейтральні істоти, що розлютилися на вас (вовки, големи, бджоли, ендермени, зомбі-пігліни...), заспокоюються. Раз на 10 хвилин.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:white_banner"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "peacemaker"
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "persuasion",
+     "value": 0.15
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ },
+ "tra_0_m0": {
+  "title": "Торг",
+  "description": "Торговець · Купець. Кожні 3 такі вузли — мінус 1 смарагд з кожного обміну",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "discount",
+     "value": 0.34
+    }
+   }
+  ]
+ },
+ "tra_0_m1": {
+  "title": "Комерсант",
+  "description": "Торговець · Купець. +0,2 удачі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:gold_nugget"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.luck",
+     "value": 0.2,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "tra_0_m2": {
+  "title": "Досвід ринку",
+  "description": "Торговець · Купець. +2% досвіду",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:experience_bottle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:experience_gained",
+     "value": 0.02,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "tra_0_notable": {
+  "title": "Торг II",
+  "description": "Помітний вузол гілки «Торговець» (Купець): у 2,5 раза більше. Кожні 3 такі вузли — мінус 1 смарагд з кожного обміну",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "discount",
+     "value": 0.85
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "tra_u_haggler": {
+  "title": "Торгівля з розумом",
+  "description": "Велика навичка гілки «Торговець». Кожен обмін із селянином на 1 смарагд дешевший за рівень.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald_block"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "haggler"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "tra_mastery_haggler": {
+  "title": "Торгівля з розумом II",
+  "description": "Майстерність: «Торгівля з розумом» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:emerald_block"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "haggler"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "tra_1_m0": {
+  "title": "Привітність",
+  "description": "Торговець · Сусід. +3% отримуваного лікування",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:poppy"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:healing_received",
+     "value": 0.03,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.02,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ]
+ },
+ "tra_1_m1": {
+  "title": "Сільський хліб",
+  "description": "Торговець · Сусід. +6% насичення від їжі",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bread"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "hearty",
+     "value": 0.06
+    }
+   }
+  ]
+ },
+ "tra_1_m2": {
+  "title": "Урожай",
+  "description": "Торговець · Сусід. 4% шанс, що стиглий урожай дасть ще одну одиницю",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:wheat"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "harvest",
+     "value": 0.04
+    }
+   }
+  ]
+ },
+ "tra_1_notable": {
+  "title": "Привітність II",
+  "description": "Помітний вузол гілки «Торговець» (Сусід): у 2,5 раза більше. +3% отримуваного лікування",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:poppy"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "irons_lib:healing_received",
+     "value": 0.075,
+     "operation": "add_value",
+     "fallback": {
+      "attribute": "generic.attack_damage",
+      "value": 0.05,
+      "operation": "add_multiplied_base"
+     }
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "tra_u_village_gifts": {
+  "title": "Улюбленець села",
+  "description": "Велика навичка гілки «Торговець». Селяни поруч з вами час від часу кидають вам подарунки свого ремесла.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:cake"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "village_gifts"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "tra_mastery_village_gifts": {
+  "title": "Улюбленець села II",
+  "description": "Майстерність: «Улюбленець села» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:cake"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "village_gifts"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "tra_2_m0": {
+  "title": "Обладунок найманця",
+  "description": "Торговець · Наймач. +1 броні",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:chainmail_chestplate"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.armor",
+     "value": 1,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "tra_2_m1": {
+  "title": "Звичка до бою",
+  "description": "Торговець · Наймач. +3% опору відкиданню",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:shield"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.knockback_resistance",
+     "value": 0.03,
+     "operation": "add_value"
+    }
+   }
+  ]
+ },
+ "tra_2_m2": {
+  "title": "Тугий гаманець",
+  "description": "Торговець · Наймач. Знижка при обміні (сумується)",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:bundle"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "task"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "discount",
+     "value": 0.25
+    }
+   }
+  ]
+ },
+ "tra_2_notable": {
+  "title": "Обладунок найманця II",
+  "description": "Помітний вузол гілки «Торговець» (Наймач): у 2,5 раза більше. +1 броні",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:chainmail_chestplate"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "goal"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:stat",
+    "data": {
+     "attribute": "generic.armor",
+     "value": 2.5,
+     "operation": "add_value"
+    }
+   }
+  ],
+  "cost": 2,
+  "extra_description": "Ціна: 2 очки."
+ },
+ "tra_u_mercenaries": {
+  "title": "Найманці",
+  "description": "Велика навичка гілки «Торговець». Присядьте й клацніть по залізному голему чи вартовому села, тримаючи 8 смарагдів, — він іде за вами й б'ється за вас до наступного дня (на 2-му рівні — двоє водночас).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_golem_spawn_egg"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "mercenaries"
+    }
+   }
+  ],
+  "cost": 3,
+  "extra_description": "Ціна: 3 очки."
+ },
+ "tra_mastery_mercenaries": {
+  "title": "Найманці II",
+  "description": "Майстерність: «Найманці» сильніша (2-й рівень).",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:iron_golem_spawn_egg"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "mercenaries"
+    }
+   }
+  ],
+  "cost": 3,
+  "required_spent_points": 40,
+  "extra_description": "Відкривається, коли у дереві витрачено щонайменше 40 очок. Ціна: 3 очки."
+ },
+ "tra_keystone": {
+  "title": "Щедра угода",
+  "description": "Ключова навичка. Раз на день будь-який обмін із селянином безкоштовний — сплачене повертається. Ще мінус 1 смарагд з кожного обміну, +10% урожаю.",
+  "icon": {
+   "type": "item",
+   "data": {
+    "item": "minecraft:villager_spawn_egg"
+   }
+  },
+  "frame": {
+   "type": "advancement",
+   "data": {
+    "frame": "challenge"
+   }
+  },
+  "rewards": [
+   {
+    "type": "wilds_core:ability",
+    "data": {
+     "ability": "generous_deal"
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "discount",
+     "value": 1
+    }
+   },
+   {
+    "type": "wilds_core:perk",
+    "data": {
+     "perk": "harvest",
+     "value": 0.1
+    }
+   }
+  ],
+  "cost": 4,
+  "required_spent_points": 70,
+  "extra_description": "Ключова навичка: з'єднана з усіма трьома великими навичками гілки, досить мати одну з них. Відкривається, коли у дереві витрачено щонайменше 70 очок. Ціна: 4 очки."
+ }
+}

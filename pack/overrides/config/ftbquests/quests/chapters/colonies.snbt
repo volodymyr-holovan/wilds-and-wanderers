@@ -1,0 +1,725 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "colonies"
+	group: "3C6D5B8B49BE1899"
+	icon: {
+		id: "minecolonies:blockhuttownhall"
+	}
+	id: "21A91F42ACAD414E"
+	order_index: 18
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:bell"
+			}
+			id: "7BADB20F26C8C650"
+			rewards: [
+				{
+					count: 8
+					id: "4E1A2DF7C008FA84"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "544155B0253427D1"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "1C705C0A4D4F17DE"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "5CC08268D83CE24E"
+					structure: "#minecraft:village"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7BADB20F26C8C650"
+			]
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "51BF1DD1C3B2160A"
+			rewards: [
+				{
+					id: "2571D5B8D7E0636E"
+					item: {
+						count: 1
+						id: "minecraft:iron_sword"
+					}
+					type: "item"
+				}
+				{
+					id: "633C6775449ABA25"
+					item: {
+						count: 1
+						id: "minecraft:shield"
+					}
+					type: "item"
+				}
+				{
+					id: "3E4BD5DF9D3095EC"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "5C458959A34C3E43"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					id: "31EC522D7AC5C9FC"
+					type: "kill"
+					value: 5L
+				}
+			]
+			x: 2.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"7BADB20F26C8C650"
+			]
+			icon: {
+				id: "easy_villagers:villager"
+			}
+			id: "1D286D1EBB388212"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4D51FC371DA440B3"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "20B15DB48CF9A51B"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "1BCC453B1CD272A0"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2BA4516F710C9D7E"
+					item: {
+						count: 1
+						id: "easy_villagers:trader"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"7BADB20F26C8C650"
+			]
+			icon: {
+				id: "minecolonies:supplycampdeployer"
+			}
+			id: "7316FA6B28EC3B0B"
+			rewards: [
+				{
+					id: "64059B544E37C45D"
+					item: {
+						count: 1
+						id: "minecolonies:supplycampdeployer"
+					}
+					type: "item"
+				}
+				{
+					id: "4DF66FFB33779695"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "779E7A2418A93AC6"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "1BBA4D0098DEEFD9"
+					item: {
+						count: 1
+						id: "minecolonies:blockhuttownhall"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"7316FA6B28EC3B0B"
+			]
+			icon: {
+				id: "minecolonies:blockhutbuilder"
+			}
+			id: "538C863C36A22199"
+			rewards: [
+				{
+					count: 64
+					id: "13A8380786E5F588"
+					item: {
+						count: 1
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "1286F9B4F42064E8"
+					item: {
+						count: 1
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+				{
+					id: "4960318423BEB538"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "5D0686F1D1B5CEA7"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1123906CA9766F8D"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutbuilder"
+					}
+					type: "item"
+				}
+				{
+					id: "1328E83FF0E2A7B2"
+					item: {
+						count: 1
+						id: "structurize:sceptergold"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"538C863C36A22199"
+			]
+			icon: {
+				id: "minecolonies:blockhutcitizen"
+			}
+			id: "1C89EB51D23F6C42"
+			rewards: [
+				{
+					count: 8
+					id: "39A90E8CA4F0FDE0"
+					item: {
+						count: 1
+						id: "farmersdelight:beef_stew"
+					}
+					type: "item"
+				}
+				{
+					id: "195CC25538592792"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "156ED15E2C581649"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4935AB38FB498B0E"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutcitizen"
+					}
+					type: "item"
+				}
+				{
+					id: "6551F38D795248FA"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutcook"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"538C863C36A22199"
+			]
+			icon: {
+				id: "minecolonies:blockhutlumberjack"
+			}
+			id: "102DE72CB57467CC"
+			rewards: [
+				{
+					id: "572BB096F34FE976"
+					item: {
+						count: 1
+						id: "minecraft:iron_axe"
+					}
+					type: "item"
+				}
+				{
+					id: "2D9FC8B7F707CBB3"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "16193DEBE9C85CD1"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "17939F9565835900"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutlumberjack"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"538C863C36A22199"
+			]
+			icon: {
+				id: "minecolonies:blockhutminer"
+			}
+			id: "59A1BD92AED461CD"
+			rewards: [
+				{
+					id: "1FFBCAF58C335E2C"
+					item: {
+						count: 1
+						id: "minecraft:iron_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "4D6D7566C514FD84"
+					item: {
+						count: 1
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "44F2A58B07A0C9AC"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "265F163271275C67"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5E8ADC45EF2C80B4"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutminer"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"1C89EB51D23F6C42"
+			]
+			icon: {
+				id: "minecolonies:blockhutfarmer"
+			}
+			id: "6AD292256C16F1C0"
+			rewards: [
+				{
+					count: 16
+					id: "4720C7F09CCD663D"
+					item: {
+						count: 1
+						id: "farmersdelight:cabbage_seeds"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1D934609AF0A0B63"
+					item: {
+						count: 1
+						id: "farmersdelight:tomato_seeds"
+					}
+					type: "item"
+				}
+				{
+					id: "37E7A549A3AF70C8"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "59FB1244C590EF4F"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3B8AAEFB44C0EA1E"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutfarmer"
+					}
+					type: "item"
+				}
+				{
+					id: "31547C363AAE05FF"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutfisherman"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6AD292256C16F1C0"
+				"102DE72CB57467CC"
+				"59A1BD92AED461CD"
+			]
+			icon: {
+				id: "minecolonies:blockhutwarehouse"
+			}
+			id: "454CF63929EC1CFD"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3432FBD4D1AB2B65"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "1BCDF6B971F78CCF"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "50F965668DF08419"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3151FEFCA68B8B97"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutwarehouse"
+					}
+					type: "item"
+				}
+				{
+					id: "2F32E55074940A51"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutdeliveryman"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"454CF63929EC1CFD"
+			]
+			icon: {
+				id: "minecolonies:blockhutguardtower"
+			}
+			id: "39F6F1EB4894D893"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "42249A3752A87E2C"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "7FEF9F128FAA9065"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "1DF2D4C3CCA66725"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "13E2853D88008C0E"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutguardtower"
+					}
+					type: "item"
+				}
+				{
+					entity: "minecolonies:barbarian"
+					id: "726B0FD271715D9C"
+					type: "kill"
+					value: 5L
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"39F6F1EB4894D893"
+			]
+			icon: {
+				id: "minecolonies:blockhutuniversity"
+			}
+			id: "2791F2E4B56FAD04"
+			rewards: [
+				{
+					id: "3D41CF2AA1B807C6"
+					item: {
+						count: 1
+						id: "minecolonies:ancienttome"
+					}
+					type: "item"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "16FE064693039030"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "1F3B94932FCFB6D5"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "627BE82DF947625C"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "56BD027CFD6DB385"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutuniversity"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7316FA6B28EC3B0B"
+			]
+			icon: {
+				id: "minecolonies:scepterpermission"
+			}
+			id: "7D627C369F4DA93C"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "19CD22DE19D32B8D"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "4E14775BA3569DC4"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "24FAC6B7A4EB7C72"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "18D22BC70BB77020"
+					structure: "minecolonies:medieval_oak_colony"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"7BADB20F26C8C650"
+			]
+			icon: {
+				id: "minecraft:diamond_axe"
+			}
+			id: "14CE780DAEDBACDE"
+			rewards: [
+				{
+					id: "181DF46BF34E1655"
+					item: {
+						count: 1
+						id: "minecraft:iron_axe"
+					}
+					type: "item"
+				}
+				{
+					id: "1629D1C98C7F5F08"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "53F56EEF3A927756"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "6E0AB8F824C99786"
+					item: {
+						count: 1
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+	]
+}

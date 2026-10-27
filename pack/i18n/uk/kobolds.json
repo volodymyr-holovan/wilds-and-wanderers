@@ -1,0 +1,23 @@
+{
+ "block.kobolds.banner.kobold.black": "Чорний кобольд",
+ "block.kobolds.banner.kobold.blue": "Синій кобольд",
+ "block.kobolds.banner.kobold.brown": "Бурий кобольд",
+ "block.kobolds.banner.kobold.cyan": "Бірюзовий кобольд",
+ "block.kobolds.banner.kobold.gray": "Сірий кобольд",
+ "block.kobolds.banner.kobold.green": "Зелений кобольд",
+ "block.kobolds.banner.kobold.light_blue": "Блакитний кобольд",
+ "block.kobolds.banner.kobold.light_gray": "Світло-сірий кобольд",
+ "block.kobolds.banner.kobold.lime": "Лаймовий кобольд",
+ "block.kobolds.banner.kobold.magenta": "Пурпуровий кобольд",
+ "block.kobolds.banner.kobold.orange": "Помаранчевий кобольд",
+ "block.kobolds.banner.kobold.pink": "Рожевий кобольд",
+ "block.kobolds.banner.kobold.purple": "Фіолетовий кобольд",
+ "block.kobolds.banner.kobold.red": "Червоний кобольд",
+ "block.kobolds.banner.kobold.white": "Білий кобольд",
+ "block.kobolds.banner.kobold.yellow": "Жовтий кобольд",
+ "item.kobolds.kobold_iron_spear": "Спис з кобольдського заліза",
+ "item.minecraft.lingering_potion.effect.amethyst": "Аметистове тривке зілля зцілення",
+ "item.minecraft.potion.effect.amethyst": "Аметистове зілля зцілення",
+ "item.minecraft.splash_potion.effect.amethyst": "Аметистове вибухове зілля зцілення",
+ "item.minecraft.tipped_arrow.effect.amethyst": "Аметистова стріла зцілення"
+}

@@ -1,0 +1,469 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "caves"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "alexscaves:amber"
+	}
+	id: "2D95229FE2CA724C"
+	order_index: 13
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "alexscaves:cave_map"
+			}
+			id: "116DEDD639324352"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "785F26CDD6FBB551"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "10B92968A4E863D7"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "6B7A7EE16FBAF73D"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "6AF282BC04FC73D0"
+					item: {
+						count: 1
+						id: "alexscaves:cave_map"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"116DEDD639324352"
+			]
+			icon: {
+				id: "alexscaves:dinosaur_nugget"
+			}
+			id: "51900552A76C9E91"
+			rewards: [
+				{
+					id: "455A974B198DAF8F"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "14CA118169C0435F"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:primordial_caves"
+					id: "31B2F1E34101B52E"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: -4.375d
+		}
+		{
+			dependencies: [
+				"51900552A76C9E91"
+			]
+			icon: {
+				id: "alexscaves:tough_hide"
+			}
+			id: "17FFF5CD503E185C"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2A121172C78CDA2E"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "5598D7FCDAA86FEE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "5A06398ABEECB28D"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "67F0D96BD7BC082C"
+					item: {
+						count: 1
+						id: "alexscaves:tough_hide"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1C722E79A265796B"
+					item: {
+						count: 1
+						id: "alexscaves:heavy_bone"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"17FFF5CD503E185C"
+			]
+			icon: {
+				id: "alexscaves:subterranodon_egg"
+			}
+			id: "50844ABF39AF2107"
+			rewards: [
+				{
+					id: "6C3A525A29F383A6"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "4A5FC31CBF3D4581"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "69E270E2663F2F3D"
+					item: {
+						count: 1
+						id: "alexscaves:subterranodon_egg"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"17FFF5CD503E185C"
+			]
+			icon: {
+				id: "alexscaves:tectonic_shard"
+			}
+			id: "4076FC27550D1360"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "702AB9E5A2EC060A"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2DC3937513C847A9"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "4FE14B92B763749A"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "7CAAA1A9A9103E6C"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:luxtructosaurus"
+					id: "5B88E979484105B1"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"116DEDD639324352"
+			]
+			icon: {
+				id: "alexscaves:uranium"
+			}
+			id: "537F3A8708ABD2CD"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1BF86E3D30426AC8"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "68B035ADB04A5F74"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "283286B17C228445"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:toxic_caves"
+					id: "3564B3C591993F5D"
+					type: "biome"
+				}
+				{
+					id: "1A1184E297CE0A69"
+					item: {
+						count: 1
+						id: "alexscaves:hazmat_mask"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"116DEDD639324352"
+			]
+			icon: {
+				id: "alexscaves:scarlet_neodymium_ingot"
+			}
+			id: "2DD1BF740F733D1E"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3D85E6BF8CD5B0C1"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "1CD215D0BC8CB219"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "69E64FA15C816F42"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:magnetic_caves"
+					id: "3E263107A080813E"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"116DEDD639324352"
+			]
+			icon: {
+				id: "alexscaves:pearl"
+			}
+			id: "62EF1AD6C6AFFA8C"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2D7B98332672C8AF"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "537407F0ACDFF069"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "1ECAB11B4FEBC033"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:abyssal_chasm"
+					id: "6447DA7C59344101"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"116DEDD639324352"
+			]
+			icon: {
+				id: "alexscaves:dark_tatters"
+			}
+			id: "286AD2C4EC8D4A3E"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3962C018FD7863EF"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "285409F7788F74E6"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "72361B9F713968C1"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:forlorn_hollows"
+					id: "422550977D9D4095"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"116DEDD639324352"
+			]
+			icon: {
+				id: "alexscaves:sweet_tooth"
+			}
+			id: "77BF174B65F81433"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "57696732C5E804F1"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "434B434CBA6061A4"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "1F2193C853B8D8EA"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:candy_cavity"
+					id: "4C395EE1A7124189"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 4.375d
+		}
+	]
+}

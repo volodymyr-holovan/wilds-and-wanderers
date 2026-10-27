@@ -1,0 +1,810 @@
+[
+ {
+  "jar": "Mekanism-1.21.1-10.7.19.85.jar",
+  "ns": "mekanism",
+  "en": 3239,
+  "uk": 1527,
+  "missing": 1713,
+  "words": 9678
+ },
+ {
+  "jar": "easy_npc_config_ui-neoforge-1.21.1-7.17.0.jar",
+  "ns": "easy_npc_config_ui",
+  "en": 771,
+  "uk": 0,
+  "missing": 771,
+  "words": 3153
+ },
+ {
+  "jar": "open-parties-and-claims-neoforge-1.21.1-0.33.0.jar",
+  "ns": "openpartiesandclaims",
+  "en": 702,
+  "uk": 0,
+  "missing": 702,
+  "words": 4973
+ },
+ {
+  "jar": "ars_n_spells-3.3.5.jar",
+  "ns": "ars_n_spells",
+  "en": 625,
+  "uk": 0,
+  "missing": 625,
+  "words": 3908
+ },
+ {
+  "jar": "MekanismTools-1.21.1-10.7.19.85.jar",
+  "ns": "mekanismtools",
+  "en": 800,
+  "uk": 183,
+  "missing": 617,
+  "words": 3762
+ },
+ {
+  "jar": "iceandfire-2.0.jar",
+  "ns": "iceandfire",
+  "en": 1740,
+  "uk": 1194,
+  "missing": 546,
+  "words": 1625
+ },
+ {
+  "jar": "alexscaves-1.1.3-neoforge+1.21.1.jar",
+  "ns": "alexscaves",
+  "en": 1725,
+  "uk": 1341,
+  "missing": 386,
+  "words": 1411
+ },
+ {
+  "jar": "create-enchantment-industry-2.4.2.jar",
+  "ns": "create_enchantment_industry",
+  "en": 363,
+  "uk": 0,
+  "missing": 363,
+  "words": 2562
+ },
+ {
+  "jar": "jei-1.21.1-neoforge-19.64.0.455.jar",
+  "ns": "jei",
+  "en": 599,
+  "uk": 248,
+  "missing": 362,
+  "words": 2524
+ },
+ {
+  "jar": "CreateDragonsPlus-1.11.9.jar",
+  "ns": "create_dragons_plus",
+  "en": 356,
+  "uk": 0,
+  "missing": 356,
+  "words": 1357
+ },
+ {
+  "jar": "xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+  "ns": "xaeroworldmap",
+  "en": 326,
+  "uk": 0,
+  "missing": 326,
+  "words": 2945
+ },
+ {
+  "jar": "irons_spellbooks-1.21.1-3.16.3.jar",
+  "ns": "irons_spellbooks",
+  "en": 1315,
+  "uk": 1076,
+  "missing": 262,
+  "words": 1457
+ },
+ {
+  "jar": "ftb-quests-neoforge-2101.1.36.jar",
+  "ns": "ftbquests",
+  "en": 772,
+  "uk": 531,
+  "missing": 260,
+  "words": 1578
+ },
+ {
+  "jar": "sophisticatedstorage-1.21.1-1.6.9.2199.jar",
+  "ns": "sophisticatedstorage",
+  "en": 425,
+  "uk": 223,
+  "missing": 204,
+  "words": 845
+ },
+ {
+  "jar": "easy_npc-neoforge-1.21.1-7.17.0.jar",
+  "ns": "easy_npc",
+  "en": 202,
+  "uk": 0,
+  "missing": 202,
+  "words": 1313
+ },
+ {
+  "jar": "mowziesmobs-1.21.1-1.8.2.jar",
+  "ns": "mowziesmobs",
+  "en": 440,
+  "uk": 337,
+  "missing": 191,
+  "words": 717
+ },
+ {
+  "jar": "aether-1.21.1-1.5.10-neoforge.jar!accessories-neoforge-1.1.0-beta.48+1.21.1.jar",
+  "ns": "accessories",
+  "en": 178,
+  "uk": 0,
+  "missing": 178,
+  "words": 941
+ },
+ {
+  "jar": "MekanismGenerators-1.21.1-10.7.19.85.jar",
+  "ns": "mekanismgenerators",
+  "en": 364,
+  "uk": 195,
+  "missing": 169,
+  "words": 1262
+ },
+ {
+  "jar": "modernfix-neoforge-5.27.26+mc1.21.1.jar",
+  "ns": "modernfix",
+  "en": 155,
+  "uk": 0,
+  "missing": 155,
+  "words": 3613
+ },
+ {
+  "jar": "nomadictents-21.1.0.jar",
+  "ns": "nomadictents",
+  "en": 143,
+  "uk": 0,
+  "missing": 143,
+  "words": 455
+ },
+ {
+  "jar": "sophisticatedcore-1.21.1-1.5.17.2426.jar",
+  "ns": "sophisticatedcore",
+  "en": 318,
+  "uk": 177,
+  "missing": 142,
+  "words": 507
+ },
+ {
+  "jar": "dungeons-and-taverns-v4.4.4.jar",
+  "ns": "dnt",
+  "en": 137,
+  "uk": 0,
+  "missing": 137,
+  "words": 523
+ },
+ {
+  "jar": "waystones-neoforge-1.21.1-21.1.46.jar",
+  "ns": "waystones",
+  "en": 361,
+  "uk": 235,
+  "missing": 128,
+  "words": 518
+ },
+ {
+  "jar": "ftb-library-neoforge-2101.1.37.jar",
+  "ns": "ftblibrary",
+  "en": 113,
+  "uk": 0,
+  "missing": 113,
+  "words": 260
+ },
+ {
+  "jar": "ars_nouveau-1.21.1-5.13.3.jar",
+  "ns": "ars_nouveau",
+  "en": 2323,
+  "uk": 2214,
+  "missing": 110,
+  "words": 824
+ },
+ {
+  "jar": "tectonic-3.0.28-neoforge-21.1.jar",
+  "ns": "tectonic",
+  "en": 109,
+  "uk": 0,
+  "missing": 109,
+  "words": 747
+ },
+ {
+  "jar": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
+  "ns": "xaerominimap",
+  "en": 646,
+  "uk": 553,
+  "missing": 93,
+  "words": 1170
+ },
+ {
+  "jar": "sodium-neoforge-0.8.13+mc1.21.1.jar!net.caffeinemc.sodium-neoforge-0.8.13+mc1.21.1-mod.jar",
+  "ns": "sodium",
+  "en": 89,
+  "uk": 0,
+  "missing": 89,
+  "words": 1305
+ },
+ {
+  "jar": "reeses-sodium-options-neoforge-2.2.4+mc1.21.1.jar",
+  "ns": "reeses-sodium-options",
+  "en": 89,
+  "uk": 3,
+  "missing": 86,
+  "words": 445
+ },
+ {
+  "jar": "aether-1.21.1-1.5.10-neoforge.jar",
+  "ns": "aether",
+  "en": 1238,
+  "uk": 1156,
+  "missing": 82,
+  "words": 1620
+ },
+ {
+  "jar": "friendsandfoes-neoforge-5.0.3+mc1.21.1.jar",
+  "ns": "friendsandfoes",
+  "en": 347,
+  "uk": 272,
+  "missing": 79,
+  "words": 224
+ },
+ {
+  "jar": "bountiful-neoforge-8.0.0-beta.2.jar",
+  "ns": "bountiful",
+  "en": 138,
+  "uk": 71,
+  "missing": 75,
+  "words": 364
+ },
+ {
+  "jar": "irons_lib-1.21.1-2.2.0.jar",
+  "ns": "irons_lib",
+  "en": 72,
+  "uk": 0,
+  "missing": 72,
+  "words": 166
+ },
+ {
+  "jar": "inventoryessentials-neoforge-1.21.1-21.1.20.jar",
+  "ns": "inventoryessentials",
+  "en": 46,
+  "uk": 0,
+  "missing": 46,
+  "words": 256
+ },
+ {
+  "jar": "jupiter-2.3.7-1.21.1-neoforge.jar",
+  "ns": "jupiter",
+  "en": 45,
+  "uk": 0,
+  "missing": 45,
+  "words": 158
+ },
+ {
+  "jar": "create-1.21.1-6.0.10.jar!ponder-neoforge-1.0.82+mc1.21.1.jar",
+  "ns": "ponder",
+  "en": 62,
+  "uk": 22,
+  "missing": 40,
+  "words": 237
+ },
+ {
+  "jar": "sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
+  "ns": "sodium-extra",
+  "en": 416,
+  "uk": 380,
+  "missing": 38,
+  "words": 510
+ },
+ {
+  "jar": "balm-neoforge-1.21.1-21.0.66.jar",
+  "ns": "balm",
+  "en": 36,
+  "uk": 0,
+  "missing": 36,
+  "words": 116
+ },
+ {
+  "jar": "easynpc-x-ftb-quests-compat-neoforge-1.21.1-1.0.2.jar",
+  "ns": "easynpc_ftbq_compat",
+  "en": 36,
+  "uk": 0,
+  "missing": 36,
+  "words": 202
+ },
+ {
+  "jar": "guideme-21.1.20.jar",
+  "ns": "guideme",
+  "en": 36,
+  "uk": 0,
+  "missing": 36,
+  "words": 107
+ },
+ {
+  "jar": "xaerominimap-neoforge-1.21.1-26.6.0.jar!xaerolib-neoforge-1.21.1-1.7.3.jar",
+  "ns": "xaerolib",
+  "en": 46,
+  "uk": 10,
+  "missing": 36,
+  "words": 253
+ },
+ {
+  "jar": "xaeroworldmap-neoforge-1.21.1-1.47.0.jar!xaerolib-neoforge-1.21.1-1.7.3.jar",
+  "ns": "xaerolib",
+  "en": 46,
+  "uk": 10,
+  "missing": 36,
+  "words": 253
+ },
+ {
+  "jar": "createaddition-1.6.0.jar",
+  "ns": "createaddition",
+  "en": 261,
+  "uk": 236,
+  "missing": 34,
+  "words": 188
+ },
+ {
+  "jar": "Jade-1.21.1-NeoForge-15.10.6.jar",
+  "ns": "jade",
+  "en": 410,
+  "uk": 384,
+  "missing": 26,
+  "words": 73
+ },
+ {
+  "jar": "Apotheosis-1.21.1-8.9.0.jar",
+  "ns": "apotheosis",
+  "en": 802,
+  "uk": 779,
+  "missing": 25,
+  "words": 105
+ },
+ {
+  "jar": "ars_nouveau-1.21.1-5.13.3.jar!nuggets-neoforge-1.21.1-1.1.0.48.jar",
+  "ns": "nuggets",
+  "en": 25,
+  "uk": 0,
+  "missing": 25,
+  "words": 129
+ },
+ {
+  "jar": "owo-lib-neoforge-0.12.15.6-beta.1+1.21.jar",
+  "ns": "owo",
+  "en": 25,
+  "uk": 0,
+  "missing": 25,
+  "words": 143
+ },
+ {
+  "jar": "shulkerboxtooltip-neoforge-5.1.9+1.21.1.jar",
+  "ns": "shulkerboxtooltip",
+  "en": 93,
+  "uk": 69,
+  "missing": 24,
+  "words": 147
+ },
+ {
+  "jar": "aether-1.21.1-1.5.10-neoforge.jar!cumulus_menus-1.21.1-2.0.7-neoforge.jar",
+  "ns": "cumulus_menus",
+  "en": 23,
+  "uk": 0,
+  "missing": 23,
+  "words": 108
+ },
+ {
+  "jar": "ftb-teams-neoforge-2101.1.11.jar",
+  "ns": "ftbteams",
+  "en": 112,
+  "uk": 89,
+  "missing": 23,
+  "words": 265
+ },
+ {
+  "jar": "ae2wtlib-19.5.1.jar",
+  "ns": "ae2wtlib",
+  "en": 46,
+  "uk": 28,
+  "missing": 18,
+  "words": 58
+ },
+ {
+  "jar": "create-1.21.1-6.0.10.jar",
+  "ns": "create",
+  "en": 3639,
+  "uk": 3623,
+  "missing": 18,
+  "words": 71
+ },
+ {
+  "jar": "jei-1.21.1-neoforge-19.64.0.455.jar!mezz_config-1.21.1-neoforge-0.6.6.jar",
+  "ns": "mezz_config",
+  "en": 18,
+  "uk": 0,
+  "missing": 18,
+  "words": 112
+ },
+ {
+  "jar": "mezz_config-1.21.1-neoforge-0.6.8-standalone.jar!mezz_config-1.21.1-neoforge-0.6.8.jar",
+  "ns": "mezz_config",
+  "en": 18,
+  "uk": 0,
+  "missing": 18,
+  "words": 112
+ },
+ {
+  "jar": "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+  "ns": "betterdungeons",
+  "en": 86,
+  "uk": 69,
+  "missing": 17,
+  "words": 112
+ },
+ {
+  "jar": "bettercombat-neoforge-2.4.0+1.21.1.jar",
+  "ns": "bettercombat",
+  "en": 49,
+  "uk": 35,
+  "missing": 14,
+  "words": 113
+ },
+ {
+  "jar": "create-1.21.1-6.0.10.jar!flywheel-neoforge-1.21.1-1.0.6.jar",
+  "ns": "flywheel",
+  "en": 12,
+  "uk": 0,
+  "missing": 12,
+  "words": 59
+ },
+ {
+  "jar": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
+  "ns": "xaerobetterpvp",
+  "en": 78,
+  "uk": 66,
+  "missing": 12,
+  "words": 29
+ },
+ {
+  "jar": "twilightforest-1.21.1-4.8.3345-universal.jar",
+  "ns": "twilightforest",
+  "en": 2061,
+  "uk": 2054,
+  "missing": 11,
+  "words": 40
+ },
+ {
+  "jar": "appleskin-neoforge-mc1.21-3.0.9.jar",
+  "ns": "appleskin",
+  "en": 22,
+  "uk": 12,
+  "missing": 10,
+  "words": 147
+ },
+ {
+  "jar": "alexsmobs-2.2.4-neoforge+1.21.1.jar",
+  "ns": "alexsmobs",
+  "en": 1085,
+  "uk": 1091,
+  "missing": 9,
+  "words": 16
+ },
+ {
+  "jar": "L_Ender's Cataclysm 1.21.1-3.33.jar",
+  "ns": "cataclysm",
+  "en": 735,
+  "uk": 727,
+  "missing": 8,
+  "words": 34
+ },
+ {
+  "jar": "puffish_skills-0.19.2-1.21-neoforge.jar",
+  "ns": "puffish_skills",
+  "en": 50,
+  "uk": 43,
+  "missing": 8,
+  "words": 54
+ },
+ {
+  "jar": "lithostitched-1.8.1-neoforge-21.1.jar!apollib-1.2.0-neoforge-21.1.jar",
+  "ns": "apollib",
+  "en": 7,
+  "uk": 0,
+  "missing": 7,
+  "words": 28
+ },
+ {
+  "jar": "tectonic-3.0.28-neoforge-21.1.jar!apollib-1.1.6-neoforge-21.1.jar",
+  "ns": "apollib",
+  "en": 7,
+  "uk": 0,
+  "missing": 7,
+  "words": 28
+ },
+ {
+  "jar": "aether-1.21.1-1.5.10-neoforge.jar!nitrogen_internals-1.21.1-1.1.25-neoforge.jar",
+  "ns": "nitrogen_internals",
+  "en": 6,
+  "uk": 0,
+  "missing": 6,
+  "words": 15
+ },
+ {
+  "jar": "almostunified-neoforge-1.21.1-1.4.2.jar",
+  "ns": "almostunified",
+  "en": 6,
+  "uk": 0,
+  "missing": 6,
+  "words": 17
+ },
+ {
+  "jar": "easy_npc-neoforge-1.21.1-7.17.0.jar",
+  "ns": "easy_npc_example",
+  "en": 6,
+  "uk": 0,
+  "missing": 6,
+  "words": 43
+ },
+ {
+  "jar": "YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+  "ns": "betterstrongholds",
+  "en": 11,
+  "uk": 6,
+  "missing": 5,
+  "words": 43
+ },
+ {
+  "jar": "ae2wtlib-19.5.1.jar!de.mari_023.ae2wtlib_api-19.5.1.jar",
+  "ns": "ae2wtlib_api",
+  "en": 5,
+  "uk": 0,
+  "missing": 5,
+  "words": 30
+ },
+ {
+  "jar": "better-advanced-tooltips-2101.1.0-build.5.jar",
+  "ns": "betteradvancedtooltips",
+  "en": 5,
+  "uk": 0,
+  "missing": 5,
+  "words": 14
+ },
+ {
+  "jar": "kubejs-neoforge-2101.7.2-build.377.jar!better-advanced-tooltips-2101.1.0-build.1.jar",
+  "ns": "betteradvancedtooltips",
+  "en": 5,
+  "uk": 0,
+  "missing": 5,
+  "words": 14
+ },
+ {
+  "jar": "cloth-config-15.0.140-neoforge.jar",
+  "ns": "cloth-config2",
+  "en": 49,
+  "uk": 45,
+  "missing": 4,
+  "words": 13
+ },
+ {
+  "jar": "cristellib-neoforge-1.21.1-3.1.7.jar",
+  "ns": "cristellib",
+  "en": 4,
+  "uk": 0,
+  "missing": 4,
+  "words": 33
+ },
+ {
+  "jar": "curios-neoforge-9.5.1+1.21.1.jar",
+  "ns": "curios",
+  "en": 48,
+  "uk": 44,
+  "missing": 4,
+  "words": 11
+ },
+ {
+  "jar": "lionfishapi-3.1.jar",
+  "ns": "lionfishapi",
+  "en": 4,
+  "uk": 0,
+  "missing": 4,
+  "words": 18
+ },
+ {
+  "jar": "ApothicEnchanting-1.21.1-1.6.4.jar",
+  "ns": "apothic_enchanting",
+  "en": 425,
+  "uk": 422,
+  "missing": 3,
+  "words": 17
+ },
+ {
+  "jar": "appliedenergistics2-19.2.18.jar",
+  "ns": "ae2",
+  "en": 1021,
+  "uk": 1018,
+  "missing": 3,
+  "words": 4
+ },
+ {
+  "jar": "ApothicAttributes-1.21.1-2.11.0.jar",
+  "ns": "apothic_attributes",
+  "en": 161,
+  "uk": 164,
+  "missing": 2,
+  "words": 10
+ },
+ {
+  "jar": "Controlling-neoforge-1.21.1-19.0.5.jar",
+  "ns": "controlling",
+  "en": 12,
+  "uk": 10,
+  "missing": 2,
+  "words": 4
+ },
+ {
+  "jar": "FarmersDelight-1.21.1-1.3.4.jar",
+  "ns": "farmersdelight",
+  "en": 479,
+  "uk": 478,
+  "missing": 2,
+  "words": 24
+ },
+ {
+  "jar": "Patchouli-1.21.1-93-NEOFORGE.jar",
+  "ns": "patchouli",
+  "en": 92,
+  "uk": 90,
+  "missing": 2,
+  "words": 10
+ },
+ {
+  "jar": "YungsApi-1.21.1-NeoForge-5.1.9.jar",
+  "ns": "yungsapi",
+  "en": 3,
+  "uk": 1,
+  "missing": 2,
+  "words": 13
+ },
+ {
+  "jar": "entityculling-neoforge-1.11.3-mc1.21.1.jar",
+  "ns": "entityculling",
+  "en": 27,
+  "uk": 25,
+  "missing": 2,
+  "words": 39
+ },
+ {
+  "jar": "irons_lib-1.21.1-2.2.0.jar",
+  "ns": "irons_patreon_lib",
+  "en": 2,
+  "uk": 0,
+  "missing": 2,
+  "words": 5
+ },
+ {
+  "jar": "moreculling-neoforge-1.21.1-1.0.10.jar",
+  "ns": "moreculling",
+  "en": 55,
+  "uk": 53,
+  "missing": 2,
+  "words": 5
+ },
+ {
+  "jar": "chat_heads-0.15.7-neoforge-1.21.jar",
+  "ns": "chat_heads",
+  "en": 30,
+  "uk": 29,
+  "missing": 1,
+  "words": 26
+ },
+ {
+  "jar": "codxlib-1.6.1-neoforge+1.21.1.jar",
+  "ns": "codxlib",
+  "en": 1,
+  "uk": 0,
+  "missing": 1,
+  "words": 1
+ },
+ {
+  "jar": "copycats-3.0.9+mc.1.21.1-neoforge.jar",
+  "ns": "copycats",
+  "en": 67,
+  "uk": 66,
+  "missing": 1,
+  "words": 3
+ },
+ {
+  "jar": "create-enchantment-industry-2.4.2.jar",
+  "ns": "create_dragons_plus",
+  "en": 1,
+  "uk": 0,
+  "missing": 1,
+  "words": 9
+ },
+ {
+  "jar": "sophisticatedbackpacks-1.21.1-3.26.14.2222.jar",
+  "ns": "sophisticatedbackpacks",
+  "en": 407,
+  "uk": 406,
+  "missing": 1,
+  "words": 7
+ },
+ {
+  "jar": "ApothicSpawners-1.21.1-1.4.0.jar",
+  "ns": "apothic_spawners",
+  "en": 89,
+  "uk": 89,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "Applied-Mekanistics-1.6.3.jar",
+  "ns": "appmek",
+  "en": 15,
+  "uk": 15,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "Placebo-1.21.1-9.9.4.jar",
+  "ns": "placebo",
+  "en": 6,
+  "uk": 6,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "Searchables-neoforge-1.21.1-1.0.2.jar",
+  "ns": "searchables",
+  "en": 1,
+  "uk": 1,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "SereneSeasons-neoforge-1.21.1-10.1.0.9.jar",
+  "ns": "sereneseasons",
+  "en": 36,
+  "uk": 36,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "Terralith_1.21.1_v2.6.2_Neoforge.jar",
+  "ns": "terralith",
+  "en": 144,
+  "uk": 144,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+  "ns": "bettermineshafts",
+  "en": 60,
+  "uk": 60,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "corpse-neoforge-1.21.1-1.1.22.jar",
+  "ns": "corpse",
+  "en": 22,
+  "uk": 22,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+  "ns": "dynamic_fps",
+  "en": 85,
+  "uk": 85,
+  "missing": 0,
+  "words": 0
+ },
+ {
+  "jar": "lootr-neoforge-1.21.1-1.11.38.127.jar",
+  "ns": "lootr",
+  "en": 249,
+  "uk": 249,
+  "missing": 0,
+  "words": 0
+ }
+]

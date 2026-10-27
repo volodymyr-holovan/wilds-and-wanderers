@@ -1,0 +1,87 @@
+# ═══════════════════════════════════════════════════════════
+# EasyLogin — Wilds & Wanderers (паролі для гравців з піратськими клієнтами)
+# ═══════════════════════════════════════════════════════════
+
+[general]
+# Seconds until unauthenticated player is kicked
+loginTimeout = 120
+# Seconds between action bar reminders
+reminderInterval = 10
+# Allow /logout command
+enableLogout = true
+# Logout cooldown in seconds
+logoutCooldown = 30
+
+[limbo]
+# Teleport to isolated coordinates while unauthenticated (off: modded worldgen makes fixed coordinates unsafe)
+enabled = false
+x = 0.5
+y = 120.0
+z = 0.5
+world = "minecraft:overworld"
+
+[security]
+# BCrypt cost factor (10-14 recommended)
+bcryptCost = 12
+# Max login attempts before lockout
+maxAttempts = 5
+# Rate limit window (minutes)
+attemptWindow = 5
+# Lockout duration (minutes)
+lockoutDuration = 10
+# Minimum password length
+minPasswordLength = 4
+
+[protection]
+# Block player movement while unauthenticated
+blockMovement = true
+# Block chat messages while unauthenticated
+blockChat = true
+# Block damage received while unauthenticated
+blockDamageReceived = true
+# Block damage dealt by unauthenticated players
+blockDamageDealt = true
+# Seconds of invincibility after successful login/register
+invincibilityDuration = 5
+
+[sounds]
+# Vanilla sound events
+loginSuccess = "minecraft:entity.player.levelup"
+loginFail = "minecraft:entity.villager.no"
+
+[messages]
+welcome = "&aВітаємо, {player}! &7Увійдіть: &e/login пароль"
+welcomeFirstTime = "&aВітаємо, {player}! &7Вперше тут? Зареєструйтеся: &e/register пароль пароль"
+loginSuccess = "&aВхід виконано. З поверненням, {player}!"
+registerSuccess = "&aАкаунт створено, ви увійшли."
+wrongPassword = "&cНевірний пароль. Залишилося спроб: {attempts}."
+alreadyLoggedIn = "&7Ви вже увійшли."
+notRegistered = "&cВи ще не зареєстровані. Введіть &e/register пароль пароль"
+alreadyRegistered = "&cВи вже зареєстровані. Введіть &e/login пароль"
+kicked = "&cЧас на вхід вичерпано. Перепідключіться й спробуйте знову."
+rateLimited = "&cЗабагато невдалих спроб. Спробуйте через {minutes} хв."
+passwordChanged = "&aПароль змінено!"
+passwordMismatch = "&cПаролі не збігаються. Спробуйте ще раз."
+wrongOldPassword = "&cСтарий пароль невірний."
+logoutSuccess = "&7Ви вийшли з акаунта."
+logoutCooldown = "&cЗачекайте {seconds} с перед виходом."
+actionBarReminder = "&eУвійдіть: /login пароль"
+actionBarReminderNew = "&eЗареєструйтеся: /register пароль пароль"
+blocked = "&cСпочатку увійдіть в акаунт!"
+loginUsage = "&7Як: &e/login пароль"
+registerUsage = "&7Як: &e/register пароль пароль"
+changePasswordUsage = "&7Як: &e/changepassword старий новий новий"
+adminForceLogin = "&aГравця {player} примусово впущено."
+adminForceRegister = "&aГравця {player} зареєстровано з тимчасовим паролем."
+adminResetPassword = "&aПароль гравця {player} скинуто — він має зареєструватися знову."
+adminPurge = "&aАкаунт {player} видалено."
+adminReload = "&aНалаштування перезавантажено."
+adminPlayerNotFound = "&cГравця {player} не знайдено."
+adminNotRegistered = "&c{player} ще не зареєстрований."
+minPasswordLength = "&cПароль має містити щонайменше {min} символи."
+
+[server]
+# Server display name for placeholders
+name = "Wilds & Wanderers"
+# Discord invite link (for {discord} placeholder)
+discord = ""

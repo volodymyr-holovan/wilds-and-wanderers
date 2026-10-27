@@ -1,0 +1,1 @@
+give {p} minecraft:oak_log 4

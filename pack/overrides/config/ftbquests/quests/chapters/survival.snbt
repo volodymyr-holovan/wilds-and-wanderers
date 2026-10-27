@@ -1,0 +1,249 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "survival"
+	group: "53F26294B0C486BB"
+	icon: {
+		id: "farmersdelight:cooking_pot"
+	}
+	id: "1E6EF59D382AFAD7"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "farmersdelight:flint_knife"
+			}
+			id: "3A2E297B2C382295"
+			rewards: [
+				{
+					count: 4
+					id: "62E04548F606E1D6"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "59D538C625C5146B"
+					type: "xp"
+					xp: 15
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "124FCC59C36848AA"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2C4028FF7F40FF6A"
+					item: {
+						count: 1
+						id: "farmersdelight:flint_knife"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3A2E297B2C382295"
+			]
+			icon: {
+				id: "farmersdelight:cutting_board"
+			}
+			id: "4332297DBDD8288C"
+			rewards: [
+				{
+					id: "21DFFE1453DBA2C9"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "37BF14714A351BEA"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "69BEEE31606CEC40"
+					item: {
+						count: 1
+						id: "farmersdelight:cutting_board"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"4332297DBDD8288C"
+			]
+			icon: {
+				id: "farmersdelight:cooking_pot"
+			}
+			id: "2075BCFC42EA468F"
+			rewards: [
+				{
+					count: 4
+					id: "59EAD7628BDF33F9"
+					item: {
+						count: 1
+						id: "farmersdelight:rice"
+					}
+					type: "item"
+				}
+				{
+					id: "28D4D6C51203B0C3"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "54E639B588009074"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2676B91800038068"
+					item: {
+						count: 1
+						id: "farmersdelight:cooking_pot"
+					}
+					type: "item"
+				}
+				{
+					id: "756DD2FE802D22AC"
+					item: {
+						count: 1
+						id: "farmersdelight:stove"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"3A2E297B2C382295"
+			]
+			icon: {
+				id: "sereneseasons:calendar"
+			}
+			id: "19CA5557CF2E3052"
+			rewards: [
+				{
+					id: "2A7E4971D04F06D1"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "171AF439A9E238B5"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2F846F4CBF6A5D92"
+					item: {
+						count: 1
+						id: "sereneseasons:calendar"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3A2E297B2C382295"
+			]
+			icon: {
+				id: "lootr:lootr_chest"
+			}
+			id: "3AC47F975D87FFA0"
+			rewards: [
+				{
+					id: "7C477F5956FC0EBC"
+					type: "xp"
+					xp: 15
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "59C658BA8B210DA8"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "604B580A920CA579"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"3AC47F975D87FFA0"
+			]
+			icon: {
+				id: "sophisticatedstorage:chest"
+			}
+			id: "3715C67F5C1D8BDF"
+			rewards: [
+				{
+					id: "40180D74C96C77D3"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "105BB6DF7330B42A"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "451A5301219C5E84"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:chest"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+	]
+}

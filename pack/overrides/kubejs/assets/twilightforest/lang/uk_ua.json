@@ -1,0 +1,13 @@
+{
+ "block.twilightforest.dark_tower_miniature_structure": "Мініатюрна темна вежа",
+ "block.twilightforest.minotaur_labyrinth_miniature_structure": "Мініатюрний лабіринт мінотавра",
+ "config.twilightforest.first_person_glove_overlay": "Рукавиці від першої особи",
+ "config.twilightforest.first_person_glove_overlay.tooltip": "Показувати рукавиці мандрівника на руці в режимі від першої особи.",
+ "entity.twilightforest.blockchain_goblin": "Гоблін з ланцюгом і гирею",
+ "entity.twilightforest.slime_blob": "Грудка слизу",
+ "entity.twilightforest.thrown_wep": "Кинута зброя",
+ "item.twilightforest.shika_senbei": "Сіка-сенбей",
+ "subtitles.twilightforest.block.drying_rack.add_item": "Сушарка заповнюється",
+ "subtitles.twilightforest.block.drying_rack.remove_item": "Сушарка звільняється",
+ "subtitles.twilightforest.entity.deer.eat": "Олень їсть"
+}

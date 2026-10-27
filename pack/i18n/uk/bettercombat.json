@@ -1,0 +1,16 @@
+{
+ "text.autoconfig.bettercombat.option.client.firstPersonAnimations": "Анімації гравця від першої особи",
+ "text.autoconfig.bettercombat.option.client.firstPersonAnimations.@Tooltip": "Показувати анімації атаки гравця. Змінюйте лише з модами на власну камеру.",
+ "text.autoconfig.bettercombat.option.client.isShowingWeaponTrails": "Сліди від помаху зброєю",
+ "text.autoconfig.bettercombat.option.client.isShowingWeaponTrails.@Tooltip": "Показувати частинки сліду атаки в усіх ракурсах камери",
+ "text.autoconfig.bettercombat.option.client.isSwingThruGrassSmart": "Розумний удар крізь траву",
+ "text.autoconfig.bettercombat.option.client.isSwingThruGrassSmart.@Tooltip": "Бити крізь траву лише тоді, коли в межах удару є вороги",
+ "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeReformat": "Підказка предмета: переформатувати дальність",
+ "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeReformat.@Tooltip": "Показувати «дальність взаємодії з сутностями» як «дальність атаки»",
+ "text.autoconfig.bettercombat.option.client.legAnimationThreshold": "Вимикати анімацію ніг",
+ "text.autoconfig.bettercombat.option.client.legAnimationThreshold.@Tooltip": "ЕКСПЕРИМЕНТАЛЬНО: вимикати анімацію ніг під час бігу, швидшого за це значення",
+ "text.autoconfig.bettercombat.option.client.mineWithWeaponBlacklist": "Чорний список зброї для копання",
+ "text.autoconfig.bettercombat.option.client.mineWithWeaponBlacklist.@Tooltip": "Зброя з ID, що відповідає цьому регулярному виразу, ніколи не копатиме блоки",
+ "text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist": "Білий список зброї для копання",
+ "text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist.@Tooltip": "Зброя з ID, що відповідає цьому регулярному виразу, завжди може копати блоки, навіть коли «Копати зброєю» вимкнено"
+}

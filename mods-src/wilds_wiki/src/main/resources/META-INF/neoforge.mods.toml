@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All rights reserved"
+
+[[mods]]
+modId="wilds_wiki"
+version="0.2.0"
+displayName="Wilds Wiki"
+authors="Wilds & Wanderers"
+description='''In-game encyclopedia of the Wilds & Wanderers pack: every item, block, mob, effect, biome and enchantment, with smart search (Ukrainian and English, typos, keyboard layout), history, articles and JEI recipes.'''
+displayTest="IGNORE_ALL_VERSION"
+
+[[mixins]]
+config="wilds_wiki.mixins.json"
+
+[[dependencies.wilds_wiki]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.wilds_wiki]]
+modId="jei"
+type="optional"
+versionRange="[19.0,)"
+ordering="AFTER"
+side="CLIENT"

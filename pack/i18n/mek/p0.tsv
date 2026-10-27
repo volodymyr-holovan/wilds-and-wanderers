@@ -1,0 +1,250 @@
+~.gear.meka_suit.toughness	Міцність
+~.gear.meka_suit.toughness.tooltip	Міцність броні МекаКостюма.
+~client.accessibility	Доступність
+~client.accessibility.button	Налаштувати доступність
+~client.accessibility.energy.color	Колір енергії
+~client.accessibility.energy.color.tooltip	Колір енергії, коли вона показана як смуга міцності на предметах.
+~client.accessibility.mode_change.scroll	Зміна режиму коліщатком
+~client.accessibility.mode_change.scroll.tooltip	Дозволяє змінювати режим предмета в руці, присівши й крутячи коліщатко миші.
+~client.accessibility.tooltip	Налаштування доступності Mekanism. Примітка: деякі параметри, як-от масштаб HUD, розкидані по інших розділах.
+~client.accessibility.white_radial_text	Білий текст кругових меню
+~client.accessibility.white_radial_text.tooltip	Намагається робити весь текст кругових меню білим замість кольору режиму сектора.
+~client.hud	HUD
+~client.hud.avoid_subtitles	Не перекривати субтитри
+~client.hud.avoid_subtitles.tooltip	Зсувати елементи HUD, коли показано субтитри звуків, щоб не перекривати їх
+~client.hud.button	Налаштувати HUD
+~client.hud.color	Колір
+~client.hud.color.danger	Колір небезпеки
+~client.hud.color.danger.tooltip	Колір (RGB) елементів HUD МекаКостюма для небезпеки.
+~client.hud.color.tooltip	Колір (RGB) HUD МекаКостюма.
+~client.hud.color.warning	Колір попередження
+~client.hud.color.warning.tooltip	Колір (RGB) елементів HUD МекаКостюма для попереджень.
+~client.hud.compass	Компас
+~client.hud.compass.tooltip	Показувати гарний компас, коли вдягнено шолом МекаКостюма.
+~client.hud.enabled	Увімкнено
+~client.hud.enabled.tooltip	HUD із даними про вдягнені предмети Mekanism і додатковою інформацією в шоломі МекаКостюма.
+~client.hud.jitter	Тремтіння
+~client.hud.jitter.tooltip	Візуальне тремтіння HUD МекаКостюма під час руху голови. Більше значення — сильніше тремтіння.
+~client.hud.mekasuit.energy_bar	Смуга енергії МекаКостюма
+~client.hud.mekasuit.energy_bar.tooltip	Показувати над смугою броні смугу загальної енергії вдягненого МекаКостюма.
+~client.hud.opacity	Непрозорість
+~client.hud.opacity.tooltip	Непрозорість HUD МекаКостюма.
+~client.hud.reverse	Віддзеркалити
+~client.hud.reverse.tooltip	Переносить текст HUD і компас праворуч, а модулі МекаКостюма — ліворуч. Увага: субтитри можуть перекривати частину HUD, наприклад компас.
+~client.hud.scale	Масштаб
+~client.hud.scale.tooltip	Масштаб тексту HUD.
+~client.hud.tooltip	Налаштування HUD Mekanism
+~client.last_window_positions	Останні положення вікон
+~client.last_window_positions.button	Змінити положення вікон
+~client.last_window_positions.color	Положення вікна кольору
+~client.last_window_positions.color.button	Змінити положення вікна кольору
+~client.last_window_positions.color.tooltip	Останнє положення вікна кольору, коли його закрили.
+~client.last_window_positions.confirmation	Положення вікна підтвердження
+~client.last_window_positions.confirmation.button	Змінити положення вікна підтвердження
+~client.last_window_positions.confirmation.tooltip	Останнє положення вікна підтвердження, коли його закрили.
+~client.last_window_positions.crafting0	Положення вікна крафту 1
+~client.last_window_positions.crafting0.button	Змінити положення вікна крафту
+~client.last_window_positions.crafting0.tooltip	Останнє положення вікна крафту, коли його закрили, і чи було воно закріплене.
+~client.last_window_positions.crafting1	Положення вікна крафту 2
+~client.last_window_positions.crafting1.button	Змінити положення вікна крафту
+~client.last_window_positions.crafting1.tooltip	Останнє положення вікна крафту, коли його закрили, і чи було воно закріплене.
+~client.last_window_positions.crafting2	Положення вікна крафту 3
+~client.last_window_positions.crafting2.button	Змінити положення вікна крафту
+~client.last_window_positions.crafting2.tooltip	Останнє положення вікна крафту, коли його закрили, і чи було воно закріплене.
+~client.last_window_positions.mekasuit_helmet	Положення вікна шолома МекаКостюма
+~client.last_window_positions.mekasuit_helmet.button	Змінити положення вікна шолома
+~client.last_window_positions.mekasuit_helmet.tooltip	Останнє положення вікна шолома МекаКостюма, коли його закрили.
+~client.last_window_positions.pinned	Закріплено
+~client.last_window_positions.pinned.tooltip	Чи закріплене вікно і чи відкриватиметься воно саме, коли знову відкрити інтерфейс.
+~client.last_window_positions.rename	Положення вікна перейменування
+~client.last_window_positions.rename.button	Змінити положення вікна перейменування
+~client.last_window_positions.rename.tooltip	Останнє положення вікна перейменування, коли його закрили.
+~client.last_window_positions.side_config	Положення вікна налаштування сторін
+~client.last_window_positions.side_config.button	Змінити положення вікна сторін
+~client.last_window_positions.side_config.tooltip	Останнє положення вікна налаштування сторін, коли його закрили, і чи було воно закріплене.
+~client.last_window_positions.skin_select	Положення вікна вибору скіна
+~client.last_window_positions.skin_select.button	Змінити положення вікна скіна
+~client.last_window_positions.skin_select.tooltip	Останнє положення вікна вибору скіна, коли його закрили.
+~client.last_window_positions.tooltip	Зберігає, де були вікна, коли їх закрили, і чи закріплені вони. Зазвичай змінювати вручну не треба.
+~client.last_window_positions.transporter_config	Положення вікна налаштування транспортера
+~client.last_window_positions.transporter_config.button	Змінити положення вікна транспортера
+~client.last_window_positions.transporter_config.tooltip	Останнє положення вікна налаштування транспортера, коли його закрили, і чи було воно закріплене.
+~client.last_window_positions.upgrade	Положення вікна покращень
+~client.last_window_positions.upgrade.button	Змінити положення вікна покращень
+~client.last_window_positions.upgrade.tooltip	Останнє положення вікна покращень, коли його закрили, і чи було воно закріплене.
+~client.last_window_positions.x	Координата X
+~client.last_window_positions.x.tooltip	Координата X останнього положення вікна.
+~client.last_window_positions.y	Координата Y
+~client.last_window_positions.y.tooltip	Координата Y останнього положення вікна.
+~client.particle	Частинки
+~client.particle.button	Налаштувати частинки
+~client.particle.machine_effects	Ефекти машин
+~client.particle.machine_effects.tooltip	Показувати частинки, коли машини працюють.
+~client.particle.magnetic_attraction	Магнітне притягання
+~client.particle.magnetic_attraction.tooltip	Показувати блискавки між гравцем і предметами, коли модуль магнітного притягання тягне їх до гравця.
+~client.particle.multiblock_formation	Утворення мультиблока
+~client.particle.multiblock_formation.tooltip	Коли мультиблок утворюється, показувати червоні іскри навколо нього. Якщо вимкнено — замість цього з'являється повідомлення над панеллю.
+~client.particle.radiation.count	Кількість частинок радіації
+~client.particle.radiation.count.tooltip	Скільки частинок з'являється для ефекту радіації (залежить від рівня радіації).
+~client.particle.radiation.radius	Радіус частинок радіації
+~client.particle.radiation.radius.tooltip	На якій відстані (у блоках) від гравця можуть з'являтися частинки радіації.
+~client.particle.tool_aoe	Дія інструментів по площі
+~client.particle.tool_aoe.tooltip	Показувати блискавки для дій інструментів по площі: оранка, обдирання кори, видобуток жили.
+~client.particle.tooltip	Налаштування частинок Mekanism
+~client.qio	QIO
+~client.qio.auto_focus	Автофокус
+~client.qio.auto_focus.tooltip	Чи ставити курсор у пошук одразу, як відкрито панель QIO.
+~client.qio.button	Налаштувати QIO
+~client.qio.rejects.destination	Зайве — в інвентар
+~client.qio.rejects.destination.tooltip	Чи переносити предмети з вікна крафту QIO спершу в інвентар гравця, а не в частоту, коли сітку заповнює рецепт із JEI.
+~client.qio.slots.x	Комірок у ширину
+~client.qio.slots.x.tooltip	Скільки комірок по горизонталі на панелі QIO.
+~client.qio.slots.y	Комірок у висоту
+~client.qio.slots.y.tooltip	Скільки комірок по вертикалі на панелі QIO.
+~client.qio.sort.direction	Напрям сортування
+~client.qio.sort.direction.tooltip	Напрям сортування предметів на панелі QIO.
+~client.qio.sort.type	Спосіб сортування
+~client.qio.sort.type.tooltip	Як сортувати предмети на панелі QIO.
+~client.qio.tooltip	Налаштування QIO Mekanism
+~client.render_range.block_entity	Дальність рендеру блок-сутностей
+~client.render_range.block_entity.tooltip	На якій відстані показуються блок-сутності Mekanism, як-от вміст мультиблоків. Ванільні — 64 для більшості блоків (скрині) і 256 для маяків і брам Енду. Менше значення — краща продуктивність, але вміст мультиблоків і вітряки «вискакуватимуть»
+~client.rendering	Рендер
+~client.rendering.button	Налаштувати рендер
+~client.rendering.tooltip	Як Mekanism показує деякі блоки і скільки частинок додає.
+~client.sounds	Звуки
+~client.sounds.base_volume	Базова гучність
+~client.sounds.base_volume.tooltip	Базова гучність звуків Mekanism. Менше 1 — тихіше, більше — гучніше.
+~client.sounds.button	Налаштувати звуки
+~client.sounds.machine.enable	Звуки машин
+~client.sounds.machine.enable.tooltip	Звуки працюючих машин.
+~client.sounds.player.enable	Звуки гравців
+~client.sounds.player.enable.tooltip	Звуки, коли гравець користується реактивним ранцем, аквалангом, вогнеметом чи гравітаційним модулем. Також впливає на клацання радіації.
+~client.sounds.tooltip	Налаштування звуків Mekanism
+~client.transmitters.opaque	Непрозорі передавачі
+~client.transmitters.opaque.tooltip	Якщо увімкнено, у кабелів, труб, трубок, транспортерів і провідників показуються стінки замість вмісту. Допомагає, якщо передавачі знижують FPS.
+~common.copy_block_data	Копіювати дані блока
+~common.copy_block_data.tooltip	Чи копіювати налаштування машини середньою кнопкою миші. Якщо вимкнено — дані не копіюються й дається звичайний предмет.
+~common.decay_timers	Таймери розпаду
+~common.decay_timers.tooltip	Показувати час розпаду радіації, коли рівень вищий за безпечний. Вимкніть на клієнті, щоб прибрати таймери Гейгера й дозиметра МекаКостюма; на сервері — таймери ручних лічильника Гейгера й дозиметра.
+~common.holidays	Свята
+~common.holidays.tooltip	Чи показувати святкові привітання й пасхалки (Різдво, Новий рік) на клієнті. Також керує тим, чи роботи зі звичайним скіном отримують випадковий скін на сервері.
+~common.unit.energy	Одиниця енергії
+~common.unit.energy.tooltip	Одиниця енергії в інтерфейсах Mekanism (клієнт) і показах мережевого зчитувача (сервер).
+~common.unit.temperature	Одиниця температури
+~common.unit.temperature.tooltip	Одиниця температури в інтерфейсах Mekanism (клієнт) і показах мережевого зчитувача (сервер).
+~gear.bow	Електричний лук
+~gear.bow.button	Налаштувати електричний лук
+~gear.bow.charge_rate	Швидкість заряджання
+~gear.bow.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти електричний лук.
+~gear.bow.energy_usage	Витрата енергії
+~gear.bow.energy_usage.flame	Витрата на вогонь
+~gear.bow.energy_usage.flame.tooltip	Ціна в Дж пострілу електричного лука з увімкненим вогнем.
+~gear.bow.energy_usage.tooltip	Ціна в Дж пострілу електричного лука.
+~gear.bow.max_energy	Найбільший запас енергії
+~gear.bow.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщує електричний лук.
+~gear.bow.tooltip	Налаштування електричного лука
+~gear.canteen	Фляга
+~gear.canteen.button	Налаштувати флягу
+~gear.canteen.capacity	Місткість
+~gear.canteen.capacity.tooltip	Скільки мБ поживної пасти найбільше вміщує фляга.
+~gear.canteen.tooltip	Налаштування фляг
+~gear.canteen.transfer_rate	Швидкість наповнення
+~gear.canteen.transfer_rate.tooltip	Швидкість (мБ/т), з якою поживна паста наливається у флягу.
+~gear.disassembler	Атомний дезінтегратор
+~gear.disassembler.attack_speed	Швидкість атаки
+~gear.disassembler.attack_speed.tooltip	Швидкість атаки атомного дезінтегратора.
+~gear.disassembler.button	Налаштувати дезінтегратор
+~gear.disassembler.charge_rate	Швидкість заряджання
+~gear.disassembler.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти атомний дезінтегратор.
+~gear.disassembler.damage.max	Найбільша шкода
+~gear.disassembler.damage.max.tooltip	Додаткова шкода атомного дезінтегратора, коли в ньому є щонайменше energyUsageWeapon енергії. (У половинках серця)
+~gear.disassembler.damage.min	Найменша шкода
+~gear.disassembler.damage.min.tooltip	Додаткова шкода атомного дезінтегратора без енергії. (У половинках серця)
+~gear.disassembler.energy_usage	Витрата енергії
+~gear.disassembler.energy_usage.tooltip	Базова витрата енергії (Дж) атомного дезінтегратора. (Множиться на швидкість)
+~gear.disassembler.energy_usage.weapon	Витрата як зброя
+~gear.disassembler.energy_usage.weapon.tooltip	Ціна в Дж удару атомним дезінтегратором як зброєю.
+~gear.disassembler.fast	Швидкий режим
+~gear.disassembler.fast.tooltip	Дозволити «швидкий» режим атомного дезінтегратора.
+~gear.disassembler.max_energy	Найбільший запас енергії
+~gear.disassembler.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщує атомний дезінтегратор.
+~gear.disassembler.mining_count	Блоків за жилу
+~gear.disassembler.mining_count.tooltip	Скільки блоків найбільше видобуває атомний дезінтегратор у режимі жили. Потрібно, щоб veinMining був увімкнений.
+~gear.disassembler.slow	Повільний режим
+~gear.disassembler.slow.tooltip	Дозволити «повільний» режим атомного дезінтегратора.
+~gear.disassembler.tooltip	Налаштування атомного дезінтегратора
+~gear.disassembler.vein_mining	Видобуток жили
+~gear.disassembler.vein_mining.tooltip	Дозволити режим жили атомного дезінтегратора. Працює лише на руді й колодах.
+~gear.energy_table	Енергетичний планшет
+~gear.energy_table.button	Налаштувати планшет
+~gear.energy_table.charge_rate	Швидкість заряджання
+~gear.energy_table.charge_rate.tooltip	Скільки енергії (Дж) за такт може прийняти енергетичний планшет.
+~gear.energy_table.max_energy	Найбільший запас енергії
+~gear.energy_table.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщує енергетичний планшет.
+~gear.energy_table.tooltip	Налаштування енергетичних планшетів
+~gear.flamethrower	Вогнемет
+~gear.flamethrower.button	Налаштувати вогнемет
+~gear.flamethrower.capacity	Місткість
+~gear.flamethrower.capacity.tooltip	Місткість бака вогнемета в мБ.
+~gear.flamethrower.destroy_items	Знищувати предмети
+~gear.flamethrower.destroy_items.tooltip	Чи знищує вогнемет предмети на землі, які не вдалося переплавити.
+~gear.flamethrower.fill_rate	Швидкість наповнення
+~gear.flamethrower.fill_rate.tooltip	Швидкість (мБ/т), з якою бак вогнемета приймає водень.
+~gear.flamethrower.tooltip	Налаштування вогнемета
+~gear.free_runners	Чоботи-скороходи
+~gear.free_runners.armored	Броньовані скороходи
+~gear.free_runners.armored.armor	Броня
+~gear.free_runners.armored.armor.tooltip	Броня броньованих скороходів
+~gear.free_runners.armored.button	Налаштувати скороходи
+~gear.free_runners.armored.knockback_resistance	Опір відкиданню
+~gear.free_runners.armored.knockback_resistance.tooltip	Опір відкиданню броньованих скороходів.
+~gear.free_runners.armored.tooltip	Налаштування броньованих скороходів
+~gear.free_runners.armored.toughness	Міцність
+~gear.free_runners.armored.toughness.tooltip	Міцність броні броньованих скороходів.
+~gear.free_runners.button	Налаштувати скороходи
+~gear.free_runners.charge_rate	Швидкість заряджання
+~gear.free_runners.charge_rate.tooltip	Скільки енергії (Дж) за такт можуть прийняти скороходи.
+~gear.free_runners.fall.energy	Витрата на падіння
+~gear.free_runners.fall.energy.tooltip	Множник ціни в Дж за зменшення шкоди від падіння скороходами. Ціна: FallDamage * fallEnergyCost. (1 FallDamage — половинка серця)
+~gear.free_runners.fall.reduction	Частка поглинання падіння
+~gear.free_runners.fall.reduction.tooltip	Яку частку шкоди від падіння поглинають скороходи, коли мають досить енергії.
+~gear.free_runners.max_energy	Найбільший запас енергії
+~gear.free_runners.max_energy.tooltip	Скільки енергії (Дж) найбільше вміщують скороходи.
+~gear.free_runners.tooltip	Налаштування скороходів
+~gear.gauge_dropper	Вимірювальна піпетка
+~gear.gauge_dropper.button	Налаштувати піпетку
+~gear.gauge_dropper.capacity	Місткість
+~gear.gauge_dropper.capacity.tooltip	Місткість вимірювальних піпеток у мБ.
+~gear.gauge_dropper.tooltip	Налаштування вимірювальних піпеток
+~gear.gauge_dropper.transfer_rate	Швидкість переливання
+~gear.gauge_dropper.transfer_rate.tooltip	Швидкість (мБ/т), з якою піпетка наповнюється чи спорожнюється.
+~gear.jetpack	Реактивний ранець
+~gear.jetpack.armored	Броньований реактивний ранець
+~gear.jetpack.armored.armor	Броня
+~gear.jetpack.armored.armor.tooltip	Броня броньованих реактивних ранців
+~gear.jetpack.armored.button	Налаштувати ранець
+~gear.jetpack.armored.knockback_resistance	Опір відкиданню
+~gear.jetpack.armored.knockback_resistance.tooltip	Опір відкиданню броньованих реактивних ранців.
+~gear.jetpack.armored.tooltip	Налаштування броньованих реактивних ранців
+~gear.jetpack.armored.toughness	Міцність
+~gear.jetpack.armored.toughness.tooltip	Міцність броні броньованих реактивних ранців.
+~gear.jetpack.button	Налаштувати ранець
+~gear.jetpack.capacity	Місткість
+~gear.jetpack.capacity.tooltip	Місткість бака реактивного ранця в мБ.
+~gear.jetpack.fill_rate	Швидкість наповнення
+~gear.jetpack.fill_rate.tooltip	Швидкість (мБ/т), з якою бак реактивного ранця приймає водень.
+~gear.jetpack.tooltip	Налаштування реактивних ранців
+~gear.meka_suit	МекаКостюм
+~gear.meka_suit.armor.boots	Броня чобіт
+~gear.meka_suit.armor.boots.tooltip	Броня чобіт МекаКостюма.
+~gear.meka_suit.armor.chestplate	Броня нагрудника
+~gear.meka_suit.armor.chestplate.tooltip	Броня нагрудника МекаКостюма.
+~gear.meka_suit.armor.helmet	Броня шолома
+~gear.meka_suit.armor.helmet.tooltip	Броня шолома МекаКостюма.
+~gear.meka_suit.armor.leggings	Броня штанів
+~gear.meka_suit.armor.leggings.tooltip	Броня штанів МекаКостюма.
+~gear.meka_suit.button	Налаштувати МекаКостюм
+~gear.meka_suit.capacity.energy	Найбільший запас енергії
+~gear.meka_suit.capacity.energy.tooltip	Запас енергії (Дж) частин МекаКостюма без покращень. З покращеннями зростає квадратично.
+~gear.meka_suit.charge_rate	Швидкість заряджання
+~gear.meka_suit.charge_rate.inventory	Заряджання інвентаря

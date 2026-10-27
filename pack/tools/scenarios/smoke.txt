@@ -1,0 +1,34 @@
+gamemode creative {p}
+time set day
+execute at {p} run summon iceandfire:fire_dragon ~8 ~ ~ {NoAI:1b}
+execute at {p} run summon alexscaves:tremorsaurus ~-6 ~ ~ {NoAI:1b}
+execute at {p} run summon mowziesmobs:frostmaw ~ ~ ~10 {NoAI:1b}
+execute at {p} run summon twilightforest:naga ~ ~ ~-8 {NoAI:1b}
+execute at {p} run summon aether:moa ~3 ~ ~3
+execute at {p} run summon cataclysm:netherite_monstrosity ~15 ~ ~15 {NoAI:1b}
+execute at {p} run summon irons_spellbooks:pyromancer ~-4 ~ ~-4
+execute at {p} run summon ars_nouveau:starbuncle ~1 ~ ~-2
+execute at {p} run summon easy_npc:humanoid ~2 ~ ~2
+give {p} create:wrench
+give {p} mekanism:configurator
+give {p} ars_nouveau:novice_spell_book
+give {p} irons_spellbooks:diamond_spell_book
+give {p} sophisticatedbackpacks:backpack
+give {p} nomadictents:small_yurt
+give {p} waystones:waystone
+give {p} ae2:wireless_terminal
+execute as {p} run wilds skills
+puffish_skills experience add {p} wilds:path 500
+tp {p} 2400 200 -1800
+execute in minecraft:the_nether run tp {p} 0 100 0
+execute in twilightforest:twilight_forest run tp {p} 0 120 0
+execute in aether:the_aether run tp {p} 0 180 0
+execute in minecraft:overworld run tp {p} 150 140 -670
+execute as {p} run ftbquests open_book
+give {p} aeronautics:andesite_propeller 4
+give {p} aeronautics:levitite 16
+give {p} aeronautics:adjustable_burner
+give {p} offroad:wheel_mount 4
+give {p} offroad:tire 4
+give {p} simulated:altitude_sensor
+execute at {p} run fill ~3 ~5 ~3 ~6 ~5 ~6 aeronautics:levitite

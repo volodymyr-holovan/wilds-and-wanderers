@@ -1,0 +1,8 @@
+{
+ "config.structure_layout_optimizer.deduplicate_shuffled_template_pool_element_list": "Прибирати повтори в перемішаному списку частин",
+ "config.structure_layout_optimizer.deduplicate_shuffled_template_pool_element_list.desc": "Чи вживати інший спосіб, щоб планування споруд генерувалося ще трохи швидше, ніж зі звичайною оптимізацією ваг пулів шаблонів. Цей спосіб прибирає повтори зі списку частин, які споруда бере з пулу шаблонів.\nГенерацію споруд це не ламає, але планування вийде іншим, ніж без цього налаштування (сумісність із ванільними сидами втрачається). Виграш у швидкості може бути вартий того у великих збірках, де багато модів споруд ставлять дуже великі ваги в пулах шаблонів.\n\nПлюси: трохи вища продуктивність для споруд із пулів шаблонів з великими вагами.\nМінуси: планування споруд не збігається з ванільними сидами. (Планування не зламане, просто інше)",
+ "config.structure_layout_optimizer.desc": "Спроба пришвидшити генерацію споруд із частин (jigsaw)",
+ "config.structure_layout_optimizer.link.bug_report": "Повідомити про помилку",
+ "config.structure_layout_optimizer.link.license": "Ліцензія",
+ "config.structure_layout_optimizer.title": "Structure Layout Optimizer"
+}

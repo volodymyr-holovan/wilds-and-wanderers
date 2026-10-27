@@ -1,0 +1,16 @@
+lang:uk_ua
+renderDistance:10
+simulationDistance:6
+maxFps:120
+guiScale:0
+skipMultiplayerWarning:true
+joinedFirstServer:true
+onboardAccessibility:false
+tutorialStep:none
+particles:1
+entityDistanceScaling:0.75
+biomeBlendRadius:1
+mipmapLevels:2
+enableVsync:false
+key_key.ftbquests.quests:key.keyboard.j
+key_key.ars_nouveau.head_curio_hotkey:key.keyboard.unknown

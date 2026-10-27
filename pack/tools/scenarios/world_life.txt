@@ -1,0 +1,22 @@
+gamemode creative {p}
+time set day
+execute at {p} run summon naturalist:bear ~6 ~ ~ {NoAI:1b}
+execute at {p} run summon naturalist:butterfly ~2 ~2 ~2
+execute at {p} run summon naturalist:capybara ~-3 ~ ~2
+execute at {p} run summon kobolds:kobold ~4 ~ ~-3
+execute at {p} run summon goblins_tyranny:knight_goblin ~-5 ~ ~-3 {NoAI:1b}
+execute at {p} run summon goblins_tyranny:shaman_goblin ~-6 ~ ~1 {NoAI:1b}
+execute at {p} run summon orc_hut:orc ~7 ~ ~5 {NoAI:1b}
+execute at {p} run summon questborne:quest_npc ~2 ~ ~-5
+execute at {p} run summon guardvillagers:guard ~-2 ~ ~5
+execute at {p} run summon villager ~-1 ~ ~6
+execute at {p} run summon hybrid_aquatic:basking_shark ~10 ~ ~-10 {NoAI:1b}
+execute at {p} run summon upgrade_aquatic:thrasher ~-10 ~ ~-10 {NoAI:1b}
+execute at {p} run summon fishofthieves:splashtail ~3 ~ ~8
+give {p} smallships:oak_cog
+give {p} comforts:sleeping_bag_red
+give {p} simplytents:tent
+give {p} gew2:pebble 8
+execute at {p} run locate structure #minecraft:village
+execute at {p} run locate structure questborne:campsite
+tp {p} 0 160 0

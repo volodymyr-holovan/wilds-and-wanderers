@@ -1,0 +1,21 @@
+{
+  "entity.wilds_core.thrown_weapon": "Thrown Weapon",
+  "wilds_core.skill.cooldown": "Not ready yet: %s s",
+  "wilds_core.skill.last_stand.used": "Last Stand! You held on.",
+  "wilds_core.skill.free_spell.used": "Mana Breath: this spell cost nothing.",
+  "wilds_core.skill.prospector.found": "Prospector: %s ore blocks nearby",
+  "wilds_core.skill.thrifty_crafter.saved": "Thrifty Crafter: kept %s",
+  "wilds_core.skill.sea_gifts.found": "Gifts of the Sea: %s",
+  "wilds_core.skill.well_rested.used": "You are well rested.",
+  "wilds_core.skill.goblin_friend.gift": "A goblin gave you %s",
+  "wilds_core.skill.peacemaker.used": "Peacemaker: calmed %s creatures",
+  "wilds_core.skill.generous_deal.used": "Generous Deal: today this trade was a gift.",
+  "wilds_core.skill.mercenaries.hired": "The mercenary follows you until tomorrow.",
+  "wilds_core.skill.mercenaries.limit": "No more mercenaries at once: %s",
+  "wilds_core.skill.mercenaries.price": "A mercenary costs %s emeralds.",
+  "key.wilds_core.heavy_strike": "Heavy Strike (hold)",
+  "key.categories.wilds_core": "Wilds & Wanderers: skills",
+  "entity.wilds_core.wanderer": "Wanderer with an Errand",
+  "wilds_core.npc.died": "%s died. The errand failed. %s",
+  "wilds_core.npc.reward": "%s hands you the reward."
+}

@@ -1,0 +1,9 @@
+{
+ "config.apollib.back": "Назад",
+ "config.apollib.back.tooltip": "Закрити екран без збереження змін.",
+ "config.apollib.default": "Типово: ",
+ "config.apollib.done": "Зберегти й закрити",
+ "config.apollib.done.tooltip": "Зберегти зміни й закрити екран.",
+ "config.apollib.export": "Експорт",
+ "config.apollib.export.tooltip": "Копіює поточний файл налаштувань у буфер обміну."
+}

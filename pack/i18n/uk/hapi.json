@@ -1,0 +1,6 @@
+{
+ "item.hapi.creature_net": "Сачок для істот",
+ "item.hapi.creature_net.description": "Усередині: %s",
+ "item.hapi.creature_net.function": "Ловить і переносить водних істот",
+ "item.hapi.creature_net.properties": "Випущені істоти стають мирними й не зникають"
+}

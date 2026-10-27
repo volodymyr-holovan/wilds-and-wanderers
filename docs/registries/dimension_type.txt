@@ -1,0 +1,10 @@
+ae2:spatial_storage
+aether:the_aether
+ars_nouveau:jar
+irons_spellbooks:pocket_dimension_type
+minecraft:overworld
+minecraft:overworld_caves
+minecraft:the_end
+minecraft:the_nether
+nomadictents:tent
+twilightforest:twilight_forest_type

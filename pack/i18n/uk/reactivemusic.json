@@ -1,0 +1,7 @@
+{
+ "reactive_music.config.category.debug": "Налагодження",
+ "reactive_music.config.category.general": "Загальне",
+ "reactive_music.config.option.debug_mode_enabled": "Режим налагодження",
+ "reactive_music.config.option.music_delay": "Пауза між треками",
+ "reactive_music.title": "Reactive Music"
+}

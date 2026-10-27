@@ -1,0 +1,383 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "dragons"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "iceandfire:dragon_skull_fire"
+	}
+	id: "2040C5A144D6F506"
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "iceandfire:bestiary"
+			}
+			id: "15AA39284E74D774"
+			rewards: [
+				{
+					count: 2
+					id: "11E0CEEA7F8439EB"
+					item: {
+						count: 1
+						id: "iceandfire:manuscript"
+					}
+					type: "item"
+				}
+				{
+					id: "4126585DD0E61C3C"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "5C2CF952726CC4CC"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "75DD988A0595F876"
+					item: {
+						count: 1
+						id: "iceandfire:bestiary"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"15AA39284E74D774"
+			]
+			icon: {
+				id: "iceandfire:dragonscales_red"
+			}
+			id: "47A8A9E1874569A7"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "45FE9EEFFC80C95E"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "234D3F563F19323F"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "7E418DC7C2399583"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6D7C66855D217295"
+					structure: "iceandfire:fire_dragon_roost"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"47A8A9E1874569A7"
+			]
+			icon: {
+				id: "iceandfire:dragonbone"
+			}
+			id: "29B5C310101D70B8"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "16A776C3BCC978F3"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2AE078A6F96BD98F"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "15B03617B5EC5139"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "3EB031A2EB1C5C0D"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "58637C43912F05E2"
+					item: {
+						count: 1
+						id: "iceandfire:dragonbone"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"29B5C310101D70B8"
+			]
+			icon: {
+				id: "iceandfire:dragonforge_fire_brick"
+			}
+			id: "7BEF771D95A030AC"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "23196F8998C93B02"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "1A2F3E5F50C5089F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "7ADE8EA4A26D7050"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "1560430B618B4C57"
+					item: {
+						count: 1
+						id: "iceandfire:dragonforge_fire_brick"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"7BEF771D95A030AC"
+			]
+			icon: {
+				id: "iceandfire:dragonsteel_fire_ingot"
+			}
+			id: "6A3C28BA92F6407A"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "51E1D0E69D43AD38"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "66C8818C9CA15049"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "638D830712C8F3D4"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "51F854966B2DB035"
+					item: {
+						count: 1
+						id: "iceandfire:dragonsteel_fire_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"29B5C310101D70B8"
+			]
+			icon: {
+				id: "iceandfire:dragon_horn"
+			}
+			id: "20F05E2882E1C9FA"
+			rewards: [
+				{
+					id: "2D8DBC97E994F299"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "1B871CBD44639B4B"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6DF68F0E606290AA"
+					item: {
+						count: 1
+						id: "iceandfire:dragon_horn"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"15AA39284E74D774"
+			]
+			icon: {
+				id: "iceandfire:cyclops_eye"
+			}
+			id: "141B76BAC5B15B2D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3109E397721713D5"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "61EDE9140470313B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "25A1E51BED38F4D8"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "17A8586793FA86D4"
+					item: {
+						count: 1
+						id: "iceandfire:troll_tusk"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"15AA39284E74D774"
+			]
+			icon: {
+				id: "iceandfire:pixie_dust"
+			}
+			id: "747BABB66830511B"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "57FB09411140B8D4"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "63E664A77AC55922"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "1772C8D785BFA90C"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "198BD12865C2F1E3"
+					structure: "iceandfire:pixie_village"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+ "command.puffish_skills.level.add.success.multiple": "Додано %s рівнів у категорії %s для %s гравців",
+ "command.puffish_skills.level.add.success.single": "Додано %s рівнів у категорії %s гравцю %s",
+ "command.puffish_skills.level.get.success": "%3$s має рівень %1$s у категорії %2$s",
+ "command.puffish_skills.level.set.success.multiple": "Встановлено рівень %s у категорії %s для %s гравців",
+ "command.puffish_skills.level.set.success.single": "Встановлено рівень %s у категорії %s гравцю %s",
+ "command.puffish_skills.no_level": "Для категорії з ID %s рівні не ввімкнено",
+ "text.puffish_skills.buy_point": "Купити очко",
+ "tooltip.puffish_skills.cost": "Ціна: %s"
+}

@@ -1,0 +1,10 @@
+{
+ "blockui.config.default.boolean": "[Типово: %s]",
+ "blockui.config.default.enum": "[Типово: %s, значення: %s]",
+ "blockui.config.default.number": "[Типово: %s, мін.: %s, макс.: %s]",
+ "blockui.config.default.string": "[Типово: %s]",
+ "blockui.container_gui.client_side_only": "Вміст контейнера видно лише в одиночній грі (без LAN).",
+ "blockui.container_gui.empty": "Контейнер порожній.",
+ "blockui.tooltip.item_additional_info": "Затисніть %s для подробиць",
+ "blockui.tooltip.properties": "Властивості блока:"
+}

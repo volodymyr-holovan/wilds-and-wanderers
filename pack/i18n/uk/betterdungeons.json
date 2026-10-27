@@ -1,0 +1,19 @@
+{
+ "A Special Addition": "Особливе поповнення",
+ "Banner of Decay": "Прапор тліну",
+ "Banner of Pork": "Прапор свинини",
+ "Banner of Rage": "Прапор люті",
+ "Find a Small Nether Dungeon": "Знайдіть мале підземелля Незеру",
+ "Small Nether Dungeons are currently disabled by default. You can enable them in the mod's config.": "Малі підземелля Незеру зараз типово вимкнені. Їх можна ввімкнути в налаштуваннях мода.",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon": "Малі підземелля Незеру",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.@Tooltip": "Малі підземелля Незеру",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.bannerMaxCount": "Макс. прапорів у малому підземеллі Незеру",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.bannerMaxCount.@Tooltip[0]": "Найбільша кількість прапорів в одному малому підземеллі Незеру.",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.bannerMaxCount.@Tooltip[1]": "Типово: 2",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.blazesDropBlazeRods": "Пломені з породжувачів дають стрижні",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.blazesDropBlazeRods.@Tooltip": "Чи можуть іфрити з малих підземель Незеру залишати стрижні пломеня.",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.enabled": "Увімкнути малі підземелля Незеру",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.enabled.@Tooltip": "Чи з'являються малі підземелля Незеру.",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.witherSkeletonsDropWitherSkulls": "Візер-скелети з породжувачів дають черепи",
+ "text.autoconfig.betterdungeons-fabric-1_21.option.betterDungeons.smallNetherDungeon.witherSkeletonsDropWitherSkulls.@Tooltip": "Чи можуть візери-скелети з малих підземель Незеру залишати черепи."
+}

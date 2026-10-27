@@ -1,0 +1,864 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ae2"
+	group: "2D0358AC52F60020"
+	icon: {
+		id: "ae2:controller"
+	}
+	id: "32F4545024F13413"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "ae2:mysterious_cube"
+			}
+			id: "7F7888BD3F3C1098"
+			rewards: [
+				{
+					id: "2E212B8FFE2B129C"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "1E99C4F13E60419B"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 8L
+					id: "10C6C23AB6DFE400"
+					item: {
+						count: 1
+						id: "ae2:sky_stone_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1D5D821BF67CE201"
+					item: {
+						count: 1
+						id: "ae2:logic_processor_press"
+					}
+					type: "item"
+				}
+				{
+					id: "1306E29A10FD9BA3"
+					item: {
+						count: 1
+						id: "ae2:calculation_processor_press"
+					}
+					type: "item"
+				}
+				{
+					id: "7BBD0568A4D4E291"
+					item: {
+						count: 1
+						id: "ae2:engineering_processor_press"
+					}
+					type: "item"
+				}
+				{
+					id: "4D00406890D7C01B"
+					item: {
+						count: 1
+						id: "ae2:silicon_press"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7F7888BD3F3C1098"
+			]
+			icon: {
+				id: "ae2:certus_quartz_crystal"
+			}
+			id: "33F8E054F5C30742"
+			rewards: [
+				{
+					count: 8
+					id: "70319DC3DBD0601F"
+					item: {
+						count: 1
+						id: "ae2:certus_quartz_crystal"
+					}
+					type: "item"
+				}
+				{
+					id: "5AFD86081681FC98"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "4AE8B93406D0FAFC"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "1942215CA7F8293A"
+					item: {
+						count: 1
+						id: "ae2:certus_quartz_crystal"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"33F8E054F5C30742"
+			]
+			icon: {
+				id: "ae2:fluix_crystal"
+			}
+			id: "50990F8F550A840B"
+			rewards: [
+				{
+					id: "5CC41A6B53834CCB"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "5879A459B3C26C94"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E600BE644E21340"
+					item: {
+						count: 1
+						id: "ae2:charger"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "266B0AE08FE15D15"
+					item: {
+						count: 1
+						id: "ae2:charged_certus_quartz_crystal"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "32F8F9A0B3BCADF2"
+					item: {
+						count: 1
+						id: "ae2:fluix_crystal"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"50990F8F550A840B"
+			]
+			icon: {
+				id: "ae2:logic_processor"
+			}
+			id: "1EDC12F3B3E54499"
+			rewards: [
+				{
+					id: "74A81DBE663F4E96"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "54709D8544FE536A"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "29EBE9912FB41AB8"
+					item: {
+						count: 1
+						id: "ae2:inscriber"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "60539EE24B030D03"
+					item: {
+						count: 1
+						id: "ae2:silicon"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6CE0CFA4A74CC61F"
+					item: {
+						count: 1
+						id: "ae2:logic_processor"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "168E4F822FCEF90F"
+					item: {
+						count: 1
+						id: "ae2:calculation_processor"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "32456D24064FABAF"
+					item: {
+						count: 1
+						id: "ae2:engineering_processor"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1EDC12F3B3E54499"
+			]
+			icon: {
+				id: "ae2:controller"
+			}
+			id: "167B1925FDFDBA87"
+			rewards: [
+				{
+					id: "4EFEEC5A0BB3342E"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "472283C6D2035870"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6774F8DD7A47101A"
+					item: {
+						count: 1
+						id: "ae2:controller"
+					}
+					type: "item"
+				}
+				{
+					id: "2A3C8A86EE08EE52"
+					item: {
+						count: 1
+						id: "ae2:drive"
+					}
+					type: "item"
+				}
+				{
+					id: "148DA43A69C79A96"
+					item: {
+						count: 1
+						id: "ae2:item_storage_cell_1k"
+					}
+					type: "item"
+				}
+				{
+					id: "325F93438DBAF8BE"
+					item: {
+						count: 1
+						id: "ae2:terminal"
+					}
+					type: "item"
+				}
+				{
+					id: "15A31745208D8C48"
+					item: {
+						count: 1
+						id: "ae2:energy_acceptor"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "494466EB7263E589"
+					item: {
+						count: 1
+						id: "ae2:fluix_glass_cable"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"167B1925FDFDBA87"
+			]
+			icon: {
+				id: "ae2:crafting_terminal"
+			}
+			id: "3BE927627069B499"
+			rewards: [
+				{
+					id: "318F3BF69F9BD87F"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "4EA8002DD6E06124"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7D15B08900742B36"
+					item: {
+						count: 1
+						id: "ae2:crafting_terminal"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -4.375d
+		}
+		{
+			dependencies: [
+				"167B1925FDFDBA87"
+			]
+			icon: {
+				id: "ae2:import_bus"
+			}
+			id: "1D9FEE7CF036927F"
+			rewards: [
+				{
+					id: "185387BEE950934E"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "7C0345FCC9692319"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "228240CCF16759D6"
+					item: {
+						count: 1
+						id: "ae2:import_bus"
+					}
+					type: "item"
+				}
+				{
+					id: "1656EBD375379F52"
+					item: {
+						count: 1
+						id: "ae2:export_bus"
+					}
+					type: "item"
+				}
+				{
+					id: "52A64703696426A6"
+					item: {
+						count: 1
+						id: "ae2:storage_bus"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"167B1925FDFDBA87"
+			]
+			icon: {
+				id: "ae2:item_storage_cell_64k"
+			}
+			id: "19155CB614BB5BBB"
+			rewards: [
+				{
+					id: "28C4852FC4DBFB95"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 90"
+					elevate_perms: true
+					id: "5485EC54859F2933"
+					silent: true
+					title: "+90 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "40E749E846B0D22C"
+					item: {
+						count: 1
+						id: "ae2:item_storage_cell_16k"
+					}
+					type: "item"
+				}
+				{
+					id: "4C6B89BD09E38725"
+					item: {
+						count: 1
+						id: "ae2:item_storage_cell_64k"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"3BE927627069B499"
+				"1D9FEE7CF036927F"
+			]
+			icon: {
+				id: "ae2:molecular_assembler"
+			}
+			id: "5A58857FD0D63BB0"
+			rewards: [
+				{
+					id: "145DC0213DD5EF1D"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "13CFFB4060A6A560"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4BE5FF9DDBA5A1FD"
+					item: {
+						count: 1
+						id: "ae2:pattern_encoding_terminal"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1C23412838F1008A"
+					item: {
+						count: 1
+						id: "ae2:blank_pattern"
+					}
+					type: "item"
+				}
+				{
+					id: "16B3E9A75ECEFA5D"
+					item: {
+						count: 1
+						id: "ae2:pattern_provider"
+					}
+					type: "item"
+				}
+				{
+					id: "72B8265575C465A7"
+					item: {
+						count: 1
+						id: "ae2:molecular_assembler"
+					}
+					type: "item"
+				}
+				{
+					id: "591B5A44D5CEA54E"
+					item: {
+						count: 1
+						id: "ae2:crafting_unit"
+					}
+					type: "item"
+				}
+				{
+					id: "792C9E0C3E74756D"
+					item: {
+						count: 1
+						id: "ae2:4k_crafting_storage"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"5A58857FD0D63BB0"
+			]
+			icon: {
+				id: "ae2:pattern_provider"
+			}
+			id: "2D128C087D09ED9C"
+			rewards: [
+				{
+					id: "4E5FD12EB7A7075D"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "500A98D439190210"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "647D87F452FB753D"
+					item: {
+						count: 1
+						id: "ae2:pattern_provider"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "72E27C49C761A048"
+					item: {
+						count: 1
+						id: "ae2:crafting_accelerator"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"167B1925FDFDBA87"
+			]
+			icon: {
+				id: "ae2:me_p2p_tunnel"
+			}
+			id: "5238F7F69B050C3D"
+			rewards: [
+				{
+					id: "522AD23D0F609AFA"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "20C90DB4ADB12C9A"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "490828390FB50909"
+					item: {
+						count: 1
+						id: "ae2:me_p2p_tunnel"
+					}
+					type: "item"
+				}
+				{
+					id: "16707F401FBE4CF6"
+					item: {
+						count: 1
+						id: "ae2:memory_card"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"167B1925FDFDBA87"
+			]
+			icon: {
+				id: "ae2:wireless_access_point"
+			}
+			id: "573B94C480D57557"
+			rewards: [
+				{
+					id: "65DD2038D36F0813"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "7E2B42A908A5641C"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "512B1EE79D04623B"
+					item: {
+						count: 1
+						id: "ae2:wireless_access_point"
+					}
+					type: "item"
+				}
+				{
+					id: "6F73D67F89FE537F"
+					item: {
+						count: 1
+						id: "ae2wtlib:wireless_universal_terminal"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"167B1925FDFDBA87"
+				"68634AF527B8D1B6"
+			]
+			icon: {
+				id: "appmek:chemical_storage_cell_1k"
+			}
+			id: "1D696DEEF922B491"
+			rewards: [
+				{
+					id: "278332EF358D2104"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 70"
+					elevate_perms: true
+					id: "2966B1F5C7DF6F06"
+					silent: true
+					title: "+70 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3FDA3F5A587A96AA"
+					item: {
+						count: 1
+						id: "appmek:chemical_storage_cell_1k"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 4.375d
+		}
+		{
+			dependencies: [
+				"5238F7F69B050C3D"
+				"19155CB614BB5BBB"
+			]
+			icon: {
+				id: "ae2:quantum_ring"
+			}
+			id: "1F7CF4639F4C3D2F"
+			rewards: [
+				{
+					id: "48968A15F27062FC"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 180"
+					elevate_perms: true
+					id: "22335F7E82C81932"
+					silent: true
+					title: "+180 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "105D4E1CE30DE981"
+					item: {
+						count: 1
+						id: "ae2:quantum_ring"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "124C9E4F3829697E"
+					item: {
+						count: 1
+						id: "ae2:quantum_link"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"1F7CF4639F4C3D2F"
+			]
+			icon: {
+				id: "ae2:spatial_io_port"
+			}
+			id: "79DFDD1CF5325BCB"
+			optional: true
+			rewards: [
+				{
+					id: "3B3C5AA1B581EAA7"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "2BCE3FBFFBFFDBC6"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42E7E2432A42FEA3"
+					item: {
+						count: 1
+						id: "ae2:spatial_io_port"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "619C34E81FD552FD"
+					item: {
+						count: 1
+						id: "ae2:spatial_pylon"
+					}
+					type: "item"
+				}
+				{
+					id: "7B18406936121405"
+					item: {
+						count: 1
+						id: "ae2:spatial_cell_component_2"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"2D128C087D09ED9C"
+				"1F7CF4639F4C3D2F"
+			]
+			icon: {
+				id: "ae2:item_storage_cell_256k"
+			}
+			id: "20C08199F00660B7"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "6BF233B15D18E032"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "1A5AF21EC36DE1F1"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 350"
+					elevate_perms: true
+					id: "7AC1337B3CB7A19C"
+					silent: true
+					title: "+350 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "698E590D52A34287"
+					item: {
+						count: 1
+						id: "ae2:item_storage_cell_256k"
+					}
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 0.0d
+		}
+	]
+}

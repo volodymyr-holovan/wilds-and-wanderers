@@ -1,0 +1,248 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "links"
+	group: "53F26294B0C486BB"
+	icon: {
+		id: "minecraft:chain"
+	}
+	id: "2DF9230657F55BA4"
+	order_index: 15
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:chain"
+			}
+			id: "232D4746AC41BBCB"
+			rewards: [
+				{
+					id: "6C4391FA3D20952B"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "21828531B3802CE3"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "3402BED80FDBD94A"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"232D4746AC41BBCB"
+			]
+			icon: {
+				id: "mekanism:ingot_uranium"
+			}
+			id: "6F198CF68D1B8E81"
+			rewards: [
+				{
+					id: "3D31B81821027B53"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "1359677A341E9598"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "109D9884583AD14C"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -4.375d
+		}
+		{
+			dependencies: [
+				"232D4746AC41BBCB"
+			]
+			icon: {
+				id: "alexscaves:heavy_bone"
+			}
+			id: "14B743B4EE0A5A7B"
+			rewards: [
+				{
+					count: 16
+					id: "47F79FE59A731D34"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "1834D6F12EAED4B0"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1877E93D4711AC77"
+					item: {
+						count: 1
+						id: "alexscaves:heavy_bone"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"232D4746AC41BBCB"
+			]
+			icon: {
+				id: "alexscaves:tough_hide"
+			}
+			id: "781CBEFF7FE2C46C"
+			rewards: [
+				{
+					id: "16090C9F63EA972A"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "5613BCA638DEA0FD"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "14ADF72F68F3C0DA"
+					item: {
+						count: 1
+						id: "alexscaves:tough_hide"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"232D4746AC41BBCB"
+			]
+			icon: {
+				id: "twilightforest:fiery_blood"
+			}
+			id: "3E2B38C7B692997E"
+			rewards: [
+				{
+					id: "15BE43D93F60A63C"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "67BB36FEDF46E185"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1D4CC23634FF8B8A"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"232D4746AC41BBCB"
+			]
+			icon: {
+				id: "ars_nouveau:source_gem"
+			}
+			id: "139FE25C0CE40ED0"
+			rewards: [
+				{
+					id: "596D83A7CCBA15A5"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "65CE9A447C93EB56"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1190EF331C47F6D8"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"232D4746AC41BBCB"
+			]
+			icon: {
+				id: "create:crushing_wheel"
+			}
+			id: "147BA8A1DE77678F"
+			rewards: [
+				{
+					id: "4E7F6C1C96BD418E"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "3E7ACA35B30D3D70"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "15F230A56662B1FD"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 4.375d
+		}
+	]
+}

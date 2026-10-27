@@ -1,0 +1,258 @@
+{
+ "accessories.unused_slots.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "✔",
+   "color": "#28FFBF"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Видно"
+ ],
+ "accessories.unused_slots.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "❌",
+   "color": "#EB1D36"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Сховано"
+ ],
+ "accessories.group_filter.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "✔",
+   "color": "#28FFBF"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Видно"
+ ],
+ "accessories.group_filter.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "❌",
+   "color": "#EB1D36"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Сховано"
+ ],
+ "accessories.show_equipped_stack_slot_type.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "✔",
+   "color": "#28FFBF"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Видно"
+ ],
+ "accessories.show_equipped_stack_slot_type.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "❌",
+   "color": "#EB1D36"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Сховано"
+ ],
+ "accessories.entity_look_at_cursor.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "✔",
+   "color": "#28FFBF"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Так"
+ ],
+ "accessories.entity_look_at_cursor.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "❌",
+   "color": "#EB1D36"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Ні"
+ ],
+ "accessories.widget_type.paginated": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "☰",
+   "color": "#347ecf"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Сторінки"
+ ],
+ "accessories.widget_type.scrollable": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "⏷",
+   "color": "#953abd"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Прокрутка"
+ ],
+ "accessories.main_widget_position.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "←",
+   "color": "#32a852"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Ліворуч"
+ ],
+ "accessories.main_widget_position.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "→",
+   "color": "#32a852"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Праворуч"
+ ],
+ "accessories.side_widget_position.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "()",
+   "color": "#32a852"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Разом"
+ ],
+ "accessories.side_widget_position.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "||",
+   "color": "#32a852"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Окремо"
+ ],
+ "accessories.dark_mode_toggle.toggle.enabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "☽",
+   "color": "#3d29c2"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Темна"
+ ],
+ "accessories.dark_mode_toggle.toggle.disabled": [
+  "",
+  {
+   "text": "[",
+   "color": "gray"
+  },
+  {
+   "text": "☀",
+   "color": "#bffa9b"
+  },
+  {
+   "text": "]",
+   "color": "gray"
+  },
+  " Світла"
+ ]
+}

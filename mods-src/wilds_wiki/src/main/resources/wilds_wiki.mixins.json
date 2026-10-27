@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "ua.wilds.wiki.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "RsoSearchSessionMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

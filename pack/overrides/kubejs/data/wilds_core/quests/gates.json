@@ -1,0 +1,402 @@
+{
+ "ae_ink": {
+  "gate": "7B3587FD82C5EFC4",
+  "quest": "553EB0D6A8673AD6"
+ },
+ "ae_rare_ink": {
+  "gate": "197B1013DBBCFA4B",
+  "quest": "3494F7114B615967"
+ },
+ "amber_collector": {
+  "gate": "16985E828456BE28",
+  "quest": "2B972E12F96CCDCC"
+ },
+ "ancient_city": {
+  "gate": "4D805B465BE380D3",
+  "quest": "5F048F31DB7EB7C8"
+ },
+ "ancient_debris": {
+  "gate": "70D97CF21BA82000",
+  "quest": "78C5A7DE40D82CFB"
+ },
+ "arcane_essence": {
+  "gate": "6D20C6DF112D13BD",
+  "quest": "60584997CF39B901"
+ },
+ "bd_arms": {
+  "gate": "657D2D7C3024415E",
+  "quest": "57283EB763F37AF2"
+ },
+ "bd_clock": {
+  "gate": "5774D3E58745ABF1",
+  "quest": "3F18DDC5E0924722"
+ },
+ "bd_mechanisms": {
+  "gate": "15A00B67B6842B83",
+  "quest": "26FFE6750D6C789F"
+ },
+ "bd_tubes": {
+  "gate": "6734983E6B8EE291",
+  "quest": "3237832AA97A9C77"
+ },
+ "beekeepers_heir": {
+  "gate": "6A5036C3CC3BFABD",
+  "quest": "7438D7B35711D6B7"
+ },
+ "blaze_rods": {
+  "gate": "1B55A44445E9790E",
+  "quest": "506205457D8D3353"
+ },
+ "brass_dreams": {
+  "gate": "381FF0A2D76A6D89",
+  "quest": "718CCB18B06473A3"
+ },
+ "bread_for_orphans": {
+  "gate": "11146B6C59F5E94E",
+  "quest": "15F2F41165352878"
+ },
+ "cave_spider_queen": {
+  "gate": "4DF64BB8F53D030D",
+  "quest": "15FAC0D539CF130C"
+ },
+ "cockatrice_stare": {
+  "gate": "53875BB61887A973",
+  "quest": "3D410BCE0B163955"
+ },
+ "cursed_well": {
+  "gate": "4B6C8F4CC345EEFF",
+  "quest": "78B146B3414A0A24"
+ },
+ "dc_elder": {
+  "gate": "2DC370FC3B95A86A",
+  "quest": "15A615A877798006"
+ },
+ "dc_heart": {
+  "gate": "609DAB50742C9626",
+  "quest": "6856727C54AFEFB9"
+ },
+ "dead_king": {
+  "gate": "3D170866B6747B3F",
+  "quest": "2F4F59D90EBF02C5"
+ },
+ "deepling_threat": {
+  "gate": "784305CFF4BC30C7",
+  "quest": "583A84F598382B3A"
+ },
+ "dino_eggs": {
+  "gate": "49053BD3207400C9",
+  "quest": "7D301ACA6819F135"
+ },
+ "dragon_bone_flute": {
+  "gate": "3EBCF7322AF4B7C6",
+  "quest": "78400B46D202825E"
+ },
+ "dragon_scales": {
+  "gate": "4D55A499F9F381DB",
+  "quest": "2274A249DAA19B5C"
+ },
+ "dragon_slayer": {
+  "gate": "3940A7C0195F7970",
+  "quest": "424B8F8834C8B61F"
+ },
+ "drowned_crew": {
+  "gate": "6DEA2AB3F2DD3A75",
+  "quest": "3DC6AF5FCC69F2CF"
+ },
+ "ds_arms": {
+  "gate": "7F747290A4A52051",
+  "quest": "19DEA2F58FA143A2"
+ },
+ "ds_fireproof": {
+  "gate": "75B7D7B8C81F2887",
+  "quest": "488D62A844F2EA3C"
+ },
+ "ds_outpost": {
+  "gate": "618C95D0AE6DACC4",
+  "quest": "36E9654C4C616D0A"
+ },
+ "ds_trail": {
+  "gate": "12A8D042F72D17A8",
+  "quest": "3E94444CB462EAF5"
+ },
+ "dungeon_key": {
+  "gate": "1DDC0C4ED2079852",
+  "quest": "781C5D0CE26AF876"
+ },
+ "end_city_elytra": {
+  "gate": "138A16DCFE107162",
+  "quest": "612E0F8D3BF1CC77"
+ },
+ "ender_dragon": {
+  "gate": "18EA9EEB2F3019C5",
+  "quest": "6F076A61B61582CA"
+ },
+ "first_harvest": {
+  "gate": "64A2C1C192811B50",
+  "quest": "118B6A678B33FDCF"
+ },
+ "fox_and_chickens": {
+  "gate": "29BC3975BE8C0813",
+  "quest": "5C3BB6FF2C8487B5"
+ },
+ "ghast_tears": {
+  "gate": "10354F8A8551E38F",
+  "quest": "17C171B972451303"
+ },
+ "ghost_of_the_mine": {
+  "gate": "6770ED84F80FD89F",
+  "quest": "2D611B6D05A7193E"
+ },
+ "guardian_temple": {
+  "gate": "5596A8BADC6F1D6A",
+  "quest": "69BE065DA73428B0"
+ },
+ "hippogryph_egg": {
+  "gate": "5857B0B345D52EDD",
+  "quest": "799E867A6C053342"
+ },
+ "honey_for_the_feast": {
+  "gate": "16CF56C1A34F57C5",
+  "quest": "4D99A8CFA26DCE2B"
+ },
+ "iron_golem_friend": {
+  "gate": "70FDEE2E1D50EDA5",
+  "quest": "3CE7724F11BD29E1"
+ },
+ "lich_tower": {
+  "gate": "1262AEA77BCB5895",
+  "quest": "4720862DF6AF0F4B"
+ },
+ "lights_in_the_fog": {
+  "gate": "77114252EC07B1F6",
+  "quest": "12F61822E40941E4"
+ },
+ "ll_stage": {
+  "gate": "1C3126CB24BA3232",
+  "quest": "1A097EB5195DD26E"
+ },
+ "ll_strings": {
+  "gate": "4C887C73FF4A70DC",
+  "quest": "32B0AF60C0EAA599"
+ },
+ "long_road": {
+  "gate": "6156FE514919AF1E",
+  "quest": "4426FE841F4EE5CE"
+ },
+ "lost_brother": {
+  "gate": "6D1191B1821F8D4A",
+  "quest": "77EDA5C620F40B0D"
+ },
+ "lost_compass": {
+  "gate": "140BBBFC6D69FCF4",
+  "quest": "270946DD9D57B2D9"
+ },
+ "lost_lute": {
+  "gate": "1F494230CFE55225",
+  "quest": "1AA805516D7E7EE7"
+ },
+ "magnetic_mystery": {
+  "gate": "470770840ED2623E",
+  "quest": "61A0C134105F2F53"
+ },
+ "map_to_nowhere": {
+  "gate": "53403F160B19E27A",
+  "quest": "1A655C74CC018367"
+ },
+ "merchants_debt": {
+  "gate": "32686447C605B300",
+  "quest": "7C2F1AEEB6DE6691"
+ },
+ "moa_eggs": {
+  "gate": "2FFD781546BD9CE2",
+  "quest": "24BDDE2D454C2941"
+ },
+ "naga_scales": {
+  "gate": "132C4AF0A4E35B7A",
+  "quest": "179A7F98C194B097"
+ },
+ "oo_circuits": {
+  "gate": "247BD2D658E04A53",
+  "quest": "698AEAD5F8A419D7"
+ },
+ "oo_steel": {
+  "gate": "216043C196C14D18",
+  "quest": "2CBCB19969813639"
+ },
+ "osmium_order": {
+  "gate": "2E867FAE0AD0E328",
+  "quest": "719C5DC4376B0241"
+ },
+ "pb_axes": {
+  "gate": "7588A9722C7E7771",
+  "quest": "118702233F19D4E7"
+ },
+ "pb_captain": {
+  "gate": "3119A57797A8FE02",
+  "quest": "132890CBB2E83CE2"
+ },
+ "pb_ravager": {
+  "gate": "1D12A470F162C870",
+  "quest": "6064D1D5583DC921"
+ },
+ "pearls_of_the_reef": {
+  "gate": "5046CED417FCD255",
+  "quest": "11B26EF16F0E3B4E"
+ },
+ "piglin_gold": {
+  "gate": "2F8116C8BB1F52C9",
+  "quest": "64F19821B5FF6E39"
+ },
+ "pillager_banner": {
+  "gate": "3D40018EC10987E1",
+  "quest": "4F69A01081418F8F"
+ },
+ "pixie_dust": {
+  "gate": "6491ACE47996C671",
+  "quest": "13CD1454E5F8B072"
+ },
+ "raptor_hunt": {
+  "gate": "6F3D86DE56D15BBE",
+  "quest": "1386403DCD6EB039"
+ },
+ "raven_feathers": {
+  "gate": "43043663512BAACC",
+  "quest": "6362E4839B2B6EB2"
+ },
+ "rm_garden": {
+  "gate": "2901270CF77DB874",
+  "quest": "6D97E432CD1B45C0"
+ },
+ "roses_for_marta": {
+  "gate": "27D8AD582BAB2E4E",
+  "quest": "4B48363F7B1742E7"
+ },
+ "sail_the_seas": {
+  "gate": "471AAFD53ED3CF06",
+  "quest": "66F4D653B82E9440"
+ },
+ "sb_return": {
+  "gate": "7ADA42540EC8871F",
+  "quest": "2DEE36FD7A0874C7"
+ },
+ "sb_roof": {
+  "gate": "3510673887BABBAC",
+  "quest": "7B386AF636C682BE"
+ },
+ "scarecrow": {
+  "gate": "6E5201CA4F165AB7",
+  "quest": "50903549F148981B"
+ },
+ "shark_waters": {
+  "gate": "2F485A59598F8E18",
+  "quest": "6078951E61452282"
+ },
+ "shulker_shells": {
+  "gate": "67C2D380381D64FC",
+  "quest": "55357BE579DC7F5C"
+ },
+ "silverfish_nest": {
+  "gate": "75F88FCB43F2697B",
+  "quest": "629EEEEBA7DFF410"
+ },
+ "siren_song": {
+  "gate": "4BDF0543B35691C4",
+  "quest": "53128291C55543CE"
+ },
+ "source_gems": {
+  "gate": "1099241061D2A9F4",
+  "quest": "6C2223F4311DCF8E"
+ },
+ "stolen_bells": {
+  "gate": "3C15D16943C95214",
+  "quest": "1A80E0B75FE45763"
+ },
+ "strider_ride": {
+  "gate": "1290F8470CF31418",
+  "quest": "4C7219F5707835B6"
+ },
+ "the_monument": {
+  "gate": "51AD0F5A93F1FB51",
+  "quest": "2AE72A48ECF251E7"
+ },
+ "the_old_mill": {
+  "gate": "7382A5E317DA0EB8",
+  "quest": "1352F233D895E2CB"
+ },
+ "the_runaway_horse": {
+  "gate": "539F4F9B8E67FE93",
+  "quest": "44ED1F2F0B642A12"
+ },
+ "traveling_tailor": {
+  "gate": "1F884CD73C9922B8",
+  "quest": "68702D578FC0195A"
+ },
+ "troll_bridge": {
+  "gate": "1DF674E467619582",
+  "quest": "15A0C063E3AFF4E9"
+ },
+ "twilight_portal": {
+  "gate": "3DA94307BF753970",
+  "quest": "525608CD2339968F"
+ },
+ "wandering_preacher": {
+  "gate": "120BB2862BC3FBD3",
+  "quest": "16BF35D0C86DB3DE"
+ },
+ "watchtower_signal": {
+  "gate": "3D2928726EDA0090",
+  "quest": "76742920779DBC3B"
+ },
+ "we_press": {
+  "gate": "100433C49D1CD8B9",
+  "quest": "383A8FFECFA5087E"
+ },
+ "we_wheels": {
+  "gate": "45E52B7BEEC45241",
+  "quest": "7467DC0664AB429C"
+ },
+ "wf_fence": {
+  "gate": "10C8AD389E6FDBC9",
+  "quest": "1B27A9A24C6E41BE"
+ },
+ "wilden_hunt": {
+  "gate": "7FBB1A9E6FECEF4E",
+  "quest": "33AE7A44B420D400"
+ },
+ "windmill_engineer": {
+  "gate": "138A3FAD187372F1",
+  "quest": "7B369B6F92AEE1F9"
+ },
+ "wither_skulls": {
+  "gate": "40ABBB3E4D623973",
+  "quest": "3751AFAC5DD312EC"
+ },
+ "wither_storm": {
+  "gate": "18C25A9BAEDC017D",
+  "quest": "16BDC13AE064569E"
+ },
+ "wolves_at_the_fold": {
+  "gate": "7F55A391D09CAB64",
+  "quest": "58A4F42C33E80EF5"
+ },
+ "zanite_crown": {
+  "gate": "7588BF137F56050B",
+  "quest": "7F9968585593284D"
+ },
+ "zombie_plague": {
+  "gate": "6A88CF5569A3A0BF",
+  "quest": "1378D3A1FE92702D"
+ },
+ "zp_cure": {
+  "gate": "12DCDE38F58179CF",
+  "quest": "62CF778823702155"
+ },
+ "zp_evoker": {
+  "gate": "1E576DF52769FB90",
+  "quest": "744AB33E8C168DB9"
+ },
+ "zp_witches": {
+  "gate": "20C02CA38C808053",
+  "quest": "35F877DCC1C9BE5A"
+ }
+}

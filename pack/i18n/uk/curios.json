@@ -1,0 +1,6 @@
+{
+ "curios.networking.failed": "Помилка мережі Curios",
+ "curios.tooltip.inactive": "Неактивний слот",
+ "gui.curios.page": "Сторінка %d / %d",
+ "gui.curios.toggle.cosmetics": "Перемкнути косметичні слоти"
+}

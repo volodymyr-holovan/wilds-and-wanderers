@@ -1,0 +1,25 @@
+# Only the pack's own work is published: everything else (mods, servers, worlds, tools with passwords, the Java
+# runtime, logs, the work journal) stays on this computer.
+/*
+!/.gitignore
+!/README.md
+!/pack/
+!/mods-src/
+!/docs/
+
+# copies of other mods' English texts and leftovers of removed mods
+/pack/_removed/
+/pack/i18n/src/
+/pack/i18n/ref/
+/pack/i18n/batches/
+
+# generated and cached
+**/__pycache__/
+**/.cache/
+/mods-src/*/build/
+*.jar
+*.log
+
+# deploy helpers for the owner's own server panel
+/pack/tools/crafty_helpers.js
+/pack/tools/cors_serve.py

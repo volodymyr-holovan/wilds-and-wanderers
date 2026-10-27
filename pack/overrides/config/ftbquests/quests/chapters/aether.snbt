@@ -1,0 +1,364 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aether"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "aether:aether_portal_frame"
+	}
+	id: "2F776931D0304949"
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:glowstone"
+			}
+			id: "1464F36CC958AD76"
+			rewards: [
+				{
+					id: "34B1EE3A61636FFF"
+					item: {
+						count: 1
+						id: "aether:golden_parachute"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "3D5E2507990855EC"
+					item: {
+						count: 1
+						id: "aether:cold_parachute"
+					}
+					type: "item"
+				}
+				{
+					id: "3AABAE4B5B4B6EDD"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "315DD2BC71A81B46"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					dimension: "aether:the_aether"
+					id: "401E1043245B9313"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1464F36CC958AD76"
+			]
+			icon: {
+				id: "aether:zanite_gemstone"
+			}
+			id: "50237B83E9E5452D"
+			rewards: [
+				{
+					id: "2B029CF6F4762C9C"
+					item: {
+						count: 1
+						id: "aether:altar"
+					}
+					type: "item"
+				}
+				{
+					id: "58A320C9C9E8B889"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "40B01D39C55AB8AA"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "6C103A215089EFA8"
+					item: {
+						count: 1
+						id: "aether:ambrosium_shard"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "35BE1A36339F0B9A"
+					item: {
+						count: 1
+						id: "aether:zanite_gemstone"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"50237B83E9E5452D"
+			]
+			icon: {
+				id: "aether:blue_moa_egg"
+			}
+			id: "160AA71586F06BBE"
+			rewards: [
+				{
+					id: "1D523794036000B7"
+					item: {
+						count: 1
+						id: "aether:blue_moa_egg"
+					}
+					type: "item"
+				}
+				{
+					id: "34FF1D9029017D4F"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "7C7B65D8B9B7A6C8"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "25AA830401C1266E"
+					item: {
+						count: 1
+						id: "aether:incubator"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"50237B83E9E5452D"
+			]
+			icon: {
+				id: "aether:bronze_dungeon_key"
+			}
+			id: "68801C24A9251DA0"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2E17CF15D581BAE7"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "5D21A8E296BC8271"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "2DBFD917A3519A5D"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "aether:slider"
+					id: "4A7608A87E108B1A"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"68801C24A9251DA0"
+			]
+			icon: {
+				id: "aether:silver_dungeon_key"
+			}
+			id: "3C683E2798058F0F"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1C27A43F398C71FA"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "21AC81BF01F43B61"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "6F2A14DB9CC8764A"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 10L
+					id: "15FB0B42727D56AF"
+					item: {
+						count: 1
+						id: "aether:victory_medal"
+					}
+					type: "item"
+				}
+				{
+					entity: "aether:valkyrie_queen"
+					id: "1D7A830D5E5808E0"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3C683E2798058F0F"
+			]
+			icon: {
+				id: "aether:enchanted_gravitite"
+			}
+			id: "62AA5506A726F646"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "5276676AF6306234"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "15C9E0666C8671F4"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "27E7E60D8EB6D349"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "167606BDA22E3865"
+					item: {
+						count: 1
+						id: "aether:enchanted_gravitite"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"62AA5506A726F646"
+			]
+			icon: {
+				id: "aether:gold_dungeon_key"
+			}
+			id: "3489C07F963C3465"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4AE27F59C30749A6"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "130621DBCFFA1C53"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "660E86FC6B86F010"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "1463121E13CF237E"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "aether:sun_spirit"
+					id: "436FD44B25098AA3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

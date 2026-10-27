@@ -1,0 +1,7 @@
+{
+ "betteradvancedtooltips.configuration.component_tooltip": "Підказка компонентів",
+ "betteradvancedtooltips.configuration.fuel_tooltip": "Підказка про паливо",
+ "betteradvancedtooltips.configuration.remove_component_count_tooltip": "Прибрати підказку кількості компонентів",
+ "betteradvancedtooltips.configuration.remove_creative_tab_tooltip": "Прибрати підказку вкладки творчого режиму",
+ "betteradvancedtooltips.configuration.tag_tooltip": "Підказка тегів"
+}

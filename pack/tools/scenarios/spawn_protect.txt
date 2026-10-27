@@ -1,0 +1,11 @@
+data get entity {p} Health
+damage {p} 6 minecraft:generic
+data get entity {p} Health
+execute at {p} run setblock ~3 ~ ~ minecraft:stone
+execute at {p} run summon minecraft:tnt ~3 ~1 ~ {fuse:1}
+execute at {p} if block ~3 ~ ~ minecraft:stone
+data get entity {p} Health
+execute at {p} run tp {p} ~200 ~ ~
+execute at {p} run spreadplayers ~ ~ 0 1 false {p}
+damage {p} 2 minecraft:generic
+data get entity {p} Health

@@ -1,0 +1,46 @@
+=== kitchen.md
+---
+for: farmersdelight:cooking_pot, farmersdelight:stove, farmersdelight:skillet
+keywords: каструля, плита, сковорода, як готувати, кухня, cooking pot, stove, skillet
+---
+# Кухня
+- [[farmersdelight:cooking_pot]] варить страви з кількох інгредієнтів (до шести). Їй потрібен **вогонь під дном**: поставте каструлю на [[farmersdelight:stove]], багаття, вогонь чи магму. Без жару вона не працює.
+- Готова страва лягає в окрему комірку; якщо страві потрібна посудина (миска, пляшка), покладіть її в комірку посуду — каструля сама розкладе порції.
+- Каструлю можна знести, не втративши вмісту: страва лишиться всередині.
+- [[farmersdelight:stove]] — плита: запаліть її кресалом, і на ній, як на багатті, смажаться до шести шматків їжі. Сама ж вона гріє каструлю чи сковороду над собою.
+- [[farmersdelight:skillet]] (сковорода) — поставлена на жар, смажить по одному продукту; у руці це ще й важка зброя.
+> Які страви з чого варяться — дивіться в JEI в категорії каструлі: клацніть по каструлі на цій сторінці.
+=== cutting_board.md
+---
+for: farmersdelight:cutting_board, farmersdelight:flint_knife, farmersdelight:iron_knife, farmersdelight:golden_knife, farmersdelight:diamond_knife, farmersdelight:netherite_knife, farmersdelight:tree_bark
+keywords: обробна дошка, ніж, нарізати, кора, cutting board, knife
+---
+# Обробна дошка й ножі
+- Покладіть продукт на [[farmersdelight:cutting_board]] (ПКМ), а потім клацніть по дошці ПКМ інструментом: ножем ріжуть їжу, сокирою — колоди (виходять дошки й [[farmersdelight:tree_bark]]), киркою чи лопатою — деякі блоки. Що з чого виходить, видно в JEI.
+- Ніж — ще й зброя зі швидким ударом. Свині й хоґліни, вбиті ножем, можуть залишити шинку.
+- Ножем зрізають траву й пшеницю — випадає [[farmersdelight:straw]] (солома): з неї плетуть [[farmersdelight:canvas]] та [[farmersdelight:rope]].
+=== soil.md
+---
+for: farmersdelight:rich_soil, farmersdelight:rich_soil_farmland, farmersdelight:organic_compost, farmersdelight:brown_mushroom_colony, farmersdelight:red_mushroom_colony
+keywords: родючий ґрунт, компост, грибна колонія, rich soil, compost
+---
+# Родючий ґрунт і компост
+- [[farmersdelight:organic_compost]] з часом сам перетворюється на [[farmersdelight:rich_soil]]. Швидше — коли поруч є світло, вода й гриби.
+- Родючий ґрунт можна зорати мотикою — виходить [[farmersdelight:rich_soil_farmland]], на якій рослини ростуть швидше.
+- Гриб, посаджений на родючий ґрунт, розростається в **грибну колонію**. Зріла колонія дає гриби, якщо зрізати її ножицями чи ножем.
+=== wild_crops.md
+---
+for: farmersdelight:wild_cabbages, farmersdelight:wild_onions, farmersdelight:wild_tomatoes, farmersdelight:wild_carrots, farmersdelight:wild_potatoes, farmersdelight:wild_beetroots, farmersdelight:wild_rice, farmersdelight:cabbage_seeds, farmersdelight:tomato_seeds, farmersdelight:onion, farmersdelight:rice
+keywords: дикі рослини, капуста, цибуля, помідори, рис, насіння, wild crops
+---
+# Дикі рослини
+Насіння нових культур Farmer's Delight не крафтиться: його знаходять у дикій природі. Зламайте дикий кущ — з нього випадає насіння чи сам овоч.
+- Дика капуста й буряк ростуть на узбережжях, дикі помідори — у спекотних краях, цибуля, морква й картопля — на рівнинах і в лісах, дикий рис — біля води на болотах і в джунглях. Де саме — у розділі «Трапляється в природі» на сторінці кожної рослини.
+- [[farmersdelight:rice]] садять у воду глибиною в один блок поверх землі.
+=== feasts.md
+---
+for: farmersdelight:roast_chicken_block, farmersdelight:honey_glazed_ham_block, farmersdelight:shepherds_pie_block, farmersdelight:stuffed_pumpkin_block, farmersdelight:rice_roll_medley_block, farmersdelight:apple_pie, farmersdelight:chocolate_pie
+keywords: бенкет, пиріг, страва на столі, feast
+---
+# Бенкетні страви
+Великі страви ставлять на стіл блоком. Клацніть по такій страві ПКМ, тримаючи миску, — отримаєте одну порцію. Пироги ставлять блоком і їдять по шматку (ПКМ), а ножем їх можна розрізати на шматки. Коли порції скінчаться, лишиться тарілка чи миска.

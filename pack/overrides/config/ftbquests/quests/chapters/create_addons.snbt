@@ -1,0 +1,212 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_addons"
+	group: "2D0358AC52F60020"
+	icon: {
+		id: "createaddition:electric_motor"
+	}
+	id: "2BE3562A22DFA19F"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"43CDFE0D36955627"
+			]
+			icon: {
+				id: "createaddition:rolling_mill"
+			}
+			id: "7641DDBE037BBCAC"
+			rewards: [
+				{
+					id: "6CA8ABA30810552B"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "2C4B1AEB4FE21B09"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1485FF107BF443D1"
+					item: {
+						count: 1
+						id: "createaddition:rolling_mill"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2BA29CE977A44B7B"
+					item: {
+						count: 1
+						id: "createaddition:copper_wire"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"7641DDBE037BBCAC"
+			]
+			icon: {
+				id: "createaddition:alternator"
+			}
+			id: "5BFA7A0B342FABFE"
+			rewards: [
+				{
+					id: "158DFFB86EB59163"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "26908BEF60AF31A4"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1958DA69E947659E"
+					item: {
+						count: 1
+						id: "createaddition:alternator"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1FEB7D816C6FF7E1"
+					item: {
+						count: 1
+						id: "createaddition:connector"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"7641DDBE037BBCAC"
+			]
+			icon: {
+				id: "createaddition:electric_motor"
+			}
+			id: "34A35A36A2A91E6F"
+			rewards: [
+				{
+					id: "171DBEAD725D7D91"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "29EC7AF4E8388FF0"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3A350B06B2FEC195"
+					item: {
+						count: 1
+						id: "createaddition:electric_motor"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"13FE9795096BB208"
+			]
+			icon: {
+				id: "create_enchantment_industry:experience_bucket"
+			}
+			id: "12FF5C0C56FA8D1D"
+			rewards: [
+				{
+					id: "3EDB886FFE1F247B"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "50CB104FCE80A87D"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "121996DBFF5E30CD"
+					item: {
+						count: 1
+						id: "create_enchantment_industry:mechanical_grindstone"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"12FF5C0C56FA8D1D"
+			]
+			icon: {
+				id: "create_enchantment_industry:blaze_enchanter"
+			}
+			id: "730CE6ECF4E36B33"
+			rewards: [
+				{
+					id: "52569680471170AF"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "1F2F9668303EEB06"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4DBC19A566759F81"
+					item: {
+						count: 1
+						id: "create_enchantment_industry:blaze_enchanter"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+	]
+}

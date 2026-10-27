@@ -1,0 +1,546 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "twilight"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "twilightforest:naga_scale"
+	}
+	id: "375AE59F12D2E91D"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:diamond"
+			}
+			id: "6F6FA0289022C21D"
+			rewards: [
+				{
+					count: 16
+					id: "79F340AC25F5E680"
+					item: {
+						count: 1
+						id: "minecraft:cooked_beef"
+					}
+					type: "item"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "400642D01E228686"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "1FA0D2B881B8110D"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "61292CDD9AD127C0"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "13B340F9091A4736"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6F6FA0289022C21D"
+			]
+			icon: {
+				id: "twilightforest:magic_map"
+			}
+			id: "2EAA015B555E8C61"
+			rewards: [
+				{
+					count: 2
+					id: "4C93404374630243"
+					item: {
+						count: 1
+						id: "twilightforest:raven_feather"
+					}
+					type: "item"
+				}
+				{
+					id: "13D53281B4BD3817"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "47C0894AA2BB5598"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "79BBF5F4ED25BFB3"
+					item: {
+						count: 1
+						id: "twilightforest:magic_map"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"6F6FA0289022C21D"
+			]
+			icon: {
+				id: "twilightforest:naga_trophy"
+			}
+			id: "55CBF3EEE1C73453"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "440104A8832497B6"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "300F7218B71C2430"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "7013A3710E3F2354"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:naga"
+					id: "7EA3B165BAB5FDAB"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"55CBF3EEE1C73453"
+			]
+			icon: {
+				id: "twilightforest:lich_trophy"
+			}
+			id: "1CF1DCB1CC1D0A6D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1B8CB5DF78878C21"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1EF4A8AE5611BB7D"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "4254F8A695414BC8"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "13DC7A61E50F87E7"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:lich"
+					id: "1BD2EBE9346C648B"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1CF1DCB1CC1D0A6D"
+			]
+			icon: {
+				id: "twilightforest:minoshroom_trophy"
+			}
+			id: "105E9A0C2CEC95C4"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "60E1B53B2A1D8AD3"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "43E1C4CBB9D449FE"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "1CF9DF5C7FD70580"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:minoshroom"
+					id: "31CCFCC44CD3A1FC"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"105E9A0C2CEC95C4"
+			]
+			icon: {
+				id: "twilightforest:hydra_trophy"
+			}
+			id: "175253F3A02AF69E"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1E161EA66BE33B2D"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "7B4A2B214D390389"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "17F8C9EDB58E0A0E"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:hydra"
+					id: "63D919C991F016E3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"175253F3A02AF69E"
+			]
+			icon: {
+				id: "twilightforest:knight_phantom_trophy"
+			}
+			id: "1692E0F37F6EF9C5"
+			rewards: [
+				{
+					count: 2
+					id: "140903173B093D82"
+					item: {
+						count: 1
+						id: "twilightforest:armor_shard_cluster"
+					}
+					type: "item"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1D6E4D865DC278B1"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "3BC1DCD98B62F410"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "7D9622E7B25A8235"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:knight_phantom"
+					id: "2E1CFC31EE0AF64E"
+					type: "kill"
+					value: 6L
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1692E0F37F6EF9C5"
+			]
+			icon: {
+				id: "twilightforest:ur_ghast_trophy"
+			}
+			id: "493C01348F1C1D75"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "19125433D91E5302"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "588D3AFA317AD815"
+					type: "xp"
+					xp: 350
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "7C7AD1A87E2EABCE"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:ur_ghast"
+					id: "2DC510094CD8686A"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"493C01348F1C1D75"
+			]
+			icon: {
+				id: "twilightforest:alpha_yeti_trophy"
+			}
+			id: "46D9BA6A550DD1BB"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "18EF97479FB41E4E"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "782A4A23B1D07A7C"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "1D5192BA9B76CA6D"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:alpha_yeti"
+					id: "7B94574CD564BF34"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"46D9BA6A550DD1BB"
+			]
+			icon: {
+				id: "twilightforest:snow_queen_trophy"
+			}
+			id: "3ACD85537A1172C3"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "2DE8480728D48C17"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "75881F7CFF6FBE54"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "31FA614A6AAAEE8D"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "2E92D6F1CCBA3704"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:snow_queen"
+					id: "5AE6B916BDE826B5"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3ACD85537A1172C3"
+			]
+			icon: {
+				id: "twilightforest:troll_spawn_egg"
+			}
+			id: "7A80A65D549B5969"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "78AF97F41BE27F97"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "34BD1FEB5AAB13C4"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "276A31ED0F2CB551"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1A6C3B50E4003D0D"
+					structure: "twilightforest:troll_cave"
+					type: "structure"
+				}
+			]
+			x: 18.0d
+			y: 0.0d
+		}
+	]
+}

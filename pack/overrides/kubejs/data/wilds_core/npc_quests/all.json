@@ -1,0 +1,5740 @@
+[
+ {
+  "key": "ds_arms",
+  "npc": {
+   "name": "Король-вигнанець Мстислав",
+   "title": "король без королівства",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:golden_helmet"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:iron_sword",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*6"
+   ],
+   "xp": 80,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Колись я був королем. Тепер у мене троє вірних людей, один кінь і жодного меча, що не зламався б об першого розбійника.",
+   "Перш ніж просити в когось більшого, я маю озброїти тих, хто лишився зі мною. Три залізні мечі — небагато для королівства, але це початок."
+  ],
+  "questions": [
+   {
+    "q": "Ви справді король?",
+    "a": "Був. Корона в мене в торбі — я поклявся не вдягати її, поки не помщуся. Кому — розповім, коли довірятиму вам більше."
+   }
+  ],
+  "lines": {
+   "greet": "Стривайте, мандрівнику. Ви тримаєте зброю як людина, що знає їй ціну. Мені потрібна така людина.",
+   "ask": "Принесіть три залізні мечі. Я заплачу тим, що врятував зі скарбниці.",
+   "accept": "Дякую. Мої люди пам'ятатимуть, хто їх озброїв.",
+   "thanks": "Добра сталь. Мої люди знову схожі на воїнів, а не на жебраків. Повертайтеся — у мене буде для вас справжня справа.",
+   "dead": "Король-вигнанець загинув, так і не повернувши собі корону."
+  },
+  "haggle": true,
+  "persona": "dragon_slayer",
+  "stage": 1,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Зброя для дружини"
+ },
+ {
+  "key": "ds_outpost",
+  "npc": {
+   "name": "Король-вигнанець Мстислав",
+   "title": "король без королівства",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:golden_helmet"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:pillager",
+   "count": 10
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*12",
+    "minecraft:crossbow"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Моя дорога додому лежить через землі, які тепер тримають розбійники. Вони беруть мито з кожного, хто йде повз, — а з короля візьмуть голову.",
+   "Ви вже довели, що вам можна вірити. Розчистіть мені шлях: десятеро розбійників — і застава замовкне."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Знову ви! Мої люди досі говорять про ті мечі.",
+   "ask": "Перебийте десятьох розбійників, що тримають дорогу.",
+   "thanks": "Дорога вільна. Вперше за рік я спатиму спокійно. Тепер я можу розповісти вам, навіщо мені все це.",
+   "dead": "Король-вигнанець загинув на дорозі додому."
+  },
+  "haggle": true,
+  "persona": "dragon_slayer",
+  "stage": 2,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Дорога на північ"
+ },
+ {
+  "key": "ds_trail",
+  "npc": {
+   "name": "Король-вигнанець Мстислав",
+   "title": "король без королівства",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:golden_helmet"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "iceandfire:dragonbone",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*3",
+    "minecraft:emerald*10"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": null
+  },
+  "story": [
+   "Мою столицю спалив вогняний дракон. Мудреці кажуть: щоб знайти живого дракона, спершу знайди мертвого — вони вмирають там, де полюють.",
+   "Скелети драконів лежать просто неба, у горах і пустищах. Розбийте кістки — і принесіть мені три. По них я дізнаюся, звідки летить мій звір."
+  ],
+  "questions": [
+   {
+    "q": "Де шукати скелети?",
+    "a": "Високо в горах і на рівнинах, де мало дерев. Видно здалеку — великі білі ребра. Кістка падає, коли розбиваєш скелет."
+   }
+  ],
+  "lines": {
+   "greet": "Ви повернулися. Сідайте ближче до вогню — ця розповідь довга.",
+   "ask": "Знайдіть скелет дракона й принесіть мені три драконячі кістки.",
+   "thanks": "Кістки ще пахнуть сіркою. Він полює на півдні... Тепер я знаю, куди йти. Але йти туди в залізі — смерть.",
+   "dead": "Король-вигнанець загинув, ідучи слідом дракона."
+  },
+  "haggle": true,
+  "persona": "dragon_slayer",
+  "stage": 3,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Слід дракона"
+ },
+ {
+  "key": "ds_fireproof",
+  "npc": {
+   "name": "Король-вигнанець Мстислав",
+   "title": "король без королівства",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:golden_helmet"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:netherite_ingot",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:enchanted_golden_apple",
+    "minecraft:emerald*16"
+   ],
+   "xp": 400,
+   "skill_xp": 150,
+   "loot": null
+  },
+  "story": [
+   "Залізо плавиться в драконячому вогні, а з ним і той, хто в ньому. Мій коваль казав: є метал, що не горить, — його добувають у Незері з древніх уламків.",
+   "Мені потрібен один злиток. Не для мене — для щита, за яким ви підете на звіра."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Мій вірний друже. Ми близько до кінця.",
+   "ask": "Добудьте злиток незериту: древні уламки з Незеру, переплавлені з золотом.",
+   "thanks": "Важкий... і теплий. Коваль зробить з нього щит. А тепер — найважче.",
+   "dead": "Король-вигнанець загинув напередодні великого полювання."
+  },
+  "haggle": true,
+  "persona": "dragon_slayer",
+  "stage": 4,
+  "stages": 5,
+  "valuable": true,
+  "quest_title": "Метал, що не горить"
+ },
+ {
+  "key": "dragon_slayer",
+  "npc": {
+   "name": "Король-вигнанець Мстислав",
+   "title": "король без королівства",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:golden_helmet"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "iceandfire:fire_dragon",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:netherite_ingot*2",
+    "minecraft:enchanted_golden_apple",
+    "minecraft:diamond*10"
+   ],
+   "xp": 1000,
+   "skill_xp": 400,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Дракон спалив мою столицю. Мої лицарі загинули, мій народ розбрівся. Я поклявся не вдягати корону, поки звір живий.",
+   "Мені не потрібна його голова — мені потрібен лише знак, що його більше нема. А все, що лишилося в моїй скарбниці, — ваше."
+  ],
+  "questions": [
+   {
+    "q": "Як ви вижили?",
+    "a": "Мене витягла з вогню проста дівчинка-служниця. Я навіть імені її не спитав — вона зникла в натовпі. Відтоді шукаю її, щоб віддячити."
+   }
+  ],
+  "lines": {
+   "ask": "Подолайте вогняного дракона — щонайменше третьої стадії. Зілля вогнестійкості, лук і рухливість — ваша надія.",
+   "lie_fail": "Брехня! Я досі бачу заграву від його подиху над горами. Не смійте мене обманювати.",
+   "lie_ok": "Нарешті... Я відчув, як щось відпустило в грудях. Візьміть усе. Корону я, мабуть, усе одно вже не вдягну."
+  },
+  "haggle": true,
+  "persona": "dragon_slayer",
+  "stage": 5,
+  "stages": 5,
+  "valuable": true,
+  "quest_title": "Убивця драконів"
+ },
+ {
+  "key": "blaze_rods",
+  "npc": {
+   "name": "Алхімік Северин",
+   "title": "алхімік у вигнанні",
+   "skin": "minecraft:textures/entity/player/wide/noor.png",
+   "slim": false,
+   "item": "minecraft:brewing_stand"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:blaze_rod",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:brewing_stand",
+    "minecraft:potion*3",
+    "minecraft:emerald*10"
+   ],
+   "xp": 220,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Мене вигнали з гільдії алхіміків за вибух у підвалі ратуші. Чесно кажучи, міська рада давно заслуговувала, щоб її трохи потрусило.",
+   "Тепер я варю зілля тут, у пеклі, і мені потрібні стрижні іфритів. Іфрити літають біля фортець і плюються вогнем. Я одного разу пробував — бачите мої брови? Їх нема."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть вісім стрижнів іфрита. Іфрити живуть у незерських фортецях біля своїх спавнерів. Візьміть зілля вогнестійкості."
+  },
+  "haggle": true,
+  "persona": "blaze_rods",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Стрижні іфритів"
+ },
+ {
+  "key": "ghast_tears",
+  "npc": {
+   "name": "Плакальниця Ярина",
+   "title": "жінка, що не вміє плакати",
+   "skin": "minecraft:textures/entity/player/slim/noor.png",
+   "slim": true,
+   "item": "minecraft:ghast_tear"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:ghast_tear",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:golden_apple*2",
+    "minecraft:emerald*12"
+   ],
+   "xp": 240,
+   "skill_xp": 90,
+   "loot": null
+  },
+  "story": [
+   "Коли загинув мій чоловік, я не зронила жодної сльози. Відтоді на мені прокляття: я не можу ні плакати, ні сміятися.",
+   "Знахар сказав: сльози ґаста повернуть мені серце. Ґасти плачуть, коли помирають, — над морем лави, де їхні крики чути на милі."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть три сльози ґаста. Відбивайте їхні вогняні кулі ударом — і вони впадуть від власного вогню. Сльози падають над лавою, будьте швидкі."
+  },
+  "haggle": true,
+  "persona": "ghast_tears",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Сльози ґаста"
+ },
+ {
+  "key": "wither_skulls",
+  "npc": {
+   "name": "Некромант Гордій",
+   "title": "дуже підозрілий науковець",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:wither_skeleton_skull"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:wither_skeleton_skull",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*6",
+    "minecraft:emerald*20"
+   ],
+   "xp": 350,
+   "skill_xp": 130,
+   "loot": null
+  },
+  "story": [
+   "Мені потрібні три черепи візер-скелетів. Для науки. Суто для науки. Ні, я не збираюся нікого воскрешати. Чого ви так дивитеся?",
+   "Скелети ці живуть у фортецях Незеру, а черепи випадають рідко. Терпіння, мій друже, терпіння — і меч із «Грабунком»."
+  ],
+  "questions": [
+   {
+    "q": "Ви збираєтеся викликати Візера?",
+    "a": "Ні! Тобто... дивлячись хто питає. Ну гаразд, можливо. Але лише щоб подивитися! Одним оком!"
+   }
+  ],
+  "lines": {
+   "ask": "Принесіть три черепи візер-скелетів. Чари «Грабунок» на мечі додають шансу.",
+   "lie_ok": "Уже приніс? Чудово-чудово, будуть мені компаньйони. Тобто експонати! Тримайте нагороду.",
+   "haggle_ok": "Ох, ви торгуєтеся з некромантом. Сміливо. Гаразд, отримаєте більше."
+  },
+  "haggle": true,
+  "persona": "wither_skulls",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Черепи візер-скелетів"
+ },
+ {
+  "key": "ancient_debris",
+  "npc": {
+   "name": "Коваль Свирид",
+   "title": "коваль, що кує легенди",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "minecraft:netherite_scrap"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:ancient_debris",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "minecraft:netherite_upgrade_smithing_template",
+    "minecraft:diamond*4"
+   ],
+   "xp": 400,
+   "skill_xp": 150,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Я кую зброю, що переживе королів. Та для неї мені треба незерит — уламки давнього металу, що лежать глибоко в незерському камені.",
+   "Шукати їх — як голку в лаві. Але є хитрість: ліжка в Незері вибухають. Вибухи відкривають уламки, бо їх не бере вогонь."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть чотири давні уламки. Копайте на рівні 8–22 у Незері; вибухи ліжок чи TNT відкривають великі ділянки.",
+   "lie_fail": "Давні уламки важкі й чорні, як ніч. У вашій торбі такої ваги немає. Не обманюйте коваля."
+  },
+  "haggle": true,
+  "persona": "ancient_debris",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Давні уламки"
+ },
+ {
+  "key": "piglin_gold",
+  "npc": {
+   "name": "Посол Тодор",
+   "title": "посол до піглінів",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:gold_ingot"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:gold_block",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "minecraft:ender_pearl*8",
+    "minecraft:fire_charge*8",
+    "minecraft:emerald*15"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": null
+  },
+  "story": [
+   "Я посол нашого королівства до піглінів. Вони погоджуються на мир лише за золото — і щоразу більше. Король вже переплавив корону.",
+   "Чотири блоки золота — і пігліни відкриють нам шлях до бастіону, де полонені наші люди."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть чотири блоки золота. Носіть золоту броню — тоді пігліни вас не чіпатимуть."
+  },
+  "haggle": true,
+  "persona": "piglin_gold",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Золото для піглінів"
+ },
+ {
+  "key": "strider_ride",
+  "npc": {
+   "name": "Мрійник Захар",
+   "title": "мандрівник на страйдері",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:warped_fungus_on_a_stick"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:warped_fungus_on_a_stick",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:saddle",
+    "minecraft:emerald*10"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "Я переплив лавове море на страйдері! Ну, майже переплив — посередині моя вудка з грибом зламалася, і він поніс мене назад.",
+   "Зробіть мені нову: вудка й викривлений гриб. Я ще раз спробую, а вам розповім, що там, на тому березі."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть викривлений гриб на вудці."
+  },
+  "haggle": true,
+  "persona": "strider_ride",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Подорож лавою"
+ },
+ {
+  "key": "end_city_elytra",
+  "npc": {
+   "name": "Пілот Віталій",
+   "title": "мрійник про небо",
+   "skin": "minecraft:textures/entity/player/wide/ari.png",
+   "slim": false,
+   "item": "minecraft:phantom_membrane"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_end",
+    "minecraft:overworld"
+   ],
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:elytra",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:firework_rocket*32",
+    "minecraft:diamond*5"
+   ],
+   "xp": 500,
+   "skill_xp": 200,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Я все життя будую крила. Шкіра, пір'я, перетинки фантомів — ніщо не тримає в повітрі. Але є крила, що летять самі: елітри з кораблів Енду.",
+   "Я надто старий для Енду. Принесіть мені одні — я хочу торкнутися неба, поки не пізно. А потім віддам їх вам. Обіцяю."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть елітри з корабля міста Енду. Шалкери стріляють левітацією — тримайте відро води чи молоко.",
+   "thanks": "Легкі... як подих. Я потримав — і досить. Ось, ці крила тепер ваші, і ще ракети до них. Летіть і за мене."
+  },
+  "haggle": true,
+  "persona": "end_city_elytra",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Крила Енду"
+ },
+ {
+  "key": "shulker_shells",
+  "npc": {
+   "name": "Торговка Ліза",
+   "title": "купчиха шовку",
+   "skin": "minecraft:textures/entity/player/slim/sunny.png",
+   "slim": true,
+   "item": "minecraft:shulker_shell"
+  },
+  "where": {
+   "dims": [
+    "minecraft:the_end",
+    "minecraft:overworld"
+   ],
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:shulker_shell",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:shulker_box",
+    "minecraft:diamond*4"
+   ],
+   "xp": 320,
+   "skill_xp": 120,
+   "loot": null
+  },
+  "story": [
+   "Скриня, що зберігає речі, навіть коли її розбити — це ж мрія кожного купця! Я хочу торгувати ящиками шалкерів по всьому світу.",
+   "Для цього потрібні мушлі. Шалкери ховаються в баштах міст Енду й прикидаються блоками."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть вісім мушель шалкерів."
+  },
+  "haggle": true,
+  "persona": "shulker_shells",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мушлі шалкерів"
+ },
+ {
+  "key": "arcane_essence",
+  "npc": {
+   "name": "Учениця Мілена",
+   "title": "учениця мага",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "irons_spellbooks:arcane_essence"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "tower",
+    "citadel",
+    "fort",
+    "catacomb",
+    "evoker",
+    "pyromancer"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "irons_spellbooks:arcane_essence",
+   "count": 12
+  },
+  "reward": {
+   "items": [
+    "irons_spellbooks:inscription_table",
+    "minecraft:lapis_lazuli*16"
+   ],
+   "xp": 220,
+   "skill_xp": 80,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Мій учитель вважає, що я ще не готова до справжньої магії. Але я вже вивчила три закляття з книжки! Ну, одне. Наполовину.",
+   "Щоб показати йому, я маю зробити свій перший сувій. Для цього потрібна тайна есенція — вона сиплеться з магів і їхніх скринь у вежах."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть дванадцять тайної есенції. Чарівники Iron's Spells і їхні вежі — найкращі джерела."
+  },
+  "haggle": true,
+  "persona": "arcane_essence",
+  "stage": 1,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Тайна есенція"
+ },
+ {
+  "key": "ae_ink",
+  "npc": {
+   "name": "Учениця Мілена",
+   "title": "учениця мага",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "irons_spellbooks:arcane_essence"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "tower",
+    "citadel",
+    "fort",
+    "catacomb",
+    "evoker",
+    "pyromancer"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "irons_spellbooks:common_ink",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "irons_spellbooks:scroll_forge",
+    "minecraft:emerald*8"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Учитель побачив мій сувій і... сказав, що почерк жахливий. Але погодився вчити далі!",
+   "Тепер я мушу писати сувої сама, а для цього потрібні чорнила. Їх варять у казані алхіміка з чорнильного мішка й тайної есенції."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Він погодився! Він погодився мене вчити!",
+   "ask": "Принесіть вісім звичайних чорнил.",
+   "thanks": "Тепер я писатиму, поки не відпадуть пальці. Ось вам кузня сувоїв — у мене їх дві.",
+   "dead": "Учениця мага загинула, так і не ставши магом."
+  },
+  "haggle": true,
+  "persona": "arcane_essence",
+  "stage": 2,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Перші чорнила"
+ },
+ {
+  "key": "ae_rare_ink",
+  "npc": {
+   "name": "Учениця Мілена",
+   "title": "учениця мага",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "irons_spellbooks:arcane_essence"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "tower",
+    "citadel",
+    "fort",
+    "catacomb",
+    "evoker",
+    "pyromancer"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "irons_spellbooks:rare_ink",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "irons_spellbooks:mana_ring",
+    "minecraft:emerald*14"
+   ],
+   "xp": 320,
+   "skill_xp": 130,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Учитель дав мені іспит: сувій рівня, якого він сам не писав до тридцяти років. Звичайні чорнила такого не втримають.",
+   "Рідкісні чорнила варять із незвичайних, додаючи сильніші магічні складники. Два флакони — і я складу іспит."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Іспит! У мене іспит!",
+   "ask": "Принесіть два флакони рідкісних чорнил.",
+   "thanks": "Склала! Тепер я справжня магиня. Візьміть мою каблучку мани — тепер мені вистачить і своєї сили.",
+   "dead": "Учениця мага загинула напередодні свого іспиту."
+  },
+  "haggle": true,
+  "persona": "arcane_essence",
+  "stage": 3,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Рідкісні чорнила"
+ },
+ {
+  "key": "source_gems",
+  "npc": {
+   "name": "Друїд Гордомир",
+   "title": "хранитель гаю",
+   "skin": "minecraft:textures/entity/player/wide/noor.png",
+   "slim": false,
+   "item": "ars_nouveau:source_gem"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "ars_nouveau:source_gem",
+   "count": 16
+  },
+  "reward": {
+   "items": [
+    "ars_nouveau:novice_spell_book",
+    "minecraft:experience_bottle*8"
+   ],
+   "xp": 240,
+   "skill_xp": 90,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Моя книга заклинань розсипалася від старості, і з нею — моя пам'ять про руни. Я мушу записати все наново, поки не забув.",
+   "Камені джерела роблять із лазуриту й аметисту на зачаровувальному столі. Але мій стіл давно поріс мохом."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шістнадцять каменів джерела. Рецепт — у JEI; найпростіше — лазурит і аметист в імбуювальній камері Ars Nouveau.",
+   "thanks": "Чую, як вони співають... Тримайте книгу новачка — у ній ваш власний шлях заклинань. Почніть з «Снаряда» і «Шкоди»."
+  },
+  "haggle": true,
+  "persona": "source_gems",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Камені джерела"
+ },
+ {
+  "key": "wilden_hunt",
+  "npc": {
+   "name": "Мисливець Устим",
+   "title": "мисливець за магічними звірами",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:crossbow"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "ars_nouveau:wilden_hunter",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "ars_nouveau:wilden_horn*2",
+    "minecraft:emerald*12"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Дикі мисливці — звірі, зіткані з чистого джерела. Їхні роги потрібні магам для чарівних посохів.",
+   "Вони полюють групою і швидкі, як вітер. Я двічі ледве втік."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте трьох диких мисливців (Wilden Hunter). Вони живуть у лігвах серед лісів і гір."
+  },
+  "haggle": true,
+  "persona": "wilden_hunt",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Дикі звірі джерела"
+ },
+ {
+  "key": "dead_king",
+  "npc": {
+   "name": "Привид лицаря Остромира",
+   "title": "дух, що не може спочити",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:iron_sword"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "catacomb",
+    "crypt",
+    "graveyard"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "irons_spellbooks:dead_king",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:netherite_ingot",
+    "minecraft:diamond*6"
+   ],
+   "xp": 600,
+   "skill_xp": 250,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "(Голос звучить звідусіль і нізвідки.) Я присягнув королеві захищати її до смерті. Я дотримав слова — а вона дотримала свого: піднялася з могили Мертвим королем.",
+   "Поки вона править у своїх катакомбах, я не можу піти далі. Звільніть нас обох."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте Мертвого короля в катакомбах Iron's Spells. Він кличе мерців і б'є косою — тримайте дистанцію.",
+   "greet": "(Холод пробігає по спині, і в повітрі з'являється напівпрозорий лицар.)"
+  },
+  "haggle": true,
+  "persona": "dead_king",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мертвий король"
+ },
+ {
+  "key": "windmill_engineer",
+  "npc": {
+   "name": "Інженер Онисим",
+   "title": "механік-самоук",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "create:cogwheel"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:andesite_alloy",
+   "count": 32
+  },
+  "reward": {
+   "items": [
+    "create:wrench",
+    "create:goggles",
+    "minecraft:emerald*10"
+   ],
+   "xp": 220,
+   "skill_xp": 80,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Я придумав вітряк, що мелє зерно, качає воду і пиляє дерева водночас! Креслення є, бракує лише андезитового сплаву — головного матеріалу механізмів.",
+   "Його роблять з андезиту й заліза. Просто, але довго. А я вже старий, щоб місити андезит."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть тридцять два андезитові сплави (Create): андезит і залізні самородки на верстаті або в змішувачі.",
+   "thanks": "Чудово! Тримайте ключ і окуляри інженера — в окулярах видно, скільки сили в кожному валу. Ласкаво просимо до механіків!"
+  },
+  "haggle": true,
+  "persona": "windmill_engineer",
+  "stage": 1,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Вітряк для села"
+ },
+ {
+  "key": "we_wheels",
+  "npc": {
+   "name": "Інженер Онисим",
+   "title": "механік-самоук",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "create:cogwheel"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:water_wheel",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "create:goggles",
+    "minecraft:emerald*10"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Вітряк крутиться, але вітер — річ примхлива. Хочу поставити ще й водяні колеса на річці: вода не відпочиває.",
+   "Колесо роблять із дощок і валу. Четверо коліс — і млин молотиме навіть у штиль."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Чуєте, як шумить? Це мій вітряк. Але мені мало!",
+   "ask": "Принесіть чотири водяні колеса.",
+   "thanks": "Колеса стоять, вода крутить. Тепер — справжня машина.",
+   "dead": "Інженер загинув, і його млин зупинився."
+  },
+  "haggle": true,
+  "persona": "windmill_engineer",
+  "stage": 2,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Водяні колеса"
+ },
+ {
+  "key": "we_press",
+  "npc": {
+   "name": "Інженер Онисим",
+   "title": "механік-самоук",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "create:cogwheel"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:mechanical_press",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "create:mechanical_crafter*2",
+    "minecraft:emerald*16"
+   ],
+   "xp": 280,
+   "skill_xp": 110,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Мій найбільший задум — прес, що сам кує листи з металу. Селу не доведеться возити їх з міста.",
+   "Прес робиться з андезитового корпусу, валу й залізного блока. Зробите — і я покажу вам, як зібрати цілий завод."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Погляньте на креслення! Ні, це не пляма — це прес.",
+   "ask": "Принесіть механічний прес.",
+   "thanks": "Бах! Бах! Перший лист! Тримайте моїх механічних майстрів — вони збирають великі рецепти.",
+   "dead": "Інженер загинув над кресленням свого заводу."
+  },
+  "haggle": true,
+  "persona": "windmill_engineer",
+  "stage": 3,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Механічний прес"
+ },
+ {
+  "key": "brass_dreams",
+  "npc": {
+   "name": "Пані Аделаїда",
+   "title": "годинникарка",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "create:brass_ingot"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:brass_ingot",
+   "count": 16
+  },
+  "reward": {
+   "items": [
+    "minecraft:clock",
+    "minecraft:emerald*15"
+   ],
+   "xp": 280,
+   "skill_xp": 100,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Мої годинники — найточніші у світі. Ну, були б найточніші, якби латунь не коштувала так дорого.",
+   "Латунь плавлять із міді й цинку в змішувачі над нагрітим чаном. Звучить просто — але потрібна піч із вогнем іфрита."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шістнадцять латунних злитків (Create): мідь + цинк у механічному змішувачі над нагрітим чаном."
+  },
+  "haggle": true,
+  "persona": "brass_dreams",
+  "stage": 1,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Латунні мрії"
+ },
+ {
+  "key": "bd_tubes",
+  "npc": {
+   "name": "Пані Аделаїда",
+   "title": "годинникарка",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "create:brass_ingot"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:electron_tube",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*10"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "З вашою латунню мої годинники пішли так точно, що їх замовив навіть староста. А я задумала більше: годинник, що сам себе заводить.",
+   "Для нього потрібні електронні лампи: полірований рожевий кварц і залізний лист."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "О, мій постачальник латуні! Заходьте, тільки обережно з пружинами на підлозі.",
+   "ask": "Принесіть вісім електронних ламп.",
+   "thanks": "Сяють, як ранок. Тепер — серце механізму.",
+   "dead": "Годинникарка загинула, і годинники в її майстерні зупинилися."
+  },
+  "haggle": true,
+  "persona": "brass_dreams",
+  "stage": 2,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Електронні лампи"
+ },
+ {
+  "key": "bd_mechanisms",
+  "npc": {
+   "name": "Пані Аделаїда",
+   "title": "годинникарка",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "create:brass_ingot"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:precision_mechanism",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "create:brass_hand",
+    "minecraft:emerald*12"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Точний механізм — це золота пластина, латунні зубці, шестерні й лампи, зібрані на конвеєрі в правильному порядку. Помилишся раз — і купа брухту.",
+   "Я пробувала сама. На столі тепер дванадцять купок брухту."
+  ],
+  "questions": [
+   {
+    "q": "Як його зібрати?",
+    "a": "Послідовне складання: покладіть золотий лист на розгортальний стіл чи конвеєр і по черзі додавайте деталі. Книга рецептів (U над предметом) покаже порядок."
+   }
+  ],
+  "lines": {
+   "greet": "Не дивіться на той брухт у кутку. Це... експерименти.",
+   "ask": "Принесіть чотири точні механізми.",
+   "thanks": "Досконало. Ви збираєте краще за мене — а я це кажу не кожному.",
+   "dead": "Годинникарка загинула над незібраним механізмом."
+  },
+  "haggle": true,
+  "persona": "brass_dreams",
+  "stage": 3,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Точні механізми"
+ },
+ {
+  "key": "bd_arms",
+  "npc": {
+   "name": "Пані Аделаїда",
+   "title": "годинникарка",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "create:brass_ingot"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:mechanical_arm",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*16"
+   ],
+   "xp": 320,
+   "skill_xp": 120,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Мій великий годинник матиме фігурки, що виходять щогодини: коваль б'є молотом, пастушка жене овець. Рухати їх мають механічні руки.",
+   "Дві руки — і фігурки оживуть. Дорого? Так. Але це буде диво, про яке говоритимуть у трьох селах."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Мандрівнику! Я вже вирізала фігурки, подивіться на цього коваля!",
+   "ask": "Принесіть дві механічні руки.",
+   "thanks": "Вони рухаються! Лишилось останнє — сам годинник.",
+   "dead": "Годинникарка загинула, і фігурки так і не ожили."
+  },
+  "haggle": true,
+  "persona": "brass_dreams",
+  "stage": 4,
+  "stages": 5,
+  "valuable": false,
+  "quest_title": "Механічні руки"
+ },
+ {
+  "key": "bd_clock",
+  "npc": {
+   "name": "Пані Аделаїда",
+   "title": "годинникарка",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "create:brass_ingot"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "create:cuckoo_clock",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*4",
+    "minecraft:emerald*24"
+   ],
+   "xp": 450,
+   "skill_xp": 180,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Мій чоловік мріяв, щоб над площею нашого села висів годинник. Він не дожив. А я — дожила, і завдяки вам маю все, щоб його зробити.",
+   "Останнє — корпус із зозулею. Зробіть його своїми руками: я хочу, щоб у цьому годиннику була частинка того, хто мені допоміг."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Сьогодні я не працюю. Сьогодні я згадую.",
+   "ask": "Змайструйте годинник із зозулею.",
+   "thanks": "Тепер його чутиме все село. Щогодини, коли кує зозуля, я згадуватиму двох: його і вас.",
+   "dead": "Годинникарка загинула, так і не повісивши свій годинник."
+  },
+  "haggle": true,
+  "persona": "brass_dreams",
+  "stage": 5,
+  "stages": 5,
+  "valuable": true,
+  "quest_title": "Годинник для села"
+ },
+ {
+  "key": "osmium_order",
+  "npc": {
+   "name": "Інспектор Кіндрат",
+   "title": "інспектор гільдії металургів",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "mekanism:ingot_osmium"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "mekanism:ingot_osmium",
+   "count": 24
+  },
+  "reward": {
+   "items": [
+    "mekanism:metallurgic_infuser",
+    "minecraft:emerald*15"
+   ],
+   "xp": 260,
+   "skill_xp": 90,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Гільдія доручила мені знайти нове джерело осмію — блакитнуватого металу для машин. Я знайшов поклади. Але копати — не моя посада.",
+   "Мені досить звіту й двадцяти чотирьох злитків як доказу. Решту знайдете самі — і, повірте, вам сподобається."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть двадцять чотири злитки осмію (Mekanism). Осмієва руда — у звичайному камені на середніх глибинах."
+  },
+  "haggle": true,
+  "persona": "osmium_order",
+  "stage": 1,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Замовлення на осмій"
+ },
+ {
+  "key": "oo_steel",
+  "npc": {
+   "name": "Інспектор Кіндрат",
+   "title": "інспектор гільдії металургів",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "mekanism:ingot_osmium"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "mekanism:ingot_steel",
+   "count": 16
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*16"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Гільдія задоволена звітом. Настільки, що дала мені нове доручення — і я, звісно, передаю його вам.",
+   "Сталь Mekanism варять у металургійному наповнювачі: залізо, насичене вуглецем. Шістнадцять злитків."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Гільдія вражена. Я теж, хоч і не покажу.",
+   "ask": "Принесіть шістнадцять сталевих злитків.",
+   "thanks": "Якісна сталь. Гільдія записала ваше ім'я у свою книгу постачальників.",
+   "dead": "Інспектор загинув, і звіт до гільдії так і не дійшов."
+  },
+  "haggle": true,
+  "persona": "osmium_order",
+  "stage": 2,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Сталь для гільдії"
+ },
+ {
+  "key": "oo_circuits",
+  "npc": {
+   "name": "Інспектор Кіндрат",
+   "title": "інспектор гільдії металургів",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "mekanism:ingot_osmium"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "mekanism:basic_control_circuit",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "mekanism:energy_tablet",
+    "minecraft:emerald*20"
+   ],
+   "xp": 320,
+   "skill_xp": 130,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "Останнє доручення: гільдія будує першу автоматичну плавильню. Їй потрібні схеми керування — мозок кожної машини.",
+   "Схему роблять з осмію й червоного пилу в металургійному наповнювачі. Ви вже знаєте, як він працює."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Останнє доручення. Обіцяю.",
+   "ask": "Принесіть вісім базових схем керування.",
+   "thanks": "Гільдія надсилає подяку і, що важливіше, оплату. Ви — найкращий постачальник за всю мою службу.",
+   "dead": "Інспектор загинув, і плавильня гільдії так і не запрацювала."
+  },
+  "haggle": true,
+  "persona": "osmium_order",
+  "stage": 3,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Схеми керування"
+ },
+ {
+  "key": "wither_storm",
+  "npc": {
+   "name": "Вчений Аркадій",
+   "title": "астроном",
+   "skin": "minecraft:textures/entity/player/wide/ari.png",
+   "slim": false,
+   "item": "minecraft:spyglass"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:nether_star",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:beacon",
+    "minecraft:diamond*8"
+   ],
+   "xp": 800,
+   "skill_xp": 300,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Я досліджую зорі. Більшість падає з неба, але є одна, що народжується в смерті Візера — триголового чудовиська з черепів.",
+   "Ця зірка — серце маяка, що дає людям силу. Я хочу побачити її світло зблизька, хоча б раз."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте Візера й принесіть зірку Незеру. Викликайте його далеко від дому — і під землею він слабший у маневрі.",
+   "thanks": "Вона тепла... і світить сама. Тримайте маяк — це найкраще місце для цієї зірки."
+  },
+  "haggle": true,
+  "persona": "wither_storm",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Темна зірка"
+ },
+ {
+  "key": "long_road",
+  "npc": {
+   "name": "Пілігрим Савва",
+   "title": "пілігрим",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:leather_boots"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond_boots",
+    "minecraft:emerald*20"
+   ],
+   "xp": 500,
+   "skill_xp": 200,
+   "loot": null
+  },
+  "story": [
+   "Я дав обітницю пройти п'ять тисяч блоків пішки до святого місця. Пройшов половину і зламав ногу. Обітниця не може чекати.",
+   "Пройдіть за мене решту — ваші кроки зарахуються мені, бо дорога пам'ятає, хто її просив."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Пройдіть п'ять тисяч блоків пішки (рахується від прийняття завдання в книзі квестів)."
+  },
+  "haggle": false,
+  "persona": "long_road",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Довга дорога"
+ },
+ {
+  "key": "sail_the_seas",
+  "npc": {
+   "name": "Морячка Устина",
+   "title": "колишня штурманка",
+   "skin": "minecraft:textures/entity/player/slim/noor.png",
+   "slim": true,
+   "item": "minecraft:oak_boat"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "beach",
+    "lighthouse",
+    "ship"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:heart_of_the_sea",
+    "minecraft:emerald*15"
+   ],
+   "xp": 450,
+   "skill_xp": 180,
+   "loot": null
+  },
+  "story": [
+   "Колись я обігнула пів світу. Тепер мій корабель гниє в затоці, а я рахую чайок. Я хочу знати, що хтось ще пливе туди, де кінчаються мапи.",
+   "Проженіть свій човен через три тисячі блоків моря — і принесіть мені звістку про далекі береги."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Пропливіть човном три тисячі блоків."
+  },
+  "haggle": true,
+  "persona": "sail_the_seas",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Навколо світу"
+ },
+ {
+  "key": "ender_dragon",
+  "npc": {
+   "name": "Відлюдник Йоахим",
+   "title": "старий шукач порталів",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:ender_eye"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den",
+    "stronghold",
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:ender_dragon",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:netherite_ingot*2",
+    "minecraft:elytra",
+    "minecraft:diamond*10"
+   ],
+   "xp": 1500,
+   "skill_xp": 600,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Сорок років я шукаю портал у Енд. Знайшов. Але старий для бою з чорним драконом, що кружляє над вежами з обсидіану.",
+   "Я віддам вам усе, що зібрав за життя, — тільки поверніться і розкажіть, як вона падала."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте Дракона Енду. Спершу розбийте кристали на вежах — вони його лікують."
+  },
+  "haggle": true,
+  "persona": "ender_dragon",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Дракон Енду"
+ },
+ {
+  "key": "roses_for_marta",
+  "npc": {
+   "name": "Остап",
+   "title": "старий садівник",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:iron_hoe"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:rose_bush",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*6",
+    "minecraft:bone_meal*16"
+   ],
+   "xp": 120,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Сорок років тому я посадив біля нашої хати кущ троянд для своєї Марти. Цієї весни Марти не стало, а за нею зів'яв і кущ — наче знав.",
+   "Я хочу посадити нові на її могилі. Але ноги вже не носять мене далі ґанку, а троянди ростуть лише на квітучих луках та в лісах, де їх ніхто не топче."
+  ],
+  "questions": [
+   {
+    "q": "Чому саме троянди?",
+    "a": "Бо першою квіткою, яку я їй подарував, була троянда. Украв її з панського саду, а потім тиждень працював у того пана, щоб відробити. Вона сміялася, що я дорого купую квіти."
+   },
+   {
+    "q": "Де їх шукати?",
+    "a": "Трояндові кущі — високі, на два блоки, ростуть на лісових галявинах і квітучих луках. Кістяне борошно на кущі дасть ще одну квітку."
+   }
+  ],
+  "lines": {
+   "greet": "Ох, мандрівник... Сідайте, якщо маєте хвилинку. Старому є що попросити.",
+   "ask": "Принесіть мені шість трояндових кущів. Я заплачу, чим маю.",
+   "accept": "Дякую. Марта б вас полюбила — вона завжди вірила незнайомцям.",
+   "decline": "Нічого, нічого. Я почекаю — я тепер добре вмію чекати.",
+   "remind": "Троянди ще не знайшлися? Нічого, вони терплячі, як і я.",
+   "done": "Невже це троянди? Дайте-но гляну...",
+   "thanks": "Вони пахнуть так само, як тоді. Ідіть із миром — і бережіть тих, кого любите.",
+   "lie_ok": "Уже зібрали? І посадили за мене? Яке добре серце... Тримайте все, що обіцяв.",
+   "lie_fail": "Синку, я сорок років доглядаю троянди. На ваших руках жодної подряпини від шипів.",
+   "dead": "Старий садівник так і не посадив свої троянди."
+  },
+  "haggle": true,
+  "persona": "roses_for_marta",
+  "stage": 1,
+  "stages": 2,
+  "valuable": false,
+  "quest_title": "Троянди для Марти"
+ },
+ {
+  "key": "rm_garden",
+  "npc": {
+   "name": "Остап",
+   "title": "старий садівник",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:iron_hoe"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:lily_of_the_valley",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*8",
+    "minecraft:flowering_azalea*2"
+   ],
+   "xp": 120,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Троянди прижилися. Тепер я хочу посадити біля них конвалії — Марта завжди казала, що вони пахнуть травнем.",
+   "Конвалії ростуть у лісах, у тіні високих дерев. Вісім кущиків — і в мене буде сад."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Ходіть-но подивіться: троянди вже дали бруньки!",
+   "ask": "Принесіть вісім конвалій.",
+   "thanks": "Тепер там справжній сад. Приходьте навесні — він буде найкращим у селі.",
+   "dead": "Старий садівник загинув, і сад пам'яті зарос бур'яном."
+  },
+  "haggle": true,
+  "persona": "roses_for_marta",
+  "stage": 2,
+  "stages": 2,
+  "valuable": false,
+  "quest_title": "Сад пам'яті"
+ },
+ {
+  "key": "wolves_at_the_fold",
+  "npc": {
+   "name": "Галина",
+   "title": "пастушка",
+   "skin": "minecraft:textures/entity/player/slim/alex.png",
+   "slim": true,
+   "item": "minecraft:shears"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:wolf",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:white_wool*16",
+    "minecraft:mutton*8"
+   ],
+   "xp": 80,
+   "skill_xp": 30,
+   "loot": null
+  },
+  "story": [
+   "Мої вівці ночують у кошарі за селом. Третю ніч поспіль хтось риє під загородою, і щоранку однієї бракує.",
+   "Сліди великі, як долоня. Староста каже — вовки, а мисливці подалися на ярмарок у місто і повернуться хіба по жнивах."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Ей, ви там! Із мечем — значить, не боїтеся темряви?",
+   "task": "перемогти хижака, що краде овець (заховайтеся вночі біля кошари; квест у книзі — «Вовки біля кошари»)"
+  },
+  "haggle": true,
+  "persona": "wolves_at_the_fold",
+  "stage": 1,
+  "stages": 2,
+  "valuable": false,
+  "quest_title": "Вовки біля кошари"
+ },
+ {
+  "key": "wf_fence",
+  "npc": {
+   "name": "Галина",
+   "title": "пастушка",
+   "skin": "minecraft:textures/entity/player/slim/alex.png",
+   "slim": true,
+   "item": "minecraft:shears"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:oak_fence",
+   "count": 24
+  },
+  "reward": {
+   "items": [
+    "minecraft:lead*2",
+    "minecraft:white_wool*16",
+    "minecraft:emerald*6"
+   ],
+   "xp": 100,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Вовків більше нема, але стара кошара — сама діра на дірі. Наступні хижаки пролізуть так само.",
+   "Двадцять чотири прольоти дубового паркану — і жоден вовк не підкопається."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Вівці цілі! Усі до одної. Але кошара...",
+   "ask": "Принесіть двадцять чотири дубові паркани.",
+   "thanks": "Тепер у мене найміцніша кошара в окрузі. Тримайте повідці — мало чи кого ще захочете привести додому.",
+   "dead": "Пастушка загинула, і її вівці розбрелися."
+  },
+  "haggle": true,
+  "persona": "wolves_at_the_fold",
+  "stage": 2,
+  "stages": 2,
+  "valuable": false,
+  "quest_title": "Нова кошара"
+ },
+ {
+  "key": "lost_lute",
+  "npc": {
+   "name": "Тарас",
+   "title": "мандрівний бард",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:note_block"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:note_block",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:music_disc_cat",
+    "minecraft:emerald*4"
+   ],
+   "xp": 100,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Я співав по корчмах від моря до гір, поки в останній не програв свою лютню в кості. Ну, не програв — її в мене вкрали, поки я спав, і продали заїжджим купцям.",
+   "Без інструмента я ніхто: ні хліба, ні ночівлі. Нову лютню мені не скласти, а от нотний блок... з нього можна видобути звук не гірший."
+  ],
+  "questions": [
+   {
+    "q": "А що ви співаєте?",
+    "a": "Про драконів, яких ніхто не бачив, і про красунь, яких бачили всі. Люди люблять, коли в пісні трохи брехні, а трохи правди."
+   }
+  ],
+  "lines": {
+   "ask": "Знайдіть чи змайструйте мені нотний блок — дерево й червоний пил, нічого складного для вмілих рук.",
+   "greet": "Ласкаво просимо на найсумніший концерт у світі — концерт без музики!",
+   "thanks": "О, цей звук! Слухайте всі — бард повернувся! Платівка ваша, і моя вічна пісня на вашу честь.",
+   "lie_ok": "Вже змайстрували? Ну, вірю — у вас очі музиканта. Тримайте, поки я не передумав.",
+   "lie_fail": "Друже, я сам брешу заради хліба вже двадцять років. Мене не надуриш."
+  },
+  "haggle": true,
+  "persona": "lost_lute",
+  "stage": 1,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Загублена лютня"
+ },
+ {
+  "key": "ll_strings",
+  "npc": {
+   "name": "Тарас",
+   "title": "мандрівний бард",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:note_block"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:amethyst_shard",
+   "count": 12
+  },
+  "reward": {
+   "items": [
+    "minecraft:music_disc_mall",
+    "minecraft:emerald*6"
+   ],
+   "xp": 120,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Нотний блок — добре, але для балади потрібен дзвін, що бринить довго, як струна. Так звучить аметист.",
+   "Аметистові жеоди ховаються під землею: фіолетові печери, що співають, коли по них ідеш."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Слухайте, слухайте! Ні, краще не слухайте — ще не звучить як треба.",
+   "ask": "Принесіть дванадцять уламків аметисту.",
+   "thanks": "Чуєте? Тепер моя пісня має відлуння.",
+   "dead": "Бард загинув, не доспівавши своєї балади."
+  },
+  "haggle": true,
+  "persona": "lost_lute",
+  "stage": 2,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Співучий кристал"
+ },
+ {
+  "key": "ll_stage",
+  "npc": {
+   "name": "Тарас",
+   "title": "мандрівний бард",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:note_block"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:jukebox",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:music_disc_otherside",
+    "minecraft:emerald*10"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "Я склав баладу про вас! Про те, як ви знайшли мені інструмент, а потім співучий кристал... Ну, трохи прикрасив, звісно: там ще є дракон.",
+   "Щоб її чули й без мене, мені потрібен програвач. Запишу баладу на платівку — і вона житиме довше за мене."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "О, герой моєї балади!",
+   "ask": "Принесіть програвач.",
+   "thanks": "Тепер балада про вас гратиме в кожній корчмі. Тримайте платівку — найрідкіснішу з моїх.",
+   "dead": "Бард загинув, і балада так і не прозвучала."
+  },
+  "haggle": true,
+  "persona": "lost_lute",
+  "stage": 3,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Сцена для барда"
+ },
+ {
+  "key": "bread_for_orphans",
+  "npc": {
+   "name": "Мотря",
+   "title": "вдова-пекарка",
+   "skin": "minecraft:textures/entity/player/slim/noor.png",
+   "slim": true,
+   "item": "minecraft:bread"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:wheat",
+   "count": 48
+  },
+  "reward": {
+   "items": [
+    "minecraft:cake",
+    "minecraft:bread*16"
+   ],
+   "xp": 90,
+   "skill_xp": 35,
+   "loot": null
+  },
+  "story": [
+   "Після нападу розбійників у селі лишилося семеро дітей без батьків. Я взяла їх до себе — а хліба печу на трьох.",
+   "Моє поле спалили. Купити пшениці нема за що, а просити в сусідів соромно — у них і самих порожньо."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть мені сорок вісім снопів пшениці — на місяць вистачить, а там своє поле підніметься.",
+   "greet": "Не дивіться на безлад, я тільки-но вклала малих спати.",
+   "thanks": "Ой, скільки... Діти, дивіться, хто прийшов! Тримайте торт — це останній, але ви його заслужили.",
+   "dead": "Діти пекарки знову лишилися самі."
+  },
+  "haggle": false,
+  "persona": "bread_for_orphans",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Хліб для сиріт"
+ },
+ {
+  "key": "zombie_plague",
+  "npc": {
+   "name": "Лукія",
+   "title": "сільська лікарка",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:potion"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:zombie_villager",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:golden_apple*2",
+    "minecraft:glistering_melon_slice*4"
+   ],
+   "xp": 150,
+   "skill_xp": 60,
+   "loot": null
+  },
+  "story": [
+   "Хтось у сусідньому селі приніс хворобу, від якої люди сіріють і забувають власних дітей. Тих, хто вже зовсім перетворився, ми не врятуємо.",
+   "Я знаю, як лікувати ранніх — золоте яблуко і слабкість. Але поки троє обернених бродять навколо, хвороба ширитиметься."
+  ],
+  "questions": [
+   {
+    "q": "Невже їх не можна вилікувати?",
+    "a": "Можна, якщо пощастить: зілля слабкості й золоте яблуко. Але ті троє вже нападали на людей — я не можу ризикувати рештою."
+   }
+  ],
+  "lines": {
+   "ask": "Зупиніть трьох обернених селян-зомбі. Знаю, це важко. Але це милосердя.",
+   "greet": "Стійте! Ви не кашляєте? Дайте подивлюся на ваші очі. Гаразд, здорові. Можете підійти."
+  },
+  "haggle": true,
+  "persona": "zombie_plague",
+  "stage": 1,
+  "stages": 4,
+  "valuable": false,
+  "quest_title": "Чорна хвороба"
+ },
+ {
+  "key": "zp_cure",
+  "npc": {
+   "name": "Лукія",
+   "title": "сільська лікарка",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:potion"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:golden_apple",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*10",
+    "minecraft:glistering_melon_slice*4"
+   ],
+   "xp": 160,
+   "skill_xp": 60,
+   "loot": null
+  },
+  "story": [
+   "Обернених ви зупинили. Але двоє дітей уже кашляють сірим кашлем. Їх ще можна врятувати: зілля слабкості і золоте яблуко.",
+   "Зілля я зварю сама. А от золота в мене нема — тільки трави."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Ви! Дякувати буду потім — зараз немає часу.",
+   "ask": "Принесіть два золоті яблука.",
+   "thanks": "Встигли. Обоє одужують. Але звідки взялася хвороба — я досі не знаю.",
+   "dead": "Лікарка загинула, і хвороба знову пішла селом."
+  },
+  "haggle": true,
+  "persona": "zombie_plague",
+  "stage": 2,
+  "stages": 4,
+  "valuable": false,
+  "quest_title": "Ліки для ранніх"
+ },
+ {
+  "key": "zp_witches",
+  "npc": {
+   "name": "Лукія",
+   "title": "сільська лікарка",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:potion"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:witch",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*12"
+   ],
+   "xp": 220,
+   "skill_xp": 90,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Я розпитала хворих. Усі вони пили воду з одного джерела біля болота — а поруч хтось бачив двох жінок у капелюхах, що варили щось у казані.",
+   "Відьми. Вони отруюють воду, щоб люди оберталися. Їм потрібні слуги, яких не шкода."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Я знаю, звідки хвороба. І мені страшно.",
+   "ask": "Зупиніть двох відьом, що отруюють воду.",
+   "thanks": "Вода чиста. Але в казані я знайшла знак — темний, як від тих, хто кличе духів.",
+   "dead": "Лікарка загинула, і правда про хворобу пішла разом з нею."
+  },
+  "haggle": true,
+  "persona": "zombie_plague",
+  "stage": 3,
+  "stages": 4,
+  "valuable": false,
+  "quest_title": "Звідки хвороба"
+ },
+ {
+  "key": "zp_evoker",
+  "npc": {
+   "name": "Лукія",
+   "title": "сільська лікарка",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:potion"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:evoker",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:totem_of_undying",
+    "minecraft:emerald*16"
+   ],
+   "xp": 420,
+   "skill_xp": 160,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Знак у казані — печатка закликача. Ілледжери-маги платять відьмам за обернених, щоб мати армію, яка не боїться смерті.",
+   "Закликач живе в лісовому особняку або ходить з патрулями. Поки він живий, усе почнеться знову."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Тепер я знаю, хто за цим стоїть.",
+   "ask": "Знайдіть і зупиніть закликача.",
+   "thanks": "Хвороба більше не повернеться. Візьміть його тотем — він повертає з того світу. Хай вам знадобиться якнайпізніше.",
+   "dead": "Лікарка загинула, і закликач і далі збирає свою армію."
+  },
+  "haggle": true,
+  "persona": "zombie_plague",
+  "stage": 4,
+  "stages": 4,
+  "valuable": true,
+  "quest_title": "Той, хто кличе"
+ },
+ {
+  "key": "stolen_bells",
+  "npc": {
+   "name": "Панас",
+   "title": "дзвонар",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:bell"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:bell",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*10"
+   ],
+   "xp": 120,
+   "skill_xp": 40,
+   "loot": "wilds:reward/explorer"
+  },
+  "story": [
+   "Сто років наш дзвін скликав село на свята й на пожежі. Тиждень тому розбійники зняли його з дзвіниці — кажуть, мідь дорого продається в місті.",
+   "Без дзвона старі не чують, коли біда. А я — дзвонар без дзвона, то й не знаю, навіщо прокидаюся."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Новий дзвін можна виміняти в жителів інших сіл чи знайти на їхніх майданах. Принесіть мені будь-який — підвішу, освятимо.",
+   "greet": "Чуєте цю тишу? Так звучить село без дзвона."
+  },
+  "haggle": true,
+  "persona": "stolen_bells",
+  "stage": 1,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Вкрадений дзвін"
+ },
+ {
+  "key": "sb_roof",
+  "npc": {
+   "name": "Панас",
+   "title": "дзвонар",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:bell"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:copper_block",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:emerald*10"
+   ],
+   "xp": 140,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Дзвін знову співає! Але дзвіниця протікає, і після кожного дощу дзвін звучить, як застуджений.",
+   "Мідний дах — вічний: спершу блищить, а потім зеленіє, як старі церкви на півночі."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Чули, як він співав зранку? Це ваш дзвін!",
+   "ask": "Принесіть шість мідних блоків на дах дзвіниці.",
+   "thanks": "Тепер він дзвенітиме хоч у зливу. Тільки от... розбійники знову крутяться біля села.",
+   "dead": "Дзвонар загинув, і дзвін на дзвіниці замовк."
+  },
+  "haggle": true,
+  "persona": "stolen_bells",
+  "stage": 2,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Дах для дзвіниці"
+ },
+ {
+  "key": "sb_return",
+  "npc": {
+   "name": "Панас",
+   "title": "дзвонар",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:bell"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:pillager",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:bell",
+    "minecraft:emerald*14"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": "wilds:reward/explorer"
+  },
+  "story": [
+   "Ті самі розбійники, що вкрали старий дзвін, повернулися по новий. Учора вночі я бачив їхні смолоскипи на пагорбі.",
+   "Я вдарю на сполох, коли вони підійдуть. А ви — будьте поруч."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Тихо... Чуєте? Це не вітер.",
+   "ask": "Переможіть шістьох розбійників, що підбираються до села.",
+   "thanks": "Нехай знають: це село тепер має дзвін і заступника. Ось вам старий дзвін, що його знайшли в їхньому таборі — він ваш.",
+   "dead": "Дзвонар загинув, ударивши на сполох."
+  },
+  "haggle": true,
+  "persona": "stolen_bells",
+  "stage": 3,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Вони повернулися"
+ },
+ {
+  "key": "pillager_banner",
+  "npc": {
+   "name": "Ярема",
+   "title": "колишній солдат",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:crossbow"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:pillager",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:crossbow",
+    "minecraft:arrow*32",
+    "minecraft:emerald*8"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Я служив прикордонником, поки розбійники не спалили нашу заставу. Вижив один — бо втік. Двадцять років я не можу собі цього простити.",
+   "Зараз їхня застава знову стоїть неподалік. Мої руки трусяться, коли беру арбалет. Але ваші, бачу, ні."
+  ],
+  "questions": [
+   {
+    "q": "Де їхня застава?",
+    "a": "Високі дерев'яні вежі з прапором — їх видно здалеку. Компас дослідника знайде «Заставу розбійників»."
+   }
+  ],
+  "lines": {
+   "ask": "Покладіть вісьмох розбійників. Може, тоді я засну хоч одну ніч без того вогню перед очима.",
+   "greet": "Не підходьте зі спини, юначе. Звичка."
+  },
+  "haggle": true,
+  "persona": "pillager_banner",
+  "stage": 1,
+  "stages": 4,
+  "valuable": false,
+  "quest_title": "Прапор розбійників"
+ },
+ {
+  "key": "pb_axes",
+  "npc": {
+   "name": "Ярема",
+   "title": "колишній солдат",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:crossbow"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:vindicator",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "minecraft:iron_axe",
+    "minecraft:emerald*10"
+   ],
+   "xp": 220,
+   "skill_xp": 90,
+   "loot": null
+  },
+  "story": [
+   "Після того, як ви розбили їхніх арбалетників, я вперше за двадцять років узяв арбалет і не трусився.",
+   "Але арбалетники — це дрібнота. Справжні вбивці — поборники з сокирами. Це вони спалили нашу заставу."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Бачите? Руки не трусяться. Це ваша заслуга.",
+   "ask": "Переможіть чотирьох поборників.",
+   "thanks": "Четверо. Я рахував кожного, кого вони вбили тоді. Лишився той, хто їх привів.",
+   "dead": "Старий солдат загинув, так і не побачивши кінця своєї війни."
+  },
+  "haggle": true,
+  "persona": "pillager_banner",
+  "stage": 2,
+  "stages": 4,
+  "valuable": false,
+  "quest_title": "Сокирники"
+ },
+ {
+  "key": "pb_ravager",
+  "npc": {
+   "name": "Ярема",
+   "title": "колишній солдат",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:crossbow"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:ravager",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:saddle",
+    "minecraft:emerald*14"
+   ],
+   "xp": 300,
+   "skill_xp": 120,
+   "loot": "wilds:reward/explorer"
+  },
+  "story": [
+   "Того дня ворота нашої застави виламав руйнівник — звір завбільшки з хату. Він приходить із великими набігами.",
+   "Кажуть, той самий звір досі ходить з їхнім військом. Я впізнаю його по шраму на морді."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Ви чули? Кажуть, їхнє військо знову йде.",
+   "ask": "Переможіть руйнівника.",
+   "thanks": "Шрам на морді... Так, це він. Тепер — їхній ватажок.",
+   "dead": "Старий солдат загинув у новому набігу."
+  },
+  "haggle": true,
+  "persona": "pillager_banner",
+  "stage": 3,
+  "stages": 4,
+  "valuable": false,
+  "quest_title": "Звір облоги"
+ },
+ {
+  "key": "pb_captain",
+  "npc": {
+   "name": "Ярема",
+   "title": "колишній солдат",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:crossbow"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:evoker",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond_sword",
+    "minecraft:emerald*20"
+   ],
+   "xp": 420,
+   "skill_xp": 160,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Їх веде закликач — маг, що кличе з-під землі ікла й примарних вексів. Він живе в лісовому особняку, глибоко в темному лісі.",
+   "Я піду з вами до краю лісу. Далі — ви самі. Я старий, і я вже раз утік. Удруге не дозволю собі заважати."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Двадцять років я чекав цього дня.",
+   "ask": "Знайдіть і переможіть закликача — ватажка розбійників.",
+   "thanks": "Застава відомщена. Візьміть мій меч — я носив його двадцять років і жодного разу не наважився витягти. Вам він потрібніший.",
+   "dead": "Старий солдат загинув біля краю темного лісу."
+  },
+  "haggle": true,
+  "persona": "pillager_banner",
+  "stage": 4,
+  "stages": 4,
+  "valuable": true,
+  "quest_title": "Ватажок"
+ },
+ {
+  "key": "honey_for_the_feast",
+  "npc": {
+   "name": "Оксана",
+   "title": "наречена",
+   "skin": "minecraft:textures/entity/player/slim/sunny.png",
+   "slim": true,
+   "item": "minecraft:honey_bottle"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:honey_bottle",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:cake",
+    "minecraft:emerald*5",
+    "minecraft:honeycomb*6"
+   ],
+   "xp": 90,
+   "skill_xp": 30,
+   "loot": null
+  },
+  "story": [
+   "За три дні моє весілля! Мама наказала зварити медовуху на все село — а наш пасічник саме впав із драбини й зламав ногу.",
+   "Бджоли його мене не знають і жалять. Я вже двічі пробувала. Подивіться на мою руку!"
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шість пляшечок меду. Порада від пасічника: розведіть під вуликом багаття — дим заспокоює бджіл.",
+   "thanks": "Ви врятували моє весілля! Приходьте — посаджу вас біля старости. Ну гаразд, біля його сварливої тещі. Але все одно почесно!"
+  },
+  "haggle": true,
+  "persona": "honey_for_the_feast",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мед на весілля"
+ },
+ {
+  "key": "the_old_mill",
+  "npc": {
+   "name": "Гнат",
+   "title": "мірошник",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "minecraft:wheat"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:spider",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:bread*12",
+    "minecraft:emerald*6"
+   ],
+   "xp": 110,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "У моєму млині оселилися павуки — величезні, з собаку завбільшки. Усю зиму я молов борошно, а тепер навіть двері відчинити боюся.",
+   "Синок пішов до міста вчитися на писаря. Каже, павуки — це «екосистема». Мені від цієї екосистеми не легше."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Виженіть шістьох павуків. Ліпше вдень — уночі вони стають злими, як моя теща.",
+   "greet": "Ви павуків не боїтеся? Бо я боюся. Отож і поговорімо."
+  },
+  "haggle": true,
+  "persona": "the_old_mill",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Старий млин"
+ },
+ {
+  "key": "map_to_nowhere",
+  "npc": {
+   "name": "Корній",
+   "title": "картограф-невдаха",
+   "skin": "minecraft:textures/entity/player/wide/ari.png",
+   "slim": false,
+   "item": "minecraft:map"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:filled_map",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:compass",
+    "minecraft:spyglass",
+    "minecraft:paper*16"
+   ],
+   "xp": 140,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Я картограф. Точніше, був ним, поки не з'ясувалося, що всі мої мапи — неправильні. Я малював їх із чужих розповідей, бо боюся вийти за ворота.",
+   "Купці подали на мене в суд. Мені потрібні справжні мапи — з цих країв. Хоч три, щоб показати суддям."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Намалюйте три мапи — порожню мапу візьміть у руки, ходіть, і вона сама промалюється. Принесіть мені три заповнені.",
+   "lie_fail": "Покажіть мапи. Ой, нема? То не обманюйте картографа — я знаю ціну вигадкам краще за всіх."
+  },
+  "haggle": true,
+  "persona": "map_to_nowhere",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мапа в нікуди"
+ },
+ {
+  "key": "cursed_well",
+  "npc": {
+   "name": "Явдоха",
+   "title": "знахарка",
+   "skin": "minecraft:textures/entity/player/slim/noor.png",
+   "slim": true,
+   "item": "minecraft:cauldron"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:witch",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "minecraft:potion",
+    "minecraft:glowstone_dust*8",
+    "minecraft:nether_wart*4"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": "wilds:reward/magic"
+  },
+  "story": [
+   "Колись ми з подругою вчилися в однієї відьми. Я пішла лікувати людей, а вона лишилася — і тепер труїть криниці, щоб люди приходили до неї по ліки за гроші.",
+   "Вона й ще одна сестра живуть на болоті, у хатинці на палях. Мене вони знають і проженуть. А вас — ні."
+  ],
+  "questions": [
+   {
+    "q": "Вам її не шкода?",
+    "a": "Шкода. Але ще більше мені шкода дітей, які п'ють з тієї криниці."
+   }
+  ],
+  "lines": {
+   "ask": "Зупиніть двох відьом. Остерігайтеся їхніх зіль — пийте молоко, якщо отруять.",
+   "greet": "Ш-ш-ш. Трави не люблять крику. Чого вам?"
+  },
+  "haggle": true,
+  "persona": "cursed_well",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Проклятий колодязь"
+ },
+ {
+  "key": "ghost_of_the_mine",
+  "npc": {
+   "name": "Лаврін",
+   "title": "шахтар на пенсії",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:iron_pickaxe"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den",
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:cave_spider",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*2",
+    "minecraft:torch*32"
+   ],
+   "xp": 160,
+   "skill_xp": 60,
+   "loot": null
+  },
+  "story": [
+   "Сорок років я копав у старій шахті, поки там не обвалилася штольня. З того часу кажуть — шахта проклята, а з глибини лізуть отруйні павуки.",
+   "Там лишилася моя кирка — ще батькова. Не прошу дістати кирку. Прошу, щоб молоді хлопці знову могли туди ходити."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Розчистіть шахту: вісім печерних павуків. Вони гніздяться біля спавнерів у покинутих шахтах.",
+   "greet": "Пахне від вас каменем. Шахтар? Тоді послухайте старого."
+  },
+  "haggle": true,
+  "persona": "ghost_of_the_mine",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Привид шахти"
+ },
+ {
+  "key": "the_runaway_horse",
+  "npc": {
+   "name": "Устим",
+   "title": "конюх",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:saddle"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:saddle",
+    "minecraft:golden_carrot*8",
+    "minecraft:iron_horse_armor"
+   ],
+   "xp": 120,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Я розводжу коней для гінців, а гінці скаржаться: коні ліниві, бігають тільки до стайні. Треба їх об'їздити — довго, далеко, щодня.",
+   "Але я впав і вже не сяду в сідло. Пропоную угоду: беріть будь-якого дикого коня, проїдьте на ньому п'ятсот блоків — і він ваш назавжди, а з мене ще й сідло."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Проїдьте верхи п'ятсот блоків. Дикого коня осідлаєте після кількох спроб — сідайте, поки він не скоряється.",
+   "greet": "Гарна у вас постава. Їздите верхи?"
+  },
+  "haggle": true,
+  "persona": "the_runaway_horse",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Утеклий кінь"
+ },
+ {
+  "key": "lights_in_the_fog",
+  "npc": {
+   "name": "Килина",
+   "title": "доглядачка маяка",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:lantern"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "lighthouse",
+    "beach",
+    "ocean"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:lantern",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:spyglass",
+    "minecraft:emerald*6"
+   ],
+   "xp": 100,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Мій батько тридцять років тримав світло, щоб купці не розбилися об скелі. Цієї зими він помер, а вогонь згас.",
+   "Я хочу запалити не один ліхтар, а вісім — щоб кожен човен бачив дорогу додому. Залізо я не вмію кувати, а купити нема на що."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть вісім ліхтарів: залізні самородки навколо смолоскипа на верстаті."
+  },
+  "haggle": true,
+  "persona": "lights_in_the_fog",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Вогні в тумані"
+ },
+ {
+  "key": "merchants_debt",
+  "npc": {
+   "name": "Федір",
+   "title": "купець-банкрут",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:emerald"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:emerald",
+   "count": 20
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*3"
+   ],
+   "xp": 150,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Я віз смарагди на ярмарок, коли на мене напали. Тепер я винен гільдії двадцять смарагдів, а без них мене не пустять у жоден торговий дім.",
+   "Я не прошу милостині! Позичте — і я поверну втричі. У мене схований скарб, але до нього треба дійти, а йти без каравану я не можу."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Позичте двадцять смарагдів. Повертаю алмазами, слово купця.",
+   "lie_ok": "Ви вже віддали борг гільдії за мене? Благородно! Ось алмази, як і обіцяв.",
+   "haggle_fail": "Пане, я банкрут. Ви хочете вичавити воду з каменя?"
+  },
+  "haggle": true,
+  "persona": "merchants_debt",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Борг купця"
+ },
+ {
+  "key": "scarecrow",
+  "npc": {
+   "name": "Дорко",
+   "title": "фермер",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "minecraft:carved_pumpkin"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:carved_pumpkin",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:pumpkin_pie*8",
+    "minecraft:emerald*4"
+   ],
+   "xp": 80,
+   "skill_xp": 30,
+   "loot": null
+  },
+  "story": [
+   "Ворони, кролі й козли! Усе, що виростає на моєму полі, з'їдають раніше, ніж я встигаю зібрати. Діди казали: потрібне опудало з різьбленою головою.",
+   "Гарбузи в мене є, а різати не вмію — у мене руки тремтять від старості."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть три вирізьблені гарбузи: гарбуз і ножиці — і клацніть ножицями по гарбузу."
+  },
+  "haggle": true,
+  "persona": "scarecrow",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Опудало на полі"
+ },
+ {
+  "key": "iron_golem_friend",
+  "npc": {
+   "name": "Василько",
+   "title": "сирота",
+   "skin": "minecraft:textures/entity/player/slim/alex.png",
+   "slim": true,
+   "item": "minecraft:poppy"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:iron_block",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "minecraft:poppy*4",
+    "minecraft:emerald*8",
+    "minecraft:iron_ingot*8"
+   ],
+   "xp": 140,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Мій друг — залізний голем. Він завжди давав мені маки. А вчора його розбили зомбі, і він розсипався на шматки.",
+   "Тітка каже, голема можна збудувати знову: чотири блоки заліза й гарбуз. Гарбуз я виростив сам! А заліза в нас немає."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть мені чотири блоки заліза... будь ласка.",
+   "greet": "Ви лицар? Справжній?",
+   "thanks": "Він знову тут! Дивіться, він дав мені мак! Ось вам усе, що я зібрав, — і цей мак теж, на щастя.",
+   "dead": "Хлопчик-сирота загинув, так і не побачивши свого голема."
+  },
+  "haggle": false,
+  "persona": "iron_golem_friend",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Друг-голем"
+ },
+ {
+  "key": "lost_brother",
+  "npc": {
+   "name": "Дарина",
+   "title": "сестра шукача скарбів",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "minecraft:compass"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:brush",
+    "minecraft:emerald*10"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": "wilds:reward/explorer"
+  },
+  "story": [
+   "Мій брат вічно шукав скарби. Місяць тому пішов до старих руїн стежок — казав, там поховане місто. І не повернувся.",
+   "Можливо, він знайшов те місто і вже багатий. Можливо... Я мушу знати, але я ніколи не виходила за межі села."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Знайдіть руїни стежок і огляньте їх. Компас дослідника знайде «Руїни стежок». Якщо побачите щось його — пензлик, наплічник — принесіть звістку.",
+   "done": "Ви там були? Що ви бачили?",
+   "thanks": "Його пензлик... він завжди казав, що пензлик — найкращий інструмент шукача. Тримайте його — він би хотів, щоб ним хтось користувався."
+  },
+  "haggle": true,
+  "persona": "lost_brother",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Брат у руїнах"
+ },
+ {
+  "key": "fox_and_chickens",
+  "npc": {
+   "name": "Параска",
+   "title": "господиня",
+   "skin": "minecraft:textures/entity/player/slim/sunny.png",
+   "slim": true,
+   "item": "minecraft:egg"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:fox",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "minecraft:egg*16",
+    "minecraft:cooked_chicken*8",
+    "minecraft:emerald*4"
+   ],
+   "xp": 70,
+   "skill_xp": 25,
+   "loot": null
+  },
+  "story": [
+   "Моя пташка зникає щоночі. Я сиджу з ліхтарем біля курника, а лисиці ніби знають і приходять саме тоді, як я задрімаю.",
+   "Чоловік поїхав на заробітки, син малий. Я би й сама, та лисиці моторні — не наздоженеш."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Проженіть двох лисиць. Вони ходять опівночі від лісу, з тайги чи ялинника."
+  },
+  "haggle": true,
+  "persona": "fox_and_chickens",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Лисиця й кури"
+ },
+ {
+  "key": "traveling_tailor",
+  "npc": {
+   "name": "Філімон",
+   "title": "кравець",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:white_wool"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:leather",
+   "count": 16
+  },
+  "reward": {
+   "items": [
+    "minecraft:leather_chestplate",
+    "minecraft:leather_boots",
+    "minecraft:emerald*6"
+   ],
+   "xp": 100,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Я шию куртки для мисливців, а мисливці подалися на північ — за ведмедями. Тепер ні замовників, ні шкіри.",
+   "Обіцяю: принесете шкіру — пошию вам таку куртку, що й дракон не подряпає. Ну, принаймні не одразу."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шістнадцять шкір — корови, коні, ламі."
+  },
+  "haggle": true,
+  "persona": "traveling_tailor",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мандрівний кравець"
+ },
+ {
+  "key": "watchtower_signal",
+  "npc": {
+   "name": "Святослав",
+   "title": "вартовий",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:spyglass"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:skeleton",
+   "count": 10
+  },
+  "reward": {
+   "items": [
+    "minecraft:bow",
+    "minecraft:arrow*48",
+    "minecraft:emerald*6"
+   ],
+   "xp": 140,
+   "skill_xp": 55,
+   "loot": null
+  },
+  "story": [
+   "Наша вежа стоїть на межі земель. Щоночі звідти по селу стріляють скелети — вони звили собі гніздо в покинутих руїнах за пагорбом.",
+   "Нас троє вартових на тридцять родин. Якщо я піду, нікому стежити за дорогою."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Перебийте десятьох скелетів. Щит — ваш найкращий друг проти стріл."
+  },
+  "haggle": true,
+  "persona": "watchtower_signal",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Сигнальна вежа"
+ },
+ {
+  "key": "beekeepers_heir",
+  "npc": {
+   "name": "Ничипір",
+   "title": "молодий пасічник",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:beehive"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:bee_nest",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:honeycomb*12",
+    "minecraft:honey_block*2",
+    "minecraft:emerald*5"
+   ],
+   "xp": 110,
+   "skill_xp": 40,
+   "loot": null
+  },
+  "story": [
+   "Дід лишив мені пасіку, але бджоли пішли з вуликів після першої ж зими. Я щось робив не так, і тепер у мене порожні скрині й порожня душа.",
+   "Кажуть, дике бджолине гніздо можна перенести, якщо копати шовковим дотиком. У мене нема такого інструменту."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть мені бджолине гніздо з бджолами — кирка з чарами «Шовковий дотик» або багаття під гніздом, щоб бджоли не розлютилися."
+  },
+  "haggle": true,
+  "persona": "beekeepers_heir",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Спадок пасічника"
+ },
+ {
+  "key": "the_monument",
+  "npc": {
+   "name": "Северин",
+   "title": "кам'яр",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "minecraft:stone_bricks"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:chiseled_stone_bricks",
+   "count": 16
+  },
+  "reward": {
+   "items": [
+    "minecraft:stonecutter",
+    "minecraft:emerald*10"
+   ],
+   "xp": 130,
+   "skill_xp": 50,
+   "loot": null
+  },
+  "story": [
+   "Двадцять років тому драконячий вогонь спалив половину села. Ті, хто загинув, рятуючи дітей, так і лежать без пам'ятника.",
+   "Я кам'яр, але мої руки вже не втримають долото. Мені потрібна різьблена цегла — шістнадцять блоків для постаменту."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шістнадцять різьблених кам'яних цеглин — їх дає каменеріз."
+  },
+  "haggle": true,
+  "persona": "the_monument",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Пам'ятник героям"
+ },
+ {
+  "key": "first_harvest",
+  "npc": {
+   "name": "Христя",
+   "title": "дівчина з фермерської родини",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:carrot"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:carrot",
+   "count": 32
+  },
+  "reward": {
+   "items": [
+    "minecraft:golden_carrot*6",
+    "minecraft:emerald*5"
+   ],
+   "xp": 80,
+   "skill_xp": 30,
+   "loot": null
+  },
+  "story": [
+   "Батько каже: доки я не виростимо власного врожаю, мене не пустять на ярмарок у місто. Я посадила моркву — а кролі все з'їли до останньої!",
+   "Може, ви знаєте, як захистити грядку? А ще краще — принесіть мені моркву, і я покажу батькові, що впораюся. Ну... майже сама."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть тридцять дві моркви. Їх можна знайти в селах на грядках або виростити.",
+   "lie_ok": "Ой, ви вже передали батькові від мене? Ви найкращий! Тримайте мою нагороду."
+  },
+  "haggle": true,
+  "persona": "first_harvest",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Перший урожай"
+ },
+ {
+  "key": "wandering_preacher",
+  "npc": {
+   "name": "Отець Мирон",
+   "title": "мандрівний священник",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:book"
+  },
+  "where": {
+   "words": [
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "church",
+    "chapel",
+    "monastery",
+    "graveyard",
+    "temple"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:zombie",
+   "count": 15
+  },
+  "reward": {
+   "items": [
+    "minecraft:golden_apple",
+    "minecraft:experience_bottle*8"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "Я йшов від села до села, поки не знайшов цю каплицю в руїнах. Тут колись молилися сотні людей, а тепер ночами ходять мертві.",
+   "Мертві не винні, що вони мертві. Але їм не можна блукати серед живих. Моя віра сильна, а руки слабкі."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Упокойте п'ятнадцятьох зомбі. Хай Бог прийме їх душі.",
+   "greet": "Мир вам, подорожній. Сідайте біля вогню, мертві поки що сплять."
+  },
+  "haggle": true,
+  "persona": "wandering_preacher",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мовчазна каплиця"
+ },
+ {
+  "key": "drowned_crew",
+  "npc": {
+   "name": "Капітан Остап Чорновус",
+   "title": "капітан без корабля",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:trident"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:drowned",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:nautilus_shell*2",
+    "minecraft:emerald*8"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "Мій «Буревісник» пішов на дно за три милі звідси. Усі, хто був на борту, — тепер ходять дном і тягнуть під воду кожен човен, що пропливає поруч.",
+   "Це мої хлопці. Я привів їх на смерть. Я мушу дати їм спокій — але сам я тепер боюся води, як дитина."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Звільніть вісьмох утоплеників. Тризуб, якщо пощастить, лишиться у вас.",
+   "greet": "Пахне від вас солоним вітром, мандрівнику. Добре. Моряк моряка зрозуміє."
+  },
+  "haggle": true,
+  "persona": "drowned_crew",
+  "stage": 1,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Утоплена команда"
+ },
+ {
+  "key": "dc_heart",
+  "npc": {
+   "name": "Капітан Остап Чорновус",
+   "title": "капітан без корабля",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:trident"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:heart_of_the_sea",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:trident",
+    "minecraft:emerald*14"
+   ],
+   "xp": 320,
+   "skill_xp": 120,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "Мої хлопці спочили. А мені знову сниться море. Старі моряки кажуть: хто тримає серце моря, того вода не забирає.",
+   "Серце лежить у скринях із затонулими скарбами — за картами скарбів із затонулих кораблів і руїн."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Я знову дивлюся на море, і мені вже не страшно. Майже.",
+   "ask": "Знайдіть серце моря.",
+   "thanks": "Тепле, як живе. З ним я знову вийду в море. Але спершу — останній борг.",
+   "dead": "Капітан загинув на березі, так і не вийшовши знову в море."
+  },
+  "haggle": true,
+  "persona": "drowned_crew",
+  "stage": 2,
+  "stages": 3,
+  "valuable": false,
+  "quest_title": "Серце моря"
+ },
+ {
+  "key": "dc_elder",
+  "npc": {
+   "name": "Капітан Остап Чорновус",
+   "title": "капітан без корабля",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:trident"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:elder_guardian",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:conduit",
+    "minecraft:emerald*20"
+   ],
+   "xp": 500,
+   "skill_xp": 180,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "«Буревісник» пішов на дно не через шторм. Його втягнув під воду старійшина — величезна риба з одним оком, що живе в підводному храмі.",
+   "Поки він живий, жоден корабель тут не пройде. Я дам вам усе, що маю, — тільки закінчіть те, чого не зміг я."
+  ],
+  "questions": [],
+  "lines": {
+   "greet": "Тепер я можу розповісти, що сталося насправді.",
+   "ask": "Переможіть старійшину-вартового в підводному храмі.",
+   "thanks": "Море вільне. Візьміть провідник — серце моря в його оправі дає дихати під водою. Тепер я знову капітан.",
+   "dead": "Капітан загинув, і старійшина глибин досі топить кораблі."
+  },
+  "haggle": true,
+  "persona": "drowned_crew",
+  "stage": 3,
+  "stages": 3,
+  "valuable": true,
+  "quest_title": "Старійшина глибин"
+ },
+ {
+  "key": "pearls_of_the_reef",
+  "npc": {
+   "name": "Мар'яна",
+   "title": "ловчиня перлів",
+   "skin": "minecraft:textures/entity/player/slim/noor.png",
+   "slim": true,
+   "item": "minecraft:nautilus_shell"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:nautilus_shell",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "minecraft:heart_of_the_sea",
+    "minecraft:emerald*6"
+   ],
+   "xp": 200,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "Я пірнала за перлами з восьми років. Минулого місяця акула відкусила мені два пальці, і тепер я не тримаю ножа.",
+   "Раковини наутилуса дають утопленики й рибалки. Принесете три — і я віддам вам те, що беріг мій дід: серце моря."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть три раковини наутилуса."
+  },
+  "haggle": true,
+  "persona": "pearls_of_the_reef",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Перли рифу"
+ },
+ {
+  "key": "shark_waters",
+  "npc": {
+   "name": "Гордій",
+   "title": "рибалка",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:fishing_rod"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "hybrid_aquatic:great_white_shark",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:fishing_rod",
+    "minecraft:emerald*12"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "Біла акула кружляє біля нашого причалу. Вона вже перевернула два човни й забрала сина мого сусіда.",
+   "Ми рибалки, а не воїни. Списи в нас для риби, а не для чудовиськ завдовжки з будинок."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте велику білу акулу. Вона живе у глибоких теплих водах. Найкраще бити з човна або з берега — у воді вона сильніша.",
+   "greet": "Не лізьте у воду, кажу вам! Не лізьте!"
+  },
+  "haggle": true,
+  "persona": "shark_waters",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Акулячі води"
+ },
+ {
+  "key": "siren_song",
+  "npc": {
+   "name": "Вакула",
+   "title": "моряк, що чує пісню",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "iceandfire:earplugs"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village",
+    "lighthouse"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "iceandfire:siren",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "iceandfire:siren_tear*2",
+    "minecraft:emerald*15"
+   ],
+   "xp": 300,
+   "skill_xp": 120,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "Ночами я чую пісню. Вона кличе мене в море. Мої товариші пішли на той голос і не повернулися. Я прив'язую себе до щогли, щоб не піти за ними.",
+   "Сирена живе на острові в морі. Мене вона зачарує за мить. Але кажуть, із затичками у вухах її пісня не страшна."
+  ],
+  "questions": [
+   {
+    "q": "Де той острів?",
+    "a": "Скелястий острів у відкритому морі з руїнами. Компас дослідника знайде «Острів сирен»."
+   }
+  ],
+  "lines": {
+   "ask": "Покладіть край пісні сирени. Візьміть затички для вух — без них вона змусить вас іти в море."
+  },
+  "haggle": true,
+  "persona": "siren_song",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Пісня сирени"
+ },
+ {
+  "key": "lost_compass",
+  "npc": {
+   "name": "Леся",
+   "title": "донька штурмана",
+   "skin": "minecraft:textures/entity/player/slim/sunny.png",
+   "slim": true,
+   "item": "minecraft:compass"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:recovery_compass",
+    "minecraft:emerald*8"
+   ],
+   "xp": 150,
+   "skill_xp": 60,
+   "loot": null
+  },
+  "story": [
+   "Батько був штурманом на торговому судні. Корабель розбився на рифах, і ніхто не знає, де саме. Я хочу знайти уламки — і, може, його останній лист.",
+   "Сама я пливла б тиждень, а гроші скінчилися ще у порту."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Знайдіть уламки корабля (Компас дослідника — «Уламки корабля»). Мені досить знати, що ви там були."
+  },
+  "haggle": true,
+  "persona": "lost_compass",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Компас утопленика"
+ },
+ {
+  "key": "guardian_temple",
+  "npc": {
+   "name": "Дем'ян",
+   "title": "мисливець за скарбами",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "minecraft:prismarine_shard"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:sponge",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*3",
+    "minecraft:prismarine_crystals*16"
+   ],
+   "xp": 280,
+   "skill_xp": 100,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "Підводний храм. Кажуть, у ньому золото, але насправді там є дещо цінніше: губки, що висушують море. За них у пустельних містах дають цілі статки.",
+   "Я пробував тричі. Вартові з одним оком стріляють променем, від якого зупиняється серце. Я вже старий для таких пригод."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть чотири мокрі губки з океанської пам'ятки. Візьміть зілля підводного дихання і молоко від втоми рудників.",
+   "lie_fail": "Губки? Ну покажіть. Нема? Ой, юначе, я тридцять років брешу кредиторам — мене не проведеш."
+  },
+  "haggle": true,
+  "persona": "guardian_temple",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Храм вартових"
+ },
+ {
+  "key": "deepling_threat",
+  "npc": {
+   "name": "Отаман Харитон",
+   "title": "отаман рибальської громади",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:iron_sword"
+  },
+  "where": {
+   "words": [
+    "ship",
+    "ocean",
+    "sunken",
+    "pirate",
+    "wreck",
+    "lighthouse",
+    "atlantis",
+    "seapost",
+    "lily_pad",
+    "whale",
+    "raft",
+    "corsair",
+    "galleon",
+    "frigate",
+    "junk",
+    "yacht",
+    "monument",
+    "beach",
+    "village"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "cataclysm:deepling",
+   "count": 5
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond_sword",
+    "minecraft:emerald*15"
+   ],
+   "xp": 320,
+   "skill_xp": 120,
+   "loot": "wilds:reward/sea"
+  },
+  "story": [
+   "З глибини виходять глибинні — напівлюди-напівриби з тризубами. Вони ночами беруть людей і несуть на дно, у своє затоплене місто.",
+   "Наші хлопці слабкі проти них. Але один сміливий воїн, кажуть старі, вартий десятка."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте п'ятьох глибинних. Вони тримаються біля затонулих міст на дні глибокого океану."
+  },
+  "haggle": true,
+  "persona": "deepling_threat",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Глибинні"
+ },
+ {
+  "key": "ancient_city",
+  "npc": {
+   "name": "Брат Євсевій",
+   "title": "німий чернець",
+   "skin": "minecraft:textures/entity/player/wide/noor.png",
+   "slim": false,
+   "item": "minecraft:echo_shard"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:echo_shard*4",
+    "minecraft:recovery_compass"
+   ],
+   "xp": 300,
+   "skill_xp": 120,
+   "loot": "wilds:reward/explorer"
+  },
+  "story": [
+   "(Чернець пише на дощечці.) Я дав обітницю мовчання, бо колись почув голос з глибини. Під землею є місто, де навіть кроки змушують щось прокинутися.",
+   "Я мушу знати, що воно існує, — тоді моя обітниця має сенс. Ходіть тихо. Крадіться. Ніколи не біжіть."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "(пише) Знайдіть Стародавнє місто глибоко під землею, у Темній глибині. Компас дослідника — «Стародавнє місто».",
+   "greet": "(Чернець мовчки киває і простягає вам дощечку.)"
+  },
+  "haggle": false,
+  "persona": "ancient_city",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Мовчазне місто"
+ },
+ {
+  "key": "dungeon_key",
+  "npc": {
+   "name": "Тиміш",
+   "title": "розорений лицар",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:iron_sword"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:skeleton",
+   "count": 12
+  },
+  "reward": {
+   "items": [
+    "minecraft:iron_chestplate",
+    "minecraft:shield",
+    "minecraft:emerald*8"
+   ],
+   "xp": 200,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Мій замок забрали за борги. Лишився тільки меч і честь. А ще — мапа діда, на якій позначене підземелля, де він сховав родинні обладунки.",
+   "Але там скелети. Багато. Я спробував спуститися — ледве виліз. Мені потрібен соратник."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Розчистіть підземелля: дванадцять скелетів. Половину знайденого — вам, слово лицаря."
+  },
+  "haggle": true,
+  "persona": "dungeon_key",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Підземелля скелетів"
+ },
+ {
+  "key": "silverfish_nest",
+  "npc": {
+   "name": "Інженер Фрол",
+   "title": "будівничий фортеці",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:stone_bricks"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "minecraft:silverfish",
+   "count": 15
+  },
+  "reward": {
+   "items": [
+    "minecraft:ender_pearl*6",
+    "minecraft:emerald*10"
+   ],
+   "xp": 220,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Я відновлюю стару фортецю під землею. Але в стінах живуть лусочниці — розбиваєш камінь, а з нього вилазить ціла зграя.",
+   "Мої робітники розбіглися. Мені потрібен хтось, хто не боїться сріблястого шерхоту у стінах."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Знищіть п'ятнадцятьох лусочниць. Порада: ламайте блоки з лусочницями здалеку, і не бийте одну — бо прибіжать інші."
+  },
+  "haggle": true,
+  "persona": "silverfish_nest",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Гніздо лусочниць"
+ },
+ {
+  "key": "cave_spider_queen",
+  "npc": {
+   "name": "Мирослава",
+   "title": "травниця з печер",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:spider_eye"
+  },
+  "where": {
+   "words": [
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den",
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "minecraft:spider_eye",
+   "count": 12
+  },
+  "reward": {
+   "items": [
+    "minecraft:potion",
+    "minecraft:fermented_spider_eye*6",
+    "minecraft:emerald*6"
+   ],
+   "xp": 150,
+   "skill_xp": 60,
+   "loot": null
+  },
+  "story": [
+   "Я варю протиотруту від павучих укусів. Іронія в тому, що для неї потрібні... павучі очі. Дванадцять на одну партію.",
+   "Але в печерах я сліпа, як кріт, а павуки бачать у темряві чудово. Нечесна гра."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть дванадцять павучих очей."
+  },
+  "haggle": true,
+  "persona": "cave_spider_queen",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Павуча королева"
+ },
+ {
+  "key": "dragon_bone_flute",
+  "npc": {
+   "name": "Мелентій",
+   "title": "колекціонер дивовиж",
+   "skin": "minecraft:textures/entity/player/wide/ari.png",
+   "slim": false,
+   "item": "iceandfire:dragonbone"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "iceandfire:dragonbone",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "iceandfire:dragon_flute",
+    "minecraft:emerald*20"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": "wilds:reward/fantasy"
+  },
+  "story": [
+   "Я збираю дивовижі світу. У мене є ріг єдинорога (насправді нарвала, але т-с-с), перо фенікса (курка, пофарбована вохрою)... і жодної справжньої драконячої кістки.",
+   "Кажуть, у спекотних краях лежать скелети давніх драконів. Їх б'ють — і вони розсипаються на кістки."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шість драконячих кісток. Скелети драконів лежать просто неба в пустелях і засніжених краях; бийте по скелету, поки не розсиплеться.",
+   "thanks": "Справжні! Вони теплі, ви відчуваєте? Тримайте флейту — нею приручені дракони скликаються до вас."
+  },
+  "haggle": true,
+  "persona": "dragon_bone_flute",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Флейта з кістки"
+ },
+ {
+  "key": "dragon_scales",
+  "npc": {
+   "name": "Коваль Охрім",
+   "title": "старий коваль",
+   "skin": "minecraft:textures/entity/player/wide/zuri.png",
+   "slim": false,
+   "item": "minecraft:anvil"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "iceandfire:dragonscales_red",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*4",
+    "minecraft:emerald*15"
+   ],
+   "xp": 320,
+   "skill_xp": 120,
+   "loot": "wilds:reward/fantasy"
+  },
+  "story": [
+   "Усе життя я мріяв викувати обладунок із драконячої луски. Мій учитель зробив такий для князя — і його не взяв жоден вогонь.",
+   "Але для цього треба вісім лусок вогняного дракона. Дракона, розумієте? Я коваль, а не самогубець."
+  ],
+  "questions": [
+   {
+    "q": "Де шукати дракона?",
+    "a": "Молоді дракони гніздяться на поверхні у спекотних краях, серед обгорілих дерев і золота. Старі — у печерах під землею. Компас дослідника знайде «Гніздо вогняного дракона»."
+   }
+  ],
+  "lines": {
+   "ask": "Принесіть вісім червоних лусок вогняного дракона. Здобич знімають з тіла переможеного дракона — клацайте по ньому ПКМ."
+  },
+  "haggle": true,
+  "persona": "dragon_scales",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Луска для обладунку"
+ },
+ {
+  "key": "pixie_dust",
+  "npc": {
+   "name": "Тетяна",
+   "title": "дівчина з хворою сестрою",
+   "skin": "minecraft:textures/entity/player/slim/sunny.png",
+   "slim": true,
+   "item": "iceandfire:pixie_dust"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "iceandfire:pixie_dust",
+   "count": 4
+  },
+  "reward": {
+   "items": [
+    "minecraft:golden_apple*2",
+    "minecraft:emerald*6"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "Моя сестричка не встає з ліжка третій тиждень. Знахарка каже: допоможе пилок піксі — він лікує те, що не лікують трави.",
+   "Піксі живуть у грибних будиночках у темному лісі. Вони крадуть усе, що блищить, і сміються. Мене вони обікрали двічі."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть чотири дрібки пилку піксі. Піксі здобувають з них, коли ті падають. Не тримайте в руках цінного — піксі краде!",
+   "dead": "Дівчина так і не принесла ліки сестрі."
+  },
+  "haggle": true,
+  "persona": "pixie_dust",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Пилок піксі"
+ },
+ {
+  "key": "hippogryph_egg",
+  "npc": {
+   "name": "Пан Збігнєв",
+   "title": "збіднілий шляхтич",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:golden_horse_armor"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "iceandfire:hippogryph_egg",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*5",
+    "minecraft:emerald*20"
+   ],
+   "xp": 280,
+   "skill_xp": 100,
+   "loot": null
+  },
+  "story": [
+   "Мій рід колись літав верхи на гіпогрифах. Тепер у мене лишився тільки гербовий щит з орлом-конем і порожня стайня.",
+   "Принесіть мені яйце гіпогрифа — я виховаю пташа, і рід відродиться. Гіпогрифи живуть у горах; самки іноді несуть яйця."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть яйце гіпогрифа. Їх кладуть гіпогрифи в горах; приручений гіпогриф несе яйця сам."
+  },
+  "haggle": true,
+  "persona": "hippogryph_egg",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Яйце гіпогрифа"
+ },
+ {
+  "key": "troll_bridge",
+  "npc": {
+   "name": "Митар Гаврило",
+   "title": "збирач мита",
+   "skin": "minecraft:textures/entity/player/wide/efe.png",
+   "slim": false,
+   "item": "minecraft:gold_nugget"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "iceandfire:troll",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:gold_ingot*12",
+    "minecraft:emerald*12"
+   ],
+   "xp": 300,
+   "skill_xp": 110,
+   "loot": "wilds:reward/fantasy"
+  },
+  "story": [
+   "Я збирав мито на мосту через ущелину. Аж поки під мостом не оселився троль. Тепер він збирає мито. Зі мною включно.",
+   "Тролі кам'яніють на сонці — так кажуть. Але цей виходить тільки вночі, а вдень спить у печері."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте троля. Вони живуть у печерах лісів, гір і снігів; вдень сонце б'є по них."
+  },
+  "haggle": true,
+  "persona": "troll_bridge",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Міст троля"
+ },
+ {
+  "key": "cockatrice_stare",
+  "npc": {
+   "name": "Свирид",
+   "title": "кам'яний пастух",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:egg"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "iceandfire:cockatrice",
+   "count": 2
+  },
+  "reward": {
+   "items": [
+    "iceandfire:cockatrice_eye",
+    "minecraft:emerald*10"
+   ],
+   "xp": 220,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Мій брат подивився в очі півнозмію — і заснув. Не прокидається вже дев'ятий день. Знахарка каже — поки тварюка жива, він не прокинеться.",
+   "Їх двоє, гніздо на пасовищі за пагорбом. Не дивіться їм в очі. Я серйозно."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте двох півнозміїв. Вони водяться в саванах і лісах. Не дивіться на них довго — дивіться під ноги."
+  },
+  "haggle": true,
+  "persona": "cockatrice_stare",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Погляд півнозмія"
+ },
+ {
+  "key": "amber_collector",
+  "npc": {
+   "name": "Професор Лаврентій",
+   "title": "палеонтолог",
+   "skin": "minecraft:textures/entity/player/wide/ari.png",
+   "slim": false,
+   "item": "alexscaves:amber"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "alexscaves:amber",
+   "count": 8
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*2",
+    "minecraft:emerald*12"
+   ],
+   "xp": 220,
+   "skill_xp": 80,
+   "loot": null
+  },
+  "story": [
+   "Я вивчаю давніх тварин. У бурштині зберігаються мушки, листочки й навіть пір'я — цілий музей у камінці.",
+   "Бурштин є в Первісних печерах глибоко під землею, де досі живуть динозаври. Я туди не піду: тиранозавр не відрізняє професора від шинки."
+  ],
+  "questions": [
+   {
+    "q": "Як знайти ці печери?",
+    "a": "Природний компас знайде біом «Первісні печери». Під землею там видно дерева й папороті, а над ними висить світло — дивна річ."
+   }
+  ],
+  "lines": {
+   "ask": "Принесіть вісім бурштину з Первісних печер."
+  },
+  "haggle": true,
+  "persona": "amber_collector",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Бурштин із мушкою"
+ },
+ {
+  "key": "raptor_hunt",
+  "npc": {
+   "name": "Мисливиця Агафія",
+   "title": "ловчиня рідкісних звірів",
+   "skin": "minecraft:textures/entity/player/slim/alex.png",
+   "slim": true,
+   "item": "minecraft:bow"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "alexscaves:vallumraptor",
+   "count": 3
+  },
+  "reward": {
+   "items": [
+    "alexscaves:dinosaur_nugget*8",
+    "minecraft:emerald*15"
+   ],
+   "xp": 280,
+   "skill_xp": 110,
+   "loot": "wilds:reward/explorer"
+  },
+  "story": [
+   "Я полювала на ведмедів, тигрів і навіть на кракена. Але валюмрапторів не бачив ніхто з мисливської гільдії. Мені потрібен доказ.",
+   "Вони полюють зграями, а я одна. Навіть я не така дурна."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте трьох валюмрапторів у Первісних печерах. Вони нападають зграєю — тримайтеся спиною до стіни."
+  },
+  "haggle": true,
+  "persona": "raptor_hunt",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Полювання на ящерів"
+ },
+ {
+  "key": "dino_eggs",
+  "npc": {
+   "name": "Дід Аким",
+   "title": "дивакуватий фермер",
+   "skin": "minecraft:textures/entity/player/wide/steve.png",
+   "slim": false,
+   "item": "minecraft:hay_block"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "alexscaves:grottoceratops_egg",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:golden_carrot*16",
+    "minecraft:emerald*15"
+   ],
+   "xp": 260,
+   "skill_xp": 100,
+   "loot": null
+  },
+  "story": [
+   "Усі кажуть, що я з глузду з'їхав. А я хочу на своїй фермі динозавра! Травоїдного, звичайно, — гротоцератопса. Він пасеться, як корова, а на ньому можна орати!",
+   "Яйце знайдете в Первісних печерах. Тільки обережно: мамця-гротоцератопс не дуже радітиме."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть яйце гротоцератопса. Дорослі гротоцератопси несуть яйця, якщо їх нагодувати папоротями — або знайдіть у гнізді."
+  },
+  "haggle": true,
+  "persona": "dino_eggs",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Яйце динозавра"
+ },
+ {
+  "key": "magnetic_mystery",
+  "npc": {
+   "name": "Інженерка Віра",
+   "title": "винахідниця",
+   "skin": "minecraft:textures/entity/player/slim/makena.png",
+   "slim": true,
+   "item": "minecraft:compass"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market",
+    "ruin",
+    "remnant",
+    "camp",
+    "tower",
+    "outpost",
+    "well",
+    "house",
+    "hut",
+    "cabin",
+    "lodge",
+    "statue",
+    "windmill",
+    "barn",
+    "rubble",
+    "shrine",
+    "mineshaft",
+    "dungeon",
+    "crypt",
+    "catacomb",
+    "ancient_city",
+    "stronghold",
+    "cave",
+    "underground",
+    "mines",
+    "trial",
+    "den"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "alexscaves:raw_scarlet_neodymium",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:redstone_block*4",
+    "minecraft:emerald*12"
+   ],
+   "xp": 240,
+   "skill_xp": 90,
+   "loot": "wilds:reward/tech"
+  },
+  "story": [
+   "У компасах біля моєї майстерні стрілки крутяться, як навіжені. Хтось каже — прокляття. Я кажу — магніт під землею! Там цілі печери, де металеві уламки висять у повітрі.",
+   "Мені потрібен червоний неодим для мого двигуна. Самій спускатися страшно — кажуть, там ходять металеві роботи."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть шість сирого червоного неодиму з Магнітних печер."
+  },
+  "haggle": true,
+  "persona": "magnetic_mystery",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Магнітна загадка"
+ },
+ {
+  "key": "twilight_portal",
+  "npc": {
+   "name": "Олесь",
+   "title": "хлопець, що бачив світлячків",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:diamond"
+  },
+  "where": {
+   "words": [
+    "village",
+    "town",
+    "colony",
+    "hamlet",
+    "tavern",
+    "farm",
+    "market"
+   ]
+  },
+  "task": {
+   "type": "other",
+   "id": "",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "twilightforest:magic_map_focus",
+    "minecraft:emerald*10"
+   ],
+   "xp": 250,
+   "skill_xp": 100,
+   "loot": null
+  },
+  "story": [
+   "Моя бабуся розповідала, що коли кинути діамант у ставок, обрамлений квітами, з неба вдарить блискавка — і відкриється шлях у ліс, де вічно сутеніє.",
+   "Усі сміялися з бабусі. А я бачив, як над одним ставком уночі світилися світлячки — сотні. Мені не віддадуть діамант, я ще малий. А ви — спробуйте!"
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Відкрийте портал у Сутінковий ліс і пройдіть крізь нього. Ставок 2×2 з водою, навколо трава й квіти на кожному блоці — і киньте діамант.",
+   "thanks": "Ви там були?! Ліс правда вічно сутінковий? Я знав! Тримайте — бабуся казала, з цим фокусом малюють чарівні мапи того лісу."
+  },
+  "haggle": true,
+  "persona": "twilight_portal",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Сутінковий портал"
+ },
+ {
+  "key": "naga_scales",
+  "npc": {
+   "name": "Вовчиця Ганна",
+   "title": "мисливиця Сутінкового лісу",
+   "skin": "minecraft:textures/entity/player/slim/alex.png",
+   "slim": true,
+   "item": "minecraft:bow"
+  },
+  "where": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "twilightforest:naga_scale",
+   "count": 6
+  },
+  "reward": {
+   "items": [
+    "minecraft:diamond*3",
+    "minecraft:emerald*15"
+   ],
+   "xp": 320,
+   "skill_xp": 120,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Я пройшла крізь портал рік тому і досі не знайшла шляху назад. Тут добре — але одна змія розміром з річку не дає ходити далі її подвір'я.",
+   "Наґа живе на кам'яному дворі серед лісу. Її луска міцніша за залізо — якщо принесете, пошию собі обладунок і піду додому."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте наґу й принесіть шість її лусок. Двір наґи — квадратна кам'яна арена, магічна мапа показує її значок."
+  },
+  "haggle": true,
+  "persona": "naga_scales",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Луска наґи"
+ },
+ {
+  "key": "lich_tower",
+  "npc": {
+   "name": "Майстер Гервасій",
+   "title": "вигнаний чарівник",
+   "skin": "minecraft:textures/entity/player/wide/noor.png",
+   "slim": false,
+   "item": "minecraft:blaze_rod"
+  },
+  "where": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "twilightforest:lich_trophy",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "minecraft:enchanted_golden_apple",
+    "minecraft:experience_bottle*16"
+   ],
+   "xp": 400,
+   "skill_xp": 150,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Ліч, що сидить у вежі, — мій колишній учень. Він знайшов книгу безсмертя і прочитав її до кінця. Я встиг утекти, а мою вежу він забрав собі.",
+   "Принесіть мені його трофей — голову, що лишається після поразки. Тоді я знатиму, що він більше не прочитає жодної книги."
+  ],
+  "questions": [
+   {
+    "q": "Як він став лічем?",
+    "a": "Він вирізав своє серце й заховав у скриньку. Кажуть, поки скринька ціла, він не вмре. Але в Сутінковому лісі навіть безсмертні мають межу."
+   }
+  ],
+  "lines": {
+   "ask": "Подолайте ліча на вершині його вежі й принесіть його трофей. Відбивайте його вогняні кулі мечем — так збиваються щити."
+  },
+  "haggle": true,
+  "persona": "lich_tower",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Вежа ліча"
+ },
+ {
+  "key": "raven_feathers",
+  "npc": {
+   "name": "Тиха Злата",
+   "title": "провидиця",
+   "skin": "minecraft:textures/entity/player/slim/zuri.png",
+   "slim": true,
+   "item": "twilightforest:raven_feather"
+  },
+  "where": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "twilightforest:raven_feather",
+   "count": 5
+  },
+  "reward": {
+   "items": [
+    "twilightforest:magic_map_focus",
+    "minecraft:emerald*8"
+   ],
+   "xp": 180,
+   "skill_xp": 70,
+   "loot": null
+  },
+  "story": [
+   "Ворони Сутінкового лісу бачать минуле й майбутнє. Із їхнього пір'я я читаю долі людей, що потрапили сюди.",
+   "Але птахи мене обминають — бояться. Ви ж тихо підкрадетеся, правда?"
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть п'ять пір'їн ворона. Ворони сидять на землі й злітають, коли підходите — крадіться присівши."
+  },
+  "haggle": true,
+  "persona": "raven_feathers",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Пір'я воронів"
+ },
+ {
+  "key": "zanite_crown",
+  "npc": {
+   "name": "Ельвір",
+   "title": "ельф-ювелір",
+   "skin": "minecraft:textures/entity/player/slim/ari.png",
+   "slim": true,
+   "item": "aether:zanite_gemstone"
+  },
+  "where": {
+   "dims": [
+    "aether:the_aether"
+   ]
+  },
+  "task": {
+   "type": "item",
+   "id": "aether:zanite_gemstone",
+   "count": 12
+  },
+  "reward": {
+   "items": [
+    "aether:zanite_ring",
+    "aether:golden_amber*8"
+   ],
+   "xp": 240,
+   "skill_xp": 90,
+   "loot": null
+  },
+  "story": [
+   "Я тисячу років роблю прикраси для небесних валькірій. Тепер вони замовили корону — а заніт росте лише у камені під островами, і я давно забув, як тримати кирку.",
+   "Візьміть кирку зі святого дерева — і камінь сам зрозуміє, що ви не лихі."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Принесіть дванадцять заніту. Руда заніту — блакитні вкраплення в святому камені островів Етеру."
+  },
+  "haggle": true,
+  "persona": "zanite_crown",
+  "stage": 1,
+  "stages": 1,
+  "valuable": false,
+  "quest_title": "Корона з заніту"
+ },
+ {
+  "key": "moa_eggs",
+  "npc": {
+   "name": "Пастушок Ероль",
+   "title": "пастух моа",
+   "skin": "minecraft:textures/entity/player/wide/kai.png",
+   "slim": false,
+   "item": "minecraft:wheat_seeds"
+  },
+  "where": {
+   "dims": [
+    "aether:the_aether"
+   ]
+  },
+  "task": {
+   "type": "kill",
+   "id": "aether:slider",
+   "count": 1
+  },
+  "reward": {
+   "items": [
+    "aether:golden_amber*16",
+    "minecraft:diamond*3"
+   ],
+   "xp": 400,
+   "skill_xp": 150,
+   "loot": "wilds:reward/boss"
+  },
+  "story": [
+   "Великий камінь у бронзовому підземеллі — Ковзач — щоночі будить моїх моа своїм гуркотом. Вони перестали нести яйця і схудли.",
+   "Кажуть, коли його розіб'ють, він розсипається на безліч уламків і замовкає назавжди."
+  ],
+  "questions": [],
+  "lines": {
+   "ask": "Подолайте Ковзача в бронзовому підземеллі. Бийте його кайлом — мечі від нього відскакують."
+  },
+  "haggle": true,
+  "persona": "moa_eggs",
+  "stage": 1,
+  "stages": 1,
+  "valuable": true,
+  "quest_title": "Яйця моа"
+ }
+]
