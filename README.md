@@ -17,7 +17,7 @@
 ## Як грати
 
 1. Встановіть офіційний лаунчер Minecraft і увійдіть у свій акаунт (Minecraft: Java Edition).
-2. Завантажте **WildsAndWanderers.exe** з [останнього випуску програми](https://github.com/volodymyr-holovan/wilds-and-wanderers/releases?q=app-v) і запустіть.
+2. Завантажте [**WildsAndWanderers.exe**](https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/latest/download/WildsAndWanderers.exe) і запустіть.
 3. Оберіть пресет графіки й натисніть **«Встановити»**. Програма сама поставить NeoForge, усі моди, налаштування й шейдери, додасть сервер у список серверів і створить у лаунчері установку «Wilds & Wanderers».
 4. У лаунчері оберіть цю установку й натисніть «Грати».
 

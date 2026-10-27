@@ -182,7 +182,7 @@ def main():
                           "sha256": hashlib.sha256(open(exe, "rb").read()).hexdigest()}
         json.dump(cfg, open(cfg_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     assets = [os.path.join(dist, f) for f in sorted(os.listdir(dist))]
-    run("gh", "release", "create", f"pack-{version}", *assets, "--repo", REPO, "--title", f"Збірка {version}",
+    run("gh", "release", "create", f"pack-{version}", *assets, "--repo", REPO, "--title", f"Збірка {version}", "--latest=false",
         "--notes", "Файли збірки для програми Wilds & Wanderers (власні моди й налаштування). Встановлювати вручну не потрібно.")
     run("git", "add", "-A")
     run("git", "commit", "-q", "-m", f"Pack release {version}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
