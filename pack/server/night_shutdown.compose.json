@@ -1,0 +1,41 @@
+{
+  "services": {
+    "night-shutdown": {
+      "image": "python:3.12-slim",
+      "restart": "unless-stopped",
+      "privileged": true,
+      "pid": "host",
+      "environment": {
+        "TZ": "Europe/Berlin",
+        "PORT": "30210",
+        "CRAFTY_NAME": "crafty",
+        "STOP_TIMEOUT": "900",
+        "PYTHONUNBUFFERED": "1"
+      },
+      "ports": [
+        "30210:30210"
+      ],
+      "volumes": [
+        "night-shutdown-data:/data"
+      ],
+      "command": [
+        "python",
+        "-c",
+        "import urllib.request, hashlib, os, time\nU = 'https://raw.githubusercontent.com/volodymyr-holovan/wilds-and-wanderers/4c01ed3e28c9b2157dd1dae95ecffa59a5f5d7a7/pack/server/night_shutdown.py'\nH = 'e45bf4347aed44f7aba8f3ce1a8b58606eae177a65bcb142b027d28fb8ddcb31'\nC = '/data/night_shutdown.py'\nos.makedirs('/data', exist_ok=True)\nd = open(C, 'rb').read() if os.path.exists(C) else b''\nif hashlib.sha256(d).hexdigest() != H:\n    for i in range(60):\n        try:\n            d = urllib.request.urlopen(U, timeout=30).read()\n            break\n        except Exception as e:\n            print('download failed, retry:', e, flush=True)\n            time.sleep(10)\n    if hashlib.sha256(d).hexdigest() != H:\n        raise SystemExit('night_shutdown.py: checksum mismatch, not running it')\n    open(C, 'wb').write(d)\nexec(compile(d, C, 'exec'), {'__name__': '__main__'})\n"
+      ]
+    }
+  },
+  "volumes": {
+    "night-shutdown-data": {}
+  },
+  "x-portals": [
+    {
+      "name": "Перемикач",
+      "scheme": "http",
+      "host": "0.0.0.0",
+      "port": 30210,
+      "path": "/"
+    }
+  ],
+  "x-notes": "Нічне вимкнення Wilds & Wanderers: опівночі (Europe/Berlin) Crafty зберігає світ і зупиняє Minecraft, потім вимикається TrueNAS. Перемикач і журнал — кнопка Web UI / 🌐. Зупинка застосунку теж вимикає функцію. Код: github.com/volodymyr-holovan/wilds-and-wanderers/blob/main/pack/server/night_shutdown.py"
+}
