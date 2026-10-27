@@ -48,7 +48,23 @@ namespace Wilds.Launcher
             };
             AppDomain.CurrentDomain.UnhandledException += (s, ex) => Log.Error("Неочікувана помилка", ex.ExceptionObject as Exception);
 
-            single = new Mutex(true, "Local\\WildsAndWanderers-" + Paths.GameDir.GetHashCode().ToString("x"), out bool first);
+            // one window per game folder (a stable hash of the folder names the lock, the same in every process)
+            string id;
+            using (var sha = System.Security.Cryptography.SHA1.Create())
+                id = Net.Hex(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(Paths.GameDir.ToLowerInvariant()))).Substring(0, 16);
+            single = new Mutex(true, "Local\\WildsAndWanderers-" + id, out bool first);
+            if (!first && Has("--updated"))
+            {
+                // started by the copy it replaces, which is closing right now
+                try
+                {
+                    first = single.WaitOne(TimeSpan.FromSeconds(10));
+                }
+                catch (AbandonedMutexException)
+                {
+                    first = true;
+                }
+            }
             if (!first)
             {
                 if (!Has("--headless")) MessageBox.Show("Програма вже відкрита.", "Wilds & Wanderers", MessageBoxButton.OK, MessageBoxImage.Information);

@@ -155,7 +155,11 @@ namespace Wilds.Launcher.Core
                 progress?.Report(new Status("Розкладання налаштувань…"));
                 using (var archive = ZipFile.OpenRead(zip))
                 {
-                    foreach (var f in plan.Overrides) Extract(archive, "overrides/" + f.Path, f, p, st, true);
+                    foreach (var f in plan.Overrides)
+                    {
+                        if (plan.Overrides.Count <= 20) Log.Info("Налаштування збірки: " + f.Path);
+                        Extract(archive, "overrides/" + f.Path, f, p, st, true);
+                    }
                     foreach (var f in plan.Initial) Extract(archive, "initial/" + f.Path, f, p, st, false);
                 }
                 Log.Info($"Налаштувань оновлено: {plan.Overrides.Count}, нових особистих: {plan.Initial.Count}");

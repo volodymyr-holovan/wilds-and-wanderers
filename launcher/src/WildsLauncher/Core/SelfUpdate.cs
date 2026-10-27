@@ -58,7 +58,9 @@ namespace Wilds.Launcher.Core
                 throw;
             }
             Log.Info($"Програму оновлено: {Current} → {c.UpdaterVersion}");
-            string quoted = string.Join(" ", args.Select(a => "\"" + a.Replace("\"", "\\\"") + "\""));
+            // --updated: the new copy does not look for an update again (a release whose number was set wrong cannot loop)
+            string quoted = string.Join(" ", args.Where(a => a != "--updated").Concat(new[] { "--updated" })
+                .Select(a => "\"" + a.Replace("\"", "\\\"") + "\""));
             Process.Start(new ProcessStartInfo(exe, quoted) { UseShellExecute = false });
         }
     }

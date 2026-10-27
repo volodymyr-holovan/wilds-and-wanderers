@@ -30,7 +30,7 @@ namespace Wilds.Launcher
             try
             {
                 await engine.Load(cancel.Token);
-                if (!engine.Offline && SelfUpdate.IsNewer(engine.Config))
+                if (!engine.Offline && !App.Has("--updated") && SelfUpdate.IsNewer(engine.Config))
                 {
                     ShowStatus("Оновлення програми до версії " + engine.Config.UpdaterVersion + "…");
                     await SelfUpdate.Run(engine.Config, engine.Net, App.Args, cancel.Token);

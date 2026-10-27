@@ -1,5 +1,5 @@
 {
- "version": "2026.10.27.3",
+ "version": "2026.10.27.4",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -865,13 +865,13 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.3/wilds_core-0.1.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.4/wilds_core-0.1.0.jar",
    "sha1": "9a9dfdc37e03e6a4ee569445ac84ed5d92af7486",
    "size": 187922
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.3/wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.4/wilds_wiki-0.2.0.jar",
    "sha1": "f6fa3b6a09d152703537211e3bc39e15df1c9ace",
    "size": 799575
   },
@@ -915,9 +915,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.3/overrides.zip",
-   "sha1": "2bb95292f7c46d7e81fc1d81f9f1979473094091",
-   "size": 772738
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.27.4/overrides.zip",
+   "sha1": "e2c2ac5a9db1fced8d800dfa3b138aaf9092a05c",
+   "size": 772640
   },
   "overrides": [
    {
@@ -957,8 +957,8 @@
    },
    {
     "path": "config/fallingtree.json",
-    "sha1": "eba9f6b66e08f42a7047eb2d852723064479e243",
-    "size": 1363
+    "sha1": "217831aea784260e3485893326fdfb4149147599",
+    "size": 1313
    },
    {
     "path": "config/ftbessentials.snbt",
@@ -1107,8 +1107,8 @@
    },
    {
     "path": "config/sereneseasons/seasons.toml",
-    "sha1": "c0826cb146e32ff091ba400a060fb538b64fa587",
-    "size": 21212
+    "sha1": "ff66a0d214b1b420950d083b2cda3973fe020fc4",
+    "size": 21060
    },
    {
     "path": "defaultconfigs/openpartiesandclaims-default-player-config.toml",
