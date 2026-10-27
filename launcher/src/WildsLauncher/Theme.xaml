@@ -9,15 +9,15 @@
     <SolidColorBrush x:Key="Text" Color="#EEE8DA" />
     <SolidColorBrush x:Key="Muted" Color="#A7B0A8" />
     <SolidColorBrush x:Key="Faint" Color="#6F7A74" />
-    <SolidColorBrush x:Key="Card" Color="#D9101719" />
+    <SolidColorBrush x:Key="Card" Color="#E6101719" />
     <SolidColorBrush x:Key="CardLine" Color="#33E2B35A" />
     <SolidColorBrush x:Key="Pine" Color="#4FA37C" />
     <SolidColorBrush x:Key="Danger" Color="#E5735F" />
 
     <FontFamily x:Key="Serif">Georgia, Palatino Linotype, Times New Roman</FontFamily>
 
+    <!-- no Foreground here: an implicit TextBlock style would also recolour the text inside buttons -->
     <Style TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{StaticResource Text}" />
         <Setter Property="FontFamily" Value="Segoe UI" />
     </Style>
 
@@ -127,12 +127,12 @@
     <Style x:Key="PresetCard" TargetType="RadioButton">
         <Setter Property="Foreground" Value="{StaticResource Text}" />
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="Margin" Value="0,0,0,8" />
+        <Setter Property="Margin" Value="0,0,0,6" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-                    <Border x:Name="b" CornerRadius="8" Padding="14,10" Background="#14FFFFFF" BorderBrush="#22FFFFFF" BorderThickness="1">
+                    <Border x:Name="b" CornerRadius="8" Padding="12,8" Background="#14FFFFFF" BorderBrush="#22FFFFFF" BorderThickness="1">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />

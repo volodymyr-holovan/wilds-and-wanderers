@@ -215,7 +215,7 @@ public final class GearScreens {
     // ---------------------------------------------------------------- self-test
 
     private static final boolean SHOTS = Boolean.getBoolean("wilds_core.uishot");
-    private static int t = -1, talk = -1, scaleWas;
+    private static int t = -1, talk = -1, scaleWas, menu;
     private static boolean bookWas, attrsWas;
 
     /** the equipment slots this player has, by kind, as the server set them up (e.g. one «hand» slot, not two) */
@@ -262,7 +262,14 @@ public final class GearScreens {
         defaults(mc);
         if (isGearScreen(mc.screen)) RecipeBookPanel.tick();
         if (!SHOTS) return;
-        if (mc.player == null || mc.level == null) return;
+        if (mc.player == null || mc.level == null) {
+            // still outside a world: if a screen stays up long (the test meant to join a server), record which one
+            if (mc.screen != null && ++menu == 600) {
+                WildsCore.LOG.info("Wilds Core: UI self-test: no world after 30 s, screen {}", mc.screen.getClass().getName());
+                shot(mc, "0_menu");
+            }
+            return;
+        }
         // a quest giver that started talking (scenarios/npc.txt puts one next to the player): its page, then goodbye
         if (mc.screen instanceof ua.wilds.core.client.npc.DialogueScreen && talk < 0) talk = 0;
         if (talk >= 0 && talk < 1000) {

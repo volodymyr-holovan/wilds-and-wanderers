@@ -15,6 +15,7 @@ namespace Wilds.Launcher
     ///   --source DIR|URL    where config/manifest/presets come from (default: the GitHub repository)
     ///   --deep              re-check every file's hash
     ///   --launch            start the official launcher afterwards
+    ///   --screenshot FILE   (window) save a picture of the window once it is ready, then close
     /// </summary>
     public partial class App : Application
     {
@@ -58,6 +59,13 @@ namespace Wilds.Launcher
             if (Has("--headless"))
             {
                 AttachConsole(-1);
+                try
+                {
+                    Console.OutputEncoding = System.Text.Encoding.UTF8;
+                }
+                catch (IOException)
+                {
+                }
                 Log.ToConsole = true;
                 int code = 1;
                 try
@@ -122,7 +130,7 @@ namespace Wilds.Launcher
 
         public static bool Has(string flag) => Array.Exists(Args ?? new string[0], a => string.Equals(a, flag, StringComparison.OrdinalIgnoreCase));
 
-        private static string Option(string name)
+        public static string Option(string name)
         {
             for (int i = 0; i + 1 < Args.Length; i++)
             {

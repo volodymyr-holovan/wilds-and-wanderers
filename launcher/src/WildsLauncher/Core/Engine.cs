@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Management;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -132,21 +131,29 @@ namespace Wilds.Launcher.Core
             progress?.Report(new Status("Готово", 1));
         }
 
-        /// <summary>is the game with this pack's folder running now (its files are locked then)</summary>
+        /// <summary>
+        /// is the game with this pack's folder running now. The running game holds its mods open, so a mod that cannot be
+        /// opened exclusively means it is (the process list cannot tell: Sodium rewrites the game's command line).
+        /// </summary>
         public bool GameRunning()
         {
-            try
+            string mods = Paths.InGame("mods");
+            if (!Directory.Exists(mods)) return false;
+            foreach (string jar in Directory.EnumerateFiles(mods, "*.jar").Take(3))
             {
-                using (var q = new ManagementObjectSearcher("SELECT CommandLine FROM Win32_Process WHERE Name='javaw.exe' OR Name='java.exe'"))
+                try
                 {
-                    return q.Get().Cast<ManagementObject>().Select(o => o["CommandLine"] as string)
-                        .Any(c => c != null && c.IndexOf(Paths.GameDir, StringComparison.OrdinalIgnoreCase) >= 0);
+                    using (new FileStream(jar, FileMode.Open, FileAccess.ReadWrite, FileShare.None)) { }
+                }
+                catch (IOException)
+                {
+                    return true;
+                }
+                catch (UnauthorizedAccessException)
+                {
                 }
             }
-            catch (Exception e) when (e is ManagementException || e is UnauthorizedAccessException || e is System.Runtime.InteropServices.COMException)
-            {
-                return false;
-            }
+            return false;
         }
 
         public void SaveSettings() => Settings.Save(Paths.SettingsFile);

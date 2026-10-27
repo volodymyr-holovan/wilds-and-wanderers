@@ -8,7 +8,7 @@
         <WindowChrome CaptionHeight="40" ResizeBorderThickness="0" GlassFrameThickness="0" CornerRadius="0" />
     </WindowChrome.WindowChrome>
 
-    <Grid>
+    <Grid TextElement.Foreground="{StaticResource Text}">
         <Image Source="Assets/background.png" Stretch="UniformToFill" />
 
         <Grid>

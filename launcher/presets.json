@@ -4,7 +4,7 @@
     {
       "id": "minimal",
       "name": "Мінімальні",
-      "description": "Для слабких і старих комп'ютерів: ближня видимість, без тіней і шейдерів.",
+      "description": "Слабкий чи старий комп'ютер: близька видимість, без тіней і шейдерів.",
       "options": {
         "enableVsync": "false",
         "prioritizeChunkUpdates": "0",
@@ -28,7 +28,7 @@
     {
       "id": "medium",
       "name": "Середні",
-      "description": "Звичайний ноутбук чи ПК: гарна картинка, далекі гори без деталей, без шейдерів.",
+      "description": "Звичайний ноутбук чи ПК: гарна картинка без шейдерів.",
       "options": {
         "enableVsync": "false",
         "prioritizeChunkUpdates": "0",
@@ -56,7 +56,7 @@
     {
       "id": "high",
       "name": "Високі",
-      "description": "Ігрова відеокарта: шейдери Complementary Reimagined, далекий обрій.",
+      "description": "Ігрова відеокарта: шейдери Complementary Reimagined.",
       "options": {
         "enableVsync": "false",
         "prioritizeChunkUpdates": "0",
@@ -84,7 +84,7 @@
     {
       "id": "max",
       "name": "Максимальні",
-      "description": "Потужний ПК: реалістичні шейдери Complementary Unbound, найдальша видимість.",
+      "description": "Потужний ПК: реалістичні шейдери Complementary Unbound.",
       "options": {
         "enableVsync": "false",
         "prioritizeChunkUpdates": "0",

@@ -51,6 +51,25 @@ namespace Wilds.Launcher
             {
                 SetBusy(false);
             }
+            string shot = App.Option("--screenshot");
+            if (shot != null)
+            {
+                await Task.Delay(500);
+                SaveScreenshot(shot);
+                Close();
+            }
+        }
+
+        private void SaveScreenshot(string file)
+        {
+            var root = (FrameworkElement)Content;
+            var dpi = VisualTreeHelper.GetDpi(this);
+            var bmp = new System.Windows.Media.Imaging.RenderTargetBitmap((int)(root.ActualWidth * dpi.DpiScaleX), (int)(root.ActualHeight * dpi.DpiScaleY),
+                dpi.PixelsPerInchX, dpi.PixelsPerInchY, PixelFormats.Pbgra32);
+            bmp.Render(root);
+            var png = new System.Windows.Media.Imaging.PngBitmapEncoder();
+            png.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(bmp));
+            using (var f = System.IO.File.Create(file)) png.Save(f);
         }
 
         /// <summary>the parts of the window that come from the pack: news, presets, server, memory</summary>

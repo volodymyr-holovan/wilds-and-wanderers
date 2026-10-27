@@ -50,8 +50,13 @@ namespace Wilds.Launcher.Core
                 }
             }
             lines.AddRange(left.Select(kv => kv.Key + ":" + kv.Value));
+            // without its data version Minecraft takes the file for an ancient one, its converters fail on today's key
+            // names and it throws the whole file away (language, settings, everything); 3955 is Minecraft 1.21.1
+            if (!lines.Any(l => l.StartsWith("version:"))) lines.Insert(0, "version:" + OptionsDataVersion);
             Files.WriteAtomic(file, string.Join("\n", lines) + "\n");
         }
+
+        private const int OptionsDataVersion = 3955;
 
         private static void SetProperties(string file, IDictionary<string, string> values)
         {

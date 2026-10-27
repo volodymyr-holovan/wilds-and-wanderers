@@ -104,10 +104,11 @@ namespace Wilds.Launcher.Core
         /// <summary>memory for the game by the computer's memory: enough for ~170 mods, room left for Windows</summary>
         public static int RecommendedMemoryGb(int total)
         {
-            if (total >= 32) return 8;
-            if (total >= 16) return 6;
-            if (total >= 12) return 5;
-            if (total >= 8) return 4;
+            // Windows reports a little less than the memory sticks say (16 GB shows as 15.x)
+            if (total >= 30) return 8;
+            if (total >= 15) return 6;
+            if (total >= 11) return 5;
+            if (total >= 7) return 4;
             return Math.Max(3, total - 3);
         }
     }
