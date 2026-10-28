@@ -1,0 +1,1021 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nether_end"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "minecraft:crying_obsidian"
+	}
+	id: "78D286BD28862E44"
+	order_index: 21
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:obsidian"
+			}
+			id: "43602039D80CECD1"
+			rewards: [
+				{
+					id: "4B6AFE73DE0E7D62"
+					item: {
+						count: 1
+						id: "minecraft:golden_helmet"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "269888E149C41148"
+					item: {
+						count: 1
+						id: "minecraft:fire_charge"
+					}
+					type: "item"
+				}
+				{
+					id: "71250A8FAEFEA752"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "20C7E0B63FF29851"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "6B63E3161548B392"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"43602039D80CECD1"
+			]
+			icon: {
+				id: "minecraft:crimson_nylium"
+			}
+			id: "1B7E6174F0EAD301"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4FF4081E864A3D0B"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "171019D61E901B95"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "29CB39CF8F1C424C"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "incendium:ash_barrens"
+					id: "1AF5364D0E21923A"
+					type: "biome"
+				}
+				{
+					biome: "incendium:quartz_flats"
+					id: "265AD6FF61103464"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"43602039D80CECD1"
+			]
+			icon: {
+				id: "minecraft:nether_bricks"
+			}
+			id: "56112B20BAE4BAE1"
+			rewards: [
+				{
+					id: "29C81A8C3A7F5090"
+					item: {
+						count: 1
+						id: "minecraft:brewing_stand"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "123517C176D6FD77"
+					item: {
+						count: 1
+						id: "minecraft:nether_wart"
+					}
+					type: "item"
+				}
+				{
+					id: "2CDFBDD8A4C22106"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "2D36EDFDE4692215"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 6L
+					id: "1D275883013876D8"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"1B7E6174F0EAD301"
+			]
+			icon: {
+				id: "minecraft:gilded_blackstone"
+			}
+			id: "402FA237361274FF"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3E026C0BE3D6E01E"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "149E6C3D1BC03D9A"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "2645D0AD5A4DA0B9"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "477AE55935F1B854"
+					structure: "incendium:forbidden_castle"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"1B7E6174F0EAD301"
+			]
+			icon: {
+				id: "minecraft:quartz_pillar"
+			}
+			id: "63C2C52D1861D802"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "213526538C80402A"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "4C675EC7E2C984B9"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "15C4B5C3296000DA"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "35FF1C2040E70F24"
+					structure: "incendium:sanctum"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"402FA237361274FF"
+				"63C2C52D1861D802"
+			]
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "61811F9DA4A9BA0C"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "292003515189A16B"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "43EBA14AA1CFEF95"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 300"
+					elevate_perms: true
+					id: "1212C5D8D76035E6"
+					silent: true
+					title: "+300 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4CE42A446211D859"
+					structure: "incendium:infernal_altar"
+					type: "structure"
+				}
+				{
+					id: "10DA771212D1519E"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"43602039D80CECD1"
+			]
+			icon: {
+				id: "eternalnether:netherite_bell"
+			}
+			id: "20216F61F7CD5131"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/fantasy"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "40D51E1503AD5F7B"
+					silent: true
+					title: "Гоблінська здобич"
+					type: "command"
+				}
+				{
+					id: "5640421464255420"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "584460CA844EDC2E"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "537C435DE94D4DBA"
+					structure: "eternalnether:piglin_manor"
+					type: "structure"
+				}
+				{
+					id: "3343D67ED6528F23"
+					item: {
+						count: 1
+						id: "eternalnether:gilded_netherite_shield"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"43602039D80CECD1"
+			]
+			icon: {
+				id: "eternalnether:warped_ender_pearl"
+			}
+			id: "7B554D86D9B83B83"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3147C45844CE4FD9"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "16B90864F674D63D"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "210F6E417D214CCE"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B4EC4529DF9500C"
+					structure: "eternalnether:citadel"
+					type: "structure"
+				}
+				{
+					id: "722C12343A6F2FDD"
+					item: {
+						count: 1
+						id: "eternalnether:warped_ender_pearl"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"56112B20BAE4BAE1"
+			]
+			icon: {
+				id: "eternalnether:withered_bone"
+			}
+			id: "279D3E612988F6E4"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "73568D7473022162"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "3A5B1E74C94B397F"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "103396AFA1470A4C"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "eternalnether:wither_skeleton_knight"
+					id: "61DB087BB727A2AB"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"56112B20BAE4BAE1"
+			]
+			icon: {
+				id: "netherdepthsupgrade:lava_fishing_rod"
+			}
+			id: "1550F30143B976FA"
+			rewards: [
+				{
+					count: 6
+					id: "1D1AAB2C5542B536"
+					item: {
+						count: 1
+						id: "minecraft:blaze_powder"
+					}
+					type: "item"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/sea"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "436E11CEA279485E"
+					silent: true
+					title: "Морська скриня"
+					type: "command"
+				}
+				{
+					id: "3E2051ACB7450C99"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "47FE48C4A5FAF1A6"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1152A319E26E2D53"
+					item: {
+						count: 1
+						id: "netherdepthsupgrade:lava_fishing_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "2F5257F58B6658E9"
+					item: {
+						count: 1
+						id: "netherdepthsupgrade:eyeball_fish"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"43602039D80CECD1"
+			]
+			icon: {
+				id: "netherexotics:kiwano"
+			}
+			id: "16FB9F389E51E07B"
+			rewards: [
+				{
+					id: "2B448854396F6A5F"
+					item: {
+						count: 1
+						id: "farmersdelight:cutting_board"
+					}
+					type: "item"
+				}
+				{
+					id: "78ECF3E09EF8B525"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "54A049792C8887BD"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "76A4D77752D59620"
+					item: {
+						count: 1
+						id: "netherexotics:kiwano"
+					}
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "45A7EB8A1EC798ED"
+					item: {
+						count: 1
+						id: "netherexotics:rambutan"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"56112B20BAE4BAE1"
+			]
+			icon: {
+				id: "minecraft:ender_eye"
+			}
+			id: "61A1A6FD11ADCE0F"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "5DBCE255B6D135CB"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "2C1A15B28B97A267"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "4B0A4F8B03570764"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 12L
+					id: "684407104369ACDD"
+					item: {
+						count: 1
+						id: "minecraft:ender_eye"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"61A1A6FD11ADCE0F"
+			]
+			icon: {
+				id: "minecraft:end_stone"
+			}
+			id: "62BC8551B779EBCE"
+			rewards: [
+				{
+					count: 64
+					id: "5249164ABD699A82"
+					item: {
+						count: 1
+						id: "minecraft:arrow"
+					}
+					type: "item"
+				}
+				{
+					id: "1487B8369C1865BB"
+					item: {
+						count: 1
+						id: "minecraft:carved_pumpkin"
+					}
+					type: "item"
+				}
+				{
+					id: "4542798F8C16F43C"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "6B9E9C5EA93217DF"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "6FE8CCCF67C63B4A"
+					type: "dimension"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"62BC8551B779EBCE"
+			]
+			icon: {
+				id: "minecraft:dragon_head"
+			}
+			id: "6B64D9FD7C7B0C56"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "46E6D8AEE3F75C4D"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "35885A08812F3501"
+					type: "xp"
+					xp: 800
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 400"
+					elevate_perms: true
+					id: "1F61D1689670091C"
+					silent: true
+					title: "+400 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					entity: "minecraft:ender_dragon"
+					id: "4D3C8144EDE9FB59"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6B64D9FD7C7B0C56"
+			]
+			icon: {
+				id: "enderscape:celestial_chanterelle"
+			}
+			id: "5255995FAD99563F"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4B729C04EBADEF17"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "1D928FD2DF437987"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "7DF8332AD09A9021"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "enderscape:celestial_grove"
+					id: "49EEE7F7582E2A0D"
+					type: "biome"
+				}
+				{
+					id: "651EA286D5910D0D"
+					item: {
+						count: 1
+						id: "enderscape:drift_jelly_bottle"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"5255995FAD99563F"
+			]
+			icon: {
+				id: "enderscape:nebulite"
+			}
+			id: "10E9D498140C6ABF"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "272C28BD540FD874"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "56498F93E95ECE64"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "5170F4387C34BA6D"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "659D05E51A7BA0FF"
+					item: {
+						count: 1
+						id: "enderscape:nebulite"
+					}
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "17BCBEB9F8200311"
+					item: {
+						count: 1
+						id: "enderscape:shadoline_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"10E9D498140C6ABF"
+			]
+			icon: {
+				id: "enderscape:magnia_attractor"
+			}
+			id: "286EB2B215C8FE85"
+			rewards: [
+				{
+					count: 8
+					id: "44679E1F70E959A1"
+					item: {
+						count: 1
+						id: "enderscape:nebulite_shards"
+					}
+					type: "item"
+				}
+				{
+					id: "4D13808905FFA355"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "638BD8DAF4810054"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "13757F4A2C393175"
+					item: {
+						count: 1
+						id: "enderscape:magnia_attractor"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"6B64D9FD7C7B0C56"
+			]
+			icon: {
+				id: "enderscape:end_city_key"
+			}
+			id: "45EE77007A516A2C"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "3C86F66349E2C7DD"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "46BA53FD8DF34200"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "25CE2FD3FF9ADB8E"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "167EF21BDF4AEDD5"
+					item: {
+						count: 1
+						id: "enderscape:end_city_key"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"45EE77007A516A2C"
+				"10E9D498140C6ABF"
+			]
+			icon: {
+				id: "enderscape:mirror"
+			}
+			id: "1CB07DC2B5AAB67F"
+			rewards: [
+				{
+					id: "30D9AE59B7A51DA8"
+					item: {
+						count: 1
+						id: "minecraft:lodestone"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "37150DF33DA525A5"
+					item: {
+						count: 1
+						id: "enderscape:nebulite"
+					}
+					type: "item"
+				}
+				{
+					id: "7D5747C239BBA9CA"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 120"
+					elevate_perms: true
+					id: "2108122E4FDDD489"
+					silent: true
+					title: "+120 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "22676E75F64B1FC2"
+					item: {
+						count: 1
+						id: "enderscape:mirror"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"45EE77007A516A2C"
+			]
+			icon: {
+				id: "minecraft:elytra"
+			}
+			id: "4F596DD2F2BAF8E1"
+			rewards: [
+				{
+					count: 32
+					id: "1908AF40F13E1C2A"
+					item: {
+						count: 1
+						id: "minecraft:firework_rocket"
+					}
+					type: "item"
+				}
+				{
+					id: "57393D7C84C8EEB2"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "57AC4E3BA2C21604"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.5d
+			tasks: [
+				{
+					id: "226E109C2CFB9A94"
+					item: {
+						count: 1
+						id: "minecraft:elytra"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.875d
+		}
+	]
+}

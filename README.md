@@ -1,6 +1,6 @@
 # Wilds & Wanderers
 
-Українська збірка модів для **Minecraft 1.21.1 (NeoForge 21.1.264)** про мандри, пригоди й поступовий розвиток: дракони й динозаври, Сутінковий ліс і Етер, магія Ars Nouveau та Iron's Spells, техніка Create, Mekanism й AE2, села, колонії й мандрівники з дорученнями. Уся збірка перекладена українською, а книга квестів, вікі й підказки написані для гравців, які не читають англійських гайдів.
+Українська збірка модів для **Minecraft 1.21.1 (NeoForge 21.1.264)** про мандри, пригоди й поступовий розвиток: дракони й динозаври, Сутінковий ліс і Етер, новий Незер і Енд, магія Ars Nouveau та Iron's Spells, техніка Create, Mekanism й AE2, села, колонії й мандрівники з дорученнями. Уся збірка перекладена українською, а книга квестів, вікі й підказки написані для гравців, які не читають англійських гайдів.
 
 *A Ukrainian-language NeoForge 1.21.1 adventure modpack. This repository holds the pack's own work (configs, quests, scripts, translations and two small mods); the 170+ mods it uses are listed in `docs/mods.json` with their download links.*
 

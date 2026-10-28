@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "netherexotics:blocks/kiwano_sapling",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [{"condition": "minecraft:survives_explosion"}],
+      "entries": [{"type": "minecraft:item", "name": "netherexotics:kiwano_sapling"}]
+    }
+  ]
+}

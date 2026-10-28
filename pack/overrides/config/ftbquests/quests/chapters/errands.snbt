@@ -7,7 +7,7 @@
 		id: "minecraft:writable_book"
 	}
 	id: "3544A01D328B9026"
-	order_index: 21
+	order_index: 22
 	quest_links: [ ]
 	quests: [
 		{
@@ -2581,6 +2581,187 @@
 			y: 13.200000000000001d
 		}
 		{
+			id: "4AA53735D401CF8A"
+			invisible: true
+			rewards: [ ]
+			tasks: [
+				{
+					id: "42C8F626143278C9"
+					type: "checkmark"
+				}
+			]
+			x: -6.0d
+			y: 35.5d
+		}
+		{
+			dependencies: [
+				"4AA53735D401CF8A"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "netherexotics:kiwano"
+			}
+			id: "2A60F49A771295A2"
+			rewards: [ ]
+			tasks: [
+				{
+					count: 8L
+					id: "1821C988B41224D1"
+					item: {
+						count: 1
+						id: "netherexotics:kiwano"
+					}
+					type: "item"
+				}
+			]
+			x: 6.4d
+			y: 13.200000000000001d
+		}
+		{
+			id: "386E6AE4EBEE441C"
+			invisible: true
+			rewards: [ ]
+			tasks: [
+				{
+					id: "170F9BE2CDFDFFC3"
+					type: "checkmark"
+				}
+			]
+			x: -6.0d
+			y: 36.0d
+		}
+		{
+			dependencies: [
+				"386E6AE4EBEE441C"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "netherdepthsupgrade:lava_fishing_rod"
+			}
+			id: "10C6B480D72A6D90"
+			rewards: [ ]
+			tasks: [
+				{
+					count: 3L
+					id: "6090F5ECC9B19E52"
+					item: {
+						count: 1
+						id: "netherdepthsupgrade:obsidianfish"
+					}
+					type: "item"
+				}
+			]
+			x: -6.4d
+			y: 14.8d
+		}
+		{
+			id: "2FD79A1E365F8863"
+			invisible: true
+			rewards: [ ]
+			tasks: [
+				{
+					id: "3929F159BB079BE4"
+					type: "checkmark"
+				}
+			]
+			x: -6.0d
+			y: 36.5d
+		}
+		{
+			dependencies: [
+				"2FD79A1E365F8863"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:shears"
+			}
+			id: "368C8EAA1FF395BB"
+			rewards: [ ]
+			tasks: [
+				{
+					entity: "eternalnether:warped_enderman"
+					id: "188CE5F9DBDD3ED3"
+					type: "kill"
+					value: 4L
+				}
+			]
+			x: -4.800000000000001d
+			y: 14.8d
+		}
+		{
+			id: "6CCD3E2DA6DAF986"
+			invisible: true
+			rewards: [ ]
+			tasks: [
+				{
+					id: "454830500C28F41D"
+					type: "checkmark"
+				}
+			]
+			x: -6.0d
+			y: 37.0d
+		}
+		{
+			dependencies: [
+				"6CCD3E2DA6DAF986"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "enderscape:mirror"
+			}
+			id: "3D1FA2A4F0016CCB"
+			rewards: [ ]
+			tasks: [
+				{
+					count: 4L
+					id: "162940BF2F116B64"
+					item: {
+						count: 1
+						id: "enderscape:nebulite"
+					}
+					type: "item"
+				}
+			]
+			x: -3.2d
+			y: 14.8d
+		}
+		{
+			id: "25B780C81C507DEC"
+			invisible: true
+			rewards: [ ]
+			tasks: [
+				{
+					id: "197C1845901BB302"
+					type: "checkmark"
+				}
+			]
+			x: -6.0d
+			y: 37.5d
+		}
+		{
+			dependencies: [
+				"25B780C81C507DEC"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:lantern"
+			}
+			id: "1356C4778974BDDC"
+			rewards: [ ]
+			tasks: [
+				{
+					id: "2DDD5129807C78B9"
+					item: {
+						count: 1
+						id: "minecraft:crafting_table"
+					}
+					type: "item"
+				}
+			]
+			x: -1.5999999999999996d
+			y: 14.8d
+		}
+		{
 			id: "6DEA2AB3F2DD3A75"
 			invisible: true
 			rewards: [ ]
@@ -2591,7 +2772,7 @@
 				}
 			]
 			x: -6.0d
-			y: 35.5d
+			y: 38.0d
 		}
 		{
 			dependencies: [
@@ -2611,8 +2792,8 @@
 					value: 8L
 				}
 			]
-			x: 6.4d
-			y: 13.200000000000001d
+			x: 0.0d
+			y: 14.8d
 		}
 		{
 			id: "609DAB50742C9626"
@@ -2625,7 +2806,7 @@
 				}
 			]
 			x: -6.0d
-			y: 36.0d
+			y: 38.5d
 		}
 		{
 			dependencies: [
@@ -2647,7 +2828,7 @@
 					type: "item"
 				}
 			]
-			x: -6.4d
+			x: 1.5999999999999996d
 			y: 14.8d
 		}
 		{
@@ -2661,7 +2842,7 @@
 				}
 			]
 			x: -6.0d
-			y: 36.5d
+			y: 39.0d
 		}
 		{
 			dependencies: [
@@ -2681,7 +2862,7 @@
 					value: 1L
 				}
 			]
-			x: -4.800000000000001d
+			x: 3.200000000000001d
 			y: 14.8d
 		}
 		{
@@ -2695,7 +2876,7 @@
 				}
 			]
 			x: -6.0d
-			y: 37.0d
+			y: 39.5d
 		}
 		{
 			dependencies: [
@@ -2718,7 +2899,7 @@
 					type: "item"
 				}
 			]
-			x: -3.2d
+			x: 4.800000000000001d
 			y: 14.8d
 		}
 		{
@@ -2732,7 +2913,7 @@
 				}
 			]
 			x: -6.0d
-			y: 37.5d
+			y: 40.0d
 		}
 		{
 			dependencies: [
@@ -2752,7 +2933,7 @@
 					value: 1L
 				}
 			]
-			x: -1.5999999999999996d
+			x: 6.4d
 			y: 14.8d
 		}
 		{
@@ -2766,7 +2947,7 @@
 				}
 			]
 			x: -6.0d
-			y: 38.0d
+			y: 40.5d
 		}
 		{
 			dependencies: [
@@ -2786,8 +2967,8 @@
 					value: 1L
 				}
 			]
-			x: 0.0d
-			y: 14.8d
+			x: -6.4d
+			y: 16.4d
 		}
 		{
 			id: "140BBBFC6D69FCF4"
@@ -2800,7 +2981,7 @@
 				}
 			]
 			x: -6.0d
-			y: 38.5d
+			y: 41.0d
 		}
 		{
 			dependencies: [
@@ -2819,8 +3000,8 @@
 					type: "structure"
 				}
 			]
-			x: 1.5999999999999996d
-			y: 14.8d
+			x: -4.800000000000001d
+			y: 16.4d
 		}
 		{
 			id: "5596A8BADC6F1D6A"
@@ -2833,7 +3014,7 @@
 				}
 			]
 			x: -6.0d
-			y: 39.0d
+			y: 41.5d
 		}
 		{
 			dependencies: [
@@ -2856,8 +3037,8 @@
 					type: "item"
 				}
 			]
-			x: 3.200000000000001d
-			y: 14.8d
+			x: -3.2d
+			y: 16.4d
 		}
 		{
 			id: "784305CFF4BC30C7"
@@ -2870,7 +3051,7 @@
 				}
 			]
 			x: -6.0d
-			y: 39.5d
+			y: 42.0d
 		}
 		{
 			dependencies: [
@@ -2890,8 +3071,8 @@
 					value: 5L
 				}
 			]
-			x: 4.800000000000001d
-			y: 14.8d
+			x: -1.5999999999999996d
+			y: 16.4d
 		}
 		{
 			id: "4D805B465BE380D3"
@@ -2904,7 +3085,7 @@
 				}
 			]
 			x: -6.0d
-			y: 40.0d
+			y: 42.5d
 		}
 		{
 			dependencies: [
@@ -2923,8 +3104,8 @@
 					type: "structure"
 				}
 			]
-			x: 6.4d
-			y: 14.8d
+			x: 0.0d
+			y: 16.4d
 		}
 		{
 			id: "1DDC0C4ED2079852"
@@ -2937,7 +3118,7 @@
 				}
 			]
 			x: -6.0d
-			y: 40.5d
+			y: 43.0d
 		}
 		{
 			dependencies: [
@@ -2957,7 +3138,7 @@
 					value: 12L
 				}
 			]
-			x: -6.4d
+			x: 1.5999999999999996d
 			y: 16.4d
 		}
 		{
@@ -2971,7 +3152,7 @@
 				}
 			]
 			x: -6.0d
-			y: 41.0d
+			y: 43.5d
 		}
 		{
 			dependencies: [
@@ -2991,7 +3172,7 @@
 					value: 15L
 				}
 			]
-			x: -4.800000000000001d
+			x: 3.200000000000001d
 			y: 16.4d
 		}
 		{
@@ -3005,7 +3186,7 @@
 				}
 			]
 			x: -6.0d
-			y: 41.5d
+			y: 44.0d
 		}
 		{
 			dependencies: [
@@ -3028,7 +3209,7 @@
 					type: "item"
 				}
 			]
-			x: -3.2d
+			x: 4.800000000000001d
 			y: 16.4d
 		}
 		{
@@ -3042,7 +3223,7 @@
 				}
 			]
 			x: -6.0d
-			y: 42.0d
+			y: 44.5d
 		}
 		{
 			dependencies: [
@@ -3065,7 +3246,7 @@
 					type: "item"
 				}
 			]
-			x: -1.5999999999999996d
+			x: 6.4d
 			y: 16.4d
 		}
 		{
@@ -3079,7 +3260,7 @@
 				}
 			]
 			x: -6.0d
-			y: 42.5d
+			y: 45.0d
 		}
 		{
 			dependencies: [
@@ -3102,8 +3283,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 16.4d
+			x: -6.4d
+			y: 18.0d
 		}
 		{
 			id: "6491ACE47996C671"
@@ -3116,7 +3297,7 @@
 				}
 			]
 			x: -6.0d
-			y: 43.0d
+			y: 45.5d
 		}
 		{
 			dependencies: [
@@ -3139,8 +3320,8 @@
 					type: "item"
 				}
 			]
-			x: 1.5999999999999996d
-			y: 16.4d
+			x: -4.800000000000001d
+			y: 18.0d
 		}
 		{
 			id: "5857B0B345D52EDD"
@@ -3153,7 +3334,7 @@
 				}
 			]
 			x: -6.0d
-			y: 43.5d
+			y: 46.0d
 		}
 		{
 			dependencies: [
@@ -3175,8 +3356,8 @@
 					type: "item"
 				}
 			]
-			x: 3.200000000000001d
-			y: 16.4d
+			x: -3.2d
+			y: 18.0d
 		}
 		{
 			id: "1DF674E467619582"
@@ -3189,7 +3370,7 @@
 				}
 			]
 			x: -6.0d
-			y: 44.0d
+			y: 46.5d
 		}
 		{
 			dependencies: [
@@ -3209,8 +3390,8 @@
 					value: 1L
 				}
 			]
-			x: 4.800000000000001d
-			y: 16.4d
+			x: -1.5999999999999996d
+			y: 18.0d
 		}
 		{
 			id: "53875BB61887A973"
@@ -3223,7 +3404,7 @@
 				}
 			]
 			x: -6.0d
-			y: 44.5d
+			y: 47.0d
 		}
 		{
 			dependencies: [
@@ -3243,8 +3424,8 @@
 					value: 2L
 				}
 			]
-			x: 6.4d
-			y: 16.4d
+			x: 0.0d
+			y: 18.0d
 		}
 		{
 			id: "16985E828456BE28"
@@ -3257,7 +3438,7 @@
 				}
 			]
 			x: -6.0d
-			y: 45.0d
+			y: 47.5d
 		}
 		{
 			dependencies: [
@@ -3280,7 +3461,7 @@
 					type: "item"
 				}
 			]
-			x: -6.4d
+			x: 1.5999999999999996d
 			y: 18.0d
 		}
 		{
@@ -3294,7 +3475,7 @@
 				}
 			]
 			x: -6.0d
-			y: 45.5d
+			y: 48.0d
 		}
 		{
 			dependencies: [
@@ -3314,7 +3495,7 @@
 					value: 3L
 				}
 			]
-			x: -4.800000000000001d
+			x: 3.200000000000001d
 			y: 18.0d
 		}
 		{
@@ -3328,7 +3509,7 @@
 				}
 			]
 			x: -6.0d
-			y: 46.0d
+			y: 48.5d
 		}
 		{
 			dependencies: [
@@ -3350,7 +3531,7 @@
 					type: "item"
 				}
 			]
-			x: -3.2d
+			x: 4.800000000000001d
 			y: 18.0d
 		}
 		{
@@ -3364,7 +3545,7 @@
 				}
 			]
 			x: -6.0d
-			y: 46.5d
+			y: 49.0d
 		}
 		{
 			dependencies: [
@@ -3387,7 +3568,7 @@
 					type: "item"
 				}
 			]
-			x: -1.5999999999999996d
+			x: 6.4d
 			y: 18.0d
 		}
 		{
@@ -3401,7 +3582,7 @@
 				}
 			]
 			x: -6.0d
-			y: 47.0d
+			y: 49.5d
 		}
 		{
 			dependencies: [
@@ -3420,8 +3601,8 @@
 					type: "dimension"
 				}
 			]
-			x: 0.0d
-			y: 18.0d
+			x: -6.4d
+			y: 19.6d
 		}
 		{
 			id: "132C4AF0A4E35B7A"
@@ -3434,7 +3615,7 @@
 				}
 			]
 			x: -6.0d
-			y: 47.5d
+			y: 50.0d
 		}
 		{
 			dependencies: [
@@ -3457,8 +3638,8 @@
 					type: "item"
 				}
 			]
-			x: 1.5999999999999996d
-			y: 18.0d
+			x: -4.800000000000001d
+			y: 19.6d
 		}
 		{
 			id: "1262AEA77BCB5895"
@@ -3471,7 +3652,7 @@
 				}
 			]
 			x: -6.0d
-			y: 48.0d
+			y: 50.5d
 		}
 		{
 			dependencies: [
@@ -3493,8 +3674,8 @@
 					type: "item"
 				}
 			]
-			x: 3.200000000000001d
-			y: 18.0d
+			x: -3.2d
+			y: 19.6d
 		}
 		{
 			id: "43043663512BAACC"
@@ -3507,7 +3688,7 @@
 				}
 			]
 			x: -6.0d
-			y: 48.5d
+			y: 51.0d
 		}
 		{
 			dependencies: [
@@ -3530,8 +3711,8 @@
 					type: "item"
 				}
 			]
-			x: 4.800000000000001d
-			y: 18.0d
+			x: -1.5999999999999996d
+			y: 19.6d
 		}
 		{
 			id: "7588BF137F56050B"
@@ -3544,7 +3725,7 @@
 				}
 			]
 			x: -6.0d
-			y: 49.0d
+			y: 51.5d
 		}
 		{
 			dependencies: [
@@ -3567,8 +3748,8 @@
 					type: "item"
 				}
 			]
-			x: 6.4d
-			y: 18.0d
+			x: 0.0d
+			y: 19.6d
 		}
 		{
 			id: "2FFD781546BD9CE2"
@@ -3581,7 +3762,7 @@
 				}
 			]
 			x: -6.0d
-			y: 49.5d
+			y: 52.0d
 		}
 		{
 			dependencies: [
@@ -3601,7 +3782,7 @@
 					value: 1L
 				}
 			]
-			x: -6.4d
+			x: 1.5999999999999996d
 			y: 19.6d
 		}
 	]

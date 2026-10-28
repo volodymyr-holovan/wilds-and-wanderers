@@ -71,6 +71,10 @@
 		"Вимір вічних сутінків і ланцюжок босів"
 	]
 	chapter.375AE59F12D2E91D.title: "&2Сутінковий ліс"
+	chapter.78D286BD28862E44.chapter_subtitle: [
+		"Новий Незер, рибалка в лаві, дракон і зовнішні острови"
+	]
+	chapter.78D286BD28862E44.title: "&cНезер &7і &5Енд"
 	chapter.793E32936A23A83E.chapter_subtitle: [
 		"Акаунт, дім, телепорти, приват, намет"
 	]
@@ -140,8 +144,39 @@
 	quest.108FA0C6C6A8E789.title: "Браузер у грі"
 	quest.1099241061D2A9F4.quest_desc: [ ]
 	quest.1099241061D2A9F4.title: "Камені джерела"
+	quest.10C6B480D72A6D90.quest_desc: [
+		"&6Харитон&r, лавовий рибалка:"
+		"&o«Сорок років я рибалив у морі. Потім море мені набридло — бо в ньому все давно спіймано. А в лаві, кажуть, плаває риба з каменю.»&r"
+		"&o«Я змайстрував лавову вудку, але руки вже не ті: жар із лави сушить очі, і поплавця я не бачу. Мені б хоч глянути на цю рибу, перш ніж помру.»&r"
+		"&fСпіймайте мені три обсидіанові риби. Моя запасна вудка — ваша."
+		""
+		"[\"\", {\"text\": \"Обіцяна плата: \", \"color\": \"gold\"}, {\"translate\": \"item.netherdepthsupgrade.lava_fishing_rod\", \"color\": \"aqua\"}, {\"text\": \"\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.blaze_rod\", \"color\": \"aqua\"}, {\"text\": \" ×4\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.emerald\", \"color\": \"aqua\"}, {\"text\": \" ×12\", \"color\": \"gray\"}, {\"text\": \", 260 досвіду, 90 очок шляху\", \"color\": \"gray\"}]"
+		"&7Плату видає замовник: поверніться до нього, коли виконаєте."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.netherdepthsupgrade.obsidianfish\", \"color\": \"aqua\"}, {\"text\": \" ×3\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.netherdepthsupgrade.obsidianfish\", \"color\": \"aqua\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.netherdepthsupgrade.obsidianfish\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki netherdepthsupgrade:obsidianfish\"}}]"
+	]
+	quest.10C6B480D72A6D90.title: "Риба, що не горить"
 	quest.10C8AD389E6FDBC9.quest_desc: [ ]
 	quest.10C8AD389E6FDBC9.title: "Нова кошара"
+	quest.10E9D498140C6ABF.quest_desc: [
+		"Дві руди Енду: &dнебуліт&r — енергія для знарядь Енду (з уламків складається небуліт) і &8шадолін&r — метал, що плавиться в злитки."
+		""
+		"Жорна Create і збагачувач Mekanism дають з руди більше, а Ars Nouveau заряджає уламки небуліту в джерельні самоцвіти."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.nebulite\", \"color\": \"aqua\"}, {\"text\": \" ×2\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.shadoline_ingot\", \"color\": \"aqua\"}, {\"text\": \" ×6\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:nebulite\"}}]"
+	]
+	quest.10E9D498140C6ABF.title: "Небуліт і шадолін"
 	quest.11146B6C59F5E94E.quest_desc: [ ]
 	quest.11146B6C59F5E94E.title: "Хліб для сиріт"
 	quest.114EB85000044D1E.quest_desc: [
@@ -323,6 +358,26 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:spider\"}}]"
 	]
 	quest.1352F233D895E2CB.title: "Старий млин"
+	quest.1356C4778974BDDC.quest_desc: [
+		"&6Мірра&r, хранителька Перехрестя:"
+		"&o«Ласкаво просимо до Перехрестя! Колись тут стояло ельфійське святилище, а тепер ці арки зустрічають усіх, хто приходить у цей світ. Я зустрічаю разом із ними.»&r"
+		"&o«Світ навколо дикий і великий: ліси, гори, моря, підземелля, дракони. Тут, на Перехресті, ви в безпеці — ніхто не зашкодить ні вам, ні тваринам, і чудовиська сюди не забредуть. Але далі вже самі.»&r"
+		"&o«Перш ніж рушати, покажіть, що вмієте працювати руками. Змайструйте верстак: чотири дошки з будь-якої деревини, а дошки — з колоди. Дерев довкола вдосталь.»&r"
+		"&fЗмайструйте і принесіть мені верстак. Натомість отримаєте кам'яне знаряддя, хліб, смолоскипи й ліжко — на першу ніч вистачить."
+		""
+		"[\"\", {\"text\": \"Обіцяна плата: \", \"color\": \"gold\"}, {\"translate\": \"item.minecraft.stone_pickaxe\", \"color\": \"aqua\"}, {\"text\": \"\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.stone_axe\", \"color\": \"aqua\"}, {\"text\": \"\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.stone_sword\", \"color\": \"aqua\"}, {\"text\": \"\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.bread\", \"color\": \"aqua\"}, {\"text\": \" ×12\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"block.minecraft.torch\", \"color\": \"aqua\"}, {\"text\": \" ×32\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"block.minecraft.white_bed\", \"color\": \"aqua\"}, {\"text\": \"\", \"color\": \"gray\"}, {\"text\": \", 60 досвіду, 30 очок шляху\", \"color\": \"gray\"}]"
+		"&7Плату видає замовник: поверніться до нього, коли виконаєте."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecraft.crafting_table\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.minecraft.crafting_table\", \"color\": \"aqua\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:crafting_table\"}}]"
+	]
+	quest.1356C4778974BDDC.title: "Перший верстак"
 	quest.1378D3A1FE92702D.quest_desc: [
 		"&6Лукія&r, сільська лікарка &8(доручення 1 з 4)&r:"
 		"&o«Хтось у сусідньому селі приніс хворобу, від якої люди сіріють і забувають власних дітей. Тих, хто вже зовсім перетворився, ми не врятуємо.»&r"
@@ -558,6 +613,22 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki mekanism:digital_miner\"}}]"
 	]
 	quest.150F7B10715DC46E.title: "Цифровий видобувач"
+	quest.1550F30143B976FA.quest_desc: [
+		"Лавові моря Незеру живі: дев'ять видів риб. Для лави потрібна &aлавова вудка&r — з незеритових уламків, стрижнів іфрита й ланцюгів."
+		""
+		"Улов корисний: блейзриба дає порох іфрита, світлосардина — світлопил, обсидіанова риба — обсидіан, а з риби-ока, ножиць і пороху іфрита виходить &aоко Енду&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.netherdepthsupgrade.lava_fishing_rod\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.netherdepthsupgrade.eyeball_fish\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.netherdepthsupgrade.eyeball_fish\", \"color\": \"aqua\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.netherdepthsupgrade.eyeball_fish\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki netherdepthsupgrade:lava_fishing_rod\"}}]"
+	]
+	quest.1550F30143B976FA.title: "Рибалка в лаві"
 	quest.15A00B67B6842B83.quest_desc: [ ]
 	quest.15A00B67B6842B83.title: "Точні механізми"
 	quest.15A0C063E3AFF4E9.quest_desc: [
@@ -776,6 +847,18 @@
 	quest.16BF35D0C86DB3DE.title: "Мовчазна каплиця"
 	quest.16CF56C1A34F57C5.quest_desc: [ ]
 	quest.16CF56C1A34F57C5.title: "Мед на весілля"
+	quest.16FB9F389E51E07B.quest_desc: [
+		"У кожному лісі Незеру росте свій фрукт: &3ківано&r (химерний ліс, вогнестійкість), &cпітая&r (багряний ліс, знімає візер), &6рамбутан&r (пустища, регенерація), &5жаботикаба&r (базальтові дельти, знімає ефекти), &eрука Будди&r (пісок душ, нічний зір)."
+		""
+		"Ножем на дошці ківано ріжеться на скибки й дає шкірку — з неї броня й знаряддя, які самі переплавляють здобуте."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.netherexotics.kiwano\", \"color\": \"aqua\"}, {\"text\": \" ×3\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.netherexotics.rambutan\", \"color\": \"aqua\"}, {\"text\": \" ×3\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki netherexotics:kiwano\"}}]"
+	]
+	quest.16FB9F389E51E07B.title: "Фрукти Незеру"
 	quest.175253F3A02AF69E.quest_desc: [
 		"Триголова &aгідра&r сидить у печері серед лави. Голови кусають і плюються вогнем; відрубана голова відростає, поки тіло ціле. Бийте голову, коли паща відкрита."
 		"Нагорода: &eвогняна кров&r — у збірці вона взаємозамінна з кров'ю вогняного дракона. З неї і вогняних сліз роблять вогняні злитки."
@@ -1155,6 +1238,26 @@
 	quest.1B27A9A24C6E41BE.title: "Нова кошара"
 	quest.1B55A44445E9790E.quest_desc: [ ]
 	quest.1B55A44445E9790E.title: "Стрижні іфритів"
+	quest.1B7E6174F0EAD301.quest_desc: [
+		"Знайдіть попелясті пустища й кварцові рівнини — два з восьми біомів Incendium. Кожен небезпечний по-своєму:"
+		" • &7Попелясті пустища&r — тут стоїть Заборонений замок;"
+		" • &eПекельні дюни&r — пустельні іфрити;"
+		" • &fКварцові рівнини&r — застигла лава, Санктум і Кварцова кухня;"
+		" • &aОтруйне звалище&r — радіація й отруйні слизні;"
+		" • &6Вулканічні дельти&r — давні уламки просто на поверхні."
+		""
+		"Біом показує мінімапа й F3; вікі (O) має статтю про кожен."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Побувати в біомі: \", \"color\": \"gray\"}, {\"translate\": \"biome.incendium.ash_barrens\", \"color\": \"green\"}]"
+		"[\"\", {\"text\": \"• Побувати в біомі: \", \"color\": \"gray\"}, {\"translate\": \"biome.incendium.quartz_flats\", \"color\": \"green\"}]"
+		""
+		"&6Складність:&r &c★★★&8★★&r — небезпечно"
+		"&6Як знайти:&r Компас природи (Nature's Compass) знайде біом за назвою."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:crimson_nylium\"}}]"
+	]
+	quest.1B7E6174F0EAD301.title: "Вісім нових біомів"
 	quest.1BD29F9EBE206381.quest_desc: [
 		"Ця книга веде вас крізь увесь світ збірки: від першого верстата до драконів і машин."
 		""
@@ -1206,6 +1309,17 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutcitizen\"}}]"
 	]
 	quest.1C89EB51D23F6C42.title: "Оселі й їдальня"
+	quest.1CB07DC2B5AAB67F.quest_desc: [
+		"&aДзеркало&r зі сховища міста Енду переносить до &aмагнетиту&r: клацніть дзеркалом по магнетиту, заправте його небулітом — і повертайтеся додому будь-коли."
+		""
+		"Зачарування «Міжвимірність» дозволяє переноситися навіть з іншого виміру."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.mirror\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:mirror\"}}]"
+	]
+	quest.1CB07DC2B5AAB67F.title: "Дзеркало"
 	quest.1CF1DCB1CC1D0A6D.quest_desc: [
 		"Ліч ховається за щитами і кидає вогняні кулі. &eВідбивайте кулі мечем назад&r — кожне влучання збиває щит. Потім він кличе копії й зомбі, а наприкінці б'ється врукопашну."
 		"Нагорода: три &aскіпетри&r (Сутінків, зомбі, викрадання життя) і золоті обладунки."
@@ -1461,6 +1575,22 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ars_nouveau:drygmy_charm\"}}]"
 	]
 	quest.1FFB73BC2F7FCF54.title: "Магічна ферма"
+	quest.20216F61F7CD5131.quest_desc: [
+		"У багряному лісі стоїть маєток &6Eternal Nether&r. Його стережуть пігліни-мисливці зі щитами й абордажними шаблями, а в підвалах сидять полонені."
+		""
+		"Визвольте &aполоненого пігліна&r: потрібні золото й &aнезеритовий дзвін&r. Вдячний піглін дарує &6позолочений незеритовий щит&r — він ніколи не ламається."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Знайти споруду: \", \"color\": \"gray\"}, {\"translate\": \"wilds_wiki.structure.eternalnether.piglin_manor\", \"color\": \"gold\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.eternalnether.gilded_netherite_shield\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"&6Де:&r багряний ліс."
+		"&6Складність:&r &c★★★&8★★&r — небезпечно"
+		"&6Як знайти:&r Компас дослідника → «piglin_manor»."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki eternalnether:gilded_netherite_shield\"}}]"
+	]
+	quest.20216F61F7CD5131.title: "Маєток піглінів"
 	quest.2075BCFC42EA468F.quest_desc: [
 		"&aКаструля&r на &aкухонній плиті&r (або над вогнищем) готує супи, рагу й пироги. Страви з неї дають ефект &eСитість&r — голод майже не росте кілька хвилин."
 		""
@@ -1699,6 +1829,8 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create:track_signal\"}}]"
 	]
 	quest.25ACAFCEF0394A9D.title: "Розклад і семафори"
+	quest.25B780C81C507DEC.quest_desc: [ ]
+	quest.25B780C81C507DEC.title: "Перший верстак"
 	quest.26FFE6750D6C789F.quest_desc: [
 		"&6Пані Аделаїда&r, годинникарка &8(доручення 3 з 5)&r:"
 		"&o«Точний механізм — це золота пластина, латунні зубці, шестерні й лампи, зібрані на конвеєрі в правильному порядку. Помилишся раз — і купа брухту.»&r"
@@ -1747,6 +1879,21 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutuniversity\"}}]"
 	]
 	quest.2791F2E4B56FAD04.title: "Університет"
+	quest.279D3E612988F6E4.quest_desc: [
+		"Величезна руїна у формі візера. Візер-скелети-лицарі, корпори, мари й вексі. У «ребрах» сховано скарби, серед них — платівка «Вальс візера»."
+		""
+		"Переможіть &8візер-скелета лицаря&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Перемогти: \", \"color\": \"gray\"}, {\"translate\": \"entity.eternalnether.wither_skeleton_knight\", \"color\": \"red\"}, {\"text\": \"\"}]"
+		""
+		"&6Складність:&r &c★★★★&8★&r — дуже небезпечно"
+		"&6Спорядження:&r молоко проти іссушення, сокира"
+		"&6Як знайти:&r Компас дослідника → «catacomb»."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:eternalnether:wither_skeleton_knight\"}}]"
+	]
+	quest.279D3E612988F6E4.title: "Катакомби візера"
 	quest.27D8AD582BAB2E4E.quest_desc: [ ]
 	quest.27D8AD582BAB2E4E.title: "Троянди для Марти"
 	quest.286AD2C4EC8D4A3E.quest_desc: [
@@ -1764,6 +1911,15 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexscaves:dark_tatters\"}}]"
 	]
 	quest.286AD2C4EC8D4A3E.title: "Покинуті порожнечі"
+	quest.286EB2B215C8FE85.quest_desc: [
+		"Паросток притягувальної й паросток відштовхувальної магнії з магнієвих скель плюс злитки шадоліну — і ви тягнете предмети здалеку. Працює на небуліті."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.magnia_attractor\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:magnia_attractor\"}}]"
+	]
+	quest.286EB2B215C8FE85.title: "Магнієвий притягувач"
 	quest.2901270CF77DB874.quest_desc: [ ]
 	quest.2901270CF77DB874.title: "Сад пам'яті"
 	quest.29A1164F11FA90FE.quest_desc: [
@@ -1809,6 +1965,21 @@
 	quest.29B5C310101D70B8.title: "Перемога над драконом"
 	quest.29BC3975BE8C0813.quest_desc: [ ]
 	quest.29BC3975BE8C0813.title: "Лисиця й кури"
+	quest.2A60F49A771295A2.quest_desc: [
+		"&6Ганна&r, польова лікарка:"
+		"&o«Я пішла в Незер за загоном шукачів золота — лікувати. Загін давно повернувся, а я лишилася: тут щодня хтось обпікається, і ніхто, крім мене, цим не переймається.»&r"
+		"&o«Сік ківано гасить жар у тілі краще за будь-яке зілля. Але химерний ліс кишить ендерменами, а я вмію тримати голку, не меч.»&r"
+		"&fПринесіть мені вісім ківано. Я зварю з них ліки для всіх, хто тут ходить."
+		""
+		"[\"\", {\"text\": \"Обіцяна плата: \", \"color\": \"gold\"}, {\"translate\": \"item.minecraft.potion\", \"color\": \"aqua\"}, {\"text\": \" ×3\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.gold_ingot\", \"color\": \"aqua\"}, {\"text\": \" ×6\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.golden_carrot\", \"color\": \"aqua\"}, {\"text\": \" ×8\", \"color\": \"gray\"}, {\"text\": \", 220 досвіду, 80 очок шляху\", \"color\": \"gray\"}]"
+		"&7Плату видає замовник: поверніться до нього, коли виконаєте."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.netherexotics.kiwano\", \"color\": \"aqua\"}, {\"text\": \" ×8\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki netherexotics:kiwano\"}}]"
+	]
+	quest.2A60F49A771295A2.title: "Ліки від опіків"
 	quest.2AE72A48ECF251E7.quest_desc: [
 		"&6Северин&r, кам'яр:"
 		"&o«Двадцять років тому драконячий вогонь спалив половину села. Ті, хто загинув, рятуючи дітей, так і лежать без пам'ятника.»&r"
@@ -2004,6 +2175,8 @@
 	quest.2F4F59D90EBF02C5.title: "Мертвий король"
 	quest.2F8116C8BB1F52C9.quest_desc: [ ]
 	quest.2F8116C8BB1F52C9.title: "Золото для піглінів"
+	quest.2FD79A1E365F8863.quest_desc: [ ]
+	quest.2FD79A1E365F8863.title: "Химерні тіні"
 	quest.2FFB22C0A92AC872.quest_desc: [
 		"Mekanism — це електрика, хімія й машини, що множать руду в 2, 3, 4 і навіть 5 разів. Усе починається з &aосмію&r — блакитнуватого металу з руди в звичайному камені."
 		""
@@ -2225,6 +2398,21 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ars_nouveau:source_jar\"}}]"
 	]
 	quest.361E505468F31D6C.title: "Джерело"
+	quest.368C8EAA1FF395BB.quest_desc: [
+		"&6Ізяслав&r, вигнанець цитаделі:"
+		"&o«Я був вартовим у химерній цитаделі, коли її мешканці збожеволіли. Химерні нарости вкрили їх, мов цвіль, і вони почали нападати на всіх, кого бачили.»&r"
+		"&o«Мене вигнали — чи то я втік, сам уже не пам'ятаю. Але поки вони там, я не можу повернутися по свої речі.»&r"
+		"&fЗупиніть чотирьох химерних ендерменів. Тоді я наберуся сміливості піти по своє."
+		""
+		"[\"\", {\"text\": \"Обіцяна плата: \", \"color\": \"gold\"}, {\"translate\": \"item.minecraft.ender_pearl\", \"color\": \"aqua\"}, {\"text\": \" ×6\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.diamond\", \"color\": \"aqua\"}, {\"text\": \" ×3\", \"color\": \"gray\"}, {\"text\": \", 320 досвіду, скриня здобичі, 110 очок шляху\", \"color\": \"gray\"}]"
+		"&7Плату видає замовник: поверніться до нього, коли виконаєте."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Перемогти: \", \"color\": \"gray\"}, {\"translate\": \"entity.eternalnether.warped_enderman\", \"color\": \"red\"}, {\"text\": \" ×4\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:eternalnether:warped_enderman\"}}]"
+	]
+	quest.368C8EAA1FF395BB.title: "Химерні тіні"
 	quest.36C72BD4685F1A3D.quest_desc: [
 		"&aМідний балон&r на спині заповнюється повітрям від обертання й живить &aмідний шолом&r (дихання під водою) та інструменти Create."
 		""
@@ -2311,7 +2499,8 @@
 		"&6Де взяти:"
 		"[\"\", {\"translate\": \"block.minecraft.wither_skeleton_skull\", \"color\": \"aqua\"}]"
 		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"mekanism: nucleosynthesizing\", \"color\": \"white\"}]"
-		"[\"\", {\"text\": \"   \"}, {\"text\": \"зі скелетів: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecraft.wither_skeleton\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.eternalnether.corpor\", \"color\": \"white\"}, {\"text\": \", \"}, {\"translate\": \"entity.eternalnether.wraither\", \"color\": \"white\"}, {\"text\": \", \"}, {\"translate\": \"entity.netherdepthsupgrade.wither_bonefish\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"зі скелетів: \", \"color\": \"gray\"}, {\"translate\": \"entity.eternalnether.wither_skeleton_knight\", \"color\": \"white\"}, {\"text\": \", \"}, {\"translate\": \"entity.minecraft.wither_skeleton\", \"color\": \"white\"}]"
 		""
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:wither_skeleton_skull\"}}]"
 	]
@@ -2337,6 +2526,8 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create:mechanical_press\"}}]"
 	]
 	quest.383A8FFECFA5087E.title: "Механічний прес"
+	quest.386E6AE4EBEE441C.quest_desc: [ ]
+	quest.386E6AE4EBEE441C.title: "Риба, що не горить"
 	quest.3940A7C0195F7970.quest_desc: [ ]
 	quest.3940A7C0195F7970.title: "Убивця драконів"
 	quest.39832A1BF377750A.quest_desc: [
@@ -2571,6 +2762,21 @@
 	quest.3CE7724F11BD29E1.title: "Друг-голем"
 	quest.3D170866B6747B3F.quest_desc: [ ]
 	quest.3D170866B6747B3F.title: "Мертвий король"
+	quest.3D1FA2A4F0016CCB.quest_desc: [
+		"&6Веста&r, дзеркальниця:"
+		"&o«Мої дзеркала переносять людей між світами — точніше, переносили, поки не скінчився небуліт. Без нього дзеркало лише показує ваше втомлене обличчя.»&r"
+		"&o«Небуліт лежить у скелях зовнішніх островів, але вони ходять під ногами, а я не люблю висоти. Дуже не люблю.»&r"
+		"&fПринесіть мені чотири шматки небуліту. Натомість отримаєте мої дрейфові поножі — я їх однаково не ношу."
+		""
+		"[\"\", {\"text\": \"Обіцяна плата: \", \"color\": \"gold\"}, {\"translate\": \"item.enderscape.drift_leggings\", \"color\": \"aqua\"}, {\"text\": \"\", \"color\": \"gray\"}, {\"text\": \", \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.nebulite_shards\", \"color\": \"aqua\"}, {\"text\": \" ×6\", \"color\": \"gray\"}, {\"text\": \", 420 досвіду, скриня здобичі, 140 очок шляху\", \"color\": \"gray\"}]"
+		"&7Плату видає замовник: поверніться до нього, коли виконаєте."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.nebulite\", \"color\": \"aqua\"}, {\"text\": \" ×4\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:nebulite\"}}]"
+	]
+	quest.3D1FA2A4F0016CCB.title: "Пальне для дзеркала"
 	quest.3D2928726EDA0090.quest_desc: [ ]
 	quest.3D2928726EDA0090.title: "Сигнальна вежа"
 	quest.3D40018EC10987E1.quest_desc: [ ]
@@ -2686,6 +2892,22 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create:cuckoo_clock\"}}]"
 	]
 	quest.3F18DDC5E0924722.title: "Годинник для села"
+	quest.402FA237361274FF.quest_desc: [
+		"Найбільша споруда Incendium — фортеця піглінів посеред попелястих пустищ. Лицарі, лучники, алхіміки, піромани й розвідники; у холодильній кімнаті чекає &bКрижаний клинок&r."
+		""
+		"Зброя Incendium — особливі версії звичайних предметів із власними властивостями: читайте підказки."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Знайти споруду: \", \"color\": \"gray\"}, {\"translate\": \"wilds_wiki.structure.incendium.forbidden_castle\", \"color\": \"gold\"}]"
+		""
+		"&6Де:&r лише в біомі «Попелясті пустища»."
+		"&6Складність:&r &c★★★★&8★&r — дуже небезпечно"
+		"&6Спорядження:&r алмазна броня, щит, золото"
+		"&6Як знайти:&r Компас дослідника → «forbidden_castle»."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:gilded_blackstone\"}}]"
+	]
+	quest.402FA237361274FF.title: "Заборонений замок"
 	quest.4076FC27550D1360.quest_desc: [
 		"Усередині вулканів Первісних печер спить &aЛюкструктозавр&r — вогняний велетень, що топче землю й розливає лаву. Нагорода — &aтектонічний уламок&r."
 		""
@@ -2861,6 +3083,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cutting_board\"}}]"
 	]
 	quest.4332297DBDD8288C.title: "Нарізна дошка"
+	quest.43602039D80CECD1.quest_desc: [
+		"Незер у цьому світі переписано: вісім нових біомів &6Incendium&r, маєтки й катакомби &6Eternal Nether&r, перебудовані фортеці, живі лавові моря й фрукти в кожному лісі."
+		""
+		"Складіть рамку з &aобсидіану&r 4×5 (кути можна пропустити) і підпаліть її кресалом. Обсидіан дає вода, вилита на лаву; добувають його алмазним кайлом."
+		""
+		"&6Перед дорогою:&r золота броня (хоча б одна частина) — пігліни не нападуть; вогнестійкість, блоки й кресало, щоб запалити портал назад."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Потрапити у вимір: \", \"color\": \"gray\"}, {\"text\": \"Незер\", \"color\": \"light_purple\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:obsidian\"}}]"
+	]
+	quest.43602039D80CECD1.title: "Брама в Незер"
 	quest.4395B0DE22956292.quest_desc: [
 		"&aНезеритова книга заклинань&r — найбільше місць для заклять. Разом з легендарними чорнилами — вершина Iron's Spells."
 		""
@@ -3031,6 +3266,21 @@
 	quest.454CF63929EC1CFD.title: "Склад і кур'єр"
 	quest.45E52B7BEEC45241.quest_desc: [ ]
 	quest.45E52B7BEEC45241.title: "Водяні колеса"
+	quest.45EE77007A516A2C.quest_desc: [
+		"Міста Енду перебудовано: у них стоять &5випробувальні породжувачі Енду&r. Переможіть їхніх істот — випаде &aключ від міста Енду&r. Він відмикає &5сховище Енду&r: дзеркала, небуліт, платівки й шаблон оздоблення «Стазис»."
+		""
+		"На кораблі міста — окреме сховище з &aелітрами&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.end_city_key\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"&6Складність:&r &c★★★★&8★&r — дуже небезпечно"
+		"&6Спорядження:&r відро води й повільне падіння: шалкери підкидають у повітря"
+		"&6Як знайти:&r Компас дослідника → «end_city»."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:end_city_key\"}}]"
+	]
+	quest.45EE77007A516A2C.title: "Ключ від сховища"
 	quest.46C87D2FEBB383BF.quest_desc: [
 		"Намет, спальник, їжа й факели — все вміщається в &aрюкзак&r. Покращення рюкзака: підбирач, магніт, годувальник, вогнище для готування на ходу."
 		""
@@ -3199,6 +3449,8 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:twilightforest:ur_ghast\"}}]"
 	]
 	quest.493C01348F1C1D75.title: "Ур-ґаст"
+	quest.4AA53735D401CF8A.quest_desc: [ ]
+	quest.4AA53735D401CF8A.title: "Ліки від опіків"
 	quest.4AF54FD9C9D04A13.quest_desc: [
 		"&aПомпа&r жене рідину трубами, &aносик&r наливає її в предмети (мед у пляшки, воду в цеглу), &aзливач&r спорожнює. Великі &aбаки&r зберігають тисячі відер."
 		""
@@ -3358,7 +3610,7 @@
 		" • Кожен наступний вхід: &a/login пароль&r"
 		" • Змінити пароль: &a/changepassword старий новий новий&r"
 		""
-		"Поки ви не ввійшли, рухатися й писати в чат не можна — це захист від чужих людей з вашим ніком. На вхід дається 2 хвилини."
+		"Поки ви не ввійшли, рухатися й писати в чат не можна — це захист від чужих людей з вашим ніком. На реєстрацію чи вхід дається 1 хвилина: не встигли — сервер відключить, просто зайдіть знову."
 		""
 		"&6Порада:&r не використовуйте пароль від пошти чи інших сайтів. Скін для піратської версії: &a/skin set mojang НікЛіцензійногоГравця&r."
 		""
@@ -3435,6 +3687,17 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:writable_book\"}}]"
 	]
 	quest.4F4657381B27B081.title: "Мандрівники з дорученнями"
+	quest.4F596DD2F2BAF8E1.quest_desc: [
+		"Елітри — найкращий спосіб подорожувати. Феєрверки дають тягу, «Відновлення» лагодить їх досвідом."
+		""
+		"Enderscape додає елітрам чари: &aВідскок&r (затисніть стрибок у польоті) і &aСвітлова швидкість&r (далі на одному розгоні)."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.elytra\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:elytra\"}}]"
+	]
+	quest.4F596DD2F2BAF8E1.title: "Крила"
 	quest.4F69A01081418F8F.quest_desc: [
 		"&6Ярема&r, колишній солдат &8(доручення 1 з 4)&r:"
 		"&o«Я служив прикордонником, поки розбійники не спалили нашу заставу. Вижив один — бо втік. Двадцять років я не можу собі цього простити.»&r"
@@ -3516,7 +3779,7 @@
 		""
 		"&6Де взяти:"
 		"[\"\", {\"translate\": \"item.minecraft.blaze_rod\", \"color\": \"aqua\"}]"
-		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecraft.blaze\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecraft.blaze\", \"color\": \"white\"}, {\"text\": \", \"}, {\"translate\": \"entity.netherdepthsupgrade.blazefish\", \"color\": \"white\"}]"
 		""
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:blaze_rod\"}}]"
 	]
@@ -3645,6 +3908,18 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ae2:me_p2p_tunnel\"}}]"
 	]
 	quest.5238F7F69B050C3D.title: "P2P-тунелі"
+	quest.5255995FAD99563F.quest_desc: [
+		"За шлюзом починається &6Enderscape&r: &bнебесні гаї&r велетенських грибів, &7серпанкові ліси&r, &8осквернені пустища&r і &dмагнієві скелі&r, що притягують і відштовхують метал."
+		""
+		"Знайдіть небесний гай — там пливуть повітрям &aдрейфуни&r. Клацніть по дрейфуну порожньою пляшкою, щоб набрати &aдрейфового желе&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Побувати в біомі: \", \"color\": \"gray\"}, {\"translate\": \"biome.enderscape.celestial_grove\", \"color\": \"green\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.enderscape.drift_jelly_bottle\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:drift_jelly_bottle\"}}]"
+	]
+	quest.5255995FAD99563F.title: "Зовнішні острови"
 	quest.525608CD2339968F.quest_desc: [
 		"&6Олесь&r, хлопець, що бачив світлячків:"
 		"&o«Моя бабуся розповідала, що коли кинути діамант у ставок, обрамлений квітами, з неба вдарить блискавка — і відкриється шлях у ліс, де вічно сутеніє.»&r"
@@ -3904,6 +4179,27 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:twilightforest:naga\"}}]"
 	]
 	quest.55CBF3EEE1C73453.title: "Наґа"
+	quest.56112B20BAE4BAE1.quest_desc: [
+		"Фортеці Незеру перебудовано (YUNG's Better Nether Fortresses): більші, з мостами, залами й в'язницями. Тут живуть &cіфрити&r і &8візер-скелети&r."
+		""
+		"Вам потрібні &aстрижні іфрита&r: з них варять зілля (варильна стійка) і роблять &aоко Енду&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.blaze_rod\", \"color\": \"aqua\"}, {\"text\": \" ×6\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.minecraft.blaze_rod\", \"color\": \"aqua\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecraft.blaze\", \"color\": \"white\"}, {\"text\": \", \"}, {\"translate\": \"entity.netherdepthsupgrade.blazefish\", \"color\": \"white\"}]"
+		""
+		"&6Де:&r темні цегляні мости над лавою; часто між біомами."
+		"&6Складність:&r &c★★★&8★★&r — небезпечно"
+		"&6Спорядження:&r щит, лук, вогнестійкість"
+		"&6Як знайти:&r Компас дослідника → «fortress»."
+		"&6Порада:&r візер-скелети накладають іссушення — тримайте молоко."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:blaze_rod\"}}]"
+	]
+	quest.56112B20BAE4BAE1.title: "Фортеця Незеру"
 	quest.564886FCBCC75EA7.quest_desc: [
 		"У глибині &aкатакомб&r на троні сидить &aМертвий король&r. Він кличе мерців, б'є косою й у другій фазі стає ще швидшим. З нього падає його коса й рідкісні реліквії."
 		""
@@ -4367,6 +4663,23 @@
 	quest.612E0F8D3BF1CC77.title: "Крила Енду"
 	quest.6156FE514919AF1E.quest_desc: [ ]
 	quest.6156FE514919AF1E.title: "Довга дорога"
+	quest.61811F9DA4A9BA0C.quest_desc: [
+		"Бос Incendium. Принесіть &aзірку Незеру&r на &cПекельний вівтар&r — і з полум'я постане Ширяюче пекло."
+		""
+		"Нагорода — &6Пекельні крила&r, «Вогняна буря» чи один зі щитів. Зірку Незеру дає візер."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Знайти споруду: \", \"color\": \"gray\"}, {\"translate\": \"wilds_wiki.structure.incendium.infernal_altar\", \"color\": \"gold\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.nether_star\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"&6Складність:&r &c★★★★★&8&r — смертельно"
+		"&6Спорядження:&r незеритова броня, вогнестійкість, зцілення"
+		"&6Як знайти:&r Компас дослідника → «infernal_altar»."
+		"&6Порада:&r бийтеся там, де є куди відступити від вогню."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:nether_star\"}}]"
+	]
+	quest.61811F9DA4A9BA0C.title: "Ширяюче пекло"
 	quest.618C95D0AE6DACC4.quest_desc: [ ]
 	quest.618C95D0AE6DACC4.title: "Дорога на північ"
 	quest.61A0C134105F2F53.quest_desc: [
@@ -4388,6 +4701,24 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexscaves:raw_scarlet_neodymium\"}}]"
 	]
 	quest.61A0C134105F2F53.title: "Магнітна загадка"
+	quest.61A1A6FD11ADCE0F.quest_desc: [
+		"Око Енду — порох іфрита і перлина Енду (або око риби-ока з лавових морів). Киньте його — воно полетить до найближчої &aфортеці Енду&r під землею."
+		""
+		"Для порталу в Енд потрібно до дванадцяти очей: частина рамок уже може мати око. Візьміть запас — очі інколи розбиваються в польоті."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.ender_eye\", \"color\": \"aqua\"}, {\"text\": \" ×12\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.minecraft.ender_eye\", \"color\": \"aqua\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"&6Складність:&r &c★★★&8★★&r — небезпечно"
+		"&6Як знайти:&r Око Енду показує напрям; фортеці перебудовано (YUNG's Better Strongholds), портал — у глибині."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:ender_eye\"}}]"
+	]
+	quest.61A1A6FD11ADCE0F.title: "Очі Енду"
 	quest.629EEEEBA7DFF410.quest_desc: [
 		"&6Інженер Фрол&r, будівничий фортеці:"
 		"&o«Я відновлюю стару фортецю під землею. Але в стінах живуть лусочниці — розбиваєш камінь, а з нього вилазить ціла зграя.»&r"
@@ -4420,6 +4751,17 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:enchanted_gravitite\"}}]"
 	]
 	quest.62AA5506A726F646.title: "Гравітит"
+	quest.62BC8551B779EBCE.quest_desc: [
+		"Острів дракона перебудовано (YUNG's Better End Island): у центрі — &5вежа з дзвоном&r. Дракон прилітає не одразу, а коли ви наближаєтеся до вежі, тож є час роздивитися."
+		""
+		"&6Візьміть:&r лук і багато стріл, блоки, гарбуз на голову (від ендерменів), відро води, зілля повільного падіння."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Потрапити у вимір: \", \"color\": \"gray\"}, {\"text\": \"Енд\", \"color\": \"light_purple\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:end_stone\"}}]"
+	]
+	quest.62BC8551B779EBCE.title: "Енд"
 	quest.62CF778823702155.quest_desc: [
 		"&6Лукія&r, сільська лікарка &8(доручення 2 з 4)&r:"
 		"&o«Обернених ви зупинили. Але двоє дітей уже кашляють сірим кашлем. Їх ще можна врятувати: зілля слабкості і золоте яблуко.»&r"
@@ -4473,6 +4815,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki twilightforest:raven_feather\"}}]"
 	]
 	quest.6362E4839B2B6EB2.title: "Пір'я воронів"
+	quest.63C2C52D1861D802.quest_desc: [
+		"Кварцовий притулок розбійників у кварцових рівнинах: сховище, вартові й ілюзіоністи. З ілюзіоністів часто падає &aСувій повернення&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Знайти споруду: \", \"color\": \"gray\"}, {\"translate\": \"wilds_wiki.structure.incendium.sanctum\", \"color\": \"gold\"}]"
+		""
+		"&6Де:&r біом «Кварцові рівнини»."
+		"&6Складність:&r &c★★★★&8★&r — дуже небезпечно"
+		"&6Як знайти:&r Компас дослідника → «sanctum»."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:quartz_pillar\"}}]"
+	]
+	quest.63C2C52D1861D802.title: "Санктум"
 	quest.6491ACE47996C671.quest_desc: [ ]
 	quest.6491ACE47996C671.title: "Пилок піксі"
 	quest.64A2C1C192811B50.quest_desc: [ ]
@@ -4834,6 +5189,21 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki nomadictents:medium_yurt\"}}]"
 	]
 	quest.6B64D42766285B99.title: "Більша юрта"
+	quest.6B64D9FD7C7B0C56.quest_desc: [
+		"Розбийте кристали на колонах — вони лікують дракона, — і перемагайте. Дракона можна викликати знову: поставте чотири &aкристали Енду&r на блоки корінної породи в чотирьох крилах вежі."
+		""
+		"Після перемоги відкриються шлюзи до зовнішніх островів."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Перемогти: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecraft.ender_dragon\", \"color\": \"red\"}, {\"text\": \"\"}]"
+		""
+		"&6Складність:&r &c★★★★★&8&r — смертельно"
+		"&6Спорядження:&r лук із «Силою», алмазна броня, зцілення"
+		"&6Порада:&r кристали в клітках розбивайте зблизька."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:ender_dragon\"}}]"
+	]
+	quest.6B64D9FD7C7B0C56.title: "Дракон Енду"
 	quest.6B665A733D0A6012.quest_desc: [
 		"Кожна школа має свій обладунок: пірoманта, кріоманта, електроманта, священника, архівокера, культиста... Вони додають силу своєї школи й ману."
 		""
@@ -4890,6 +5260,8 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki smallships:dockyard\"}}]"
 	]
 	quest.6CBDFCD22B595363.title: "Верф"
+	quest.6CCD3E2DA6DAF986.quest_desc: [ ]
+	quest.6CCD3E2DA6DAF986.title: "Пальне для дзеркала"
 	quest.6D1191B1821F8D4A.quest_desc: [ ]
 	quest.6D1191B1821F8D4A.title: "Брат у руїнах"
 	quest.6D20C6DF112D13BD.quest_desc: [ ]
@@ -5664,6 +6036,27 @@
 	]
 	quest.7B4743A248E46AF1.quest_subtitle: "Клавіша O"
 	quest.7B4743A248E46AF1.title: "Вікі мандрівника"
+	quest.7B554D86D9B83B83.quest_desc: [
+		"Вежа в химерному лісі, де живуть &3химерні ендермени&r — вони нападають, щойно побачать вас."
+		""
+		"Химерного ендермена можна очистити: зрізайте з нього нарости &aножицями&r, поки він не стане звичайним. Принесіть &aхимерну перлину Енду&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Знайти споруду: \", \"color\": \"gray\"}, {\"translate\": \"wilds_wiki.structure.eternalnether.citadel\", \"color\": \"gold\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.eternalnether.warped_ender_pearl\", \"color\": \"aqua\"}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.eternalnether.warped_ender_pearl\", \"color\": \"aqua\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.eternalnether.warped_enderman\", \"color\": \"white\"}]"
+		""
+		"&6Де:&r химерний ліс."
+		"&6Складність:&r &c★★★★&8★&r — дуже небезпечно"
+		"&6Спорядження:&r гарбуз на голову, щоб не злити ендерменів поглядом"
+		"&6Як знайти:&r Компас дослідника → «citadel»."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki eternalnether:warped_ender_pearl\"}}]"
+	]
+	quest.7B554D86D9B83B83.title: "Химерна цитадель"
 	quest.7B7078750BB1F1EE.quest_desc: [
 		"&aКобольди&r — дрібний народ ковалів. Вони ховаються в норах під лісами й мають власне &aкобольдське залізо&r: легкі й швидкі інструменти. Поряд бродять &aзомбі-кобольди&r."
 		"&aКобольдський шаблон&r на ковальському столі перековує ваші залізні інструменти на кобольдські."

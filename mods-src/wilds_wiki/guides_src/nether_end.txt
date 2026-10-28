@@ -1,0 +1,151 @@
+=== incendium.md
+---
+for: biome:incendium:ash_barrens, biome:incendium:infernal_dunes, biome:incendium:inverted_forest, biome:incendium:quartz_flats, biome:incendium:toxic_heap, biome:incendium:volcanic_deltas, biome:incendium:weeping_valley, biome:incendium:withered_forest, structure:incendium:forbidden_castle, structure:incendium:sanctum, structure:incendium:infernal_altar, structure:incendium:nether_reactor, structure:incendium:pipeline, structure:incendium:quartz_kitchen, structure:incendium:piglin_village, structure:incendium:abandoned_tower, structure:incendium:ruined_lab
+keywords: incendium, інцендіум, незер, нові біоми незеру, заборонений замок, forbidden castle, санктум, sanctum, пекельний вівтар, hovering inferno, ширяюче пекло
+---
+# Новий Незер (Incendium)
+Незер у збірці переписано модом **Incendium**: вісім нових біомів поряд зі звичайними, нові споруди з власними мешканцями й зброя, якої немає ніде більше. Деякі біоми «тривимірні» й лежать один над одним.
+
+# Біоми
+- **Попелясті пустища** — сірі рівнини попелу. Лише тут стоїть **Заборонений замок**.
+- **Пекельні дюни** — піщані хвилі, де живуть пустельні іфрити.
+- **Перевернутий ліс** — дерева ростуть зі стелі донизу; висить над іншими біомами.
+- **Кварцові рівнини** — застигле лавове море з кварцом. Тут стоять **Санктум** і **Кварцова кухня**.
+- **Отруйне звалище** — радіоактивна пустка з трубопроводами й отруйними слизнями. Беріть зілля лікування.
+- **Вулканічні дельти** — хаос лави й базальту; давні уламки (незерит) часто лежать просто на поверхні.
+- **Плакуча долина** і **Зів'ялий ліс** — давнє поле битви піглінів і візер-скелетів, де блукають неприкаяні духи.
+
+# Споруди
+- **Заборонений замок** — фортеця піглінів: лицарі, лучники, ковалі, алхіміки, піромани й розвідники. Тут «Крижаний клинок» (у холодильній кімнаті), «Вольтаїчний тризуб», а зі скаутів інколи падає бойовий шолом.
+- **Санктум** — притулок розбійників у кварцових рівнинах зі сховищем і вартовим. З ілюзіоністів Санктуму часто падає «Сувій повернення».
+- **Пекельний вівтар** — принесіть на нього зірку Незеру, щоб викликати боса **Ширяюче пекло**. З нього падають «Пекельні крила», «Вогняна буря» та щити.
+- **Ядерний реактор**, **Трубопровід** і **Покинута лабораторія** — механічні руїни з вартовими-турелями; бочки повні здобичі.
+- **Кварцова кухня** (під картатою підлогою — схована скриня), **Село піглінів**, **Покинута вежа** з ув'язненими гастлінгами.
+
+> Зброя й обладунки Incendium — це особливі версії звичайних предметів із власними властивостями: читайте підказку предмета.
+> Споруди Incendium знаходить [[explorerscompass:explorerscompass]]: оберіть потрібну зі списку.
+
+=== eternal_nether.md
+---
+for: structure:eternalnether:piglin_manor, structure:eternalnether:citadel, structure:eternalnether:catacomb, entity:eternalnether:piglin_hunter, entity:eternalnether:piglin_prisoner, entity:eternalnether:warped_enderman, entity:eternalnether:corpor, entity:eternalnether:wither_skeleton_knight, entity:eternalnether:wraither, entity:eternalnether:wex, entity:eternalnether:wither_skeleton_horse, eternalnether:netherite_bell, eternalnether:gilded_netherite_shield, eternalnether:cutlass, eternalnether:warped_ender_pearl, eternalnether:withered_bone, eternalnether:withered_bone_meal, eternalnether:soul_stone
+keywords: eternal nether, вічний незер, маєток піглінів, цитадель, катакомби, полонений піглін, незеритовий дзвін, химерний ендермен
+---
+# Маєток, цитадель і катакомби (Eternal Nether)
+Три великі споруди Незеру, кожна зі своїми мешканцями.
+
+- **Маєток піглінів** — у багряному лісі. Його охороняють [[entity:eternalnether:piglin_hunter]] зі щитами й [[eternalnether:cutlass]]. У підвалах сидять [[entity:eternalnether:piglin_prisoner]].
+- **Цитадель** — у химерному лісі, оселя [[entity:eternalnether:warped_enderman]]: вони нападають, щойно побачать вас. Скриня цитаделі — одна з найбагатших у Незері.
+- **Катакомби** — величезна руїна у формі візера. Там ходять [[entity:eternalnether:wither_skeleton_knight]], [[entity:eternalnether:corpor]], [[entity:eternalnether:wraither]] і [[entity:eternalnether:wex]], а в «ребрах» сховано скарби.
+
+# Полонені пігліни
+Полоненого можна визволити: потрібні **золото** й [[eternalnether:netherite_bell]] — шукайте його там само, у маєтку. Вдячний піглін дарує [[eternalnether:gilded_netherite_shield]], що ніколи не ламається.
+
+# Химерні ендермени
+Химерного ендермена можна «очистити»: зрізайте з нього нарости ножицями, крок за кроком, поки він не стане звичайним ендерменом. З нього падає [[eternalnether:warped_ender_pearl]].
+
+# Зів'яле
+- [[eternalnether:withered_bone]] падає з візер-скелетів; з неї — [[eternalnether:withered_bone_meal]] (і в жорнах Create одразу три).
+- [[entity:eternalnether:wither_skeleton_horse]] можна осідлати.
+
+=== nether_fishing.md
+---
+for: netherdepthsupgrade:lava_fishing_rod, netherdepthsupgrade:blazefish, netherdepthsupgrade:bonefish, netherdepthsupgrade:eyeball_fish, netherdepthsupgrade:fortress_grouper, netherdepthsupgrade:glowdine, netherdepthsupgrade:lava_pufferfish, netherdepthsupgrade:magmacubefish, netherdepthsupgrade:obsidianfish, netherdepthsupgrade:searing_cod, netherdepthsupgrade:soulsucker, netherdepthsupgrade:wither_bonefish, netherdepthsupgrade:eyeball, netherdepthsupgrade:fortress_grouper_plate, netherdepthsupgrade:soul_sucker_leather, netherdepthsupgrade:soul_sucker_boots, netherdepthsupgrade:lava_glass
+keywords: рибалка в лаві, лавова вудка, лавова риба, nether depths, риба незеру, лавове скло
+---
+# Рибалка в лаві (Nether Depths Upgrade)
+Лавові моря Незеру живі: у них плавають дев'ять видів риб, ростуть багряна й химерна ламінарія та морська трава.
+
+- Для лави потрібна [[netherdepthsupgrade:lava_fishing_rod]] — з незеритових уламків, стрижнів іфрита й ланцюгів.
+!recipe netherdepthsupgrade:lava_fishing_rod
+- Улов — лавові риби, рідше — скарби: золото, сідла, книги, навіть черепи візер-скелетів.
+
+# Що робити з рибою
+- [[netherdepthsupgrade:blazefish]] → порох іфрита; [[netherdepthsupgrade:glowdine]] → світлопил; [[netherdepthsupgrade:obsidianfish]] → обсидіан; [[netherdepthsupgrade:searing_cod]] → вугілля; [[netherdepthsupgrade:bonefish]] → кісткове борошно. Блейзрибу й світлосардину жорна Create мелють удвічі вигідніше.
+- [[netherdepthsupgrade:eyeball_fish]] + ножиці → [[netherdepthsupgrade:eyeball]]; око + порох іфрита → **око Енду**. Це другий шлях до порталу в Енд, без ендерменів.
+- [[netherdepthsupgrade:fortress_grouper]] + ножиці → [[netherdepthsupgrade:fortress_grouper_plate]]; пластини з очима й склом дають [[netherdepthsupgrade:lava_glass]].
+- [[netherdepthsupgrade:soulsucker]] + ножиці → [[netherdepthsupgrade:soul_sucker_leather]] → [[netherdepthsupgrade:soul_sucker_boots]].
+- З кількох [[netherdepthsupgrade:wither_bonefish]] складається троянда візера.
+> Є й зілля та стріли «лавового зору» — для тих, хто пірнає в лаву з вогнестійкістю.
+
+=== nether_fruit.md
+---
+for: netherexotics:kiwano, netherexotics:rambutan, netherexotics:pitaya, netherexotics:jabuticaba, netherexotics:bouddha_s_hand, netherexotics:sliced_kiwano, netherexotics:cut_pitaya, netherexotics:chopped_bouddha_s_hand, netherexotics:kiwano_peel, netherexotics:kiwano_sword, netherexotics:kiwano_pickaxe, netherexotics:kiwano_helmet, netherexotics:rambutan_helmet, netherexotics:rambutan_shield, netherexotics:curious_fruits_salad, netherexotics:unsettling_fruits_salad, netherexotics:jabuticaba_juice_bottle, entity:netherexotics:moloch, netherexotics:moloch_in_a_bucket
+keywords: фрукти незеру, ківано, рамбутан, пітая, жаботикаба, рука будди, молох, nether's exoticism, фруктовий салат
+---
+# Фрукти Незеру (Nether's Exoticism)
+У кожному біомі Незеру росте свій фрукт. Їх можна їсти просто так — кожен дає корисний ефект.
+
+- [[netherexotics:kiwano]] — химерний ліс; вогнестійкість (і трохи отрути).
+- [[netherexotics:rambutan]] — пустища Незеру; регенерація II.
+- [[netherexotics:pitaya]] — багряний ліс (кактус); знімає ефект візера.
+- [[netherexotics:jabuticaba]] — базальтові дельти (гілки на деревах); знімає будь-які ефекти.
+- [[netherexotics:bouddha_s_hand]] — долина піску душ (гриб); нічний зір.
+
+# Кухня й майстерня
+- **Ніж Farmer's Delight** на дошці ріже ківано, пітаю й руку Будди на скибки. Ківано дає ще й [[netherexotics:kiwano_peel]].
+- З двох фруктів і пляшки змішувач Create робить сік; з жаботикаби — джем і рідину для ковша.
+- [[netherexotics:curious_fruits_salad]] і [[netherexotics:unsettling_fruits_salad]] дають кілька ефектів одразу.
+- Зі шкірки ківано — броня й знаряддя, які **самі переплавляють** здобуте; з рамбутанів — [[netherexotics:rambutan_helmet]] (похитайте головою — полетять колючки) і [[netherexotics:rambutan_shield]].
+- Пігліни інколи дають фрукти й саджанці в обмін на золото.
+> [[entity:netherexotics:moloch]] — колюча ящірка, «аксолотль Незеру»: їсть павуків, лусківниць, ендермайтів і слизнів. Його можна зловити відром. Не бийте його — він жалить.
+
+=== enderscape.md
+---
+for: biome:enderscape:celestial_grove, biome:enderscape:veiled_woodlands, biome:enderscape:corrupt_barrens, biome:enderscape:magnia_crags, structure:enderscape:end_city, structure:enderscape:mirestone_ruins, entity:enderscape:drifter, entity:enderscape:driftlet, entity:enderscape:rubblemite, entity:enderscape:rustle, enderscape:mirror, enderscape:magnia_attractor, enderscape:nebulite, enderscape:nebulite_shards, enderscape:shadoline_ingot, enderscape:raw_shadoline, enderscape:drift_leggings, enderscape:drift_jelly_bottle, enderscape:end_city_key, enderscape:end_vault, enderscape:rubble_chitin, enderscape:end_stone_rubble_shield, enderscape:flanger_berry
+keywords: enderscape, енд, нові біоми енду, небуліт, шадолін, дзеркало, магнія, дрейфун, щебінник, шурхотун, сховище енду, ключ від міста енду
+---
+# Новий Енд (Enderscape)
+Зовнішні острови Енду більше не порожні: чотири нові біоми, свої істоти, руди, музика й переосмислені міста Енду.
+
+# Біоми
+- **Небесний гай** — ліс велетенських небесних грибів-лисичок; тут живуть [[entity:enderscape:drifter]] — повільні медузи, що пливуть повітрям.
+- **Серпанкові ліси** — ліси серпанкових дерев, оповиті лозами.
+- **Осквернені пустища** — темна спотворена земля, де навіть небесні гриби псуються.
+- **Магнієві скелі** — каміння, що притягує або відштовхує метал.
+
+# Істоти
+- [[entity:enderscape:drifter]] — мирний. Клацніть по ньому порожньою пляшкою — отримаєте [[enderscape:drift_jelly_bottle]]. На дрейфуна можна стрибнути, як на батут.
+- [[entity:enderscape:rubblemite]] — ховається в панцир із каміння; з нього падає [[enderscape:rubble_chitin]].
+- [[entity:enderscape:rustle]] — маленький нешкідливий шурхотун, його можна зловити відром.
+
+# Руди й метали
+- **Небуліт:** руда дає [[enderscape:nebulite_shards]]; з уламків складається [[enderscape:nebulite]] — пальне для знарядь Енду. У жорнах Create та збагачувачі Mekanism руда дає більше; Ars Nouveau заряджає уламки в джерельні самоцвіти.
+- **Шадолін:** [[enderscape:raw_shadoline]] плавиться у [[enderscape:shadoline_ingot]]. Подрібнення в Create і збагачення в Mekanism — як для будь-якої руди.
+
+# Знаряддя
+- [[enderscape:mirror]] — клацніть ним по **магнетиту**, заправте небулітом — і дзеркало перенесе вас до магнетиту, навіть з іншого виміру, якщо його зачарувати.
+- [[enderscape:magnia_attractor]] притягує предмети здалеку.
+!recipe enderscape:magnia_attractor
+- [[enderscape:drift_leggings]] з небуліту й дрейфового желе дають частку легкості дрейфуна (дивіться підказку предмета).
+!recipe enderscape:drift_leggings
+- [[enderscape:end_stone_rubble_shield]] (і з інших каменів) — щит, з яким можна зробити ривок.
+
+# Міста Енду
+Міста Енду перебудовано: у них стоять **випробувальні породжувачі Енду**. Переможіть їхніх істот — випаде [[enderscape:end_city_key]]. Ключ відмикає [[enderscape:end_vault]]: усередині — дзеркала, небуліт, платівки, ковальський шаблон «Стазис» і візерунок прапора. На кораблі міста стоїть окреме сховище — у ньому й елітри.
+> **Трясовинні руїни** — давні споруди з трясовинного каменю в глибині островів; у їхніх скринях бувають платівки.
+
+=== end_island.md
+---
+for: entity:minecraft:ender_dragon, minecraft:end_crystal, minecraft:dragon_egg
+keywords: дракон енду, острів дракона, як викликати дракона, вежа з дзвоном, кристали енду, повторний виклик дракона, yung's better end island
+---
+# Острів дракона
+Головний острів Енду перебудовано (YUNG's Better End Island): обсидіанові колони, портал і шлюзи мають новий вигляд, а в центрі стоїть **вежа з дзвоном**.
+
+- Дракон **не чекає вас одразу**: він прилітає, коли ви наближаєтеся до вежі. Встигніть роздивитися й підготуватися.
+- Кристали на колонах лікують дракона — розбийте їх стрілами чи сніжками, а ті, що в клітках, — зблизька.
+- **Повторний виклик:** у вежі на підлозі кожного з чотирьох крил є блок корінної породи. Поставте на ці чотири блоки по [[minecraft:end_crystal]]. Старий спосіб — кристали біля порталу — теж працює.
+> Після перемоги відкриваються шлюзи до зовнішніх островів — туди, де починається Enderscape.
+
+=== spawn.md
+---
+for: entity:wilds_core:wanderer
+keywords: спавн, перехрестя, точка появи, захищена зона, заповідна земля, /spawn, мірра, хранителька перехрестя
+---
+# Перехрестя
+Усі мандрівники з'являються в одному місці — на **Перехресті**, старій ельфійській площі з арками. Команда **/spawn** повертає сюди будь-коли.
+
+- Навколо Перехрестя — **заповідна земля**: тут не можна ламати й будувати, ніхто, крім чудовиськ, не отримує шкоди, вибухи нічого не руйнують, моби не псують блоки, а ворожі істоти не з'являються. Будуйте свій дім за її межами.
+- Скрині, двері й мандрівники на Перехресті працюють для всіх.
+- Поруч із точкою появи стоїть **Мірра, хранителька Перехрестя**. Вона дає перше доручення — змайструвати верстак — і розповідає, з чого почати. Її доручення, як і всі інші, записано в книзі квестів (J), у розділі «Доручення».
+> Споруда Перехрестя — «Elven World Spawn» від Lin0o (Planet Minecraft), вписана в рельєф світу.

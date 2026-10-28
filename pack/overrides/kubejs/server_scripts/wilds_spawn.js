@@ -1,11 +1,11 @@
 // Wilds & Wanderers: protected world spawn.
-// Within 50 blocks of the world spawn (a full column, any height) players who are not operators cannot break or place
+// Within 60 blocks of the world spawn (the spawn build reaches 43, its slopes a little further) (a full column, any height) players who are not operators cannot break or place
 // blocks, pour liquids or light fires; nothing but hostile mobs takes damage (players, animals, villagers, the pack's
 // travellers), explosions leave blocks and creatures there alone, mobs cannot grief blocks, and hostile mobs do not
 // spawn. Vanilla spawn-protection stays 0: chests, doors and NPCs at the spawn keep working for everyone.
 
-const SPAWN_SAFE_RADIUS = 50
-const SPAWN_NO_MOBS_RADIUS = 50
+const SPAWN_SAFE_RADIUS = 60
+const SPAWN_NO_MOBS_RADIUS = 60
 const OVERWORLD = 'minecraft:overworld'
 
 function spawnDistanceSq(level, x, z) {

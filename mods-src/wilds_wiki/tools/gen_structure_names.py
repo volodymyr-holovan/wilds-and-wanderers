@@ -30,6 +30,15 @@ NAMES = {
     "minecraft:village_plains": "Село (рівнини)", "minecraft:village_savanna": "Село (савана)", "minecraft:village_snowy": "Село (засніжене)",
     "minecraft:village_taiga": "Село (тайга)",
     # mods with a handful of structures
+    # the Nether and the End update (28.10)
+    "incendium:abandoned_tower": "Покинута вежа", "incendium:forbidden_castle": "Заборонений замок",
+    "incendium:infernal_altar": "Пекельний вівтар", "incendium:nether_reactor": "Ядерний реактор Незеру",
+    "incendium:piglin_village": "Село піглінів", "incendium:pipeline": "Трубопровід", "incendium:quartz_kitchen": "Кварцова кухня",
+    "incendium:ruined_lab": "Покинута лабораторія", "incendium:sanctum": "Санктум",
+    "eternalnether:catacomb": "Катакомби візера", "eternalnether:citadel": "Химерна цитадель", "eternalnether:piglin_manor": "Маєток піглінів",
+    "enderscape:end_city": "Місто Енду (Enderscape)", "enderscape:mirestone_ruins": "Трясовинні руїни",
+    "enderscape:center_gateway": "Шлюз Енду", "enderscape:large_center_gateway": "Великий шлюз Енду",
+    "betterfortresses:fortress": "Незерська фортеця", "netherdepthsupgrade:nether_fortress_piece": "Уламок незерської фортеці",
     "ae2:meteorite": "Метеорит", "aether:bronze_dungeon": "Бронзове підземелля", "aether:gold_dungeon": "Золоте підземелля",
     "aether:large_aercloud": "Велика аерохмара", "aether:silver_dungeon": "Срібне підземелля",
     "alexscaves:abyssal_ruins": "Безодні руїни", "alexscaves:acid_pit": "Кислотна яма", "alexscaves:cake_cave": "Тортова печера",

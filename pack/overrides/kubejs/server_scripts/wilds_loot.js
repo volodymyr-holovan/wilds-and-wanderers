@@ -6,6 +6,8 @@
 const DUNGEONS = /^(?=.*chest)(?=.*(dungeon|crypt|tomb|grave|tower|vault|treasure|fortress|bastion|mansion|stronghold|temple|catacomb|citadel|keep|monastery|ruin|castle|prison|lair|hideout|arise)).*/
 const SEAS = /^(?=.*chest)(?=.*(ocean|shipwreck|underwater|monument|buried|coral|tidal|lily|ship|seven_seas|harbor|port|lighthouse|fisher)).*/
 const NETHER = /^(?=.*chest)(?=.*(nether|bastion|blaze|ruined_portal|piglin)).*/
+// End cities, Enderscape ruins and vaults, Cataclysm's End structures
+const END = /^(?=.*(chest|vault))(?=.*(end_city|the_end|enderscape|ender|purpur|mirestone|void)).*/
 
 LootJS.modifiers(event => {
   event.addTableModifier(LootType.CHEST)
@@ -27,4 +29,9 @@ LootJS.modifiers(event => {
     .randomChance(0.30)
     .pool(p => p.addEntry(LootEntry.reference('wilds:inject/nether')))
     .name('wilds:chests_nether')
+
+  event.addTableModifier(END)
+    .randomChance(0.35)
+    .pool(p => p.addEntry(LootEntry.reference('wilds:inject/end')))
+    .name('wilds:chests_end')
 })

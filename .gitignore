@@ -14,6 +14,8 @@
 /pack/i18n/src/
 /pack/i18n/ref/
 /pack/i18n/batches/
+# other mods' structure templates with fixed attribute names, for servers only (pack/tools/fix_structure_attributes.py)
+/pack/overrides-server/
 
 # generated and cached
 **/__pycache__/

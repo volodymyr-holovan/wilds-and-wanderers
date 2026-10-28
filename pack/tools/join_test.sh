@@ -2,11 +2,11 @@
 # Join test against the LOCAL test server: launch the client with auto-join, wait until the server log says the
 # player joined (or failed), keep the player online for STAY seconds, then report and close the client.
 # usage: join_test.sh [name] [stay_seconds]
-# env: SCENARIO=file, XMX=4G, CLIENT_JVM=-Dprop=value (one JVM argument), SIZE=1600x900, GAME_DIR=another game folder
+# env: SCENARIO=file, XMX=4G, CLIENT_JVM="-Dprop=value -Dother=value" (JVM arguments, no spaces inside one), SIZE=1600x900, GAME_DIR=another game folder
 R="/e/Minecraft Server 1.21.1"; I="${GAME_DIR:-/c/Users/ketch/Games/Wilds-and-Wanderers-1.21.1}"; LOG="$R/testserver/console.log"
 NAME="${1:-WW_Check}"; STAY="${2:-60}"
 start=$(wc -l < "$LOG")
-out=$(python -I "$R/pack/tools/launch_client.py" --game-dir "$I" --name "$NAME" --join 127.0.0.1:25570 --java "$R/_tools/java21/bin/java.exe" --xmx "${XMX:-6G}" ${CLIENT_JVM:+--jvm-arg="$CLIENT_JVM"} ${SIZE:+--size "$SIZE"})
+out=$(python -I "$R/pack/tools/launch_client.py" --game-dir "$I" --name "$NAME" --join 127.0.0.1:25570 --java "$R/_tools/java21/bin/java.exe" --xmx "${XMX:-6G}" $(for a in $CLIENT_JVM; do printf -- "--jvm-arg=%s " "$a"; done) ${SIZE:+--size "$SIZE"})
 P=${out##* }; echo "$out"
 alive() { powershell -NoProfile -Command "if (-not (Get-Process -Id $P -ErrorAction SilentlyContinue)) { exit 1 }"; }
 result=TIMEOUT

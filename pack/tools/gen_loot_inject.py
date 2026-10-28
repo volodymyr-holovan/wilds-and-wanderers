@@ -47,6 +47,19 @@ TABLES = {
         ("create:brass_ingot", 6, 1, 3), ("mekanism:ingot_refined_glowstone", 4, 1, 2), ("mekanism:ingot_refined_obsidian", 2, 1, 1),
         ("irons_spellbooks:fire_rune", 3, 1, 1), ("ars_nouveau:source_gem", 6, 2, 4), ("twilightforest:fiery_blood", 1, 1, 1),
         ("goblins_tyranny:fire_bomb", 4, 1, 3), ("minecraft:blaze_powder", 6, 2, 5), ("minecraft:magma_cream", 5, 1, 4),
+        # the Nether update (28.10): fruit of the Nether forests, lava fishing, the withered dead
+        ("netherexotics:kiwano", 4, 1, 3), ("netherexotics:rambutan", 4, 1, 3), ("netherexotics:pitaya", 3, 1, 2),
+        ("netherexotics:jabuticaba", 3, 1, 3), ("netherexotics:bouddha_s_hand", 2, 1, 2),
+        ("netherdepthsupgrade:lava_fishing_rod", 1, 1, 1), ("eternalnether:withered_bone", 4, 1, 4),
+        ("enderscape:nebulite_shards", 1, 1, 2),
+    ],
+    # the End (28.10): End cities, Enderscape ruins and anything End-themed
+    "end": [
+        ("enderscape:nebulite_shards", 8, 1, 4), ("enderscape:raw_shadoline", 6, 1, 3), ("enderscape:shadoline_ingot", 3, 1, 2),
+        ("enderscape:drift_jelly_bottle", 5, 1, 2), ("enderscape:flanger_berry", 6, 2, 5), ("enderscape:rubble_chitin", 4, 1, 3),
+        ("minecraft:ender_pearl", 8, 1, 3), ("minecraft:popped_chorus_fruit", 6, 2, 6), ("minecraft:shulker_shell", 2, 1, 1),
+        ("mekanism:ingot_refined_obsidian", 3, 1, 2), ("ars_nouveau:source_gem", 6, 2, 4), ("irons_spellbooks:ender_rune", 2, 1, 1),
+        ("waystones:warp_dust", 5, 2, 6), ("irons_spellbooks:rare_ink", 1, 1, 1),
     ],
 }
 

@@ -29,6 +29,7 @@ betterdungeons:small_dungeon
 betterdungeons:small_nether_dungeon
 betterdungeons:spider_dungeon
 betterdungeons:zombie_dungeon
+betterfortresses:fortress
 bettermineshafts:mineshaft_acacia
 bettermineshafts:mineshaft_desert
 bettermineshafts:mineshaft_dripstone
@@ -182,6 +183,13 @@ dungeons_arise_seven_seas:pirate_junk
 dungeons_arise_seven_seas:small_yacht
 dungeons_arise_seven_seas:unicorn_galleon
 dungeons_arise_seven_seas:victory_frigate
+enderscape:center_gateway
+enderscape:end_city
+enderscape:large_center_gateway
+enderscape:mirestone_ruins
+eternalnether:catacomb
+eternalnether:citadel
+eternalnether:piglin_manor
 fishofthieves:guardian_fruit_tree
 fishofthieves:seapost
 friendsandfoes:citadel
@@ -209,6 +217,15 @@ iceandfire:lightning_dragon_roost
 iceandfire:mausoleum
 iceandfire:pixie_village
 iceandfire:siren_island
+incendium:abandoned_tower
+incendium:forbidden_castle
+incendium:infernal_altar
+incendium:nether_reactor
+incendium:piglin_village
+incendium:pipeline
+incendium:quartz_kitchen
+incendium:ruined_lab
+incendium:sanctum
 irons_spellbooks:ancient_battleground
 irons_spellbooks:catacombs
 irons_spellbooks:citadel
@@ -430,6 +447,7 @@ mvs:well
 mvs:wheat_grain_bin
 mvs:windmill
 mvs:wooden_wheat_farm
+netherdepthsupgrade:nether_fortress_piece
 nova_structures:badlands_miner_outpost
 nova_structures:bunker
 nova_structures:conduit_ruin

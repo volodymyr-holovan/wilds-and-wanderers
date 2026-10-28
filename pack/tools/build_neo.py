@@ -88,6 +88,12 @@ MODRINTH = {
     "lootjs": "server", "morejs": "both",
     # faster chunk generation on a weak server
     "lithium": "both", "noisiumforked": "server", "c2me-neoforge": "server",
+    # --- the Nether and the End (28.10): Nether biomes, castles and weapons (Incendium), manors, citadel and new mobs
+    # (Eternal Nether), rebuilt fortresses, lava fishing, Nether fruit; the End with four biomes, mobs, structures and
+    # music (Enderscape) and a new dragon island ---
+    "incendium": "both", "eternal-nether": "both", "yungs-better-nether-fortresses": "server",
+    "nether-depths-upgrade": "both", "nethers-exoticism": "both",
+    "enderscape": "both", "yungs-better-end-island": "server",
     # --- optional for stronger PCs ---
     "distanthorizons": "client", "iris": "client",
 }

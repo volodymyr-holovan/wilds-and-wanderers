@@ -169,7 +169,8 @@ public final class Dialogue {
         sessions.put(p.getUUID(), new Session(npc));
         npc.setTalking(true);
         npc.getLookControl().setLookAt(p);
-        all(p).putBoolean("@met", true);
+        // the greeter at the spawn does not count: the first village a player finds still always has a giver
+        if (!npc.questKey().equals("spawn_greeter")) all(p).putBoolean("@met", true);
         Quests.tutorial(p, "talk_npc");
         main(p, true);
     }

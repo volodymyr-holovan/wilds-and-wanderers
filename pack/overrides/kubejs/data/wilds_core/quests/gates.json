@@ -135,6 +135,10 @@
   "gate": "64A2C1C192811B50",
   "quest": "118B6A678B33FDCF"
  },
+ "fisher_of_fire": {
+  "gate": "386E6AE4EBEE441C",
+  "quest": "10C6B480D72A6D90"
+ },
  "fox_and_chickens": {
   "gate": "29BC3975BE8C0813",
   "quest": "5C3BB6FF2C8487B5"
@@ -162,6 +166,10 @@
  "iron_golem_friend": {
   "gate": "70FDEE2E1D50EDA5",
   "quest": "3CE7724F11BD29E1"
+ },
+ "kiwano_for_the_burned": {
+  "gate": "4AA53735D401CF8A",
+  "quest": "2A60F49A771295A2"
  },
  "lich_tower": {
   "gate": "1262AEA77BCB5895",
@@ -214,6 +222,10 @@
  "naga_scales": {
   "gate": "132C4AF0A4E35B7A",
   "quest": "179A7F98C194B097"
+ },
+ "nebulite_for_the_mirror": {
+  "gate": "6CCD3E2DA6DAF986",
+  "quest": "3D1FA2A4F0016CCB"
  },
  "oo_circuits": {
   "gate": "247BD2D658E04A53",
@@ -307,6 +319,10 @@
   "gate": "1099241061D2A9F4",
   "quest": "6C2223F4311DCF8E"
  },
+ "spawn_greeter": {
+  "gate": "25B780C81C507DEC",
+  "quest": "1356C4778974BDDC"
+ },
  "stolen_bells": {
   "gate": "3C15D16943C95214",
   "quest": "1A80E0B75FE45763"
@@ -342,6 +358,10 @@
  "wandering_preacher": {
   "gate": "120BB2862BC3FBD3",
   "quest": "16BF35D0C86DB3DE"
+ },
+ "warped_hunt": {
+  "gate": "2FD79A1E365F8863",
+  "quest": "368C8EAA1FF395BB"
  },
  "watchtower_signal": {
   "gate": "3D2928726EDA0090",

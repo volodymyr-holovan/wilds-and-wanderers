@@ -26,7 +26,8 @@ import java.util.List;
 public final class PhotoMode {
     public static final String LIST = System.getProperty("wilds_wiki.photos");
     public static final boolean ON = LIST != null;
-    static final int W = 480, H = 270;
+    // the wiki's pictures are 480x270; -Dwilds_wiki.photos.width=1280 takes bigger ones (16:9) for looking at a place
+    static final int W = Integer.getInteger("wilds_wiki.photos.width", 480), H = W * 9 / 16;
 
     private static List<JsonObject> shots;
     private static Path out;
