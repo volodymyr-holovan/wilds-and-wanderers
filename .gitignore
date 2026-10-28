@@ -1,8 +1,9 @@
 # Only the pack's own work is published: everything else (mods, servers, worlds, tools with passwords, the Java
-# runtime, logs, the work journal) stays on this computer.
+# runtime, logs) stays on this computer. The work journal (ПРОГРЕС.md) and the Crafty deploy helpers are published.
 /*
 !/.gitignore
 !/README.md
+!/ПРОГРЕС.md
 !/pack/
 !/mods-src/
 !/docs/
@@ -24,6 +25,3 @@
 *.jar
 *.log
 
-# deploy helpers for the owner's own server panel
-/pack/tools/crafty_helpers.js
-/pack/tools/cors_serve.py
