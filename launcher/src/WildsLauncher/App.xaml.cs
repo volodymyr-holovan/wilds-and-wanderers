@@ -14,6 +14,8 @@ namespace Wilds.Launcher
     ///   --root DIR          everything (.minecraft, game folder, data) inside DIR, nothing of this computer used
     ///   --source DIR|URL    where config/manifest/presets come from (default: the GitHub repository)
     ///   --deep              re-check every file's hash
+    ///   --minecraft-dir DIR the Minecraft folder (instead of the one chosen in the window)
+    ///   --uninstall         remove the pack (with --dry: only list what would go)
     ///   --screenshot FILE   (window) save a picture of the window once it is ready, then close
     /// </summary>
     public partial class App : Application
@@ -32,6 +34,9 @@ namespace Wilds.Launcher
             Args = e.Args;
             string root = Option("--root"), gameDir = Option("--game-dir");
             Paths = root != null ? Core.Paths.ForRoot(root) : Core.Paths.Default();
+            // the Minecraft folder the player chose (standard when none): --minecraft-dir overrides it for the pack's tests
+            string chosen = Option("--minecraft-dir") ?? Settings.Load(Paths.SettingsFile).MinecraftDir;
+            if (!string.IsNullOrWhiteSpace(chosen)) Paths = Paths.WithMinecraftDir(chosen);
             if (gameDir != null) Paths = Paths.WithGameDir(gameDir);
             Source = Option("--source");
             Log.Init(Paths.DataDir);
@@ -103,6 +108,14 @@ namespace Wilds.Launcher
             using (var engine = new Engine(Paths, Source))
             {
                 await engine.Load(CancellationToken.None);
+                if (Has("--uninstall"))
+                {
+                    var plan = engine.PlanUninstall();
+                    Log.Info("Видалення збірки: " + plan);
+                    foreach (string path in plan.Remove) Log.Info("  - " + path);
+                    if (!Has("--dry")) engine.Uninstall(plan);
+                    return 0;
+                }
                 var reporter = new ConsoleProgress();
                 await engine.Prepare(Has("--deep"), Icon(), reporter, CancellationToken.None);
                 Log.Info($"Готово: збірка {engine.Manifest.Version}, пресет «{engine.CurrentPreset.Name}», пам'ять {engine.MemoryGb} ГБ");

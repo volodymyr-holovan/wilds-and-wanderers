@@ -1,7 +1,7 @@
 <Window x:Class="Wilds.Launcher.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Wilds &amp; Wanderers" Width="1040" Height="640" MinWidth="1040" MinHeight="640"
+        Title="Wilds &amp; Wanderers" Width="1040" Height="690" MinWidth="1040" MinHeight="690"
         WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" WindowStyle="None"
         Background="#0B1013" Icon="Assets/icon.png" UseLayoutRounding="True" TextOptions.TextFormattingMode="Display">
     <WindowChrome.WindowChrome>
@@ -82,9 +82,19 @@
                                 <Button x:Name="VerifyButton" Style="{StaticResource LinkButton}" Content="⟳  Перевірити всі файли" Click="OnVerify" IsEnabled="False"
                                         ToolTip="Звірити кожен файл збірки й завантажити пошкоджені чи відсутні" />
                                 <Button Style="{StaticResource LinkButton}" Content="📁  Відкрити теку гри" Click="OnOpenFolder"
-                                        ToolTip="Тека .minecraft: світи, знімки екрана, налаштування й моди" />
+                                        ToolTip="Тека Minecraft: світи, знімки екрана, налаштування й моди" />
+                                <Button x:Name="UninstallButton" Style="{StaticResource LinkButton}" Content="🗑  Видалити збірку…" Click="OnUninstall" IsEnabled="False"
+                                        ToolTip="Прибрати збірку й усе, що створили її моди. Ваші світи, знімки екрана й налаштування гри залишаться" />
                             </StackPanel>
                         </StackPanel>
+                        <DockPanel Margin="0,14,40,0" LastChildFill="True">
+                            <TextBlock DockPanel.Dock="Left" Text="Тека Minecraft:" FontSize="12" Foreground="{StaticResource Faint}" VerticalAlignment="Center" Margin="0,0,8,0" />
+                            <Button x:Name="ResetFolderButton" DockPanel.Dock="Right" Style="{StaticResource LinkButton}" Content="Стандартна" FontSize="12" Click="OnResetFolder"
+                                    ToolTip="Повернути стандартну теку %APPDATA%\.minecraft" />
+                            <Button x:Name="FolderButton" DockPanel.Dock="Right" Style="{StaticResource LinkButton}" Content="Змінити…" FontSize="12" Click="OnChangeFolder"
+                                    ToolTip="Якщо ваш лаунчер працює з іншою текою Minecraft — вкажіть її" />
+                            <TextBlock x:Name="FolderText" FontSize="12" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+                        </DockPanel>
                     </StackPanel>
                 </Grid>
 

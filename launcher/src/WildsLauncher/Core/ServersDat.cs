@@ -43,6 +43,29 @@ namespace Wilds.Launcher.Core
             else File.Move(tmp, file);
         }
 
+        /// <summary>removing the pack: its servers leave the list (the player's own entries stay)</summary>
+        public static void Remove(string file, IReadOnlyList<ServerEntry> servers)
+        {
+            if (!File.Exists(file) || servers.Count == 0) return;
+            try
+            {
+                var root = Read(file);
+                if (!(root.Get("servers") is Nbt.List list)) return;
+                var pack = new HashSet<string>(servers.Select(s => Normal(s.Address)), StringComparer.OrdinalIgnoreCase);
+                int removed = list.Items.RemoveAll(o => o is Nbt.Compound c && pack.Contains(Normal(c.Get("ip") as string)));
+                if (removed == 0) return;
+                string tmp = file + ".tmp";
+                using (var w = new BinaryWriter(File.Create(tmp)))
+                    Nbt.WriteRoot(w, root);
+                File.Replace(tmp, file, null);
+                Log.Info($"Сервер збірки прибрано зі списку серверів ({removed})");
+            }
+            catch (Exception e) when (e is IOException || e is InvalidDataException || e is EndOfStreamException)
+            {
+                Log.Warn("servers.dat не змінено: " + e.Message);
+            }
+        }
+
         private static string Normal(string address)
         {
             address = (address ?? "").Trim().ToLowerInvariant();

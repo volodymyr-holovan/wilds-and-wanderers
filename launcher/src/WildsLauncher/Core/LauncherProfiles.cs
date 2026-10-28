@@ -65,6 +65,29 @@ namespace Wilds.Launcher.Core
             }
         }
 
+        /// <summary>removing the pack: its installation goes from the official launcher (the rest of the file stays)</summary>
+        public static void Remove(string minecraftDir)
+        {
+            foreach (string name in FileNames)
+            {
+                string file = Path.Combine(minecraftDir, name);
+                if (!File.Exists(file)) continue;
+                try
+                {
+                    var root = Json.ParseObject(File.ReadAllText(file, Encoding.UTF8));
+                    if (Json.Obj(root, "profiles") is Dictionary<string, object> profiles && profiles.Remove(Key))
+                    {
+                        Files.WriteAtomic(file, Json.Write(root));
+                        Log.Info("Установку прибрано з " + name);
+                    }
+                }
+                catch (Exception e) when (e is IOException || e is FormatException || e is ArgumentException || e is InvalidOperationException)
+                {
+                    Log.Warn($"{name} не змінено: {e.Message}");
+                }
+            }
+        }
+
         /// <summary>G1 tuned for a big modpack: short pauses, little stutter while chunks and mods allocate</summary>
         public static string JvmArgs(int memoryGb) =>
             $"-Xmx{memoryGb}G -Xms{Math.Max(2, memoryGb / 2)}G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 " +

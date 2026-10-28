@@ -13,8 +13,8 @@
     "Чотири пресети графіки; на «Високих» і «Максимальних» — шейдери Complementary."
   ],
   "updater": {
-    "version": "1.1.0",
-    "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/app-v1.1.0/WildsAndWanderers.exe",
-    "sha256": "5cb4134c6f164cbe86db4c25160ce880882417a8b319fd4467f7aed533ff16e5"
+    "version": "1.2.0",
+    "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/app-v1.2.0/WildsAndWanderers.exe",
+    "sha256": "103dc4a413acb16a5e4358d7b0b46ae5847fe92d6516e5d994a4b45196912261"
   }
 }

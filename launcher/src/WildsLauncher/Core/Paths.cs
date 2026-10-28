@@ -51,6 +51,17 @@ namespace Wilds.Launcher.Core
             };
         }
 
+        /// <summary>a Minecraft folder somewhere else (the player chose it): versions, libraries and the game all go there</summary>
+        public Paths WithMinecraftDir(string dir)
+        {
+            var p = (Paths)MemberwiseClone();
+            p.MinecraftDir = p.GameDir = Path.GetFullPath(dir);
+            return p;
+        }
+
+        public static string StandardMinecraftDir() =>
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".minecraft");
+
         public Paths WithGameDir(string dir)
         {
             var p = (Paths)MemberwiseClone();

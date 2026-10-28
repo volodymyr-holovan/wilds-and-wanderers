@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Wilds.Launcher.Core
 {
-    /// <summary>The player's choices in this program: the graphics preset and the memory for the game.</summary>
+    /// <summary>The player's choices in this program: the graphics preset, the memory for the game, the Minecraft folder.</summary>
     public sealed class Settings
     {
         public string Preset;
+        /// <summary>null: the standard %APPDATA%\.minecraft</summary>
+        public string MinecraftDir;
         /// <summary>0: chosen from the computer's memory</summary>
         public int MemoryGb;
 
@@ -21,6 +24,7 @@ namespace Wilds.Launcher.Core
                 var d = Json.ParseObject(File.ReadAllText(file, Encoding.UTF8));
                 s.Preset = Json.Str(d, "preset");
                 s.MemoryGb = (int)Json.Long(d, "memory_gb");
+                s.MinecraftDir = Json.Str(d, "minecraft_dir");
             }
             catch (Exception e)
             {
@@ -31,7 +35,7 @@ namespace Wilds.Launcher.Core
 
         public void Save(string file)
         {
-            var d = new Dictionary<string, object> { ["preset"] = Preset, ["memory_gb"] = MemoryGb };
+            var d = new Dictionary<string, object> { ["preset"] = Preset, ["memory_gb"] = MemoryGb, ["minecraft_dir"] = MinecraftDir };
             Files.WriteAtomic(file, Json.Write(d));
         }
     }
@@ -52,6 +56,10 @@ namespace Wilds.Launcher.Core
         public string PackVersion;
         public string AppliedPreset;
         public string AppliedMemory;
+        /// <summary>the program installed NeoForge itself (so removing the pack removes it too)</summary>
+        public bool NeoForgeByPack;
+        /// <summary>what the game folder and its config/ held before the pack's first install (never removed with the pack); null: unknown</summary>
+        public List<string> Preexisting;
         public Dictionary<string, Known> Files = new Dictionary<string, Known>(StringComparer.OrdinalIgnoreCase);
 
         public bool Installed => PackVersion != null;
@@ -66,6 +74,8 @@ namespace Wilds.Launcher.Core
                 s.PackVersion = Json.Str(d, "pack_version");
                 s.AppliedPreset = Json.Str(d, "applied_preset");
                 s.AppliedMemory = Json.Str(d, "applied_memory");
+                s.NeoForgeByPack = Json.Bool(d, "neoforge_by_pack");
+                if (d.ContainsKey("preexisting")) s.Preexisting = Json.Arr(d, "preexisting").Select(o => o as string).Where(o => o != null).ToList();
                 var files = Json.Obj(d, "files");
                 if (files != null)
                 {
@@ -94,6 +104,8 @@ namespace Wilds.Launcher.Core
                 ["pack_version"] = PackVersion,
                 ["applied_preset"] = AppliedPreset,
                 ["applied_memory"] = AppliedMemory,
+                ["neoforge_by_pack"] = NeoForgeByPack,
+                ["preexisting"] = Preexisting,
                 ["files"] = files,
             };
             Directory.CreateDirectory(Path.GetDirectoryName(file));

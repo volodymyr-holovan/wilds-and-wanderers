@@ -107,6 +107,12 @@ namespace Wilds.Launcher.Core
                 throw new InvalidOperationException("Гра зі збіркою зараз запущена. Закрийте її, щоб оновити файли.");
             progress?.Report(new Status(deep ? "Перевірка всіх файлів…" : "Перевірка файлів…"));
             Directory.CreateDirectory(Paths.GameDir);
+            if (!State.Installed && State.Preexisting == null)
+            {
+                // what the folder held before the pack: removing the pack never touches it
+                State.Preexisting = Uninstaller.Snapshot(Paths);
+                State.Save(Paths.StateFile);
+            }
             if (!Paths.Isolated || Directory.Exists(Paths.LegacyGameDir))
             {
                 int worlds = SharedMinecraft.MigrateLegacy(Paths, Manifest);
@@ -124,7 +130,12 @@ namespace Wilds.Launcher.Core
                 State.Save(Paths.StateFile);   // what did arrive is remembered, a retry fetches only the rest
             }
 
-            if (!NeoForge.IsInstalled(Paths, Manifest)) await NeoForge.Install(Paths, Manifest, Net, progress, ct).ConfigureAwait(false);
+            if (!NeoForge.IsInstalled(Paths, Manifest))
+            {
+                await NeoForge.Install(Paths, Manifest, Net, progress, ct).ConfigureAwait(false);
+                State.NeoForgeByPack = true;
+                State.Save(Paths.StateFile);
+            }
             SharedMinecraft.EnsureVersion(Paths, Manifest);
 
             progress?.Report(new Status("Налаштування профілю й списку серверів…"));
@@ -165,6 +176,16 @@ namespace Wilds.Launcher.Core
                 }
             }
             return false;
+        }
+
+        public UninstallPlan PlanUninstall() => Uninstaller.Plan(Paths, Manifest, State);
+
+        /// <summary>removes the pack (see <see cref="Uninstaller"/>); afterwards the folder is as if it was never installed</summary>
+        public void Uninstall(UninstallPlan plan)
+        {
+            if (GameRunning()) throw new InvalidOperationException("Гра зі збіркою зараз запущена. Закрийте її, щоб видалити збірку.");
+            Uninstaller.Apply(plan, Paths, Config);
+            State = new InstallState();
         }
 
         public void SaveSettings() => Settings.Save(Paths.SettingsFile);
