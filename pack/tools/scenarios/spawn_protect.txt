@@ -1,3 +1,5 @@
+setworldspawn 8 72 -2
+tp {p} 8 72 -2
 data get entity {p} Health
 damage {p} 6 minecraft:generic
 data get entity {p} Health
@@ -5,7 +7,16 @@ execute at {p} run setblock ~3 ~ ~ minecraft:stone
 execute at {p} run summon minecraft:tnt ~3 ~1 ~ {fuse:1}
 execute at {p} if block ~3 ~ ~ minecraft:stone
 data get entity {p} Health
-execute at {p} run tp {p} ~200 ~ ~
-execute at {p} run spreadplayers ~ ~ 0 1 false {p}
+execute at {p} run summon minecraft:cow ~2 ~ ~2 {Tags:["ww_test"]}
+execute at {p} run summon minecraft:zombie ~-2 ~ ~-2 {Tags:["ww_test"],NoAI:1b}
+damage @e[type=minecraft:cow,tag=ww_test,limit=1] 50 minecraft:generic
+damage @e[type=minecraft:zombie,tag=ww_test,limit=1] 50 minecraft:generic
+execute if entity @e[type=minecraft:cow,tag=ww_test]
+execute if entity @e[type=minecraft:zombie,tag=ww_test]
+kill @e[tag=ww_test]
+spreadplayers 55 -2 0 1 false {p}
+damage {p} 2 minecraft:generic
+data get entity {p} Health
+spreadplayers 62 -2 0 1 false {p}
 damage {p} 2 minecraft:generic
 data get entity {p} Health

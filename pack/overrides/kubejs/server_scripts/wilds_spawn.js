@@ -1,11 +1,11 @@
 // Wilds & Wanderers: protected world spawn.
-// Within 20 blocks of the world spawn (a full column, any height) players who are not operators cannot break or place
-// blocks, pour liquids or light fires, nobody takes damage, and explosions leave blocks and players there alone.
-// Hostile mobs do not spawn within 5 blocks of it. Vanilla spawn-protection stays 0: chests, doors and NPCs at the
-// spawn keep working for everyone.
+// Within 50 blocks of the world spawn (a full column, any height) players who are not operators cannot break or place
+// blocks, pour liquids or light fires; nothing but hostile mobs takes damage (players, animals, villagers, the pack's
+// travellers), explosions leave blocks and creatures there alone, mobs cannot grief blocks, and hostile mobs do not
+// spawn. Vanilla spawn-protection stays 0: chests, doors and NPCs at the spawn keep working for everyone.
 
-const SPAWN_SAFE_RADIUS = 20
-const SPAWN_NO_MOBS_RADIUS = 5
+const SPAWN_SAFE_RADIUS = 50
+const SPAWN_NO_MOBS_RADIUS = 50
 const OVERWORLD = 'minecraft:overworld'
 
 function spawnDistanceSq(level, x, z) {
@@ -54,9 +54,10 @@ BlockEvents.rightClicked(event => {
   }
 })
 
-// no damage at all in the zone (damage that ignores invulnerability, like /kill and the void, still applies)
+// no damage in the zone to anything but hostile mobs (one that wanders in can still be fought); damage that ignores
+// invulnerability, like /kill and the void, still applies
 const BYPASSES_INVULNERABILITY = Java.loadClass('net.minecraft.tags.DamageTypeTags').BYPASSES_INVULNERABILITY
-let safeDamage = (entity, source) => entity.isPlayer() && inSafeZone(entity.level, entity.x, entity.z)
+let safeDamage = (entity, source) => entity.isLiving() && !entity.isMonster() && inSafeZone(entity.level, entity.x, entity.z)
   && !source.is(BYPASSES_INVULNERABILITY)
 try {
   // an error thrown in a native listener is not caught by KubeJS and would crash the server: catch everything here
@@ -79,7 +80,7 @@ LevelEvents.afterExplosion(event => {
   // collect first, then remove: the lists are views of the explosion
   let blocks = [], players = []
   for (let b of event.getAffectedBlocks()) if (inSafeZone(level, b.x, b.z)) blocks.push(b)
-  for (let e of event.getAffectedEntities()) if (e.isPlayer() && inSafeZone(level, e.x, e.z)) players.push(e)
+  for (let e of event.getAffectedEntities()) if (e.isLiving() && !e.isMonster() && inSafeZone(level, e.x, e.z)) players.push(e)
   blocks.forEach(b => event.removeAffectedBlock(b))
   players.forEach(e => event.removeAffectedEntity(e))
 })
@@ -91,3 +92,17 @@ EntityEvents.checkSpawn(event => {
     event.cancel()
   }
 })
+
+// mobs do not grief blocks in the zone (endermen taking blocks, ravagers trampling leaves, withers, rabbits on crops...)
+try {
+  NativeEvents.onEvent(Java.loadClass('net.neoforged.neoforge.event.entity.EntityMobGriefingEvent'), e => {
+    try {
+      let mob = e.entity
+      if (mob && inSafeZone(mob.level, mob.x, mob.z)) e.setCanGrief(false)
+    } catch (err) {
+      console.error('wilds_spawn: griefing check failed: ' + err)
+    }
+  })
+} catch (err) {
+  console.warn('wilds_spawn: mob griefing event unavailable: ' + err)
+}

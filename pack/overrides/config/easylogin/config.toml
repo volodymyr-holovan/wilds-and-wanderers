@@ -4,7 +4,7 @@
 
 [general]
 # Seconds until unauthenticated player is kicked
-loginTimeout = 120
+loginTimeout = 60
 # Seconds between action bar reminders
 reminderInterval = 10
 # Allow /logout command
