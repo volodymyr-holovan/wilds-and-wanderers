@@ -6,7 +6,8 @@ using System.Text;
 namespace Wilds.Launcher.Core
 {
     /// <summary>
-    /// The pack's installation in the official launcher: NeoForge, the pack's own game folder, the memory for the game.
+    /// The pack's installation in the official launcher: the pack's version and the memory for the game (other launchers
+    /// find the version in .minecraft/versions by themselves).
     /// Everything else in the file (the player's other installations, their settings) is left as it is.
     /// </summary>
     public static class LauncherProfiles
@@ -51,15 +52,16 @@ namespace Wilds.Launcher.Core
                 if (!profile.ContainsKey("created")) profile["created"] = now;
                 profile["name"] = packName;
                 profile["type"] = "custom";
-                profile["lastVersionId"] = m.VersionId;
-                profile["gameDir"] = p.GameDir;
+                profile["lastVersionId"] = SharedMinecraft.VersionId;
+                // the shared .minecraft, like every other launcher (version 1.0 of this program gave it a folder of its own)
+                profile.Remove("gameDir");
                 profile["javaArgs"] = JvmArgs(memoryGb);
                 // most recently used: the launcher offers it first
                 profile["lastUsed"] = now;
                 if (iconPng != null) profile["icon"] = "data:image/png;base64," + Convert.ToBase64String(iconPng);
                 profiles[Key] = profile;
                 Files.WriteAtomic(file, Json.Write(root));
-                Log.Info($"Профіль «{packName}» у {name}: {m.VersionId}, {memoryGb} ГБ");
+                Log.Info($"Профіль «{packName}» у {name}: {SharedMinecraft.VersionId}, {memoryGb} ГБ");
             }
         }
 

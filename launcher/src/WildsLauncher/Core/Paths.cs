@@ -4,15 +4,18 @@ using System.IO;
 namespace Wilds.Launcher.Core
 {
     /// <summary>
-    /// Where things live. The official launcher keeps versions and libraries in .minecraft; the pack has a game folder of
-    /// its own (mods, configs, worlds, settings), which its launcher profile points to; this program keeps its settings,
-    /// downloads and log in LocalAppData.
+    /// Where things live. Everything the game needs goes into the standard .minecraft: NeoForge and the pack's own version
+    /// into versions/ and libraries/, mods and configs into the game folder, which is .minecraft itself, so the version
+    /// works in any launcher that reads .minecraft (the official one, TLauncher, Legacy Launcher...), most of which cannot
+    /// give a version a folder of its own. This program keeps its settings, downloads and log in LocalAppData.
     /// </summary>
     public sealed class Paths
     {
         public string MinecraftDir { get; private set; }
         public string GameDir { get; private set; }
         public string DataDir { get; private set; }
+        /// <summary>where version 1.0 of this program put the game (its own folder): worlds and mods are moved over from it</summary>
+        public string LegacyGameDir { get; private set; }
         /// <summary>a test root: nothing outside it is looked at (no Java of the system, no launcher of the system)</summary>
         public bool Isolated { get; private set; }
 
@@ -29,8 +32,9 @@ namespace Wilds.Launcher.Core
             return new Paths
             {
                 MinecraftDir = Path.Combine(roaming, ".minecraft"),
-                GameDir = Path.Combine(roaming, ".wilds-and-wanderers"),
+                GameDir = Path.Combine(roaming, ".minecraft"),
                 DataDir = Path.Combine(local, "WildsAndWanderers"),
+                LegacyGameDir = Path.Combine(roaming, ".wilds-and-wanderers"),
             };
         }
 
@@ -40,8 +44,9 @@ namespace Wilds.Launcher.Core
             return new Paths
             {
                 MinecraftDir = Path.Combine(root, ".minecraft"),
-                GameDir = Path.Combine(root, "game"),
+                GameDir = Path.Combine(root, ".minecraft"),
                 DataDir = Path.Combine(root, "data"),
+                LegacyGameDir = Path.Combine(root, "game"),
                 Isolated = true,
             };
         }

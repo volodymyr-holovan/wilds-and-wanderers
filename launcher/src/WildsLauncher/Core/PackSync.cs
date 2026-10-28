@@ -29,8 +29,9 @@ namespace Wilds.Launcher.Core
         public readonly List<FileEntry> Overrides = new List<FileEntry>();
         public readonly List<FileEntry> Initial = new List<FileEntry>();
         public readonly List<string> MoveAside = new List<string>();
+        public FileEntry MergeOptions;
 
-        public bool Empty => Mods.Count + Shaders.Count + Overrides.Count + Initial.Count + MoveAside.Count == 0;
+        public bool Empty => Mods.Count + Shaders.Count + Overrides.Count + Initial.Count + MoveAside.Count == 0 && MergeOptions == null;
 
         public long DownloadBytes => Mods.Concat(Shaders).Sum(f => f.Size);
 
@@ -44,7 +45,7 @@ namespace Wilds.Launcher.Core
         private const string Mods = "mods/";
         private const string ShaderPacks = "shaderpacks/";
 
-        public static SyncPlan Plan(Manifest m, Paths p, InstallState st, bool deep)
+        public static SyncPlan Plan(Manifest m, Paths p, InstallState st, bool deep, bool firstInstall)
         {
             var plan = new SyncPlan();
             var wanted = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -65,10 +66,13 @@ namespace Wilds.Launcher.Core
                 wanted.Add(f.Path);
                 if (st.HashOf(f.Path, p.InGame(f.Path), deep) != f.Sha1) plan.Overrides.Add(f);
             }
-            // the player's own settings: placed once, then theirs
+            // the player's own settings: placed once, then theirs. In a .minecraft that was in use before, the game's
+            // settings file is already there: on the first install the pack's keys it lacks (key bindings of the pack's
+            // mods, the language) go into it, the rest stays the player's
             foreach (var f in m.Initial)
             {
                 if (!File.Exists(p.InGame(f.Path))) plan.Initial.Add(f);
+                else if (firstInstall && f.Path == "options.txt") plan.MergeOptions = f;
             }
 
             var aside = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -84,15 +88,6 @@ namespace Wilds.Launcher.Core
                 string full = p.InGame(rel);
                 if (File.Exists(full)) aside.Add(full);
                 else st.Files.Remove(rel);
-            }
-            // mods the pack does not have (an old copy, another version of one of its mods): the server would refuse them
-            string modsDir = p.InGame("mods");
-            if (Directory.Exists(modsDir))
-            {
-                foreach (string jar in Directory.GetFiles(modsDir, "*.jar"))
-                {
-                    if (!wanted.Contains(Mods + Path.GetFileName(jar))) aside.Add(jar);
-                }
             }
             plan.MoveAside.AddRange(aside.OrderBy(s => s, StringComparer.OrdinalIgnoreCase));
             return plan;
@@ -146,7 +141,7 @@ namespace Wilds.Launcher.Core
                 Log.Info($"Завантажено {downloads.Count} файлів, {Mb(total)}");
             }
 
-            if (plan.Overrides.Count + plan.Initial.Count > 0)
+            if (plan.Overrides.Count + plan.Initial.Count > 0 || plan.MergeOptions != null)
             {
                 progress?.Report(new Status("Завантаження налаштувань збірки…"));
                 string zip = Path.Combine(p.CacheDir, "overrides-" + m.Version + ".zip");
@@ -161,6 +156,7 @@ namespace Wilds.Launcher.Core
                         Extract(archive, "overrides/" + f.Path, f, p, st, true);
                     }
                     foreach (var f in plan.Initial) Extract(archive, "initial/" + f.Path, f, p, st, false);
+                    if (plan.MergeOptions != null) MergeOptions(archive, plan.MergeOptions, p);
                 }
                 Log.Info($"Налаштувань оновлено: {plan.Overrides.Count}, нових особистих: {plan.Initial.Count}");
                 // older archives are no longer needed
@@ -175,6 +171,36 @@ namespace Wilds.Launcher.Core
                     }
                 }
             }
+        }
+
+        /// <summary>the pack's options.txt into the player's: keys the player lacks are added, and the language becomes the pack's</summary>
+        private static void MergeOptions(ZipArchive archive, FileEntry f, Paths p)
+        {
+            var entry = archive.GetEntry("initial/" + f.Path) ?? throw new InvalidDataException("В архіві налаштувань немає " + f.Path);
+            string full = p.InGame(f.Path);
+            var mine = File.ReadAllLines(full, System.Text.Encoding.UTF8).ToList();
+            var have = new HashSet<string>(mine.Select(l => l.Split(':')[0]));
+            List<string> pack;
+            using (var r = new StreamReader(entry.Open(), System.Text.Encoding.UTF8))
+                pack = r.ReadToEnd().Split('\n').Select(l => l.TrimEnd('\r')).Where(l => l.Contains(":")).ToList();
+            int added = 0;
+            foreach (string line in pack)
+            {
+                string key = line.Split(':')[0];
+                if (key == "version") continue;
+                if (key == "lang")
+                {
+                    int i = mine.FindIndex(l => l.StartsWith("lang:"));
+                    if (i >= 0) mine[i] = line;
+                    else mine.Add(line);
+                    continue;
+                }
+                if (have.Contains(key)) continue;
+                mine.Add(line);
+                added++;
+            }
+            Files.WriteAtomic(full, string.Join("\n", mine) + "\n");
+            Log.Info($"Налаштування гри доповнено ключами збірки: {added}, мова — українська");
         }
 
         private static void Extract(ZipArchive archive, string entryName, FileEntry f, Paths p, InstallState st, bool record)

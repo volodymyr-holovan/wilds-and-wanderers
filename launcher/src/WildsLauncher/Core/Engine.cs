@@ -91,11 +91,14 @@ namespace Wilds.Launcher.Core
 
         public int MemoryGb => Settings.MemoryGb > 0 ? Settings.MemoryGb : GameStarter.RecommendedMemoryGb(GameStarter.TotalMemoryGb());
 
-        public SyncPlan Plan(bool deep) => PackSync.Plan(Manifest, Paths, State, deep);
+        public SyncPlan Plan(bool deep) => PackSync.Plan(Manifest, Paths, State, deep, !State.Installed);
+
+        /// <summary>after Prepare: where mods of something else went (null: there were none)</summary>
+        public string ArchivedMods { get; private set; }
 
         /// <summary>is there anything to do before the game can start</summary>
         public bool NeedsWork(SyncPlan plan) =>
-            !plan.Empty || State.PackVersion != Manifest.Version || !NeoForge.IsInstalled(Paths, Manifest)
+            !plan.Empty || State.PackVersion != Manifest.Version || !NeoForge.IsInstalled(Paths, Manifest) || !File.Exists(SharedMinecraft.VersionFile(Paths))
             || State.AppliedPreset != CurrentPreset.Id || State.AppliedMemory != MemoryGb.ToString();
 
         public async Task Prepare(bool deep, byte[] icon, IProgress<Status> progress, CancellationToken ct)
@@ -103,6 +106,13 @@ namespace Wilds.Launcher.Core
             if (GameRunning())
                 throw new InvalidOperationException("Гра зі збіркою зараз запущена. Закрийте її, щоб оновити файли.");
             progress?.Report(new Status(deep ? "Перевірка всіх файлів…" : "Перевірка файлів…"));
+            Directory.CreateDirectory(Paths.GameDir);
+            if (!Paths.Isolated || Directory.Exists(Paths.LegacyGameDir))
+            {
+                int worlds = SharedMinecraft.MigrateLegacy(Paths, Manifest);
+                if (worlds >= 0) progress?.Report(new Status($"Перенесено з попередньої теки збірки: світів {worlds}"));
+            }
+            ArchivedMods = SharedMinecraft.ArchiveForeignMods(Paths, Manifest, State) ?? ArchivedMods;
             var plan = await Task.Run(() => Plan(deep), ct).ConfigureAwait(false);
             Log.Info("План оновлення: " + plan);
             try
@@ -115,6 +125,7 @@ namespace Wilds.Launcher.Core
             }
 
             if (!NeoForge.IsInstalled(Paths, Manifest)) await NeoForge.Install(Paths, Manifest, Net, progress, ct).ConfigureAwait(false);
+            SharedMinecraft.EnsureVersion(Paths, Manifest);
 
             progress?.Report(new Status("Налаштування профілю й списку серверів…"));
             LauncherProfiles.Ensure(Paths, Manifest, Config.PackName, MemoryGb, icon);

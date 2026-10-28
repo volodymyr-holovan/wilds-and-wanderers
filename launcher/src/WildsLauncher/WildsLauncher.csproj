@@ -9,8 +9,8 @@
     <RootNamespace>Wilds.Launcher</RootNamespace>
     <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Version>1.0.0</Version>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.1.0</Version>
+    <FileVersion>1.1.0.0</FileVersion>
     <Product>Wilds &amp; Wanderers</Product>
     <AssemblyTitle>Wilds &amp; Wanderers — встановлення й оновлення збірки</AssemblyTitle>
     <Description>Встановлює й оновлює збірку Wilds &amp; Wanderers для офіційного лаунчера Minecraft</Description>

@@ -14,7 +14,6 @@ namespace Wilds.Launcher
     ///   --root DIR          everything (.minecraft, game folder, data) inside DIR, nothing of this computer used
     ///   --source DIR|URL    where config/manifest/presets come from (default: the GitHub repository)
     ///   --deep              re-check every file's hash
-    ///   --launch            start the official launcher afterwards
     ///   --screenshot FILE   (window) save a picture of the window once it is ready, then close
     /// </summary>
     public partial class App : Application
@@ -107,7 +106,6 @@ namespace Wilds.Launcher
                 var reporter = new ConsoleProgress();
                 await engine.Prepare(Has("--deep"), Icon(), reporter, CancellationToken.None);
                 Log.Info($"Готово: збірка {engine.Manifest.Version}, пресет «{engine.CurrentPreset.Name}», пам'ять {engine.MemoryGb} ГБ");
-                if (Has("--launch") && !GameStarter.StartOfficialLauncher()) return 3;
                 return 0;
             }
         }

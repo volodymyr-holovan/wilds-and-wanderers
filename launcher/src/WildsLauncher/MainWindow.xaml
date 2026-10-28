@@ -82,7 +82,7 @@
                                 <Button x:Name="VerifyButton" Style="{StaticResource LinkButton}" Content="⟳  Перевірити всі файли" Click="OnVerify" IsEnabled="False"
                                         ToolTip="Звірити кожен файл збірки й завантажити пошкоджені чи відсутні" />
                                 <Button Style="{StaticResource LinkButton}" Content="📁  Відкрити теку гри" Click="OnOpenFolder"
-                                        ToolTip="Тека зі світами, знімками екрана, налаштуваннями й модами" />
+                                        ToolTip="Тека .minecraft: світи, знімки екрана, налаштування й моди" />
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -114,7 +114,7 @@
             <DockPanel Grid.Row="2" Margin="56,0,26,10" LastChildFill="False">
                 <TextBlock x:Name="VersionText" FontSize="12" Foreground="{StaticResource Faint}" VerticalAlignment="Center" DockPanel.Dock="Left" />
                 <TextBlock DockPanel.Dock="Right" FontSize="12" Foreground="{StaticResource Faint}" VerticalAlignment="Center"
-                           Text="Входьте у грі через свій акаунт Minecraft" />
+                           Text="Грайте у своєму лаунчері: версія «Wilds-and-Wanderers»" />
             </DockPanel>
         </Grid>
     </Grid>

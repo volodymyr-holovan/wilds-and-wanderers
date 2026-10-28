@@ -115,32 +115,40 @@ namespace Wilds.Launcher
             UpdateMemoryText();
         }
 
-        /// <summary>what the button says: install, update or play</summary>
+        /// <summary>what the button says: install, update, apply, or that all is in place</summary>
         private async Task Refresh()
         {
             ShowStatus("Перевірка файлів…");
             var plan = await Task.Run(() => engine.Plan(false));
             bool firstTime = !engine.State.Installed;
             bool work = engine.NeedsWork(plan);
-            PlayButton.Content = firstTime ? "ВСТАНОВИТИ" : work ? "ОНОВИТИ Й ГРАТИ" : "ГРАТИ";
+            PlayButton.Content = firstTime ? "ВСТАНОВИТИ" : !plan.Empty || engine.State.PackVersion != engine.Manifest.Version ? "ОНОВИТИ"
+                : work ? "ЗАСТОСУВАТИ" : "ГОТОВО ✓";
             if (firstTime)
-                ShowStatus($"Збірку ще не встановлено. Буде завантажено ~{PackSync.Mb(plan.DownloadBytes)} модів, NeoForge і Minecraft {engine.Manifest.Minecraft}.");
+                ShowStatus($"Збірку ще не встановлено. Буде завантажено ~{PackSync.Mb(plan.DownloadBytes)} модів, NeoForge і Minecraft {engine.Manifest.Minecraft}. " +
+                           "Якщо в теці модів уже щось лежить, її буде збережено під іншою назвою.");
             else if (!plan.Empty)
                 ShowStatus($"Є оновлення збірки {engine.Manifest.Version}: {plan}" + (plan.DownloadBytes > 0 ? $", ~{PackSync.Mb(plan.DownloadBytes)}." : "."));
             else if (engine.Offline)
-                ShowStatus("Немає зв'язку з GitHub: оновлення перевірити не вдалося, гра запуститься з тим, що вже є.");
+                ShowStatus("Немає зв'язку з GitHub: оновлення перевірити не вдалося. Встановлена збірка працює як є.");
             else
-                ShowStatus("Усе актуально. Гарної гри!");
+                ShowStatus(Ready());
             Bar.IsIndeterminate = false;
-            Bar.Value = firstTime || work ? 0 : 1;
+            Bar.Value = work ? 0 : 1;
             ready = true;
         }
 
-        private async void OnPlay(object sender, RoutedEventArgs e) => await Run(false, true);
+        /// <summary>what the player does next: no launcher is opened, the version is in theirs</summary>
+        private string Ready() =>
+            $"Усе встановлено й актуально. Відкрийте свій лаунчер Minecraft і оберіть версію «{SharedMinecraft.VersionId}» " +
+            $"(в офіційному — установку «{engine.Config.PackName}»). Сервер уже є в списку серверів гри. " +
+            $"У TLauncher та подібних виставте в налаштуваннях лаунчера пам'ять {engine.MemoryGb} ГБ.";
 
-        private async void OnVerify(object sender, RoutedEventArgs e) => await Run(true, false);
+        private async void OnPlay(object sender, RoutedEventArgs e) => await Run(false);
 
-        private async Task Run(bool deep, bool launch)
+        private async void OnVerify(object sender, RoutedEventArgs e) => await Run(true);
+
+        private async Task Run(bool deep)
         {
             if (busy || !ready) return;
             SetBusy(true);
@@ -153,29 +161,11 @@ namespace Wilds.Launcher
             try
             {
                 await Task.Run(() => engine.Prepare(deep, App.Icon(), progress, cancel.Token));
-                PlayButton.Content = "ГРАТИ";
+                PlayButton.Content = "ГОТОВО ✓";
                 Bar.IsIndeterminate = false;
                 Bar.Value = 1;
-                if (!launch)
-                {
-                    ShowStatus("Усі файли перевірено й справні.");
-                    return;
-                }
-                if (GameStarter.StartOfficialLauncher())
-                {
-                    ShowStatus("Лаунчер Minecraft відкривається. Увійдіть у свій акаунт, оберіть установку «" + engine.Config.PackName +
-                               "» і натисніть «Грати». Сервер уже є в списку серверів гри.");
-                    WindowState = WindowState.Minimized;
-                }
-                else
-                {
-                    ShowStatus("Збірку готово, але лаунчер Minecraft не знайдено.");
-                    if (MessageBox.Show(this, "Збірку встановлено, але на комп'ютері немає офіційного лаунчера Minecraft.\n\n" +
-                                              "Встановіть його з minecraft.net, увійдіть у свій акаунт — установка «" + engine.Config.PackName +
-                                              "» з'явиться в ньому сама.\n\nВідкрити сторінку завантаження?",
-                            "Wilds & Wanderers", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
-                        GameStarter.OpenDownloadPage();
-                }
+                string archived = engine.ArchivedMods == null ? "" : $" Моди, що лежали в теці mods раніше, збережено в теці {engine.ArchivedMods}.";
+                ShowStatus((deep ? "Усі файли перевірено й справні. " : "Готово! ") + Ready() + archived);
             }
             catch (OperationCanceledException)
             {
@@ -197,8 +187,8 @@ namespace Wilds.Launcher
             engine.SaveSettings();
             if (ready && !busy && engine.State.Installed)
             {
-                PlayButton.Content = engine.State.AppliedPreset == id ? "ГРАТИ" : "ЗАСТОСУВАТИ Й ГРАТИ";
-                ShowStatus("Пресет «" + engine.CurrentPreset.Name + "» застосується під час запуску. Окремі налаштування можна змінити в самій грі — вони збережуться.");
+                PlayButton.Content = engine.State.AppliedPreset == id ? "ГОТОВО ✓" : "ЗАСТОСУВАТИ";
+                ShowStatus("Натисніть «Застосувати», щоб увімкнути пресет «" + engine.CurrentPreset.Name + "». Окремі налаштування можна змінити в самій грі — вони збережуться.");
             }
         }
 
@@ -209,7 +199,7 @@ namespace Wilds.Launcher
             engine.Settings.MemoryGb = gb == GameStarter.RecommendedMemoryGb(GameStarter.TotalMemoryGb()) ? 0 : gb;
             engine.SaveSettings();
             UpdateMemoryText();
-            if (ready && !busy && engine.State.Installed && engine.State.AppliedMemory != engine.MemoryGb.ToString()) PlayButton.Content = "ЗАСТОСУВАТИ Й ГРАТИ";
+            if (ready && !busy && engine.State.Installed && engine.State.AppliedMemory != engine.MemoryGb.ToString()) PlayButton.Content = "ЗАСТОСУВАТИ";
         }
 
         private void UpdateMemoryText() => MemoryText.Text = (int)Math.Round(MemorySlider.Value) + " ГБ";
