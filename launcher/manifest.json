@@ -1,5 +1,5 @@
 {
- "version": "2026.10.28.2",
+ "version": "2026.10.28.3",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -865,13 +865,13 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.2/wilds_core-0.1.0.jar",
-   "sha1": "b9181d5f469c4960bfec97f715db367c5a97d3fa",
-   "size": 191240
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.3/wilds_core-0.1.0.jar",
+   "sha1": "353725bafcae368cb9e91f711f7e51fa64e26818",
+   "size": 193193
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.2/wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.3/wilds_wiki-0.2.0.jar",
    "sha1": "f6fa3b6a09d152703537211e3bc39e15df1c9ace",
    "size": 799575
   },
@@ -915,9 +915,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.2/overrides.zip",
-   "sha1": "a2362f6bbc28c9769f86ea87001bc11850ea7daf",
-   "size": 772638
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.3/overrides.zip",
+   "sha1": "9763e4a2164245b9257055035668d51c3a1f0a9b",
+   "size": 772832
   },
   "overrides": [
    {
@@ -952,8 +952,8 @@
    },
    {
     "path": "config/easylogin/config.toml",
-    "sha1": "75c366044a75a2e059281f5a7f3275bc531ccb9d",
-    "size": 4261
+    "sha1": "1757975b36bff616727ca6568d30a2f77d0a75fa",
+    "size": 4260
    },
    {
     "path": "config/fallingtree.json",
@@ -2867,8 +2867,8 @@
    },
    {
     "path": "kubejs/server_scripts/wilds_spawn.js",
-    "sha1": "7e5e5965475fbe1cc64e774a39f048944e495659",
-    "size": 3618
+    "sha1": "a2f7a7d03834b5fd8f808491f4e47acdcc776c51",
+    "size": 4350
    },
    {
     "path": "kubejs/server_scripts/wilds_trades.js",
