@@ -1,5 +1,5 @@
 {
- "version": "2026.10.28.4",
+ "version": "2026.10.29.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -907,15 +907,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.4/wilds_core-0.1.0.jar",
-   "sha1": "99c3d0d1e9cba25fe435d28115c2900f888e0062",
-   "size": 193216
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.29.1/wilds_core-0.1.0.jar",
+   "sha1": "b364a8a58b00244447d2dea1f79e5a930f8ae3ee",
+   "size": 208275
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.4/wilds_wiki-0.2.0.jar",
-   "sha1": "251e6834d907e2ef4dede64c7cb5b0c07ccc4771",
-   "size": 813524
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.29.1/wilds_wiki-0.2.0.jar",
+   "sha1": "f584445f89969ad9565504b68cd68491d0361bb6",
+   "size": 826487
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -963,9 +963,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.28.4/overrides.zip",
-   "sha1": "e5939b41f4d53801a30a4524f9375932d7166f76",
-   "size": 816765
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.29.1/overrides.zip",
+   "sha1": "07b9f7777f608116d6139ea324ec3f5c3e8cd26b",
+   "size": 28135788
   },
   "overrides": [
    {
@@ -987,6 +987,11 @@
     "path": "config/almostunified/unification/materials.json",
     "sha1": "2c804e22615de25be7403df65a83f040f45f13d2",
     "size": 926
+   },
+   {
+    "path": "config/better-advanced-tooltips-client.toml",
+    "sha1": "861a97fabdadaf9454e951026de71ab52dc5f767",
+    "size": 233
    },
    {
     "path": "config/chunky/config.json",
@@ -1857,6 +1862,11 @@
     "path": "kubejs/assets/wilds/sidebar_buttons/skills.json",
     "sha1": "92e89c1a30b83bdaf87d702f9e7f1540d00bd6fc",
     "size": 268
+   },
+   {
+    "path": "kubejs/assets/wilds/textures/gui/skilltree.png",
+    "sha1": "d404d2125464a567b4165697cce23c84f9809ccf",
+    "size": 4897619
    },
    {
     "path": "kubejs/assets/xaerobetterpvp/lang/uk_ua.json",
@@ -2895,33 +2905,33 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/category.json",
-    "sha1": "5a0553e53b3b64a05ce5ae326fc4ed74e17bbd34",
-    "size": 633
+    "sha1": "17a92d53e2f66efae24abcf35f137e7c22fe5b31",
+    "size": 1193
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/connections.json",
-    "sha1": "54968892222b6815df5af27b9b532036a8806b7e",
-    "size": 15019
+    "sha1": "6058a681caf224ba55ada00289a5c6b3f97d7d83",
+    "size": 15657
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/definitions.json",
-    "sha1": "19272da63bb45aa78f1f04a89117b2531e4ec5b5",
-    "size": 107867
+    "sha1": "624f9587ad6297d0dbb3a7b73f6a0de7e6f0fdfa",
+    "size": 103221
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/experience.json",
-    "sha1": "1bb2ac855c95a8292cb50f5e9f1dfabddbf86bd3",
-    "size": 1849
+    "sha1": "de709b66ded56bfb7f3251fd16ccb795d1b4e1e9",
+    "size": 1745
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/skills.json",
-    "sha1": "41dc5f8db89a67c3c38d1b6f5fe0c73ef5431faa",
+    "sha1": "baa356046769da16fc6ad238f8ffe2c398f09f41",
     "size": 23471
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/config.json",
-    "sha1": "93aa1db8421a9e6371b9b0baef0431bd6813ce38",
-    "size": 52
+    "sha1": "a44671e71fb772f28c7a4cfc601d05b7e5487897",
+    "size": 47
    },
    {
     "path": "kubejs/data/wilds_core/npc_quests/all.json",
@@ -2982,6 +2992,56 @@
     "path": "kubejs/server_scripts/wilds_trades.js",
     "sha1": "6dddb5ac460c8e6297923934e6c02587120a1a7a",
     "size": 5172
+   },
+   {
+    "path": "resourcepacks/WildsMusic/ReactiveMusic.yaml",
+    "sha1": "a20ca202c47990e7169a931d1e794629c83486fe",
+    "size": 7543
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-AchaidhCheide.mp3",
+    "sha1": "2bacc7951d459bb18dc4a02810d4e460e28b860a",
+    "size": 2342263
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-FiveArmies.mp3",
+    "sha1": "878c8d151082edcf4aa2ba99ae30384020115ac8",
+    "size": 2494423
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-HeroicAge.mp3",
+    "sha1": "2a0a29abb07f45ba0205821d8cd4e09d528c6fe1",
+    "size": 1560284
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-MasteroftheFeast.mp3",
+    "sha1": "86e23923f08ba38afb858e7427943df21488e200",
+    "size": 3653006
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-MinstrelGuild.mp3",
+    "sha1": "9bd22cd3cf5c7d5f4a09aafb5fb934462e610720",
+    "size": 2973822
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-SuonatorediLiuto.mp3",
+    "sha1": "d9c87e98ec17e8ba4611b12782a1f4188d8fdd50",
+    "size": 2312611
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-TelleroftheTales.mp3",
+    "sha1": "43ba49b8f8ca343fe94623d3fee7ae76f3b8555d",
+    "size": 3398887
+   },
+   {
+    "path": "resourcepacks/WildsMusic/music/KM-ThatchedVillagers.mp3",
+    "sha1": "277a677895c354b3aec26bf78334ca9d4831a764",
+    "size": 3923843
+   },
+   {
+    "path": "resourcepacks/WildsMusic/pack.mcmeta",
+    "sha1": "ccdda74d99358ef2ad2631d76704b4264dc0eec1",
+    "size": 79
    }
   ],
   "initial": [
