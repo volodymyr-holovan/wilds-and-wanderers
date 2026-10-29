@@ -211,8 +211,14 @@ public final class Elements {
             }
             int color = kind == Kind.MUTED ? Theme.MUTED : Theme.TEXT;
             for (FormattedCharSequence line : lines) {
-                g.drawString(p.font(), line, tx, ty, color, false);
                 String link = linkAt(p, line, tx, ty);
+                if (link != null) {
+                    // the link under the mouse lights up and the pointer turns into a hand
+                    int[] r = range(p, line, link);
+                    if (r != null) g.fill(tx + r[0] - 1, ty - 1, tx + r[1] + 1, ty + 9, 0x50E8B04A);
+                    p.hoverLink();
+                }
+                g.drawString(p.font(), line, tx, ty, color, false);
                 if (link != null) {
                     var e = p.data().entries.get(link.substring(RichText.LINK.length()));
                     if (e != null) {
@@ -225,6 +231,22 @@ public final class Elements {
                 }
                 ty += 10;
             }
+        }
+
+        /** where on the line (from, to in pixels) the text of this link is */
+        static int[] range(Page p, FormattedCharSequence line, String link) {
+            int[] r = {-1, -1};
+            int[] x = {0};
+            line.accept((index, style, cp) -> {
+                int w = p.font().width(FormattedCharSequence.forward(new String(Character.toChars(cp)), style));
+                if (link.equals(style.getInsertion())) {
+                    if (r[0] < 0) r[0] = x[0];
+                    r[1] = x[0] + w;
+                }
+                x[0] += w;
+                return true;
+            });
+            return r[0] < 0 ? null : r;
         }
 
         static String linkAt(Page p, FormattedCharSequence line, int x, int y) {

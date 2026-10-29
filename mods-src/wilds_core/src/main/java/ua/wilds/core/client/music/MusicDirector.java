@@ -39,7 +39,11 @@ import java.util.Set;
  * (Reactive Music falls silent through its mute list); every other boss gets its own theme from assets/wilds_core/music/bosses.json,
  * and a boss without one gets Reactive Music's boss songs;</li>
  * <li><b>combat</b>: the player hit a living thing, or got hurt with an enemy or a projectile near, in the last 8 seconds,
- * or an enemy close by is attacking. Reactive Music plays its combat entry then.</li>
+ * or an enemy close by is attacking and no other player is closer to it. Reactive Music plays its combat entry then.</li>
+ * </ul>
+ * Each player's music is their own: a fight of a friend standing near starts nothing for this player (a mob after the
+ * friend is closer to the friend), a boss fighting someone else is not this player's boss fight.
+ * <ul>
  * </ul>
  * All of it is client-side and works for any mod: no server support needed.
  */
@@ -137,12 +141,12 @@ public final class MusicDirector {
         for (LivingEntity e : near) {
             if (e == player) continue;
             double d = e.distanceToSqr(player);
-            if (isBoss(e) && (bars || engaged(e))) {
+            if (isBoss(e) && engaged(e, player, bars)) {
                 if (d < bestDist) {
                     best = e;
                     bestDist = d;
                 }
-            } else if (e instanceof Enemy && e instanceof Mob m && m.isAggressive() && d < ENEMY_RANGE * ENEMY_RANGE) {
+            } else if (e instanceof Enemy && e instanceof Mob m && m.isAggressive() && d < ENEMY_RANGE * ENEMY_RANGE && huntsMe(m, player)) {
                 lastCombat = tick;
             }
         }
@@ -155,8 +159,26 @@ public final class MusicDirector {
         }
     }
 
-    private static boolean engaged(LivingEntity e) {
-        return (e instanceof Mob m && m.isAggressive()) || (e == lastTarget && tick - lastTargetHit < 600);
+    /**
+     * this player's fight with the boss: they hit it lately, or it is after them (aggressive or showing its bar, and no
+     * other player nearer to it). A boss fighting a friend farther off is the friend's fight, not this player's.
+     */
+    private static boolean engaged(LivingEntity e, LocalPlayer me, boolean bars) {
+        if (e == lastTarget && tick - lastTargetHit < 600) return true;
+        boolean active = bars || (e instanceof Mob m && m.isAggressive());
+        return active && huntsMe(e, me);
+    }
+
+    /**
+     * the client cannot see a mob's target; "after me" is read as: no other player is closer to it. So a monster attacking
+     * a friend next to this player plays the fight music for the friend, not for everyone around.
+     */
+    private static boolean huntsMe(LivingEntity mob, LocalPlayer me) {
+        double mine = mob.distanceToSqr(me);
+        for (var other : me.clientLevel.players()) {
+            if (other != me && !other.isSpectator() && other.isAlive() && other.distanceToSqr(mob) + 4 < mine) return false;
+        }
+        return true;
     }
 
     private static boolean isBoss(LivingEntity e) {

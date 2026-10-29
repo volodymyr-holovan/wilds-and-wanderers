@@ -1,8 +1,8 @@
 name: "Wilds & Wanderers"
 description: "Музика для кожного краю світу, без пауз, з бойовою музикою для босів."
-version: "1.0"
+version: "1.1"
 author: "Wilds & Wanderers"
-credits: "Music by Vindsvept, Adrian von Ziegler and Mufaya, from the Reactive Music mod's built-in pack."
+credits: "Music by Vindsvept, Adrian von Ziegler and Mufaya, from the Reactive Music mod's built-in pack. KM-* tracks: Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)."
 
 # no silence between songs; a short crossfade when the place or the situation changes
 musicDelayLength: NONE
@@ -22,7 +22,7 @@ entries:
   - events: [ "BOSS" ]
     forceStopMusicOnChanged: true
     forceStartMusicOnValid: true
-    songs: [ "LastStand", "Ruthless", "WildfireP1", "WildfireP2", "Mufaya-DarkAscension", "CrannNaBeatha" ]
+    songs: [ "LastStand", "Ruthless", "WildfireP1", "WildfireP2", "Mufaya-DarkAscension", "CrannNaBeatha", "KM-FiveArmies" ]
 
   - events: [ "DYING" ]
     forceStopMusicOnChanged: true
@@ -34,7 +34,7 @@ entries:
   - events: [ "NEARBY_MOBS" ]
     forceStopMusicOnChanged: true
     forceStartMusicOnValid: true
-    songs: [ "ForTheKing", "UnsungHeroes", "Deliverance", "Freedom", "IntoTheUnknown" ]
+    songs: [ "ForTheKing", "UnsungHeroes", "Deliverance", "Freedom", "IntoTheUnknown", "KM-HeroicAge", "KM-FiveArmies" ]
 
   # --- other worlds ---
   - events: [ "DIM=NETHER", "BLOCK=nether_bricks,1000", "BLOCK=nether_brick_fence,2" ]
@@ -77,11 +77,11 @@ entries:
     songs: [ "WintersNight" ]
 
   - events: [ "HOME" ]
-    songs: [ "KeeperOfTheForest", "CastleInTheSky", "CircleOfLife" ]
+    songs: [ "KeeperOfTheForest", "CastleInTheSky", "CircleOfLife", "KM-SuonatorediLiuto", "KM-TelleroftheTales" ]
 
   - events: [ "VILLAGE" ]
     forceStopMusicOnChanged: true
-    songs: [ "KingdomOfBards", "NightAtTheEolian", "CircleOfLife", "WhereIBelong" ]
+    songs: [ "KingdomOfBards", "NightAtTheEolian", "CircleOfLife", "WhereIBelong", "KM-ThatchedVillagers", "KM-MasteroftheFeast", "KM-MinstrelGuild" ]
 
   # --- dawn and dusk everywhere in the Overworld ---
   - events: [ "DIM=OVERWORLD", "SUNSET" ]
@@ -141,15 +141,15 @@ entries:
 
   - events: [ "biometag=taiga" ]
     forceStopMusicOnChanged: true
-    songs: [ "CelticLore", "Alpha", "NightAtTheEolian", "OdeToTheFallen" ]
+    songs: [ "CelticLore", "Alpha", "NightAtTheEolian", "OdeToTheFallen", "KM-AchaidhCheide" ]
 
   - events: [ "biometag=forest" ]
     forceStopMusicOnChanged: true
-    songs: [ "KeeperOfTheForest", "WoodlandTales", "SacredEarth", "BreathOfTheForest", "CelticLore" ]
+    songs: [ "KeeperOfTheForest", "WoodlandTales", "SacredEarth", "BreathOfTheForest", "CelticLore", "KM-AchaidhCheide", "KM-TelleroftheTales" ]
 
   - events: [ "biometag=plains" ]
     forceStopMusicOnChanged: true
-    songs: [ "Wanderer", "WandererP2", "SpringMorning", "WhereIBelong", "KingdomOfBards", "ACelticTale" ]
+    songs: [ "Wanderer", "WandererP2", "SpringMorning", "WhereIBelong", "KingdomOfBards", "ACelticTale", "KM-ThatchedVillagers", "KM-SuonatorediLiuto" ]
 
   # --- anything else: by the time of day ---
   - events: [ "RAIN" ]
@@ -158,7 +158,8 @@ entries:
   - events: [ "DAY" ]
     songs: [ "ACelticTale", "Alpha", "BeautifulDreams", "CelticLore", "Deliverance", "IntoTheUnknown", "KingdomOfBards",
              "NeverToReturn", "OdeToTheFallen", "Reverie", "SacredEarth", "WoodlandTales", "WhereIBelong", "WhatLiesBeyond",
-             "Wanderer", "UnsungHeroes", "Mirrormere", "NightAtTheEolian", "LastLight", "WandererP2", "SpringMorning", "FairyTale" ]
+             "Wanderer", "UnsungHeroes", "Mirrormere", "NightAtTheEolian", "LastLight", "WandererP2", "SpringMorning", "FairyTale",
+             "KM-AchaidhCheide", "KM-TelleroftheTales", "KM-MinstrelGuild", "KM-SuonatorediLiuto", "KM-ThatchedVillagers" ]
 
   - events: [ "NIGHT" ]
     songs: [ "IntoSilenceP1", "Moonsong", "CrystalForest", "Storm", "Alvae", "CelticLore", "FallOfTheLeaf", "IntoSilenceP2",

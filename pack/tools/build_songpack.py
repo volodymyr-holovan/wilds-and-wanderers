@@ -3,13 +3,13 @@
   python build_songpack.py <game dir>
 
 The tracks come from the Reactive Music jar in <game dir>/mods (the artists' music it ships), the song rules from
-pack/music/ReactiveMusic.yaml. Every song the YAML names must exist. The songpack is made active in
+pack/overrides/resourcepacks/WildsMusic/ReactiveMusic.yaml (it ships with the pack; Wilds Core copies the borrowed songs in the game, see MusicPack.java). Every song the YAML names must exist. The songpack is made active in
 config/ReactiveMusic.json5 (no delay between songs, the pack's own switch speed).
 """
 import glob, json, os, re, sys, zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-YAML = os.path.join(HERE, "..", "music", "ReactiveMusic.yaml")
+YAML = os.path.join(HERE, "..", "overrides", "resourcepacks", "WildsMusic", "ReactiveMusic.yaml")
 game = sys.argv[1]
 jar = glob.glob(os.path.join(game, "mods", "reactivemusic-*.jar"))
 if not jar:

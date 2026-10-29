@@ -29,4 +29,7 @@ public interface Page {
 
     /** called when the element under the mouse wants its JEI overlay drawn at the end of the frame */
     void overlay(Runnable r);
+
+    /** a link is under the mouse: the screen shows a hand pointer */
+    default void hoverLink() {}
 }

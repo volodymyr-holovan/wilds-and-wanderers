@@ -3,7 +3,9 @@ them as "minecraft:generic.armor" / "minecraft:player.block_break_speed" and log
 mob such a structure places, which then keeps its default armour, speed and range. This writes corrected copies of
 those templates into pack/overrides-server/kubejs/data (KubeJS data wins over the mod's own). Templates saved with Forge 1.20 still carry
 "forge:entity_gravity" / "forge:step_height_addition", attributes NeoForge 1.21 dropped (their defaults are the vanilla
-ones): those entries are removed. Run again after updating any mod with structures, so no stale copy stays behind.
+ones): those entries are removed, as is any attribute this server does not have (docs/registries/attribute.txt, e.g.
+Caelus's "caelus:fall_flying" from Forge times). Items saved as "minecraft:air" in a mob's hands or armour become empty
+slots. Run again after updating any mod with structures, so no stale copy stays behind.
 
   python pack/tools/fix_structure_attributes.py
 """
@@ -28,10 +30,31 @@ def old_name(v):
     return f"minecraft:{'player' if a in PLAYER else 'generic'}.{a}"
 
 
+REG = os.path.join(ROOT, "docs", "registries", "attribute.txt")
+# the attributes this server has (pack/tools/dump_registries.sh); an entry naming any other is dropped
+ATTRS = set(open(REG, encoding="utf-8").read().split()) if os.path.exists(REG) else set()
+
+
+def known(entry):
+    name = str(entry.get("id", entry.get("Name", "")))
+    if name.startswith("forge:"):
+        return False
+    return not ATTRS or (old_name(name) or name) in ATTRS
+
+
+def is_air(v):
+    """an item saved as "minecraft:air": 1.21 wants an empty slot written as nothing ("Item must not be minecraft:air")"""
+    return isinstance(v, nbtlib.Compound) and str(v.get("id", "")) == "minecraft:air"
+
+
 def fix(tag, in_attributes=False):
     changed = 0
     if isinstance(tag, nbtlib.Compound):
         for k, v in list(tag.items()):
+            if is_air(v) and k != "Block":
+                del tag[k]
+                changed += 1
+                continue
             if in_attributes and k in ("id", "Name") and isinstance(v, nbtlib.String):
                 new = old_name(str(v))
                 if new:
@@ -41,12 +64,16 @@ def fix(tag, in_attributes=False):
                 changed += fix(v, k in ("attributes", "Attributes"))
     elif isinstance(tag, nbtlib.List):
         if in_attributes:
-            keep = [v for v in tag if not (isinstance(v, nbtlib.Compound)
-                                           and str(v.get("id", v.get("Name", ""))).startswith("forge:"))]
+            keep = [v for v in tag if not isinstance(v, nbtlib.Compound) or known(v)]
             if len(keep) != len(tag):
                 changed += len(tag) - len(keep)
                 del tag[:]
                 tag.extend(keep)
+        # hand and armour slots keep their places: an air item becomes an empty compound there
+        for i, v in enumerate(tag):
+            if is_air(v):
+                tag[i] = nbtlib.Compound()
+                changed += 1
         for v in tag:
             changed += fix(v, in_attributes)
     return changed
@@ -69,7 +96,8 @@ def main():
                     raw = gzip.decompress(raw)
                 except gzip.BadGzipFile:
                     pass                      # a few templates are stored uncompressed
-                if b"ttributes" not in raw:   # nothing with attributes in it: leave the mod's file alone
+                # nothing with attributes or a mob's equipment in it: leave the mod's file alone
+                if b"ttributes" not in raw and b"HandItems" not in raw and b"ArmorItems" not in raw:
                     continue
                 try:
                     f = nbtlib.File.parse(io.BytesIO(raw))

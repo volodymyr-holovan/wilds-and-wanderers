@@ -20,7 +20,8 @@ import java.lang.reflect.Method;
  * has the inventory, armour, crafting grid and the player. So the inventory key opens that screen right away instead
  * of the vanilla inventory, and everything one wears is visible without another tab. Beside it, each with its own
  * button and open together if the player likes: the vanilla recipe book ({@link RecipeBookPanel}) and the attributes
- * panel ({@link AttributesPanel}); see {@link #layout}. Creative mode keeps the vanilla screens.
+ * panel ({@link AttributesPanel}), and the player's effects ({@link EffectsPanel}); see {@link #layout}. Creative mode
+ * keeps the vanilla screens.
  * <p>
  * The screen's layout options are Accessories' own and are kept per player in the world (so they stay as the player
  * leaves them). Once per world the pack sets its defaults: every slot visible in {@link #COLUMNS} columns without
@@ -94,10 +95,17 @@ public final class GearScreens {
     }
 
     /**
-     * Every frame, before the screen draws: the recipe book left of the screen's content, the attributes panel right of
-     * it, the whole row centred; the content moves aside for them. A screen too narrow for all three gets a narrower
-     * attributes panel with smaller letters, never overlapping windows. Positions come from the screen's real layout, so a
-     * bigger crafting grid or other columns of slots move everything along.
+     * Every frame, before the screen draws, the pack's windows around the screen's content (the equipment, inventory,
+     * crafting grid and player, as Accessories lays them out):
+     * <pre>
+     *   [recipe book] [content] [effects]
+     *                 [attributes]
+     * </pre>
+     * the whole block centred, the content moved to its place. Every size comes from the screen's real layout, so a
+     * mod that adds rows to the inventory or a bigger crafting grid moves everything along. A screen without room gives
+     * way step by step, never with windows over each other: the effects become small squares, then a row above the
+     * content; the attributes go beside the content when there is no room under it, and get smaller letters or give way
+     * when there is no room there either.
      */
     public static void onRender(ScreenEvent.Render.Pre e) {
         if (!isGearScreen(e.getScreen())) return;
@@ -105,28 +113,88 @@ public final class GearScreens {
         GearLayout.poseBefore(e.getScreen(), e.getMouseX(), e.getMouseY());
     }
 
+    private static final int GAP = 3, MARGIN = 2;
+
     static void layout(Screen s) {
         if (!(s instanceof AbstractContainerScreen<?> c)) return;
         GearLayout.tidy(s);
         int[] content = GearLayout.content(s);
         if (content == null) return;
-        int gap = 3, cw = content[2] - content[0];
+        Minecraft mc = Minecraft.getInstance();
+        int cw = content[2] - content[0], ch = content[3] - content[1];
+        int effects = EffectsPanel.visible(mc.player).size();
         boolean book = RecipeBookPanel.open(), attrs = AttributesPanel.shown();
-        int bw = book ? RecipeBookPanel.TABS + RecipeBookPanel.W + gap : 0;
-        int aw = attrs ? Math.min(AttributesPanel.naturalWidth(), s.width - 4 - bw - cw - gap) : 0;
-        int total = bw + cw + (attrs ? gap + aw : 0);
-        int left = Math.max(2, (s.width - total) / 2);
-        int contentLeft = left + bw;
-        GearLayout.moveContentTo(s, contentLeft);
+        int bw = book ? RecipeBookPanel.TABS + RecipeBookPanel.W + GAP : 0;
 
-        RecipeBookPanel.place(s, left + RecipeBookPanel.TABS);
-        GearLayout.standIn(s, "book", left, RecipeBookPanel.top(s), book ? RecipeBookPanel.TABS + RecipeBookPanel.W : 0, RecipeBookPanel.H);
-        int ax = contentLeft + cw + gap, ay = content[1], ah = content[3] - content[1];
-        aw = Math.min(aw, s.width - 2 - ax);
-        // too narrow even for small letters (a huge GUI scale): the attributes give way rather than cover the rest
-        if (aw < 48) aw = 0;
-        AttributesPanel.place(ax, ay, attrs ? aw : 0, ah);
-        GearLayout.standIn(s, "attributes", ax, ay, attrs ? aw : 0, ah);
+        // the effects: a column right of the content, wide or small, or (no room at all) a row above it
+        int spare = s.width - 2 * MARGIN - bw - cw;
+        EffectsPanel.Mode fxMode = effects == 0 ? EffectsPanel.Mode.NONE
+                : spare >= EffectsPanel.WIDE + GAP ? EffectsPanel.Mode.WIDE
+                : spare >= EffectsPanel.SMALL + GAP ? EffectsPanel.Mode.SMALL : EffectsPanel.Mode.ROW;
+        int ew = fxMode == EffectsPanel.Mode.WIDE ? EffectsPanel.WIDE + GAP : fxMode == EffectsPanel.Mode.SMALL ? EffectsPanel.SMALL + GAP : 0;
+        // a row of effects goes above the content only when that leaves the content whole; else into the screen's top
+        // right corner, over nothing of the screen's (JEI moves away from it)
+        boolean rowAbove = fxMode == EffectsPanel.Mode.ROW && s.height - 2 * MARGIN - ch >= EffectsPanel.ROW_ICON + GAP;
+        int rowH = rowAbove ? EffectsPanel.ROW_ICON + GAP : 0;
+
+        // the attributes: under the content and the effects, or beside them, wherever more lines fit; on a screen with
+        // room for neither, over the content like a window of its own (the button or a click elsewhere closes it)
+        int below = s.height - 2 * MARGIN - ch - rowH - GAP;
+        int underW = cw + ew - (ew > 0 ? GAP : 0);
+        int sideW = Math.min(AttributesPanel.naturalWidth(), s.width - 2 * MARGIN - bw - cw - ew - GAP);
+        int linesBelow = below >= 20 + 11 + 4 ? (Math.min(AttributesPanel.naturalHeight(underW), below) - 22) / 11 * AttributesPanel.columnsAt(underW) : 0;
+        // beside the content only in letters that stay readable (a narrow column would need tiny ones)
+        int linesSide = sideW >= 130 ? (ch - 22) / 11 : 0;
+        int ah = 0;
+        boolean side = false, over = false;
+        if (attrs) {
+            // under the content (where the player expects it) whenever a few lines fit there
+            if (linesBelow >= 4 && (linesBelow >= 6 || linesBelow >= linesSide)) ah = Math.min(AttributesPanel.naturalHeight(underW), below);
+            else if (linesSide >= 4) side = true;
+            else over = AttributesPanel.windowAllowed();
+        }
+        if (!side) sideW = 0;
+        int total = bw + cw + ew + (side ? GAP + sideW : 0);
+        int blockH = rowH + ch + (ah > 0 ? GAP + ah : 0);
+        int left = Math.max(MARGIN, (s.width - total) / 2);
+        int top = Math.max(MARGIN, (s.height - blockH) / 2);
+        int contentLeft = left + bw, contentTop = top + rowH;
+        GearLayout.moveContentTo(s, contentLeft, contentTop);
+
+        // the book beside the content, its middle level with the content's
+        int bookTop = Math.max(MARGIN, Math.min(s.height - RecipeBookPanel.H - MARGIN, contentTop + (ch - RecipeBookPanel.H) / 2));
+        RecipeBookPanel.place(s, left + RecipeBookPanel.TABS, bookTop);
+        GearLayout.standIn(s, "book", left, bookTop, book ? RecipeBookPanel.TABS + RecipeBookPanel.W : 0, RecipeBookPanel.H);
+
+        int fxX = contentLeft + cw + GAP;
+        switch (fxMode) {
+            // no lower than the content: the attributes may be under it
+            case WIDE, SMALL -> EffectsPanel.place(fxMode, fxX, contentTop, Math.max(32, ah > 0 ? ch : s.height - MARGIN - contentTop));
+            case ROW -> {
+                if (rowAbove) EffectsPanel.place(fxMode, contentLeft, top, 0);
+                else EffectsPanel.place(fxMode, s.width - MARGIN - effects * EffectsPanel.ROW_ICON, MARGIN, 0);
+            }
+            default -> EffectsPanel.place(fxMode, 0, 0, 0);
+        }
+        int[] fa = EffectsPanel.area(effects);
+        if (fa == null) GearLayout.standIn(s, "effects", 0, 0, 0, 0);
+        else GearLayout.standIn(s, "effects", fa[0], fa[1], fa[2], fa[3]);
+
+        if (ah > 0) {
+            AttributesPanel.place(contentLeft, contentTop + ch + GAP, underW, ah, false);
+            GearLayout.standIn(s, "attributes", contentLeft, contentTop + ch + GAP, underW, ah);
+        } else if (side) {
+            int ax = contentLeft + cw + ew + GAP;
+            AttributesPanel.place(ax, contentTop, sideW, ch, false);
+            GearLayout.standIn(s, "attributes", ax, contentTop, sideW, ch);
+        } else if (over) {
+            int ow = Math.min(s.width - 2 * MARGIN, Math.max(cw, 2 * AttributesPanel.COL)), oh = Math.min(s.height - 2 * MARGIN, Math.max(ch, 120));
+            AttributesPanel.place((s.width - ow) / 2, (s.height - oh) / 2, ow, oh, true);
+            GearLayout.standIn(s, "attributes", 0, 0, 0, 0);
+        } else {
+            AttributesPanel.place(0, 0, 0, 0, false);
+            GearLayout.standIn(s, "attributes", 0, 0, 0, 0);
+        }
 
         // the two buttons flank the hotbar: the recipe book left of it (as in the vanilla inventory), attributes right
         int invLeft = Integer.MAX_VALUE, invRight = Integer.MIN_VALUE, hotbarY = Integer.MIN_VALUE;
@@ -142,15 +210,16 @@ public final class GearScreens {
             return;
         }
         // the content moves this frame: place the buttons where its slots will be
-        int moved = contentLeft - content[0];
-        RecipeBookPanel.placeButton(c.getGuiLeft() + invLeft + moved - 34, c.getGuiTop() + hotbarY - 1);
-        AttributesPanel.placeButton(c.getGuiLeft() + invRight + moved + 6, c.getGuiTop() + hotbarY - 1);
+        int movedX = contentLeft - content[0], movedY = contentTop - content[1];
+        RecipeBookPanel.placeButton(c.getGuiLeft() + invLeft + movedX - 34, c.getGuiTop() + hotbarY - 1 + movedY);
+        AttributesPanel.placeButton(c.getGuiLeft() + invRight + movedX + 6, c.getGuiTop() + hotbarY - 1 + movedY);
     }
 
     public static void afterRender(ScreenEvent.Render.Post e) {
         if (!isGearScreen(e.getScreen())) return;
         GearLayout.poseAfter();
         RecipeBookPanel.render(e);
+        EffectsPanel.render(e);
     }
 
     /** the plain button that took the last press (its release and drags go to it too) */
@@ -173,6 +242,7 @@ public final class GearScreens {
         }
         RecipeBookPanel.onClick(e);
         if (!e.isCanceled()) AttributesPanel.onClick(e);
+        if (!e.isCanceled()) EffectsPanel.onClick(e);
     }
 
     public static void onRelease(ScreenEvent.MouseButtonReleased.Pre e) {
@@ -429,6 +499,20 @@ public final class GearScreens {
                 }
             }
             case 700 -> {
+                // the skill tree (Pufferfish's screen), as a player opens it with its key
+                mc.setScreen(null);
+                try {
+                    Class<?> client = Class.forName("net.puffish.skillsmod.client.SkillsClientMod");
+                    Object inst = client.getMethod("getInstance").invoke(null);
+                    client.getMethod("openScreen", java.util.Optional.class).invoke(inst, java.util.Optional.empty());
+                } catch (ReflectiveOperationException | RuntimeException | LinkageError ex) {
+                    WildsCore.LOG.info("Wilds Core: UI self-test: no skill tree: {}", ex.toString());
+                }
+            }
+            case 740 -> shot(mc, "9_skills");
+            case 742, 744, 746, 748, 750, 752, 754, 756 -> scroll(mc, -1);
+            case 765 -> shot(mc, "9_skills_out");
+            case 770 -> {
                 mc.setScreen(null);
                 WildsCore.LOG.info("Wilds Core: UI self-test done");
             }
@@ -474,6 +558,18 @@ public final class GearScreens {
             }
         } catch (ReflectiveOperationException | RuntimeException ex) {
             WildsCore.LOG.info("Wilds Core: UI self-test: mouse {} failed: {}", what, ex.toString());
+        }
+    }
+
+    /** the mouse wheel, as a player turns it, over the middle of the screen */
+    private static void scroll(Minecraft mc, double amount) {
+        try {
+            mouse(mc, "onMove", mc.getWindow().getGuiScaledWidth() / 2.0, mc.getWindow().getGuiScaledHeight() / 2.0, -1);
+            Method m = net.minecraft.client.MouseHandler.class.getDeclaredMethod("onScroll", long.class, double.class, double.class);
+            m.setAccessible(true);
+            m.invoke(mc.mouseHandler, mc.getWindow().getWindow(), 0.0, amount);
+        } catch (ReflectiveOperationException | RuntimeException ex) {
+            WildsCore.LOG.info("Wilds Core: UI self-test: scroll failed: {}", ex.toString());
         }
     }
 

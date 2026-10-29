@@ -278,7 +278,8 @@ for i in range(16):
     t, it, rw, tx = INNER[i % 8]
     k = define(f"in_{i % 8}", t, it, rw, tx)
     sid = f"in_{i}"
-    x, y = pos(90 - i * 22.5 - 11.25, R_INNER)
+    # two per branch, symmetric about its axis: the branch's spokes leave from them without crossing
+    x, y = pos(90 - (i // 2) * 45 + (11.25 if i % 2 == 0 else -11.25), R_INNER)
     skills[sid] = {"x": x, "y": y, "definition": k}
     inner_ids.append(sid)
 for i in range(16):
@@ -288,13 +289,16 @@ tier4 = {}
 for bi, bk in enumerate(ORDER):
     br = B[bk]
     centre = 90 - bi * 45
-    # the two inner nodes of this sector; the root touches one of them
+    # the two inner nodes of this sector (a_in on the left of its axis, b_in on the right); the root touches both, so
+    # sixteen even rays leave the centre
     a_in, b_in = inner_ids[(2 * bi) % 16], inner_ids[(2 * bi + 1) % 16]
-    links.append(["root", a_in if bi % 2 == 0 else b_in])
+    links.append(["root", a_in])
+    links.append(["root", b_in])
     ends = []
     for si, (sname, minors, uniq) in enumerate(br["spokes"]):
         angle = centre - (si - 1) * SPREAD
-        prev = a_in if si == 0 else b_in if si == 2 else (a_in if bi % 2 else b_in)
+        # the left spoke from the left inner node, the right one from the right, the middle one from both
+        prev = a_in if si != 2 else b_in
         for t in range(1, TIERS + 1):
             sid = f"{bk}_{si}_{t}"
             x, y = pos(angle, R0 + (t - 1) * STEP)
@@ -312,6 +316,8 @@ for bi, bk in enumerate(ORDER):
                 key = define(f"{bk}_{si}_m{(t - 1) % len(minors)}", m[0], m[1], m[2], f"{br['name']} · {sname}. {m[3]}")
             skills[sid] = {"x": x, "y": y, "definition": key}
             links.append([prev, sid])
+            if t == 1 and si == 1:
+                links.append([b_in, sid])
             prev = sid
             if t == 4:
                 tier4[(bi, si)] = sid
@@ -346,7 +352,19 @@ category = {
     "description": "Вісім гілок розвитку. Досвід дають бої, видобуток, мандри, відкриття нових біомів і споруд, риболовля, торгівля, "
                    "розведення тварин, досягнення й квести. Великі навички на кінцях гілок змінюють гру; ключові — на краю.",
     "icon": icon("minecraft:compass"),
-    "background": "textures/block/deepslate_tiles.png",
+    # an embroidered cloth (gen_skilltree_bg.py): every branch in its own thread, names and emblems on the rim
+    "background": {"texture": "wilds:textures/gui/skilltree.png", "width": 4096, "height": 4096, "position": "fill"},
+    # the links are threads: dark where locked, linen where open, gold where a point can buy, bright gold where bought
+    "colors": {
+        "connections": {
+            "locked": {"fill": "#4c3c2a", "stroke": "#140e0a"},
+            "excluded": {"fill": "#5c2420", "stroke": "#140a08"},
+            "available": {"fill": "#b8a882", "stroke": "#241a10"},
+            "affordable": {"fill": "#e6bc5a", "stroke": "#3a2810"},
+            "unlocked": {"fill": "#f6d27a", "stroke": "#6a4810"},
+        },
+        "points": {"fill": "#f6d27a", "stroke": "#3a2810"},
+    },
 }
 
 

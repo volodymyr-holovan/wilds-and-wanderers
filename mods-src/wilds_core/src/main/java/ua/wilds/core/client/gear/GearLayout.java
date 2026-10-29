@@ -19,8 +19,8 @@ import java.lang.reflect.Field;
  * The parts of the equipment screen's own layout (Accessories draws it with owo-lib) the pack changes; only touched
  * when that screen is open, so without Accessories this class is never loaded.
  * <ul>
- * <li>its content moves sideways to make room for the recipe book and the attributes panel beside it;</li>
- * <li>those two get invisible stand-ins in its layout, so JEI's item list keeps clear of them as it does of the screen
+ * <li>its content moves to make room for the recipe book beside it, the effects right of it and the attributes under it;</li>
+ * <li>those get invisible stand-ins in its layout, so JEI's item list keeps clear of them as it does of the screen
  * (JEI asks the screen for the areas of its layout's top-level parts);</li>
  * <li>the button that left it for the vanilla inventory is removed: everything that screen had is here now, and the
  * vanilla one has the old troubles (two buttons in one spot, a player model looking past the cursor);</li>
@@ -67,16 +67,18 @@ final class GearLayout {
         return l > r ? null : new int[]{l, t, r, b};
     }
 
-    /** moves the content so that its left edge ends up at {@code left} (the layout centres it; padding shifts the centre) */
-    static void moveContentTo(Screen s, int left) {
+    /**
+     * moves the content so that its top left corner ends up at {@code left}, {@code top} (the layout centres it both ways;
+     * uneven padding shifts the centre by half the difference)
+     */
+    static void moveContentTo(Screen s, int left, int top) {
         ParentComponent root = root(s);
         int[] c = content(s);
         if (root == null || c == null) return;
         Insets now = root.padding().get();
-        int shift = (now.left() - now.right()) / 2;
-        int natural = c[0] - shift;
-        int want = left - natural;
-        Insets next = Insets.of(now.top(), now.bottom(), Math.max(0, 2 * want), Math.max(0, -2 * want));
+        int naturalX = c[0] - (now.left() - now.right()) / 2, naturalY = c[1] - (now.top() - now.bottom()) / 2;
+        int dx = left - naturalX, dy = top - naturalY;
+        Insets next = Insets.of(Math.max(0, 2 * dy), Math.max(0, -2 * dy), Math.max(0, 2 * dx), Math.max(0, -2 * dx));
         if (!next.equals(now)) root.padding(next);
     }
 

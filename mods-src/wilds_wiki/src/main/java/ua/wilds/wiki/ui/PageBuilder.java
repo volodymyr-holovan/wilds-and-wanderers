@@ -70,6 +70,7 @@ public final class PageBuilder {
     // ================================================================== entry pages
 
     public static List<Element> build(WikiData data, Entry e) {
+        RichText.beginPage(data, e);
         PageBuilder b = new PageBuilder(data);
         b.out.add(new Header(e));
         b.out.add(new Spacer(4));
@@ -767,6 +768,7 @@ public final class PageBuilder {
     // ================================================================== home page
 
     public static List<Element> home(WikiData data, Runnable clearHistory) {
+        RichText.beginPage(data, null);
         PageBuilder b = new PageBuilder(data);
         Entry home = data.entries.get(Entry.key(Entry.Kind.TOPIC, ResourceLocation.fromNamespaceAndPath(WildsWiki.ID, "home")));
         if (home != null) {

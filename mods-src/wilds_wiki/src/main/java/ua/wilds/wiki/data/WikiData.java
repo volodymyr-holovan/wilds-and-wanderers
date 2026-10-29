@@ -399,6 +399,36 @@ public final class WikiData {
 
     // ---------------------------------------------------------------- lookups
 
+    /** names of the pages a text may mention (lower case, one space between words) -> the page; built on first use */
+    private Map<String, Entry> names;
+    /** the most words a name has */
+    private int longestName;
+
+    /**
+     * the page a name stands for: items, mobs, blocks, effects, biomes, structures with a name of at least five letters
+     * or two words (short ones like «Лук» or «Сіль» are everyday words too). An item wins over a block of the same name.
+     */
+    public Entry byName(String lowerName) {
+        if (names == null) {
+            names = new java.util.HashMap<>();
+            for (Entry e : entries.values()) {
+                if (e.kind == Entry.Kind.TOPIC || e.kind == Entry.Kind.ENCHANTMENT) continue;
+                String n = e.name.getString().toLowerCase(java.util.Locale.ROOT).replaceAll("\s+", " ").trim();
+                if (n.length() < 5 && !n.contains(" ")) continue;
+                if (n.chars().anyMatch(ch -> ch == '%' || ch == '.' || ch == ':')) continue;
+                Entry old = names.get(n);
+                if (old == null || (old.kind != Entry.Kind.ITEM && e.kind == Entry.Kind.ITEM)) names.put(n, e);
+                longestName = Math.max(longestName, n.split(" ").length);
+            }
+        }
+        return names.get(lowerName);
+    }
+
+    public int longestName() {
+        if (names == null) byName("");
+        return Math.min(longestName, 6);
+    }
+
     /** "ns:path" (item first, then mob, block, effect, enchantment, biome, topic) or "kind:ns:path". */
     public Entry resolve(String ref) {
         ref = ref.trim();

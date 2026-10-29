@@ -1,0 +1,6 @@
+remove_creative_tab_tooltip = true
+remove_component_count_tooltip = true
+fuel_tooltip = true
+# the lists of tags and data components (Shift in F3+H mode) are for pack makers, not players
+tag_tooltip = false
+component_tooltip = false

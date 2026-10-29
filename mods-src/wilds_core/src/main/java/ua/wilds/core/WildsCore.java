@@ -33,6 +33,7 @@ public final class WildsCore {
                     .clientTrackingRange(10).build("wanderer"));
 
     public WildsCore(IEventBus modBus) {
+        LogNoise.install();
         ENTITIES.register(modBus);
         modBus.addListener((net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent e) ->
                 e.put(WANDERER.get(), ua.wilds.core.npc.Wanderer.attributes().build()));

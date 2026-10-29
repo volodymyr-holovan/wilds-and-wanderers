@@ -89,7 +89,31 @@ public final class WikiScreen extends Screen implements Page {
 
     public void open(Entry e) {
         if (!query.isBlank()) History.get().addQuery(query);
+        Minecraft.getInstance().getSoundManager().play(net.minecraft.client.resources.sounds.SimpleSoundInstance.forUI(
+                net.minecraft.sounds.SoundEvents.UI_BUTTON_CLICK.value(), 1.2f, 0.5f));
         show(e, true);
+    }
+
+    /** a link is under the mouse this frame: the pointer becomes a hand */
+    private boolean linkHovered;
+    private static long handCursor;
+    private boolean handShown;
+
+    public void hoverLink() {
+        linkHovered = true;
+    }
+
+    private void cursor(boolean hand) {
+        if (hand == handShown) return;
+        handShown = hand;
+        if (handCursor == 0) handCursor = GLFW.glfwCreateStandardCursor(GLFW.GLFW_HAND_CURSOR);
+        GLFW.glfwSetCursor(Minecraft.getInstance().getWindow().getWindow(), hand ? handCursor : 0L);
+    }
+
+    @Override
+    public void removed() {
+        cursor(false);
+        super.removed();
     }
 
     public void tooltip(List<Component> lines) {
@@ -236,7 +260,7 @@ public final class WikiScreen extends Screen implements Page {
     }
 
     private void layoutPage() {
-        int w = pageW - 16;
+        int w = Math.round((pageW - 16) / K);
         if (w == pageWidth) return;
         pageWidth = w;
         pageHeight = 0;
@@ -257,6 +281,40 @@ public final class WikiScreen extends Screen implements Page {
         e.height = 0;
         ua.wilds.wiki.WildsWiki.LOG.warn("Wilds Wiki: {} on page {} failed", e.getClass().getSimpleName(),
                 current == null ? "home" : current.key, t);
+    }
+
+    /**
+     * The page's text and pictures are drawn a little smaller than the game's own (K): more fits, and the wiki reads
+     * like a book rather than a sign. Everything on the page lives in "page" coordinates, the screen's scaled around the
+     * page's top left corner; the mouse is brought into them for drawing, clicks, scrolling and dragging.
+     */
+    static final float K = 0.85f;
+
+    private int ox() {
+        return pageX + 8;
+    }
+
+    private int oy() {
+        return pageTop();
+    }
+
+    private double vx(double mx) {
+        return ox() + (mx - ox()) / K;
+    }
+
+    private double vy(double my) {
+        return oy() + (my - oy()) / K;
+    }
+
+    private void scaled(GuiGraphics g) {
+        g.pose().translate(ox(), oy(), 0);
+        g.pose().scale(K, K, 1);
+        g.pose().translate(-ox(), -oy(), 0);
+    }
+
+    /** the height of the page's window in page coordinates */
+    private double view() {
+        return (pageBottom() - pageTop()) / K;
     }
 
     /** for the self test: scroll the page as if the wheel was turned */
@@ -289,6 +347,7 @@ public final class WikiScreen extends Screen implements Page {
         tooltipLines = null;
         tooltipStack = ItemStack.EMPTY;
         overlays.clear();
+        linkHovered = false;
         super.render(g, mx, my, pt); // background and the search field
         if (search.getValue().isEmpty()) {
             g.drawString(font, Elements.ellipsize(font, Component.translatable("wilds_wiki.search.hint").getString(), search.getWidth() - 8),
@@ -297,7 +356,19 @@ public final class WikiScreen extends Screen implements Page {
         renderTopButtons(g, mx, my);
         renderList(g, mx, my);
         renderPage(g, mx, my);
-        for (Runnable r : overlays) r.run();
+        // the elements' overlays are in page coordinates too
+        if (!overlays.isEmpty()) {
+            g.pose().pushPose();
+            scaled(g);
+            int rx = mouseX, ry = mouseY;
+            mouseX = (int) vx(mx);
+            mouseY = (int) vy(my);
+            for (Runnable r : overlays) r.run();
+            mouseX = rx;
+            mouseY = ry;
+            g.pose().popPose();
+        }
+        cursor(linkHovered);
         if (!tooltipStack.isEmpty()) g.renderTooltip(font, tooltipStack, mx, my);
         else if (tooltipLines != null) g.renderComponentTooltip(font, tooltipLines, mx, my);
     }
@@ -365,17 +436,18 @@ public final class WikiScreen extends Screen implements Page {
     private void renderPage(GuiGraphics g, int mx, int my) {
         layoutPage();
         int top = pageTop(), bottom = pageBottom();
-        pageScroll = Math.max(0, Math.min(pageScroll, Math.max(0, pageHeight + 8 - (bottom - top))));
+        pageScroll = Math.max(0, Math.min(pageScroll, Math.max(0, pageHeight + 8 - view())));
         boolean inside = mx >= pageX && mx < pageX + pageW && my >= top && my < bottom;
         int realX = mouseX, realY = mouseY;
-        if (!inside) {
-            mouseX = -1000;
-            mouseY = -1000;
-        }
+        mouseX = inside ? (int) vx(mx) : -1000;
+        mouseY = inside ? (int) vy(my) : -1000;
         g.enableScissor(pageX, top, pageX + pageW, bottom);
+        g.pose().pushPose();
+        scaled(g);
         int y = top + 6 - (int) pageScroll;
+        double vBottom = top + view();
         for (Element e : page) {
-            if (e.height > 0 && y + e.height >= top && y <= bottom) {
+            if (e.height > 0 && y + e.height >= top && y <= vBottom) {
                 try {
                     e.render(this, g, pageX + 8, y, pageWidth);
                 } catch (Throwable t) {
@@ -384,10 +456,11 @@ public final class WikiScreen extends Screen implements Page {
             }
             y += e.height + 2;
         }
+        g.pose().popPose();
         g.disableScissor();
         mouseX = realX;
         mouseY = realY;
-        scrollbar(g, pageX + pageW - 4, top, bottom, pageHeight + 8, pageScroll);
+        scrollbar(g, pageX + pageW - 4, top, bottom, (int) ((pageHeight + 8) * K), pageScroll * K);
     }
 
     private static void scrollbar(GuiGraphics g, int x, int top, int bottom, int total, double scroll) {
@@ -435,10 +508,11 @@ public final class WikiScreen extends Screen implements Page {
             }
             if (mx >= pageX && mx < pageX + pageW && my >= pageTop() && my < pageBottom()) {
                 int y = pageTop() + 6 - (int) pageScroll;
-                mouseX = (int) mx;
-                mouseY = (int) my;
+                double px = vx(mx), py = vy(my);
+                mouseX = (int) px;
+                mouseY = (int) py;
                 for (Element e : new ArrayList<>(page)) {
-                    if (my >= y && my < y + e.height && e.click(this, pageX + 8, y, pageWidth, mx, my)) {
+                    if (py >= y && py < y + e.height && e.click(this, pageX + 8, y, pageWidth, px, py)) {
                         setFocused(search);
                         return true;
                     }
@@ -454,9 +528,9 @@ public final class WikiScreen extends Screen implements Page {
     }
 
     private void dragScroll(double my) {
-        int view = pageBottom() - pageTop(), total = pageHeight + 8;
+        double view = view(), total = pageHeight + 8;
         if (total <= view) return;
-        double f = (my - pageTop()) / view;
+        double f = (my - pageTop()) / (pageBottom() - pageTop());
         pageScroll = Math.max(0, Math.min(total - view, f * total - view / 2.0));
     }
 
@@ -466,7 +540,7 @@ public final class WikiScreen extends Screen implements Page {
             dragScroll(my);
             return true;
         }
-        if (elementAt(mx, my) instanceof Element e && e.drag(mx, my, button, dx, dy)) return true;
+        if (elementAt(mx, my) instanceof Element e && e.drag(vx(mx), vy(my), button, dx / K, dy / K)) return true;
         return super.mouseDragged(mx, my, button, dx, dy);
     }
 
@@ -489,7 +563,7 @@ public final class WikiScreen extends Screen implements Page {
     @Override
     public boolean mouseScrolled(double mx, double my, double sx, double sy) {
         if (mx < pageX) listScroll -= sy * ROW * 2;
-        else if (elementAt(mx, my) instanceof Element e && e.scroll(mx, my, sx, sy)) return true;
+        else if (elementAt(mx, my) instanceof Element e && e.scroll(vx(mx), vy(my), sx, sy)) return true;
         else pageScroll -= sy * 24;
         return true;
     }
@@ -498,8 +572,9 @@ public final class WikiScreen extends Screen implements Page {
     private Element elementAt(double mx, double my) {
         if (mx < pageX || mx >= pageX + pageW || my < pageTop() || my >= pageBottom()) return null;
         int y = pageTop() + 6 - (int) pageScroll;
+        double py = vy(my);
         for (Element e : page) {
-            if (my >= y && my < y + e.height) return e;
+            if (py >= y && py < y + e.height) return e;
             y += e.height + 2;
         }
         return null;

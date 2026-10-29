@@ -8,5 +8,38 @@
    "item": "minecraft:compass"
   }
  },
- "background": "textures/block/deepslate_tiles.png"
+ "background": {
+  "texture": "wilds:textures/gui/skilltree.png",
+  "width": 4096,
+  "height": 4096,
+  "position": "fill"
+ },
+ "colors": {
+  "connections": {
+   "locked": {
+    "fill": "#4c3c2a",
+    "stroke": "#140e0a"
+   },
+   "excluded": {
+    "fill": "#5c2420",
+    "stroke": "#140a08"
+   },
+   "available": {
+    "fill": "#b8a882",
+    "stroke": "#241a10"
+   },
+   "affordable": {
+    "fill": "#e6bc5a",
+    "stroke": "#3a2810"
+   },
+   "unlocked": {
+    "fill": "#f6d27a",
+    "stroke": "#6a4810"
+   }
+  },
+  "points": {
+   "fill": "#f6d27a",
+   "stroke": "#3a2810"
+  }
+ }
 }

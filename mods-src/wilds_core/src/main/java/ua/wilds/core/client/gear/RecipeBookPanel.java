@@ -20,8 +20,8 @@ import java.lang.reflect.Field;
  * fed the screen's events. Whether it is open is the player's own recipe-book setting, so it stays as the player left it,
  * across openings of the inventory and across sessions, until the player closes it with its button.
  * <p>
- * The book (with its tabs) stands left of the screen's content ({@link GearScreens#layout}); its button sits left of the
- * hotbar.
+ * The book (with its tabs) stands left of the screen's content, its middle level with the middle of the content and the
+ * attributes under it ({@link GearScreens#layout}); its button sits left of the hotbar.
  */
 final class RecipeBookPanel {
     static final int W = RecipeBookComponent.IMAGE_WIDTH, H = RecipeBookComponent.IMAGE_HEIGHT;
@@ -37,7 +37,7 @@ final class RecipeBookPanel {
     static void onInit(ScreenEvent.Init.Post e) {
         book = null;
         button = null;
-        placedAt = Integer.MIN_VALUE;
+        placedAt = placedTop = Integer.MIN_VALUE;
         if (!(e.getScreen() instanceof AbstractContainerScreen<?> c) || !(c.getMenu() instanceof RecipeBookMenu<?, ?> menu)) return;
         Minecraft mc = Minecraft.getInstance();
         book = new RecipeBookComponent();
@@ -55,7 +55,7 @@ final class RecipeBookPanel {
     static void toggle() {
         if (book == null) return;
         book.toggleVisibility();
-        placedAt = Integer.MIN_VALUE;
+        placedAt = placedTop = Integer.MIN_VALUE;
     }
 
     static void placeButton(int x, int y) {
@@ -65,19 +65,26 @@ final class RecipeBookPanel {
         button.setY(y);
     }
 
+    private static Field height;
+    private static int placedTop = Integer.MIN_VALUE;
+
     /**
-     * the book's left edge on the screen. The vanilla book centres itself in the width it was given and steps 86 to the
-     * left (initVisuals sets that step anew each time): so it is given the width that puts it where the layout wants it.
+     * the book's top left corner on the screen. The vanilla book centres itself in the size it was given and steps 86 to
+     * the left (initVisuals sets that step anew each time): so it is given the size that puts it where the layout wants it.
      */
-    static void place(Screen s, int left) {
-        if (book == null || left == placedAt) return;
+    static void place(Screen s, int left, int top) {
+        if (book == null || (left == placedAt && top == placedTop)) return;
         placedAt = left;
+        placedTop = top;
         try {
             if (width == null) {
                 width = RecipeBookComponent.class.getDeclaredField("width");
                 width.setAccessible(true);
+                height = RecipeBookComponent.class.getDeclaredField("height");
+                height.setAccessible(true);
             }
             width.setInt(book, 2 * (left + 86) + W);
+            height.setInt(book, 2 * top + H);
             if (book.isVisible()) book.initVisuals();
         } catch (ReflectiveOperationException | RuntimeException ex) {
             WildsCore.LOG.warn("Wilds Core: cannot place the recipe book", ex);
@@ -85,7 +92,7 @@ final class RecipeBookPanel {
     }
 
     static int top(Screen s) {
-        return (s.height - H) / 2;
+        return placedTop == Integer.MIN_VALUE ? (s.height - H) / 2 : placedTop;
     }
 
     static void render(ScreenEvent.Render.Post e) {

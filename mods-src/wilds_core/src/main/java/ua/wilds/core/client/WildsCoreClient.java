@@ -20,6 +20,8 @@ import ua.wilds.core.skills.ClientAbilities;
 public final class WildsCoreClient {
     public WildsCoreClient(IEventBus modBus) {
         FirstRunDefaults.init();
+        ua.wilds.core.client.music.MusicPack.prepare();
+        NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.music.MusicPack::tick);
         NeoForge.EVENT_BUS.addListener(FirstRunDefaults::tick);
         modBus.addListener((RegisterClientReloadListenersEvent e) -> e.registerReloadListener((ResourceManagerReloadListener) MusicDirector::reload));
         modBus.addListener((net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent e) -> e.register(SkillInput.HEAVY));
