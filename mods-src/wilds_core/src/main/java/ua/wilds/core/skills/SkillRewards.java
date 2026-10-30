@@ -7,6 +7,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.puffish.skillsmod.api.SkillsAPI;
 import net.puffish.skillsmod.api.json.JsonElement;
 import net.puffish.skillsmod.api.json.JsonObject;
@@ -43,6 +45,23 @@ final class SkillRewards {
         SkillsAPI.registerReward(id("stat"), SkillRewards::stat);
         SkillsAPI.registerReward(id("perk"), SkillRewards::perk);
         SkillsAPI.registerReward(id("ability"), SkillRewards::ability);
+        // Respawning (after death, and on the way back from the End) makes a NEW player object: transient attribute
+        // modifiers stay on the old one, and Puffish re-applies rewards only on login, so every stat node of the tree
+        // was gone until the player rejoined. Re-apply the pack's rewards to the new player; a dimension change keeps the
+        // player object, it is refreshed too in case another mod rebuilds the attributes there.
+        NeoForge.EVENT_BUS.addListener((PlayerEvent.PlayerRespawnEvent e) -> {
+            if (!(e.getEntity() instanceof ServerPlayer p)) return;
+            refresh(p);
+            // a death respawn starts at 20 health: with the tree's extra hearts it should start full
+            if (!e.isEndConquered()) p.setHealth(p.getMaxHealth());
+        });
+        NeoForge.EVENT_BUS.addListener((PlayerEvent.PlayerChangedDimensionEvent e) -> {
+            if (e.getEntity() instanceof ServerPlayer p) refresh(p);
+        });
+    }
+
+    private static void refresh(ServerPlayer p) {
+        for (String type : new String[]{"stat", "perk", "ability"}) SkillsAPI.updateRewards(p, id(type));
     }
 
     private static ResourceLocation id(String path) {
