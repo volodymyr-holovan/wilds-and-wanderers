@@ -1,0 +1,409 @@
+# ServerCore for Wilds & Wanderers (30.10.2026).
+# The server's CPU runs one game thread; with 6–8 players spread over the world a tick took 60–70 ms instead of 50
+# (spark: entity ticking ~54%, natural spawning ~25%). Everything below trades far-away simulation for a full 20 TPS:
+# mobs far from every player tick once a second, spawning is not attempted every tick for categories that never fill,
+# and under load the server narrows the spawning / simulation area by itself and widens it back when it recovers.
+# Most of these settings can be reloaded without restarting using /servercore reload.
+
+features:
+  prevent-moving-into-unloaded-chunks: false
+  autosave-interval-seconds: 300
+  xp-merge-fraction: 40
+  xp-merge-radius: 0.5
+  # items lying in heaps (mob farms, mining) merge from further away: fewer item entities to tick and send
+  item-merge-radius: 1.5
+  lobotomize-villagers:
+    # villagers locked in 1x1 trading cells tick once a second; trading still works
+    enabled: true
+    tick-interval: 20
+
+
+dynamic:
+  enabled: true
+  # step down while the average tick is above this, step back up when it is well below
+  target-mspt: 40
+  # match server.properties (simulation 6, view 12): these are the values the server returns to when it is not loaded
+  default-values:
+    CHUNK_TICK_DISTANCE: 6
+    MOBCAP_PERCENTAGE: 100
+    SIMULATION_DISTANCE: 6
+    VIEW_DISTANCE: 12
+
+  # in this order: fewer mobs, then spawning and random ticks (crop growth) only near players, then a smaller
+  # simulated area; the view distance (what players see) is the very last and slow to change
+  dynamic-settings:
+    - setting: 'MOBCAP_PERCENTAGE'
+      max: 100
+      min: 70
+      increment: 10
+      interval: 15
+
+    - setting: 'CHUNK_TICK_DISTANCE'
+      max: 6
+      min: 4
+      increment: 1
+      interval: 15
+
+    - setting: 'SIMULATION_DISTANCE'
+      max: 6
+      min: 4
+      increment: 1
+      interval: 20
+
+    - setting: 'MOBCAP_PERCENTAGE'
+      max: 70
+      min: 50
+      increment: 10
+      interval: 15
+
+    - setting: 'VIEW_DISTANCE'
+      max: 12
+      min: 8
+      increment: 1
+      interval: 150
+
+
+# huge animal pens tick every animal every tick: no more than 48 of one kind can be bred within 64 blocks
+breeding-cap:
+  enabled: true
+  villagers:
+    limit: 32
+    range: 64
+    unlimited-height: false
+  animals:
+    limit: 48
+    range: 64
+    unlimited-height: false
+
+
+mob-spawning:
+  zombie-reinforcements:
+    enforce-mobcap: false
+    additional-capacity: 32
+  nether-portal-randomticks:
+    enforce-mobcap: true
+    additional-capacity: 32
+  monster-spawners:
+    enforce-mobcap: false
+    additional-capacity: 32
+  infested:
+    enforce-mobcap: false
+    additional-capacity: 32
+
+  # Mobcaps are vanilla's (and the mods'). Spawn intervals: every category below its cap tries to spawn in every chunk
+  # around every player, and each try looks up the biome; categories that are nearly always below the cap (bats,
+  # fish, glares, Aether mobs outside the Aether...) tried every tick for nothing. Monsters try every other tick.
+  categories:
+    - category: 'MONSTER'
+      mobcap: 70
+      spawn-interval: 2
+      despawn-distance: 128
+
+    - category: 'CREATURE'
+      mobcap: 10
+      spawn-interval: 400
+      despawn-distance: 128
+
+    - category: 'AMBIENT'
+      mobcap: 10
+      spawn-interval: 20
+      despawn-distance: 128
+
+    - category: 'AXOLOTLS'
+      mobcap: 5
+      spawn-interval: 20
+      despawn-distance: 128
+
+    - category: 'UNDERGROUND_WATER_CREATURE'
+      mobcap: 5
+      spawn-interval: 10
+      despawn-distance: 128
+
+    - category: 'WATER_CREATURE'
+      mobcap: 5
+      spawn-interval: 10
+      despawn-distance: 128
+
+    - category: 'WATER_AMBIENT'
+      mobcap: 20
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'AETHER_AETHER_AERWHALE'
+      mobcap: 1
+      spawn-interval: 20
+      despawn-distance: 128
+
+    - category: 'AETHER_AETHER_DARKNESS_MONSTER'
+      mobcap: 5
+      spawn-interval: 4
+      despawn-distance: 128
+
+    - category: 'AETHER_AETHER_SKY_MONSTER'
+      mobcap: 4
+      spawn-interval: 4
+      despawn-distance: 128
+
+    - category: 'AETHER_AETHER_SURFACE_MONSTER'
+      mobcap: 15
+      spawn-interval: 4
+      despawn-distance: 128
+
+    - category: 'ALEXSCAVES_CAVE_CREATURE'
+      mobcap: 10
+      spawn-interval: 400
+      despawn-distance: 128
+
+    - category: 'ALEXSCAVES_DEEP_SEA_CREATURE'
+      mobcap: 20
+      spawn-interval: 10
+      despawn-distance: 128
+
+    - category: 'FRIENDSANDFOES_GLARES'
+      mobcap: 15
+      spawn-interval: 10
+      despawn-distance: 128
+
+    - category: 'FRIENDSANDFOES_RASCALS'
+      mobcap: 1
+      spawn-interval: 20
+      despawn-distance: 128
+
+    - category: 'HYBRID_AQUATIC_CEPHALOPOD'
+      mobcap: 4
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_CRITTER'
+      mobcap: 4
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_CRUSTACEAN'
+      mobcap: 4
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_FISH'
+      mobcap: 10
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_JELLY'
+      mobcap: 4
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_MAMMAL'
+      mobcap: 2
+      spawn-interval: 10
+      despawn-distance: 128
+
+    - category: 'HYBRID_AQUATIC_MINIBOSS'
+      mobcap: 4
+      spawn-interval: 400
+      despawn-distance: 128
+
+    - category: 'HYBRID_AQUATIC_MINION'
+      mobcap: 8
+      spawn-interval: 400
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_RIVER_FISH'
+      mobcap: 6
+      spawn-interval: 10
+      despawn-distance: 64
+
+    - category: 'HYBRID_AQUATIC_SHARK'
+      mobcap: 4
+      spawn-interval: 400
+      despawn-distance: 128
+
+
+commands:
+  status-enabled: true
+  mobcaps-enabled: true
+  colors:
+    primary: 'dark_aqua'
+    secondary: 'green'
+    tertiary: 'aqua'
+
+
+# Entities far from every player tick once a second instead of 20 times (Paper's activation range). Immunity checks
+# still tick them fully while they fall, swim, burn, take damage or are newly spawned.
+activation-range:
+  enabled: true
+  tick-new-entities: true
+  use-vertical-range: false
+  skip-non-immune: false
+  villager-tick-panic: true
+  villager-work-immunity-after: 20
+  villager-work-immunity-for: 20
+  # never throttled: machines and moving contraptions, things that must keep moving to work (items in farm streams,
+  # minecarts), workers that act away from players (colonists, Robit, Ars Nouveau helpers), the pack's quest NPCs,
+  # and bosses (a boss fight must not stutter when the player steps back)
+  excluded-entity-types:
+    - 'minecraft:warden'
+    - 'minecraft:ghast'
+    - 'minecraft:ender_dragon'
+    - 'minecraft:wither'
+    - 'minecraft:elder_guardian'
+    - 'minecraft:item'
+    - 'minecraft:experience_orb'
+    - 'minecraft:minecart'
+    - 'minecraft:chest_minecart'
+    - 'minecraft:furnace_minecart'
+    - 'minecraft:hopper_minecart'
+    - 'minecraft:tnt_minecart'
+    - 'minecraft:spawner_minecart'
+    - 'minecraft:command_block_minecart'
+    - 'create:contraption'
+    - 'create:carriage_contraption'
+    - 'create:gantry_contraption'
+    - 'create:stationary_contraption'
+    - 'create:package'
+    - 'aeronautics:propeller_bearing_contraption'
+    - 'minecolonies:citizen'
+    - 'minecolonies:visitor'
+    - 'minecolonies:mercenary'
+    - 'minecolonies:mcminecart'
+    - 'minecolonies:sittingentity'
+    - 'mekanism:robit'
+    - 'ars_nouveau:starbuncle'
+    - 'ars_nouveau:drygmy'
+    - 'ars_nouveau:whirlisprig'
+    - 'ars_nouveau:wixie'
+    - 'ars_nouveau:amethyst_golem'
+    - 'ars_nouveau:bookwyrm'
+    - 'wilds_core:wanderer'
+    - 'cataclysm:ancient_remnant'
+    - 'cataclysm:ender_guardian'
+    - 'cataclysm:ignis'
+    - 'cataclysm:maledictus'
+    - 'cataclysm:netherite_monstrosity'
+    - 'cataclysm:scylla'
+    - 'cataclysm:the_harbinger'
+    - 'cataclysm:the_leviathan'
+    - 'mowziesmobs:ferrous_wroughtnaut'
+    - 'mowziesmobs:frostmaw'
+    - 'mowziesmobs:umvuthi'
+    - 'mowziesmobs:naga'
+    - 'mowziesmobs:sculptor'
+    - 'iceandfire:fire_dragon'
+    - 'iceandfire:ice_dragon'
+    - 'iceandfire:lightning_dragon'
+    - 'iceandfire:sea_serpent'
+    - 'iceandfire:cyclops'
+    - 'iceandfire:hydra'
+    - 'iceandfire:gorgon'
+    - 'iceandfire:dread_lich'
+    - 'twilightforest:naga'
+    - 'twilightforest:lich'
+    - 'twilightforest:hydra'
+    - 'twilightforest:minoshroom'
+    - 'twilightforest:knight_phantom'
+    - 'twilightforest:ur_ghast'
+    - 'twilightforest:alpha_yeti'
+    - 'twilightforest:snow_queen'
+    - 'twilightforest:plateau_boss'
+    - 'aether:slider'
+    - 'aether:valkyrie_queen'
+    - 'aether:sun_spirit'
+    - 'irons_spellbooks:dead_king'
+    - 'irons_spellbooks:fire_boss'
+    - 'irons_spellbooks:citadel_keeper'
+    - 'ars_nouveau:wilden_boss'
+  default-activation-type:
+    activation-range: 16
+    tick-interval: 20
+    wakeup-interval: -1
+    extra-height-up: false
+    extra-height-down: false
+
+  # ranges close to Paper's defaults (ServerCore's own are shorter): a mob 32 blocks away still acts normally
+  custom-activation-types:
+    - name: 'raider'
+      activation-range: 48
+      tick-interval: 20
+      wakeup-interval: 20
+      extra-height-up: true
+      extra-height-down: false
+      entity-matcher:
+        - 'typeof:raider'
+
+    - name: 'water'
+      activation-range: 16
+      tick-interval: 20
+      wakeup-interval: 60
+      extra-height-up: false
+      extra-height-down: false
+      entity-matcher:
+        - 'typeof:water_animal'
+
+    - name: 'villager'
+      activation-range: 32
+      tick-interval: 20
+      wakeup-interval: 30
+      extra-height-up: false
+      extra-height-down: false
+      entity-matcher:
+        - 'typeof:villager'
+
+    - name: 'zombie'
+      activation-range: 32
+      tick-interval: 20
+      wakeup-interval: 20
+      extra-height-up: true
+      extra-height-down: false
+      entity-matcher:
+        - 'minecraft:zombie'
+        - 'minecraft:husk'
+
+    - name: 'monster-below'
+      activation-range: 32
+      tick-interval: 20
+      wakeup-interval: 20
+      extra-height-up: true
+      extra-height-down: true
+      entity-matcher:
+        - 'minecraft:creeper'
+        - 'minecraft:slime'
+        - 'minecraft:magma_cube'
+        - 'minecraft:hoglin'
+
+    - name: 'flying-monster'
+      activation-range: 48
+      tick-interval: 20
+      wakeup-interval: 20
+      extra-height-up: true
+      extra-height-down: false
+      entity-matcher:
+        - 'minecraft:phantom'
+
+    - name: 'monster'
+      activation-range: 32
+      tick-interval: 20
+      wakeup-interval: 20
+      extra-height-up: true
+      extra-height-down: false
+      entity-matcher:
+        - 'typeof:monster'
+
+    - name: 'animal'
+      activation-range: 24
+      tick-interval: 20
+      wakeup-interval: 60
+      extra-height-up: false
+      extra-height-down: false
+      entity-matcher:
+        - 'typeof:animal'
+        - 'typeof:ambient'
+
+    - name: 'creature'
+      activation-range: 32
+      tick-interval: 20
+      wakeup-interval: 30
+      extra-height-up: false
+      extra-height-down: false
+      entity-matcher:
+        - 'typeof:mob'

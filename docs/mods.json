@@ -2257,6 +2257,22 @@
  },
  {
   "source": "modrinth",
+  "title": "ServerCore",
+  "slug": "servercore",
+  "version": "1.5.19+1.21.1",
+  "type": "release",
+  "client_side": "unsupported",
+  "server_side": "required",
+  "where": "server",
+  "dependency": false,
+  "file": "servercore-neoforge-1.5.19+1.21.1.jar",
+  "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/6N9hXiRa/servercore-neoforge-1.5.19%2B1.21.1.jar",
+  "sha1": "62ce692654e09271b5c55cbb3a1ef7606d067132",
+  "sha512": "55b97df4cc46f52db85b96487188d73c62d511229d98859991c115414c5f1ab37f2f40a0f2edb5692220aa94d6c48b392b0a2d8593b3c3381b1fcbde2a728c8f",
+  "size": 1462674
+ },
+ {
+  "source": "modrinth",
   "title": "Shulker Box Tooltip",
   "slug": "shulkerboxtooltip",
   "version": "5.1.9+1.21.1-neoforge",

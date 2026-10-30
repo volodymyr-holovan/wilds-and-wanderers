@@ -53,6 +53,9 @@ MODRINTH = {
     # --- performance ---
     "modernfix": "both", "ferrite-core": "both", "fastsuite": "both", "clumps": "both", "spark": "both",
     "structure-layout-optimizer": "server",
+    # the server's CPU (i5-2500) runs out of main thread with 6–8 players (30.10): entity activation range, chunk-tick
+    # distance and mobcaps that shrink with the tick time, so a heavy moment slows far mobs instead of the whole server
+    "servercore": "server",
     "sodium": "client", "sodium-extra": "client", "reeses-sodium-options": "client",
     "immediatelyfast": "client", "entityculling": "client", "moreculling": "client", "dynamic-fps": "client",
     # smooth frame times on weak PCs (27.10): micro-optimizations of the client tick, particle culling, faster world

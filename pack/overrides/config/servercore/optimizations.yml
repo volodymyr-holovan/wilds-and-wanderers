@@ -1,0 +1,12 @@
+# ServerCore optimizations without full vanilla parity (Wilds & Wanderers, 30.10.2026). Take effect after a restart.
+
+# Prevents many different lagspikes caused by loading chunks synchronously.
+# This for example causes maps to only update loaded chunks, which depending on the viewdistance can be a smaller radius than vanilla.
+reduce-sync-loads: true
+# Only updates the ticking chunks list each second, rather than each tick. Incompatible with Moonrise (not in the pack).
+cache-ticking-chunks: true
+optimize-command-blocks: false
+# Natural spawning spent ~10% of the whole tick looking up biomes (spark, 29.10). Mobs may spawn a few blocks across a
+# biome border; structure spawns are not affected.
+fast-biome-lookups: true
+cancel-duplicate-fluid-ticks: false
