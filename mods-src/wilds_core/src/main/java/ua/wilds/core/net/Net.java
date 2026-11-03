@@ -113,6 +113,19 @@ public final class Net {
         }
     }
 
+    /**
+     * never sent: a client that registered it has the extra inventory rows in its equipment screen, so the server adds
+     * their slots to that menu only for such a client (a menu's slots must be the same on both sides)
+     */
+    public record RowsV1() implements CustomPacketPayload {
+        public static final Type<RowsV1> TYPE = typeOf("rows_v1");
+        public static final StreamCodec<ByteBuf, RowsV1> CODEC = StreamCodec.unit(new RowsV1());
+
+        public Type<RowsV1> type() {
+            return TYPE;
+        }
+    }
+
     /** set by the client entry point: shows the item finder's answer */
     public static java.util.function.Consumer<List<BlockPos>> finderClient = h -> {};
 
@@ -138,12 +151,14 @@ public final class Net {
             if (hits != null) net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(p, new FinderHits(hits));
         }));
         r.playToClient(FinderHits.TYPE, FinderHits.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> finderClient.accept(msg.places())));
+        r.playToClient(RowsV1.TYPE, RowsV1.CODEC, (msg, ctx) -> {});
         r.playToServer(Act.TYPE, Act.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
             if (!(ctx.player() instanceof ServerPlayer p)) return;
             switch (msg.action()) {
                 case "throw" -> CombatSkills.throwWeapon(p);
                 case "heavy" -> CombatSkills.heavyStrike(p, msg.target());
                 case "pacify" -> DiplomatSkills.pacify(p);
+                case "craft" -> ua.wilds.core.skills.branch.BagSkills.pocketCraft(p);
                 default -> {
                 }
             }

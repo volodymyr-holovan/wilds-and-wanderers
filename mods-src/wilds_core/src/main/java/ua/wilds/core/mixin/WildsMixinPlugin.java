@@ -13,7 +13,10 @@ import java.util.Set;
 public final class WildsMixinPlugin implements IMixinConfigPlugin {
     private static final Map<String, String> NEEDS = Map.of("ua.wilds.core.mixin.client.RMSongPickerMixin", "reactivemusic",
             "ua.wilds.core.mixin.AccessoriesResultSlotMixin", "accessories",
-            "ua.wilds.core.mixin.client.DhClientWorldMixin", "distanthorizons");
+            "ua.wilds.core.mixin.client.DhClientWorldMixin", "distanthorizons",
+            "ua.wilds.core.mixin.AccessoriesRowsMenuMixin", "accessories",
+            "ua.wilds.core.mixin.client.AccessoriesPlayerInvMixin", "accessories",
+            "ua.wilds.core.mixin.client.AccessoriesRowsScreenMixin", "accessories");
 
     public void onLoad(String mixinPackage) {}
 

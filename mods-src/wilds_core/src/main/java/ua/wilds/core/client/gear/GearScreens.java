@@ -93,6 +93,7 @@ public final class GearScreens {
         if (!isGearScreen(e.getScreen())) return;
         RecipeBookPanel.onInit(e);
         FinderField.onInit(e);
+        PocketCraftButton.onInit(e);
     }
 
     /**
@@ -208,6 +209,7 @@ public final class GearScreens {
         }
         if (hotbarY == Integer.MIN_VALUE) {
             FinderField.place(Integer.MIN_VALUE, 0, 0);
+            PocketCraftButton.place(Integer.MIN_VALUE, 0);
             RecipeBookPanel.placeButton(Integer.MIN_VALUE, 0);
             AttributesPanel.placeButton(Integer.MIN_VALUE, 0);
             return;
@@ -224,6 +226,7 @@ public final class GearScreens {
         else FinderField.place(Integer.MIN_VALUE, 0, 0);
         RecipeBookPanel.placeButton(c.getGuiLeft() + invLeft + movedX - 34, c.getGuiTop() + hotbarY - 1 + movedY);
         AttributesPanel.placeButton(c.getGuiLeft() + invRight + movedX + 6, c.getGuiTop() + hotbarY - 1 + movedY);
+        PocketCraftButton.place(c.getGuiLeft() + invRight + movedX + 6, c.getGuiTop() + hotbarY - 1 + movedY - 24);
     }
 
     public static void afterRender(ScreenEvent.Render.Post e) {
@@ -232,6 +235,7 @@ public final class GearScreens {
         RecipeBookPanel.render(e);
         EffectsPanel.render(e);
         FinderField.render(e.getGuiGraphics(), e.getMouseX(), e.getMouseY(), e.getPartialTick());
+        PocketCraftButton.renderOver(e.getGuiGraphics(), e.getMouseX(), e.getMouseY(), e.getPartialTick());
     }
 
     /** the plain button that took the last press (its release and drags go to it too) */

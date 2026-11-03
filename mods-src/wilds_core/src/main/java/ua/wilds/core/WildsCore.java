@@ -37,6 +37,7 @@ public final class WildsCore {
         PartyPeace.register();
         if (net.neoforged.fml.ModList.get().isLoaded("friendsandfoes")) ua.wilds.core.golem.Golems.register();
         ENTITIES.register(modBus);
+        ua.wilds.core.skills.branch.BagSkills.ATTACHMENTS.register(modBus);
         modBus.addListener((net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent e) ->
                 e.put(WANDERER.get(), ua.wilds.core.npc.Wanderer.attributes().build()));
         net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.AddReloadListenerEvent e) ->

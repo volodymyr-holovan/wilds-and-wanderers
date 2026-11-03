@@ -2,11 +2,12 @@
 
   python gen_skilltree.py <pack overrides dir>
 
-Layout: the root in the centre, an inner ring of 16 general bonuses, and 8 explicit branches of 45 degrees each:
-Воїн, Мисливець, Маг, Майстер, Мореплавець, Слідопит, Дипломат, Торговець. A branch has three spokes of 11 nodes;
+Layout: the root in the centre, an inner ring of 18 general bonuses, and 9 explicit branches of 40 degrees each:
+Воїн, Мисливець, Маг, Майстер, Мореплавець, Слідопит, Дипломат, Торговець, Торба. Node ids never change (players keep
+what they unlocked): Торба came last, so its nodes and the inner ring's in_16, in_17 are new, the rest only moved. A branch has three spokes of 11 nodes;
 the 6th node of a spoke is a notable (2.5x value, costs 2), the 11th is a big unique ability of Wilds Core; some
 uniques have a mastery behind them (level 2), and every branch ends in a keystone at the rim. Neighbouring branches
-are joined at their 4th tier, so builds can mix. About 320 nodes in all.
+are joined at their 4th tier, so builds can mix. About 360 nodes in all.
 
 Rewards: "wilds_core:stat" (attribute with a fallback when the attribute's mod is missing), "wilds_core:perk" (the pack's
 own numbers) and "wilds_core:ability" (big abilities, with a fallback ability when their mod is missing).
@@ -221,6 +222,23 @@ B["tra"] = dict(name="Торговець", icon="minecraft:emerald", spokes=[
 ], keystone=("Щедра угода", "minecraft:villager_spawn_egg", [ability("generous_deal"), perk("discount", 1), perk("harvest", 0.10)],
              "Ключова навичка. Раз на день будь-який обмін із селянином безкоштовний — сплачене повертається. Ще мінус 1 смарагд з кожного обміну, +10% урожаю."))
 
+# --- Торба
+B["bag"] = dict(name="Торба", icon="minecraft:bundle", spokes=[
+    ("Кишені", [minor("Довгі пальці", "minecraft:hopper", [perk("pickup_range", 0.4)], "+0,4 блока радіусу підбирання предметів"),
+                minor("Охайність", "minecraft:bundle", [perk("tool_saver", 0.03)], "3% шанс, що броня, зброя чи інструмент не зноситься"),
+                minor("Легка ноша", "minecraft:leather", [stat("generic.movement_speed", 0.01, "add_multiplied_base")], "+1% швидкості руху")],
+     "extra_row"),
+    ("Верстак", [minor("Вправні руки", "minecraft:crafting_table", [stat("player.block_interaction_range", 0.2)], "+0,2 блока дальності з блоками"),
+                 minor("Наука ремесла", "minecraft:book", [stat("irons_lib:experience_gained", 0.02)], "+2% досвіду"),
+                 minor("Збирач", "minecraft:hopper_minecart", [perk("pickup_range", 0.3)], "+0,3 блока радіусу підбирання предметів")],
+     "pocket_crafting"),
+    ("Дбайливість", [minor("Дбайливий власник", "minecraft:anvil", [perk("tool_saver", 0.04)], "4% шанс, що броня, зброя чи інструмент не зноситься"),
+                     minor("Латки", "minecraft:leather_chestplate", [stat("generic.armor", 0.5)], "+0,5 броні"),
+                     minor("Міцні ремені", "minecraft:lead", [stat("generic.armor_toughness", 0.25)], "+0,25 міцності броні")],
+     "mender"),
+], keystone=("Мандрівна торба", "minecraft:bundle", [ability("magnet"), perk("pickup_range", 1.5), perk("tool_saver", 0.10)],
+             "Ключова навичка. Магніт: предмети в радіусі 6 блоків самі летять до вас (присядьте, щоб вимкнути). +1,5 блока радіусу підбирання, спорядження зношується на 10% рідше."))
+
 # ---------------------------------------------------------------- unique abilities: title, icon, description, fallback, has a mastery
 U = {
     "heavy_strike": ("Нищівний удар", "minecraft:mace", "Затисніть клавішу зліва від 1 (`; її можна змінити в Керуванні), дивлячись на ворога: коли під прицілом наповниться смужка (не швидше, ніж перезаряджається зброя, мінімум 1 с), ви завдасте потрійної шкоди й виб'єте щит із рук.", None, True),
@@ -246,11 +264,15 @@ U = {
     "goblin_friend": ("Друг гоблінів", "minecraft:gold_nugget", "Гобліни-вояки більше не нападають першими, а корчмар, купець і коваль гоблінів раз на день дарують вам гоблінські монети. Без мода гоблінів — Друг піглінів: пігліни спокійні й без золотої броні.", "piglin_friend", False),
     "haggler": ("Торгівля з розумом", "minecraft:emerald_block", "Кожен обмін із селянином на 1 смарагд дешевший за рівень.", None, True),
     "village_gifts": ("Улюбленець села", "minecraft:cake", "Селяни поруч з вами час від часу кидають вам подарунки свого ремесла.", None, True),
+    "extra_row": ("Ще один ряд", "minecraft:chest", "У інвентарі з'являється ще один ряд на 9 комірок, над панеллю швидкого доступу (на 2-му рівні — ще один). Коли інвентар повний, підібране йде туди.", "mender", True),
+    "pocket_crafting": ("Кишеньковий верстак", "minecraft:crafting_table", "Біля інвентаря з'являється кнопка з верстаком: вона відкриває повну сітку 3×3 будь-де.", None, False),
+    "mender": ("Дбайливі руки", "minecraft:grindstone", "Вдягнена броня й речі в обох руках потроху лагодяться самі: одна одиниця міцності кожні 10 секунд (на 2-му рівні — кожні 5).", None, True),
     "mercenaries": ("Найманці", "minecraft:iron_golem_spawn_egg", "Присядьте й клацніть по залізному голему чи вартовому села, тримаючи 8 смарагдів, — він іде за вами й б'ється за вас до наступного дня (на 2-му рівні — двоє водночас).", None, True),
 }
 
 # ---------------------------------------------------------------- layout
-ORDER = ["war", "hun", "mag", "cra", "sea", "exp", "dip", "tra"]   # clockwise from the top
+ORDER = ["war", "hun", "mag", "cra", "sea", "exp", "dip", "tra", "bag"]   # clockwise from the top
+SECTOR = 360 / len(ORDER)
 R_INNER, R0, STEP, SPREAD = 120, 210, 56, 13
 TIERS, NOTABLE = 11, 6
 skills, links = {}, []
@@ -262,7 +284,7 @@ def pos(angle, r):
 
 
 define("root", "Мандрівник", "minecraft:compass", [stat("generic.max_health", 2)],
-       "Початок шляху. +1 серце. Звідси вісім гілок: Воїн, Мисливець, Маг, Майстер, Мореплавець, Слідопит, Дипломат, Торговець.", "challenge")
+       "Початок шляху. +1 серце. Звідси дев'ять гілок: " + ", ".join(B[k]["name"] for k in ORDER) + ".", "challenge")
 skills["root"] = {"x": 0, "y": 0, "definition": "root", "root": True}
 
 INNER = [("Витривалість", "minecraft:apple", [stat("generic.max_health", 2)], "+1 серце"),
@@ -272,26 +294,30 @@ INNER = [("Витривалість", "minecraft:apple", [stat("generic.max_heal
          ("Шкіра", "minecraft:leather_chestplate", [stat("generic.armor", 1)], "+1 броні"),
          ("Міцні руки", "minecraft:iron_pickaxe", [stat("player.block_break_speed", 0.03, "add_multiplied_base")], "+3% швидкості видобутку"),
          ("Іскра магії", "minecraft:lapis_lazuli", [stat("irons_spellbooks:max_mana", 10)], "+10 мани"),
-         ("Загоєння", "minecraft:glistering_melon_slice", [perk("regen", 0.25)], "Поки ви ситі, повільно загоюєтеся")]
+         ("Загоєння", "minecraft:glistering_melon_slice", [perk("regen", 0.25)], "Поки ви ситі, повільно загоюєтеся"),
+         ("Кишеня", "minecraft:bundle", [perk("pickup_range", 0.4)], "+0,4 блока радіусу підбирання предметів")]
+RING = 2 * len(ORDER)
 inner_ids = []
-for i in range(16):
-    t, it, rw, tx = INNER[i % 8]
-    k = define(f"in_{i % 8}", t, it, rw, tx)
+for i in range(RING):
+    # the first sixteen keep the bonuses they had with eight branches (players' unlocked nodes stay what they were)
+    d = i % 8 if i < 16 else 8
+    t, it, rw, tx = INNER[d]
+    k = define(f"in_{d}", t, it, rw, tx)
     sid = f"in_{i}"
     # two per branch, symmetric about its axis: the branch's spokes leave from them without crossing
-    x, y = pos(90 - (i // 2) * 45 + (11.25 if i % 2 == 0 else -11.25), R_INNER)
+    x, y = pos(90 - (i // 2) * SECTOR + (SECTOR / 4 if i % 2 == 0 else -SECTOR / 4), R_INNER)
     skills[sid] = {"x": x, "y": y, "definition": k}
     inner_ids.append(sid)
-for i in range(16):
-    links.append([inner_ids[i], inner_ids[(i + 1) % 16]])
+for i in range(RING):
+    links.append([inner_ids[i], inner_ids[(i + 1) % RING]])
 
 tier4 = {}
 for bi, bk in enumerate(ORDER):
     br = B[bk]
-    centre = 90 - bi * 45
+    centre = 90 - bi * SECTOR
     # the two inner nodes of this sector (a_in on the left of its axis, b_in on the right); the root touches both, so
     # sixteen even rays leave the centre
-    a_in, b_in = inner_ids[(2 * bi) % 16], inner_ids[(2 * bi + 1) % 16]
+    a_in, b_in = inner_ids[(2 * bi) % RING], inner_ids[(2 * bi + 1) % RING]
     links.append(["root", a_in])
     links.append(["root", b_in])
     ends = []
@@ -349,7 +375,7 @@ for bi in range(len(ORDER)):
 category = {
     "unlocked_by_default": True,
     "title": "Шлях мандрівника",
-    "description": "Вісім гілок розвитку. Досвід дають бої, видобуток, мандри, відкриття нових біомів і споруд, риболовля, торгівля, "
+    "description": "Дев'ять гілок розвитку. Досвід дають бої, видобуток, мандри, відкриття нових біомів і споруд, риболовля, торгівля, "
                    "розведення тварин, досягнення й квести. Великі навички на кінцях гілок змінюють гру; ключові — на краю.",
     "icon": icon("minecraft:compass"),
     # an embroidered cloth (gen_skilltree_bg.py): every branch in its own thread, names and emblems on the rim
@@ -397,10 +423,10 @@ experience = {
 }
 
 os.makedirs(CAT, exist_ok=True)
-json.dump({"version": 3, "categories": ["path"]}, open(os.path.join(OUT, "config.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump({"version": 3, "categories": ["path"]}, open(os.path.join(OUT, "config.json"), "w", encoding="utf-8", newline=chr(10)), ensure_ascii=False, indent=1)
 for name, data in [("category.json", category), ("definitions.json", DEF), ("skills.json", skills),
                    ("connections.json", {"normal": {"bidirectional": links}}), ("experience.json", experience)]:
-    json.dump(data, open(os.path.join(CAT, name), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(data, open(os.path.join(CAT, name), "w", encoding="utf-8", newline=chr(10)), ensure_ascii=False, indent=1)
 uniques = sum(1 for k in DEF if "_u_" in k)
 print(f"skills: {len(skills)}, definitions: {len(DEF)}, connections: {len(links)}, unique abilities: {uniques}, keystones: {len(ORDER)}")
 
@@ -409,9 +435,9 @@ WIKI = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "mod
                     "assets", "wilds_wiki", "wilds_wiki", "uk_ua", "skills.md")
 page = ["---", "topic: skills", "title: Шлях мандрівника (навички)", "icon: minecraft:compass", "order: 15",
         "keywords: навички, навичка, вміння, дерево навичок, рівень, очки, досвід навичок, гілка, skills, skill tree, perks, "
-        "воїн, мисливець, маг, майстер, мореплавець, слідопит, дипломат, торговець, нищівний удар, метання, красномовство", "---",
+        "воїн, мисливець, маг, майстер, мореплавець, слідопит, дипломат, торговець, торба, ряд інвентаря, додатковий ряд, кишеньковий верстак, магніт, нищівний удар, метання, красномовство", "---",
         "«Шлях мандрівника» — кругле дерево навичок. Відкривається клавішею **K**. "
-        "У центрі — початок, навколо — кільце загальних бонусів, а від нього розходяться **вісім гілок**: "
+        "У центрі — початок, навколо — кільце загальних бонусів, а від нього розходяться **дев'ять гілок**: "
         + ", ".join(B[k]["name"] for k in ORDER) + ". Можна йти однією гілкою до кінця або брати потроху з сусідніх — "
         "сусідні гілки з'єднані на четвертому кроці.",
         "", "# Як отримати очки",
@@ -447,7 +473,8 @@ page += ["# Керування активними навичками",
          "- **Миротворець** — присісти 4 рази поспіль.",
          "- **Найманці** — присісти й клацнути ПКМ по голему чи вартовому, тримаючи 8 смарагдів.",
          "- **Жила** — копати руду присівши. **Рудознатець** — присісти й клацнути ПКМ киркою по каменю.",
+         "- **Кишеньковий верстак** — кнопка з верстаком праворуч від інвентаря. **Магніт** вимикається, поки ви присіли.",
          "Решта навичок працює сама.",
          "", "> Якщо мода, на якому тримається навичка, немає, вона замінюється схожою (так написано в її описі) — порожніх вузлів не буває."]
-open(WIKI, "w", encoding="utf-8").write("\n".join(page) + "\n")
+open(WIKI, "w", encoding="utf-8", newline=chr(10)).write("\n".join(page) + "\n")
 print("wiki page ->", os.path.normpath(WIKI))

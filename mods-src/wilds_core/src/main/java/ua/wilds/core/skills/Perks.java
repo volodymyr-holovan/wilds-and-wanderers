@@ -34,8 +34,11 @@ public final class Perks {
     /** better chance to convince quest givers (lie, haggle) */
     public static final String PERSUASION = "persuasion";
 
+    /** blocks added to the reach of picking items up (max 4) */
+    public static final String PICKUP_RANGE = "pickup_range";
+
     private static final Set<String> ALL = Set.of(FIRE_GUARD, AQUA_GUARD, MAGIC_GUARD, EXTRA_ORE, TOOL_SAVER, FAR_SHOT, REGEN, MOUNT,
-            DISCOUNT, HARVEST, HEARTY, TAMER, PERSUASION);
+            DISCOUNT, HARVEST, HEARTY, TAMER, PERSUASION, PICKUP_RANGE);
 
     private Perks() {}
 

@@ -7,7 +7,9 @@
   "client": [
     "client.RMSongPickerMixin",
     "client.CameraMixin",
-    "client.DhClientWorldMixin"
+    "client.DhClientWorldMixin",
+    "client.AccessoriesPlayerInvMixin",
+    "client.AccessoriesRowsScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 0
@@ -16,6 +18,8 @@
     "MobAccessor",
     "ItemStackDurabilityMixin",
     "VillagerPricesMixin",
-    "AccessoriesResultSlotMixin"
+    "AccessoriesResultSlotMixin",
+    "AccessoriesRowsMenuMixin",
+    "CraftingMenuMixin"
   ]
 }

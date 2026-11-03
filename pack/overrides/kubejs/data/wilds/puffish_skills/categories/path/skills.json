@@ -6,84 +6,94 @@
   "root": true
  },
  "in_0": {
-  "x": -23,
+  "x": -21,
   "y": -118,
   "definition": "in_0"
  },
  "in_1": {
-  "x": 23,
+  "x": 21,
   "y": -118,
   "definition": "in_1"
  },
  "in_2": {
-  "x": 67,
-  "y": -100,
+  "x": 60,
+  "y": -104,
   "definition": "in_2"
  },
  "in_3": {
-  "x": 100,
-  "y": -67,
+  "x": 92,
+  "y": -77,
   "definition": "in_3"
  },
  "in_4": {
-  "x": 118,
-  "y": -23,
+  "x": 113,
+  "y": -41,
   "definition": "in_4"
  },
  "in_5": {
-  "x": 118,
-  "y": 23,
+  "x": 120,
+  "y": 0,
   "definition": "in_5"
  },
  "in_6": {
-  "x": 100,
-  "y": 67,
+  "x": 113,
+  "y": 41,
   "definition": "in_6"
  },
  "in_7": {
-  "x": 67,
-  "y": 100,
+  "x": 92,
+  "y": 77,
   "definition": "in_7"
  },
  "in_8": {
-  "x": 23,
-  "y": 118,
+  "x": 60,
+  "y": 104,
   "definition": "in_0"
  },
  "in_9": {
-  "x": -23,
+  "x": 21,
   "y": 118,
   "definition": "in_1"
  },
  "in_10": {
-  "x": -67,
-  "y": 100,
+  "x": -21,
+  "y": 118,
   "definition": "in_2"
  },
  "in_11": {
-  "x": -100,
-  "y": 67,
+  "x": -60,
+  "y": 104,
   "definition": "in_3"
  },
  "in_12": {
-  "x": -118,
-  "y": 23,
+  "x": -92,
+  "y": 77,
   "definition": "in_4"
  },
  "in_13": {
-  "x": -118,
-  "y": -23,
+  "x": -113,
+  "y": 41,
   "definition": "in_5"
  },
  "in_14": {
-  "x": -100,
-  "y": -67,
+  "x": -120,
+  "y": 0,
   "definition": "in_6"
  },
  "in_15": {
-  "x": -67,
-  "y": -100,
+  "x": -113,
+  "y": -41,
   "definition": "in_7"
+ },
+ "in_16": {
+  "x": -92,
+  "y": -77,
+  "definition": "in_8"
+ },
+ "in_17": {
+  "x": -60,
+  "y": -104,
+  "definition": "in_8"
  },
  "war_0_1": {
   "x": -47,
@@ -266,1268 +276,1448 @@
   "definition": "war_keystone"
  },
  "hun_0_1": {
-  "x": 111,
-  "y": -178,
+  "x": 95,
+  "y": -187,
   "definition": "hun_0_m0"
  },
  "hun_0_2": {
-  "x": 141,
-  "y": -226,
+  "x": 121,
+  "y": -237,
   "definition": "hun_0_m1"
  },
  "hun_0_3": {
-  "x": 171,
-  "y": -273,
+  "x": 146,
+  "y": -287,
   "definition": "hun_0_m2"
  },
  "hun_0_4": {
-  "x": 200,
-  "y": -321,
+  "x": 172,
+  "y": -337,
   "definition": "hun_0_m0"
  },
  "hun_0_5": {
-  "x": 230,
-  "y": -368,
+  "x": 197,
+  "y": -387,
   "definition": "hun_0_m1"
  },
  "hun_0_6": {
-  "x": 260,
-  "y": -416,
+  "x": 222,
+  "y": -437,
   "definition": "hun_0_notable"
  },
  "hun_0_7": {
-  "x": 289,
-  "y": -463,
+  "x": 248,
+  "y": -486,
   "definition": "hun_0_m0"
  },
  "hun_0_8": {
-  "x": 319,
-  "y": -511,
+  "x": 273,
+  "y": -536,
   "definition": "hun_0_m1"
  },
  "hun_0_9": {
-  "x": 349,
-  "y": -558,
+  "x": 299,
+  "y": -586,
   "definition": "hun_0_m2"
  },
  "hun_0_10": {
-  "x": 378,
-  "y": -606,
+  "x": 324,
+  "y": -636,
   "definition": "hun_0_m0"
  },
  "hun_0_11": {
-  "x": 408,
-  "y": -653,
+  "x": 350,
+  "y": -686,
   "definition": "hun_u_volley"
  },
  "hun_0_mastery": {
-  "x": 442,
-  "y": -707,
+  "x": 379,
+  "y": -743,
   "definition": "hun_mastery_volley"
  },
  "hun_1_1": {
-  "x": 148,
-  "y": -148,
+  "x": 135,
+  "y": -161,
   "definition": "hun_1_m0"
  },
  "hun_1_2": {
-  "x": 188,
-  "y": -188,
+  "x": 171,
+  "y": -204,
   "definition": "hun_1_m1"
  },
  "hun_1_3": {
-  "x": 228,
-  "y": -228,
+  "x": 207,
+  "y": -247,
   "definition": "hun_1_m2"
  },
  "hun_1_4": {
-  "x": 267,
-  "y": -267,
+  "x": 243,
+  "y": -290,
   "definition": "hun_1_m0"
  },
  "hun_1_5": {
-  "x": 307,
-  "y": -307,
+  "x": 279,
+  "y": -332,
   "definition": "hun_1_m1"
  },
  "hun_1_6": {
-  "x": 346,
-  "y": -346,
+  "x": 315,
+  "y": -375,
   "definition": "hun_1_notable"
  },
  "hun_1_7": {
-  "x": 386,
-  "y": -386,
+  "x": 351,
+  "y": -418,
   "definition": "hun_1_m0"
  },
  "hun_1_8": {
-  "x": 426,
-  "y": -426,
+  "x": 387,
+  "y": -461,
   "definition": "hun_1_m1"
  },
  "hun_1_9": {
-  "x": 465,
-  "y": -465,
+  "x": 423,
+  "y": -504,
   "definition": "hun_1_m2"
  },
  "hun_1_10": {
-  "x": 505,
-  "y": -505,
+  "x": 459,
+  "y": -547,
   "definition": "hun_1_m0"
  },
  "hun_1_11": {
-  "x": 544,
-  "y": -544,
+  "x": 495,
+  "y": -590,
   "definition": "hun_u_beast_master"
  },
  "hun_1_mastery": {
-  "x": 590,
-  "y": -590,
+  "x": 536,
+  "y": -639,
   "definition": "hun_mastery_beast_master"
  },
  "hun_2_1": {
-  "x": 178,
-  "y": -111,
+  "x": 168,
+  "y": -126,
   "definition": "hun_2_m0"
  },
  "hun_2_2": {
-  "x": 226,
-  "y": -141,
+  "x": 212,
+  "y": -160,
   "definition": "hun_2_m1"
  },
  "hun_2_3": {
-  "x": 273,
-  "y": -171,
+  "x": 257,
+  "y": -194,
   "definition": "hun_2_m2"
  },
  "hun_2_4": {
-  "x": 321,
-  "y": -200,
+  "x": 302,
+  "y": -227,
   "definition": "hun_2_m0"
  },
  "hun_2_5": {
-  "x": 368,
-  "y": -230,
+  "x": 347,
+  "y": -261,
   "definition": "hun_2_m1"
  },
  "hun_2_6": {
-  "x": 416,
-  "y": -260,
+  "x": 391,
+  "y": -295,
   "definition": "hun_2_notable"
  },
  "hun_2_7": {
-  "x": 463,
-  "y": -289,
+  "x": 436,
+  "y": -329,
   "definition": "hun_2_m0"
  },
  "hun_2_8": {
-  "x": 511,
-  "y": -319,
+  "x": 481,
+  "y": -362,
   "definition": "hun_2_m1"
  },
  "hun_2_9": {
-  "x": 558,
-  "y": -349,
+  "x": 526,
+  "y": -396,
   "definition": "hun_2_m2"
  },
  "hun_2_10": {
-  "x": 606,
-  "y": -378,
+  "x": 570,
+  "y": -430,
   "definition": "hun_2_m0"
  },
  "hun_2_11": {
-  "x": 653,
-  "y": -408,
+  "x": 615,
+  "y": -463,
   "definition": "hun_u_hunters_mark"
  },
  "hun_keystone": {
-  "x": 649,
-  "y": -649,
+  "x": 590,
+  "y": -703,
   "definition": "hun_keystone"
  },
  "mag_0_1": {
-  "x": 205,
-  "y": -47,
+  "x": 193,
+  "y": -82,
   "definition": "mag_0_m0"
  },
  "mag_0_2": {
-  "x": 259,
-  "y": -60,
+  "x": 245,
+  "y": -104,
   "definition": "mag_0_m1"
  },
  "mag_0_3": {
-  "x": 314,
-  "y": -72,
+  "x": 296,
+  "y": -126,
   "definition": "mag_0_m2"
  },
  "mag_0_4": {
-  "x": 368,
-  "y": -85,
+  "x": 348,
+  "y": -148,
   "definition": "mag_0_m3"
  },
  "mag_0_5": {
-  "x": 423,
-  "y": -98,
+  "x": 399,
+  "y": -170,
   "definition": "mag_0_m4"
  },
  "mag_0_6": {
-  "x": 477,
-  "y": -110,
+  "x": 451,
+  "y": -191,
   "definition": "mag_0_notable"
  },
  "mag_0_7": {
-  "x": 532,
-  "y": -123,
+  "x": 503,
+  "y": -213,
   "definition": "mag_0_m1"
  },
  "mag_0_8": {
-  "x": 587,
-  "y": -135,
+  "x": 554,
+  "y": -235,
   "definition": "mag_0_m2"
  },
  "mag_0_9": {
-  "x": 641,
-  "y": -148,
+  "x": 606,
+  "y": -257,
   "definition": "mag_0_m3"
  },
  "mag_0_10": {
-  "x": 696,
-  "y": -161,
+  "x": 657,
+  "y": -279,
   "definition": "mag_0_m4"
  },
  "mag_0_11": {
-  "x": 750,
-  "y": -173,
+  "x": 709,
+  "y": -301,
   "definition": "mag_u_spell_reflect"
  },
  "mag_1_1": {
-  "x": 210,
-  "y": 0,
+  "x": 207,
+  "y": -36,
   "definition": "mag_1_m0"
  },
  "mag_1_2": {
-  "x": 266,
-  "y": 0,
+  "x": 262,
+  "y": -46,
   "definition": "mag_1_m1"
  },
  "mag_1_3": {
-  "x": 322,
-  "y": 0,
+  "x": 317,
+  "y": -56,
   "definition": "mag_1_m2"
  },
  "mag_1_4": {
-  "x": 378,
-  "y": 0,
+  "x": 372,
+  "y": -66,
   "definition": "mag_1_m3"
  },
  "mag_1_5": {
-  "x": 434,
-  "y": 0,
+  "x": 427,
+  "y": -75,
   "definition": "mag_1_m4"
  },
  "mag_1_6": {
-  "x": 490,
-  "y": 0,
+  "x": 483,
+  "y": -85,
   "definition": "mag_1_notable"
  },
  "mag_1_7": {
-  "x": 546,
-  "y": 0,
+  "x": 538,
+  "y": -95,
   "definition": "mag_1_m1"
  },
  "mag_1_8": {
-  "x": 602,
-  "y": 0,
+  "x": 593,
+  "y": -105,
   "definition": "mag_1_m2"
  },
  "mag_1_9": {
-  "x": 658,
-  "y": 0,
+  "x": 648,
+  "y": -114,
   "definition": "mag_1_m3"
  },
  "mag_1_10": {
-  "x": 714,
-  "y": 0,
+  "x": 703,
+  "y": -124,
   "definition": "mag_1_m4"
  },
  "mag_1_11": {
-  "x": 770,
-  "y": 0,
+  "x": 758,
+  "y": -134,
   "definition": "mag_u_mana_harvest"
  },
  "mag_1_mastery": {
-  "x": 834,
-  "y": 0,
+  "x": 821,
+  "y": -145,
   "definition": "mag_mastery_mana_harvest"
  },
  "mag_2_1": {
-  "x": 205,
-  "y": 47,
+  "x": 210,
+  "y": 11,
   "definition": "mag_2_m0"
  },
  "mag_2_2": {
-  "x": 259,
-  "y": 60,
+  "x": 266,
+  "y": 14,
   "definition": "mag_2_m1"
  },
  "mag_2_3": {
-  "x": 314,
-  "y": 72,
+  "x": 322,
+  "y": 17,
   "definition": "mag_2_m2"
  },
  "mag_2_4": {
-  "x": 368,
-  "y": 85,
+  "x": 377,
+  "y": 20,
   "definition": "mag_2_m3"
  },
  "mag_2_5": {
-  "x": 423,
-  "y": 98,
+  "x": 433,
+  "y": 23,
   "definition": "mag_2_m4"
  },
  "mag_2_6": {
-  "x": 477,
-  "y": 110,
+  "x": 489,
+  "y": 26,
   "definition": "mag_2_notable"
  },
  "mag_2_7": {
-  "x": 532,
-  "y": 123,
+  "x": 545,
+  "y": 29,
   "definition": "mag_2_m0"
  },
  "mag_2_8": {
-  "x": 587,
-  "y": 135,
+  "x": 601,
+  "y": 32,
   "definition": "mag_2_m1"
  },
  "mag_2_9": {
-  "x": 641,
-  "y": 148,
+  "x": 657,
+  "y": 34,
   "definition": "mag_2_m2"
  },
  "mag_2_10": {
-  "x": 696,
-  "y": 161,
+  "x": 713,
+  "y": 37,
   "definition": "mag_2_m3"
  },
  "mag_2_11": {
-  "x": 750,
-  "y": 173,
+  "x": 769,
+  "y": 40,
   "definition": "mag_u_mana_shield"
  },
  "mag_keystone": {
-  "x": 918,
-  "y": 0,
+  "x": 904,
+  "y": -159,
   "definition": "mag_keystone"
  },
  "cra_0_1": {
-  "x": 178,
-  "y": 111,
+  "x": 201,
+  "y": 61,
   "definition": "cra_0_m0"
  },
  "cra_0_2": {
-  "x": 226,
-  "y": 141,
+  "x": 254,
+  "y": 78,
   "definition": "cra_0_m1"
  },
  "cra_0_3": {
-  "x": 273,
-  "y": 171,
+  "x": 308,
+  "y": 94,
   "definition": "cra_0_m2"
  },
  "cra_0_4": {
-  "x": 321,
-  "y": 200,
+  "x": 361,
+  "y": 111,
   "definition": "cra_0_m0"
  },
  "cra_0_5": {
-  "x": 368,
-  "y": 230,
+  "x": 415,
+  "y": 127,
   "definition": "cra_0_m1"
  },
  "cra_0_6": {
-  "x": 416,
-  "y": 260,
+  "x": 469,
+  "y": 143,
   "definition": "cra_0_notable"
  },
  "cra_0_7": {
-  "x": 463,
-  "y": 289,
+  "x": 522,
+  "y": 160,
   "definition": "cra_0_m0"
  },
  "cra_0_8": {
-  "x": 511,
-  "y": 319,
+  "x": 576,
+  "y": 176,
   "definition": "cra_0_m1"
  },
  "cra_0_9": {
-  "x": 558,
-  "y": 349,
+  "x": 629,
+  "y": 192,
   "definition": "cra_0_m2"
  },
  "cra_0_10": {
-  "x": 606,
-  "y": 378,
+  "x": 683,
+  "y": 209,
   "definition": "cra_0_m0"
  },
  "cra_0_11": {
-  "x": 653,
-  "y": 408,
+  "x": 736,
+  "y": 225,
   "definition": "cra_u_vein_miner"
  },
  "cra_0_mastery": {
-  "x": 707,
-  "y": 442,
+  "x": 798,
+  "y": 244,
   "definition": "cra_mastery_vein_miner"
  },
  "cra_1_1": {
-  "x": 148,
-  "y": 148,
+  "x": 182,
+  "y": 105,
   "definition": "cra_1_m0"
  },
  "cra_1_2": {
-  "x": 188,
-  "y": 188,
+  "x": 230,
+  "y": 133,
   "definition": "cra_1_m1"
  },
  "cra_1_3": {
-  "x": 228,
-  "y": 228,
+  "x": 279,
+  "y": 161,
   "definition": "cra_1_m2"
  },
  "cra_1_4": {
-  "x": 267,
-  "y": 267,
+  "x": 327,
+  "y": 189,
   "definition": "cra_1_m0"
  },
  "cra_1_5": {
-  "x": 307,
-  "y": 307,
+  "x": 376,
+  "y": 217,
   "definition": "cra_1_m1"
  },
  "cra_1_6": {
-  "x": 346,
-  "y": 346,
+  "x": 424,
+  "y": 245,
   "definition": "cra_1_notable"
  },
  "cra_1_7": {
-  "x": 386,
-  "y": 386,
+  "x": 473,
+  "y": 273,
   "definition": "cra_1_m0"
  },
  "cra_1_8": {
-  "x": 426,
-  "y": 426,
+  "x": 521,
+  "y": 301,
   "definition": "cra_1_m1"
  },
  "cra_1_9": {
-  "x": 465,
-  "y": 465,
+  "x": 570,
+  "y": 329,
   "definition": "cra_1_m2"
  },
  "cra_1_10": {
-  "x": 505,
-  "y": 505,
+  "x": 618,
+  "y": 357,
   "definition": "cra_1_m0"
  },
  "cra_1_11": {
-  "x": 544,
-  "y": 544,
+  "x": 667,
+  "y": 385,
   "definition": "cra_u_thrifty_crafter"
  },
  "cra_1_mastery": {
-  "x": 590,
-  "y": 590,
+  "x": 722,
+  "y": 417,
   "definition": "cra_mastery_thrifty_crafter"
  },
  "cra_2_1": {
-  "x": 111,
-  "y": 178,
+  "x": 154,
+  "y": 143,
   "definition": "cra_2_m0"
  },
  "cra_2_2": {
-  "x": 141,
-  "y": 226,
+  "x": 195,
+  "y": 181,
   "definition": "cra_2_m1"
  },
  "cra_2_3": {
-  "x": 171,
-  "y": 273,
+  "x": 235,
+  "y": 220,
   "definition": "cra_2_m2"
  },
  "cra_2_4": {
-  "x": 200,
-  "y": 321,
+  "x": 276,
+  "y": 258,
   "definition": "cra_2_m0"
  },
  "cra_2_5": {
-  "x": 230,
-  "y": 368,
+  "x": 317,
+  "y": 296,
   "definition": "cra_2_m1"
  },
  "cra_2_6": {
-  "x": 260,
-  "y": 416,
+  "x": 358,
+  "y": 334,
   "definition": "cra_2_notable"
  },
  "cra_2_7": {
-  "x": 289,
-  "y": 463,
+  "x": 399,
+  "y": 372,
   "definition": "cra_2_m0"
  },
  "cra_2_8": {
-  "x": 319,
-  "y": 511,
+  "x": 440,
+  "y": 411,
   "definition": "cra_2_m1"
  },
  "cra_2_9": {
-  "x": 349,
-  "y": 558,
+  "x": 481,
+  "y": 449,
   "definition": "cra_2_m2"
  },
  "cra_2_10": {
-  "x": 378,
-  "y": 606,
+  "x": 522,
+  "y": 487,
   "definition": "cra_2_m0"
  },
  "cra_2_11": {
-  "x": 408,
-  "y": 653,
+  "x": 563,
+  "y": 525,
   "definition": "cra_u_prospector"
  },
  "cra_2_mastery": {
-  "x": 442,
-  "y": 707,
+  "x": 610,
+  "y": 569,
   "definition": "cra_mastery_prospector"
  },
  "cra_keystone": {
-  "x": 649,
-  "y": 649,
+  "x": 795,
+  "y": 459,
   "definition": "cra_keystone"
  },
  "sea_0_1": {
-  "x": 47,
-  "y": 205,
+  "x": 114,
+  "y": 176,
   "definition": "sea_0_m0"
  },
  "sea_0_2": {
-  "x": 60,
-  "y": 259,
+  "x": 145,
+  "y": 223,
   "definition": "sea_0_m1"
  },
  "sea_0_3": {
-  "x": 72,
-  "y": 314,
+  "x": 175,
+  "y": 270,
   "definition": "sea_0_m2"
  },
  "sea_0_4": {
-  "x": 85,
-  "y": 368,
+  "x": 206,
+  "y": 317,
   "definition": "sea_0_m0"
  },
  "sea_0_5": {
-  "x": 98,
-  "y": 423,
+  "x": 236,
+  "y": 364,
   "definition": "sea_0_m1"
  },
  "sea_0_6": {
-  "x": 110,
-  "y": 477,
+  "x": 267,
+  "y": 411,
   "definition": "sea_0_notable"
  },
  "sea_0_7": {
-  "x": 123,
-  "y": 532,
+  "x": 297,
+  "y": 458,
   "definition": "sea_0_m0"
  },
  "sea_0_8": {
-  "x": 135,
-  "y": 587,
+  "x": 328,
+  "y": 505,
   "definition": "sea_0_m1"
  },
  "sea_0_9": {
-  "x": 148,
-  "y": 641,
+  "x": 358,
+  "y": 552,
   "definition": "sea_0_m2"
  },
  "sea_0_10": {
-  "x": 161,
-  "y": 696,
+  "x": 389,
+  "y": 599,
   "definition": "sea_0_m0"
  },
  "sea_0_11": {
-  "x": 173,
-  "y": 750,
+  "x": 419,
+  "y": 646,
   "definition": "sea_u_deep_sight"
  },
  "sea_1_1": {
-  "x": 0,
-  "y": 210,
+  "x": 72,
+  "y": 197,
   "definition": "sea_1_m0"
  },
  "sea_1_2": {
-  "x": 0,
-  "y": 266,
+  "x": 91,
+  "y": 250,
   "definition": "sea_1_m1"
  },
  "sea_1_3": {
-  "x": 0,
-  "y": 322,
+  "x": 110,
+  "y": 303,
   "definition": "sea_1_m2"
  },
  "sea_1_4": {
-  "x": 0,
-  "y": 378,
+  "x": 129,
+  "y": 355,
   "definition": "sea_1_m0"
  },
  "sea_1_5": {
-  "x": 0,
-  "y": 434,
+  "x": 148,
+  "y": 408,
   "definition": "sea_1_m1"
  },
  "sea_1_6": {
-  "x": 0,
-  "y": 490,
+  "x": 168,
+  "y": 460,
   "definition": "sea_1_notable"
  },
  "sea_1_7": {
-  "x": 0,
-  "y": 546,
+  "x": 187,
+  "y": 513,
   "definition": "sea_1_m0"
  },
  "sea_1_8": {
-  "x": 0,
-  "y": 602,
+  "x": 206,
+  "y": 566,
   "definition": "sea_1_m1"
  },
  "sea_1_9": {
-  "x": 0,
-  "y": 658,
+  "x": 225,
+  "y": 618,
   "definition": "sea_1_m2"
  },
  "sea_1_10": {
-  "x": 0,
-  "y": 714,
+  "x": 244,
+  "y": 671,
   "definition": "sea_1_m0"
  },
  "sea_1_11": {
-  "x": 0,
-  "y": 770,
+  "x": 263,
+  "y": 724,
   "definition": "sea_u_battle_breath"
  },
  "sea_1_mastery": {
-  "x": 0,
-  "y": 834,
+  "x": 285,
+  "y": 784,
   "definition": "sea_mastery_battle_breath"
  },
  "sea_2_1": {
-  "x": -47,
-  "y": 205,
+  "x": 26,
+  "y": 208,
   "definition": "sea_2_m0"
  },
  "sea_2_2": {
-  "x": -60,
-  "y": 259,
+  "x": 32,
+  "y": 264,
   "definition": "sea_2_m1"
  },
  "sea_2_3": {
-  "x": -72,
-  "y": 314,
+  "x": 39,
+  "y": 320,
   "definition": "sea_2_m2"
  },
  "sea_2_4": {
-  "x": -85,
-  "y": 368,
+  "x": 46,
+  "y": 375,
   "definition": "sea_2_m0"
  },
  "sea_2_5": {
-  "x": -98,
-  "y": 423,
+  "x": 53,
+  "y": 431,
   "definition": "sea_2_m1"
  },
  "sea_2_6": {
-  "x": -110,
-  "y": 477,
+  "x": 60,
+  "y": 486,
   "definition": "sea_2_notable"
  },
  "sea_2_7": {
-  "x": -123,
-  "y": 532,
+  "x": 67,
+  "y": 542,
   "definition": "sea_2_m0"
  },
  "sea_2_8": {
-  "x": -135,
-  "y": 587,
+  "x": 73,
+  "y": 598,
   "definition": "sea_2_m1"
  },
  "sea_2_9": {
-  "x": -148,
-  "y": 641,
+  "x": 80,
+  "y": 653,
   "definition": "sea_2_m2"
  },
  "sea_2_10": {
-  "x": -161,
-  "y": 696,
+  "x": 87,
+  "y": 709,
   "definition": "sea_2_m0"
  },
  "sea_2_11": {
-  "x": -173,
-  "y": 750,
+  "x": 94,
+  "y": 764,
   "definition": "sea_u_sea_gifts"
  },
  "sea_2_mastery": {
-  "x": -188,
-  "y": 813,
+  "x": 102,
+  "y": 828,
   "definition": "sea_mastery_sea_gifts"
  },
  "sea_keystone": {
-  "x": 0,
-  "y": 918,
+  "x": 314,
+  "y": 863,
   "definition": "sea_keystone"
  },
  "exp_0_1": {
-  "x": -111,
-  "y": 178,
+  "x": -26,
+  "y": 208,
   "definition": "exp_0_m0"
  },
  "exp_0_2": {
-  "x": -141,
-  "y": 226,
+  "x": -32,
+  "y": 264,
   "definition": "exp_0_m1"
  },
  "exp_0_3": {
-  "x": -171,
-  "y": 273,
+  "x": -39,
+  "y": 320,
   "definition": "exp_0_m2"
  },
  "exp_0_4": {
-  "x": -200,
-  "y": 321,
+  "x": -46,
+  "y": 375,
   "definition": "exp_0_m0"
  },
  "exp_0_5": {
-  "x": -230,
-  "y": 368,
+  "x": -53,
+  "y": 431,
   "definition": "exp_0_m1"
  },
  "exp_0_6": {
-  "x": -260,
-  "y": 416,
+  "x": -60,
+  "y": 486,
   "definition": "exp_0_notable"
  },
  "exp_0_7": {
-  "x": -289,
-  "y": 463,
+  "x": -67,
+  "y": 542,
   "definition": "exp_0_m0"
  },
  "exp_0_8": {
-  "x": -319,
-  "y": 511,
+  "x": -73,
+  "y": 598,
   "definition": "exp_0_m1"
  },
  "exp_0_9": {
-  "x": -349,
-  "y": 558,
+  "x": -80,
+  "y": 653,
   "definition": "exp_0_m2"
  },
  "exp_0_10": {
-  "x": -378,
-  "y": 606,
+  "x": -87,
+  "y": 709,
   "definition": "exp_0_m0"
  },
  "exp_0_11": {
-  "x": -408,
-  "y": 653,
+  "x": -94,
+  "y": 764,
   "definition": "exp_u_pathfinder"
  },
  "exp_0_mastery": {
-  "x": -442,
-  "y": 707,
+  "x": -102,
+  "y": 828,
   "definition": "exp_mastery_pathfinder"
  },
  "exp_1_1": {
-  "x": -148,
-  "y": 148,
+  "x": -72,
+  "y": 197,
   "definition": "exp_1_m0"
  },
  "exp_1_2": {
-  "x": -188,
-  "y": 188,
+  "x": -91,
+  "y": 250,
   "definition": "exp_1_m1"
  },
  "exp_1_3": {
-  "x": -228,
-  "y": 228,
+  "x": -110,
+  "y": 303,
   "definition": "exp_1_m2"
  },
  "exp_1_4": {
-  "x": -267,
-  "y": 267,
+  "x": -129,
+  "y": 355,
   "definition": "exp_1_m3"
  },
  "exp_1_5": {
-  "x": -307,
-  "y": 307,
+  "x": -148,
+  "y": 408,
   "definition": "exp_1_m0"
  },
  "exp_1_6": {
-  "x": -346,
-  "y": 346,
+  "x": -168,
+  "y": 460,
   "definition": "exp_1_notable"
  },
  "exp_1_7": {
-  "x": -386,
-  "y": 386,
+  "x": -187,
+  "y": 513,
   "definition": "exp_1_m2"
  },
  "exp_1_8": {
-  "x": -426,
-  "y": 426,
+  "x": -206,
+  "y": 566,
   "definition": "exp_1_m3"
  },
  "exp_1_9": {
-  "x": -465,
-  "y": 465,
+  "x": -225,
+  "y": 618,
   "definition": "exp_1_m0"
  },
  "exp_1_10": {
-  "x": -505,
-  "y": 505,
+  "x": -244,
+  "y": 671,
   "definition": "exp_1_m1"
  },
  "exp_1_11": {
-  "x": -544,
-  "y": 544,
+  "x": -263,
+  "y": 724,
   "definition": "exp_u_well_rested"
  },
  "exp_2_1": {
-  "x": -178,
-  "y": 111,
+  "x": -114,
+  "y": 176,
   "definition": "exp_2_m0"
  },
  "exp_2_2": {
-  "x": -226,
-  "y": 141,
+  "x": -145,
+  "y": 223,
   "definition": "exp_2_m1"
  },
  "exp_2_3": {
-  "x": -273,
-  "y": 171,
+  "x": -175,
+  "y": 270,
   "definition": "exp_2_m2"
  },
  "exp_2_4": {
-  "x": -321,
-  "y": 200,
+  "x": -206,
+  "y": 317,
   "definition": "exp_2_m0"
  },
  "exp_2_5": {
-  "x": -368,
-  "y": 230,
+  "x": -236,
+  "y": 364,
   "definition": "exp_2_m1"
  },
  "exp_2_6": {
-  "x": -416,
-  "y": 260,
+  "x": -267,
+  "y": 411,
   "definition": "exp_2_notable"
  },
  "exp_2_7": {
-  "x": -463,
-  "y": 289,
+  "x": -297,
+  "y": 458,
   "definition": "exp_2_m0"
  },
  "exp_2_8": {
-  "x": -511,
-  "y": 319,
+  "x": -328,
+  "y": 505,
   "definition": "exp_2_m1"
  },
  "exp_2_9": {
-  "x": -558,
-  "y": 349,
+  "x": -358,
+  "y": 552,
   "definition": "exp_2_m2"
  },
  "exp_2_10": {
-  "x": -606,
-  "y": 378,
+  "x": -389,
+  "y": 599,
   "definition": "exp_2_m0"
  },
  "exp_2_11": {
-  "x": -653,
-  "y": 408,
+  "x": -419,
+  "y": 646,
   "definition": "exp_u_rider"
  },
  "exp_2_mastery": {
-  "x": -707,
-  "y": 442,
+  "x": -454,
+  "y": 699,
   "definition": "exp_mastery_rider"
  },
  "exp_keystone": {
-  "x": -649,
-  "y": 649,
+  "x": -314,
+  "y": 863,
   "definition": "exp_keystone"
  },
  "dip_0_1": {
-  "x": -205,
-  "y": 47,
+  "x": -154,
+  "y": 143,
   "definition": "dip_0_m0"
  },
  "dip_0_2": {
-  "x": -259,
-  "y": 60,
+  "x": -195,
+  "y": 181,
   "definition": "dip_0_m1"
  },
  "dip_0_3": {
-  "x": -314,
-  "y": 72,
+  "x": -235,
+  "y": 220,
   "definition": "dip_0_m2"
  },
  "dip_0_4": {
-  "x": -368,
-  "y": 85,
+  "x": -276,
+  "y": 258,
   "definition": "dip_0_m0"
  },
  "dip_0_5": {
-  "x": -423,
-  "y": 98,
+  "x": -317,
+  "y": 296,
   "definition": "dip_0_m1"
  },
  "dip_0_6": {
-  "x": -477,
-  "y": 110,
+  "x": -358,
+  "y": 334,
   "definition": "dip_0_notable"
  },
  "dip_0_7": {
-  "x": -532,
-  "y": 123,
+  "x": -399,
+  "y": 372,
   "definition": "dip_0_m0"
  },
  "dip_0_8": {
-  "x": -587,
-  "y": 135,
+  "x": -440,
+  "y": 411,
   "definition": "dip_0_m1"
  },
  "dip_0_9": {
-  "x": -641,
-  "y": 148,
+  "x": -481,
+  "y": 449,
   "definition": "dip_0_m2"
  },
  "dip_0_10": {
-  "x": -696,
-  "y": 161,
+  "x": -522,
+  "y": 487,
   "definition": "dip_0_m0"
  },
  "dip_0_11": {
-  "x": -750,
-  "y": 173,
+  "x": -563,
+  "y": 525,
   "definition": "dip_u_quiet_step"
  },
  "dip_0_mastery": {
-  "x": -813,
-  "y": 188,
+  "x": -610,
+  "y": 569,
   "definition": "dip_mastery_quiet_step"
  },
  "dip_1_1": {
-  "x": -210,
-  "y": 0,
+  "x": -182,
+  "y": 105,
   "definition": "dip_1_m0"
  },
  "dip_1_2": {
-  "x": -266,
-  "y": 0,
+  "x": -230,
+  "y": 133,
   "definition": "dip_1_m1"
  },
  "dip_1_3": {
-  "x": -322,
-  "y": 0,
+  "x": -279,
+  "y": 161,
   "definition": "dip_1_m2"
  },
  "dip_1_4": {
-  "x": -378,
-  "y": 0,
+  "x": -327,
+  "y": 189,
   "definition": "dip_1_m0"
  },
  "dip_1_5": {
-  "x": -434,
-  "y": 0,
+  "x": -376,
+  "y": 217,
   "definition": "dip_1_m1"
  },
  "dip_1_6": {
-  "x": -490,
-  "y": 0,
+  "x": -424,
+  "y": 245,
   "definition": "dip_1_notable"
  },
  "dip_1_7": {
-  "x": -546,
-  "y": 0,
+  "x": -473,
+  "y": 273,
   "definition": "dip_1_m0"
  },
  "dip_1_8": {
-  "x": -602,
-  "y": 0,
+  "x": -521,
+  "y": 301,
   "definition": "dip_1_m1"
  },
  "dip_1_9": {
-  "x": -658,
-  "y": 0,
+  "x": -570,
+  "y": 329,
   "definition": "dip_1_m2"
  },
  "dip_1_10": {
-  "x": -714,
-  "y": 0,
+  "x": -618,
+  "y": 357,
   "definition": "dip_1_m0"
  },
  "dip_1_11": {
-  "x": -770,
-  "y": 0,
+  "x": -667,
+  "y": 385,
   "definition": "dip_u_silver_tongue"
  },
  "dip_1_mastery": {
-  "x": -834,
-  "y": 0,
+  "x": -722,
+  "y": 417,
   "definition": "dip_mastery_silver_tongue"
  },
  "dip_2_1": {
-  "x": -205,
-  "y": -47,
+  "x": -201,
+  "y": 61,
   "definition": "dip_2_m0"
  },
  "dip_2_2": {
-  "x": -259,
-  "y": -60,
+  "x": -254,
+  "y": 78,
   "definition": "dip_2_m1"
  },
  "dip_2_3": {
-  "x": -314,
-  "y": -72,
+  "x": -308,
+  "y": 94,
   "definition": "dip_2_m2"
  },
  "dip_2_4": {
-  "x": -368,
-  "y": -85,
+  "x": -361,
+  "y": 111,
   "definition": "dip_2_m0"
  },
  "dip_2_5": {
-  "x": -423,
-  "y": -98,
+  "x": -415,
+  "y": 127,
   "definition": "dip_2_m1"
  },
  "dip_2_6": {
-  "x": -477,
-  "y": -110,
+  "x": -469,
+  "y": 143,
   "definition": "dip_2_notable"
  },
  "dip_2_7": {
-  "x": -532,
-  "y": -123,
+  "x": -522,
+  "y": 160,
   "definition": "dip_2_m0"
  },
  "dip_2_8": {
-  "x": -587,
-  "y": -135,
+  "x": -576,
+  "y": 176,
   "definition": "dip_2_m1"
  },
  "dip_2_9": {
-  "x": -641,
-  "y": -148,
+  "x": -629,
+  "y": 192,
   "definition": "dip_2_m2"
  },
  "dip_2_10": {
-  "x": -696,
-  "y": -161,
+  "x": -683,
+  "y": 209,
   "definition": "dip_2_m0"
  },
  "dip_2_11": {
-  "x": -750,
-  "y": -173,
+  "x": -736,
+  "y": 225,
   "definition": "dip_u_goblin_friend"
  },
  "dip_keystone": {
-  "x": -918,
-  "y": 0,
+  "x": -795,
+  "y": 459,
   "definition": "dip_keystone"
  },
  "tra_0_1": {
-  "x": -178,
-  "y": -111,
+  "x": -210,
+  "y": 11,
   "definition": "tra_0_m0"
  },
  "tra_0_2": {
-  "x": -226,
-  "y": -141,
+  "x": -266,
+  "y": 14,
   "definition": "tra_0_m1"
  },
  "tra_0_3": {
-  "x": -273,
-  "y": -171,
+  "x": -322,
+  "y": 17,
   "definition": "tra_0_m2"
  },
  "tra_0_4": {
-  "x": -321,
-  "y": -200,
+  "x": -377,
+  "y": 20,
   "definition": "tra_0_m0"
  },
  "tra_0_5": {
-  "x": -368,
-  "y": -230,
+  "x": -433,
+  "y": 23,
   "definition": "tra_0_m1"
  },
  "tra_0_6": {
-  "x": -416,
-  "y": -260,
+  "x": -489,
+  "y": 26,
   "definition": "tra_0_notable"
  },
  "tra_0_7": {
-  "x": -463,
-  "y": -289,
+  "x": -545,
+  "y": 29,
   "definition": "tra_0_m0"
  },
  "tra_0_8": {
-  "x": -511,
-  "y": -319,
+  "x": -601,
+  "y": 32,
   "definition": "tra_0_m1"
  },
  "tra_0_9": {
-  "x": -558,
-  "y": -349,
+  "x": -657,
+  "y": 34,
   "definition": "tra_0_m2"
  },
  "tra_0_10": {
-  "x": -606,
-  "y": -378,
+  "x": -713,
+  "y": 37,
   "definition": "tra_0_m0"
  },
  "tra_0_11": {
-  "x": -653,
-  "y": -408,
+  "x": -769,
+  "y": 40,
   "definition": "tra_u_haggler"
  },
  "tra_0_mastery": {
-  "x": -707,
-  "y": -442,
+  "x": -833,
+  "y": 44,
   "definition": "tra_mastery_haggler"
  },
  "tra_1_1": {
-  "x": -148,
-  "y": -148,
+  "x": -207,
+  "y": -36,
   "definition": "tra_1_m0"
  },
  "tra_1_2": {
-  "x": -188,
-  "y": -188,
+  "x": -262,
+  "y": -46,
   "definition": "tra_1_m1"
  },
  "tra_1_3": {
-  "x": -228,
-  "y": -228,
+  "x": -317,
+  "y": -56,
   "definition": "tra_1_m2"
  },
  "tra_1_4": {
-  "x": -267,
-  "y": -267,
+  "x": -372,
+  "y": -66,
   "definition": "tra_1_m0"
  },
  "tra_1_5": {
-  "x": -307,
-  "y": -307,
+  "x": -427,
+  "y": -75,
   "definition": "tra_1_m1"
  },
  "tra_1_6": {
-  "x": -346,
-  "y": -346,
+  "x": -483,
+  "y": -85,
   "definition": "tra_1_notable"
  },
  "tra_1_7": {
-  "x": -386,
-  "y": -386,
+  "x": -538,
+  "y": -95,
   "definition": "tra_1_m0"
  },
  "tra_1_8": {
-  "x": -426,
-  "y": -426,
+  "x": -593,
+  "y": -105,
   "definition": "tra_1_m1"
  },
  "tra_1_9": {
-  "x": -465,
-  "y": -465,
+  "x": -648,
+  "y": -114,
   "definition": "tra_1_m2"
  },
  "tra_1_10": {
-  "x": -505,
-  "y": -505,
+  "x": -703,
+  "y": -124,
   "definition": "tra_1_m0"
  },
  "tra_1_11": {
-  "x": -544,
-  "y": -544,
+  "x": -758,
+  "y": -134,
   "definition": "tra_u_village_gifts"
  },
  "tra_1_mastery": {
-  "x": -590,
-  "y": -590,
+  "x": -821,
+  "y": -145,
   "definition": "tra_mastery_village_gifts"
  },
  "tra_2_1": {
-  "x": -111,
-  "y": -178,
+  "x": -193,
+  "y": -82,
   "definition": "tra_2_m0"
  },
  "tra_2_2": {
-  "x": -141,
-  "y": -226,
+  "x": -245,
+  "y": -104,
   "definition": "tra_2_m1"
  },
  "tra_2_3": {
-  "x": -171,
-  "y": -273,
+  "x": -296,
+  "y": -126,
   "definition": "tra_2_m2"
  },
  "tra_2_4": {
-  "x": -200,
-  "y": -321,
+  "x": -348,
+  "y": -148,
   "definition": "tra_2_m0"
  },
  "tra_2_5": {
-  "x": -230,
-  "y": -368,
+  "x": -399,
+  "y": -170,
   "definition": "tra_2_m1"
  },
  "tra_2_6": {
-  "x": -260,
-  "y": -416,
+  "x": -451,
+  "y": -191,
   "definition": "tra_2_notable"
  },
  "tra_2_7": {
-  "x": -289,
-  "y": -463,
+  "x": -503,
+  "y": -213,
   "definition": "tra_2_m0"
  },
  "tra_2_8": {
-  "x": -319,
-  "y": -511,
+  "x": -554,
+  "y": -235,
   "definition": "tra_2_m1"
  },
  "tra_2_9": {
-  "x": -349,
-  "y": -558,
+  "x": -606,
+  "y": -257,
   "definition": "tra_2_m2"
  },
  "tra_2_10": {
-  "x": -378,
-  "y": -606,
+  "x": -657,
+  "y": -279,
   "definition": "tra_2_m0"
  },
  "tra_2_11": {
-  "x": -408,
-  "y": -653,
+  "x": -709,
+  "y": -301,
   "definition": "tra_u_mercenaries"
  },
  "tra_2_mastery": {
-  "x": -442,
-  "y": -707,
+  "x": -768,
+  "y": -326,
   "definition": "tra_mastery_mercenaries"
  },
  "tra_keystone": {
-  "x": -649,
-  "y": -649,
+  "x": -904,
+  "y": -159,
   "definition": "tra_keystone"
+ },
+ "bag_0_1": {
+  "x": -168,
+  "y": -126,
+  "definition": "bag_0_m0"
+ },
+ "bag_0_2": {
+  "x": -212,
+  "y": -160,
+  "definition": "bag_0_m1"
+ },
+ "bag_0_3": {
+  "x": -257,
+  "y": -194,
+  "definition": "bag_0_m2"
+ },
+ "bag_0_4": {
+  "x": -302,
+  "y": -227,
+  "definition": "bag_0_m0"
+ },
+ "bag_0_5": {
+  "x": -347,
+  "y": -261,
+  "definition": "bag_0_m1"
+ },
+ "bag_0_6": {
+  "x": -391,
+  "y": -295,
+  "definition": "bag_0_notable"
+ },
+ "bag_0_7": {
+  "x": -436,
+  "y": -329,
+  "definition": "bag_0_m0"
+ },
+ "bag_0_8": {
+  "x": -481,
+  "y": -362,
+  "definition": "bag_0_m1"
+ },
+ "bag_0_9": {
+  "x": -526,
+  "y": -396,
+  "definition": "bag_0_m2"
+ },
+ "bag_0_10": {
+  "x": -570,
+  "y": -430,
+  "definition": "bag_0_m0"
+ },
+ "bag_0_11": {
+  "x": -615,
+  "y": -463,
+  "definition": "bag_u_extra_row"
+ },
+ "bag_0_mastery": {
+  "x": -666,
+  "y": -502,
+  "definition": "bag_mastery_extra_row"
+ },
+ "bag_1_1": {
+  "x": -135,
+  "y": -161,
+  "definition": "bag_1_m0"
+ },
+ "bag_1_2": {
+  "x": -171,
+  "y": -204,
+  "definition": "bag_1_m1"
+ },
+ "bag_1_3": {
+  "x": -207,
+  "y": -247,
+  "definition": "bag_1_m2"
+ },
+ "bag_1_4": {
+  "x": -243,
+  "y": -290,
+  "definition": "bag_1_m0"
+ },
+ "bag_1_5": {
+  "x": -279,
+  "y": -332,
+  "definition": "bag_1_m1"
+ },
+ "bag_1_6": {
+  "x": -315,
+  "y": -375,
+  "definition": "bag_1_notable"
+ },
+ "bag_1_7": {
+  "x": -351,
+  "y": -418,
+  "definition": "bag_1_m0"
+ },
+ "bag_1_8": {
+  "x": -387,
+  "y": -461,
+  "definition": "bag_1_m1"
+ },
+ "bag_1_9": {
+  "x": -423,
+  "y": -504,
+  "definition": "bag_1_m2"
+ },
+ "bag_1_10": {
+  "x": -459,
+  "y": -547,
+  "definition": "bag_1_m0"
+ },
+ "bag_1_11": {
+  "x": -495,
+  "y": -590,
+  "definition": "bag_u_pocket_crafting"
+ },
+ "bag_2_1": {
+  "x": -95,
+  "y": -187,
+  "definition": "bag_2_m0"
+ },
+ "bag_2_2": {
+  "x": -121,
+  "y": -237,
+  "definition": "bag_2_m1"
+ },
+ "bag_2_3": {
+  "x": -146,
+  "y": -287,
+  "definition": "bag_2_m2"
+ },
+ "bag_2_4": {
+  "x": -172,
+  "y": -337,
+  "definition": "bag_2_m0"
+ },
+ "bag_2_5": {
+  "x": -197,
+  "y": -387,
+  "definition": "bag_2_m1"
+ },
+ "bag_2_6": {
+  "x": -222,
+  "y": -437,
+  "definition": "bag_2_notable"
+ },
+ "bag_2_7": {
+  "x": -248,
+  "y": -486,
+  "definition": "bag_2_m0"
+ },
+ "bag_2_8": {
+  "x": -273,
+  "y": -536,
+  "definition": "bag_2_m1"
+ },
+ "bag_2_9": {
+  "x": -299,
+  "y": -586,
+  "definition": "bag_2_m2"
+ },
+ "bag_2_10": {
+  "x": -324,
+  "y": -636,
+  "definition": "bag_2_m0"
+ },
+ "bag_2_11": {
+  "x": -350,
+  "y": -686,
+  "definition": "bag_u_mender"
+ },
+ "bag_2_mastery": {
+  "x": -379,
+  "y": -743,
+  "definition": "bag_mastery_mender"
+ },
+ "bag_keystone": {
+  "x": -590,
+  "y": -703,
+  "definition": "bag_keystone"
  }
 }

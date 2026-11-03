@@ -1,6 +1,6 @@
 """The background of the skill tree «Шлях мандрівника»: a dark linen cloth embroidered in cross-stitch, every branch in its
 own thread under it, ornaments on the borders between branches, a rose under the root, and each branch's emblem and name
-stitched on the rim.
+stitched upright inside the branch.
 
   python gen_skilltree_bg.py      -> pack/overrides/kubejs/assets/wilds/textures/gui/skilltree.png (4096 x 4096)
 
@@ -19,18 +19,19 @@ N, C, S = 4096, 2048, 4          # picture size, centre, one stitch cell (pixels
 U = 1.086                        # picture pixels per tree unit
 rnd = random.Random(7)
 
-# branches clockwise from the top, as gen_skilltree.ORDER; thread colours a little dimmed for a dark cloth
+# branches clockwise from the top, as gen_skilltree.ORDER (nine, 40 degrees each); thread colours a little dimmed for a dark cloth
 BRANCHES = [("ВОЇН", (176, 48, 42), "sword"), ("МИСЛИВЕЦЬ", (70, 132, 58), "bow"), ("МАГ", (120, 82, 190), "star"),
             ("МАЙСТЕР", (200, 150, 44), "hammer"), ("МОРЕПЛАВЕЦЬ", (52, 92, 176), "anchor"), ("СЛІДОПИТ", (40, 150, 136), "compass"),
-            ("ДИПЛОМАТ", (196, 196, 206), "scroll"), ("ТОРГОВЕЦЬ", (200, 108, 44), "coin")]
+            ("ДИПЛОМАТ", (196, 196, 206), "scroll"), ("ТОРГОВЕЦЬ", (200, 108, 44), "coin"), ("ТОРБА", (156, 116, 74), "bag")]
+SECTOR = 360 / len(BRANCHES)
 GOLD, RED, BLACK = (214, 172, 84), (150, 34, 30), (30, 22, 20)
 # in tree units: the band between the inner ring and the first nodes, the fields of the branches, the rim beyond the
 # keystones, and where the emblems and names sit
-R_INNER_BAND, R_FIELD_IN, R_FIELD_OUT, R_RIM, R_EMBLEM, R_NAME = 165, 236, 820, 905, 962, 1032
+R_INNER_BAND, R_FIELD_IN, R_FIELD_OUT, R_RIM, R_LABEL = 165, 236, 820, 960, 688
 
 
 def centre_angle(i):
-    return 90 - i * 45
+    return 90 - i * SECTOR
 
 
 def dim(col, k):
@@ -221,6 +222,17 @@ a.bbbbb.a
 a.......a
 .aaaaaaa.
 """,
+    "bag": """
+...aaa...
+..a.c.a..
+...aaa...
+..abbba..
+.abbbbba.
+abbbcbbba
+abbbbbbba
+.abbbbba.
+..aaaaa..
+""",
     "coin": """
 ...aaa...
 ..abbba..
@@ -234,30 +246,33 @@ a.......a
 
 
 def name_label(name, col, emblem, font):
-    """the branch's emblem and, beside it, its name, stitched on a transparent piece of cloth"""
+    """the branch's emblem and, under it, its name, stitched on a transparent piece of cloth"""
     mask = Image.new("L", (200, 20), 0)
     ImageDraw.Draw(mask).text((0, 0), name, font=font, fill=255)
     mask = mask.crop(mask.getbbox())
     w, h = mask.size
-    t = 3                                          # the letters' stitch, finer than the rest
+    t = 2                                          # the letters' stitch, finer than the rest
     rows = EMBLEMS[emblem].strip("\n").split("\n")
     ew, eh = max(len(r) for r in rows) * S, len(rows) * S
-    lw, lh = ew + 10 + w * t, max(eh, h * t) + 8
+    lw, lh = max(ew, w * t) + 8, eh + 6 + h * t + 8
     label = Image.new("RGBA", (lw, lh), (0, 0, 0, 0))
+    # a darker patch under the letters, so they read over the branch's lattice
+    ImageDraw.Draw(label).rounded_rectangle([0, eh + 2, lw - 1, lh - 1], radius=6, fill=(18, 13, 10, 170))
     d = ImageDraw.Draw(label)
     colours = {"a": col, "b": dim(col, 1.3), "c": GOLD}
+    ex = (lw - ew) // 2 // S
     for j, row in enumerate(rows):
         for k, ch in enumerate(row):
             if ch in colours:
-                cross(d, k, j + (lh - eh) // (2 * S), colours[ch])
+                cross(d, ex + k, j, colours[ch])
     mp = mask.load()
-    oy = (lh - h * t) // 2
+    ox, oy = (lw - w * t) // 2, eh + 6 + 2
     for j in range(h):
         for k in range(w):
             if mp[k, j] > 100:
-                x, y = ew + 10 + k * t, oy + j * t
-                d.line([x, y + t - 1, x + t - 1, y], fill=dim(GOLD, rnd.uniform(0.9, 1.08)), width=1)
-                d.line([x, y, x + t - 1, y + t - 1], fill=dim(GOLD, 0.62), width=1)
+                x, y = ox + k * t, oy + j * t
+                d.line([x, y + t - 1, x + t - 1, y], fill=dim(GOLD, rnd.uniform(0.95, 1.12)), width=1)
+                d.line([x, y, x + t - 1, y + t - 1], fill=dim(GOLD, 0.7), width=1)
     return label
 
 
@@ -274,17 +289,17 @@ def main():
             if r < R_FIELD_IN or r > R_FIELD_OUT:
                 continue
             ang = math.degrees(math.atan2(y, x))
-            bi = round((90 - ang) / 45) % 8
-            off = abs(((90 - bi * 45) - ang + 180) % 360 - 180)
-            if off > 21:
+            bi = round((90 - ang) / SECTOR) % len(BRANCHES)
+            off = abs(((90 - bi * SECTOR) - ang + 180) % 360 - 180)
+            if off > SECTOR / 2 - 2:
                 continue
             fade = 1 - (r - R_FIELD_IN) / (R_FIELD_OUT - R_FIELD_IN)
-            blend_cross(img, gx, gy, BRANCHES[bi][1], 0.30 + 0.40 * fade * (1 - off / 26))
+            blend_cross(img, gx, gy, BRANCHES[bi][1], 0.30 + 0.40 * fade * (1 - off / (SECTOR / 2 + 3)))
     d = ImageDraw.Draw(img)
 
     # the borders between branches: chains of small rhombi in gold, each with a stitch of the branch's colour
-    for i in range(8):
-        a = centre_angle(i) - 22.5
+    for i in range(len(BRANCHES)):
+        a = centre_angle(i) - SECTOR / 2
         r = 300
         while r < R_RIM - 40:
             cx, cy = polar_cell(a, r)
@@ -299,25 +314,22 @@ def main():
     # the rim beyond the keystones: two rings with roses between the branches
     ring(d, R_RIM - 10, dim(GOLD, 0.65))
     ring(d, R_RIM + 10, dim(RED, 0.8))
-    for i in range(8):
-        cx, cy = polar_cell(centre_angle(i) - 22.5, R_RIM)
+    for i in range(len(BRANCHES)):
+        cx, cy = polar_cell(centre_angle(i) - SECTOR / 2, R_RIM)
         stamp(d, SMALL_ROSE, cx, cy, {"a": GOLD, "b": BRANCHES[i][1], "c": (240, 225, 190)}, scale=2)
 
-    # each branch: its emblem and name, where the screen can show them (it never zooms out past the tree's square):
-    # just beyond the keystone for the branches on the axes (upright at the top and bottom, turned on the sides), in the
-    # corners, with more room, for the diagonal ones
+    # each branch: its emblem and, under it, its name, upright, inside the branch between its left and middle spokes
+    # (gen_skilltree.py: spokes at the axis and 13 degrees to each side), between the 9th and 10th nodes: always on the
+    # screen, never over a node, all read the same way
     try:
         font = ImageFont.truetype("C:/Windows/Fonts/georgiab.ttf", 10)
     except OSError:
         font = ImageFont.load_default()
     for i, (name, col, emblem) in enumerate(BRANCHES):
-        a = centre_angle(i)
+        a = centre_angle(i) + 6.5
         label = name_label(name, col, emblem, font)
-        if i in (2, 6):                                  # Маг on the right, Дипломат on the left: read along the edge
-            label = label.rotate(-90 if i == 2 else 90, expand=True)
-        r = 897 if i % 2 == 0 else 1000
-        x = C + math.cos(math.radians(a)) * r * U - label.width / 2
-        y = C - math.sin(math.radians(a)) * r * U - label.height / 2
+        x = C + math.cos(math.radians(a)) * R_LABEL * U - label.width / 2
+        y = C - math.sin(math.radians(a)) * R_LABEL * U - label.height / 2
         img.paste(label, (int(x), int(y)), label)
     d = ImageDraw.Draw(img)
 
