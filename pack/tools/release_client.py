@@ -18,6 +18,8 @@ import datetime, hashlib, json, os, re, shutil, subprocess, sys, urllib.request,
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 REPO = "volodymyr-holovan/wilds-and-wanderers"
+# opt-client mods -> the program's switch that installs them (Settings in launcher/src/.../Store.cs)
+OPTIONAL = {"superresolution": "upscaler"}
 LAUNCHER = os.path.join(ROOT, "launcher")
 NEOFORGE = "21.1.264"
 MINECRAFT = "1.21.1"
@@ -88,7 +90,12 @@ def build(version):
         if m["where"] in ("both", "client", "opt-client"):
             if not m.get("sha1") or not m.get("url"):
                 sys.exit(f"{m['file']}: no hash or link in docs/mods.json")
-            mods.append({"file": m["file"], "url": m["url"], "sha1": m["sha1"], "size": m["size"]})
+            entry = {"file": m["file"], "url": m["url"], "sha1": m["sha1"], "size": m["size"]}
+            if m["where"] == "opt-client":
+                # installed only when the player ticks it in the program (program 1.3+); every opt-client mod needs a
+                # feature name here
+                entry["optional"] = OPTIONAL[m["slug"]]
+            mods.append(entry)
     # the pack's own mods: built locally (mods-src), shipped as release assets
     for fn in sorted(os.listdir(os.path.join(ROOT, "client", "mods"))):
         if fn.startswith("wilds_") and fn.endswith(".jar") and not fn.startswith("wilds_dump"):

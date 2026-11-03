@@ -14,6 +14,8 @@ namespace Wilds.Launcher.Core
         public string MinecraftDir;
         /// <summary>0: chosen from the computer's memory</summary>
         public int MemoryGb;
+        /// <summary>DLSS / FSR / XeSS (Super Resolution): installed only when the player ticks it</summary>
+        public bool Upscaler;
 
         public static Settings Load(string file)
         {
@@ -25,6 +27,7 @@ namespace Wilds.Launcher.Core
                 s.Preset = Json.Str(d, "preset");
                 s.MemoryGb = (int)Json.Long(d, "memory_gb");
                 s.MinecraftDir = Json.Str(d, "minecraft_dir");
+                s.Upscaler = Json.Bool(d, "upscaler");
             }
             catch (Exception e)
             {
@@ -35,7 +38,7 @@ namespace Wilds.Launcher.Core
 
         public void Save(string file)
         {
-            var d = new Dictionary<string, object> { ["preset"] = Preset, ["memory_gb"] = MemoryGb, ["minecraft_dir"] = MinecraftDir };
+            var d = new Dictionary<string, object> { ["preset"] = Preset, ["memory_gb"] = MemoryGb, ["minecraft_dir"] = MinecraftDir, ["upscaler"] = Upscaler };
             Files.WriteAtomic(file, Json.Write(d));
         }
     }

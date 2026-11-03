@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -91,7 +92,15 @@ namespace Wilds.Launcher.Core
 
         public int MemoryGb => Settings.MemoryGb > 0 ? Settings.MemoryGb : GameStarter.RecommendedMemoryGb(GameStarter.TotalMemoryGb());
 
-        public SyncPlan Plan(bool deep) => PackSync.Plan(Manifest, Paths, State, deep, !State.Installed);
+        public SyncPlan Plan(bool deep) => PackSync.Plan(Manifest, Paths, State, deep, !State.Installed, ChosenOptional());
+
+        /// <summary>the optional mods the player ticked</summary>
+        public ISet<string> ChosenOptional()
+        {
+            var s = new HashSet<string>();
+            if (Settings.Upscaler) s.Add("upscaler");
+            return s;
+        }
 
         /// <summary>after Prepare: where mods of something else went (null: there were none)</summary>
         public string ArchivedMods { get; private set; }
@@ -148,6 +157,7 @@ namespace Wilds.Launcher.Core
                 State.AppliedPreset = preset.Id;
             }
             State.AppliedMemory = MemoryGb.ToString();
+            Upscaler.ApplyEarlyWindow(Paths, Settings.Upscaler);
             State.PackVersion = Manifest.Version;
             State.Save(Paths.StateFile);
             progress?.Report(new Status("Готово", 1));

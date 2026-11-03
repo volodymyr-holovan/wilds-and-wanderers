@@ -1,6 +1,7 @@
 package ua.wilds.core.net;
 
 import io.netty.buffer.ByteBuf;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -15,6 +16,7 @@ import ua.wilds.core.skills.branch.CombatSkills;
 import ua.wilds.core.skills.branch.DiplomatSkills;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /** Network messages of Wilds Core. Every payload is optional, so a vanilla client can still join. */
@@ -89,6 +91,31 @@ public final class Net {
         }
     }
 
+    /** client -> server: the item finder, the ids of the items whose name matches what the player typed */
+    public record FinderQuery(List<String> ids) implements CustomPacketPayload {
+        public static final Type<FinderQuery> TYPE = typeOf("finder_query");
+        public static final StreamCodec<ByteBuf, FinderQuery> CODEC = ByteBufCodecs.stringUtf8(128).apply(ByteBufCodecs.list(512))
+                .map(FinderQuery::new, FinderQuery::ids);
+
+        public Type<FinderQuery> type() {
+            return TYPE;
+        }
+    }
+
+    /** server -> client: the places around the player that hold one of those items */
+    public record FinderHits(List<BlockPos> places) implements CustomPacketPayload {
+        public static final Type<FinderHits> TYPE = typeOf("finder_hits");
+        public static final StreamCodec<ByteBuf, FinderHits> CODEC = BlockPos.STREAM_CODEC.apply(ByteBufCodecs.list(256))
+                .map(FinderHits::new, FinderHits::places);
+
+        public Type<FinderHits> type() {
+            return TYPE;
+        }
+    }
+
+    /** set by the client entry point: shows the item finder's answer */
+    public static java.util.function.Consumer<List<BlockPos>> finderClient = h -> {};
+
     /** set by the client entry point: shows a conversation page (the server never calls it) */
     public static java.util.function.BiConsumer<Integer, String> dialogueClient = (n, j) -> {};
 
@@ -105,6 +132,12 @@ public final class Net {
             if (msg.index() < 0) ua.wilds.core.npc.Dialogue.close(p);
             else ua.wilds.core.npc.Dialogue.choose(p, msg.index());
         }));
+        r.playToServer(FinderQuery.TYPE, FinderQuery.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
+            if (!(ctx.player() instanceof ServerPlayer p)) return;
+            List<BlockPos> hits = ua.wilds.core.finder.Finder.find(p, msg.ids());
+            if (hits != null) net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(p, new FinderHits(hits));
+        }));
+        r.playToClient(FinderHits.TYPE, FinderHits.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> finderClient.accept(msg.places())));
         r.playToServer(Act.TYPE, Act.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
             if (!(ctx.player() instanceof ServerPlayer p)) return;
             switch (msg.action()) {

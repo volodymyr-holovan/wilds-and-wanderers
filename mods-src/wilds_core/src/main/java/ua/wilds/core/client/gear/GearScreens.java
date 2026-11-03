@@ -92,6 +92,7 @@ public final class GearScreens {
     public static void onInit(ScreenEvent.Init.Post e) {
         if (!isGearScreen(e.getScreen())) return;
         RecipeBookPanel.onInit(e);
+        FinderField.onInit(e);
     }
 
     /**
@@ -197,20 +198,30 @@ public final class GearScreens {
         }
 
         // the two buttons flank the hotbar: the recipe book left of it (as in the vanilla inventory), attributes right
-        int invLeft = Integer.MAX_VALUE, invRight = Integer.MIN_VALUE, hotbarY = Integer.MIN_VALUE;
+        int invLeft = Integer.MAX_VALUE, invRight = Integer.MIN_VALUE, hotbarY = Integer.MIN_VALUE, rowY = Integer.MAX_VALUE;
         for (Slot slot : c.getMenu().slots) {
             if (!slot.isActive() || !(slot.container instanceof Inventory)) continue;
             invLeft = Math.min(invLeft, slot.x);
             invRight = Math.max(invRight, slot.x + 16);
             if (slot.getContainerSlot() < 9) hotbarY = Math.max(hotbarY, slot.y);
+            else if (slot.getContainerSlot() < 36) rowY = Math.min(rowY, slot.y);
         }
         if (hotbarY == Integer.MIN_VALUE) {
+            FinderField.place(Integer.MIN_VALUE, 0, 0);
             RecipeBookPanel.placeButton(Integer.MIN_VALUE, 0);
             AttributesPanel.placeButton(Integer.MIN_VALUE, 0);
             return;
         }
         // the content moves this frame: place the buttons where its slots will be
         int movedX = contentLeft - content[0], movedY = contentTop - content[1];
+        // the item finder: left of the content, level with the inventory's first row; under the open recipe book; above
+        // the content; or, with room nowhere, not shown
+        int fw = Math.min(FinderField.W, contentLeft - GAP - MARGIN);
+        int bookBottom = bookTop + RecipeBookPanel.H + GAP;
+        if (!book && fw >= 70 && rowY != Integer.MAX_VALUE) FinderField.place(contentLeft - GAP - fw, c.getGuiTop() + rowY + movedY, fw);
+        else if (book && bookBottom + FinderField.H + 10 <= s.height - MARGIN) FinderField.place(left + RecipeBookPanel.TABS, bookBottom, Math.min(FinderField.W, RecipeBookPanel.W));
+        else if (top - FinderField.H - 10 - GAP >= MARGIN && !rowAbove) FinderField.place(contentLeft, top - FinderField.H - 10 - GAP, FinderField.W);
+        else FinderField.place(Integer.MIN_VALUE, 0, 0);
         RecipeBookPanel.placeButton(c.getGuiLeft() + invLeft + movedX - 34, c.getGuiTop() + hotbarY - 1 + movedY);
         AttributesPanel.placeButton(c.getGuiLeft() + invRight + movedX + 6, c.getGuiTop() + hotbarY - 1 + movedY);
     }
@@ -220,6 +231,7 @@ public final class GearScreens {
         GearLayout.poseAfter();
         RecipeBookPanel.render(e);
         EffectsPanel.render(e);
+        FinderField.render(e.getGuiGraphics(), e.getMouseX(), e.getMouseY(), e.getPartialTick());
     }
 
     /** the plain button that took the last press (its release and drags go to it too) */
@@ -263,7 +275,9 @@ public final class GearScreens {
     }
 
     public static void onKey(ScreenEvent.KeyPressed.Pre e) {
-        if (isGearScreen(e.getScreen())) RecipeBookPanel.onKey(e);
+        if (!isGearScreen(e.getScreen())) return;
+        FinderField.onKey(e);
+        if (!e.isCanceled()) RecipeBookPanel.onKey(e);
     }
 
     public static void onKeyUp(ScreenEvent.KeyReleased.Pre e) {
@@ -271,7 +285,9 @@ public final class GearScreens {
     }
 
     public static void onChar(ScreenEvent.CharacterTyped.Pre e) {
-        if (isGearScreen(e.getScreen())) RecipeBookPanel.onChar(e);
+        if (!isGearScreen(e.getScreen())) return;
+        FinderField.onChar(e);
+        if (!e.isCanceled()) RecipeBookPanel.onChar(e);
     }
 
     // ---------------------------------------------------------------- the pack's defaults for the screen, once per world
@@ -585,7 +601,7 @@ public final class GearScreens {
         }
     }
 
-    private static void shot(Minecraft mc, String name) {
+    static void shot(Minecraft mc, String name) {
         WildsCore.LOG.info("Wilds Core: UI self-test screenshot {} of {}", name, mc.screen == null ? "no screen" : mc.screen.getClass().getName());
         Screenshot.grab(mc.gameDirectory, "wilds_ui_" + name + ".png", mc.getMainRenderTarget(), m -> {});
     }

@@ -112,6 +112,7 @@ namespace Wilds.Launcher
             MemorySlider.Maximum = Math.Max(4, Math.Min(16, total - 2));
             MemorySlider.Minimum = Math.Min(3, MemorySlider.Maximum);
             MemorySlider.Value = engine.MemoryGb;
+            UpscalerBox.IsChecked = engine.Settings.Upscaler;
             MemoryHint.Text = $"На комп'ютері {total} ГБ. Рекомендовано {recommended} ГБ." +
                               (total < 8 ? " Збірці тісно на такому комп'ютері: закрийте браузер перед грою." : "");
             UpdateMemoryText();
@@ -205,6 +206,21 @@ namespace Wilds.Launcher
             engine.SaveSettings();
             UpdateMemoryText();
             if (ready && !busy && engine.State.Installed && engine.State.AppliedMemory != engine.MemoryGb.ToString()) PlayButton.Content = "ЗАСТОСУВАТИ";
+        }
+
+        private void OnUpscalerChanged(object sender, RoutedEventArgs e)
+        {
+            if (engine == null || !IsLoaded) return;
+            bool on = UpscalerBox.IsChecked == true;
+            if (engine.Settings.Upscaler == on) return;
+            engine.Settings.Upscaler = on;
+            engine.SaveSettings();
+            if (ready && !busy && engine.State.Installed)
+            {
+                PlayButton.Content = "ЗАСТОСУВАТИ";
+                ShowStatus(on ? "Натисніть «Застосувати», щоб встановити DLSS / FSR. У грі: Налаштування → Графіка → Super Resolution."
+                              : "Натисніть «Застосувати», щоб прибрати DLSS / FSR.");
+            }
         }
 
         private void UpdateMemoryText() => MemoryText.Text = (int)Math.Round(MemorySlider.Value) + " ГБ";

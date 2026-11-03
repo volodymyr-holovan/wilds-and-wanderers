@@ -56,6 +56,9 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onKey);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onKeyUp);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.GearScreens::onChar);
+        NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.FinderField::render);
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> ua.wilds.core.client.gear.FinderField.tick());
+        ua.wilds.core.net.Net.finderClient = ua.wilds.core.client.gear.FinderField::answer;
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.AttributesPanel::onInit);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.AttributesPanel::onRender);
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.AttributesPanel::onScroll);

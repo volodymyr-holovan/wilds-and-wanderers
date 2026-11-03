@@ -112,6 +112,13 @@
                                         ValueChanged="OnMemoryChanged" />
                             </DockPanel>
                             <TextBlock x:Name="MemoryHint" FontSize="12" Foreground="{StaticResource Faint}" TextWrapping="Wrap" Margin="0,4,0,0" />
+                            <TextBlock Text="МАСШТАБУВАННЯ" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource Gold}" Margin="0,14,0,6" />
+                            <CheckBox x:Name="UpscalerBox" Foreground="{StaticResource Text}" FontSize="14" Checked="OnUpscalerChanged" Unchecked="OnUpscalerChanged"
+                                      ToolTip="Встановлює мод Super Resolution. Сам апскейлінг вмикається в грі й не входить у жоден пресет графіки">
+                                <TextBlock Text="DLSS / FSR / XeSS (експериментально)" Foreground="{StaticResource Text}" />
+                            </CheckBox>
+                            <TextBlock FontSize="12" Foreground="{StaticResource Faint}" TextWrapping="Wrap" Margin="0,4,0,0"
+                                       Text="Більше FPS: гра малюється в меншій роздільності й чітко збільшується. Увімкнути в грі: Налаштування → Графіка → Super Resolution. Потрібна відеокарта з OpenGL 4.3+, не працює на macOS." />
                             <Rectangle Height="1" Fill="#22FFFFFF" Margin="0,14,0,10" />
                             <Button x:Name="ServerButton" Style="{StaticResource LinkButton}" Click="OnCopyServer" Padding="0" Margin="-10,0,0,0"
                                     ToolTip="Сервер уже додано в список серверів гри. Клацніть, щоб скопіювати адресу." />

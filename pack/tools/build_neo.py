@@ -99,6 +99,9 @@ MODRINTH = {
     "enderscape": "both", "yungs-better-end-island": "server",
     # --- optional for stronger PCs ---
     "distanthorizons": "client", "iris": "client",
+    # DLSS / FSR / XeSS upscaling (03.11): installed only for players who tick it in the program (needs OpenGL 4.3 and
+    # closes the game on older GPUs and macOS), off in every preset, switched on in its own video settings section
+    "superresolution": "opt-client",
 }
 
 # CurseForge-only projects: project id -> placement (files come from the public CFWidget API)

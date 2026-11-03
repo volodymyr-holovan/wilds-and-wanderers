@@ -45,12 +45,14 @@ namespace Wilds.Launcher.Core
         private const string Mods = "mods/";
         private const string ShaderPacks = "shaderpacks/";
 
-        public static SyncPlan Plan(Manifest m, Paths p, InstallState st, bool deep, bool firstInstall)
+        public static SyncPlan Plan(Manifest m, Paths p, InstallState st, bool deep, bool firstInstall, ISet<string> optional = null)
         {
             var plan = new SyncPlan();
             var wanted = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             foreach (var f in m.Mods)
             {
+                // an optional mod the player did not choose is not wanted: an earlier copy is moved aside below
+                if (f.Optional != null && (optional == null || !optional.Contains(f.Optional))) continue;
                 string rel = Mods + f.Path;
                 wanted.Add(rel);
                 if (st.HashOf(rel, p.InGame(rel), deep) != f.Sha1) plan.Mods.Add(f);

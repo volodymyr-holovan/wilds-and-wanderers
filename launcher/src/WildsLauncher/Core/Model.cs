@@ -13,6 +13,8 @@ namespace Wilds.Launcher.Core
         public string Sha256;
         public long Size;
         public string Url;
+        /// <summary>a mod the player chooses in the program (e.g. "upscaler"); null: always installed</summary>
+        public string Optional;
 
         internal static FileEntry From(object o, string pathKey = "path")
         {
@@ -24,6 +26,7 @@ namespace Wilds.Launcher.Core
                 Sha256 = Json.Str(d, "sha256")?.ToLowerInvariant(),
                 Size = Json.Long(d, "size"),
                 Url = Json.Str(d, "url"),
+                Optional = Json.Str(d, "optional"),
             };
         }
     }
