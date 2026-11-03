@@ -56,6 +56,7 @@ public final class WildsWiki {
             GLFW.GLFW_KEY_O, "key.categories.wilds_wiki");
     public static boolean jei;
     private static Runnable pending;
+    private static int inWorld;
 
     public WildsWiki(IEventBus modBus) {
         jei = ModList.get().isLoaded("jei");
@@ -65,6 +66,7 @@ public final class WildsWiki {
         NeoForge.EVENT_BUS.addListener(RegisterClientCommandsEvent.class, WildsWiki::commands);
         NeoForge.EVENT_BUS.addListener(ClientTickEvent.Post.class, e -> tick());
         NeoForge.EVENT_BUS.addListener(ScreenEvent.KeyPressed.Pre.class, WildsWiki::screenKey);
+        ua.wilds.wiki.data.Recent.register();
     }
 
     private static void commands(RegisterClientCommandsEvent e) {
@@ -102,6 +104,11 @@ public final class WildsWiki {
         Minecraft mc = Minecraft.getInstance();
         if (ua.wilds.wiki.ui.SelfTest.ON) ua.wilds.wiki.ui.SelfTest.tick();
         if (ua.wilds.wiki.ui.PhotoMode.ON) ua.wilds.wiki.ui.PhotoMode.tick();
+        // ten seconds into a world (and after a resource reload) the index is built in the background, so the first
+        // opening of the wiki is instant
+        if (mc.level == null) inWorld = 0;
+        else if (++inWorld >= 200 && inWorld % 100 == 0) WikiData.prebuild();
+        if (mc.player != null) ua.wilds.wiki.data.Recent.tick(mc);
         if (pending != null && mc.screen == null) {
             Runnable r = pending;
             pending = null;

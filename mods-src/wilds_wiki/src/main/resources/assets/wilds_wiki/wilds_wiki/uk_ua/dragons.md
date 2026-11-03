@@ -8,6 +8,8 @@ keywords: дракон, драконы, dragon, dragons, приручити др
 ---
 Дракони з мода **Ice and Fire** — найнебезпечніші й найцінніші істоти світу. Бувають трьох стихій: [[entity:iceandfire:fire_dragon|вогняні]], [[entity:iceandfire:ice_dragon|крижані]] та [[entity:iceandfire:lightning_dragon|громові]]. Дрібні живуть у гніздах на поверхні, дорослі сплять у величезних печерах під землею поруч зі скарбами.
 
+> **Коротко, з чого почати:** не йдіть на дорослого дракона одразу. Знайдіть гніздо з дракончиками 1–3 стадії, візьміть **яйце**, вилупіть його (нижче — як), годуйте м'ясом, а з 3 стадії сідайте верхи. Дорослі дракони в печерах — це вже кінець гри.
+
 !entity iceandfire:fire_dragon 110
 
 # Стадії життя
@@ -49,3 +51,5 @@ keywords: дракон, драконы, dragon, dragons, приручити др
 Переможений дракон дає луску, кістки, кров, серце й череп. З кісток виходить зброя, з луски — броня, а кров і серце потрібні для драконячої сталі й магії. У цій збірці [[iceandfire:dragonbone]] годиться всюди, де потрібні «Стародавні кістки», а серце дракона замінює вісім рун у [[irons_spellbooks:mana_upgrade_orb|сфері покращення мани]] — див. [[wilds_wiki:links|Зв'язки між модами]].
 
 !icons iceandfire:dragonscales_red iceandfire:dragonbone iceandfire:fire_dragon_blood iceandfire:fire_dragon_heart iceandfire:dragon_skull_fire iceandfire:dragonsteel_fire_ingot
+
+Див. також: [[wilds_wiki:gems|Самоцвіти, гнізда й рідкісна зброя]], [[wilds_wiki:skills|Шлях мандрівника (навички)]], [[wilds_wiki:seas|Моря і кораблі]].

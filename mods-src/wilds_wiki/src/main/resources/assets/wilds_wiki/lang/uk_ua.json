@@ -167,5 +167,13 @@
   "wilds_wiki.dimension.minecraft.the_end": "Енд",
   "wilds_wiki.dimension.twilightforest.twilight_forest": "Сутінковий ліс",
   "wilds_wiki.dimension.aether.the_aether": "Ефір",
-  "wilds_wiki.section.advancements": "Досягнення"
+  "wilds_wiki.section.advancements": "Досягнення",
+  "wilds_wiki.nav.3": "Закладка: додати або прибрати",
+  "wilds_wiki.list.bookmarks": "Закладки",
+  "wilds_wiki.list.here": "Тут",
+  "wilds_wiki.list.dimension": "Вимір",
+  "wilds_wiki.list.places": "Де ви були",
+  "wilds_wiki.list.mobs": "Хто поруч",
+  "wilds_wiki.list.items": "Що ви роздивлялися",
+  "wilds_wiki.list.event": "Остання подія"
 }

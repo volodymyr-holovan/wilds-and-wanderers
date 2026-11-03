@@ -16,3 +16,5 @@ keywords: музика, саундтрек, бій, бос, мелодія, пл
 
 # Звідки музика
 Мелодії — з набору Reactive Music (Vindsvept, Adrian von Ziegler, Mufaya). Сільські, лісові й бойові теми «KM-…» — **Kevin MacLeod** (incompetech.com), ліцензія Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/). Набір мелодій збірки вмикається сам під час першого запуску; змінити його можна в налаштуваннях Reactive Music.
+
+Див. також: [[wilds_wiki:seasons|Пори року]], [[wilds_wiki:tents|Намети, юрти й похідний табір]].

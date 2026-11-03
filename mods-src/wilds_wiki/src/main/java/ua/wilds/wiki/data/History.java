@@ -13,7 +13,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Recent searches and recently opened pages, kept in config/wilds_wiki_history.json of the game folder. */
+/** Recent searches, recently opened pages and bookmarks, kept in config/wilds_wiki_history.json of the game folder. */
 public final class History {
     private static final int MAX = 20;
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
@@ -21,6 +21,7 @@ public final class History {
 
     public List<String> queries = new ArrayList<>();
     public List<String> viewed = new ArrayList<>();
+    public List<String> bookmarks = new ArrayList<>();
 
     private static Path file() {
         return FMLPaths.CONFIGDIR.get().resolve("wilds_wiki_history.json");
@@ -36,6 +37,7 @@ public final class History {
             if (instance == null) instance = new History();
             if (instance.queries == null) instance.queries = new ArrayList<>();
             if (instance.viewed == null) instance.viewed = new ArrayList<>();
+            if (instance.bookmarks == null) instance.bookmarks = new ArrayList<>();
         }
         return instance;
     }
@@ -56,6 +58,14 @@ public final class History {
         viewed.add(0, key);
         trim(viewed);
         save();
+    }
+
+    /** adds the page to the bookmarks, or takes it away when it is there; true when it is bookmarked now */
+    public boolean toggleBookmark(String key) {
+        boolean add = !bookmarks.remove(key);
+        if (add) bookmarks.add(0, key);
+        save();
+        return add;
     }
 
     public void clear() {

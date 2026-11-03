@@ -173,41 +173,98 @@ public final class WikiScreen extends Screen implements Page {
     // ------------------------------------------------------------------ search
 
     private void refreshRows() {
+        searchGen++;
         rows.clear();
         selected = -1;
         listScroll = 0;
         if (query.isBlank()) {
+            // with nothing typed: bookmarks, what is around the player now, then the history
+            section("wilds_wiki.list.bookmarks", History.get().bookmarks, 50);
+            boolean noHistory = History.get().queries.isEmpty() && History.get().viewed.isEmpty() && History.get().bookmarks.isEmpty();
+            if (ua.wilds.wiki.data.Recent.dimension != null) {
+                rows.add(new Row(null, null, Component.translatable("wilds_wiki.list.here").append(" · ").append(ua.wilds.wiki.data.Recent.dimensionName())));
+                if (ua.wilds.wiki.data.Recent.event != null) {
+                    rows.add(new Row(null, null, Component.translatable("wilds_wiki.list.event").append(": ").append(ua.wilds.wiki.data.Recent.event)));
+                    Entry ev = ua.wilds.wiki.data.Recent.eventKey == null ? null : data.entries.get(ua.wilds.wiki.data.Recent.eventKey);
+                    if (ev != null) rows.add(new Row(ev, null, null));
+                }
+                section("wilds_wiki.list.places", ua.wilds.wiki.data.Recent.places, 5);
+                section("wilds_wiki.list.mobs", ua.wilds.wiki.data.Recent.mobs, 10);
+                section("wilds_wiki.list.items", ua.wilds.wiki.data.Recent.items, 5);
+            }
             List<String> qs = History.get().queries;
             if (!qs.isEmpty()) {
                 rows.add(new Row(null, null, Component.translatable("wilds_wiki.list.recent_queries")));
                 for (String q : qs.subList(0, Math.min(8, qs.size()))) rows.add(new Row(null, q, Component.literal(q)));
             }
-            List<String> viewed = History.get().viewed;
-            if (!viewed.isEmpty()) {
-                rows.add(new Row(null, null, Component.translatable("wilds_wiki.list.recent_pages")));
-                for (String k : viewed) {
-                    Entry e = data.entries.get(k);
-                    if (e != null) rows.add(new Row(e, null, null));
-                }
-            }
-            if (rows.isEmpty()) {
+            section("wilds_wiki.list.recent_pages", History.get().viewed, 12);
+            if (noHistory) {
                 rows.add(new Row(null, null, Component.translatable("wilds_wiki.list.topics")));
                 for (Entry e : data.topicEntries()) rows.add(new Row(e, null, null));
             }
             resultCount = -1;
             return;
         }
-        List<Searcher.Hit<Entry>> hits = data.searcher.search(query, 300);
+        showHits(data.searcher.search(query, 300));
+    }
+
+    /** a header and the entries of those keys that the wiki knows (none: no header either) */
+    private void section(String title, List<String> keys, int max) {
+        List<Row> found = new ArrayList<>();
+        for (String k : keys) {
+            Entry e = data.entries.get(k);
+            if (e != null && found.size() < max) found.add(new Row(e, null, null));
+        }
+        if (found.isEmpty()) return;
+        rows.add(new Row(null, null, Component.translatable(title)));
+        rows.addAll(found);
+    }
+
+    private void showHits(List<Searcher.Hit<Entry>> hits) {
+        rows.clear();
+        selected = -1;
+        listScroll = 0;
         resultCount = hits.size();
         for (Searcher.Hit<Entry> h : hits) rows.add(new Row(h.value(), null, null));
         if (!rows.isEmpty()) selected = 0;
     }
 
+    /**
+     * While typing: the search runs on its own thread (12 000 entries take 40-120 ms) and the list changes when it is
+     * done, so typing never stutters; an answer to an older query is dropped.
+     */
+    private static final java.util.concurrent.ExecutorService SEARCH = java.util.concurrent.Executors.newSingleThreadExecutor(r -> {
+        Thread t = new Thread(r, "Wilds Wiki search");
+        t.setDaemon(true);
+        return t;
+    });
+    private int searchGen;
+
+    private void refreshRowsLater() {
+        if (query.isBlank()) {
+            refreshRows();
+            return;
+        }
+        String q = query;
+        int gen = ++searchGen;
+        SEARCH.execute(() -> {
+            List<Searcher.Hit<Entry>> hits;
+            try {
+                hits = data.searcher.search(q, 300);
+            } catch (RuntimeException ex) {
+                return;
+            }
+            Minecraft.getInstance().execute(() -> {
+                if (gen == searchGen) showHits(hits);
+            });
+        });
+    }
+
     @Override
     public void tick() {
-        if (queryChangedAt >= 0 && System.currentTimeMillis() - queryChangedAt > 120) {
+        if (queryChangedAt >= 0 && System.currentTimeMillis() - queryChangedAt > 80) {
             queryChangedAt = -1;
-            refreshRows();
+            refreshRowsLater();
         }
         for (Element e : page) e.tick();
     }
@@ -373,7 +430,7 @@ public final class WikiScreen extends Screen implements Page {
         else if (tooltipLines != null) g.renderComponentTooltip(font, tooltipLines, mx, my);
     }
 
-    private static final String[] NAV = {"◀", "▶", "⌂"};
+    private static final String[] NAV = {"◀", "▶", "⌂", "★"};
 
     private int navX(int i) {
         return x1 - 4 - (NAV.length - i) * 18;
@@ -384,8 +441,10 @@ public final class WikiScreen extends Screen implements Page {
             int bx = navX(i), by = y0 + 3;
             boolean enabled = i == 0 ? !back.isEmpty() : i == 1 ? !forward.isEmpty() : current != null;
             boolean hover = enabled && mx >= bx && mx < bx + 16 && my >= by && my < by + 16;
+            boolean marked = i == 3 && current != null && History.get().bookmarks.contains(current.key);
             Theme.card(g, bx, by, 16, 16, hover ? Theme.CARD_HOVER : Theme.CARD);
-            g.drawCenteredString(font, NAV[i], bx + 8, by + 4, enabled ? (hover ? Theme.ACCENT : Theme.TEXT) : Theme.FAINT);
+            g.drawCenteredString(font, i == 3 && !marked ? "☆" : NAV[i], bx + 8, by + 4,
+                    marked ? 0xFFF2C94C : enabled ? (hover ? Theme.ACCENT : Theme.TEXT) : Theme.FAINT);
             if (hover) tooltipLines = List.of(Component.translatable("wilds_wiki.nav." + i));
         }
     }
@@ -490,7 +549,11 @@ public final class WikiScreen extends Screen implements Page {
                 if (mx >= bx && mx < bx + 16 && my >= by && my < by + 16) {
                     if (i == 0) navigate(back, forward);
                     else if (i == 1) navigate(forward, back);
-                    else goHome();
+                    else if (i == 2) goHome();
+                    else if (current != null) {
+                        History.get().toggleBookmark(current.key);
+                        if (query.isBlank()) refreshRows();
+                    }
                     return true;
                 }
             }

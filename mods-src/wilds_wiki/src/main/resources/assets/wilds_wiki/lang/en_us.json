@@ -167,5 +167,13 @@
   "wilds_wiki.dimension.minecraft.the_end": "The End",
   "wilds_wiki.dimension.twilightforest.twilight_forest": "Twilight Forest",
   "wilds_wiki.dimension.aether.the_aether": "Aether",
-  "wilds_wiki.section.advancements": "Advancements"
+  "wilds_wiki.section.advancements": "Advancements",
+  "wilds_wiki.nav.3": "Bookmark: add or remove",
+  "wilds_wiki.list.bookmarks": "Bookmarks",
+  "wilds_wiki.list.here": "Here",
+  "wilds_wiki.list.dimension": "Dimension",
+  "wilds_wiki.list.places": "Where you have been",
+  "wilds_wiki.list.mobs": "Who is around",
+  "wilds_wiki.list.items": "What you looked at",
+  "wilds_wiki.list.event": "Last event"
 }

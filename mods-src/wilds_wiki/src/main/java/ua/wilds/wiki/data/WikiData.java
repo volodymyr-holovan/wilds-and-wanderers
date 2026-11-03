@@ -73,6 +73,36 @@ public final class WikiData {
     public static void invalidate() {
         instance = null;
         builtFor = null;
+        building = null;
+    }
+
+    /** an index being built in the background for that world (see {@link #prebuild}) */
+    private static java.util.concurrent.CompletableFuture<WikiData> building;
+    private static Object buildingFor;
+
+    /**
+     * Starts building the index for the current world on a thread of its own (about a second of work over 12 000
+     * entries), unless it is built or being built: called a little after joining, so opening the wiki does not freeze.
+     */
+    public static void prebuild() {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.getConnection() == null) return;
+        RegistryAccess access = mc.getConnection().registryAccess();
+        if ((instance != null && builtFor == access) || (building != null && buildingFor == access)) return;
+        ResourceManager rm = mc.getResourceManager();
+        long t = System.currentTimeMillis();
+        buildingFor = access;
+        building = java.util.concurrent.CompletableFuture.supplyAsync(() -> {
+            WikiData d = new WikiData(rm, access);
+            WildsWiki.LOG.info("Wilds Wiki: {} entries, {} topics built in the background in {} ms", d.entries.size(), d.topics.size(),
+                    System.currentTimeMillis() - t);
+            return d;
+        }, r -> {
+            Thread th = new Thread(r, "Wilds Wiki index");
+            th.setDaemon(true);
+            th.setPriority(Thread.MIN_PRIORITY);
+            th.start();
+        });
     }
 
     /** The data for the current world; rebuilt after a language or resource pack change and in another world. */
@@ -81,9 +111,18 @@ public final class WikiData {
         Object world = mc.getConnection() != null ? mc.getConnection().registryAccess() : null;
         if (instance == null || builtFor != world) {
             long t = System.currentTimeMillis();
-            instance = new WikiData(mc.getResourceManager(), mc.getConnection() != null ? mc.getConnection().registryAccess() : null);
+            WikiData made = null;
+            if (building != null && buildingFor == world) {
+                try {
+                    made = building.join();   // opened while the background build runs: wait for it, never build twice
+                } catch (RuntimeException ex) {
+                    WildsWiki.LOG.warn("Wilds Wiki: the background build failed, building here", ex);
+                }
+            }
+            building = null;
+            instance = made != null ? made : new WikiData(mc.getResourceManager(), mc.getConnection() != null ? mc.getConnection().registryAccess() : null);
             builtFor = world;
-            WildsWiki.LOG.info("Wilds Wiki: {} entries, {} topics in {} ms", instance.entries.size(), instance.topics.size(),
+            WildsWiki.LOG.info("Wilds Wiki: {} entries, {} topics ready in {} ms", instance.entries.size(), instance.topics.size(),
                     System.currentTimeMillis() - t);
         }
         return instance;

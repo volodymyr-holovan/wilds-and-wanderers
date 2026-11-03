@@ -34,3 +34,5 @@ Ars Nouveau та Iron's Spells діляться силою:
 - [[alexscaves:amber|Бурштин]] у камері збагачення Mekanism стає кульками слизу.
 - [[alexscaves:tough_hide|Жорстку шкіру]] динозаврів механічний прес Create розплющує на три звичайні шкіри. А ще жорстка шкіра й шкіра тролів годяться всюди, де рецепт приймає будь-яку шкіру.
 !items alexscaves:amber alexscaves:tough_hide create:mechanical_press
+
+Див. також: [[wilds_wiki:dragons|Дракони]], [[wilds_wiki:gems|Самоцвіти, гнізда й рідкісна зброя]], [[wilds_wiki:gathering|Швидке добування ресурсів]].
