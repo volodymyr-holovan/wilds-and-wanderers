@@ -126,6 +126,30 @@ public final class Net {
         }
     }
 
+    /** client -> server: the storage the player just opened, to show its status for the copper golem */
+    public record SortQuery(BlockPos pos) implements CustomPacketPayload {
+        public static final Type<SortQuery> TYPE = typeOf("sort_query");
+        public static final StreamCodec<ByteBuf, SortQuery> CODEC = BlockPos.STREAM_CODEC.map(SortQuery::new, SortQuery::pos);
+
+        public Type<SortQuery> type() {
+            return TYPE;
+        }
+    }
+
+    /** server -> client: that storage's status ("" for none to show) */
+    public record SortLabel(BlockPos pos, String label) implements CustomPacketPayload {
+        public static final Type<SortLabel> TYPE = typeOf("sort_label");
+        public static final StreamCodec<ByteBuf, SortLabel> CODEC = StreamCodec.composite(BlockPos.STREAM_CODEC, SortLabel::pos,
+                ByteBufCodecs.stringUtf8(64), SortLabel::label, SortLabel::new);
+
+        public Type<SortLabel> type() {
+            return TYPE;
+        }
+    }
+
+    /** set by the client entry point: shows a storage's status in its title */
+    public static java.util.function.BiConsumer<BlockPos, String> sortLabelClient = (p, l) -> {};
+
     /** set by the client entry point: shows the item finder's answer */
     public static java.util.function.Consumer<List<BlockPos>> finderClient = h -> {};
 
@@ -152,6 +176,13 @@ public final class Net {
         }));
         r.playToClient(FinderHits.TYPE, FinderHits.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> finderClient.accept(msg.places())));
         r.playToClient(RowsV1.TYPE, RowsV1.CODEC, (msg, ctx) -> {});
+        r.playToServer(SortQuery.TYPE, SortQuery.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
+            if (!(ctx.player() instanceof ServerPlayer p) || !(p.level() instanceof net.minecraft.server.level.ServerLevel level)) return;
+            if (p.blockPosition().distSqr(msg.pos()) > 12 * 12 || !level.isLoaded(msg.pos())) return;
+            String label = net.neoforged.fml.ModList.get().isLoaded("friendsandfoes") ? ua.wilds.core.golem.Golems.label(level, msg.pos()) : "";
+            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(p, new SortLabel(msg.pos(), label));
+        }));
+        r.playToClient(SortLabel.TYPE, SortLabel.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> sortLabelClient.accept(msg.pos(), msg.label())));
         r.playToServer(Act.TYPE, Act.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
             if (!(ctx.player() instanceof ServerPlayer p)) return;
             switch (msg.action()) {

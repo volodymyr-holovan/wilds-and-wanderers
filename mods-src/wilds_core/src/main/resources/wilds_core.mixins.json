@@ -9,7 +9,8 @@
     "client.CameraMixin",
     "client.DhClientWorldMixin",
     "client.AccessoriesPlayerInvMixin",
-    "client.AccessoriesRowsScreenMixin"
+    "client.AccessoriesRowsScreenMixin",
+    "client.ContainerTitleAccessor"
   ],
   "injectors": {
     "defaultRequire": 0

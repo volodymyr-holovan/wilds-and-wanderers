@@ -12,4 +12,9 @@ public final class Golems {
         NeoForge.EVENT_BUS.addListener(CopperSorter::onTick);
         NeoForge.EVENT_BUS.addListener(CopperSorter::onTags);
     }
+
+    /** the status line of an open storage (see CopperSorter.label) */
+    public static String label(net.minecraft.server.level.ServerLevel level, net.minecraft.core.BlockPos pos) {
+        return CopperSorter.label(level, pos);
+    }
 }

@@ -34,7 +34,7 @@ import java.util.Set;
  */
 final class Likeness {
     static final int NONE = Integer.MAX_VALUE;
-    private static final int BIG_TAG = 600;
+    private static final int BIG_TAG = 128;
     private static final Set<String> COMMON_WORDS = Set.of("block", "item", "stairs", "slab", "wall", "fence", "gate", "door", "trapdoor",
             "button", "pressure", "plate", "with", "from", "small", "large", "big", "raw", "cooked", "smooth", "polished", "chiseled",
             "cracked", "mossy", "waxed", "exposed", "weathered", "oxidized", "stripped", "pane", "glass", "wool", "carpet", "spawn", "egg");
@@ -54,7 +54,7 @@ final class Likeness {
     static int distance(Item a, Item b) {
         if (a == b) return 0;
         for (Tag t : tagsOf(a)) {
-            if (b.builtInRegistryHolder().is(t.key)) return t.size <= 8 ? 10 : t.size <= 32 ? 20 : t.size <= 128 ? 30 : 40;
+            if (b.builtInRegistryHolder().is(t.key)) return t.size <= 8 ? 10 : t.size <= 32 ? 20 : 30;
         }
         String pa = BuiltInRegistries.ITEM.getKey(a).getPath(), pb = BuiltInRegistries.ITEM.getKey(b).getPath();
         Set<String> wa = words(pa);
