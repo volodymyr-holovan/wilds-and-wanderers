@@ -1,0 +1,9 @@
+{
+ "iris.keybind.wireframe": "Каркас (лише в одиночній грі)",
+ "iris.load.failure.generic": "Iris не зміг завантажити шейдер; повідомте про це розробників Iris. ",
+ "iris.load.failure.shader": "Набір шейдерів не завантажився! Повідомте про помилку його авторові. ",
+ "iris.shaders.debug.restartNoDebug": "Налагодження шейдерів увімкнено; налагодження OpenGL на NeoForge не підтримується.",
+ "iris.shaders.ssbofailure": "Шейдер просить можливість (SSBO), якої ваша відеокарта не підтримує, — він може працювати неправильно.",
+ "options.iris.colorSpace": "Колірний простір",
+ "options.iris.colorSpace.sodium_tooltip": "Колірний простір, у який перетворюється картинка (поверх шейдерів). Якщо не знаєте — SRGB."
+}

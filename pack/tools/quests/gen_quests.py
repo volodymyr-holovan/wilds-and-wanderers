@@ -203,6 +203,29 @@ def jline(*parts):
     return json.dumps(["", *parts], ensure_ascii=False)
 
 
+# names for things that have no lang key of their own (a gem's name depends on the gem, a structure tag is a group)
+NO_KEY_NAMES = {"apotheosis:gem": "Самоцвіт", "#minecraft:village": "Село"}
+
+
+def readable(x):
+    """last resort when no lang key exists: the id made readable, so a quest never shows item.mod.some_thing"""
+    return NO_KEY_NAMES.get(x) or x.split(":")[-1].split("/")[-1].replace("_", " ").capitalize()
+
+
+def named(kind, x, color):
+    """the name of an item / mob / biome / structure: the game's translation (with a readable fallback), a click opens
+    its wiki page and, for items, hovering shows the item's own tooltip"""
+    key = {"item": FACTS.item_key, "entity": FACTS.entity_key, "biome": FACTS.biome_key, "structure": FACTS.structure_key}[kind](x)
+    c = {"translate": key, "color": color}
+    if x in NO_KEY_NAMES or not FACTS.has_key(key):
+        c["fallback"] = readable(x)
+    if not x.startswith("#"):
+        c["clickEvent"] = {"action": "run_command", "value": "/wiki " + (x if kind == "item" else f"{kind}:{x}")}
+        if kind == "item":
+            c["hoverEvent"] = {"action": "show_item", "contents": {"id": x}}
+    return c
+
+
 def task_line(spec):
     kind, _, rest = spec.partition(":")
     name, count = item_stack(rest) if kind in ("item", "kill") else (rest, 1)
@@ -210,9 +233,9 @@ def task_line(spec):
     if kind == "item":
         if name.startswith("#"):
             return jline({"text": f"• Будь-який предмет групи {name}", "color": "gray"}, n)
-        return jline({"text": "• Мати в інвентарі: ", "color": "gray"}, {"translate": FACTS.item_key(name), "color": "aqua"}, n)
+        return jline({"text": "• Мати в інвентарі: ", "color": "gray"}, named("item", name, "aqua"), n)
     if kind == "kill":
-        return jline({"text": "• Перемогти: ", "color": "gray"}, {"translate": FACTS.entity_key(name), "color": "red"}, n)
+        return jline({"text": "• Перемогти: ", "color": "gray"}, named("entity", name, "red"), n)
     if kind == "stat":
         sid, cnt = item_stack(rest)
         what = STAT_NAMES.get(sid, sid)
@@ -220,9 +243,9 @@ def task_line(spec):
     if kind == "dim":
         return jline({"text": "• Потрапити у вимір: ", "color": "gray"}, {"text": DIM_NAMES.get(rest, rest), "color": "light_purple"})
     if kind == "biome":
-        return jline({"text": "• Побувати в біомі: ", "color": "gray"}, {"translate": FACTS.biome_key(rest), "color": "green"})
+        return jline({"text": "• Побувати в біомі: ", "color": "gray"}, named("biome", rest, "green"))
     if kind == "struct":
-        return jline({"text": "• Знайти споруду: ", "color": "gray"}, {"translate": FACTS.structure_key(rest), "color": "gold"})
+        return jline({"text": "• Знайти споруду: ", "color": "gray"}, named("structure", rest, "gold"))
     return None
 
 
@@ -231,8 +254,7 @@ def names(kind, ids, limit=3):
     for i, x in enumerate(ids[:limit]):
         if i:
             parts.append({"text": ", "})
-        key = {"entity": FACTS.entity_key, "structure": FACTS.structure_key, "biome": FACTS.biome_key}[kind](x)
-        parts.append({"translate": key, "color": "white"})
+        parts.append(named(kind, x, "white"))
     if len(ids) > limit:
         parts.append({"text": f" і ще {len(ids) - limit}"})
     return parts
@@ -259,7 +281,7 @@ def source_lines(items):
             bits.append([{"text": "продають торговці", "color": "gray"}])
         if not bits:
             continue
-        out.append(jline({"translate": FACTS.item_key(item), "color": "aqua"}))
+        out.append(jline(named("item", item, "aqua")))
         for b in bits[:4]:
             out.append(jline({"text": "   "}, *b))
     return out
@@ -425,14 +447,14 @@ def main():
         chapter = {"id": cid, "filename": ch["key"], "group": gid, "order_index": order,
                    "icon": {"id": ch["icon"]}, "default_quest_shape": "", "default_hide_dependency_lines": False,
                    "quest_links": [], "quests": out_quests}
-        open(os.path.join(OUT, "chapters", ch["key"] + ".snbt"), "w", encoding="utf-8").write(snbt(chapter) + "\n")
+        open(os.path.join(OUT, "chapters", ch["key"] + ".snbt"), "w", encoding="utf-8", newline="\n").write(snbt(chapter) + "\n")
 
     group_names = {}
     for ch in chapters:
         group_names[groups[ch["group"]]] = ch["group"]
     # the side panel lists groups in this order (the travellers' errands right after the start)
     ordered = sorted(groups, key=lambda g: GROUP_ORDER.index(g) if g in GROUP_ORDER else len(GROUP_ORDER))
-    open(os.path.join(OUT, "chapter_groups.snbt"), "w", encoding="utf-8").write(
+    open(os.path.join(OUT, "chapter_groups.snbt"), "w", encoding="utf-8", newline="\n").write(
         snbt({"chapter_groups": [{"id": groups[g]} for g in ordered]}) + "\n")
     data = {"version": 13, "default_reward_team": False, "default_consume_items": False,
             "default_autoclaim_rewards": "disabled", "default_quest_shape": "circle", "default_quest_disable_jei": False,
@@ -440,7 +462,7 @@ def main():
             "pause_game": False, "lock_message": "", "progression_mode": "flexible", "detection_delay": 20,
             "show_lock_icons": True, "icon": {"id": "minecraft:compass"},
             "loot_crate_no_drop": {"boss": 0, "monster": 600, "passive": 4000}}
-    open(os.path.join(OUT, "data.snbt"), "w", encoding="utf-8").write(snbt(data) + "\n")
+    open(os.path.join(OUT, "data.snbt"), "w", encoding="utf-8", newline="\n").write(snbt(data) + "\n")
 
     # text: Ukrainian is the pack language; the same text is the fallback for every other locale
     # FTB Quests 2101.1.37 reads one table per locale: lang/<locale>.snbt. A per-folder lang/<locale>/ left by an older
@@ -454,12 +476,12 @@ def main():
         old = os.path.join(OUT, "lang", loc)
         if os.path.isdir(old):
             shutil.rmtree(old)
-        open(os.path.join(OUT, "lang", loc + ".snbt"), "w", encoding="utf-8").write(snbt(table) + "\n")
+        open(os.path.join(OUT, "lang", loc + ".snbt"), "w", encoding="utf-8", newline="\n").write(snbt(table) + "\n")
 
     os.makedirs(CORE_DATA, exist_ok=True)
-    json.dump({"pins": PINS}, open(os.path.join(CORE_DATA, "onboarding.json"), "w", encoding="utf-8"), indent=1)
-    json.dump(TUTORIAL, open(os.path.join(CORE_DATA, "tutorial.json"), "w", encoding="utf-8"), indent=1, sort_keys=True)
-    json.dump(GATES, open(os.path.join(CORE_DATA, "gates.json"), "w", encoding="utf-8"), indent=1, sort_keys=True)
+    json.dump({"pins": PINS}, open(os.path.join(CORE_DATA, "onboarding.json"), "w", encoding="utf-8", newline="\n"), indent=1)
+    json.dump(TUTORIAL, open(os.path.join(CORE_DATA, "tutorial.json"), "w", encoding="utf-8", newline="\n"), indent=1, sort_keys=True)
+    json.dump(GATES, open(os.path.join(CORE_DATA, "gates.json"), "w", encoding="utf-8", newline="\n"), indent=1, sort_keys=True)
     total = sum(len(c["quests"]) for c in chapters)
     print(f"chapters: {len(chapters)}, quests: {total}, errors: {len(ERRORS)}")
     for e in ERRORS:

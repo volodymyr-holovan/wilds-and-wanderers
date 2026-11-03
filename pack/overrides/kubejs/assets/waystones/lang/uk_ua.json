@@ -8,6 +8,7 @@
  "chat.waystones.cannot_break_waystone": "Ви не можете зламати цей дороговказ.",
  "chat.waystones.destination_chunk_load_failed": "Не вдалося завантажити місце призначення.",
  "chat.waystones.destination_out_of_bounds": "Місце призначення поза межами світу.",
+ "chat.waystones.not_enough_xp": "У вас недостатньо досвіду, щоб телепортуватися.",
  "chat.waystones.requirements_not_met": "Ви не відповідаєте вимогам для телепорту.",
  "chat.waystones.source_item_missing": "Ви перестали тримати предмет для телепорту.",
  "chat.waystones.source_waystone_out_of_range": "Ви відійшли задалеко від дороговказу.",

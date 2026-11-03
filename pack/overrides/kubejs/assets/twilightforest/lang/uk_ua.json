@@ -9,5 +9,6 @@
  "item.twilightforest.shika_senbei": "Сіка-сенбей",
  "subtitles.twilightforest.block.drying_rack.add_item": "Сушарка заповнюється",
  "subtitles.twilightforest.block.drying_rack.remove_item": "Сушарка звільняється",
- "subtitles.twilightforest.entity.deer.eat": "Олень їсть"
+ "subtitles.twilightforest.entity.deer.eat": "Олень їсть",
+ "twilightforest.tips.giant_block": "Якщо видобути кайлом велетня ділянку 4×4×4 з однакових блоків, випаде один велетенський блок."
 }

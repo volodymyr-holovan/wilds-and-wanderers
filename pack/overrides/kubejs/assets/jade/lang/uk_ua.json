@@ -19,6 +19,8 @@
  "jade.access.block.hatch.2": "Тріснутий %s",
  "jade.access.block.powered": "Заживлений %s",
  "jade.access.block.summonable": "Придатний до виклику %s",
+ "jade.access.sign.back": "Ззаду:",
+ "jade.access.sign.front": "Спереду:",
  "jade.energy.text": "Енергія: %s",
  "jade.fluid.more_tanks": "Ще %s резервуарів",
  "jade.fluid.text": "%s: %s",

@@ -25,6 +25,8 @@ def load_lang(raw):
         return json.loads(txt, strict=False)
     except Exception:
         txt = re.sub(r"^\s*//.*$", "", txt, flags=re.M)
+        # a doubled comma (Simply Tents 5.0 ships one) makes the game skip the whole file
+        txt = re.sub(r",(\s*,)+", ",", txt)
         txt = re.sub(r",\s*([}\]])", r"\1", txt)
         try:
             return json.loads(txt, strict=False)
@@ -53,12 +55,15 @@ def scan(zf, found):
                 pass
 
 
-def extract(mods_dir):
-    found = {}
-    for fn in sorted(os.listdir(mods_dir)):
-        if fn.endswith(".jar"):
-            with zipfile.ZipFile(os.path.join(mods_dir, fn)) as z:
-                scan(z, found)
+def extract(*mods_dirs):
+    """several folders (client/mods server/mods): server-only mods send chat texts the client must translate too"""
+    found, seen = {}, set()
+    for mods_dir in mods_dirs:
+        for fn in sorted(os.listdir(mods_dir)):
+            if fn.endswith(".jar") and fn not in seen:
+                seen.add(fn)
+                with zipfile.ZipFile(os.path.join(mods_dir, fn)) as z:
+                    scan(z, found)
     os.makedirs(SRC, exist_ok=True); os.makedirs(REF, exist_ok=True)
     total = 0
     for ns, (en, uk) in sorted(found.items()):
@@ -68,6 +73,9 @@ def extract(mods_dir):
             total += len(missing)
         if uk:
             json.dump(uk, open(os.path.join(REF, ns + ".json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    # the namespaces the pack's mods have now: build skips translations of mods that were removed since
+    with open(os.path.join(I18N, "namespaces.txt"), "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(sorted(found)) + "\n")
     print(f"namespaces with gaps: {len(os.listdir(SRC))}, missing keys: {total}")
 
 
@@ -84,10 +92,14 @@ def build():
     names = set(os.listdir(UK)) if os.path.isdir(UK) else set()
     if os.path.isdir(FIX):
         names |= set(os.listdir(FIX))
+    nsp = os.path.join(I18N, "namespaces.txt")
+    present = set(open(nsp, encoding="utf-8").read().split()) if os.path.exists(nsp) else None
     for fn in sorted(names):
         if not fn.endswith(".json"):
             continue
         ns = fn[:-5]
+        if present is not None and ns not in present:
+            continue  # the mod is no longer in the pack
         src_path = os.path.join(SRC, fn)
         src = json.load(open(src_path, encoding="utf-8")) if os.path.exists(src_path) else {}
         uk = json.load(open(os.path.join(UK, fn), encoding="utf-8")) if os.path.exists(os.path.join(UK, fn)) else {}
@@ -113,7 +125,7 @@ def build():
             good[k] = v
         d = os.path.join(OUT, ns, "lang")
         os.makedirs(d, exist_ok=True)
-        json.dump(good, open(os.path.join(d, "uk_ua.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, sort_keys=True)
+        json.dump(good, open(os.path.join(d, "uk_ua.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1, sort_keys=True)
         written += len(good)
     for p in problems:
         print("  PROBLEM", p)
@@ -150,6 +162,28 @@ def merge():
     print("merged batches")
 
 
+def store(ns, entries):
+    """Save translations of a namespace where build() expects them: keys the mod has no Ukrainian for go to uk/<ns>,
+    keys the mod "translates" itself (often with the English text copied) go to fixes/<ns>. Returns unknown keys."""
+    def load(p):
+        return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    src, ref = load(os.path.join(SRC, ns + ".json")), load(os.path.join(REF, ns + ".json"))
+    uk, fx = load(os.path.join(UK, ns + ".json")), load(os.path.join(FIX, ns + ".json"))
+    unknown = []
+    for k, v in entries.items():
+        if k in src:
+            uk[k] = v
+        elif k in ref:
+            fx[k] = v
+        else:
+            unknown.append(k)
+    for d, data in ((UK, uk), (FIX, fx)):
+        if data:
+            os.makedirs(d, exist_ok=True)
+            json.dump(data, open(os.path.join(d, ns + ".json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1, sort_keys=True)
+    return unknown
+
+
 def todo(ns, limit=400, offset=0):
     """Print untranslated keys of a namespace as compact JSON (input for the next batch)."""
     src = json.load(open(os.path.join(SRC, ns + ".json"), encoding="utf-8"))
@@ -167,7 +201,7 @@ if __name__ == "__main__":
     elif cmd == "merge":
         merge()
     elif cmd == "extract":
-        extract(sys.argv[2])
+        extract(*sys.argv[2:])
     elif cmd == "build":
         sys.exit(0 if build() else 1)
     elif cmd == "status":

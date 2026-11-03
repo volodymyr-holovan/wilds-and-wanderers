@@ -1,6 +1,10 @@
 {
+ "shulkerboxtooltip.colors.shulkerboxtooltip.default": "Різне",
+ "shulkerboxtooltip.colors.shulkerboxtooltip.default.default": "За замовчуванням",
  "shulkerboxtooltip.colors.shulkerboxtooltip.default.generic_container": "Звичайний контейнер",
+ "shulkerboxtooltip.colors.shulkerboxtooltip.shulker_boxes": "Шалкерові скрині",
  "shulkerboxtooltip.config.cannot_save": "Помилка!",
+ "shulkerboxtooltip.config.category.colors": "Кольори",
  "shulkerboxtooltip.config.exit_minecraft": "Вийти з Minecraft",
  "shulkerboxtooltip.config.ignore_restart": "Ігнорувати й продовжити",
  "shulkerboxtooltip.config.option.controls.lock_tooltip_key": "Закріпити підказку",
@@ -9,6 +13,7 @@
  "shulkerboxtooltip.config.option.preview.compact_preview_nbt_behavior.tooltip": "Як у стислому режимі групувати предмети з однаковим ID,\nале різними даними компонентів?\nІгнорувати:\n Дані компонентів не враховуються\nЯк перший:\n Усі предмети показуються з компонентами\n першого предмета\nОкремо:\n Предмети з різними даними показуються окремо",
  "shulkerboxtooltip.config.option.preview.generic_container_preview": "Перегляд звичайних контейнерів",
  "shulkerboxtooltip.config.option.preview.generic_container_preview.tooltip": "Якщо ввімкнено, предмети з компонентом-контейнером,\nякі не підтримуються явно, теж показують вміст,\nяк скриня шалкерів.",
+ "shulkerboxtooltip.config.option.preview.position.tooltip": "Позиція вікна попередьного перегляду:\n • Всередині\n Вікно підстроюється в підказку предмету.\n • Зовні\n Вікно знаходиться поза підказки,\n переміщаючись залежно від границь екрану.\n • Зовні (зверху)\n Вікно завжди знаходиться над підказкою.\n • Зовні (знизу)\n Вікно завжди знаходиться під підказкою.",
  "shulkerboxtooltip.config.quit.confirm": "Вийти й відкинути зміни",
  "shulkerboxtooltip.config.quit.confirm.title": "Зміни не збережено",
  "shulkerboxtooltip.config.quit.confirm.warning": "Точно припинити редагування налаштувань? Зміни буде втрачено!",

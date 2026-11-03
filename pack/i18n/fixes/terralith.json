@@ -1,0 +1,21 @@
+{
+ "biome.terralith.deep_warm_ocean": "Глибокий теплий океан",
+ "config.terralith.category.modules": "Модулі",
+ "config.terralith.default": "За замовчуванням: ",
+ "config.terralith.option.custom_structures": "Власні споруди",
+ "config.terralith.option.custom_structures.tooltip": "Створює власні споруди Terralith, як-от укріплені села й вежі магів.",
+ "config.terralith.option.fog_tweaks": "Туман",
+ "config.terralith.option.fog_tweaks.tooltip": "Змінює дальність і колір туману в деяких біомах, наприклад у болотах і печерах.",
+ "config.terralith.option.intro_message": "Вітальне повідомлення",
+ "config.terralith.option.intro_message.tooltip": "Показує при створенні світу повідомлення з посиланням на Discord і попередженням, що Terralith важко видалити.",
+ "config.terralith.option.recipe_changes": "Зміни рецептів",
+ "config.terralith.option.recipe_changes.tooltip": "Деякі речі з кругляку можна робити з іншого каміння; додає рецепт кругляку з кам'яних плит.",
+ "config.terralith.option.skylands": "Небесні острови",
+ "config.terralith.option.skylands.tooltip": "Чотири біоми пір року — летючі острови над глибокими океанами.",
+ "config.terralith.option.terrain_slabs": "Плити на рельєфі",
+ "config.terralith.option.terrain_slabs.tooltip": "У біомах із каменем на поверхні кам'яні плити згладжують рельєф.",
+ "config.terralith.option.vanilla_stone_gen": "Каміння як у грі",
+ "config.terralith.option.vanilla_stone_gen.tooltip": "Як у звичайній грі: під землею трапляються невеликі поклади граніту, андезиту й діориту.",
+ "config.terralith.text.warning": "Налаштування спільні для всіх світів і діють, щойно ви заходите у світ; налаштування генерації — у нових чанках.",
+ "config.terralith.title": "Налаштування Terralith"
+}

@@ -1,3 +1,5 @@
 {
+ "effect.irons_spellbooks.gluttony.description": "Переробляє з’їдену їжу на ману, залежно від її поживності",
+ "tetra.stats.irons_spellbooks:mana_siphon.tooltip_short": "Відновлює певний відсоток мани, залежно від завданої шкоди.",
  "tooltip.irons_spellbooks.untranslated": "Не перекладено: записи зроблено рунами ілледжерів. Перекладений журнал продає Священник (Priest)"
 }

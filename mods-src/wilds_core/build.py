@@ -36,7 +36,8 @@ def classpath():
     cp += glob.glob(os.path.join(MC, "libraries", "net", "minecraft", "client", "1.21.1-*", "client-1.21.1-*-srg.jar"))
     # optional integrations are compiled against the real mods; at runtime every use is guarded by ModList checks
     for pat in ("puffish_skills-*.jar", "ftb-quests-*.jar", "ftb-library-*.jar", "ftb-teams-*.jar", "architectury-*.jar",
-                "irons_spellbooks-*.jar", "curios-*.jar", "accessories-neoforge-*.jar", "owo-lib-*.jar"):
+                "irons_spellbooks-*.jar", "curios-*.jar", "accessories-neoforge-*.jar", "owo-lib-*.jar",
+                "DistantHorizons-*.jar"):
         cp += glob.glob(os.path.join(ROOT, "client", "mods", pat))
     return [p for p in dict.fromkeys(cp) if os.path.exists(p)]
 

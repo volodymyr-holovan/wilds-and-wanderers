@@ -1,0 +1,7 @@
+{
+ "shulkerboxtooltip.colors.shulkerboxtooltip.default": "Різне",
+ "shulkerboxtooltip.colors.shulkerboxtooltip.default.default": "За замовчуванням",
+ "shulkerboxtooltip.colors.shulkerboxtooltip.shulker_boxes": "Шалкерові скрині",
+ "shulkerboxtooltip.config.category.colors": "Кольори",
+ "shulkerboxtooltip.config.option.preview.position.tooltip": "Позиція вікна попередьного перегляду:\n • Всередині\n Вікно підстроюється в підказку предмету.\n • Зовні\n Вікно знаходиться поза підказки,\n переміщаючись залежно від границь екрану.\n • Зовні (зверху)\n Вікно завжди знаходиться над підказкою.\n • Зовні (знизу)\n Вікно завжди знаходиться під підказкою."
+}

@@ -1,0 +1,14 @@
+{
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.playBellSound": "Звук дзвону",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.playBellSound.@Tooltip": "Чи лунає дзвін перед першим і кожним наступним викликом Дракона Енду",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.resummonedDragonDropsEgg": "Яйце з кожного дракона",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.resummonedDragonDropsEgg.@Tooltip": "Чи лишає Дракон Енду яйце щоразу, як його переможуть",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerInitially": "Центральна вежа одразу",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerInitially.@Tooltip": "Чи з'являється центральна вежа в Енді під час створення світу",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerOnResummon": "Центральна вежа при виклику",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerOnResummon.@Tooltip": "Чи відновлюється центральна вежа, коли Дракона Енду викликають знову",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.useVanillaEndGateways": "Шлюзи Енду як у грі",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.useVanillaEndGateways.@Tooltip": "Чи з'являтимуться в Енді звичайні шлюзи замість оновлених",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.useVanillaSpawnPlatform": "Обсидіанова платформа як у грі",
+ "text.autoconfig.betterendisland-fabric-1_21.option.general.useVanillaSpawnPlatform.@Tooltip": "Чи з'являтиметься в Енді звичайна обсидіанова платформа замість оновленої"
+}

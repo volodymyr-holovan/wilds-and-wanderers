@@ -107,6 +107,7 @@
  "gui.sophisticatedcore.upgrades.chipped_mason_table.tooltip": "Стіл муляра",
  "gui.sophisticatedcore.upgrades.chipped_tinkering_table": "Майстрування",
  "gui.sophisticatedcore.upgrades.chipped_tinkering_table.tooltip": "Стіл майстра",
+ "gui.sophisticatedcore.upgrades.pickup": "Підбирання",
  "gui.sophisticatedcore.upgrades.sawmill": "Лісопилка",
  "gui.sophisticatedcore.upgrades.sawmill.tooltip": "Лісопилка",
  "item.sophisticatedcore.ender_linker": "Ендер-зв'язувач",

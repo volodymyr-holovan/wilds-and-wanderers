@@ -79,6 +79,12 @@ def build():
                     rid = None
                 if isinstance(rid, str) and ":" in rid and t:
                     recipes[rid].add(t)
+    # names the pack itself supplies (Incendium ships none, Simply Tents ships a broken file, server-only mods...)
+    for f in glob.glob(os.path.join(ROOT, "pack", "overrides", "kubejs", "assets", "*", "lang", "*.json")):
+        try:
+            keys |= set(json.load(open(f, encoding="utf-8")))
+        except ValueError:
+            pass
     kube = os.path.join(ROOT, "pack", "overrides", "kubejs", "data")
     for f in glob.glob(os.path.join(kube, "*", "recipe", "**", "*.json"), recursive=True):
         try:
@@ -105,10 +111,17 @@ class Facts:
 
     def item_key(self, item):
         ns, path = item.split(":", 1)
-        for k in (f"block.{ns}.{path}", f"item.{ns}.{path}"):
-            if k in self.keys:
+        # items whose name the game builds from another key: Ars Nouveau's glyphs name their spell part, Ice and
+        # Fire's coloured dragon scales share one name
+        named = {"ars_nouveau": f"ars_nouveau.glyph_name.{path}" if path.startswith("glyph_") else None,
+                 "iceandfire": "item.iceandfire.dragonscales" if path.startswith("dragonscales_") else None}.get(ns)
+        for k in (named, f"block.{ns}.{path}", f"item.{ns}.{path}"):
+            if k and k in self.keys:
                 return k
         return f"item.{ns}.{path}"
+
+    def has_key(self, key):
+        return key in self.keys
 
     @staticmethod
     def entity_key(e):

@@ -6,7 +6,8 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "client.RMSongPickerMixin",
-    "client.CameraMixin"
+    "client.CameraMixin",
+    "client.DhClientWorldMixin"
   ],
   "injectors": {
     "defaultRequire": 0

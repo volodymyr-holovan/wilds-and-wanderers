@@ -12,7 +12,8 @@ import java.util.Set;
 /** Mixins into other mods apply only when that mod is installed: "client.RMSongPickerMixin" needs Reactive Music. */
 public final class WildsMixinPlugin implements IMixinConfigPlugin {
     private static final Map<String, String> NEEDS = Map.of("ua.wilds.core.mixin.client.RMSongPickerMixin", "reactivemusic",
-            "ua.wilds.core.mixin.AccessoriesResultSlotMixin", "accessories");
+            "ua.wilds.core.mixin.AccessoriesResultSlotMixin", "accessories",
+            "ua.wilds.core.mixin.client.DhClientWorldMixin", "distanthorizons");
 
     public void onLoad(String mixinPackage) {}
 

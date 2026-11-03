@@ -1,0 +1,12 @@
+{
+ "accessories.slot.pocket": "Кишеня",
+ "text.config.accessories_compat.option.addPocketSlot": "Додати слот «Кишеня»",
+ "text.config.accessories_compat.option.addPocketSlot.tooltip": "Додає слот «Кишеня», що заміняє слот Curios",
+ "text.config.accessories_compat.option.dumpDataWhenNullEntries": "Зберігати дані при порожніх записах",
+ "text.config.accessories_compat.option.dumpDataWhenNullEntries.tooltip": "Допомагає, коли Trinkets падає через порожнє значення",
+ "text.config.accessories_compat.option.showPocketSlotInTooltip": "Кишеня в підказці",
+ "text.config.accessories_compat.option.showPocketSlotInTooltip.tooltip": "Показує в підказці слот «Кишеня», якщо предмет не пасує до нього напряму",
+ "text.config.accessories_compat.option.slotIdRedirects": "Переадресація слотів",
+ "text.config.accessories_compat.option.slotIdRedirects.tooltip": "Дозволяє направити слот Trinkets у звичайний слот Accessories",
+ "text.config.accessories_compat.title": "Налаштування сумісності Accessories"
+}

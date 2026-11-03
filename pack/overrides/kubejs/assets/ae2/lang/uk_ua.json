@@ -1,5 +1,7 @@
 {
  "dimension.ae2.spatial_storage": "Просторове сховище",
+ "exported_setting.ae2.exported_p2p_type": "Тип P2P",
+ "gui.ae2.QuantumLinkChamber": "Камера квантового зв'язку",
  "gui.ae2.Resume": "Продовжити",
  "gui.ae2.Suspend": "Призупинити"
 }
