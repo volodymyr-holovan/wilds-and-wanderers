@@ -47,7 +47,9 @@ def scan(zf, found):
             cur[0].update(en)
             cur[1].update(uk)
     for n in names:
-        if n.startswith("META-INF/jarjar/") and n.endswith(".jar"):
+        # jar-in-jar libraries, and "monolith" jars that carry one build per Minecraft version (Seamless Ores): only ours
+        monolith = n.startswith("META-INF/monolith/jars/") and "1.21.1" in n
+        if (n.startswith("META-INF/jarjar/") or monolith) and n.endswith(".jar"):
             try:
                 with zipfile.ZipFile(io.BytesIO(zf.read(n))) as inner:
                     scan(inner, found)

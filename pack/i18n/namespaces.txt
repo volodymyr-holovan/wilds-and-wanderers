@@ -123,6 +123,7 @@ reactivemusic
 reeses-sodium-options
 resourcefulconfig
 sable
+seamlessores
 searchables
 sereneseasons
 shulkerboxtooltip
