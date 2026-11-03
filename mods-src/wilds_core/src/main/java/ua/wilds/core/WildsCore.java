@@ -35,6 +35,7 @@ public final class WildsCore {
     public WildsCore(IEventBus modBus) {
         LogNoise.install();
         PartyPeace.register();
+        if (net.neoforged.fml.ModList.get().isLoaded("friendsandfoes")) ua.wilds.core.golem.Golems.register();
         ENTITIES.register(modBus);
         modBus.addListener((net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent e) ->
                 e.put(WANDERER.get(), ua.wilds.core.npc.Wanderer.attributes().build()));
