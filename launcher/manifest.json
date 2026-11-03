@@ -1,5 +1,5 @@
 {
- "version": "2026.11.03.3",
+ "version": "2026.11.03.4",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -914,15 +914,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.3/wilds_core-0.1.0.jar",
-   "sha1": "9e7ad65a99f619d96ee9f446eceead0bb8ff5721",
-   "size": 276783
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.4/wilds_core-0.1.0.jar",
+   "sha1": "14f936a77b6b36d6ffba351d4fd671380b4eaede",
+   "size": 300972
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.3/wilds_wiki-0.2.0.jar",
-   "sha1": "9521deb070dae710852f2d527d8a9a867100f6ff",
-   "size": 841586
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.4/wilds_wiki-0.2.0.jar",
+   "sha1": "bfc4f42cd8f28591925064bd66080e315eb1e125",
+   "size": 843981
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -970,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.3/overrides.zip",
-   "sha1": "7ca7ac7ba2f127f880ee277d817ef43df44b0cce",
-   "size": 28204964
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.4/overrides.zip",
+   "sha1": "36d90f83ff4a9e8e85f286270708e461959c7517",
+   "size": 28204933
   },
   "overrides": [
    {
@@ -1137,8 +1137,8 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/welcome.snbt",
-    "sha1": "3ff649861624f6ce0ea8687d228477edcdad8d92",
-    "size": 4852
+    "sha1": "72ff48afbb03a619cae2ddb543151d4a14abad70",
+    "size": 4850
    },
    {
     "path": "config/ftbquests/quests/chapters/wildlife.snbt",
@@ -1152,13 +1152,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "b5ea099b1cd3a95970d115f32c5fbd720a0695aa",
-    "size": 776088
+    "sha1": "475bc989d79b49d2a830a40129e4bb53b125faab",
+    "size": 776054
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "b5ea099b1cd3a95970d115f32c5fbd720a0695aa",
-    "size": 776088
+    "sha1": "475bc989d79b49d2a830a40129e4bb53b125faab",
+    "size": 776054
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -1172,8 +1172,8 @@
    },
    {
     "path": "config/openpartiesandclaims-server.toml",
-    "sha1": "aadb6c3b1ac38c5797f8b39abc10999a529648e4",
-    "size": 53270
+    "sha1": "cdede06b325b9170270c1db065de3cf5049a20e0",
+    "size": 53271
    },
    {
     "path": "config/sereneseasons/seasons.toml",
@@ -1672,13 +1672,13 @@
    },
    {
     "path": "kubejs/assets/minecraft/font/alt.json",
-    "sha1": "28e29fe067498fb9c44682080d1aaea423182d2c",
-    "size": 7491
+    "sha1": "4fd56e55a0ddc45488863c6d6fde819b57d52e0a",
+    "size": 7376
    },
    {
     "path": "kubejs/assets/minecraft/font/illageralt.json",
-    "sha1": "dc179b9709394aefa54d13734c71afc34cf79b9c",
-    "size": 5764
+    "sha1": "c85c2a049ab19b48f30779c5d24c37abe0fbaeb6",
+    "size": 5653
    },
    {
     "path": "kubejs/assets/modernfix/lang/uk_ua.json",
