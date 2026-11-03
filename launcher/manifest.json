@@ -1,5 +1,5 @@
 {
- "version": "2026.11.03.1",
+ "version": "2026.11.03.2",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -907,15 +907,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.1/wilds_core-0.1.0.jar",
-   "sha1": "9c9fcc78c125565709e223886b27424d612c87c4",
-   "size": 214584
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.2/wilds_core-0.1.0.jar",
+   "sha1": "a737573b658ddb024e339a0c0782816c18aa654f",
+   "size": 219365
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.1/wilds_wiki-0.2.0.jar",
-   "sha1": "f584445f89969ad9565504b68cd68491d0361bb6",
-   "size": 826487
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.2/wilds_wiki-0.2.0.jar",
+   "sha1": "1a27da9681650088b1bac4f0ef735ed3551268cb",
+   "size": 827963
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -963,9 +963,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.1/overrides.zip",
-   "sha1": "134e6e077331e19a494c3bcd2df2e67b7ba7bb70",
-   "size": 28197944
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.2/overrides.zip",
+   "sha1": "b9a0a01c1c6aa6084b210a7c39aa865c74986fd9",
+   "size": 28208082
   },
   "overrides": [
    {
@@ -1162,6 +1162,11 @@
     "path": "config/nomadictents-common.toml",
     "sha1": "4976cd691d9991be3458a7a62ecba5d1cc2604e6",
     "size": 2119
+   },
+   {
+    "path": "config/openpartiesandclaims-server.toml",
+    "sha1": "aadb6c3b1ac38c5797f8b39abc10999a529648e4",
+    "size": 53270
    },
    {
     "path": "config/sereneseasons/seasons.toml",
