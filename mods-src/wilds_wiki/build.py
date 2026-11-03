@@ -73,6 +73,8 @@ def main():
     print("built", out, os.path.getsize(out) // 1024, "KB")
     if "--install" in sys.argv:
         for d in (os.path.join(ROOT, "client", "mods"), INSTANCE):
+            if not os.path.isdir(d):
+                continue  # the dev instance was removed (28.10); the pack's client/mods is what releases use
             for old in glob.glob(os.path.join(d, "wilds_wiki-*.jar")):
                 os.remove(old)
             shutil.copy2(out, d)

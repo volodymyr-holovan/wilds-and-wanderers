@@ -36,6 +36,9 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener(SkillInput::tick);
         NeoForge.EVENT_BUS.addListener(SkillInput::onInteraction);
         NeoForge.EVENT_BUS.addListener(SkillInput::render);
+        NeoForge.EVENT_BUS.addListener(ArmorNumber::pre);
+        NeoForge.EVENT_BUS.addListener(ArmorNumber::post);
+        NeoForge.EVENT_BUS.addListener(ArmorNumber::tick);
         NeoForge.EVENT_BUS.addListener((AttackEntityEvent e) -> {
             if (e.getEntity().level().isClientSide()) MusicDirector.playerAttacked(e.getTarget());
         });

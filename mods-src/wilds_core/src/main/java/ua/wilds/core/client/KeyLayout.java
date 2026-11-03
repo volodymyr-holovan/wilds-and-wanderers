@@ -30,7 +30,7 @@ import ua.wilds.core.WildsCore;
  * conflict context) on the first client tick, so overlapping keys can be found per context.
  */
 public final class KeyLayout {
-    private static final int VERSION = 1;
+    private static final int VERSION = 3;
     private static final String FLAG = "wilds_core-keys.txt";
     private static final String DUMP = System.getProperty("wilds_core.keydump");
     /** mapping -> {key it moves from (its default), key it moves to, Alt or none} */
@@ -46,7 +46,13 @@ public final class KeyLayout {
             Map.entry("key.mekanism.key_hud", new Object[]{InputConstants.KEY_H, InputConstants.KEY_H, KeyModifier.ALT}),
             Map.entry("key.ars_nouveau.selection_hud", new Object[]{InputConstants.KEY_V, InputConstants.KEY_V, KeyModifier.ALT}),
             // the Aether's own accessories screen fails on the server (the pack has one equipment screen, H)
-            Map.entry("key.aether.open_accessories.desc", new Object[]{InputConstants.KEY_I, -1, KeyModifier.NONE}));
+            Map.entry("key.aether.open_accessories.desc", new Object[]{InputConstants.KEY_I, -1, KeyModifier.NONE}),
+            // Jade's overlay (health, armour, mining time) is switched off and on by Num 1 in its TOGGLE mode: one stray
+            // press and the overlay is gone with no hint why (layout 2, 03.11); its own settings screen still toggles it
+            Map.entry("key.jade.show_overlay", new Object[]{InputConstants.KEY_NUMPAD1, -1, KeyModifier.NONE}),
+            // FTB Teams' window (create a party, invite friends: shared quests, positions on the map, no friendly fire,
+            // shared claims) has no key at all by default; Alt+T is free
+            Map.entry("key.ftbteams.open_gui", new Object[]{-1, InputConstants.KEY_T, KeyModifier.ALT}));
     private static boolean done, dumped;
     private static final List<String> moved = new ArrayList<>();
 
@@ -71,7 +77,7 @@ public final class KeyLayout {
             for (KeyMapping k : mc.options.keyMappings) {
                 Object[] m = MOVES.get(k.getName());
                 if (m == null) continue;
-                InputConstants.Key from = InputConstants.Type.KEYSYM.getOrCreate((int) m[0]);
+                InputConstants.Key from = (int) m[0] < 0 ? InputConstants.UNKNOWN : InputConstants.Type.KEYSYM.getOrCreate((int) m[0]);
                 // only a key still on the mod's own default: anything the player chose stays
                 if (!k.getKey().equals(from) || k.getKeyModifier() != KeyModifier.NONE) continue;
                 int to = (int) m[1];
@@ -81,6 +87,7 @@ public final class KeyLayout {
             KeyMapping.resetMapping();
             mc.options.save();
             hideAetherAccessoriesButton();
+            showJadeOverlay();
             Files.writeString(flag, "version=" + VERSION + "\nWilds & Wanderers moved the keys that clashed between mods (" + String.join(", ", moved)
                     + ").\nDelete this file to apply the pack's key layout again (only keys still on their defaults change).\n");
         } catch (Exception ex) {
@@ -110,6 +117,22 @@ public final class KeyLayout {
         }
     }
 
+    /** the overlay a stray Num 1 hid comes back once (Jade's own config, through its API by reflection) */
+    private static void showJadeOverlay() {
+        try {
+            if (!net.neoforged.fml.ModList.get().isLoaded("jade")) return;
+            Object cfg = Class.forName("snownee.jade.api.config.IWailaConfig").getMethod("get").invoke(null);
+            Object general = cfg.getClass().getMethod("getGeneral").invoke(cfg);
+            if (Boolean.TRUE.equals(general.getClass().getMethod("shouldDisplayTooltip").invoke(general))) return;
+            general.getClass().getMethod("setDisplayTooltip", boolean.class).invoke(general, true);
+            Object json = Class.forName("snownee.jade.Jade").getField("CONFIG").get(null);
+            json.getClass().getMethod("save").invoke(json);
+            moved.add("jade_overlay");
+        } catch (Exception | LinkageError ex) {
+            WildsCore.LOG.warn("Could not switch Jade's overlay back on", ex);
+        }
+    }
+
     /** once, in the first world after the keys moved: tell the player where they went */
     public static void onJoin(ClientPlayerNetworkEvent.LoggingIn e) {
         if (moved.isEmpty() || e.getPlayer() == null) return;
@@ -117,6 +140,7 @@ public final class KeyLayout {
         List<String> names = new ArrayList<>();
         for (KeyMapping k : mc.options.keyMappings)
             if (moved.contains(k.getName())) names.add(Component.translatable(k.getName()).getString() + " — " + k.getTranslatedKeyMessage().getString());
+        if (moved.contains("jade_overlay")) names.add("Підказку Jade (здоров'я, броня мобів, час ламання блока) знову ввімкнено; клавішу Num 1, що її ховала, звільнено");
         if (moved.contains("aether_button")) names.add("Кнопку аксесуарів Aether прибрано: усе спорядження — у вікні інвентаря (E)");
         moved.clear();
         e.getPlayer().displayClientMessage(Component.literal("Клавіші, що збігалися між модами, розведено (змінити: Налаштування → Керування):")

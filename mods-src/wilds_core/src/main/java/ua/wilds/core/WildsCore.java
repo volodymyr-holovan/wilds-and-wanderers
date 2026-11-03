@@ -34,6 +34,7 @@ public final class WildsCore {
 
     public WildsCore(IEventBus modBus) {
         LogNoise.install();
+        PartyPeace.register();
         ENTITIES.register(modBus);
         modBus.addListener((net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent e) ->
                 e.put(WANDERER.get(), ua.wilds.core.npc.Wanderer.attributes().build()));
