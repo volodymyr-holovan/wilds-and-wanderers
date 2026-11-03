@@ -1,5 +1,5 @@
 {
- "version": "2026.11.03.2",
+ "version": "2026.11.03.3",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -840,6 +840,13 @@
    "size": 1063849
   },
   {
+   "file": "super_resolution-neoforge-1.21..1.21.1-0.9.2-alpha.2+opengl.jar",
+   "url": "https://cdn.modrinth.com/data/Hf3Qz2H3/versions/5duqM9dF/super_resolution-neoforge-1.21..1.21.1-0.9.2-alpha.2%2Bopengl.jar",
+   "sha1": "e8f814849c3b0bd0e2548877429b02d04fa2d0a6",
+   "size": 33461335,
+   "optional": "upscaler"
+  },
+  {
    "file": "t_and_t-fabric-neoforge-1.13.11.jar",
    "url": "https://cdn.modrinth.com/data/DjLobEOy/versions/DZxwgj6V/t_and_t-fabric-neoforge-1.13.11.jar",
    "sha1": "8f00e36a11568c0b66bbdf5c0e9ee492e511b303",
@@ -907,15 +914,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.2/wilds_core-0.1.0.jar",
-   "sha1": "a737573b658ddb024e339a0c0782816c18aa654f",
-   "size": 219365
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.3/wilds_core-0.1.0.jar",
+   "sha1": "9e7ad65a99f619d96ee9f446eceead0bb8ff5721",
+   "size": 276783
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.2/wilds_wiki-0.2.0.jar",
-   "sha1": "1a27da9681650088b1bac4f0ef735ed3551268cb",
-   "size": 827963
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.3/wilds_wiki-0.2.0.jar",
+   "sha1": "9521deb070dae710852f2d527d8a9a867100f6ff",
+   "size": 841586
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -963,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.2/overrides.zip",
-   "sha1": "b9a0a01c1c6aa6084b210a7c39aa865c74986fd9",
-   "size": 28208082
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.3/overrides.zip",
+   "sha1": "7ca7ac7ba2f127f880ee277d817ef43df44b0cce",
+   "size": 28204964
   },
   "overrides": [
    {
@@ -1824,6 +1831,11 @@
     "size": 12813
    },
    {
+    "path": "kubejs/assets/seamlessores/lang/uk_ua.json",
+    "sha1": "7057e821d6581b98aa3858df2345f69a95aad02c",
+    "size": 65585
+   },
+   {
     "path": "kubejs/assets/shulkerboxtooltip/lang/uk_ua.json",
     "sha1": "067e3c21482c7ee5cee80066cf5bd57c7809face",
     "size": 3953
@@ -1960,8 +1972,8 @@
    },
    {
     "path": "kubejs/assets/wilds/textures/gui/skilltree.png",
-    "sha1": "d404d2125464a567b4165697cce23c84f9809ccf",
-    "size": 4897619
+    "sha1": "5dd026f10ced3b813c40046ba839f874eef991c0",
+    "size": 4887863
    },
    {
     "path": "kubejs/assets/xaerobetterpvp/lang/uk_ua.json",
@@ -3010,18 +3022,18 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/category.json",
-    "sha1": "17a92d53e2f66efae24abcf35f137e7c22fe5b31",
-    "size": 1193
+    "sha1": "ed1c864e44aa288b75ed73c8b5df7a35cfa65adf",
+    "size": 1152
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/connections.json",
-    "sha1": "6058a681caf224ba55ada00289a5c6b3f97d7d83",
-    "size": 15657
+    "sha1": "d73f614aa58c52b8779a890d6510c26a5a109252",
+    "size": 16015
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/definitions.json",
-    "sha1": "624f9587ad6297d0dbb3a7b73f6a0de7e6f0fdfa",
-    "size": 103221
+    "sha1": "7bc5ad856c723ec44cdd7a99fd7523b5453e2cf2",
+    "size": 114804
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/experience.json",
@@ -3030,8 +3042,8 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/skills.json",
-    "sha1": "baa356046769da16fc6ad238f8ffe2c398f09f41",
-    "size": 23471
+    "sha1": "d228e731a88072da7f06d62612761dbd530689b4",
+    "size": 24716
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/config.json",
@@ -3164,6 +3176,11 @@
     "path": "config/sodium-extra-options.json",
     "sha1": "9998b45d8cc2fd103012f446a05ebad56cc98b68",
     "size": 2260
+   },
+   {
+    "path": "config/super_resolution/config.toml",
+    "sha1": "083ea64a543336672d79fd33de5b1571a4ea6493",
+    "size": 1289
    },
    {
     "path": "options.txt",
