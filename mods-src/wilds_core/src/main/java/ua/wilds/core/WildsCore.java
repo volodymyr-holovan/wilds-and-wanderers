@@ -35,6 +35,8 @@ public final class WildsCore {
     public WildsCore(IEventBus modBus) {
         LogNoise.install();
         PartyPeace.register();
+        OpBreak.register();
+        if (net.neoforged.fml.ModList.get().isLoaded("ftbquests") && net.neoforged.fml.ModList.get().isLoaded("ftbteams")) ua.wilds.core.quests.PersonalQuests.register();
         if (net.neoforged.fml.ModList.get().isLoaded("friendsandfoes")) ua.wilds.core.golem.Golems.register();
         ENTITIES.register(modBus);
         ua.wilds.core.skills.branch.BagSkills.ATTACHMENTS.register(modBus);

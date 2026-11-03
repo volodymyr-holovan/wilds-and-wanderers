@@ -10,7 +10,9 @@
     "client.DhClientWorldMixin",
     "client.AccessoriesPlayerInvMixin",
     "client.AccessoriesRowsScreenMixin",
-    "client.ContainerTitleAccessor"
+    "client.ContainerTitleAccessor",
+    "client.FtbTeamsSelfMixin",
+    "client.ApothTooltipMixin"
   ],
   "injectors": {
     "defaultRequire": 0
@@ -21,6 +23,9 @@
     "VillagerPricesMixin",
     "AccessoriesResultSlotMixin",
     "AccessoriesRowsMenuMixin",
-    "CraftingMenuMixin"
+    "CraftingMenuMixin",
+    "FtbQuestsTeamMixin",
+    "FtbQuestsPartyMixin",
+    "OpBreakMixin"
   ]
 }

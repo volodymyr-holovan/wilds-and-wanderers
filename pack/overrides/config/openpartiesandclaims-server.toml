@@ -79,7 +79,7 @@
 
 	[serverConfig.claims]
 		#Whether the claims part of this mod is enabled.
-		enabled = true
+		enabled = false
 		#Whether parties from the primary party system (option "primaryPartySystem") should act as owners of claims.
 		#The technical owner of a party's claims is still a player: the party owner.
 		#Party members who are at least the rank equivalent of Claimer can claim and unclaim as the party (owner).

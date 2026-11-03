@@ -11,12 +11,16 @@ import java.util.Set;
 
 /** Mixins into other mods apply only when that mod is installed: "client.RMSongPickerMixin" needs Reactive Music. */
 public final class WildsMixinPlugin implements IMixinConfigPlugin {
-    private static final Map<String, String> NEEDS = Map.of("ua.wilds.core.mixin.client.RMSongPickerMixin", "reactivemusic",
-            "ua.wilds.core.mixin.AccessoriesResultSlotMixin", "accessories",
-            "ua.wilds.core.mixin.client.DhClientWorldMixin", "distanthorizons",
-            "ua.wilds.core.mixin.AccessoriesRowsMenuMixin", "accessories",
-            "ua.wilds.core.mixin.client.AccessoriesPlayerInvMixin", "accessories",
-            "ua.wilds.core.mixin.client.AccessoriesRowsScreenMixin", "accessories");
+    private static final Map<String, String> NEEDS = Map.ofEntries(Map.entry("ua.wilds.core.mixin.client.RMSongPickerMixin", "reactivemusic"),
+            Map.entry("ua.wilds.core.mixin.AccessoriesResultSlotMixin", "accessories"),
+            Map.entry("ua.wilds.core.mixin.client.DhClientWorldMixin", "distanthorizons"),
+            Map.entry("ua.wilds.core.mixin.AccessoriesRowsMenuMixin", "accessories"),
+            Map.entry("ua.wilds.core.mixin.client.AccessoriesPlayerInvMixin", "accessories"),
+            Map.entry("ua.wilds.core.mixin.client.AccessoriesRowsScreenMixin", "accessories"),
+            Map.entry("ua.wilds.core.mixin.client.FtbTeamsSelfMixin", "ftbteams"),
+            Map.entry("ua.wilds.core.mixin.FtbQuestsTeamMixin", "ftbquests"),
+            Map.entry("ua.wilds.core.mixin.FtbQuestsPartyMixin", "ftbquests"),
+            Map.entry("ua.wilds.core.mixin.client.ApothTooltipMixin", "apotheosis"));
 
     public void onLoad(String mixinPackage) {}
 

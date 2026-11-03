@@ -30,7 +30,7 @@ import ua.wilds.core.WildsCore;
  * conflict context) on the first client tick, so overlapping keys can be found per context.
  */
 public final class KeyLayout {
-    private static final int VERSION = 3;
+    private static final int VERSION = 4;
     private static final String FLAG = "wilds_core-keys.txt";
     private static final String DUMP = System.getProperty("wilds_core.keydump");
     /** mapping -> {key it moves from (its default), key it moves to, Alt or none} */
@@ -52,7 +52,10 @@ public final class KeyLayout {
             Map.entry("key.jade.show_overlay", new Object[]{InputConstants.KEY_NUMPAD1, -1, KeyModifier.NONE}),
             // FTB Teams' window (create a party, invite friends: shared quests, positions on the map, no friendly fire,
             // shared claims) has no key at all by default; Alt+T is free
-            Map.entry("key.ftbteams.open_gui", new Object[]{-1, InputConstants.KEY_T, KeyModifier.ALT}));
+            Map.entry("key.ftbteams.open_gui", new Object[]{-1, InputConstants.KEY_T, KeyModifier.ALT}),
+            // Mekanism's leg armour mode took J by default, and the quest book was left with no key: J opens the quests
+            Map.entry("key.mekanism.legs_mode", new Object[]{InputConstants.KEY_J, InputConstants.KEY_J, KeyModifier.ALT}),
+            Map.entry("key.ftbquests.quests", new Object[]{-1, InputConstants.KEY_J, KeyModifier.NONE}));
     private static boolean done, dumped;
     private static final List<String> moved = new ArrayList<>();
 
