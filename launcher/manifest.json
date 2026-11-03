@@ -1,5 +1,5 @@
 {
- "version": "2026.10.29.1",
+ "version": "2026.11.03.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -907,13 +907,13 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.29.1/wilds_core-0.1.0.jar",
-   "sha1": "b364a8a58b00244447d2dea1f79e5a930f8ae3ee",
-   "size": 208275
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.1/wilds_core-0.1.0.jar",
+   "sha1": "9c9fcc78c125565709e223886b27424d612c87c4",
+   "size": 214584
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.29.1/wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.1/wilds_wiki-0.2.0.jar",
    "sha1": "f584445f89969ad9565504b68cd68491d0361bb6",
    "size": 826487
   },
@@ -963,9 +963,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.10.29.1/overrides.zip",
-   "sha1": "07b9f7777f608116d6139ea324ec3f5c3e8cd26b",
-   "size": 28135788
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.1/overrides.zip",
+   "sha1": "134e6e077331e19a494c3bcd2df2e67b7ba7bb70",
+   "size": 28197944
   },
   "overrides": [
    {
@@ -1145,13 +1145,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "3482cb2b492b46e5c984eac281be3e02787591be",
-    "size": 612241
+    "sha1": "b5ea099b1cd3a95970d115f32c5fbd720a0695aa",
+    "size": 776088
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "3482cb2b492b46e5c984eac281be3e02787591be",
-    "size": 612241
+    "sha1": "b5ea099b1cd3a95970d115f32c5fbd720a0695aa",
+    "size": 776088
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -1169,6 +1169,16 @@
     "size": 21060
    },
    {
+    "path": "config/servercore/config.yml",
+    "sha1": "fcb5b3628c2c2917c0e9faf80c84625558074d4a",
+    "size": 11190
+   },
+   {
+    "path": "config/servercore/optimizations.yml",
+    "sha1": "d91b2b10b64afa37227e6dc2fdf31cc6da54a5ec",
+    "size": 763
+   },
+   {
     "path": "defaultconfigs/openpartiesandclaims-default-player-config.toml",
     "sha1": "2e10541433bcfeed4e5965666ccdb41c68dc11f7",
     "size": 49178
@@ -1179,9 +1189,14 @@
     "size": 12484
    },
    {
+    "path": "kubejs/assets/accessories_compat_layer/lang/uk_ua.json",
+    "sha1": "a3ad87e0f47c18645cdd56faffab9b04d3dc5055",
+    "size": 1271
+   },
+   {
     "path": "kubejs/assets/ae2/lang/uk_ua.json",
-    "sha1": "e21dedefa0c8fc965f89f116055c1b95baba3900",
-    "size": 164
+    "sha1": "bae0c32cc19e87f4ca6760678103beb677254039",
+    "size": 303
    },
    {
     "path": "kubejs/assets/ae2wtlib/lang/uk_ua.json",
@@ -1245,8 +1260,8 @@
    },
    {
     "path": "kubejs/assets/ars_nouveau/lang/uk_ua.json",
-    "sha1": "c9557a231ec13d97761882ba1dd80b5446805c5c",
-    "size": 12609
+    "sha1": "cc1972cfd092800dc7b762fde2ea6c94744a5bd2",
+    "size": 12660
    },
    {
     "path": "kubejs/assets/balm/lang/uk_ua.json",
@@ -1267,6 +1282,16 @@
     "path": "kubejs/assets/betterdungeons/lang/uk_ua.json",
     "sha1": "267452865aa9b4846ff0462c7417fb64dc125139",
     "size": 2619
+   },
+   {
+    "path": "kubejs/assets/betterendisland/lang/uk_ua.json",
+    "sha1": "fc788fc4e6cd1f05ef8a9176d34b22b23f298500",
+    "size": 2088
+   },
+   {
+    "path": "kubejs/assets/betterfortresses/lang/uk_ua.json",
+    "sha1": "4657ee951185747f9cd58bca4ef12147f86fe7d1",
+    "size": 325
    },
    {
     "path": "kubejs/assets/betteroceanmonuments/lang/en_us.json",
@@ -1295,8 +1320,8 @@
    },
    {
     "path": "kubejs/assets/bountiful/lang/uk_ua.json",
-    "sha1": "c7f39ddb4283a4db4dd738dd902d9513e8d7d0c4",
-    "size": 7286
+    "sha1": "b30ce3ed73b3b98895fafef7673b124942121f8c",
+    "size": 11500
    },
    {
     "path": "kubejs/assets/cataclysm/lang/uk_ua.json",
@@ -1325,8 +1350,8 @@
    },
    {
     "path": "kubejs/assets/collective/lang/uk_ua.json",
-    "sha1": "2cc6d0097cc22a0946e3cf013d01dbcb0724bfa8",
-    "size": 4109
+    "sha1": "8a29270b9315ae94ffdcb15f98a64a61b2f9fa29",
+    "size": 5183
    },
    {
     "path": "kubejs/assets/controlling/lang/uk_ua.json",
@@ -1340,8 +1365,8 @@
    },
    {
     "path": "kubejs/assets/create/lang/uk_ua.json",
-    "sha1": "f4e81abf8c4ffcff92b8c3a7458e268a57384aae",
-    "size": 1479
+    "sha1": "befaa2d1d61c36c77863cc29fd5e31ecc26dac96",
+    "size": 2213
    },
    {
     "path": "kubejs/assets/create_dragons_plus/lang/uk_ua.json",
@@ -1355,8 +1380,8 @@
    },
    {
     "path": "kubejs/assets/createaddition/lang/uk_ua.json",
-    "sha1": "1fd6d2d496a4fb6b560ce6b33287d8d6ab816a2d",
-    "size": 3942
+    "sha1": "61e601db8349881d79e81a7a477b96181257b2c9",
+    "size": 4014
    },
    {
     "path": "kubejs/assets/cristellib/lang/uk_ua.json",
@@ -1439,6 +1464,16 @@
     "size": 324
    },
    {
+    "path": "kubejs/assets/farmersdelight/textures/block/tray_pie_leftover.png",
+    "sha1": "a2a1a6789324e866454425fbc4819e17d17d790e",
+    "size": 374
+   },
+   {
+    "path": "kubejs/assets/fishofthieves/lang/uk_ua.json",
+    "sha1": "d7eda6b64d0f06fc8d58a60bd1fc3f20aa4f002d",
+    "size": 18351
+   },
+   {
     "path": "kubejs/assets/flywheel/lang/uk_ua.json",
     "sha1": "5a4f1cd44a0fca1e9c7fdcabe5ae9b6973186f07",
     "size": 1206
@@ -1472,6 +1507,11 @@
     "path": "kubejs/assets/ftbteams/lang/uk_ua.json",
     "sha1": "2582cedc203db59eead23011be5778781f65aeda",
     "size": 3155
+   },
+   {
+    "path": "kubejs/assets/fzzy_config/lang/uk_ua.json",
+    "sha1": "f04a1c36e8024796b649e197a949247c521e9014",
+    "size": 95
    },
    {
     "path": "kubejs/assets/goblins_tyranny/lang/uk_ua.json",
@@ -1515,13 +1555,13 @@
    },
    {
     "path": "kubejs/assets/hybrid_aquatic/lang/uk_ua.json",
-    "sha1": "f47fbecdd66f5d5b9777f272f91c9565b8bb46dd",
-    "size": 4054
+    "sha1": "69eeb8770090e9a7702bdce2903635b8c39babe4",
+    "size": 49510
    },
    {
     "path": "kubejs/assets/iceandfire/lang/uk_ua.json",
-    "sha1": "10382f4181d0d972dfb95159650768e738230572",
-    "size": 51895
+    "sha1": "9e481029481b25ef3fd2c54887aac38b8fbeed98",
+    "size": 51961
    },
    {
     "path": "kubejs/assets/incendium/lang/en_us.json",
@@ -1539,6 +1579,11 @@
     "size": 5862
    },
    {
+    "path": "kubejs/assets/iris/lang/uk_ua.json",
+    "sha1": "47658b5ae509a8fd7139dd96a36bdecc5ade29e5",
+    "size": 1063
+   },
+   {
     "path": "kubejs/assets/irons_lib/lang/uk_ua.json",
     "sha1": "39a931c5b95fdba4efacd08c10067a64fd43a8fe",
     "size": 5869
@@ -1550,13 +1595,13 @@
    },
    {
     "path": "kubejs/assets/irons_spellbooks/lang/uk_ua.json",
-    "sha1": "5a91c5a11dbc4e3edf97f55c31285315ce765cde",
-    "size": 28097
+    "sha1": "679fccb72e6deb2b6337d2698ef880dcd80c8d25",
+    "size": 28428
    },
    {
     "path": "kubejs/assets/jade/lang/uk_ua.json",
-    "sha1": "b90c3553a4cf1c56e640cc34d507d57d2cfcd1aa",
-    "size": 2015
+    "sha1": "6f8ca30fa160fc72af1e778c08e1bd99ba67602c",
+    "size": 2102
    },
    {
     "path": "kubejs/assets/jei/lang/uk_ua.json",
@@ -1570,8 +1615,13 @@
    },
    {
     "path": "kubejs/assets/kobolds/lang/uk_ua.json",
-    "sha1": "d6e9a301c7117474a7a4b64779cba246bad8b197",
-    "size": 1690
+    "sha1": "1b14c61df5886d15f8740af0a95fefff0f5eec66",
+    "size": 1746
+   },
+   {
+    "path": "kubejs/assets/ksyxis/lang/uk_ua.json",
+    "sha1": "2909d5144ea681841db315e7aedd58fbaee95ee0",
+    "size": 289
    },
    {
     "path": "kubejs/assets/lionfishapi/lang/uk_ua.json",
@@ -1579,9 +1629,14 @@
     "size": 429
    },
    {
+    "path": "kubejs/assets/lootr/lang/uk_ua.json",
+    "sha1": "1b5724e1cceaefc228e65be49b9d3d8a7419eeb7",
+    "size": 20713
+   },
+   {
     "path": "kubejs/assets/mekanism/lang/uk_ua.json",
-    "sha1": "a12d606fb156b64e85fe15ccf73ff24d90da7abf",
-    "size": 201839
+    "sha1": "d5e1a55976fe77e3149359fa040e6adea65494f6",
+    "size": 202022
    },
    {
     "path": "kubejs/assets/mekanismgenerators/lang/uk_ua.json",
@@ -1597,6 +1652,11 @@
     "path": "kubejs/assets/mezz_config/lang/uk_ua.json",
     "sha1": "410f92b9df1008987c4941b399524eceb63f4b16",
     "size": 2369
+   },
+   {
+    "path": "kubejs/assets/minecolonies/lang/uk_ua.json",
+    "sha1": "4d142944fcdd761dfee7254124bcd8a430c8151d",
+    "size": 3186
    },
    {
     "path": "kubejs/assets/minecraft/font/alt.json",
@@ -1640,8 +1700,8 @@
    },
    {
     "path": "kubejs/assets/mowziesmobs/lang/uk_ua.json",
-    "sha1": "eefaa2aa1571acadde0e9533888f1e92a5fb2baa",
-    "size": 17326
+    "sha1": "f6ae2acd25fecbc908231409885360e9a0affdc3",
+    "size": 17407
    },
    {
     "path": "kubejs/assets/multipiston/lang/uk_ua.json",
@@ -1680,8 +1740,8 @@
    },
    {
     "path": "kubejs/assets/nomadictents/lang/uk_ua.json",
-    "sha1": "2472b359fef3aa7640d77c18ec41184ecc579646",
-    "size": 11637
+    "sha1": "3ebf890cf8c09964d1ef73852b91ae1a698d95ae",
+    "size": 11627
    },
    {
     "path": "kubejs/assets/nuggets/lang/uk_ua.json",
@@ -1709,9 +1769,19 @@
     "size": 1174
    },
    {
+    "path": "kubejs/assets/particle_core/lang/uk_ua.json",
+    "sha1": "9471b5e0b1e62b2431fade6c65a3f9eecd715230",
+    "size": 6509
+   },
+   {
     "path": "kubejs/assets/patchouli/lang/uk_ua.json",
     "sha1": "cbe7b5e9eb0aa495f92854422b6c8b198a77f674",
     "size": 214
+   },
+   {
+    "path": "kubejs/assets/pipbrowser/lang/uk_ua.json",
+    "sha1": "a4c7f7bdf3a614705f5a7f07a231f98d0a669034",
+    "size": 265
    },
    {
     "path": "kubejs/assets/ponder/lang/uk_ua.json",
@@ -1750,8 +1820,18 @@
    },
    {
     "path": "kubejs/assets/shulkerboxtooltip/lang/uk_ua.json",
-    "sha1": "70f9b577b8aa4c16db688a4a8ad9431413474bfd",
-    "size": 3015
+    "sha1": "067e3c21482c7ee5cee80066cf5bd57c7809face",
+    "size": 3953
+   },
+   {
+    "path": "kubejs/assets/simplytents/lang/en_us.json",
+    "sha1": "36af0ad0b651d8ca550f9759cc5f2368fab60202",
+    "size": 7826
+   },
+   {
+    "path": "kubejs/assets/simplytents/lang/uk_ua.json",
+    "sha1": "cb441f24403e2bac764d5b93a09d679483b1b2c8",
+    "size": 11578
    },
    {
     "path": "kubejs/assets/skinrestorer/lang/en_us.json",
@@ -1769,9 +1849,14 @@
     "size": 20545
    },
    {
+    "path": "kubejs/assets/smallships/models/item/twilightforest_dark_cog.json",
+    "sha1": "92f3a3347fa388f59ca3163c00b531ba4cf06927",
+    "size": 114
+   },
+   {
     "path": "kubejs/assets/sodium-extra/lang/uk_ua.json",
-    "sha1": "abcaf12a22dd53ffe41828a97c858ad2e8ab9467",
-    "size": 7931
+    "sha1": "8dd2ddc9160119ba54c07588e91cd90a255bf86d",
+    "size": 35724
    },
    {
     "path": "kubejs/assets/sodium/lang/uk_ua.json",
@@ -1785,13 +1870,13 @@
    },
    {
     "path": "kubejs/assets/sophisticatedcore/lang/uk_ua.json",
-    "sha1": "91e6e94c0c7b09dfb403af7beaafa6a0ca5b4a3f",
-    "size": 14994
+    "sha1": "f49a5e2b1acfa0fc9b3e38ac1deeb48a803d86d4",
+    "size": 15060
    },
    {
     "path": "kubejs/assets/sophisticatedstorage/lang/uk_ua.json",
-    "sha1": "116e73b82ed31eab04f9fea675f6d00064b0b2fd",
-    "size": 22232
+    "sha1": "a62b22b9910e135daf1662bb8fcfcc48369ffa47",
+    "size": 22340
    },
    {
     "path": "kubejs/assets/spectrelib/lang/uk_ua.json",
@@ -1819,14 +1904,19 @@
     "size": 13839
    },
    {
+    "path": "kubejs/assets/terralith/lang/uk_ua.json",
+    "sha1": "227c17d41007ede97b95ccfd983f3b25391b4719",
+    "size": 2410
+   },
+   {
     "path": "kubejs/assets/trimmed/lang/uk_ua.json",
     "sha1": "f243adc84b3970c53ad072b2e352dd874052c2f3",
     "size": 237
    },
    {
     "path": "kubejs/assets/twilightforest/lang/uk_ua.json",
-    "sha1": "33de2b33d627206db11991d57701d95d2af5592f",
-    "size": 1072
+    "sha1": "e8a91bc624462df4b834134b27f23bb396b38ae0",
+    "size": 1281
    },
    {
     "path": "kubejs/assets/upgrade_aquatic/lang/uk_ua.json",
@@ -1845,8 +1935,8 @@
    },
    {
     "path": "kubejs/assets/waystones/lang/uk_ua.json",
-    "sha1": "f4cfb64a59c902b615667c62290586c39022e3f1",
-    "size": 12068
+    "sha1": "f7f0c03526f0349a6c4daf39cd4062a85de96277",
+    "size": 12192
    },
    {
     "path": "kubejs/assets/wilds/lang/en_us.json",
@@ -1880,8 +1970,8 @@
    },
    {
     "path": "kubejs/assets/xaerominimap/lang/uk_ua.json",
-    "sha1": "82d26a4db8d368428033bacf30c36375420f6e56",
-    "size": 15607
+    "sha1": "d9cd1b97d0cc664a4137068806ea1438d54b5599",
+    "size": 15783
    },
    {
     "path": "kubejs/assets/xaeroworldmap/lang/uk_ua.json",
@@ -1937,6 +2027,16 @@
     "path": "kubejs/data/dungeons_arise/advancement/find_thornborn_towers.json",
     "sha1": "d734d6244be330fc352c66fedcbb2e35d02eeffc",
     "size": 896
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/loot_table/chests/desert_city_big.json",
+    "sha1": "7c2da6e156c0abfaa0ccf3a2308733a596cdef45",
+    "size": 215
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/loot_table/chests/desert_city_medium.json",
+    "sha1": "f3261a4ea78ff7ee2f9d03bfd227f2135fa121a0",
+    "size": 212
    },
    {
     "path": "kubejs/data/minecraft/advancement/give_quest_trader_trade.json",
