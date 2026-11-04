@@ -36,9 +36,19 @@ public abstract class AccessoriesRowsMenuMixin extends AbstractContainerMenu {
         for (int i = 0; i < h.getSlots(); i++) addSlot(new BagSkills.RowSlot(h, i, p));
     }
 
+    /**
+     * Shift-click from an extra row: into the inventory. Shift-click from a worn armour piece too: Accessories counts its
+     * armour slots from 43, but the helmet's is 42 (the slots go helmet, cosmetic helmet, chestplate...), so it took the
+     * helmet for an inventory item to put on, where it already was, and nothing moved: the helmet could not be taken off
+     * with shift-click.
+     */
     @Inject(method = "quickMoveStack", at = @At("HEAD"), cancellable = true, remap = false)
     private void wilds$fromRow(Player player, int index, CallbackInfoReturnable<ItemStack> cir) {
-        if (index < 0 || index >= slots.size() || !(slots.get(index) instanceof BagSkills.RowSlot slot)) return;
+        if (index < 0 || index >= slots.size()) return;
+        Slot slot = slots.get(index);
+        boolean worn = slot.container.getClass().getSimpleName().contains("SlotAccess") && slot.hasItem()
+                && player.getEquipmentSlotForItem(slot.getItem()).isArmor() && slot.getItem() == wilds$worn(player, slot.getItem());
+        if (!(slot instanceof BagSkills.RowSlot) && !worn) return;
         ItemStack stack = slot.getItem();
         if (stack.isEmpty()) {
             cir.setReturnValue(ItemStack.EMPTY);
@@ -59,5 +69,10 @@ public abstract class AccessoriesRowsMenuMixin extends AbstractContainerMenu {
         }
         slot.setChanged();
         cir.setReturnValue(copy);
+    }
+
+    /** the stack the player wears in the armour slot that item goes to (the same object when the slot holds what is worn) */
+    private static ItemStack wilds$worn(Player player, ItemStack stack) {
+        return player.getItemBySlot(player.getEquipmentSlotForItem(stack));
     }
 }

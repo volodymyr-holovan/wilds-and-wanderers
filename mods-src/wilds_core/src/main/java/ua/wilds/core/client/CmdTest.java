@@ -17,6 +17,45 @@ public final class CmdTest {
 
     private CmdTest() {}
 
+    /**
+     * "inv": open the inventory (the pack turns it into the equipment screen); "quick:N": shift-click the slot holding
+     * the player's inventory slot N (39 the helmet, 40 the off hand, 0-8 the hotbar), or "quick:rowK" the K-th slot of
+     * the extra rows; "click:N" / "click:rowK" a plain left click (pick up or put down); "dump": the menu's slots in the log
+     */
+    private static void inventoryStep(Minecraft mc, String what) {
+        var player = mc.player;
+        if (what.equals("inv")) {
+            mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(player));
+            return;
+        }
+        if (what.equals("use")) {   // use the item in the main hand (opens a backpack)
+            mc.gameMode.useItem(player, net.minecraft.world.InteractionHand.MAIN_HAND);
+            return;
+        }
+        var menu = player.containerMenu;
+        if (what.equals("dump")) {
+            StringBuilder sb = new StringBuilder(menu.getClass().getSimpleName()).append(" carried=").append(menu.getCarried()).append(':');
+            for (int i = 0; i < menu.slots.size(); i++) {
+                var s = menu.getSlot(i);
+                if (s.hasItem()) sb.append(' ').append(i).append('[').append(s.container.getClass().getSimpleName()).append('#').append(s.getContainerSlot())
+                        .append("]=").append(s.getItem());
+            }
+            WildsCore.LOG.info("Wilds Core: command self-test menu {}", sb);
+            return;
+        }
+        String[] kv = what.split(":");
+        int target = kv[1].startsWith("m") ? Integer.parseInt(kv[1].substring(1)) : -1;   // "mN": the menu's own slot N
+        for (int i = 0; i < menu.slots.size() && target < 0; i++) {
+            var s = menu.getSlot(i);
+            if (kv[1].startsWith("row") ? s instanceof ua.wilds.core.skills.branch.BagSkills.RowSlot && s.getContainerSlot() == Integer.parseInt(kv[1].substring(3))
+                    : s.container instanceof net.minecraft.world.entity.player.Inventory && s.getContainerSlot() == Integer.parseInt(kv[1])) target = i;
+        }
+        WildsCore.LOG.info("Wilds Core: command self-test {} -> menu slot {}", what, target);
+        if (target < 0) return;
+        mc.gameMode.handleInventoryMouseClick(menu.containerId, target, 0,
+                kv[0].equals("quick") ? net.minecraft.world.inventory.ClickType.QUICK_MOVE : net.minecraft.world.inventory.ClickType.PICKUP, player);
+    }
+
     public static void tick() {
         Minecraft mc = Minecraft.getInstance();
         if (STEPS == null || mc.player == null || mc.getConnection() == null) return;
@@ -37,6 +76,10 @@ public final class CmdTest {
         if (t < 700 || (t - 700) % 200 != 0 || (t - 700) / 200 >= all.length) return;
         String step = all[(t - 700) / 200].trim().replace('+', ' ');   // "+" for spaces: JVM arguments cannot hold them here
         WildsCore.LOG.info("Wilds Core: command self-test step {}", step);
+        if (step.startsWith("=")) {   // inventory steps: "=inv" opens it, "=quick:N" shift-clicks inventory slot N, "=dump" logs the menu
+            inventoryStep(mc, step.substring(1));
+            return;
+        }
         if (step.startsWith("*")) {   // "*some.Screen": open that screen (a public constructor without arguments)
             try {
                 mc.setScreen((net.minecraft.client.gui.screens.Screen) Class.forName(step.substring(1)).getConstructor().newInstance());

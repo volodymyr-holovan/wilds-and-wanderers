@@ -13,9 +13,9 @@ import ua.wilds.core.net.Net;
 
 /**
  * The copper golem's status of a storage (Звичайна, Джерело, Різне, Не чіпати), on the same line as the storage's
- * title when it is open, after the name the player gave it (which the status never changes). The client asks the
- * server about the block under the crosshair when a container screen opens; nothing is shown for an ordinary chest
- * far from any copper golem.
+ * title when it is open, after the name the player gave it (which the status never changes). When a click on a block
+ * has just opened a container screen, the client asks the server about that block; nothing is shown for an ordinary
+ * chest far from any copper golem, nor in screens no block opened (the equipment screen, backpacks).
  */
 public final class SortTitle {
     private static BlockPos asked;
@@ -31,10 +31,10 @@ public final class SortTitle {
         label = "";
         asked = null;
         if (mc.getConnection() == null || !mc.getConnection().hasChannel(Net.SortQuery.TYPE) || mc.level == null) return;
-        // the block the player just clicked, else the one under the crosshair
-        if (clicked != null && mc.level.getGameTime() - clickedAt < 40) asked = clicked;
-        else if (mc.hitResult instanceof BlockHitResult bh && bh.getType() == HitResult.Type.BLOCK) asked = bh.getBlockPos();
-        else return;
+        // only a screen a click on a block has just opened (never the equipment screen, a backpack, the quest book...)
+        if (clicked == null || mc.level.getGameTime() - clickedAt > 40 || ua.wilds.core.client.gear.GearScreens.isGearScreen(s)) return;
+        asked = clicked;
+        clicked = null;
         PacketDistributor.sendToServer(new Net.SortQuery(asked));
     }
 
