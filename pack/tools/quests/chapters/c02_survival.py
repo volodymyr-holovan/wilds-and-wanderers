@@ -59,5 +59,47 @@ CHAPTER = {
             ],
             "tasks": ["item:sophisticatedstorage:chest"], "rewards": ["xp:30"],
         },
+        {
+            "key": "iron_armor", "title": "Залізна броня", "icon": "minecraft:iron_chestplate", "deps": ["knife"],
+            "desc": [
+                "Перші ночі легше пережити в броні. Повний комплект заліза — добрий старт; цифра поруч зі смужкою броні показує, скільки її у вас насправді."
+            ],
+            "tasks": ["item:minecraft:iron_helmet", "item:minecraft:iron_chestplate", "item:minecraft:iron_leggings", "item:minecraft:iron_boots"], "rewards": ["item:minecraft:iron_ingot*6", "xp:60"], "skill": 50,
+        },
+        {
+            "key": "shield", "title": "Щит", "icon": "minecraft:shield", "deps": ["iron_armor"],
+            "desc": [
+                "Щит у другій руці (ПКМ) блокує удари й стріли спереду."
+            ],
+            "tasks": ["item:minecraft:shield"], "rewards": ["xp:30"], "skill": 20,
+        },
+        {
+            "key": "bow", "title": "Лук і стріли", "icon": "minecraft:bow", "deps": ["iron_armor"],
+            "desc": [
+                "Багато ворогів краще бити здалеку: криперів, павуків, відьом. Тримайте лук і запас стріл."
+            ],
+            "tasks": ["item:minecraft:bow", "item:minecraft:arrow*32"], "rewards": ["item:minecraft:arrow*32", "xp:30"], "skill": 20,
+        },
+        {
+            "key": "farm", "title": "Свій хліб", "icon": "minecraft:wheat", "deps": ["pot"],
+            "desc": [
+                "Пшениця росте майже весь рік, але зима її зупиняє. Зберіть урожай і посійте знову: стиглий урожай ще й дає досвід дерева навичок."
+            ],
+            "tasks": ["item:minecraft:wheat*32"], "rewards": ["item:minecraft:bone_meal*16", "xp:40"], "skill": 30,
+        },
+        {
+            "key": "anvil", "title": "Ковадло", "icon": "minecraft:anvil", "deps": ["iron_armor"],
+            "desc": [
+                "Ковадло лагодить речі, поєднує зачарування й перейменовує. Знадобиться й для першого самоцвітного пилу."
+            ],
+            "tasks": ["item:minecraft:anvil"], "rewards": ["xp:40"], "skill": 30,
+        },
+        {
+            "key": "enchanting", "title": "Стіл зачарувань", "icon": "minecraft:enchanting_table", "deps": ["anvil"],
+            "desc": [
+                "Стіл зачарувань із полицями навколо дає перші чари. Згодом полиці з Незеру, моря й Енду піднімуть його силу (розділ «Зачарування»)."
+            ],
+            "tasks": ["item:minecraft:enchanting_table"], "rewards": ["item:minecraft:lapis_lazuli*16", "xp:60"], "skill": 40,
+        },
     ],
 }

@@ -1,0 +1,462 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "village"
+	group: "3C6D5B8B49BE1899"
+	icon: {
+		id: "bountiful:bountyboard"
+	}
+	id: "3DE7DEB16DC88274"
+	order_index: 25
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "bountiful:bountyboard"
+			}
+			id: "7D78C285D73CCE61"
+			rewards: [
+				{
+					count: 4
+					id: "18EE580CEF41C468"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "2C0B2E2B66056EC7"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "48448E6B78ED41D3"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					advancement: "bountiful:bountiful/bounty_taken"
+					criterion: ""
+					id: "2ABD7C9733ADCFE3"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7D78C285D73CCE61"
+			]
+			icon: {
+				id: "bountiful:bounty"
+			}
+			id: "32731728A9CFF4C4"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "54222F773EEA42EC"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "685A2AFA36EE1187"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "19AFA6EEF04B26EF"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					advancement: "bountiful:bountiful/bounty_complete"
+					criterion: ""
+					id: "42162611AE6DFD3A"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"32731728A9CFF4C4"
+			]
+			icon: {
+				id: "minecraft:clock"
+			}
+			id: "697199C19A0EEB39"
+			rewards: [
+				{
+					count: 8
+					id: "5D6D4442A86805C9"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "7E9E1CFF3BE86DD9"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "4FD5E40ECAAC9F79"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					advancement: "bountiful:bountiful/rush_order"
+					criterion: ""
+					id: "167501ABCD3481FD"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"7D78C285D73CCE61"
+			]
+			icon: {
+				id: "villagersplus:alchemist_table"
+			}
+			id: "1F88FE33F9A5FE67"
+			rewards: [
+				{
+					count: 8
+					id: "64C5E066F9C94B5F"
+					item: {
+						count: 1
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "7324F4D75D7A1817"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "68DF1F4898A4C3A6"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1E41391B309CCEF0"
+					item: {
+						count: 1
+						id: "villagersplus:alchemist_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"7D78C285D73CCE61"
+			]
+			icon: {
+				id: "villagersplus:oak_horticulturist_table"
+			}
+			id: "66BEC09E1FCBA57C"
+			rewards: [
+				{
+					count: 16
+					id: "15AAC9C7059587BD"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "687863D775318D4D"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "6508935F0BE6B80D"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1616F03954F3FBFC"
+					item: {
+						count: 1
+						id: "villagersplus:oak_horticulturist_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7D78C285D73CCE61"
+			]
+			icon: {
+				id: "villagersplus:oceanographer_table"
+			}
+			id: "7DC94F434F075A18"
+			rewards: [
+				{
+					count: 8
+					id: "702B14A11F6714BD"
+					item: {
+						count: 1
+						id: "minecraft:prismarine_shard"
+					}
+					type: "item"
+				}
+				{
+					id: "3BC3F3ADAE0C022C"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "6D1FCADD0104222E"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E1FCB91F32945F3"
+					item: {
+						count: 1
+						id: "villagersplus:oceanographer_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"7D78C285D73CCE61"
+			]
+			icon: {
+				id: "villagersplus:ore_grinder"
+			}
+			id: "5DCB18D4DA899083"
+			rewards: [
+				{
+					count: 8
+					id: "3EF70D8EBBB006A0"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "378CF0A80FFDB271"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "1DC61035E497E1A5"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "10AC485EAEDFA482"
+					item: {
+						count: 1
+						id: "villagersplus:ore_grinder"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"1F88FE33F9A5FE67"
+			]
+			icon: {
+				id: "villagersplus:occultist_table"
+			}
+			id: "1464C57CE71E2593"
+			rewards: [
+				{
+					count: 16
+					id: "6271B56E6E233526"
+					item: {
+						count: 1
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
+					id: "7BB3B8B152ACF49E"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "50A16D610D9CB22E"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6EDCCC6FB89F7180"
+					item: {
+						count: 1
+						id: "villagersplus:occultist_table"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5DCB18D4DA899083"
+			]
+			icon: {
+				id: "easy_villagers:villager"
+			}
+			id: "1807EB23277C230E"
+			rewards: [
+				{
+					id: "1FE601F59DFC379B"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "14EFAD51A5996A58"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2C789AD3F83E0B7A"
+					item: {
+						count: 1
+						id: "easy_villagers:villager"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"32731728A9CFF4C4"
+				"1464C57CE71E2593"
+			]
+			icon: {
+				id: "minecraft:totem_of_undying"
+			}
+			id: "4207DE0280BA10AA"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "1073FEDF15FEAD3B"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					count: 16
+					id: "1D61B5F146DC2B92"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "6C59AD90CF869A2C"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "109CBCF20205AABF"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					advancement: "minecraft:adventure/hero_of_the_village"
+					criterion: ""
+					id: "3088ADA43799C959"
+					type: "advancement"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+}

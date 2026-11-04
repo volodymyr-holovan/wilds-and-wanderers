@@ -96,5 +96,42 @@ CHAPTER = {
             },
             "tasks": ["kill:aether:sun_spirit"], "rewards": ["loot:wilds:reward/boss", "loot:wilds:reward/magic", "xp:400"], "skill": 250,
         },
+        {
+            "key": "skyroot", "title": "Небесне дерево", "icon": "aether:skyroot_pickaxe", "deps": ["portal"],
+            "desc": [
+                "В Етері ростуть дерева &aнебесного кореня&r. З них — перші етерні інструменти й відра, а з &aсвятого каменю&r — кам'яні.",
+                "Кайло з небесного кореня дає більше етерних блоків при видобутку."
+            ],
+            "tasks": ["item:aether:skyroot_pickaxe", "item:aether:holystone*16"], "rewards": ["xp:30"], "skill": 30,
+        },
+        {
+            "key": "zanite", "title": "Занітове спорядження", "icon": "aether:zanite_pickaxe", "deps": ["ambrosium"],
+            "desc": [
+                "Інструменти із заніту працюють тим швидше, чим більше вони зношені."
+            ],
+            "tasks": ["item:aether:zanite_pickaxe", "item:aether:zanite_sword"], "rewards": ["item:aether:zanite_gemstone*6", "xp:60"], "skill": 40,
+        },
+        {
+            "key": "gloves", "title": "Рукавиці й прикраси", "icon": "aether:zanite_gloves", "deps": ["zanite"],
+            "desc": [
+                "Етер має свої аксесуари: &aрукавиці&r посилюють удар кулаком і захищають, &aкулони й каблучки&r дають бонуси.",
+                "Їх вдягають у слоти аксесуарів у вікні спорядження (&aE&r)."
+            ],
+            "tasks": ["item:aether:zanite_gloves", "item:aether:zanite_ring"], "rewards": ["xp:60"], "skill": 40,
+        },
+        {
+            "key": "clouds", "title": "Хмари", "icon": "aether:blue_aercloud", "deps": ["portal"],
+            "desc": [
+                "&fБілі хмари&r м'які: падіння на них не ранить. &bБлакитні&r підкидають угору. Поставте кілька біля островів — і падати не страшно."
+            ],
+            "tasks": ["item:aether:cold_aercloud*8", "item:aether:blue_aercloud*4"], "rewards": ["xp:40"], "skill": 30,
+        },
+        {
+            "key": "freezer", "title": "Морозильник", "icon": "aether:freezer", "deps": ["ambrosium"],
+            "desc": [
+                "&aМорозильник&r заморожує воду й деякі речі, а паливом для нього служить &aкриголід&r. Так робляться крижаний кулон і крижана каблучка."
+            ],
+            "tasks": ["item:aether:freezer"], "rewards": ["item:aether:icestone*8", "xp:50"], "skill": 30,
+        },
     ],
 }

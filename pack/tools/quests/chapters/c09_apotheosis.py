@@ -44,5 +44,56 @@ CHAPTER = {
             ],
             "tasks": ["item:apothic_enchanting:library"], "rewards": ["xp:150"], "skill": 80,
         },
+        {
+            "key": "first_dust", "title": "Перший самоцвітний пил", "icon": "apotheosis:gem_dust", "deps": ["gem"],
+            "desc": [
+                "Самоцвітний пил потрібен для столів огранювання, розбирання й перекування, але перший пил ні з чого не скрафтиш.",
+                "Викиньте простий самоцвіт на землю (&aQ&r) і &eскиньте на нього ковадло&r: поставте ковадло на блок просто над ним. Самоцвіт розсиплеться на пил."
+            ],
+            "tasks": ["item:apotheosis:gem_dust*3"], "rewards": ["xp:60"], "skill": 40,
+        },
+        {
+            "key": "cutting", "title": "Огранювання", "icon": "apotheosis:gem_cutting_table", "deps": ["first_dust"],
+            "desc": [
+                "На &aстолі огранювання&r самоцвіт стає чистішим: тріснутий, щербатий, з вадою, звичайний, бездоганний, досконалий. Для цього потрібні пил і матеріали рідкості з розібраних речей."
+            ],
+            "tasks": ["item:apotheosis:gem_cutting_table"], "rewards": ["item:apotheosis:gem_dust*8", "xp:80"], "skill": 50,
+        },
+        {
+            "key": "augmenting", "title": "Посилення", "icon": "apotheosis:augmenting_table", "deps": ["cutting"],
+            "desc": [
+                "&aСтіл посилення&r перекидає або підсилює одну властивість речі, не чіпаючи решти. Дорого, зате точно."
+            ],
+            "tasks": ["item:apotheosis:augmenting_table"], "rewards": ["loot:wilds:reward/magic", "xp:120"], "skill": 60,
+        },
+        {
+            "key": "tier_frontier", "title": "Світовий рівень: Кордон", "icon": "minecraft:iron_chestplate", "deps": ["affix"], "size": 1.25,
+            "desc": [
+                "Світовий рівень — ваша особиста складність світу: що вищий, то кращі речі й самоцвіти. Вікно рівнів — &aCtrl+T&r.",
+                "Щоб відкрити &eКордон&r, вдягніть одночасно шолом, нагрудник, поножі, черевики й візьміть зброю — усе з властивостями. Потім активуйте рівень у вікні."
+            ],
+            "tasks": ["adv:apotheosis:progression/frontier"], "rewards": ["loot:wilds:reward/explorer", "xp:100"], "skill": 60,
+        },
+        {
+            "key": "tier_ascent", "title": "Світовий рівень: Сходження", "icon": "minecraft:diamond_chestplate", "deps": ["tier_frontier"],
+            "desc": [
+                "Повний комплект &aнезвичайних&r (зелених) речей або кращих — і переможіть &cзагарбника&r. Загарбники з'являються, поки активний Кордон."
+            ],
+            "tasks": ["adv:apotheosis:progression/ascent"], "rewards": ["loot:wilds:reward/boss", "xp:200"], "skill": 100,
+        },
+        {
+            "key": "tier_summit", "title": "Світовий рівень: Вершина", "icon": "minecraft:wither_skeleton_skull", "deps": ["tier_ascent"],
+            "desc": [
+                "Повний комплект &9рідкісних&r (синіх) речей — і переможіть &cВізера&r."
+            ],
+            "tasks": ["adv:apotheosis:progression/summit"], "rewards": ["loot:wilds:reward/boss", "xp:300"], "skill": 150,
+        },
+        {
+            "key": "tier_pinnacle", "title": "Світовий рівень: Пік", "icon": "minecraft:dragon_head", "deps": ["tier_summit"], "size": 1.5, "shape": "gear",
+            "desc": [
+                "Повний комплект &5епічних&r (фіолетових) речей — і переможіть &cдракона Енду&r. Найвищий рівень: найсильніші вороги й найкраща здобич."
+            ],
+            "tasks": ["adv:apotheosis:progression/pinnacle"], "rewards": ["loot:wilds:reward/boss", "loot:wilds:reward/magic", "xp:500"], "skill": 250,
+        },
     ],
 }

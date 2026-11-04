@@ -1,0 +1,584 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bestiary"
+	group: "12EFE023D7004E38"
+	icon: {
+		id: "alexsmobs:animal_dictionary"
+	}
+	id: "7F48B7868B9603D0"
+	order_index: 24
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "alexsmobs:animal_dictionary"
+			}
+			id: "2E53FC88D2DA4DCF"
+			rewards: [
+				{
+					id: "71BF0E487295AB50"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "11838D432C808582"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "56F332E5E8C15F04"
+					item: {
+						count: 1
+						id: "alexsmobs:animal_dictionary"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2E53FC88D2DA4DCF"
+			]
+			icon: {
+				id: "alexsmobs:banana"
+			}
+			id: "1961C3CF9D7C5092"
+			rewards: [
+				{
+					id: "347F54A88C1A2D23"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "68CDD81F2BA452BD"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1A88A6A4E3E93087"
+					item: {
+						count: 1
+						id: "alexsmobs:banana"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"2E53FC88D2DA4DCF"
+			]
+			icon: {
+				id: "alexsmobs:roadrunner_feather"
+			}
+			id: "1947D62AABCABE7C"
+			rewards: [
+				{
+					id: "35CBD68688484E73"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "4F96A6EA4BB6D3D2"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "335483B824242830"
+					item: {
+						count: 1
+						id: "alexsmobs:roadrunner_feather"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"2E53FC88D2DA4DCF"
+			]
+			icon: {
+				id: "alexsmobs:bison_fur"
+			}
+			id: "1CF8A7E2D3B3F4DF"
+			rewards: [
+				{
+					id: "45586FDBD7E50FA0"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "454B7AC3F6164BF8"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "103CCFE7290E73FC"
+					item: {
+						count: 1
+						id: "alexsmobs:bison_fur"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1CF8A7E2D3B3F4DF"
+			]
+			icon: {
+				id: "alexsmobs:moose_antler"
+			}
+			id: "4896840B5F3B5E02"
+			rewards: [
+				{
+					id: "6E071A4BD3A6FE21"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "26EC6219BE06CC4D"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "163D2FC0197F79BA"
+					item: {
+						count: 1
+						id: "alexsmobs:moose_antler"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -4.375d
+		}
+		{
+			dependencies: [
+				"1961C3CF9D7C5092"
+			]
+			icon: {
+				id: "alexsmobs:crocodile_scute"
+			}
+			id: "7292053316304090"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "57ACB7EE2FD473C3"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "2DDDE98EE244EDB0"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "14E75C248DC6952E"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexsmobs:crocodile"
+					id: "28B5439CF6367BF9"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 2L
+					id: "23DD5CB0B8089067"
+					item: {
+						count: 1
+						id: "alexsmobs:crocodile_scute"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -2.625d
+		}
+		{
+			dependencies: [
+				"1CF8A7E2D3B3F4DF"
+			]
+			icon: {
+				id: "alexsmobs:bear_fur"
+			}
+			id: "167C5B560B5FF84E"
+			rewards: [
+				{
+					id: "79D2A0B54AF0F479"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "4C7C7405E6F21C1B"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "38DE82D9764B890F"
+					item: {
+						count: 1
+						id: "alexsmobs:bear_fur"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"2E53FC88D2DA4DCF"
+			]
+			icon: {
+				id: "alexsmobs:shark_tooth"
+			}
+			id: "3E23395529E6F737"
+			rewards: [
+				{
+					count: 32
+					id: "6542006AFDF667E2"
+					item: {
+						count: 1
+						id: "minecraft:arrow"
+					}
+					type: "item"
+				}
+				{
+					id: "23B1BA14C4E081FB"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "5B5C675B5664AE56"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "70128841E0560DAE"
+					item: {
+						count: 1
+						id: "alexsmobs:shark_tooth"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"3E23395529E6F737"
+			]
+			icon: {
+				id: "alexsmobs:mimic_octopus_bucket"
+			}
+			id: "37142B45B8C59C6D"
+			rewards: [
+				{
+					id: "5E4415E41F08BBF3"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "25FCC75D08B70788"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "16D09B8F0A56E150"
+					item: {
+						count: 1
+						id: "alexsmobs:mimic_octopus_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"37142B45B8C59C6D"
+				"7292053316304090"
+			]
+			icon: {
+				id: "alexsmobs:void_worm_eye"
+			}
+			id: "1C6ADB2AE4213140"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "23372DDC7884467C"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "7EEA89105A91CFB5"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 200"
+					elevate_perms: true
+					id: "30E976E27B2F599F"
+					silent: true
+					title: "+200 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "alexsmobs:void_worm"
+					id: "52FFDA39B4E39684"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"2E53FC88D2DA4DCF"
+			]
+			icon: {
+				id: "friendsandfoes:crab_claw"
+			}
+			id: "720B742C351A7D39"
+			rewards: [
+				{
+					id: "129FE88B7E105316"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "52E0A18E678B67CB"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "741116A300EAA911"
+					item: {
+						count: 1
+						id: "friendsandfoes:crab_claw"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"720B742C351A7D39"
+			]
+			icon: {
+				id: "friendsandfoes:penguin_feather"
+			}
+			id: "6DBC716BA9EF6BD3"
+			rewards: [
+				{
+					id: "17B04DAFCBD3D7BD"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "1C11B6E7720D7D1F"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "702ADB0BF5106451"
+					item: {
+						count: 1
+						id: "friendsandfoes:penguin_feather"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"720B742C351A7D39"
+			]
+			icon: {
+				id: "friendsandfoes:totem_of_freezing"
+			}
+			id: "52EC13BF14023679"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "17C3328A393E325C"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "1A30845E588E2EA0"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "6270657C2A9D3356"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5D1F19F3E48207F1"
+					item: {
+						count: 1
+						id: "friendsandfoes:totem_of_freezing"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 4.375d
+		}
+		{
+			dependencies: [
+				"52EC13BF14023679"
+			]
+			icon: {
+				id: "friendsandfoes:wildfire_crown_fragment"
+			}
+			id: "1691CCC3D48AB693"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "20113160E4AB264B"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "6B1655220AA88CB0"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "11AFF79E803CD08A"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "32D3490AD80197DD"
+					item: {
+						count: 1
+						id: "friendsandfoes:wildfire_crown_fragment"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+	]
+}

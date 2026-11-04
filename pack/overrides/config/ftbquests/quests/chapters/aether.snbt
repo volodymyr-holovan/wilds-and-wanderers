@@ -111,7 +111,7 @@
 				}
 			]
 			x: 2.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: [
@@ -155,7 +155,7 @@
 				}
 			]
 			x: 4.0d
-			y: -0.875d
+			y: -2.625d
 		}
 		{
 			dependencies: [
@@ -200,7 +200,7 @@
 				}
 			]
 			x: 4.0d
-			y: 0.875d
+			y: -0.875d
 		}
 		{
 			dependencies: [
@@ -254,7 +254,7 @@
 				}
 			]
 			x: 6.0d
-			y: 0.0d
+			y: -0.875d
 		}
 		{
 			dependencies: [
@@ -359,6 +359,239 @@
 			]
 			x: 10.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1464F36CC958AD76"
+			]
+			icon: {
+				id: "aether:skyroot_pickaxe"
+			}
+			id: "2426EC39340EBB3C"
+			rewards: [
+				{
+					id: "110DE2D0EF8D3484"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "429A22401CBD81A3"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2180F5F62B763E5D"
+					item: {
+						count: 1
+						id: "aether:skyroot_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "66616A3AB53FAE6D"
+					item: {
+						count: 1
+						id: "aether:holystone"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"50237B83E9E5452D"
+			]
+			icon: {
+				id: "aether:zanite_pickaxe"
+			}
+			id: "50FD96A52903969E"
+			rewards: [
+				{
+					count: 6
+					id: "28CB98BCC6B3F4BD"
+					item: {
+						count: 1
+						id: "aether:zanite_gemstone"
+					}
+					type: "item"
+				}
+				{
+					id: "670B3FC8DD86D07D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "13941CFD2EF2443B"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "717C2829EDC747ED"
+					item: {
+						count: 1
+						id: "aether:zanite_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "733BD0B62A9EA478"
+					item: {
+						count: 1
+						id: "aether:zanite_sword"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"50FD96A52903969E"
+			]
+			icon: {
+				id: "aether:zanite_gloves"
+			}
+			id: "32EAAD4A350D1C3A"
+			rewards: [
+				{
+					id: "16E173E67DC98712"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "304E4BCBDD3F79F6"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "10F8C308E0D3FA1D"
+					item: {
+						count: 1
+						id: "aether:zanite_gloves"
+					}
+					type: "item"
+				}
+				{
+					id: "2A2DB5D35DCB211B"
+					item: {
+						count: 1
+						id: "aether:zanite_ring"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"1464F36CC958AD76"
+			]
+			icon: {
+				id: "aether:blue_aercloud"
+			}
+			id: "131CAD1F395BD4D0"
+			rewards: [
+				{
+					id: "1960D72411E8DA51"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "2B67150F5A6826A5"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "1D610D48A268DBF7"
+					item: {
+						count: 1
+						id: "aether:cold_aercloud"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "539457DC72DF9F60"
+					item: {
+						count: 1
+						id: "aether:blue_aercloud"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"50237B83E9E5452D"
+			]
+			icon: {
+				id: "aether:freezer"
+			}
+			id: "15E2B2AF364B3FB8"
+			rewards: [
+				{
+					count: 8
+					id: "17F54EB33E14C23F"
+					item: {
+						count: 1
+						id: "aether:icestone"
+					}
+					type: "item"
+				}
+				{
+					id: "4C60A6BCB7B56CED"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "7AF5038F453D68F6"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "249F22CA8BD3606E"
+					item: {
+						count: 1
+						id: "aether:freezer"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.625d
 		}
 	]
 }

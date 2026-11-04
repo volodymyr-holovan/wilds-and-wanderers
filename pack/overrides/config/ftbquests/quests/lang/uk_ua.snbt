@@ -19,6 +19,10 @@
 		"Їжа, пори року, скрині й скарби"
 	]
 	chapter.1E6EF59D382AFAD7.title: "&aВиживання"
+	chapter.1E77E388D0A9F0D1.chapter_subtitle: [
+		"Рюкзаки, сховища, пошук і сортування"
+	]
+	chapter.1E77E388D0A9F0D1.title: "&bРечі на місцях"
 	chapter.2040C5A144D6F506.chapter_subtitle: [
 		"Ice and Fire: гнізда, лут і драконяча сталь"
 	]
@@ -39,6 +43,10 @@
 		"Як користуватися всім, що є у збірці"
 	]
 	chapter.22E1A37F318050E4.title: "&aПерші кроки"
+	chapter.23A0EECBA717BD81.chapter_subtitle: [
+		"Що дає кожен шлях мандрівника"
+	]
+	chapter.23A0EECBA717BD81.title: "&eГілки навичок"
 	chapter.2BE3562A22DFA19F.chapter_subtitle: [
 		"Електрика для інших модів і зачарування машинами"
 	]
@@ -71,6 +79,10 @@
 		"Вимір вічних сутінків і ланцюжок босів"
 	]
 	chapter.375AE59F12D2E91D.title: "&2Сутінковий ліс"
+	chapter.3DE7DEB16DC88274.chapter_subtitle: [
+		"Доручення, нові професії, вигідні обміни"
+	]
+	chapter.3DE7DEB16DC88274.title: "&2Село й торгівля"
 	chapter.78D286BD28862E44.chapter_subtitle: [
 		"Новий Незер, рибалка в лаві, дракон і зовнішні острови"
 	]
@@ -83,6 +95,10 @@
 		"L_Ender's Cataclysm і Mowzie's Mobs"
 	]
 	chapter.7A25D1A2C851F11B.title: "&4Великі боси"
+	chapter.7ACD9E6E157ACDD6.chapter_subtitle: [
+		"Город, плита, святковий стіл"
+	]
+	chapter.7ACD9E6E157ACDD6.title: "&6Кухня"
 	chapter.7D2F7748380711AD.chapter_subtitle: [
 		"Звірі, птахи, комахи і дрібниці під ногами"
 	]
@@ -91,6 +107,10 @@
 		"Сувої, книги заклинань, школи магії й Мертвий король"
 	]
 	chapter.7F389844624DA709.title: "&5Iron's Spells"
+	chapter.7F48B7868B9603D0.chapter_subtitle: [
+		"Дивовижні звірі світу"
+	]
+	chapter.7F48B7868B9603D0.title: "&aЗвіринець"
 	chapter_group.12EFE023D7004E38.title: "Пригоди"
 	chapter_group.1822DF65F13679E8.title: "Мандрівники"
 	chapter_group.2D0358AC52F60020.title: "Техніка"
@@ -275,8 +295,33 @@
 	quest.11B26EF16F0E3B4E.title: "Перли рифу"
 	quest.120BB2862BC3FBD3.quest_desc: [ ]
 	quest.120BB2862BC3FBD3.title: "Мовчазна каплиця"
+	quest.122B89BA4DF49CBC.quest_desc: [
+		"&aПокращення стискання&r саме перетворює дев'ять злитків на блок, дев'ять самородків на злиток — сховище тримає менше комірок зайнятими."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sophisticatedstorage.compacting_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:compacting_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:compacting_upgrade\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.sophisticatedstorage.compacting_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:compacting_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:compacting_upgrade\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:compacting_upgrade\"}}]"
+	]
+	quest.122B89BA4DF49CBC.title: "Стискання"
+	quest.1250F3A7EAEABF97.quest_desc: [
+		"Повний комплект &aнезвичайних&r (зелених) речей або кращих — і переможіть &cзагарбника&r. Загарбники з'являються, поки активний Кордон."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:diamond_chestplate\"}}]"
+	]
+	quest.1250F3A7EAEABF97.title: "Світовий рівень: Сходження"
 	quest.1262AEA77BCB5895.quest_desc: [ ]
 	quest.1262AEA77BCB5895.title: "Вежа ліча"
+	quest.1288442435CFDF8D.quest_desc: [
+		"Повний комплект &9рідкісних&r (синіх) речей — і переможіть &cВізера&r."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:wither_skeleton_skull\"}}]"
+	]
+	quest.1288442435CFDF8D.title: "Світовий рівень: Вершина"
 	quest.1290F8470CF31418.quest_desc: [ ]
 	quest.1290F8470CF31418.title: "Подорож лавою"
 	quest.12A8D042F72D17A8.quest_desc: [ ]
@@ -332,6 +377,23 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki goblins_tyranny:hut_logs\"}}]"
 	]
 	quest.13105751B35D9192.title: "Табір гоблінів"
+	quest.131CAD1F395BD4D0.quest_desc: [
+		"&fБілі хмари&r м'які: падіння на них не ранить. &bБлакитні&r підкидають угору. Поставте кілька біля островів — і падати не страшно."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.aether.cold_aercloud\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:cold_aercloud\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:cold_aercloud\"}}}, {\"text\": \" ×8\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.aether.blue_aercloud\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:blue_aercloud\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:blue_aercloud\"}}}, {\"text\": \" ×4\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.aether.cold_aercloud\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:cold_aercloud\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:cold_aercloud\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.aether.zephyr\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:aether:zephyr\"}}]"
+		"[\"\", {\"translate\": \"block.aether.blue_aercloud\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:blue_aercloud\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:blue_aercloud\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"aether: freezing\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.aether.blue_swet\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:aether:blue_swet\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:cold_aercloud\"}}]"
+	]
+	quest.131CAD1F395BD4D0.title: "Хмари"
 	quest.132890CBB2E83CE2.quest_desc: [
 		"&6Ярема&r, колишній солдат &8(доручення 4 з 4)&r:"
 		"&o«Їх веде закликач — маг, що кличе з-під землі ікла й примарних вексів. Він живе в лісовому особняку, глибоко в темному лісі.»&r"
@@ -554,6 +616,26 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki hybrid_aquatic:ominous_conch\"}}]"
 	]
 	quest.1429AB275B508821.title: "Зловісна мушля"
+	quest.142BE3549F76E380.quest_desc: [
+		"Кожна скриня біля голема має статус. Присядьте й клацніть по скрині &aпорожньою рукою&r, щоб перемкнути: звичайна → джерело (точно) → джерело (за схожістю) → різне → не чіпати."
+		"Статус видно в заголовку відкритої скрині. Соти на големові не дають йому зіржавіти."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:chest\"}}]"
+	]
+	quest.142BE3549F76E380.title: "Джерело, різне, не чіпати"
+	quest.1464C57CE71E2593.quest_desc: [
+		"&aЗачарована чаша&r приваблює &aокультиста&r: він торгує магічними речами."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.villagersplus.occultist_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:occultist_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:occultist_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.villagersplus.occultist_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:occultist_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:occultist_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:occultist_table\"}}]"
+	]
+	quest.1464C57CE71E2593.title: "Окультист"
 	quest.1464F36CC958AD76.quest_desc: [
 		"Збудуйте рамку, як для порталу в Незер, але зі &aсвітлокаменю&r, і вилийте в неї &aводу&r — відкриється блакитний портал."
 		""
@@ -573,6 +655,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create:crushing_wheel\"}}]"
 	]
 	quest.147BA8A1DE77678F.title: "Машини і звірі"
+	quest.14B16823B4425ED7.quest_desc: [
+		"&aГодування&r саме дає вам їжу з рюкзака, коли ви зголодніли. Покладіть у рюкзак страви з Кухні — і про голод можна забути."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sophisticatedbackpacks.feeding_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:feeding_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:feeding_upgrade\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.sophisticatedbackpacks.feeding_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:feeding_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:feeding_upgrade\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:feeding_upgrade\"}}]"
+	]
+	quest.14B16823B4425ED7.title: "Годування в дорозі"
 	quest.14B743B4EE0A5A7B.quest_desc: [
 		"&aКістки дракона&r (Ice and Fire) і &aтяжкі кістки динозаврів&r (Alex's Caves) — взаємозамінні в рецептах обох модів."
 		"Жорна Create і камера збагачення Mekanism перемелюють їх на 9–12 кісткового борошна."
@@ -637,6 +732,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki netherdepthsupgrade:lava_fishing_rod\"}}]"
 	]
 	quest.1550F30143B976FA.title: "Рибалка в лаві"
+	quest.159FEAAB60B4503B.quest_desc: [
+		"На &aстолі огранювання&r самоцвіт стає чистішим: тріснутий, щербатий, з вадою, звичайний, бездоганний, досконалий. Для цього потрібні пил і матеріали рідкості з розібраних речей."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.apotheosis.gem_cutting_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:gem_cutting_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"apotheosis:gem_cutting_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.apotheosis.gem_cutting_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:gem_cutting_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"apotheosis:gem_cutting_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:gem_cutting_table\"}}]"
+	]
+	quest.159FEAAB60B4503B.title: "Огранювання"
 	quest.15A00B67B6842B83.quest_desc: [ ]
 	quest.15A00B67B6842B83.title: "Точні механізми"
 	quest.15A0C063E3AFF4E9.quest_desc: [
@@ -702,6 +810,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:goblins_tyranny:leader_goblin\"}}]"
 	]
 	quest.15D3F3415C3EBCAD.title: "Ватажок гоблінів"
+	quest.15E2B2AF364B3FB8.quest_desc: [
+		"&aМорозильник&r заморожує воду й деякі речі, а паливом для нього служить &aкриголід&r. Так робляться крижаний кулон і крижана каблучка."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.aether.freezer\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:freezer\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:freezer\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.aether.freezer\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:freezer\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:freezer\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:freezer\"}}]"
+	]
+	quest.15E2B2AF364B3FB8.title: "Морозильник"
 	quest.15F2F41165352878.quest_desc: [
 		"&6Мотря&r, вдова-пекарка:"
 		"&o«Після нападу розбійників у селі лишилося семеро дітей без батьків. Я взяла їх до себе — а хліба печу на трьох.»&r"
@@ -805,6 +926,33 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ae2:controller\"}}]"
 	]
 	quest.167B1925FDFDBA87.title: "ME-мережа"
+	quest.167C5B560B5FF84E.quest_desc: [
+		"Грізлі живуть у лісах і люблять мед і лосося. Розлючений ведмідь дуже небезпечний."
+		"Ведмедя можна приручити: годуйте його лососем, коли він не сердиться."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.bear_fur\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:bear_fur\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:bear_fur\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.alexsmobs.bear_fur\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:bear_fur\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:bear_fur\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.alexsmobs.grizzly_bear\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:grizzly_bear\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:bear_fur\"}}]"
+	]
+	quest.167C5B560B5FF84E.title: "Ведмідь грізлі"
+	quest.1691CCC3D48AB693.quest_desc: [
+		"&cДика пожежа&r — королева іфритів Незеру, рідкісна й дуже сильна. З її &aуламків&r складається &aвогняна корона&r — шолом королеви вогню."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.friendsandfoes.wildfire_crown_fragment\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:wildfire_crown_fragment\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:wildfire_crown_fragment\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.friendsandfoes.wildfire_crown_fragment\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:wildfire_crown_fragment\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:wildfire_crown_fragment\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.friendsandfoes.wildfire\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:friendsandfoes:wildfire\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:wildfire_crown_fragment\"}}]"
+	]
+	quest.1691CCC3D48AB693.title: "Вогняна корона"
 	quest.1692E0F37F6EF9C5.quest_desc: [
 		"Шість привидів-лицарів нападають по черзі з мечами, сокирами й кирками, і кожна хвиля хитріша. Нагорода — &aфантомні шолом і нагрудник&r."
 		"У коридорах фортеці — &aскупчення уламків броні&r: з уламків роблять &aлицарський метал&r для найкращої броні лісу."
@@ -939,6 +1087,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki twilightforest:naga_scale\"}}]"
 	]
 	quest.179A7F98C194B097.title: "Луска наґи"
+	quest.17BD9F7AC335BB40.quest_desc: [
+		"Вода й море: швидке плавання, довше без повітря, очі глибин, дари затонулих кораблів."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:trident\"}}]"
+	]
+	quest.17BD9F7AC335BB40.title: "Гілка: Мореплавець"
 	quest.17C171B972451303.quest_desc: [
 		"&6Плакальниця Ярина&r, жінка, що не вміє плакати:"
 		"&o«Коли загинув мій чоловік, я не зронила жодної сльози. Відтоді на мені прокляття: я не можу ні плакати, ні сміятися.»&r"
@@ -998,6 +1154,15 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexscaves:tough_hide\"}}]"
 	]
 	quest.17FFF5CD503E185C.title: "Здобич динозаврів"
+	quest.1807EB23277C230E.quest_desc: [
+		"Easy Villagers дозволяє взяти селянина в руки: присядьте й клацніть по ньому. Так його легко перенести в торговий блок чи на свою базу."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.easy_villagers.villager\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki easy_villagers:villager\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"easy_villagers:villager\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki easy_villagers:villager\"}}]"
+	]
+	quest.1807EB23277C230E.title: "Селянин у кишені"
 	quest.1845461FE739127F.quest_desc: [
 		"Гоблінські інженери майструють &aпрототип броні&r. Здобудьте його і вдоскональте на &aінженерному верстаті&r інженерним брухтом — так отримаєте посилену броню."
 		""
@@ -1009,6 +1174,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki goblins_tyranny:goblins_prototype_chestplate\"}}]"
 	]
 	quest.1845461FE739127F.title: "Прототип інженера"
+	quest.18543B74581ED4CD.quest_desc: [
+		"&aДикий рис&r шукайте на мілководді в болотах і біля річок."
+		"Садіть рис у воду глибиною в один блок, на землю під нею. Стиглий рис дає зерно й солому."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.farmersdelight.rice\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:rice\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:rice\"}}}, {\"text\": \" ×8\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.farmersdelight.rice\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:rice\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:rice\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"Create: жорна, верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:rice\"}}]"
+	]
+	quest.18543B74581ED4CD.title: "Рис росте у воді"
 	quest.18C25A9BAEDC017D.quest_desc: [ ]
 	quest.18C25A9BAEDC017D.title: "Темна зірка"
 	quest.18C990156988DB4F.quest_desc: [
@@ -1053,6 +1232,29 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki naturalist:capture_net\"}}]"
 	]
 	quest.19409746A6FD9BCC.title: "Сачок для звірів"
+	quest.1947D62AABCABE7C.quest_desc: [
+		"Дорожні бігуни живуть у пустелях і скидають &aпір'я&r. З нього шиють &aчоботи бігуна&r: у них ви швидше бігаєте по піску."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.roadrunner_feather\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:roadrunner_feather\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:roadrunner_feather\"}}}, {\"text\": \" ×3\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.alexsmobs.roadrunner_feather\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:roadrunner_feather\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:roadrunner_feather\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.alexsmobs.roadrunner\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:roadrunner\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:roadrunner_feather\"}}]"
+	]
+	quest.1947D62AABCABE7C.title: "Бігун пустелі"
+	quest.1961C3CF9D7C5092.quest_desc: [
+		"Із листя джунглів зрідка падають &aбанани&r. Їх люблять мавпи: капуцина можна приручити, і він кидатиме дротики у ворогів."
+		"Обережно зі шкіркою: на ній ковзають."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.banana\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:banana\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:banana\"}}}, {\"text\": \" ×4\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:banana\"}}]"
+	]
+	quest.1961C3CF9D7C5092.title: "Банани з джунглів"
 	quest.19662D7C24479FE2.quest_desc: [
 		"Fish of Thieves населяє води рибами з характером: &aсплештейли&r, &aпондії&r, &aайлгопери&r, &aштормові риби&r, що клюють лише в грозу, і рідкісні &aдревньолуські&r."
 		"&aГачки&r Hybrid Aquatic у другій руці пришвидшують риболовлю вдень (колючий) чи вночі (світний), а &aмагнітний&r — частіше дає скарби."
@@ -1090,6 +1292,14 @@
 	quest.1977A2F5CCCCECFA.title: "Жорна й дроблення"
 	quest.197B1013DBBCFA4B.quest_desc: [ ]
 	quest.197B1013DBBCFA4B.title: "Рідкісні чорнила"
+	quest.19A9C0262E022224.quest_desc: [
+		"Інвентар: ще два ряди, кишеньковий верстак, самолагодження спорядження й магніт для предметів."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bundle\"}}]"
+	]
+	quest.19A9C0262E022224.title: "Гілка: Торба"
 	quest.19CA5557CF2E3052.quest_desc: [
 		"У світі змінюються &eпори року&r (Serene Seasons): весна, літо, осінь, зима. Взимку частина культур не росте, а листя змінює колір."
 		""
@@ -1272,6 +1482,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:crimson_nylium\"}}]"
 	]
 	quest.1B7E6174F0EAD301.title: "Вісім нових біомів"
+	quest.1BB89F9CA91EC911.quest_desc: [
+		"&aКонтролер&r з'єднує сховища, що торкаються його або одне одного (чи з'єднані конекторами). Відкрийте контролер — і бачите вміст усіх разом, кладете й берете з одного вікна."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.sophisticatedstorage.controller\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:controller\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:controller\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.sophisticatedstorage.controller\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:controller\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:controller\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:controller\"}}]"
+	]
+	quest.1BB89F9CA91EC911.title: "Одне вікно на всі скрині"
 	quest.1BD29F9EBE206381.quest_desc: [
 		"Ця книга веде вас крізь увесь світ збірки: від першого верстата до драконів і машин."
 		""
@@ -1306,6 +1529,24 @@
 	quest.1C219BA2A7F29E2F.title: "Ритуали"
 	quest.1C3126CB24BA3232.quest_desc: [ ]
 	quest.1C3126CB24BA3232.title: "Сцена для барда"
+	quest.1C6ADB2AE4213140.quest_desc: [
+		"Велетенський &cпустотний черв&r живе в безодні Енду. Він живе в безодні під островами; &aефігія пустотного черва&r допомагає його покликати."
+		"Він прокладає портали й кидається на вас з-під острова. Беріть крила або елітри."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Перемогти: \", \"color\": \"gray\"}, {\"translate\": \"entity.alexsmobs.void_worm\", \"color\": \"red\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:void_worm\"}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:void_worm\"}}]"
+	]
+	quest.1C6ADB2AE4213140.quest_subtitle: "Найбільша тварина Енду"
+	quest.1C6ADB2AE4213140.title: "Пустотний черв"
+	quest.1C6C27D9DE16CEEB.quest_desc: [
+		"У дереві навичок (&aK&r) гілка &eТорба&r додає до інвентаря ще один ряд, а потім ще один. Коли інвентар повний, підібране йде туди."
+		"Там же — кишеньковий верстак, магніт і ремонт спорядження."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bundle\"}}]"
+	]
+	quest.1C6C27D9DE16CEEB.title: "Ширша торба"
 	quest.1C89EB51D23F6C42.quest_desc: [
 		"Поселенцям потрібні &aОселі&r (у кожній — ліжка) і їжа. &aЇдальня&r з кухарем годує всіх; голодні поселенці працюють повільно і хворіють."
 		"&dЗв'язок світу:&r їжа Farmer's Delight та інших модів кухні добре підходить поселенцям."
@@ -1350,6 +1591,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:twilightforest:lich\"}}]"
 	]
 	quest.1CF1DCB1CC1D0A6D.title: "Сутінковий ліч"
+	quest.1CF8A7E2D3B3F4DF.quest_desc: [
+		"Бізони пасуться на засніжених рівнинах. Постригти їх ножицями — отримаєте &aхутро&r на теплі килими й блоки."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.bison_fur\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:bison_fur\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:bison_fur\"}}}, {\"text\": \" ×4\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.alexsmobs.bison_fur\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:bison_fur\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:bison_fur\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.alexsmobs.bison\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:bison\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:bison_fur\"}}]"
+	]
+	quest.1CF8A7E2D3B3F4DF.title: "Хутро бізона"
 	quest.1D12A470F162C870.quest_desc: [ ]
 	quest.1D12A470F162C870.title: "Звір облоги"
 	quest.1D286D1EBB388212.quest_desc: [
@@ -1459,6 +1714,22 @@
 	quest.1E310B523930CF1F.title: "Паровий двигун"
 	quest.1E576DF52769FB90.quest_desc: [ ]
 	quest.1E576DF52769FB90.title: "Той, хто кличе"
+	quest.1EBE57696BEC4B10.quest_desc: [
+		"&aЇжа для собак&r лікує й посилює прирученого вовка, а &aкорм для коней&r — коня, віслюка чи лами. Нагодуйте їх перед мандрівкою."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.dog_food\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:dog_food\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:dog_food\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.horse_feed\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:horse_feed\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:horse_feed\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.dog_food\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:dog_food\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:dog_food\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"Farmer's Delight: каструля\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.farmersdelight.horse_feed\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:horse_feed\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:horse_feed\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:dog_food\"}}]"
+	]
+	quest.1EBE57696BEC4B10.title: "Миска для улюбленця"
 	quest.1EDC12F3B3E54499.quest_desc: [
 		"&aВисікач&r штампує пресами друковані плати й складає з них три процесори: &aлогічний&r (золото), &aрозрахунковий&r (кварц), &aінженерний&r (алмаз)."
 		""
@@ -1536,6 +1807,19 @@
 	quest.1F7CF4639F4C3D2F.title: "Квантовий міст"
 	quest.1F884CD73C9922B8.quest_desc: [ ]
 	quest.1F884CD73C9922B8.title: "Мандрівний кравець"
+	quest.1F88FE33F9A5FE67.quest_desc: [
+		"Villagers Plus додає селам нові професії. Безробітний селянин біля &aалхімічного столу&r стає &aалхіміком&r: він торгує зіллями та їхніми інгредієнтами."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.villagersplus.alchemist_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:alchemist_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:alchemist_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.villagersplus.alchemist_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:alchemist_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:alchemist_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:alchemist_table\"}}]"
+	]
+	quest.1F88FE33F9A5FE67.title: "Алхімік"
 	quest.1FC00F951778BFCB.quest_desc: [
 		"&aМеханічний бур&r на рухомій платформі копає тунелі, &aжатка&r збирає врожай, &aпилка&r рубає дерева. Поставте їх на поршень чи візок — і ферма працює сама."
 		""
@@ -1639,6 +1923,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki irons_spellbooks:gold_spell_book\"}}]"
 	]
 	quest.2085016BC6AEBEED.title: "Алмазна книга"
+	quest.20B9CF1D0EDEEC17.quest_desc: [
+		"&aСтіл посилення&r перекидає або підсилює одну властивість речі, не чіпаючи решти. Дорого, зате точно."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.apotheosis.augmenting_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:augmenting_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"apotheosis:augmenting_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.apotheosis.augmenting_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:augmenting_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"apotheosis:augmenting_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:augmenting_table\"}}]"
+	]
+	quest.20B9CF1D0EDEEC17.title: "Посилення"
 	quest.20C02CA38C808053.quest_desc: [ ]
 	quest.20C02CA38C808053.title: "Звідки хвороба"
 	quest.20C08199F00660B7.quest_desc: [
@@ -1717,6 +2014,21 @@
 	quest.2150C10F80E8AE83.title: "Сховища й лійки"
 	quest.216043C196C14D18.quest_desc: [ ]
 	quest.216043C196C14D18.title: "Сталь для гільдії"
+	quest.219F340F2E348FFE.quest_desc: [
+		"Великі страви — запечену курку, глазуровану шинку, пастуший пиріг — ставлять на стіл. Клацніть по страві з мискою в руці, щоб взяти порцію."
+		"Одна страва нагодує всю вашу групу після походу."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.farmersdelight.roast_chicken_block\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:roast_chicken_block\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:roast_chicken_block\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.farmersdelight.roast_chicken_block\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:roast_chicken_block\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:roast_chicken_block\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:roast_chicken_block\"}}]"
+	]
+	quest.219F340F2E348FFE.quest_subtitle: "Страва на всю компанію"
+	quest.219F340F2E348FFE.title: "Святковий стіл"
 	quest.21D4FB84E6EB0653.quest_desc: [
 		"Що рідкісніше чорнило, то сильніший рівень закляття. Епічні й легендарні чорнила варяться з рідкісніших і магічних інгредієнтів."
 		""
@@ -1802,6 +2114,19 @@
 	]
 	quest.22DA537DF48FBCE6.quest_subtitle: "Шукайте золоте «!» над головою"
 	quest.22DA537DF48FBCE6.title: "Мандрівник з дорученням"
+	quest.2302649E3042C382.quest_desc: [
+		"&aПокращення рівня&r перетворює звичайну бочку чи скриню на мідну, залізну, золоту й далі. Клацніть ним по сховищу — речі лишаються всередині, а місця більшає."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sophisticatedstorage.basic_tier_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:basic_tier_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:basic_tier_upgrade\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.sophisticatedstorage.basic_tier_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:basic_tier_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:basic_tier_upgrade\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:basic_tier_upgrade\"}}]"
+	]
+	quest.2302649E3042C382.title: "Більше сховище"
 	quest.232D4746AC41BBCB.quest_desc: [
 		"У цій збірці моди не живуть окремо. Однакові ресурси — це &eодин і той самий предмет&r, а здобич одного мода корисна в машинах і ритуалах іншого."
 		""
@@ -1810,6 +2135,22 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:chain\"}}]"
 	]
 	quest.232D4746AC41BBCB.title: "Один світ, а не сто модів"
+	quest.2426EC39340EBB3C.quest_desc: [
+		"В Етері ростуть дерева &aнебесного кореня&r. З них — перші етерні інструменти й відра, а з &aсвятого каменю&r — кам'яні."
+		"Кайло з небесного кореня дає більше етерних блоків при видобутку."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.aether.skyroot_pickaxe\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:skyroot_pickaxe\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:skyroot_pickaxe\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.aether.holystone\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:holystone\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:holystone\"}}}, {\"text\": \" ×16\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.aether.skyroot_pickaxe\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:skyroot_pickaxe\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:skyroot_pickaxe\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.aether.mimic\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:aether:mimic\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:skyroot_pickaxe\"}}]"
+	]
+	quest.2426EC39340EBB3C.title: "Небесне дерево"
 	quest.247BD2D658E04A53.quest_desc: [ ]
 	quest.247BD2D658E04A53.title: "Схеми керування"
 	quest.24BDDE2D454C2941.quest_desc: [
@@ -2040,6 +2381,34 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexscaves:amber\"}}]"
 	]
 	quest.2B972E12F96CCDCC.title: "Бурштин із мушкою"
+	quest.2C4D537C18CE8E78.quest_desc: [
+		"Бочки й скрині Sophisticated Storage вміщають стільки ж, скільки звичайні, але їх можна &eпокращувати&r, не перекладаючи речей."
+		"Зламана, вона не розсипає вміст: забирає його з собою (якщо так налаштовано)."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.sophisticatedstorage.barrel\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:barrel\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:barrel\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.sophisticatedstorage.barrel\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:barrel\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:barrel\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак, sophisticatedstorage: generic wood storage\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:barrel\"}}]"
+	]
+	quest.2C4D537C18CE8E78.quest_subtitle: "Сховище, яке росте разом з вами"
+	quest.2C4D537C18CE8E78.title: "Розумна бочка"
+	quest.2CB8EA85D95694B9.quest_desc: [
+		"Стіл зачарувань із полицями навколо дає перші чари. Згодом полиці з Незеру, моря й Енду піднімуть його силу (розділ «Зачарування»)."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecraft.enchanting_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:enchanting_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:enchanting_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.minecraft.enchanting_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:enchanting_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:enchanting_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:enchanting_table\"}}]"
+	]
+	quest.2CB8EA85D95694B9.title: "Стіл зачарувань"
 	quest.2CBCB19969813639.quest_desc: [
 		"&6Інспектор Кіндрат&r, інспектор гільдії металургів &8(доручення 2 з 3)&r:"
 		"&o«Гільдія задоволена звітом. Настільки, що дала мені нове доручення — і я, звісно, передаю його вам.»&r"
@@ -2094,6 +2463,22 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ars_nouveau:enchanting_apparatus\"}}]"
 	]
 	quest.2D4F93F82FA247E7.title: "Зачарувальний апарат"
+	quest.2D5E2A96F87CA050.quest_desc: [
+		"Какао з молоком і цукром вариться в каструлі й гріє в холодні вечори. Яблучний сидр і кавуновий сік — для літа."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.hot_cocoa\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:hot_cocoa\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:hot_cocoa\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.apple_cider\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:apple_cider\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:apple_cider\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.hot_cocoa\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:hot_cocoa\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:hot_cocoa\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"Farmer's Delight: каструля\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.farmersdelight.apple_cider\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:apple_cider\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:apple_cider\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"Farmer's Delight: каструля\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:hot_cocoa\"}}]"
+	]
+	quest.2D5E2A96F87CA050.title: "Гарячі напої"
 	quest.2D611B6D05A7193E.quest_desc: [
 		"&6Лаврін&r, шахтар на пенсії:"
 		"&o«Сорок років я копав у старій шахті, поки там не обвалилася штольня. З того часу кажуть — шахта проклята, а з глибини лізуть отруйні павуки.»&r"
@@ -2157,6 +2542,21 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apothic_enchanting:hellshelf\"}}]"
 	]
 	quest.2E2BA7F9BC8CB774.title: "Сильніші зачарування"
+	quest.2E53FC88D2DA4DCF.quest_desc: [
+		"&aЕнциклопедія тварин&r розповідає про кожну тварину мода: де живе, що їсть, чим корисна. Її крафтять із книги, зеленого барвника й будь-якої здобичі з тварин мода."
+		"А ще все це є у вікі (&aO&r) — наведіть приціл на тварину й відкрийте вікі."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.animal_dictionary\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:animal_dictionary\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:animal_dictionary\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.alexsmobs.animal_dictionary\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:animal_dictionary\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:animal_dictionary\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:animal_dictionary\"}}]"
+	]
+	quest.2E53FC88D2DA4DCF.quest_subtitle: "Усе про тварин Alex's Mobs"
+	quest.2E53FC88D2DA4DCF.title: "Книга звірів"
 	quest.2E867FAE0AD0E328.quest_desc: [ ]
 	quest.2E867FAE0AD0E328.title: "Замовлення на осмій"
 	quest.2EAA015B555E8C61.quest_desc: [
@@ -2254,6 +2654,12 @@
 	quest.3237832AA97A9C77.title: "Електронні лампи"
 	quest.32686447C605B300.quest_desc: [ ]
 	quest.32686447C605B300.title: "Борг купця"
+	quest.32731728A9CFF4C4.quest_desc: [
+		"Виконайте умови й клацніть аркушем по дошці. Нагорода — смарагди й речі, а ще &aрепутація&r: з нею доручення стають цікавішими."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki bountiful:bounty\"}}]"
+	]
+	quest.32731728A9CFF4C4.title: "Чесна плата"
 	quest.327BB2A5C7FEDC53.quest_desc: [
 		"Каблучки, намиста, пояси, рукавиці й амулети з усіх модів (Етер, Iron's Spells, Ars Nouveau, Катаклізм...) вдягаються в спільні слоти: рукавиці — у слот рукавиць, каблучки — у слоти каблучок, хоч би з якого мода вони були."
 		"Вони просто в інвентарі (&aE&r), поруч із бронею."
@@ -2261,6 +2667,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:totem_of_undying\"}}]"
 	]
 	quest.327BB2A5C7FEDC53.title: "Аксесуари"
+	quest.32A2149053C3FD7E.quest_desc: [
+		"Видобуток: швидше копати, більше руди, жила (копати руду присівши), рудознатець (ПКМ киркою по каменю присівши)."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:diamond_pickaxe\"}}]"
+	]
+	quest.32A2149053C3FD7E.title: "Гілка: Майстер"
 	quest.32B0AF60C0EAA599.quest_desc: [
 		"&6Тарас&r, мандрівний бард &8(доручення 2 з 3)&r:"
 		"&o«Нотний блок — добре, але для балади потрібен дзвін, що бринить довго, як струна. Так звучить аметист.»&r"
@@ -2280,6 +2694,42 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:amethyst_shard\"}}]"
 	]
 	quest.32B0AF60C0EAA599.title: "Співучий кристал"
+	quest.32E833BCCD864540.quest_desc: [
+		"Багато ворогів краще бити здалеку: криперів, павуків, відьом. Тримайте лук і запас стріл."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.bow\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bow\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:bow\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.arrow\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:arrow\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:arrow\"}}}, {\"text\": \" ×32\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.minecraft.bow\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bow\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:bow\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecolonies.amazon\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecolonies:amazon\"}}, {\"text\": \", \"}, {\"translate\": \"entity.minecolonies.amazonchief\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecolonies:amazonchief\"}}, {\"text\": \", \"}, {\"translate\": \"entity.minecolonies.archerbarbarian\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecolonies:archerbarbarian\"}}, {\"text\": \" і ще 4\"}]"
+		"[\"\", {\"translate\": \"item.minecraft.arrow\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:arrow\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:arrow\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.friendsandfoes.illusioner\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:friendsandfoes:illusioner\"}}, {\"text\": \", \"}, {\"translate\": \"entity.minecolonies.pharao\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecolonies:pharao\"}}, {\"text\": \", \"}, {\"translate\": \"entity.minecraft.bogged\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:bogged\"}}, {\"text\": \" і ще 1\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"зі скелетів: \", \"color\": \"gray\"}, {\"translate\": \"entity.minecraft.skeleton\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:skeleton\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bow\"}}]"
+	]
+	quest.32E833BCCD864540.title: "Лук і стріли"
+	quest.32EAAD4A350D1C3A.quest_desc: [
+		"Етер має свої аксесуари: &aрукавиці&r посилюють удар кулаком і захищають, &aкулони й каблучки&r дають бонуси."
+		"Їх вдягають у слоти аксесуарів у вікні спорядження (&aE&r)."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.aether.zanite_gloves\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_gloves\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_gloves\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.aether.zanite_ring\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_ring\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_ring\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.aether.zanite_gloves\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_gloves\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_gloves\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.aether.zanite_ring\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_ring\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_ring\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_gloves\"}}]"
+	]
+	quest.32EAAD4A350D1C3A.title: "Рукавиці й прикраси"
 	quest.33AE7A44B420D400.quest_desc: [
 		"&6Мисливець Устим&r, мисливець за магічними звірами:"
 		"&o«Дикі мисливці — звірі, зіткані з чистого джерела. Їхні роги потрібні магам для чарівних посохів.»&r"
@@ -2356,6 +2806,16 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki createaddition:electric_motor\"}}]"
 	]
 	quest.34A35A36A2A91E6F.title: "Електродвигун"
+	quest.34E7D85919B66ED9.quest_desc: [
+		"Самоцвітний пил потрібен для столів огранювання, розбирання й перекування, але перший пил ні з чого не скрафтиш."
+		"Викиньте простий самоцвіт на землю (&aQ&r) і &eскиньте на нього ковадло&r: поставте ковадло на блок просто над ним. Самоцвіт розсиплеться на пил."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.apotheosis.gem_dust\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:gem_dust\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"apotheosis:gem_dust\"}}}, {\"text\": \" ×3\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:gem_dust\"}}]"
+	]
+	quest.34E7D85919B66ED9.title: "Перший самоцвітний пил"
 	quest.3510673887BABBAC.quest_desc: [ ]
 	quest.3510673887BABBAC.title: "Дах для дзвіниці"
 	quest.35125E2D4F08DBA3.quest_desc: [
@@ -2491,6 +2951,15 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:pillager\"}}]"
 	]
 	quest.36E9654C4C616D0A.title: "Дорога на північ"
+	quest.37142B45B8C59C6D.quest_desc: [
+		"Восьминоги-міміки змінюють колір і вигляд. Злийте одного у відро — і він житиме у вашому акваріумі."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.mimic_octopus_bucket\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:mimic_octopus_bucket\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:mimic_octopus_bucket\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:mimic_octopus_bucket\"}}]"
+	]
+	quest.37142B45B8C59C6D.title: "Восьминіг-мімік"
 	quest.3715C67F5C1D8BDF.quest_desc: [
 		"Sophisticated Storage додає скрині й бочки, які можна &eпокращувати&r (більше місця) і ставити в них модулі: сортування, фільтри, переплавку, компресію."
 		""
@@ -2527,6 +2996,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:wither_skeleton_skull\"}}]"
 	]
 	quest.3751AFAC5DD312EC.title: "Черепи візер-скелетів"
+	quest.37A92CBE0A6428C1.quest_desc: [
+		"Покращення стосу вставляється в слот покращень сховища: у кожну комірку влазить удвічі більше. Ідеально для каменю, землі й руди."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sophisticatedstorage.stack_upgrade_tier_1\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:stack_upgrade_tier_1\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:stack_upgrade_tier_1\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.sophisticatedstorage.stack_upgrade_tier_1\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:stack_upgrade_tier_1\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedstorage:stack_upgrade_tier_1\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedstorage:stack_upgrade_tier_1\"}}]"
+	]
+	quest.37A92CBE0A6428C1.title: "Більші стоси"
 	quest.381FF0A2D76A6D89.quest_desc: [ ]
 	quest.381FF0A2D76A6D89.title: "Латунні мрії"
 	quest.383A8FFECFA5087E.quest_desc: [
@@ -2763,6 +3245,23 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:victory_medal\"}}]"
 	]
 	quest.3C683E2798058F0F.title: "Королева валькірій"
+	quest.3C7738579429F6B5.quest_desc: [
+		"Сковорідку ставлять на плиту й смажать по одному продукту. А в руці вона — важка зброя."
+		"Спробуйте підсмажити яйце."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.farmersdelight.skillet\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:skillet\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:skillet\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.fried_egg\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:fried_egg\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:fried_egg\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.farmersdelight.skillet\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:skillet\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:skillet\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.farmersdelight.fried_egg\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:fried_egg\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:fried_egg\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"багаття, піч, коптильня\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:skillet\"}}]"
+	]
+	quest.3C7738579429F6B5.title: "Сковорідка"
 	quest.3CE7724F11BD29E1.quest_desc: [
 		"&6Василько&r, сирота:"
 		"&o«Мій друг — залізний голем. Він завжди давав мені маки. А вчора його розбили зомбі, і він розсипався на шматки.»&r"
@@ -2871,12 +3370,29 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:crossbow\"}}]"
 	]
 	quest.3E1ECC59C27AA30D.title: "Бандитське селище"
+	quest.3E23395529E6F737.quest_desc: [
+		"Молотоголові й інші акули полюють у теплих морях. Їхні &aзуби&r йдуть на гострі акулячі стріли."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.shark_tooth\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:shark_tooth\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:shark_tooth\"}}}, {\"text\": \" ×3\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:shark_tooth\"}}]"
+	]
+	quest.3E23395529E6F737.title: "Акулячий зуб"
 	quest.3E2B38C7B692997E.quest_desc: [
 		"Кров гідри із Сутінкового лісу і &aкров вогняного дракона&r — один реагент. Вогняні злитки Сутінкового лісу можна зробити з драконячої крові."
 		""
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki twilightforest:fiery_blood\"}}]"
 	]
 	quest.3E2B38C7B692997E.title: "Вогняна кров"
+	quest.3E7ED78547378D1C.quest_desc: [
+		"Дешевші обміни з селянами, подарунки від села, найманці-големи й безкоштовний обмін раз на день."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:emerald\"}}]"
+	]
+	quest.3E7ED78547378D1C.title: "Гілка: Торговець"
 	quest.3E94444CB462EAF5.quest_desc: [
 		"&6Король-вигнанець Мстислав&r, король без королівства &8(доручення 3 з 5)&r:"
 		"&o«Мою столицю спалив вогняний дракон. Мудреці кажуть: щоб знайти живого дракона, спершу знайди мертвого — вони вмирають там, де полюють.»&r"
@@ -2934,6 +3450,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:gilded_blackstone\"}}]"
 	]
 	quest.402FA237361274FF.title: "Заборонений замок"
+	quest.404FE4606A41CCEA.quest_desc: [
+		"Поставте &aвирізаний гарбуз просто на мідний блок&r. Блок стане мідною скринею, на ній з'явиться голем."
+		"Кладіть у цю скриню речі — голем рознесе їх у скрині поруч, де вже лежить таке саме."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:copper_block\"}}]"
+	]
+	quest.404FE4606A41CCEA.quest_subtitle: "Голем, що сам розкладає речі"
+	quest.404FE4606A41CCEA.title: "Мідний помічник"
 	quest.4076FC27550D1360.quest_desc: [
 		"Усередині вулканів Первісних печер спить &aЛюкструктозавр&r — вогняний велетень, що топче землю й розливає лаву. Нагорода — &aтектонічний уламок&r."
 		""
@@ -3064,6 +3588,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ars_nouveau:magebloom_fiber\"}}]"
 	]
 	quest.41FBF525341CAAEF.title: "Мантія чарівника"
+	quest.4207DE0280BA10AA.quest_desc: [
+		"Отримавши ефект &cЗловісне знамення&r (переможіть капітана розбійників), зайдіть у село — почнеться рейд."
+		"Відбийте всі хвилі, і селяни назвуть вас &aгероєм&r: знижки на обміни й подарунки."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:totem_of_undying\"}}]"
+	]
+	quest.4207DE0280BA10AA.quest_subtitle: "Відбийте рейд"
+	quest.4207DE0280BA10AA.title: "Герой села"
 	quest.424B8F8834C8B61F.quest_desc: [
 		"&6Король-вигнанець Мстислав&r, король без королівства &8(доручення 5 з 5)&r:"
 		"&o«Дракон спалив мою столицю. Мої лицарі загинули, мій народ розбрівся. Я поклявся не вдягати корону, поки звір живий.»&r"
@@ -3093,6 +3625,34 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:orc_hut:orc\"}}]"
 	]
 	quest.426A1D5C1725A5FE.title: "Хатина орків"
+	quest.426CF543AA971650.quest_desc: [
+		"Покладіть продукт на &aнарізну дошку&r і клацніть по ній ножем. Капуста дає листя, шматок свинини — бекон, курка — шматочки."
+		"Порізане м'ясо смажиться швидше й стає основою для страв."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.cabbage_leaf\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cabbage_leaf\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:cabbage_leaf\"}}}, {\"text\": \" ×4\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.bacon\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:bacon\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:bacon\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.cabbage_leaf\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cabbage_leaf\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:cabbage_leaf\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"Create: змішувач\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cabbage_leaf\"}}]"
+	]
+	quest.426CF543AA971650.title: "Нарізка"
+	quest.42C4684B63FB4FC0.quest_desc: [
+		"Рюкзак покращують на верстаті: мідний, залізний, золотий, діамантовий. Кожен має більше комірок і слотів покращень, а речі всередині лишаються."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.sophisticatedbackpacks.iron_backpack\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:iron_backpack\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:iron_backpack\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.sophisticatedbackpacks.iron_backpack\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:iron_backpack\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:iron_backpack\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"sophisticatedbackpacks: backpack upgrade\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:iron_backpack\"}}]"
+	]
+	quest.42C4684B63FB4FC0.title: "Залізний рюкзак"
 	quest.43043663512BAACC.quest_desc: [ ]
 	quest.43043663512BAACC.title: "Пір'я воронів"
 	quest.4332297DBDD8288C.quest_desc: [
@@ -3189,6 +3749,29 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:elder_guardian\"}}]"
 	]
 	quest.4419BAEE2267E7DA.title: "Океанський монумент"
+	quest.4422C00E0126E210.quest_desc: [
+		"Перші ночі легше пережити в броні. Повний комплект заліза — добрий старт; цифра поруч зі смужкою броні показує, скільки її у вас насправді."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.iron_helmet\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_helmet\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_helmet\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.iron_chestplate\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_chestplate\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_chestplate\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.iron_leggings\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_leggings\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_leggings\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.iron_boots\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_boots\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_boots\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.minecraft.iron_helmet\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_helmet\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_helmet\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"apotheosis: sized upgrade recipe, верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.guardvillagers.guard\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:guardvillagers:guard\"}}]"
+		"[\"\", {\"translate\": \"item.minecraft.iron_chestplate\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_chestplate\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_chestplate\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"apotheosis: sized upgrade recipe, верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.guardvillagers.guard\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:guardvillagers:guard\"}}]"
+		"[\"\", {\"translate\": \"item.minecraft.iron_leggings\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_leggings\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:iron_leggings\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"apotheosis: sized upgrade recipe, верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.guardvillagers.guard\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:guardvillagers:guard\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_helmet\"}}]"
+	]
+	quest.4422C00E0126E210.title: "Залізна броня"
 	quest.4426FE841F4EE5CE.quest_desc: [
 		"&6Пілігрим Савва&r, пілігрим:"
 		"&o«Я дав обітницю пройти п'ять тисяч блоків пішки до святого місця. Пройшов половину і зламав ногу. Обітниця не може чекати.»&r"
@@ -3219,6 +3802,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:cataclysm:maledictus\"}}]"
 	]
 	quest.447DACEC13F05C6B.title: "Маледиктус"
+	quest.44C601C73C95B929.quest_desc: [
+		"&aОрганічний компост&r складається з соломи, гнилих томатів, кісткового борошна й землі. Поставлений на землю, він згодом стає &aбагатим ґрунтом&r."
+		"На багатому ґрунті рослини ростуть швидше, а гриби на ньому розростаються в колонії."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.farmersdelight.organic_compost\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:organic_compost\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:organic_compost\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.farmersdelight.organic_compost\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:organic_compost\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:organic_compost\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:organic_compost\"}}]"
+	]
+	quest.44C601C73C95B929.title: "Багатий ґрунт"
 	quest.44ED1F2F0B642A12.quest_desc: [
 		"&6Устим&r, конюх:"
 		"&o«Я розводжу коней для гінців, а гінці скаржаться: коні ліниві, бігають тільки до стайні. Треба їх об'їздити — довго, далеко, щодня.»&r"
@@ -3307,6 +3904,13 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki enderscape:end_city_key\"}}]"
 	]
 	quest.45EE77007A516A2C.title: "Ключ від сховища"
+	quest.45F49714E52608E3.quest_desc: [
+		"Ліворуч від інвентаря (&aE&r) є поле &eЗнайти в скринях…&r. Напишіть назву предмета будь-якою мовою — і скрині, бочки та рюкзаки поруч, де він лежить, засвітяться крізь стіни."
+		"Руду й поставлені блоки пошук не бачить: лише те, що лежить у сховищах і на землі."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:spyglass\"}}]"
+	]
+	quest.45F49714E52608E3.title: "Де мої діаманти?"
 	quest.46C87D2FEBB383BF.quest_desc: [
 		"Намет, спальник, їжа й факели — все вміщається в &aрюкзак&r. Покращення рюкзака: підбирач, магніт, годувальник, вогнище для готування на ходу."
 		""
@@ -3395,6 +3999,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki comforts:sleeping_bag_brown\"}}]"
 	]
 	quest.47292410B032CA71.title: "Спальник і гамак"
+	quest.4733AA110714E528.quest_desc: [
+		"&aТісто&r — пшениця з водою (або з яйцем). З тіста на дошці виходять &aсирі макарони&r, а в печі — хліб."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.wheat_dough\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:wheat_dough\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:wheat_dough\"}}}, {\"text\": \" ×4\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.raw_pasta\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:raw_pasta\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:raw_pasta\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.wheat_dough\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:wheat_dough\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:wheat_dough\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:wheat_dough\"}}]"
+	]
+	quest.4733AA110714E528.title: "Тісто й макарони"
 	quest.47A8A9E1874569A7.quest_desc: [
 		"Молоді й дорослі дракони живуть у &aгніздах&r на поверхні: обвуглена чи замерзла земля, купи золота й кістки. Старі дракони сплять у &aпечерах&r під землею, на величезних скарбах."
 		""
@@ -3447,6 +4065,15 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:netherite_ingot\"}}]"
 	]
 	quest.488D62A844F2EA3C.title: "Метал, що не горить"
+	quest.4896840B5F3B5E02.quest_desc: [
+		"Лосі в тайзі взимку скидають &aроги&r. Два роги, залізний злиток і нитки — і в вас лосиний шолом."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.moose_antler\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:moose_antler\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:moose_antler\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:moose_antler\"}}]"
+	]
+	quest.4896840B5F3B5E02.title: "Лосині роги"
 	quest.48FFC60749B6D51D.quest_desc: [
 		"Найбільші загрози морів — &aЛевіятан&r затонулого міста і &aСцилла&r з Акрополя. Їх бої описані в главі &4Великі боси&r; тут — нагорода моряка за обох."
 		""
@@ -3643,6 +4270,12 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:name_tag\"}}]"
 	]
 	quest.4C8C83EC68775450.title: "Ваш акаунт на сервері"
+	quest.4CECE033600D99BC.quest_desc: [
+		"Повний комплект &5епічних&r (фіолетових) речей — і переможіть &cдракона Енду&r. Найвищий рівень: найсильніші вороги й найкраща здобич."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:dragon_head\"}}]"
+	]
+	quest.4CECE033600D99BC.title: "Світовий рівень: Пік"
 	quest.4CF6CE6BADD27998.quest_desc: [
 		"&aКнига архімага&r — усі гліфи всіх рівнів і найдовші закляття. Вершина Ars Nouveau: з нею можна складати складні комбінації на кшталт «снаряд → розкол → вибух → підпал». Робиться з книги майстра й рідкісних частин диких (Wilden)."
 		""
@@ -3892,6 +4525,22 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create:belt_connector\"}}]"
 	]
 	quest.50F6A1E0C093E603.title: "Конвеєри"
+	quest.50FD96A52903969E.quest_desc: [
+		"Інструменти із заніту працюють тим швидше, чим більше вони зношені."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.aether.zanite_pickaxe\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_pickaxe\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_pickaxe\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.aether.zanite_sword\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_sword\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_sword\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.aether.zanite_pickaxe\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_pickaxe\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_pickaxe\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.aether.zanite_sword\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_sword\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"aether:zanite_sword\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:zanite_pickaxe\"}}]"
+	]
+	quest.50FD96A52903969E.title: "Занітове спорядження"
 	quest.51900552A76C9E91.quest_desc: [
 		"Величезна печера з джунглями, вулканами й &eдинозаврами&r: травоїдні гротоцератопси й атлатитани, мисливці-валлумраптори, грізний тремозавр."
 		""
@@ -3969,6 +4618,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:diamond\"}}]"
 	]
 	quest.525608CD2339968F.title: "Сутінковий портал"
+	quest.52EC13BF14023679.quest_desc: [
+		"Нові ілладжери Friends \\& Foes носять рідкісні тотеми. Вони спрацьовують, коли здоров'я падає нижче половини: &aтотем заморожування&r скує ворогів кригою, &aтотем ілюзії&r створить ваших двійників."
+		"Шукайте їх у мешканців особняків і серед рейдерів."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.friendsandfoes.totem_of_freezing\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:totem_of_freezing\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:totem_of_freezing\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.friendsandfoes.totem_of_freezing\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:totem_of_freezing\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:totem_of_freezing\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.friendsandfoes.iceologer\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:friendsandfoes:iceologer\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:totem_of_freezing\"}}]"
+	]
+	quest.52EC13BF14023679.title: "Тотеми ілладжерів"
 	quest.53128291C55543CE.quest_desc: [
 		"&6Вакула&r, моряк, що чує пісню:"
 		"&o«Ночами я чую пісню. Вона кличе мене в море. Мої товариші пішли на той голос і не повернулися. Я прив'язую себе до щогли, щоб не піти за ними.»&r"
@@ -4043,6 +4706,20 @@
 	quest.539CE100BBA877FD.title: "Книга заклять новачка"
 	quest.539F4F9B8E67FE93.quest_desc: [ ]
 	quest.539F4F9B8E67FE93.title: "Утеклий кінь"
+	quest.53AEA2FEA515F3AE.quest_desc: [
+		"Залізний ніж міцніший за кремінний і швидше ріже на дошці. Ножем зручно збирати й траву: з неї частіше падає солома."
+		"Ножі — це ще й зброя: швидкі, хоч і слабші за меч."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.iron_knife\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:iron_knife\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:iron_knife\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.iron_knife\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:iron_knife\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:iron_knife\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:iron_knife\"}}]"
+	]
+	quest.53AEA2FEA515F3AE.title: "Гострий ніж"
 	quest.545A6871A3313282.quest_desc: [
 		"Вивчіть основні гліфи: форми &aСнаряд&r і &aДотик&r, ефекти &aШкода&r і &aЛамання&r. Кожен гліф — окремий предмет-рецепт на столі писаря."
 		""
@@ -4296,6 +4973,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki apotheosis:gem\"}}]"
 	]
 	quest.5775B1A1874FD00B.title: "Самоцвіти"
+	quest.582F0712AA95397C.quest_desc: [
+		"Спершу спечіть із тіста &aскоринку для пирога&r, а тоді додайте яблука, пшеницю й цукор. Поставте пиріг на стіл: від нього відрізають шматки, кожен ситніший за яблуко."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.farmersdelight.apple_pie\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:apple_pie\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:apple_pie\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.farmersdelight.apple_pie\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:apple_pie\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:apple_pie\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:apple_pie\"}}]"
+	]
+	quest.582F0712AA95397C.title: "Пиріг"
 	quest.5834D7EFBA5EBAD1.quest_desc: [
 		"&aРанець&r на водні — перший політ. Заправте його воднем із сепаратора: поставте в його слот у машині."
 		""
@@ -4340,6 +5030,13 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:wolf\"}}]"
 	]
 	quest.58A4F42C33E80EF5.title: "Вовки біля кошари"
+	quest.592339E7F4CA3D7D.quest_desc: [
+		"Світовий рівень — ваша особиста складність світу: що вищий, то кращі речі й самоцвіти. Вікно рівнів — &aCtrl+T&r."
+		"Щоб відкрити &eКордон&r, вдягніть одночасно шолом, нагрудник, поножі, черевики й візьміть зброю — усе з властивостями. Потім активуйте рівень у вікні."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_chestplate\"}}]"
+	]
+	quest.592339E7F4CA3D7D.title: "Світовий рівень: Кордон"
 	quest.592A87E7FB826A3C.quest_desc: [
 		"У савані живуть слони, жирафи, зебри, леви, носороги й страуси. Леви — хижаки, а носоріг таранить тих, хто підійде близько."
 		""
@@ -4427,6 +5124,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ae2:pattern_encoding_terminal\"}}]"
 	]
 	quest.5A58857FD0D63BB0.title: "Автокрафт"
+	quest.5AB35EF7031FD5B4.quest_desc: [
+		"Покращення рюкзака вставляються в його нижні слоти. &aПідбирання&r кладе все підібране одразу в рюкзак, а з фільтром — лише потрібне."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sophisticatedbackpacks.pickup_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:pickup_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:pickup_upgrade\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.sophisticatedbackpacks.pickup_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:pickup_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:pickup_upgrade\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:pickup_upgrade\"}}]"
+	]
+	quest.5AB35EF7031FD5B4.title: "Рюкзак сам збирає"
 	quest.5B2012F494AA9FD1.quest_desc: [
 		"&aЗбагачувальна камера&r робить з однієї руди два шматки пилу; &aенергетична плавильня&r — злитки з пилу. Руда ×2."
 		""
@@ -4498,6 +5208,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki createaddition:alternator\"}}]"
 	]
 	quest.5BFA7A0B342FABFE.title: "Генератор"
+	quest.5C0C070D50F0EFCB.quest_desc: [
+		"&aМагніт&r притягує предмети й досвід з кількох блоків. Разом із підбиранням рюкзак сам збирає здобич після бою."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sophisticatedbackpacks.magnet_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:magnet_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:magnet_upgrade\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.sophisticatedbackpacks.magnet_upgrade\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:magnet_upgrade\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sophisticatedbackpacks:magnet_upgrade\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак, sophisticatedcore: upgrade next tier\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sophisticatedbackpacks:magnet_upgrade\"}}]"
+	]
+	quest.5C0C070D50F0EFCB.title: "Магніт"
 	quest.5C3BB6FF2C8487B5.quest_desc: [
 		"&6Параска&r, господиня:"
 		"&o«Моя пташка зникає щоночі. Я сиджу з ліхтарем біля курника, а лисиці ніби знають і приходять саме тоді, як я задрімаю.»&r"
@@ -4513,6 +5236,27 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecraft:fox\"}}]"
 	]
 	quest.5C3BB6FF2C8487B5.title: "Лисиця й кури"
+	quest.5C9AD75E3A505617.quest_desc: [
+		"У природі ростуть &aдикі городні рослини&r: капуста біля моря, томати в посушливих місцях, цибуля на луках, картопля й морква в лісах."
+		"Зламайте дику рослину — отримаєте насіння й урожай. Посадіть на грядці біля дому, і город годуватиме вас усю гру."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.cabbage\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cabbage\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:cabbage\"}}}, {\"text\": \" ×4\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.tomato\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:tomato\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:tomato\"}}}, {\"text\": \" ×4\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.onion\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:onion\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:onion\"}}}, {\"text\": \" ×4\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.cabbage\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cabbage\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:cabbage\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"immersiveengineering: cloche, верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.farmersdelight.tomato\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:tomato\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:tomato\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"immersiveengineering: cloche, верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"item.farmersdelight.onion\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:onion\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:onion\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"immersiveengineering: cloche, верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:cabbage\"}}]"
+	]
+	quest.5C9AD75E3A505617.quest_subtitle: "Капуста, томати, цибуля"
+	quest.5C9AD75E3A505617.title: "Дикий город"
 	quest.5CD40580D3FF8E44.quest_desc: [
 		"&aКартопляна гармата&r стріляє овочами (і не тільки), &aпротезна рука&r дістає блоки на відстані."
 		""
@@ -4529,6 +5273,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create:potato_cannon\"}}]"
 	]
 	quest.5CD40580D3FF8E44.title: "Дивні інструменти"
+	quest.5CDB30EEC4C1DD9B.quest_desc: [
+		"Мана, сила й школи заклинань, дзеркало чар, щит мани. Для гравців з Iron's Spells та Ars Nouveau."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:enchanted_book\"}}]"
+	]
+	quest.5CDB30EEC4C1DD9B.title: "Гілка: Маг"
 	quest.5D8AAFB547B62AF3.quest_desc: [
 		"Команди для зручної гри разом:"
 		" • &a/sethome назва&r, &a/home назва&r, &a/listhomes&r — точки дому."
@@ -4542,6 +5294,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:ender_pearl\"}}]"
 	]
 	quest.5D8AAFB547B62AF3.title: "Дім, телепорти й друзі"
+	quest.5DCB18D4DA899083.quest_desc: [
+		"&aДробарка руди&r дає селу &aрудокопа&r. Він торгує рудою й камінням — зручно, коли бракує заліза."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.villagersplus.ore_grinder\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:ore_grinder\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:ore_grinder\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.villagersplus.ore_grinder\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:ore_grinder\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:ore_grinder\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:ore_grinder\"}}]"
+	]
+	quest.5DCB18D4DA899083.title: "Рудокоп"
 	quest.5F048F31DB7EB7C8.quest_desc: [
 		"&6Брат Євсевій&r, німий чернець:"
 		"&o«(Чернець пише на дощечці.) Я дав обітницю мовчання, бо колись почув голос з глибини. Під землею є місто, де навіть кроки змушують щось прокинутися.»&r"
@@ -4834,6 +5599,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexscaves:pearl\"}}]"
 	]
 	quest.62EF1AD6C6AFFA8C.title: "Глибинна безодня"
+	quest.62EFFC58013130B9.quest_desc: [
+		"Каструля стоїть на плиті або над вогнем. Покладіть у неї до шести інгредієнтів і миску — за хвилину суп готовий."
+		"Супи й рагу дають ефект &aситості&r: голод не росте, і ви повільно загоюєтеся."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.farmersdelight.vegetable_soup\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:vegetable_soup\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:vegetable_soup\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.farmersdelight.vegetable_soup\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:vegetable_soup\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"farmersdelight:vegetable_soup\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"Farmer's Delight: каструля\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki farmersdelight:vegetable_soup\"}}]"
+	]
+	quest.62EFFC58013130B9.title: "Перший суп"
 	quest.6362E4839B2B6EB2.quest_desc: [
 		"&6Тиха Злата&r, провидиця:"
 		"&o«Ворони Сутінкового лісу бачать минуле й майбутнє. Із їхнього пір'я я читаю долі людей, що потрапили сюди.»&r"
@@ -4954,6 +5733,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ars_nouveau:starbuncle_charm\"}}]"
 	]
 	quest.661CA20A9F288824.title: "Старбанкл"
+	quest.66BEC09E1FCBA57C.quest_desc: [
+		"&aКвіткова діжка&r робить селянина &aсадівником&r, що торгує рослинами."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.villagersplus.oak_horticulturist_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:oak_horticulturist_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:oak_horticulturist_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.villagersplus.oak_horticulturist_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:oak_horticulturist_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:oak_horticulturist_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:oak_horticulturist_table\"}}]"
+	]
+	quest.66BEC09E1FCBA57C.title: "Садівник"
 	quest.66F4D653B82E9440.quest_desc: [
 		"&6Морячка Устина&r, колишня штурманка:"
 		"&o«Колись я обігнула пів світу. Тепер мій корабель гниє в затоці, а я рахую чайок. Я хочу знати, що хтось ще пливе туди, де кінчаються мапи.»&r"
@@ -4985,6 +5777,20 @@
 	quest.673091ACD2ADBB9E.title: "Перед великим боєм"
 	quest.6734983E6B8EE291.quest_desc: [ ]
 	quest.6734983E6B8EE291.title: "Електронні лампи"
+	quest.674E1132F71036D0.quest_desc: [
+		"Щит у другій руці (ПКМ) блокує удари й стріли спереду."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.minecraft.shield\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:shield\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:shield\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.minecraft.shield\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:shield\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:shield\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.guardvillagers.guard\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:guardvillagers:guard\"}}, {\"text\": \", \"}, {\"translate\": \"entity.minecolonies.shieldmaiden\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecolonies:shieldmaiden\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:shield\"}}]"
+	]
+	quest.674E1132F71036D0.title: "Щит"
 	quest.6770ED84F80FD89F.quest_desc: [ ]
 	quest.6770ED84F80FD89F.title: "Привид шахти"
 	quest.67C2D380381D64FC.quest_desc: [ ]
@@ -5101,6 +5907,12 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:diamond_sword\"}}]"
 	]
 	quest.6912F3F4A5C7E07F.title: "Рідкісні речі"
+	quest.697199C19A0EEB39.quest_desc: [
+		"Виконайте доручення задовго до кінця його терміну."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:clock\"}}]"
+	]
+	quest.697199C19A0EEB39.title: "Термінова доставка"
 	quest.698AEAD5F8A419D7.quest_desc: [
 		"&6Інспектор Кіндрат&r, інспектор гільдії металургів &8(доручення 3 з 3)&r:"
 		"&o«Останнє доручення: гільдія будує першу автоматичну плавильню. Їй потрібні схеми керування — мозок кожної машини.»&r"
@@ -5274,6 +6086,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ars_nouveau:source_gem\"}}]"
 	]
 	quest.6C2223F4311DCF8E.title: "Камені джерела"
+	quest.6C6D60E0839DD3E2.quest_desc: [
+		"Мандри: швидкість, падіння без шкоди, вершник, дорожня хода, чуття небезпеки крізь стіни."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:compass\"}}]"
+	]
+	quest.6C6D60E0839DD3E2.title: "Гілка: Слідопит"
 	quest.6CBDFCD22B595363.quest_desc: [
 		"Кораблі в цьому світі будують на &aверфі&r. Поставте її біля глибокої води, покладіть у неї матеріали і натисніть «Збудувати» — корабель зійде на воду поруч."
 		""
@@ -5330,6 +6150,28 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:lily_of_the_valley\"}}]"
 	]
 	quest.6D97E432CD1B45C0.title: "Сад пам'яті"
+	quest.6DBC716BA9EF6BD3.quest_desc: [
+		"Пінгвіни гуляють біля холодних морів. Не кривдьте їх — а &aпір'я&r вони скидають самі."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.friendsandfoes.penguin_feather\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:penguin_feather\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:penguin_feather\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.friendsandfoes.penguin_feather\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:penguin_feather\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:penguin_feather\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.friendsandfoes.penguin\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:friendsandfoes:penguin\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:penguin_feather\"}}]"
+	]
+	quest.6DBC716BA9EF6BD3.title: "Пінгвіни"
+	quest.6DCE07A225BACFE6.quest_desc: [
+		"Досвід дерева дають майже всі справи: бої, видобуток, мандри, відкриття, квести. Кожен рівень — одне очко навички."
+		"Від центру розходяться &eдев'ять гілок&r. Ідіть однією до кінця або беріть потроху з сусідніх: сусідні гілки з'єднані на четвертому кроці."
+		"Звичайний вузол коштує 1 очко, помітний — 2, велика навичка — 3."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:compass\"}}]"
+	]
+	quest.6DCE07A225BACFE6.quest_subtitle: "Дерево навичок — клавіша K"
+	quest.6DCE07A225BACFE6.title: "Дев'ять шляхів"
 	quest.6DEA2AB3F2DD3A75.quest_desc: [ ]
 	quest.6DEA2AB3F2DD3A75.title: "Утоплена команда"
 	quest.6E5201CA4F165AB7.quest_desc: [ ]
@@ -5446,6 +6288,34 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki mekanism:isotopic_centrifuge\"}}]"
 	]
 	quest.71D2BD5535739D9F.title: "Полоній і плутоній"
+	quest.720B742C351A7D39.quest_desc: [
+		"Краби (Friends \\& Foes) бігають мангровими пляжами. З їхньої &aклешні&r варять зілля, що подовжує досяжність рук."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.friendsandfoes.crab_claw\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:crab_claw\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:crab_claw\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.friendsandfoes.crab_claw\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:crab_claw\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"friendsandfoes:crab_claw\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.friendsandfoes.crab\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:friendsandfoes:crab\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki friendsandfoes:crab_claw\"}}]"
+	]
+	quest.720B742C351A7D39.title: "Крабова клешня"
+	quest.7292053316304090.quest_desc: [
+		"Крокодили ховаються в мангрових болотах і річках пустель. Підходьте обережно: вони хапають і тягнуть під воду."
+		"З семи &aщитків&r виходить крокодилячий нагрудник."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Перемогти: \", \"color\": \"gray\"}, {\"translate\": \"entity.alexsmobs.crocodile\", \"color\": \"red\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:crocodile\"}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.alexsmobs.crocodile_scute\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:crocodile_scute\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:crocodile_scute\"}}}, {\"text\": \" ×2\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"item.alexsmobs.crocodile_scute\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki alexsmobs:crocodile_scute\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"alexsmobs:crocodile_scute\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.alexsmobs.crocodile\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:crocodile\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:alexsmobs:crocodile\"}}]"
+	]
+	quest.7292053316304090.title: "Крокодил"
 	quest.72AB27FF44A05AF9.quest_desc: [
 		"Велетень з незериту плюється лавою і трусить землю. Нагорода — &aріг чудовиська&r і незеритові уламки."
 		""
@@ -5557,6 +6427,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:minecolonies:chiefbarbarian\"}}]"
 	]
 	quest.73F5B9111A174AD1.title: "Табори нападників"
+	quest.741CCC9B4C057D5B.quest_desc: [
+		"Ближній бій: сила удару, броня, швидкість атаки. Великі навички — нищівний удар (клавіша `), метання зброї (ПКМ + ЛКМ) й останній рубіж."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:iron_sword\"}}]"
+	]
+	quest.741CCC9B4C057D5B.title: "Гілка: Воїн"
 	quest.7438D7B35711D6B7.quest_desc: [
 		"&6Ничипір&r, молодий пасічник:"
 		"&o«Дід лишив мені пасіку, але бджоли пішли з вуликів після першої ж зими. Я щось робив не так, і тепер у мене порожні скрині й порожня душа.»&r"
@@ -5989,6 +6867,14 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ae2:spatial_io_port\"}}]"
 	]
 	quest.79DFDD1CF5325BCB.title: "Просторове сховище"
+	quest.7A34F891250A4FB4.quest_desc: [
+		"Стріли й приручені звірі: залп, мітка мисливця, сильніші вовки й коні. Двійня при розведенні тварин."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bow\"}}]"
+	]
+	quest.7A34F891250A4FB4.title: "Гілка: Мисливець"
 	quest.7A42C1300EF2300A.quest_desc: [
 		"Аксесуари мага: &aкаблучка мани&r, &aперезаряджання&r, &aспоріднення&r (+рівень одного закляття), &aамулет зосередження&r."
 		""
@@ -6126,6 +7012,19 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:bell\"}}]"
 	]
 	quest.7BADB20F26C8C650.title: "Перше село"
+	quest.7BCC169BCF207508.quest_desc: [
+		"Ковадло лагодить речі, поєднує зачарування й перейменовує. Знадобиться й для першого самоцвітного пилу."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecraft.anvil\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:anvil\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:anvil\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.minecraft.anvil\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:anvil\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:anvil\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:anvil\"}}]"
+	]
+	quest.7BCC169BCF207508.title: "Ковадло"
 	quest.7BEF771D95A030AC.quest_desc: [
 		"&aДраконяча кузня&r — споруда з кузненої цегли навколо &aядра&r. Приручений дракон дихає вогнем у &aвхід&r — і кузня плавить &aдраконесталь&r із заліза і крові."
 		""
@@ -6192,6 +7091,20 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki oceansdelight:fugu_roll\"}}]"
 	]
 	quest.7C8A3BFD7A9F15FB.title: "Морська кухня"
+	quest.7CF10D61633AF28C.quest_desc: [
+		"Пшениця росте майже весь рік, але зима її зупиняє. Зберіть урожай і посійте знову: стиглий урожай ще й дає досвід дерева навичок."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecraft.wheat\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:wheat\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:wheat\"}}}, {\"text\": \" ×32\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.minecraft.wheat\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:wheat\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecraft:wheat\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"падає з: \", \"color\": \"gray\"}, {\"translate\": \"entity.twilightforest.kobold\", \"color\": \"white\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki entity:twilightforest:kobold\"}}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:wheat\"}}]"
+	]
+	quest.7CF10D61633AF28C.title: "Свій хліб"
 	quest.7D301ACA6819F135.quest_desc: [
 		"&6Дід Аким&r, дивакуватий фермер:"
 		"&o«Усі кажуть, що я з глузду з'їхав. А я хочу на своїй фермі динозавра! Травоїдного, звичайно, — гротоцератопса. Він пасеться, як корова, а на ньому можна орати!»&r"
@@ -6243,6 +7156,27 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:scepterpermission\"}}]"
 	]
 	quest.7D627C369F4DA93C.title: "Покинута колонія"
+	quest.7D78C285D73CCE61.quest_desc: [
+		"У селах стоять &aдошки оголошень&r. На них селяни вивішують доручення: принести речі, перемогти мобів. Візьміть доручення — у вас з'явиться аркуш з умовами й часом на виконання."
+		"Дошку можна скрафтити й поставити вдома."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki bountiful:bountyboard\"}}]"
+	]
+	quest.7D78C285D73CCE61.quest_subtitle: "Робота для мандрівника"
+	quest.7D78C285D73CCE61.title: "Дошка оголошень"
+	quest.7DC94F434F075A18.quest_desc: [
+		"&aАкваріум&r — робоче місце &aокеанографа&r: він торгує дарами моря."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.villagersplus.oceanographer_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:oceanographer_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:oceanographer_table\"}}}, {\"text\": \"\"}]"
+		""
+		"&6Де взяти:"
+		"[\"\", {\"translate\": \"block.villagersplus.oceanographer_table\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:oceanographer_table\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"villagersplus:oceanographer_table\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki villagersplus:oceanographer_table\"}}]"
+	]
+	quest.7DC94F434F075A18.title: "Океанограф"
 	quest.7DDC6FFC54AC4698.quest_desc: [
 		"Граєте з друзями? Об'єднайтеся в &eгрупу&r."
 		""
@@ -6335,6 +7269,15 @@
 	quest.7F9968585593284D.title: "Корона з заніту"
 	quest.7FBB1A9E6FECEF4E.quest_desc: [ ]
 	quest.7FBB1A9E6FECEF4E.title: "Дикі звірі джерела"
+	quest.7FD173092B2F8670.quest_desc: [
+		"Тиха хода, красномовство з квестодавцями, дружба з гоблінами й миротворець (присісти 4 рази)."
+		""
+		"Відкрийте дерево (&aK&r) і візьміть перший вузол цієї гілки, щоб відзначити квест."
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:writable_book\"}}]"
+	]
+	quest.7FD173092B2F8670.title: "Гілка: Дипломат"
+	task.15D73F52A8D1C6C4.title: "Відкрити дерево навичок (K)"
 	task.1798168496956DA4.title: "Відкрити мапу світу (M)"
 	task.186E3CADCD57831E.title: "Відкрити ранець (B)"
 	task.205AD8E5E2AE5994.title: "Поговорити з мандрівником"

@@ -82,7 +82,7 @@
 				}
 			]
 			x: 2.0d
-			y: -1.75d
+			y: -2.625d
 		}
 		{
 			dependencies: [
@@ -126,7 +126,7 @@
 				}
 			]
 			x: 2.0d
-			y: 0.0d
+			y: -0.875d
 		}
 		{
 			dependencies: [
@@ -172,7 +172,7 @@
 				}
 			]
 			x: 2.0d
-			y: 1.75d
+			y: 0.875d
 		}
 		{
 			dependencies: [
@@ -208,7 +208,330 @@
 				}
 			]
 			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"5775B1A1874FD00B"
+			]
+			icon: {
+				id: "apotheosis:gem_dust"
+			}
+			id: "34E7D85919B66ED9"
+			rewards: [
+				{
+					id: "1716D8201DDD5964"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "63736AAF87FE843D"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "5B19A7D9B118E989"
+					item: {
+						count: 1
+						id: "apotheosis:gem_dust"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"34E7D85919B66ED9"
+			]
+			icon: {
+				id: "apotheosis:gem_cutting_table"
+			}
+			id: "159FEAAB60B4503B"
+			rewards: [
+				{
+					count: 8
+					id: "6A746B30548174AA"
+					item: {
+						count: 1
+						id: "apotheosis:gem_dust"
+					}
+					type: "item"
+				}
+				{
+					id: "400CDC0B230FBDAA"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "1D36BD9D799384F9"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "18255263EFA7749F"
+					item: {
+						count: 1
+						id: "apotheosis:gem_cutting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"159FEAAB60B4503B"
+			]
+			icon: {
+				id: "apotheosis:augmenting_table"
+			}
+			id: "20B9CF1D0EDEEC17"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "4BB35BC4B7926268"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "6500B97ABE2D820F"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "2C17842A8038B179"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7857B4439FECA57E"
+					item: {
+						count: 1
+						id: "apotheosis:augmenting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"6912F3F4A5C7E07F"
+			]
+			icon: {
+				id: "minecraft:iron_chestplate"
+			}
+			id: "592339E7F4CA3D7D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "5D81B66683F240E2"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "23763334EC891AF0"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "62449EFB5A887001"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.25d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/frontier"
+					criterion: ""
+					id: "7ED1A6B7F06C50C8"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"592339E7F4CA3D7D"
+			]
+			icon: {
+				id: "minecraft:diamond_chestplate"
+			}
+			id: "1250F3A7EAEABF97"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "102089E331235B7C"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "27441012DF142CE2"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 100"
+					elevate_perms: true
+					id: "4AF4432EAFBC6BFE"
+					silent: true
+					title: "+100 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					advancement: "apotheosis:progression/ascent"
+					criterion: ""
+					id: "2474AB1CF38D5C9A"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"1250F3A7EAEABF97"
+			]
+			icon: {
+				id: "minecraft:wither_skeleton_skull"
+			}
+			id: "1288442435CFDF8D"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "14D964E4214AB7FE"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					id: "74226EB5A0E9D814"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 150"
+					elevate_perms: true
+					id: "2FBE607DC704ADB5"
+					silent: true
+					title: "+150 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					advancement: "apotheosis:progression/summit"
+					criterion: ""
+					id: "67815BED74DF6446"
+					type: "advancement"
+				}
+			]
+			x: 6.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"1288442435CFDF8D"
+			]
+			icon: {
+				id: "minecraft:dragon_head"
+			}
+			id: "4CECE033600D99BC"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/boss"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "25BA2A27A3AF58A9"
+					silent: true
+					title: "Скарб переможця"
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot wilds:reward/magic"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "683ABAD785E4A49B"
+					silent: true
+					title: "Скриня мага"
+					type: "command"
+				}
+				{
+					id: "7E21E51B5EB3A1A5"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 250"
+					elevate_perms: true
+					id: "200FED272CB19716"
+					silent: true
+					title: "+250 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/pinnacle"
+					criterion: ""
+					id: "6852DF2F944B639D"
+					type: "advancement"
+				}
+			]
+			x: 8.0d
+			y: 0.875d
 		}
 	]
 }

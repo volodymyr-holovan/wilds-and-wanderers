@@ -1,0 +1,597 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "kitchen"
+	group: "3C6D5B8B49BE1899"
+	icon: {
+		id: "farmersdelight:cooking_pot"
+	}
+	id: "7ACD9E6E157ACDD6"
+	order_index: 22
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "farmersdelight:cabbage"
+			}
+			id: "5C9AD75E3A505617"
+			rewards: [
+				{
+					count: 4
+					id: "178B150F015D3A03"
+					item: {
+						count: 1
+						id: "farmersdelight:rich_soil"
+					}
+					type: "item"
+				}
+				{
+					id: "59350D1682BA6964"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "54DAD437DB59676C"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					count: 4L
+					id: "7A4BDD42E6AAFE41"
+					item: {
+						count: 1
+						id: "farmersdelight:cabbage"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "16D6ECB08DBD41AB"
+					item: {
+						count: 1
+						id: "farmersdelight:tomato"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7177BDCBFF4D3F48"
+					item: {
+						count: 1
+						id: "farmersdelight:onion"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5C9AD75E3A505617"
+			]
+			icon: {
+				id: "farmersdelight:rice"
+			}
+			id: "18543B74581ED4CD"
+			rewards: [
+				{
+					id: "5054ADF6DF80667D"
+					item: {
+						count: 1
+						id: "farmersdelight:rice_bale"
+					}
+					type: "item"
+				}
+				{
+					id: "42FEE85A2D972573"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "1F9FB21673612A55"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "682AE8DA544E5D40"
+					item: {
+						count: 1
+						id: "farmersdelight:rice"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"5C9AD75E3A505617"
+			]
+			icon: {
+				id: "farmersdelight:rich_soil"
+			}
+			id: "44C601C73C95B929"
+			rewards: [
+				{
+					count: 16
+					id: "3E378F3AA507D448"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "10BD399EC581F7D9"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "5B941C0535184107"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "275DF9F1E2507C53"
+					item: {
+						count: 1
+						id: "farmersdelight:organic_compost"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5C9AD75E3A505617"
+			]
+			icon: {
+				id: "farmersdelight:iron_knife"
+			}
+			id: "53AEA2FEA515F3AE"
+			rewards: [
+				{
+					id: "18B893562B0AC1D1"
+					type: "xp"
+					xp: 25
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "3FE5EDA8DD0BC594"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5821AF35F1E43111"
+					item: {
+						count: 1
+						id: "farmersdelight:iron_knife"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"53AEA2FEA515F3AE"
+			]
+			icon: {
+				id: "farmersdelight:bacon"
+			}
+			id: "426CF543AA971650"
+			rewards: [
+				{
+					count: 4
+					id: "6F8E95EDB20A0159"
+					item: {
+						count: 1
+						id: "farmersdelight:cooked_bacon"
+					}
+					type: "item"
+				}
+				{
+					id: "333105F78B62DAB8"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "156B2252AD4F4624"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "350FC3659B9632EE"
+					item: {
+						count: 1
+						id: "farmersdelight:cabbage_leaf"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3A476B140E2BCA9F"
+					item: {
+						count: 1
+						id: "farmersdelight:bacon"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"426CF543AA971650"
+			]
+			icon: {
+				id: "farmersdelight:wheat_dough"
+			}
+			id: "4733AA110714E528"
+			rewards: [
+				{
+					count: 4
+					id: "1BAD5D6D73BCD06C"
+					item: {
+						count: 1
+						id: "minecraft:egg"
+					}
+					type: "item"
+				}
+				{
+					id: "7341F31AD0E613D6"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "25DDA474FF3CD752"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "2EF3B9D645E40FA3"
+					item: {
+						count: 1
+						id: "farmersdelight:wheat_dough"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3B9B0EB37E581A3A"
+					item: {
+						count: 1
+						id: "farmersdelight:raw_pasta"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"426CF543AA971650"
+			]
+			icon: {
+				id: "farmersdelight:vegetable_soup"
+			}
+			id: "62EFFC58013130B9"
+			rewards: [
+				{
+					count: 8
+					id: "7110D498892AB32E"
+					item: {
+						count: 1
+						id: "minecraft:bowl"
+					}
+					type: "item"
+				}
+				{
+					id: "61625F4CA44DD7DC"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "6CBB6EC4913886F7"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "34896D689230E370"
+					item: {
+						count: 1
+						id: "farmersdelight:vegetable_soup"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"426CF543AA971650"
+			]
+			icon: {
+				id: "farmersdelight:skillet"
+			}
+			id: "3C7738579429F6B5"
+			rewards: [
+				{
+					id: "14A2DB9AE3894126"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "3A90D786FB290448"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "154D4994D2093FF1"
+					item: {
+						count: 1
+						id: "farmersdelight:skillet"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1821DF84462BB2C7"
+					item: {
+						count: 1
+						id: "farmersdelight:fried_egg"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"4733AA110714E528"
+			]
+			icon: {
+				id: "farmersdelight:apple_pie"
+			}
+			id: "582F0712AA95397C"
+			rewards: [
+				{
+					count: 16
+					id: "1A45ED6ACC127FE6"
+					item: {
+						count: 1
+						id: "minecraft:sugar"
+					}
+					type: "item"
+				}
+				{
+					id: "5647DDB5A683B9E8"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "1B72FEC379C547BA"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "14537EFA25CB3CCF"
+					item: {
+						count: 1
+						id: "farmersdelight:apple_pie"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"62EFFC58013130B9"
+			]
+			icon: {
+				id: "farmersdelight:hot_cocoa"
+			}
+			id: "2D5E2A96F87CA050"
+			rewards: [
+				{
+					id: "4F943685F7D3D6C9"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "4658E06C6AD45DC5"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "62E630D8F887AF72"
+					item: {
+						count: 1
+						id: "farmersdelight:hot_cocoa"
+					}
+					type: "item"
+				}
+				{
+					id: "6156F39925EC5B7C"
+					item: {
+						count: 1
+						id: "farmersdelight:apple_cider"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"62EFFC58013130B9"
+			]
+			icon: {
+				id: "farmersdelight:dog_food"
+			}
+			id: "1EBE57696BEC4B10"
+			rewards: [
+				{
+					count: 2
+					id: "1D3B931210022524"
+					item: {
+						count: 1
+						id: "minecraft:lead"
+					}
+					type: "item"
+				}
+				{
+					id: "57645A9A36BD6F76"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "49DEE8C2384BA482"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "12108598EBCD7EF5"
+					item: {
+						count: 1
+						id: "farmersdelight:dog_food"
+					}
+					type: "item"
+				}
+				{
+					id: "6A06F47E35148D1B"
+					item: {
+						count: 1
+						id: "farmersdelight:horse_feed"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"582F0712AA95397C"
+				"2D5E2A96F87CA050"
+			]
+			icon: {
+				id: "farmersdelight:roast_chicken_block"
+			}
+			id: "219F340F2E348FFE"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/explorer"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "33D5D07ECD5B60B7"
+					silent: true
+					title: "Торба мандрівника"
+					type: "command"
+				}
+				{
+					id: "5811D17576200B11"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 80"
+					elevate_perms: true
+					id: "76C69584FDAE149F"
+					silent: true
+					title: "+80 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "2A531DAAA0EBB98C"
+					item: {
+						count: 1
+						id: "farmersdelight:roast_chicken_block"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

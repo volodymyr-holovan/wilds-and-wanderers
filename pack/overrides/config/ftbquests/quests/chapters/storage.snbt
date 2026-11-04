@@ -1,0 +1,487 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage"
+	group: "3C6D5B8B49BE1899"
+	icon: {
+		id: "sophisticatedstorage:barrel"
+	}
+	id: "1E77E388D0A9F0D1"
+	order_index: 23
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "sophisticatedstorage:barrel"
+			}
+			id: "2C4D537C18CE8E78"
+			rewards: [
+				{
+					id: "39B2FA72CF3B827C"
+					type: "xp"
+					xp: 30
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "50F39B5F4C9A4DCA"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "30E89A1892880F51"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:barrel"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2C4D537C18CE8E78"
+			]
+			icon: {
+				id: "sophisticatedstorage:basic_tier_upgrade"
+			}
+			id: "2302649E3042C382"
+			rewards: [
+				{
+					id: "76E133A3B5F565C2"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "3F4B15D8516D82CA"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "496F80EF212268B0"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:basic_tier_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"2302649E3042C382"
+			]
+			icon: {
+				id: "sophisticatedstorage:stack_upgrade_tier_1"
+			}
+			id: "37A92CBE0A6428C1"
+			rewards: [
+				{
+					id: "70845647B9CA66C2"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "2ABB360794282946"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1EA9B1EFEA79E53B"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:stack_upgrade_tier_1"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"37A92CBE0A6428C1"
+			]
+			icon: {
+				id: "sophisticatedstorage:compacting_upgrade"
+			}
+			id: "122B89BA4DF49CBC"
+			rewards: [
+				{
+					id: "197A2D4C49FD692D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "56D54C402D77ECE1"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5D85556F12AB2AD4"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:compacting_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"2302649E3042C382"
+			]
+			icon: {
+				id: "sophisticatedstorage:controller"
+			}
+			id: "1BB89F9CA91EC911"
+			rewards: [
+				{
+					command: "/loot give {p} loot wilds:reward/tech"
+					elevate_perms: true
+					icon: {
+						id: "minecraft:chest"
+					}
+					id: "372341E8CF139C18"
+					silent: true
+					title: "Ящик інженера"
+					type: "command"
+				}
+				{
+					id: "5F9A5AD4FF26076D"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 60"
+					elevate_perms: true
+					id: "4D94D36BD4BE7455"
+					silent: true
+					title: "+60 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.25d
+			tasks: [
+				{
+					id: "71656BEEA5B4E291"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:controller"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.75d
+		}
+		{
+			dependencies: [
+				"2C4D537C18CE8E78"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:pickup_upgrade"
+			}
+			id: "5AB35EF7031FD5B4"
+			rewards: [
+				{
+					id: "144624D9ABDF01CB"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "269B1E8EB5B0FF00"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "12AAC838C3850C0D"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:pickup_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5AB35EF7031FD5B4"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:magnet_upgrade"
+			}
+			id: "5C0C070D50F0EFCB"
+			rewards: [
+				{
+					id: "2E98B406024CAE97"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "18F2CCD2C626DD14"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1B2AF1754CE4DAA1"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:magnet_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5AB35EF7031FD5B4"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:feeding_upgrade"
+			}
+			id: "14B16823B4425ED7"
+			rewards: [
+				{
+					id: "2F80989D32299D52"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "110A62BA3D28E1AD"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1490B8164280126C"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:feeding_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"5AB35EF7031FD5B4"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:iron_backpack"
+			}
+			id: "42C4684B63FB4FC0"
+			rewards: [
+				{
+					id: "64846152324691D4"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "63529D2276B9285C"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E86506839879BB7"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:iron_backpack"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"2C4D537C18CE8E78"
+			]
+			icon: {
+				id: "minecraft:spyglass"
+			}
+			id: "45F49714E52608E3"
+			rewards: [
+				{
+					id: "4A1DCDA40BEA59D0"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 20"
+					elevate_perms: true
+					id: "14539A8ADE766AB0"
+					silent: true
+					title: "+20 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1C1DFB7CD7439F5B"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			dependencies: [
+				"1BB89F9CA91EC911"
+			]
+			icon: {
+				id: "minecraft:copper_block"
+			}
+			id: "404FE4606A41CCEA"
+			rewards: [
+				{
+					count: 4
+					id: "4539EA4A042F7CCC"
+					item: {
+						count: 1
+						id: "minecraft:honeycomb"
+					}
+					type: "item"
+				}
+				{
+					id: "72D940C001CFD20D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "1E13695770F2E7EF"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			size: 1.25d
+			tasks: [
+				{
+					id: "270C188FE8E40EF0"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"404FE4606A41CCEA"
+			]
+			icon: {
+				id: "minecraft:chest"
+			}
+			id: "142BE3549F76E380"
+			rewards: [
+				{
+					id: "493C793A43CBA343"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "70E1F3B3DC51C67B"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1D2AFC07C6F30AFD"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"42C4684B63FB4FC0"
+			]
+			icon: {
+				id: "minecraft:bundle"
+			}
+			id: "1C6C27D9DE16CEEB"
+			rewards: [
+				{
+					id: "4E0ABCFC4C4AEFBE"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 30"
+					elevate_perms: true
+					id: "2EE5373718B7162A"
+					silent: true
+					title: "+30 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "67E60DAD7158B54E"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: 1.75d
+		}
+	]
+}
