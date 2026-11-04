@@ -124,6 +124,7 @@ public final class GearScreens {
         if (content == null) return;
         Minecraft mc = Minecraft.getInstance();
         int cw = content[2] - content[0], ch = content[3] - content[1];
+        if (fitScale(mc, s, ch)) return;
         int effects = EffectsPanel.visible(mc.player).size();
         boolean book = RecipeBookPanel.open(), attrs = AttributesPanel.shown();
         int bw = book ? RecipeBookPanel.TABS + RecipeBookPanel.W + GAP : 0;
@@ -381,8 +382,42 @@ public final class GearScreens {
         WildsCore.LOG.info("Wilds Core: UI self-test: first slots after placing a recipe: {}", sb.toString().trim());
     }
 
+    /**
+     * A screen too low for the equipment screen (a small window, a big interface scale, extra inventory rows): while it
+     * is open the interface scale goes down to the biggest that fits it all, hotbar included; when it closes the
+     * player's own scale comes back. Always false: the change itself waits for the next tick.
+     */
+    private static boolean fitScale(Minecraft mc, Screen s, int contentHeight) {
+        var w = mc.getWindow();
+        int need = contentHeight + 2 * MARGIN;
+        if (s.height >= need || w.getGuiScale() <= 1) return false;
+        int scale = Math.max(1, w.getHeight() / need);
+        if (scale >= (int) w.getGuiScale()) return false;
+        wantScale = scale;   // at the next tick: changing it while the screen draws breaks Accessories' slot backgrounds
+        return false;
+    }
+
+    /** the interface scale the equipment screen needs (fitScale), applied at the next client tick; 0: none */
+    private static int wantScale;
+
+    /** the interface scale before fitScale lowered it, 0 when it did not */
+    private static int scaledDown;
+
     public static void tick(ClientTickEvent.Post e) {
         Minecraft mc = Minecraft.getInstance();
+        if (wantScale != 0) {
+            var w = mc.getWindow();
+            if (isGearScreen(mc.screen) && wantScale < (int) w.getGuiScale()) {
+                if (scaledDown == 0) scaledDown = (int) w.getGuiScale();
+                w.setGuiScale(wantScale);
+                mc.screen.resize(mc, w.getGuiScaledWidth(), w.getGuiScaledHeight());
+            }
+            wantScale = 0;
+        }
+        if (scaledDown != 0 && !isGearScreen(mc.screen)) {
+            scaledDown = 0;
+            mc.resizeDisplay();   // the player's own interface scale again
+        }
         defaults(mc);
         if (isGearScreen(mc.screen)) RecipeBookPanel.tick();
         if (!SHOTS) return;

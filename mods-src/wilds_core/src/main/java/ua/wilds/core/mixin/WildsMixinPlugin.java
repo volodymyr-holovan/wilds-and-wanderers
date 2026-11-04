@@ -20,7 +20,8 @@ public final class WildsMixinPlugin implements IMixinConfigPlugin {
             Map.entry("ua.wilds.core.mixin.client.FtbTeamsSelfMixin", "ftbteams"),
             Map.entry("ua.wilds.core.mixin.FtbQuestsTeamMixin", "ftbquests"),
             Map.entry("ua.wilds.core.mixin.FtbQuestsPartyMixin", "ftbquests"),
-            Map.entry("ua.wilds.core.mixin.client.ApothTooltipMixin", "apotheosis"));
+            Map.entry("ua.wilds.core.mixin.client.ApothTooltipMixin", "apotheosis"),
+            Map.entry("ua.wilds.core.mixin.client.AccessoriesInvBackgroundMixin", "accessories"));
 
     public void onLoad(String mixinPackage) {}
 

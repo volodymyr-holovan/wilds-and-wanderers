@@ -12,7 +12,8 @@
     "client.AccessoriesRowsScreenMixin",
     "client.ContainerTitleAccessor",
     "client.FtbTeamsSelfMixin",
-    "client.ApothTooltipMixin"
+    "client.ApothTooltipMixin",
+    "client.AccessoriesInvBackgroundMixin"
   ],
   "injectors": {
     "defaultRequire": 0
