@@ -1,5 +1,5 @@
 {
- "version": "2026.11.03.4",
+ "version": "2026.11.04.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -914,13 +914,13 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.4/wilds_core-0.1.0.jar",
-   "sha1": "14f936a77b6b36d6ffba351d4fd671380b4eaede",
-   "size": 300972
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.04.1/wilds_core-0.1.0.jar",
+   "sha1": "9f6c1715a6519427afefd7e77ead9008040eb5f9",
+   "size": 304535
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.4/wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.04.1/wilds_wiki-0.2.0.jar",
    "sha1": "bfc4f42cd8f28591925064bd66080e315eb1e125",
    "size": 843981
   },
@@ -970,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.03.4/overrides.zip",
-   "sha1": "36d90f83ff4a9e8e85f286270708e461959c7517",
-   "size": 28204933
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.04.1/overrides.zip",
+   "sha1": "db48aebd239d965d132a21763742f632f854531a",
+   "size": 28278568
   },
   "overrides": [
    {
@@ -1037,18 +1037,23 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/aether.snbt",
-    "sha1": "19598b03e149c5984f52c2d8d309838eb84963e6",
-    "size": 6421
+    "sha1": "38192e36e5ddeaf1b8124ef22ee28dbf426f0beb",
+    "size": 10233
    },
    {
     "path": "config/ftbquests/quests/chapters/apotheosis.snbt",
-    "sha1": "ad07b19354a3e6a233fe769b9d184b5514286b04",
-    "size": 3580
+    "sha1": "94826b909264ab74ee761a58de58f21c3144ac5d",
+    "size": 9573
    },
    {
     "path": "config/ftbquests/quests/chapters/ars.snbt",
     "sha1": "b049391970315ca4da7736c89f049a9895e4587a",
     "size": 12557
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/bestiary.snbt",
+    "sha1": "63ebde5712c61fb63337c0ac8c48e936fb1db837",
+    "size": 10149
    },
    {
     "path": "config/ftbquests/quests/chapters/bosses.snbt",
@@ -1087,13 +1092,18 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/errands.snbt",
-    "sha1": "7cdb4e7ded027724ee9805b183498061bd4d9ede",
-    "size": 60153
+    "sha1": "37cb73c48f5a3c96e68057748bf2f2c48797b17e",
+    "size": 56364
    },
    {
     "path": "config/ftbquests/quests/chapters/irons.snbt",
     "sha1": "590e59e848078f2927c7e463c4fc8c5ec4b13fd7",
     "size": 13008
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/kitchen.snbt",
+    "sha1": "aff90d89c3b8ee5f7cad6743c81c1f52497e4a24",
+    "size": 9991
    },
    {
     "path": "config/ftbquests/quests/chapters/links.snbt",
@@ -1111,6 +1121,11 @@
     "size": 19292
    },
    {
+    "path": "config/ftbquests/quests/chapters/paths.snbt",
+    "sha1": "6e6fd7784db1daabf385eecdf19f17f31f6919b8",
+    "size": 5565
+   },
+   {
     "path": "config/ftbquests/quests/chapters/peoples.snbt",
     "sha1": "02205050b20512fce329c3858abfbc6114846f3b",
     "size": 8807
@@ -1126,14 +1141,24 @@
     "size": 6897
    },
    {
+    "path": "config/ftbquests/quests/chapters/storage.snbt",
+    "sha1": "da9e112eea6fb6f3eab7f2ca5c0e7abd50a3d094",
+    "size": 8439
+   },
+   {
     "path": "config/ftbquests/quests/chapters/survival.snbt",
-    "sha1": "fa13e97be465a5c4596edfeb732343155a417797",
-    "size": 4168
+    "sha1": "507dbf6c537c17d20d9b725f9b62a9da279e1613",
+    "size": 8835
    },
    {
     "path": "config/ftbquests/quests/chapters/twilight.snbt",
     "sha1": "5813a19a14e661e1a5b5c9755272df7306f74bf8",
     "size": 10224
+   },
+   {
+    "path": "config/ftbquests/quests/chapters/village.snbt",
+    "sha1": "863e40de60fbaad284853f0388ebd81d8d30380b",
+    "size": 8046
    },
    {
     "path": "config/ftbquests/quests/chapters/welcome.snbt",
@@ -1152,13 +1177,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "475bc989d79b49d2a830a40129e4bb53b125faab",
-    "size": 776054
+    "sha1": "3cfbd349026caca7764dcf022562f3d77fb00b96",
+    "size": 882855
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "475bc989d79b49d2a830a40129e4bb53b125faab",
-    "size": 776054
+    "sha1": "3cfbd349026caca7764dcf022562f3d77fb00b96",
+    "size": 882855
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -1509,6 +1534,11 @@
     "path": "kubejs/assets/ftblibrary/lang/uk_ua.json",
     "sha1": "b3acc44cefb49340ba74e460cf56098476b05079",
     "size": 7038
+   },
+   {
+    "path": "kubejs/assets/ftbquests/ftb_quests_theme.txt",
+    "sha1": "8afe02cbc91fd8631d51a8511a330faa47e72c35",
+    "size": 4160
    },
    {
     "path": "kubejs/assets/ftbquests/lang/uk_ua.json",
@@ -1969,6 +1999,16 @@
     "path": "kubejs/assets/wilds/sidebar_buttons/skills.json",
     "sha1": "92e89c1a30b83bdaf87d702f9e7f1540d00bd6fc",
     "size": 268
+   },
+   {
+    "path": "kubejs/assets/wilds/textures/gui/quests/cloth.png",
+    "sha1": "476c61017fe8aa7975caaffe419d964f4e0f8ca3",
+    "size": 14304
+   },
+   {
+    "path": "kubejs/assets/wilds/textures/gui/quests/paper.png",
+    "sha1": "fbeef0432984d5e9d24f1c4415587874ce569555",
+    "size": 15446
    },
    {
     "path": "kubejs/assets/wilds/textures/gui/skilltree.png",
@@ -3072,8 +3112,8 @@
    },
    {
     "path": "kubejs/data/wilds_core/quests/tutorial.json",
-    "sha1": "8abd138eb63eb62c97cbaab9fd44e97932a2ff9b",
-    "size": 475
+    "sha1": "d1f68e1ba165cf7edec8828c843d8f2edf7d6448",
+    "size": 497
    },
    {
     "path": "kubejs/server_scripts/wilds_commands.js",
