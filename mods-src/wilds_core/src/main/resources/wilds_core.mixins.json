@@ -13,7 +13,8 @@
     "client.ContainerTitleAccessor",
     "client.FtbTeamsSelfMixin",
     "client.ApothTooltipMixin",
-    "client.AccessoriesInvBackgroundMixin"
+    "client.AccessoriesInvBackgroundMixin",
+    "client.ContainerScreenRowsMixin"
   ],
   "injectors": {
     "defaultRequire": 0
@@ -27,6 +28,8 @@
     "CraftingMenuMixin",
     "FtbQuestsTeamMixin",
     "FtbQuestsPartyMixin",
-    "OpBreakMixin"
+    "OpBreakMixin",
+    "ContainerMenuRowsMixin",
+    "CopperGolemStatueMixin"
   ]
 }

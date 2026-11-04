@@ -28,12 +28,34 @@ public final class CmdTest {
             mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(player));
             return;
         }
+        if (what.startsWith("select:")) {   // "select:N": the hotbar slot in hand
+            player.getInventory().selected = Integer.parseInt(what.substring(7));
+            return;
+        }
         if (what.equals("use")) {   // use the item in the main hand (opens a backpack)
             mc.gameMode.useItem(player, net.minecraft.world.InteractionHand.MAIN_HAND);
             return;
         }
         var menu = player.containerMenu;
+        if (what.startsWith("rowclick:")) {   // "rowclick:K:mode:button": the panel's message for row slot K
+            String[] a = what.split(":");
+            net.neoforged.neoforge.network.PacketDistributor.sendToServer(new ua.wilds.core.net.Net.RowClick(menu.containerId,
+                    Integer.parseInt(a[1]), Integer.parseInt(a[3]), Integer.parseInt(a[2])));
+            return;
+        }
+        if (what.startsWith("pmouse:") && mc.screen instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> scr) {
+            // "pmouse:K": a real left click on the panel's row slot K, through the screen events as the mouse would
+            double[] at = RowsPanel.slotCentre(scr, Integer.parseInt(what.substring(7)));
+            WildsCore.LOG.info("Wilds Core: command self-test panel slot at {}", at == null ? "none" : at[0] + "," + at[1]);
+            if (at == null) return;
+            if (!net.neoforged.neoforge.client.ClientHooks.onScreenMouseClickedPre(scr, at[0], at[1], 0)) scr.mouseClicked(at[0], at[1], 0);
+            if (!net.neoforged.neoforge.client.ClientHooks.onScreenMouseReleasedPre(scr, at[0], at[1], 0)) scr.mouseReleased(at[0], at[1], 0);
+            return;
+        }
         if (what.equals("dump")) {
+            StringBuilder rows = new StringBuilder();
+            for (int i = 0; i < 18; i++) if (!RowsPanel.item(i).isEmpty()) rows.append(' ').append(i).append('=').append(RowsPanel.item(i));
+            WildsCore.LOG.info("Wilds Core: command self-test panel rows{}", rows);
             StringBuilder sb = new StringBuilder(menu.getClass().getSimpleName()).append(" carried=").append(menu.getCarried()).append(':');
             for (int i = 0; i < menu.slots.size(); i++) {
                 var s = menu.getSlot(i);
@@ -52,6 +74,14 @@ public final class CmdTest {
         }
         WildsCore.LOG.info("Wilds Core: command self-test {} -> menu slot {}", what, target);
         if (target < 0) return;
+        if (kv[0].equals("mouse") && mc.screen instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> scr) {
+            // a real left click on the slot, through the screen (its hovering, its "clicked outside" rules)
+            var slot = menu.getSlot(target);
+            double x = scr.getGuiLeft() + slot.x + 8, y = scr.getGuiTop() + slot.y + 8;
+            scr.mouseClicked(x, y, 0);
+            scr.mouseReleased(x, y, 0);
+            return;
+        }
         mc.gameMode.handleInventoryMouseClick(menu.containerId, target, 0,
                 kv[0].equals("quick") ? net.minecraft.world.inventory.ClickType.QUICK_MOVE : net.minecraft.world.inventory.ClickType.PICKUP, player);
     }

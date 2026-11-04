@@ -123,6 +123,7 @@ public final class BagSkills {
     private static void tick(PlayerTickEvent.Post e) {
         if (!(e.getEntity() instanceof ServerPlayer p) || !p.isAlive()) return;
         int t = p.tickCount;
+        ua.wilds.core.inventory.ExtraRows.sync(p);
         if (t % 4 == 0) reach(p);
         if (t % 40 == 0) giveBackLocked(p);
         int mender = SkillState.level(p, "mender");
@@ -182,12 +183,15 @@ public final class BagSkills {
         return pocket.contains(m);
     }
 
-    /** a slot of the extra rows (AccessoriesRowsMenuMixin): inactive while its row is not unlocked */
+    /**
+     * a slot of the extra rows, in any menu (inventory.ExtraRows, AccessoriesRowsMenuMixin): inactive while its row is
+     * not unlocked (not drawn, nothing goes in or out)
+     */
     public static final class RowSlot extends net.neoforged.neoforge.items.SlotItemHandler {
         private final Player player;
 
-        public RowSlot(net.neoforged.neoforge.items.IItemHandler h, int index, Player player) {
-            super(h, index, -2000, -2000);
+        public RowSlot(net.neoforged.neoforge.items.IItemHandler h, int index, Player player, int x, int y) {
+            super(h, index, x, y);
             this.player = player;
         }
 
@@ -197,6 +201,10 @@ public final class BagSkills {
 
         public boolean mayPlace(ItemStack stack) {
             return isActive() && super.mayPlace(stack);
+        }
+
+        public boolean mayPickup(Player p) {
+            return isActive() && super.mayPickup(p);
         }
     }
 }

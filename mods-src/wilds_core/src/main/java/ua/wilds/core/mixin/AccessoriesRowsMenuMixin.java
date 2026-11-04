@@ -33,7 +33,7 @@ public abstract class AccessoriesRowsMenuMixin extends AbstractContainerMenu {
         // a client of an older pack would have fewer slots than the server and be thrown out when the menu opens
         if (p instanceof net.minecraft.server.level.ServerPlayer sp && (sp.connection == null || !sp.connection.hasChannel(ua.wilds.core.net.Net.RowsV1.TYPE))) return;
         var h = BagSkills.rows(p);
-        for (int i = 0; i < h.getSlots(); i++) addSlot(new BagSkills.RowSlot(h, i, p));
+        for (int i = 0; i < h.getSlots(); i++) addSlot(new BagSkills.RowSlot(h, i, p, -2000, -2000));
     }
 
     /**
@@ -48,7 +48,7 @@ public abstract class AccessoriesRowsMenuMixin extends AbstractContainerMenu {
         Slot slot = slots.get(index);
         boolean worn = slot.container.getClass().getSimpleName().contains("SlotAccess") && slot.hasItem()
                 && player.getEquipmentSlotForItem(slot.getItem()).isArmor() && slot.getItem() == wilds$worn(player, slot.getItem());
-        if (!(slot instanceof BagSkills.RowSlot) && !worn) return;
+        if (!worn) return;   // a row slot never gets here: ContainerMenuRowsMixin moves it before the menu is asked
         ItemStack stack = slot.getItem();
         if (stack.isEmpty()) {
             cir.setReturnValue(ItemStack.EMPTY);

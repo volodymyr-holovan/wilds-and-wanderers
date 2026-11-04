@@ -57,10 +57,24 @@ public final class SortTitle {
         var acc = (ContainerTitleAccessor) screen;
         int x = screen.getGuiLeft() + acc.wilds$titleX() + mc.font.width(screen.getTitle()) + 6;
         int y = screen.getGuiTop() + acc.wilds$titleY();
+        // up to the screen's edge or the first button on the title's line (the sorting and search buttons of
+        // Sophisticated Storage), shortened with an ellipsis when it does not fit
+        int right = screen.getGuiLeft() + screen.getXSize() - 7;
+        // Sophisticated's sort, search and settings buttons on that line do not tell their place
+        if (screen.getClass().getName().startsWith("net.p3pp3rf1y.")) right -= 40;
+        for (var c : screen.children()) {
+            var r = c.getRectangle();
+            if (r.width() > 0 && r.left() > x && r.top() < y + 9 && r.bottom() > y - 1) right = Math.min(right, r.left() - 3);
+        }
+        String text = "· " + label;
+        if (mc.font.width(text) > right - x) {
+            text = mc.font.plainSubstrByWidth(text, right - x - mc.font.width("…")) + "…";
+            if (text.length() <= 3) return;
+        }
         var g = e.getGuiGraphics();
         g.pose().pushPose();
         g.pose().translate(0, 0, 400);
-        g.drawString(mc.font, "· " + label, x, y, 0xFF9A6A1E, false);
+        g.drawString(mc.font, text, x, y, 0xFF9A6A1E, false);
         g.pose().popPose();
     }
 }
