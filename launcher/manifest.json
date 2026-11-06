@@ -1,5 +1,5 @@
 {
- "version": "2026.11.04.3",
+ "version": "2026.11.06.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -914,15 +914,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.04.3/wilds_core-0.1.0.jar",
-   "sha1": "1e159ba9a321867aefe0b889820da679773b3389",
-   "size": 324682
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.06.1/wilds_core-0.1.0.jar",
+   "sha1": "5ab9f480f07504814a61755953f4d137d1bc19be",
+   "size": 318536
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.04.3/wilds_wiki-0.2.0.jar",
-   "sha1": "bfc4f42cd8f28591925064bd66080e315eb1e125",
-   "size": 843981
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.06.1/wilds_wiki-0.2.0.jar",
+   "sha1": "21e3a22c769143ea2b7c9872728ebf158350b407",
+   "size": 843505
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -970,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.04.3/overrides.zip",
-   "sha1": "db48aebd239d965d132a21763742f632f854531a",
-   "size": 28278568
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.06.1/overrides.zip",
+   "sha1": "545dc78a5cb0ac61722a3e1d6a4193aa03766b5c",
+   "size": 28255246
   },
   "overrides": [
    {
@@ -984,6 +984,36 @@
     "path": "config/aether-common.toml",
     "sha1": "30847b10bdaf971a203ecff7ac58e2b6be4f7db3",
     "size": 1378
+   },
+   {
+    "path": "config/alexscaves_biome_generation/abyssal_chasm.json",
+    "sha1": "d896874a9846b83f5cb90024810395dcf286e580",
+    "size": 272
+   },
+   {
+    "path": "config/alexscaves_biome_generation/candy_cavity.json",
+    "sha1": "00632790b5a96c55e316894220c74b98e892099b",
+    "size": 228
+   },
+   {
+    "path": "config/alexscaves_biome_generation/forlorn_hollows.json",
+    "sha1": "e4db5d83cb3540ea5b978f27aba91d309a8ad56d",
+    "size": 226
+   },
+   {
+    "path": "config/alexscaves_biome_generation/magnetic_caves.json",
+    "sha1": "63e5df9856f04fc4982f8e34065d1904340b6e5f",
+    "size": 226
+   },
+   {
+    "path": "config/alexscaves_biome_generation/primordial_caves.json",
+    "sha1": "6f0d54d059fb4c7cc57660b62440a2bfb438f7d9",
+    "size": 227
+   },
+   {
+    "path": "config/alexscaves_biome_generation/toxic_caves.json",
+    "sha1": "282d0d486c2db19ff99c1da705afe9d93b13e59a",
+    "size": 227
    },
    {
     "path": "config/almostunified/startup.json",
@@ -999,6 +1029,11 @@
     "path": "config/better-advanced-tooltips-client.toml",
     "sha1": "861a97fabdadaf9454e951026de71ab52dc5f767",
     "size": 233
+   },
+   {
+    "path": "config/betterdungeons-neoforge-1_21.toml",
+    "sha1": "65cb5039cf438a95ace505e47955aee1cd4664b1",
+    "size": 3418
    },
    {
     "path": "config/chunky/config.json",
@@ -1117,13 +1152,13 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/nether_end.snbt",
-    "sha1": "cd6ce7b3c599c958d251067ac2da1fcdfff37c85",
-    "size": 19292
+    "sha1": "adbc2364608d8f1869f4e6999c5b7bf790d82296",
+    "size": 18271
    },
    {
     "path": "config/ftbquests/quests/chapters/paths.snbt",
-    "sha1": "6e6fd7784db1daabf385eecdf19f17f31f6919b8",
-    "size": 5565
+    "sha1": "10f2d9a64f8672d363702b3860a1d5c9634e4006",
+    "size": 5047
    },
    {
     "path": "config/ftbquests/quests/chapters/peoples.snbt",
@@ -1142,8 +1177,8 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/storage.snbt",
-    "sha1": "da9e112eea6fb6f3eab7f2ca5c0e7abd50a3d094",
-    "size": 8439
+    "sha1": "ada7420bd070889f416486bf55c5ca4a212d38b0",
+    "size": 7911
    },
    {
     "path": "config/ftbquests/quests/chapters/survival.snbt",
@@ -1177,13 +1212,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "3cfbd349026caca7764dcf022562f3d77fb00b96",
-    "size": 882855
+    "sha1": "d4ec63766c61945608ea3018f2e3ad88782490a4",
+    "size": 881581
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "3cfbd349026caca7764dcf022562f3d77fb00b96",
-    "size": 882855
+    "sha1": "d4ec63766c61945608ea3018f2e3ad88782490a4",
+    "size": 881581
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -2012,8 +2047,8 @@
    },
    {
     "path": "kubejs/assets/wilds/textures/gui/skilltree.png",
-    "sha1": "5dd026f10ced3b813c40046ba839f874eef991c0",
-    "size": 4887863
+    "sha1": "442650bd9647bc995da201470fb8c26b0882dced",
+    "size": 4862115
    },
    {
     "path": "kubejs/assets/xaerobetterpvp/lang/uk_ua.json",
@@ -2094,6 +2129,21 @@
     "path": "kubejs/data/dungeons_arise/loot_table/chests/desert_city_medium.json",
     "sha1": "f3261a4ea78ff7ee2f9d03bfd227f2135fa121a0",
     "size": 212
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/tags/worldgen/biome/has_structure/foundry_biomes.json",
+    "sha1": "cd606300701391c8461c9fca15a6584f424858e3",
+    "size": 1155
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/tags/worldgen/biome/has_structure/mining_complex_biomes.json",
+    "sha1": "cd606300701391c8461c9fca15a6584f424858e3",
+    "size": 1155
+   },
+   {
+    "path": "kubejs/data/dungeons_arise/tags/worldgen/biome/has_structure/plague_asylum_biomes.json",
+    "sha1": "cd606300701391c8461c9fca15a6584f424858e3",
+    "size": 1155
    },
    {
     "path": "kubejs/data/minecraft/advancement/give_quest_trader_trade.json",
@@ -3067,13 +3117,13 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/connections.json",
-    "sha1": "d73f614aa58c52b8779a890d6510c26a5a109252",
-    "size": 16015
+    "sha1": "df9afcbc9d2735bcc1ff197fab1aef02666e8321",
+    "size": 14240
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/definitions.json",
-    "sha1": "7bc5ad856c723ec44cdd7a99fd7523b5453e2cf2",
-    "size": 114804
+    "sha1": "624f9587ad6297d0dbb3a7b73f6a0de7e6f0fdfa",
+    "size": 103221
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/experience.json",
@@ -3082,8 +3132,8 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/skills.json",
-    "sha1": "d228e731a88072da7f06d62612761dbd530689b4",
-    "size": 24716
+    "sha1": "60b5f05c11bfcc9e9771d2d4c0e13f2cb62572c0",
+    "size": 21939
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/config.json",
@@ -3102,8 +3152,8 @@
    },
    {
     "path": "kubejs/data/wilds_core/quests/gates.json",
-    "sha1": "4df53b2363495044e6a99de0b81be0b8464cdf96",
-    "size": 9168
+    "sha1": "bc7bcf79582f9102ca879f23bf01fe142f52e326",
+    "size": 8747
    },
    {
     "path": "kubejs/data/wilds_core/quests/onboarding.json",
