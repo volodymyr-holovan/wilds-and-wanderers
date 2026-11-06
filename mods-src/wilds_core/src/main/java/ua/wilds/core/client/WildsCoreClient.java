@@ -61,13 +61,6 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> PlaceTest.tick());
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> CmdTest.tick());
         NeoForge.EVENT_BUS.addListener(SortTitle::onInit);
-        NeoForge.EVENT_BUS.addListener(RowsPanel::render);
-        NeoForge.EVENT_BUS.addListener(RowsPanel::renderItems);
-        NeoForge.EVENT_BUS.addListener(RowsPanel::renderTooltip);
-        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGH, RowsPanel::onPress);
-        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGH, RowsPanel::onRelease);
-        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGH, RowsPanel::onKey);
-        ua.wilds.core.net.Net.rowsClient = RowsPanel::set;
         NeoForge.EVENT_BUS.addListener(SortTitle::onClick);
         NeoForge.EVENT_BUS.addListener(SortTitle::render);
         ua.wilds.core.net.Net.sortLabelClient = SortTitle::answer;
@@ -78,7 +71,6 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener((ClientPlayerNetworkEvent.LoggingIn e) -> {
             TutorialTracker.reset();
             ClientAbilities.clear();
-            RowsPanel.clear();
         });
     }
 }

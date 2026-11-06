@@ -58,11 +58,6 @@ public final class Ability {
         NEEDS.put("village_gifts", List.of());
         NEEDS.put("mercenaries", List.of());
         NEEDS.put("haggler", List.of());
-        // bag
-        NEEDS.put("extra_row", List.of("accessories"));
-        NEEDS.put("pocket_crafting", List.of());
-        NEEDS.put("mender", List.of());
-        NEEDS.put("magnet", List.of());
     }
 
     private Ability() {}

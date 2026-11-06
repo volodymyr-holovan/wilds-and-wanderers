@@ -19,10 +19,10 @@ N, C, S = 4096, 2048, 4          # picture size, centre, one stitch cell (pixels
 U = 1.086                        # picture pixels per tree unit
 rnd = random.Random(7)
 
-# branches clockwise from the top, as gen_skilltree.ORDER (nine, 40 degrees each); thread colours a little dimmed for a dark cloth
+# branches clockwise from the top, as gen_skilltree.ORDER (eight, 45 degrees each); thread colours a little dimmed for a dark cloth
 BRANCHES = [("ВОЇН", (176, 48, 42), "sword"), ("МИСЛИВЕЦЬ", (70, 132, 58), "bow"), ("МАГ", (120, 82, 190), "star"),
             ("МАЙСТЕР", (200, 150, 44), "hammer"), ("МОРЕПЛАВЕЦЬ", (52, 92, 176), "anchor"), ("СЛІДОПИТ", (40, 150, 136), "compass"),
-            ("ДИПЛОМАТ", (196, 196, 206), "scroll"), ("ТОРГОВЕЦЬ", (200, 108, 44), "coin"), ("ТОРБА", (156, 116, 74), "bag")]
+            ("ДИПЛОМАТ", (196, 196, 206), "scroll"), ("ТОРГОВЕЦЬ", (200, 108, 44), "coin")]
 SECTOR = 360 / len(BRANCHES)
 GOLD, RED, BLACK = (214, 172, 84), (150, 34, 30), (30, 22, 20)
 # in tree units: the band between the inner ring and the first nodes, the fields of the branches, the rim beyond the
@@ -221,17 +221,6 @@ a.bbbbb.a
 .a.bbb.a.
 a.......a
 .aaaaaaa.
-""",
-    "bag": """
-...aaa...
-..a.c.a..
-...aaa...
-..abbba..
-.abbbbba.
-abbbcbbba
-abbbbbbba
-.abbbbba.
-..aaaaa..
 """,
     "coin": """
 ...aaa...

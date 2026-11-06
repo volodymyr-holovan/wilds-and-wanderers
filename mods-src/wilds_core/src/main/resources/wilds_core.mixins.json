@@ -8,13 +8,9 @@
     "client.RMSongPickerMixin",
     "client.CameraMixin",
     "client.DhClientWorldMixin",
-    "client.AccessoriesPlayerInvMixin",
-    "client.AccessoriesRowsScreenMixin",
     "client.ContainerTitleAccessor",
     "client.FtbTeamsSelfMixin",
-    "client.ApothTooltipMixin",
-    "client.AccessoriesInvBackgroundMixin",
-    "client.ContainerScreenRowsMixin"
+    "client.ApothTooltipMixin"
   ],
   "injectors": {
     "defaultRequire": 0
@@ -24,12 +20,14 @@
     "ItemStackDurabilityMixin",
     "VillagerPricesMixin",
     "AccessoriesResultSlotMixin",
-    "AccessoriesRowsMenuMixin",
-    "CraftingMenuMixin",
     "FtbQuestsTeamMixin",
     "FtbQuestsPartyMixin",
     "OpBreakMixin",
-    "ContainerMenuRowsMixin",
-    "CopperGolemStatueMixin"
+    "CopperGolemStatueMixin",
+    "AccessoriesArmorShiftMixin",
+    "LithostitchedSourceMixin",
+    "BiomeClimateMixin",
+    "StructureGuardMixin",
+    "StructureGuardCheckMixin"
   ]
 }

@@ -72,7 +72,7 @@
 				}
 			]
 			x: 2.0d
-			y: -7.0d
+			y: -6.125d
 		}
 		{
 			dependencies: [
@@ -104,7 +104,7 @@
 				}
 			]
 			x: 2.0d
-			y: -5.25d
+			y: -4.375d
 		}
 		{
 			dependencies: [
@@ -136,7 +136,7 @@
 				}
 			]
 			x: 2.0d
-			y: -3.5d
+			y: -2.625d
 		}
 		{
 			dependencies: [
@@ -168,7 +168,7 @@
 				}
 			]
 			x: 2.0d
-			y: -1.75d
+			y: -0.875d
 		}
 		{
 			dependencies: [
@@ -200,7 +200,7 @@
 				}
 			]
 			x: 2.0d
-			y: 0.0d
+			y: 0.875d
 		}
 		{
 			dependencies: [
@@ -232,7 +232,7 @@
 				}
 			]
 			x: 2.0d
-			y: 1.75d
+			y: 2.625d
 		}
 		{
 			dependencies: [
@@ -264,7 +264,7 @@
 				}
 			]
 			x: 2.0d
-			y: 3.5d
+			y: 4.375d
 		}
 		{
 			dependencies: [
@@ -296,39 +296,7 @@
 				}
 			]
 			x: 2.0d
-			y: 5.25d
-		}
-		{
-			dependencies: [
-				"6DCE07A225BACFE6"
-			]
-			icon: {
-				id: "minecraft:bundle"
-			}
-			id: "19A9C0262E022224"
-			rewards: [
-				{
-					id: "2200F8C3CB7ABC59"
-					type: "xp"
-					xp: 20
-				}
-				{
-					command: "/puffish_skills experience add {p} wilds:path 30"
-					elevate_perms: true
-					id: "1E0847A2026F3A20"
-					silent: true
-					title: "+30 досвіду навичок"
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "70DD81330ED621F1"
-					type: "checkmark"
-				}
-			]
-			x: 2.0d
-			y: 7.0d
+			y: 6.125d
 		}
 	]
 }

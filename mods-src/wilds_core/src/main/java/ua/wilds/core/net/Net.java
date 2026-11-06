@@ -113,44 +113,6 @@ public final class Net {
         }
     }
 
-    /**
-     * never sent: a client that registered it has the extra inventory rows in its equipment screen, so the server adds
-     * their slots to that menu only for such a client (a menu's slots must be the same on both sides)
-     */
-    public record RowsV1() implements CustomPacketPayload {
-        public static final Type<RowsV1> TYPE = typeOf("rows_v1");
-        public static final StreamCodec<ByteBuf, RowsV1> CODEC = StreamCodec.unit(new RowsV1());
-
-        public Type<RowsV1> type() {
-            return TYPE;
-        }
-    }
-
-    /** server -> client: the contents of the player's extra inventory rows (shown under other mods' screens) */
-    public record RowsSync(List<net.minecraft.world.item.ItemStack> items) implements CustomPacketPayload {
-        public static final Type<RowsSync> TYPE = typeOf("rows_sync");
-        public static final StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, RowsSync> CODEC =
-                net.minecraft.world.item.ItemStack.OPTIONAL_LIST_STREAM_CODEC.map(RowsSync::new, RowsSync::items);
-
-        public Type<RowsSync> type() {
-            return TYPE;
-        }
-    }
-
-    /** client -> server: a click on the extra rows panel under a screen (inventory.ExtraRows#click) */
-    public record RowClick(int containerId, int slot, int button, int mode) implements CustomPacketPayload {
-        public static final Type<RowClick> TYPE = typeOf("row_click");
-        public static final StreamCodec<ByteBuf, RowClick> CODEC = StreamCodec.composite(ByteBufCodecs.VAR_INT, RowClick::containerId,
-                ByteBufCodecs.VAR_INT, RowClick::slot, ByteBufCodecs.VAR_INT, RowClick::button, ByteBufCodecs.VAR_INT, RowClick::mode, RowClick::new);
-
-        public Type<RowClick> type() {
-            return TYPE;
-        }
-    }
-
-    /** set by the client entry point: the rows' contents */
-    public static java.util.function.Consumer<List<net.minecraft.world.item.ItemStack>> rowsClient = l -> {};
-
     /** client -> server: the storage the player just opened, to show its status for the copper golem */
     public record SortQuery(BlockPos pos) implements CustomPacketPayload {
         public static final Type<SortQuery> TYPE = typeOf("sort_query");
@@ -200,11 +162,6 @@ public final class Net {
             if (hits != null) net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(p, new FinderHits(hits));
         }));
         r.playToClient(FinderHits.TYPE, FinderHits.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> finderClient.accept(msg.places())));
-        r.playToClient(RowsV1.TYPE, RowsV1.CODEC, (msg, ctx) -> {});
-        r.playToClient(RowsSync.TYPE, RowsSync.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> rowsClient.accept(msg.items())));
-        r.playToServer(RowClick.TYPE, RowClick.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
-            if (ctx.player() instanceof ServerPlayer p) ua.wilds.core.inventory.ExtraRows.click(p, msg.containerId(), msg.slot(), msg.button(), msg.mode());
-        }));
         r.playToServer(SortQuery.TYPE, SortQuery.CODEC, (msg, ctx) -> ctx.enqueueWork(() -> {
             if (!(ctx.player() instanceof ServerPlayer p) || !(p.level() instanceof net.minecraft.server.level.ServerLevel level)) return;
             if (p.blockPosition().distSqr(msg.pos()) > 12 * 12 || !level.isLoaded(msg.pos())) return;
@@ -218,7 +175,6 @@ public final class Net {
                 case "throw" -> CombatSkills.throwWeapon(p);
                 case "heavy" -> CombatSkills.heavyStrike(p, msg.target());
                 case "pacify" -> DiplomatSkills.pacify(p);
-                case "craft" -> ua.wilds.core.skills.branch.BagSkills.pocketCraft(p);
                 default -> {
                 }
             }

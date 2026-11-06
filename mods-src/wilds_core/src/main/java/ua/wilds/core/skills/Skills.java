@@ -44,7 +44,7 @@ public final class Skills {
         ExplorerSkills.register();
         DiplomatSkills.register();
         TraderSkills.register();
-        ua.wilds.core.skills.branch.BagSkills.register();
+        LegacyRows.register();
         SkillXp.register();
         NeoForge.EVENT_BUS.addListener((PlayerEvent.PlayerLoggedOutEvent e) -> SkillState.forget(e.getEntity().getUUID()));
         NeoForge.EVENT_BUS.addListener((ServerTickEvent.Post e) -> flush());

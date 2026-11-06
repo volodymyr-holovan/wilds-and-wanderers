@@ -93,7 +93,6 @@ public final class GearScreens {
         if (!isGearScreen(e.getScreen())) return;
         RecipeBookPanel.onInit(e);
         FinderField.onInit(e);
-        PocketCraftButton.onInit(e);
     }
 
     /**
@@ -210,7 +209,6 @@ public final class GearScreens {
         }
         if (hotbarY == Integer.MIN_VALUE) {
             FinderField.place(Integer.MIN_VALUE, 0, 0);
-            PocketCraftButton.place(Integer.MIN_VALUE, 0);
             RecipeBookPanel.placeButton(Integer.MIN_VALUE, 0);
             AttributesPanel.placeButton(Integer.MIN_VALUE, 0);
             return;
@@ -227,7 +225,6 @@ public final class GearScreens {
         else FinderField.place(Integer.MIN_VALUE, 0, 0);
         RecipeBookPanel.placeButton(c.getGuiLeft() + invLeft + movedX - 34, c.getGuiTop() + hotbarY - 1 + movedY);
         AttributesPanel.placeButton(c.getGuiLeft() + invRight + movedX + 6, c.getGuiTop() + hotbarY - 1 + movedY);
-        PocketCraftButton.place(c.getGuiLeft() + invRight + movedX + 6, c.getGuiTop() + hotbarY - 1 + movedY - 24);
     }
 
     public static void afterRender(ScreenEvent.Render.Post e) {
@@ -236,7 +233,6 @@ public final class GearScreens {
         RecipeBookPanel.render(e);
         EffectsPanel.render(e);
         FinderField.render(e.getGuiGraphics(), e.getMouseX(), e.getMouseY(), e.getPartialTick());
-        PocketCraftButton.renderOver(e.getGuiGraphics(), e.getMouseX(), e.getMouseY(), e.getPartialTick());
     }
 
     /** the plain button that took the last press (its release and drags go to it too) */
@@ -400,17 +396,8 @@ public final class GearScreens {
     /** the interface scale the equipment screen needs (fitScale), applied at the next client tick; 0: none */
     private static int wantScale;
 
-    /** another screen too low for itself and the extra inventory rows under it (ContainerScreenRowsMixin) */
-    public static void needHeight(Screen s, int height) {
-        var w = Minecraft.getInstance().getWindow();
-        if (s.height >= height || w.getGuiScale() <= 1) return;
-        int scale = Math.max(1, w.getHeight() / height);
-        if (scale < (int) w.getGuiScale()) wantScale = scale;
-    }
-
-    /** a screen that may lower the interface scale while it is open */
     private static boolean scaled(Screen s) {
-        return isGearScreen(s) || ua.wilds.core.client.RowsPanel.has(s);
+        return isGearScreen(s);
     }
 
     /** the interface scale before fitScale lowered it, 0 when it did not */

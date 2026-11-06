@@ -14,15 +14,13 @@ public final class WildsMixinPlugin implements IMixinConfigPlugin {
     private static final Map<String, String> NEEDS = Map.ofEntries(Map.entry("ua.wilds.core.mixin.client.RMSongPickerMixin", "reactivemusic"),
             Map.entry("ua.wilds.core.mixin.AccessoriesResultSlotMixin", "accessories"),
             Map.entry("ua.wilds.core.mixin.client.DhClientWorldMixin", "distanthorizons"),
-            Map.entry("ua.wilds.core.mixin.AccessoriesRowsMenuMixin", "accessories"),
-            Map.entry("ua.wilds.core.mixin.client.AccessoriesPlayerInvMixin", "accessories"),
-            Map.entry("ua.wilds.core.mixin.client.AccessoriesRowsScreenMixin", "accessories"),
             Map.entry("ua.wilds.core.mixin.client.FtbTeamsSelfMixin", "ftbteams"),
             Map.entry("ua.wilds.core.mixin.FtbQuestsTeamMixin", "ftbquests"),
             Map.entry("ua.wilds.core.mixin.FtbQuestsPartyMixin", "ftbquests"),
             Map.entry("ua.wilds.core.mixin.client.ApothTooltipMixin", "apotheosis"),
-            Map.entry("ua.wilds.core.mixin.client.AccessoriesInvBackgroundMixin", "accessories"),
-            Map.entry("ua.wilds.core.mixin.CopperGolemStatueMixin", "friendsandfoes"));
+            Map.entry("ua.wilds.core.mixin.CopperGolemStatueMixin", "friendsandfoes"),
+            Map.entry("ua.wilds.core.mixin.AccessoriesArmorShiftMixin", "accessories"),
+            Map.entry("ua.wilds.core.mixin.LithostitchedSourceMixin", "lithostitched"));
 
     public void onLoad(String mixinPackage) {}
 

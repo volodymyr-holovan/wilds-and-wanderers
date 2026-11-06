@@ -19,8 +19,7 @@ public final class CmdTest {
 
     /**
      * "inv": open the inventory (the pack turns it into the equipment screen); "quick:N": shift-click the slot holding
-     * the player's inventory slot N (39 the helmet, 40 the off hand, 0-8 the hotbar), or "quick:rowK" the K-th slot of
-     * the extra rows; "click:N" / "click:rowK" a plain left click (pick up or put down); "dump": the menu's slots in the log
+     * the player's inventory slot N (39 the helmet, 40 the off hand, 0-8 the hotbar); "click:N" a plain left click (pick up or put down); "dump": the menu's slots in the log
      */
     private static void inventoryStep(Minecraft mc, String what) {
         var player = mc.player;
@@ -37,25 +36,7 @@ public final class CmdTest {
             return;
         }
         var menu = player.containerMenu;
-        if (what.startsWith("rowclick:")) {   // "rowclick:K:mode:button": the panel's message for row slot K
-            String[] a = what.split(":");
-            net.neoforged.neoforge.network.PacketDistributor.sendToServer(new ua.wilds.core.net.Net.RowClick(menu.containerId,
-                    Integer.parseInt(a[1]), Integer.parseInt(a[3]), Integer.parseInt(a[2])));
-            return;
-        }
-        if (what.startsWith("pmouse:") && mc.screen instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> scr) {
-            // "pmouse:K": a real left click on the panel's row slot K, through the screen events as the mouse would
-            double[] at = RowsPanel.slotCentre(scr, Integer.parseInt(what.substring(7)));
-            WildsCore.LOG.info("Wilds Core: command self-test panel slot at {}", at == null ? "none" : at[0] + "," + at[1]);
-            if (at == null) return;
-            if (!net.neoforged.neoforge.client.ClientHooks.onScreenMouseClickedPre(scr, at[0], at[1], 0)) scr.mouseClicked(at[0], at[1], 0);
-            if (!net.neoforged.neoforge.client.ClientHooks.onScreenMouseReleasedPre(scr, at[0], at[1], 0)) scr.mouseReleased(at[0], at[1], 0);
-            return;
-        }
         if (what.equals("dump")) {
-            StringBuilder rows = new StringBuilder();
-            for (int i = 0; i < 18; i++) if (!RowsPanel.item(i).isEmpty()) rows.append(' ').append(i).append('=').append(RowsPanel.item(i));
-            WildsCore.LOG.info("Wilds Core: command self-test panel rows{}", rows);
             StringBuilder sb = new StringBuilder(menu.getClass().getSimpleName()).append(" carried=").append(menu.getCarried()).append(':');
             for (int i = 0; i < menu.slots.size(); i++) {
                 var s = menu.getSlot(i);
@@ -69,8 +50,7 @@ public final class CmdTest {
         int target = kv[1].startsWith("m") ? Integer.parseInt(kv[1].substring(1)) : -1;   // "mN": the menu's own slot N
         for (int i = 0; i < menu.slots.size() && target < 0; i++) {
             var s = menu.getSlot(i);
-            if (kv[1].startsWith("row") ? s instanceof ua.wilds.core.skills.branch.BagSkills.RowSlot && s.getContainerSlot() == Integer.parseInt(kv[1].substring(3))
-                    : s.container instanceof net.minecraft.world.entity.player.Inventory && s.getContainerSlot() == Integer.parseInt(kv[1])) target = i;
+            if (s.container instanceof net.minecraft.world.entity.player.Inventory && s.getContainerSlot() == Integer.parseInt(kv[1])) target = i;
         }
         WildsCore.LOG.info("Wilds Core: command self-test {} -> menu slot {}", what, target);
         if (target < 0) return;
