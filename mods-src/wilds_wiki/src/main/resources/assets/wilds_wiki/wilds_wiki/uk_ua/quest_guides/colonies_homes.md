@@ -1,6 +1,8 @@
 ---
 for: minecolonies:blockhutcitizen, minecolonies:blockhutcook
 keywords: Оселі й їдальня
+category: q_colonies
+summary: Поселенцям потрібні Оселі (у кожній — ліжка) і їжа. Їдальня з кухарем годує всіх; голодні поселенці працюють п
 ---
 # Квест «Оселі й їдальня»
 `Книга квестів → **Села й колонії**`

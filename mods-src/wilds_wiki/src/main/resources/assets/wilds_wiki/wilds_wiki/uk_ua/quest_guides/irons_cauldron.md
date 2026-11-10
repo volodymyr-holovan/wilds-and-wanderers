@@ -1,6 +1,8 @@
 ---
 for: irons_spellbooks:alchemist_cauldron, irons_spellbooks:common_ink
 keywords: Казан алхіміка
+category: q_irons
+summary: Казан алхіміка над вогнем варить чорнила (з чорнильного мішка й порошків) і розбирає непотрібні сувої на чорни
 ---
 # Квест «Казан алхіміка»
 `Книга квестів → Iron's Spells`

@@ -22,6 +22,9 @@ public final class History {
     public List<String> queries = new ArrayList<>();
     public List<String> viewed = new ArrayList<>();
     public List<String> bookmarks = new ArrayList<>();
+    /** the page open when the wiki was closed ("" the home page), and how far it was scrolled */
+    public String last = "";
+    public double lastScroll;
 
     private static Path file() {
         return FMLPaths.CONFIGDIR.get().resolve("wilds_wiki_history.json");
@@ -66,6 +69,13 @@ public final class History {
         if (add) bookmarks.add(0, key);
         save();
         return add;
+    }
+
+    public void setLast(String key, double scroll) {
+        if (key.equals(last) && scroll == lastScroll) return;
+        last = key;
+        lastScroll = scroll;
+        save();
     }
 
     public void clear() {

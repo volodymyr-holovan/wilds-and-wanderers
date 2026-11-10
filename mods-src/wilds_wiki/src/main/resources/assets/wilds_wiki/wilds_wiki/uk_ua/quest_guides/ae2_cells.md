@@ -1,6 +1,8 @@
 ---
 for: ae2:item_storage_cell_16k, ae2:item_storage_cell_64k
 keywords: Більші диски
+category: q_ae2
+summary: Диски ростуть учетверо: 1k, 4k, 16k, 64k, 256k. Компонент диска 256k — один із найдорожчих предметів AE2.
 ---
 # Квест «Більші диски»
 `Книга квестів → AE2`

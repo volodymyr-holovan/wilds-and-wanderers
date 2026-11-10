@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:worn_notebook
 keywords: Пошарпаний зошит
+category: q_ars
+summary: Ars Nouveau — магія, яку ви складаєте самі: форма (як летить), ефекти (що робить) і підсилення. Зошит — його д
 ---
 # Квест «Пошарпаний зошит»
 `Книга квестів → Ars Nouveau`

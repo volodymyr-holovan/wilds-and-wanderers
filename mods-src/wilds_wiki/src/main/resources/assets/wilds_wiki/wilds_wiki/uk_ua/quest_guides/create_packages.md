@@ -1,6 +1,8 @@
 ---
 for: create:packager, create:package_frogport, create:cardboard
 keywords: Пакунки
+category: q_create
+summary: Create 6 пакує предмети в картонні пакунки з адресою. Пакувальник запаковує, конвеєри й жабки-перевізники (fro
 ---
 # Квест «Пакунки»
 `Книга квестів → **Create**`

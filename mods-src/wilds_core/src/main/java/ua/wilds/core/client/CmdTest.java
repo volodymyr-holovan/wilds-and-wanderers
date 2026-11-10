@@ -35,6 +35,28 @@ public final class CmdTest {
             mc.gameMode.useItem(player, net.minecraft.world.InteractionHand.MAIN_HAND);
             return;
         }
+        if (what.startsWith("sneak:")) {   // "sneak:on" / "sneak:off": hold the sneak key
+            mc.options.keyShift.setDown(what.endsWith("on"));
+            return;
+        }
+        if (what.equals("close")) {
+            player.closeContainer();
+            mc.setScreen(null);   // also the pause menu of a window that lost the focus
+            return;
+        }
+        if (what.startsWith("shot:")) {   // "shot:name": a screenshot now
+            Screenshot.grab(mc.gameDirectory, "wilds_ui_" + what.substring(5) + ".png", mc.getMainRenderTarget(), m -> {});
+            return;
+        }
+        if (what.equals("frame") || what.equals("frameshift")) {   // right click the nearest item frame (sneaking: "frameshift")
+            net.minecraft.world.entity.decoration.ItemFrame frame = null;
+            for (var f : mc.level.getEntitiesOfClass(net.minecraft.world.entity.decoration.ItemFrame.class, player.getBoundingBox().inflate(5)))
+                if (frame == null || f.distanceToSqr(player) < frame.distanceToSqr(player)) frame = f;
+            WildsCore.LOG.info("Wilds Core: command self-test frame {}", frame);
+            if (frame == null) return;
+            mc.gameMode.interact(player, frame, net.minecraft.world.InteractionHand.MAIN_HAND);
+            return;
+        }
         var menu = player.containerMenu;
         if (what.equals("dump")) {
             StringBuilder sb = new StringBuilder(menu.getClass().getSimpleName()).append(" carried=").append(menu.getCarried()).append(':');

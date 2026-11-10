@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:enchanting_apparatus, ars_nouveau:arcane_core, ars_nouveau:arcane_pedestal
 keywords: Зачарувальний апарат
+category: q_ars
+summary: Апарат на тайному ядрі в оточенні п'єдесталів творить магічні предмети: покладіть предмет в апарат, інгредієнт
 ---
 # Квест «Зачарувальний апарат»
 `Книга квестів → Ars Nouveau`

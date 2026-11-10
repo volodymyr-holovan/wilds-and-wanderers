@@ -1,6 +1,8 @@
 ---
 for: create:schematic_table, create:schematicannon, create:empty_schematic
 keywords: Схеми й гармата
+category: q_create
+summary: Зніміть схему будівлі порожньою схемою, і схемогармата збудує копію з матеріалів у скрині поруч.
 ---
 # Квест «Схеми й гармата»
 `Книга квестів → **Create**`

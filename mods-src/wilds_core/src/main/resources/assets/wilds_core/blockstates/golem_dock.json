@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,occupied=false": {
+      "model": "wilds_core:block/golem_dock"
+    },
+    "facing=north,occupied=true": {
+      "model": "wilds_core:block/golem_dock_on"
+    },
+    "facing=east,occupied=false": {
+      "model": "wilds_core:block/golem_dock",
+      "y": 90
+    },
+    "facing=east,occupied=true": {
+      "model": "wilds_core:block/golem_dock_on",
+      "y": 90
+    },
+    "facing=south,occupied=false": {
+      "model": "wilds_core:block/golem_dock",
+      "y": 180
+    },
+    "facing=south,occupied=true": {
+      "model": "wilds_core:block/golem_dock_on",
+      "y": 180
+    },
+    "facing=west,occupied=false": {
+      "model": "wilds_core:block/golem_dock",
+      "y": 270
+    },
+    "facing=west,occupied=true": {
+      "model": "wilds_core:block/golem_dock_on",
+      "y": 270
+    }
+  }
+}

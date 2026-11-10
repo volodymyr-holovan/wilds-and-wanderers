@@ -122,7 +122,7 @@ public final class Finder {
     }
 
     /** the stack, or anything inside it (a shulker box's contents, a bundle) */
-    static boolean matches(ItemStack s, Set<Item> want) {
+    public static boolean matches(ItemStack s, Set<Item> want) {
         if (s.isEmpty()) return false;
         if (want.contains(s.getItem())) return true;
         var inner = s.get(DataComponents.CONTAINER);

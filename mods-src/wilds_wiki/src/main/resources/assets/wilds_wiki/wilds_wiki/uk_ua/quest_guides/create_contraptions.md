@@ -1,6 +1,8 @@
 ---
 for: create:mechanical_bearing, create:super_glue, create:sail_frame
 keywords: Рухомі механізми
+category: q_create
+summary: Блоки, приклеєні суперклеєм до підшипника, поршня чи шківа, рухаються разом: вітряки, ліфти, мости, двері, бур
 ---
 # Квест «Рухомі механізми»
 `Книга квестів → **Create**`

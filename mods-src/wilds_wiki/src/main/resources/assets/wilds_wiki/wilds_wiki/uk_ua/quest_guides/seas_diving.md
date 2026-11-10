@@ -1,6 +1,8 @@
 ---
 for: hybrid_aquatic:diving_helmet, hybrid_aquatic:diving_suit
 keywords: Водолазний костюм
+category: q_seas
+summary: Hybrid Aquatic додає справжній водолазний костюм: шолом, костюм, штани й черевики. З важками ви ходите дном, я
 ---
 # Квест «Водолазний костюм»
 `Книга квестів → **Моря і кораблі**`

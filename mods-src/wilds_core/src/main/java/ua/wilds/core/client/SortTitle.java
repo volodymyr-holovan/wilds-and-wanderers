@@ -47,6 +47,15 @@ public final class SortTitle {
         clickedAt = e.getLevel().getGameTime();
     }
 
+    /** a click on an item frame that goes through to the storage behind it (world.FrameClick) */
+    public static void onFrame(net.neoforged.neoforge.event.entity.player.PlayerInteractEvent.EntityInteract e) {
+        if (!e.getLevel().isClientSide || !(e.getTarget() instanceof net.minecraft.world.entity.decoration.ItemFrame frame)) return;
+        BlockPos behind = ua.wilds.core.world.FrameClick.through(frame, e.getEntity());
+        if (behind == null) return;
+        clicked = behind;
+        clickedAt = e.getLevel().getGameTime();
+    }
+
     public static void answer(BlockPos pos, String text) {
         if (pos.equals(asked)) label = text;
     }

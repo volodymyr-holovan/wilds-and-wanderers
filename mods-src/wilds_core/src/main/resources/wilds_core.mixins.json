@@ -28,6 +28,10 @@
     "LithostitchedSourceMixin",
     "BiomeClimateMixin",
     "StructureGuardMixin",
-    "StructureGuardCheckMixin"
+    "StructureGuardCheckMixin",
+    "EnchantRandomlyMixin",
+    "EnchantWithLevelsMixin",
+    "RecipeBookKnowsMixin",
+    "AnvilSmithMixin"
   ]
 }

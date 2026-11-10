@@ -1,6 +1,8 @@
 ---
 for: create:potato_cannon, create:extendo_grip
 keywords: Дивні інструменти
+category: q_create
+summary: Картопляна гармата стріляє овочами (і не тільки), протезна рука дістає блоки на відстані.
 ---
 # Квест «Дивні інструменти»
 `Книга квестів → **Create**`

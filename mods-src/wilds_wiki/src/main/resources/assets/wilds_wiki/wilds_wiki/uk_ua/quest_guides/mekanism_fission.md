@@ -1,6 +1,8 @@
 ---
 for: mekanismgenerators:fission_reactor_casing, mekanismgenerators:fission_fuel_assembly, mekanismgenerators:control_rod_assembly, mekanismgenerators:fission_reactor_port, mekanismgenerators:fission_reactor_logic_adapter
 keywords: Ядерний реактор
+category: q_mekanism
+summary: Реактор поділу палить ядерне паливо (з урану) й гріє натрій або воду в пару. Небезпечно: перегрів — вибух і ра
 ---
 # Квест «Ядерний реактор»
 `Книга квестів → **Mekanism**`

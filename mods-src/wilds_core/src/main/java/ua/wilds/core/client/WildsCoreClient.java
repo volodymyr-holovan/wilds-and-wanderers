@@ -62,6 +62,9 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> CmdTest.tick());
         NeoForge.EVENT_BUS.addListener(SortTitle::onInit);
         NeoForge.EVENT_BUS.addListener(SortTitle::onClick);
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> AllRecipes.tick());
+        NeoForge.EVENT_BUS.addListener(SortTitle::onFrame);
+        NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.gear.FinderField::markSlots);
         NeoForge.EVENT_BUS.addListener(SortTitle::render);
         ua.wilds.core.net.Net.sortLabelClient = SortTitle::answer;
         ua.wilds.core.net.Net.finderClient = ua.wilds.core.client.gear.FinderField::answer;

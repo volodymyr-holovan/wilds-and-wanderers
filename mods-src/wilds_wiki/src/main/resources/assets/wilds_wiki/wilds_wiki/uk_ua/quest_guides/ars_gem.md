@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:imbuement_chamber, ars_nouveau:source_gem
 keywords: Камінь джерела
+category: q_ars
+summary: Камера насичення вливає джерело в аметист чи лазурит — виходить камінь джерела, основа майже всіх магічних реч
 ---
 # Квест «Камінь джерела»
 `Книга квестів → Ars Nouveau`

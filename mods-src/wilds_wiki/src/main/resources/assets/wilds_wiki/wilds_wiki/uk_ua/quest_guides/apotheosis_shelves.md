@@ -1,6 +1,8 @@
 ---
 for: apothic_enchanting:hellshelf, apothic_enchanting:seashelf
 keywords: Сильніші зачарування
+category: q_apotheosis
+summary: Звичайні книжкові полиці дають мало. Полиці пекла (Незер), моря і Енду піднімають силу столу зачарувань, а дея
 ---
 # Квест «Сильніші зачарування»
 `Книга квестів → **Зачарування**`

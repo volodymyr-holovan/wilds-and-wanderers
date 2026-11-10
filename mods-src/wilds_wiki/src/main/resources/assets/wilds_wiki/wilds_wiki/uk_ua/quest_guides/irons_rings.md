@@ -1,6 +1,8 @@
 ---
 for: irons_spellbooks:mana_ring, irons_spellbooks:cooldown_ring
 keywords: Каблучки й амулети
+category: q_irons
+summary: Аксесуари мага: каблучка мани, перезаряджання, споріднення (+рівень одного закляття), амулет зосередження.
 ---
 # Квест «Каблучки й амулети»
 `Книга квестів → Iron's Spells`

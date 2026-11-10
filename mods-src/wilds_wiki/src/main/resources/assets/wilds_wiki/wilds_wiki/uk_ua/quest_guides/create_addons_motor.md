@@ -1,6 +1,8 @@
 ---
 for: createaddition:electric_motor
 keywords: Електродвигун
+category: q_create_addons
+summary: Електродвигун робить навпаки: з енергії FE (наприклад, від сонячних панелей Mekanism) дає обертання для механі
 ---
 # Квест «Електродвигун»
 `Книга квестів → **Create: додатки**`

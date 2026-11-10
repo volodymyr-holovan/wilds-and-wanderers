@@ -1,6 +1,8 @@
 ---
 for: entity:goblins_tyranny:leader_goblin, entity:goblins_tyranny:shaman_goblin
 keywords: Ватажок гоблінів
+category: q_peoples
+summary: Ватажок — найсильніший гоблін табору, з булавою й охороною. Шаман лікує його кулями зцілення — бийте шамана пе
 ---
 # Квест «Ватажок гоблінів»
 `Книга квестів → Народи`

@@ -733,12 +733,12 @@
  "cra_1_11": {
   "x": 544,
   "y": 544,
-  "definition": "cra_u_thrifty_crafter"
+  "definition": "cra_u_smith_hands"
  },
  "cra_1_mastery": {
   "x": 590,
   "y": 590,
-  "definition": "cra_mastery_thrifty_crafter"
+  "definition": "cra_mastery_smith_hands"
  },
  "cra_2_1": {
   "x": 111,

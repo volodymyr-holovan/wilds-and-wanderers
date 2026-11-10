@@ -1,6 +1,8 @@
 ---
 for: entity:upgrade_aquatic:thrasher
 keywords: Молотильник
+category: q_seas
+summary: Великий морський звір Upgrade Aquatic. Він б'є звуковою хвилею і хапає здобич. Нагорода — зуб молотильника для
 ---
 # Квест «Молотильник»
 `Книга квестів → **Моря і кораблі**`

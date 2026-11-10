@@ -1,6 +1,8 @@
 ---
 for: ae2:certus_quartz_crystal
 keywords: Кварц Certus
+category: q_ae2
+summary: Кварц Certus росте в метеоритах і печерних жеодах із брунькуючого кварцу. Наріжте брунькуючі блоки, посадіть у
 ---
 # Квест «Кварц Certus»
 `Книга квестів → AE2`

@@ -1,6 +1,8 @@
 ---
 for: nomadictents:tiny_yurt, nomadictents:mallet
 keywords: Наметовий молоток
+category: q_camping
+summary: Крок 4. Молоток: залізо, палиці й полотно (рецепт — у JEI, клавіша R).
 ---
 # Квест «Наметовий молоток»
 `Книга квестів → **Похідне життя**`

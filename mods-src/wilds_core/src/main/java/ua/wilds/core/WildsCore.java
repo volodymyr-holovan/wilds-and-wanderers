@@ -32,14 +32,31 @@ public final class WildsCore {
             () -> EntityType.Builder.<ua.wilds.core.npc.Wanderer>of(ua.wilds.core.npc.Wanderer::new, MobCategory.MISC).sized(0.6f, 1.8f)
                     .clientTrackingRange(10).build("wanderer"));
 
+    public static final net.neoforged.neoforge.registries.DeferredRegister.Blocks BLOCKS = net.neoforged.neoforge.registries.DeferredRegister.createBlocks(ID);
+    public static final net.neoforged.neoforge.registries.DeferredRegister.Items ITEMS = net.neoforged.neoforge.registries.DeferredRegister.createItems(ID);
+    /** the copper golem's docking station (golem.GolemDock) */
+    public static final net.neoforged.neoforge.registries.DeferredBlock<ua.wilds.core.golem.GolemDock> GOLEM_DOCK = BLOCKS.register("golem_dock",
+            () -> new ua.wilds.core.golem.GolemDock(net.minecraft.world.level.block.state.BlockBehaviour.Properties.of()
+                    .mapColor(net.minecraft.world.level.material.MapColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(3f, 6f)
+                    .sound(net.minecraft.world.level.block.SoundType.COPPER).noOcclusion()
+                    .lightLevel(s -> s.getValue(ua.wilds.core.golem.GolemDock.OCCUPIED) ? 7 : 0)));
+    public static final net.neoforged.neoforge.registries.DeferredItem<net.minecraft.world.item.BlockItem> GOLEM_DOCK_ITEM = ITEMS.registerSimpleBlockItem(GOLEM_DOCK);
+
     public WildsCore(IEventBus modBus) {
         LogNoise.install();
         PartyPeace.register();
         OpBreak.register();
         if (net.neoforged.fml.ModList.get().isLoaded("ftbquests") && net.neoforged.fml.ModList.get().isLoaded("ftbteams")) ua.wilds.core.quests.PersonalQuests.register();
         if (net.neoforged.fml.ModList.get().isLoaded("ftbquests")) ua.wilds.core.quests.QuestFanfare.register();
+        if (net.neoforged.fml.ModList.get().isLoaded("ftbquests")) ua.wilds.core.quests.KillCredit.register();
         if (net.neoforged.fml.ModList.get().isLoaded("friendsandfoes")) ua.wilds.core.golem.Golems.register();
         ENTITIES.register(modBus);
+        BLOCKS.register(modBus);
+        ITEMS.register(modBus);
+        modBus.addListener((net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent e) -> {
+            if (e.getTabKey().location().getPath().equals("functional_blocks")) e.accept(GOLEM_DOCK_ITEM.get());
+        });
+        ua.wilds.core.world.FrameClick.register();
         ua.wilds.core.skills.LegacyRows.ATTACHMENTS.register(modBus);
         modBus.addListener((net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent e) ->
                 e.put(WANDERER.get(), ua.wilds.core.npc.Wanderer.attributes().build()));

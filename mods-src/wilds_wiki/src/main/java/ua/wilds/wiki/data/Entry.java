@@ -41,6 +41,10 @@ public final class Entry {
     public final List<String> keywords = new ArrayList<>();
     public final List<String> tagNames = new ArrayList<>();
     public final List<String> tagNamesEn = new ArrayList<>();
+    /** one line about the page, under its title on cards */
+    public String note = "";
+    /** a generated page: "cat:<id>" a category, "mod:<namespace>" a mod; null for ordinary pages */
+    public String special;
 
     public Entry(Kind kind, ResourceLocation id) {
         this.kind = kind;

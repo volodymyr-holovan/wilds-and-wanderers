@@ -53,7 +53,53 @@ public final class Jei {
 
     private static List<IRecipeCategory<?>> categories(List<IFocus<?>> f) {
         return WikiJeiPlugin.runtime.getRecipeManager().createRecipeCategoryLookup().limitFocus(f).get()
-                .filter(c -> !c.getRecipeType().equals(RecipeTypes.INFORMATION) && !tagList(c)).toList();
+                .filter(c -> !c.getRecipeType().equals(RecipeTypes.INFORMATION) && !tagList(c))
+                .sorted(java.util.Comparator.comparingInt(Jei::rank)).toList();
+    }
+
+    /** by-products of machines and bulk processing: ways nobody looks for first */
+    private static final String[] SIDE = {"item_application", "deploying", "sandpaper", "polishing", "crushing", "milling", "pressing", "compacting",
+            "cutting", "sawing", "haunting", "splashing", "washing", "fan_", "mystery", "packing", "spout", "draining", "recycling", "uncrafting",
+            "grinding", "sieving", "composting", "fuel", "anvil", "grindstone", "decorated_pot", "loom", "enrich", "inscriber_", "entropy", "transform"};
+
+    /**
+     * how soon a kind of recipe is shown: the crafting table first, then furnaces, smithing, the stonecutter and brewing,
+     * then stations of mods; what machines make of the item in passing (pressed, crushed, washed, applied to a block) last
+     */
+    public static int rank(IRecipeCategory<?> c) {
+        var uid = c.getRecipeType().getUid();
+        String p = uid.getPath();
+        if (uid.getNamespace().equals("minecraft")) {
+            return switch (p) {
+                case "crafting" -> 0;
+                case "smithing" -> 1;
+                case "smelting", "blasting", "smoking", "campfire_cooking" -> 2;
+                case "stonecutting" -> 3;
+                case "brewing" -> 4;
+                default -> p.equals("anvil") || p.equals("fuel") || p.equals("compostable") || p.equals("grindstone") ? 60 : 10;
+            };
+        }
+        for (String s : SIDE) if (p.contains(s)) return 50;
+        return 20;
+    }
+
+    /** first recipes for the page: the main ways only, unless the item has no other */
+    public static List<RecipeView> mainRecipes(ItemStack stack, Role r, int max) {
+        List<RecipeView> out = new ArrayList<>();
+        if (!ready() || stack.isEmpty()) return out;
+        try {
+            List<IFocus<?>> f = focus(stack, r);
+            IRecipeManager rm = WikiJeiPlugin.runtime.getRecipeManager();
+            List<IRecipeCategory<?>> cats = categories(f);
+            boolean anyMain = cats.stream().anyMatch(c -> rank(c) < 50);
+            for (IRecipeCategory<?> c : cats) {
+                if (out.size() >= max || (rank(c) >= 50 && (anyMain || r != Role.RECIPES))) break;
+                layout(rm, c, f).ifPresent(out::add);
+            }
+        } catch (Exception ignored) {
+            // a category of some mod failing to lay out must not take the page down
+        }
+        return out;
     }
 
     /** JEI's own "items in this tag" pages: a tag is not something the player can do with the item */

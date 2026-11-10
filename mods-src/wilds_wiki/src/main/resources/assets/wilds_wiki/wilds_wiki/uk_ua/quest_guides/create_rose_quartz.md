@@ -1,6 +1,8 @@
 ---
 for: create:polished_rose_quartz, create:electron_tube
 keywords: Електронна лампа
+category: q_create
+summary: Рожевий кварц (кварц незеру з червоним пилом) шліфують і роблять електронні лампи — для розумних механізмів.
 ---
 # Квест «Електронна лампа»
 `Книга квестів → **Create**`

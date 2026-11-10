@@ -1,0 +1,7 @@
+{
+  "parent": "wilds_core:block/golem_dock",
+  "textures": {
+    "panel": "wilds_core:block/golem_dock_panel_on",
+    "lamp": "wilds_core:block/golem_dock_lamp_on"
+  }
+}

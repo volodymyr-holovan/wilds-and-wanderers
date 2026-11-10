@@ -281,9 +281,13 @@ public final class Elements {
         final int max;
 
         public Chips(List<Entry> entries, boolean compact) {
+            this(entries, compact, compact ? 200 : 60);
+        }
+
+        public Chips(List<Entry> entries, boolean compact, int max) {
             this.entries = entries;
             this.compact = compact;
-            this.max = compact ? 200 : 60;
+            this.max = max;
         }
 
         int layout(Page p, int w) {
@@ -327,6 +331,55 @@ public final class Elements {
             for (int i = 0; i < boxes.size(); i++) {
                 int[] b = boxes.get(i);
                 if (mx >= x + b[0] && mx < x + b[0] + b[2] && my >= y + b[1] && my < y + b[1] + 20) {
+                    p.open(entries.get(i));
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    // ------------------------------------------------------------------ cards: a page with its one line, two in a row
+
+    public static final class Cards extends Element {
+        final List<Entry> entries;
+        final List<int[]> boxes = new ArrayList<>();
+        private static final int H = 28;
+
+        public Cards(List<Entry> entries) {
+            this.entries = entries;
+        }
+
+        int layout(Page p, int w) {
+            boxes.clear();
+            int cols = w >= 300 ? 2 : 1, cw = (w - (cols - 1) * 4) / cols;
+            for (int i = 0; i < entries.size(); i++) boxes.add(new int[]{(i % cols) * (cw + 4), (i / cols) * (H + 4), cw});
+            return height = entries.isEmpty() ? 0 : ((entries.size() + cols - 1) / cols) * (H + 4);
+        }
+
+        void render(Page p, GuiGraphics g, int x, int y, int w) {
+            for (int i = 0; i < boxes.size(); i++) {
+                int[] b = boxes.get(i);
+                Entry e = entries.get(i);
+                int bx = x + b[0], by = y + b[1];
+                boolean hover = over(p, bx, by, b[2], H);
+                Theme.cardOutline(g, bx, by, b[2], H, hover ? Theme.CARD_HOVER : Theme.CARD, hover ? Theme.ACCENT_DIM : Theme.FRAME);
+                e.renderIcon(g, bx + 6, by + 6);
+                boolean note = !e.note.isEmpty();
+                g.drawString(p.font(), ellipsize(p.font(), e.name.getString(), b[2] - 32), bx + 27, by + (note ? 5 : 10), hover ? Theme.ACCENT : Theme.TEXT, false);
+                if (note) g.drawString(p.font(), ellipsize(p.font(), e.note, b[2] - 32), bx + 27, by + 16, Theme.MUTED, false);
+                if (hover) {
+                    p.hoverLink();
+                    if (note && p.font().width(e.note) > b[2] - 32) p.tooltip(List.of(e.name.copy().withStyle(s -> s.withColor(Theme.ACCENT & 0xFFFFFF)),
+                            net.minecraft.network.chat.Component.literal(e.note).withStyle(ChatFormatting.GRAY)));
+                }
+            }
+        }
+
+        boolean click(Page p, int x, int y, int w, double mx, double my) {
+            for (int i = 0; i < boxes.size(); i++) {
+                int[] b = boxes.get(i);
+                if (mx >= x + b[0] && mx < x + b[0] + b[2] && my >= y + b[1] && my < y + b[1] + H) {
                     p.open(entries.get(i));
                     return true;
                 }

@@ -13,7 +13,10 @@ import java.util.List;
  * title: Дракони
  * icon: iceandfire:dragonegg_red
  * keywords: вивірна, dragon, приручення
- * order: 10             (topics on the home page are sorted by it)
+ * order: 10             (sorted by it in lists)
+ * summary: one line for cards and lists
+ * category: bosses, twilight   (categories that list the article)
+ * mod: twilightforest   (the mod page that lists it)
  * ---
  * # Heading, ## Subheading, paragraphs, - bullets, > tip, >! warning
  * **bold**, *italic*, [[minecraft:diamond]] or [[entity:iceandfire:fire_dragon|text]] links
@@ -24,7 +27,12 @@ public final class Article {
     public final String source;
     public final String lang;
     public final List<String> targets = new ArrayList<>();
-    public String topic, title, icon;
+    public String topic, title, icon, summary, mod;
+    public final List<String> categories = new ArrayList<>();
+    /** the article's own page (every article has one: its topic, or one named after its file) */
+    public Entry page;
+    /** the article is for a set of things by a pattern ("ns:*_sword") */
+    public boolean wildcard;
     public int order = 100;
     public final List<String> keywords = new ArrayList<>();
     public final List<String> body = new ArrayList<>();
@@ -50,6 +58,9 @@ public final class Article {
                     case "title" -> a.title = v;
                     case "icon" -> a.icon = v;
                     case "keywords" -> split(v, a.keywords);
+                    case "summary" -> a.summary = v;
+                    case "category" -> split(v, a.categories);
+                    case "mod" -> a.mod = v;
                     case "order" -> {
                         try {
                             a.order = Integer.parseInt(v);

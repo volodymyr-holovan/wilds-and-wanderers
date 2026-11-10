@@ -1,6 +1,8 @@
 ---
 for: entity:ars_nouveau:wilden_boss, ars_nouveau:wilden_tribute
 keywords: Химера диких
+category: q_ars
+summary: Ритуал призову диких може закликати Химеру диких — боса, з якого падає данина диких. Як саме провести ритуал д
 ---
 # Квест «Химера диких»
 `Книга квестів → Ars Nouveau`

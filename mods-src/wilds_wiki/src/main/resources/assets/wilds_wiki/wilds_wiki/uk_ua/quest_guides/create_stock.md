@@ -1,6 +1,8 @@
 ---
 for: create:stock_ticker, create:stock_link, create:redstone_requester
 keywords: Склад на замовлення
+category: q_create
+summary: Складський облік (stock ticker) бачить усі сховища, з'єднані складськими зв'язками, і за замовленням пакує й н
 ---
 # Квест «Склад на замовлення»
 `Книга квестів → **Create**`

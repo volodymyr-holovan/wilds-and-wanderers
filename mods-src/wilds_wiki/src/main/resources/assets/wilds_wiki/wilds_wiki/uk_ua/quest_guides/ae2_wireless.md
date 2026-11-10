@@ -1,6 +1,8 @@
 ---
 for: ae2:wireless_access_point, ae2wtlib:wireless_universal_terminal
 keywords: Бездротовий доступ
+category: q_ae2
+summary: Точка бездротового доступу і універсальний бездротовий термінал — мережа в кишені в радіусі точки.
 ---
 # Квест «Бездротовий доступ»
 `Книга квестів → AE2`

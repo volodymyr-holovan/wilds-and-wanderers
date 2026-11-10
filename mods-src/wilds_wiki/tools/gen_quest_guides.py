@@ -59,7 +59,10 @@ for f in sorted(glob.glob(os.path.join(CHAPTERS, "c*.py"))):
         tg = targets(q)
         if not tg:
             continue
-        lines = ["---", "for: " + ", ".join(tg), "keywords: " + md(q["title"]), "---", f"# Квест «{md(q['title'])}»",
+        first = next((md(d) for d in q.get("desc", []) if d.strip()), "")
+        first = re.sub(r"[*`\[\]]", "", first)
+        lines = ["---", "for: " + ", ".join(tg), "keywords: " + md(q["title"]), "category: q_" + ch["key"], "summary: " + first[:110], "---",
+                 f"# Квест «{md(q['title'])}»",
                  f"`Книга квестів → {chapter}`", ""]
         for d in q.get("desc", []):
             lines.append(md(d) if d.strip() else "")

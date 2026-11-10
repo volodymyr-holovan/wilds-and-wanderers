@@ -1,6 +1,8 @@
 ---
 for: nomadictents:mallet, nomadictents:tiny_yurt
 keywords: Похідний намет
+category: q_welcome
+summary: Намет (Nomadic Tents) — це кишеньковий вимір: зовні маленький, всередині — простора кімната, де можна ставити 
 ---
 # Квест «Похідний намет»
 `Книга квестів → **Основи**`

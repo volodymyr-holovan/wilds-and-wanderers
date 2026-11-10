@@ -1,6 +1,8 @@
 ---
 for: createaddition:alternator, createaddition:connector
 keywords: Генератор
+category: q_create_addons
+summary: Альтернатор перетворює обертання Create на енергію FE. Так ваше водяне колесо чи паровий двигун можуть живити 
 ---
 # Квест «Генератор»
 `Книга квестів → **Create: додатки**`

@@ -1,6 +1,8 @@
 ---
 for: ae2:pattern_provider, ae2:crafting_accelerator
 keywords: Обробка машинами
+category: q_ae2
+summary: Шаблон обробки віддає інгредієнти в будь-яку машину (піч, прес Create, збагачувач Mekanism) і чекає на результ
 ---
 # Квест «Обробка машинами»
 `Книга квестів → AE2`

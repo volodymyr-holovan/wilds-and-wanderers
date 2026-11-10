@@ -1,6 +1,8 @@
 ---
 for: mekanism:enrichment_chamber, mekanism:energized_smelter
 keywords: Подвоєння руд
+category: q_mekanism
+summary: Збагачувальна камера робить з однієї руди два шматки пилу; енергетична плавильня — злитки з пилу. Руда ×2.
 ---
 # Квест «Подвоєння руд»
 `Книга квестів → **Mekanism**`

@@ -1,6 +1,8 @@
 ---
 for: fishofthieves:splashtail, fishofthieves:pondie, fishofthieves:islehopper
 keywords: Риби семи морів
+category: q_seas
+summary: Fish of Thieves населяє води рибами з характером: сплештейли, пондії, айлгопери, штормові риби, що клюють лише
 ---
 # Квест «Риби семи морів»
 `Книга квестів → **Моря і кораблі**`

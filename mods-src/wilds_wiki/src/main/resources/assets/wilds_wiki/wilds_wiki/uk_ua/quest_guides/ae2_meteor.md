@@ -1,6 +1,8 @@
 ---
 for: ae2:sky_stone_block, ae2:logic_processor_press, ae2:calculation_processor_press, ae2:engineering_processor_press, ae2:silicon_press
 keywords: Упалий метеорит
+category: q_ae2
+summary: Applied Energistics 2 — це мережа, що зберігає тисячі предметів на дисках і крафтить усе сама. Ключі до неї вп
 ---
 # Квест «Упалий метеорит»
 `Книга квестів → AE2`

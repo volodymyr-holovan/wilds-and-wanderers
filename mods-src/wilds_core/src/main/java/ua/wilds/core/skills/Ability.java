@@ -35,7 +35,7 @@ public final class Ability {
         // craft
         NEEDS.put("prospector", List.of());
         NEEDS.put("smelters_touch", List.of());
-        NEEDS.put("thrifty_crafter", List.of());
+        NEEDS.put("smith_hands", List.of());
         NEEDS.put("vein_miner", List.of());
         // sea
         NEEDS.put("sea_gifts", List.of());

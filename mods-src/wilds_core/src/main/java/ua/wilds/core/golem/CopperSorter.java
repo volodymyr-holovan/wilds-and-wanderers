@@ -51,8 +51,14 @@ import java.util.UUID;
  * The copper golem as a sorter, on Friends &amp; Foes' golem (its model, animations and oxidation stay).
  * <p>
  * <b>Building</b>: a carved pumpkin (or a jack o'lantern) put right on a copper block, any of the eight. The block
- * becomes a copper chest (Sophisticated Storage's, a vanilla chest without the mod) and the golem stands on it,
- * as rusty and as waxed as the block was. F&amp;F's own way, with a lightning rod between, still works too.
+ * becomes a docking station ({@link GolemDock}) and the golem stands on it, as rusty and as waxed as the block was.
+ * F&amp;F's own way, with a lightning rod between, still works too.
+ * <p>
+ * <b>Home</b>: like a robot vacuum, the golem with nothing to sort goes back to its station, stands on the pad and
+ * waits there (it does not wander, cannot be pushed off or hurt, and costs the server nothing but a look for work every
+ * three seconds); one that cannot get home, or is found far from it, is put back on it. A station placed by hand
+ * (copper block + lightning rod) takes in the nearest golem that has none: so do the golems of before the stations,
+ * who lived on copper chests, and until then they wait beside their chest.
  * <p>
  * <b>Work</b>: the golem takes a whole stack out of a source storage near its home and carries it to the storage where
  * that item already is: the one with the most of it that still has room. It knows what every storage nearby holds
@@ -62,17 +68,18 @@ import java.util.UUID;
  * hand while sneaking, round and round: normal (things go in), source exact (things are taken out and go where the very
  * same item is), source by likeness (where the same or the most alike items are, {@link Likeness}: spruce logs to the
  * logs, leggings to the armour, a modded gem to the diamonds), misc (what fits nowhere else; with none it stays in the
- * source), do not touch. A placed storage is normal; the chest the golem was built from is an exact source.
+ * source), do not touch. A placed storage is normal; a new golem has no source until the player marks one.
  * Every storage counts whatever its size (iron, gold and diamond chests, barrels, drawers...), but not furnaces,
  * machines and other blocks that merely hold items, not the sources themselves, not the claims of another
  * party, and not Lootr's chests. Everything runs on the server: nothing to install for the players.
  */
 public final class CopperSorter {
     private static final ResourceLocation GOLEM = ResourceLocation.fromNamespaceAndPath("friendsandfoes", "copper_golem");
-    private static final ResourceLocation CHEST = ResourceLocation.fromNamespaceAndPath("sophisticatedstorage", "copper_chest");
     private static final ResourceLocation BUTTON_COOLDOWN = ResourceLocation.fromNamespaceAndPath("friendsandfoes", "copper_golem_press_button_cooldown");
     static final int RANGE = 20, HEIGHT = 8;
     private static final String HOME = "wilds_sorter_home";
+    /** the golem stands on its station, switched off */
+    private static final String DOCKED = "wilds_sorter_docked";
     /** -Dwilds_core.golemdebug=true: every decision of every golem in the log */
     private static final boolean DEBUG = Boolean.getBoolean("wilds_core.golemdebug");
 
@@ -81,7 +88,8 @@ public final class CopperSorter {
 
     private static final class Job {
         BlockPos source, target;
-        int steps, rest, turn;
+        int steps, rest, turn, homeSteps;
+        boolean idle;
         final Map<BlockPos, Long> avoid = new HashMap<>();   // storages it could not reach or that were full, until then
     }
 
@@ -92,6 +100,12 @@ public final class CopperSorter {
     public static void onPlace(BlockEvent.EntityPlaceEvent e) {
         if (!(e.getLevel() instanceof ServerLevel level)) return;
         BlockState placed = e.getPlacedBlock();
+        if (placed.getBlock() instanceof GolemDock) {
+            BlockPos at = e.getPos().immutable();
+            Entity by = e.getEntity();
+            level.getServer().tell(new TickTask(level.getServer().getTickCount() + 1, () -> adopt(level, at, by)));
+            return;
+        }
         if (placed.hasBlockEntity()) {
             // a placed storage is normal, or (a chest that made a double chest) what the chest beside it was
             BlockPos at = e.getPos().immutable();
@@ -111,10 +125,34 @@ public final class CopperSorter {
         if (copper(level.getBlockState(pos.below())) == null) return;
         Direction facing = head.hasProperty(BlockStateProperties.HORIZONTAL_FACING) ? head.getValue(BlockStateProperties.HORIZONTAL_FACING) : Direction.NORTH;
         // the next tick: the placing is not over yet while its event runs
-        level.getServer().tell(new TickTask(level.getServer().getTickCount() + 1, () -> build(level, pos, facing)));
+        Entity by = e.getEntity();
+        level.getServer().tell(new TickTask(level.getServer().getTickCount() + 1, () -> build(level, pos, facing, by)));
     }
 
-    private static void build(ServerLevel level, BlockPos pos, Direction facing) {
+    /** a station placed by hand takes in the nearest golem without one */
+    private static void adopt(ServerLevel level, BlockPos dock, Entity by) {
+        if (!isDock(level, dock)) return;
+        CopperGolemEntity found = null;
+        double best = Double.MAX_VALUE;
+        for (CopperGolemEntity g : level.getEntitiesOfClass(CopperGolemEntity.class, new net.minecraft.world.phys.AABB(dock).inflate(16, 6, 16))) {
+            BlockPos home = NbtUtils.readBlockPos(g.getPersistentData(), HOME).orElse(null);
+            if (home != null && isDock(level, home)) continue;
+            double d = g.distanceToSqr(dock.getX() + 0.5, dock.getY(), dock.getZ() + 0.5);
+            if (d < best) {
+                best = d;
+                found = g;
+            }
+        }
+        if (found != null) found.getPersistentData().put(HOME, NbtUtils.writeBlockPos(dock));
+        if (by instanceof ServerPlayer p) p.displayClientMessage(Component.literal(found != null ? "Мідний голем оселився в цій станції."
+                : "Станція порожня: поставте поруч різьблений гарбуз на мідний блок або приведіть голема без станції.").withStyle(ChatFormatting.GOLD), true);
+    }
+
+    static boolean isDock(ServerLevel level, BlockPos p) {
+        return level.isLoaded(p) && level.getBlockState(p).getBlock() instanceof GolemDock;
+    }
+
+    private static void build(ServerLevel level, BlockPos pos, Direction facing, Entity by) {
         BlockState head = level.getBlockState(pos), body = level.getBlockState(pos.below());
         Copper copper = copper(body);
         if (copper == null || (!head.is(Blocks.CARVED_PUMPKIN) && !head.is(Blocks.JACK_O_LANTERN))) return;
@@ -125,19 +163,18 @@ public final class CopperSorter {
         level.levelEvent(2001, pos, Block.getId(head));
         level.levelEvent(2001, pos.below(), Block.getId(body));
         level.setBlock(pos, Blocks.AIR.defaultBlockState(), 2);
-        Block chest = BuiltInRegistries.BLOCK.getOptional(CHEST).orElse(Blocks.CHEST);
-        BlockState chestState = chest.defaultBlockState();
-        if (chestState.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) chestState = chestState.setValue(BlockStateProperties.HORIZONTAL_FACING, facing);
-        level.setBlock(pos.below(), chestState, 3);
-        SortStatus.set(level, pos.below(), SortStatus.SOURCE);
-        golem.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, facing.toYRot(), 0);
+        BlockPos dock = pos.below();
+        level.setBlock(dock, WildsCore.GOLEM_DOCK.get().defaultBlockState().setValue(GolemDock.FACING, facing), 3);
+        golem.moveTo(dock.getX() + 0.5, dock.getY() + GolemDock.PAD, dock.getZ() + 0.5, facing.toYRot(), 0);
         golem.setSpawnYaw(facing.toYRot());
         golem.finalizeSpawn(level, level.getCurrentDifficultyAt(pos), MobSpawnType.MOB_SUMMONED, null);
         golem.setOxidationLevel(copper.state);
         golem.setPrevOxidationLevel(copper.state);
         golem.setIsWaxed(copper.waxed);
-        golem.getPersistentData().put(HOME, NbtUtils.writeBlockPos(pos.below()));
+        golem.getPersistentData().put(HOME, NbtUtils.writeBlockPos(dock));
+        golem.setPersistenceRequired();
         level.addFreshEntity(golem);
+        if (by instanceof ServerPlayer p) p.sendSystemMessage(Component.literal("Мідний голем готовий. Позначте скриню, з якої він братиме речі: присядьте й клацніть по ній порожньою рукою (Shift+ПКМ), доки не побачите «Джерело».").withStyle(ChatFormatting.GOLD));
         level.playSound(null, pos, SoundEvents.COPPER_PLACE, SoundSource.BLOCKS, 1f, 1f);
         level.playSound(null, pos, SoundEvents.IRON_GOLEM_REPAIR, SoundSource.NEUTRAL, 0.7f, 1.6f);
     }
@@ -197,7 +234,10 @@ public final class CopperSorter {
     public static void onTick(EntityTickEvent.Post e) {
         if (!(e.getEntity() instanceof CopperGolemEntity golem) || !(golem.level() instanceof ServerLevel level)) return;
         if ((golem.tickCount + golem.getId()) % 10 != 0) return;
-        if (golem.isImmobilized() || golem.isPassenger() || golem.isLeashed() || !golem.isAlive()) return;
+        if (golem.isImmobilized() || golem.isPassenger() || golem.isLeashed() || !golem.isAlive()) {
+            if (golem.getPersistentData().getBoolean(DOCKED)) undock(level, golem);
+            return;
+        }
         try {
             work(level, golem);
         } catch (RuntimeException ex) {
@@ -208,8 +248,18 @@ public final class CopperSorter {
 
     private static void work(ServerLevel level, CopperGolemEntity golem) {
         BlockPos home = home(level, golem);
-        if (home == null) return;
+        boolean docked = golem.getPersistentData().getBoolean(DOCKED);
+        if (home == null || (docked && !isDock(level, home))) {
+            if (docked) undock(level, golem);   // the station is gone
+            if (home == null) return;
+        }
         Job job = jobs.computeIfAbsent(golem.getUUID(), u -> new Job());
+        // found far from home (pushed, fallen, carried by water): back on the station, never lost
+        double far = RANGE + 12;
+        if (!docked && golem.distanceToSqr(home.getX() + 0.5, home.getY(), home.getZ() + 0.5) > far * far) {
+            bringHome(level, golem, home);
+            return;
+        }
         long now = level.getGameTime();
         job.avoid.values().removeIf(until -> until < now);
         ItemStack held = golem.getMainHandItem();
@@ -218,14 +268,20 @@ public final class CopperSorter {
             if (job.source == null) {
                 if (job.rest > 0) {
                     job.rest--;
+                    if (job.idle) idle(level, golem, home, job);
                     return;
                 }
                 job.source = pickSource(level, golem, home, job);
                 job.steps = 0;
                 if (job.source == null) {
-                    job.rest = 6;   // nothing to sort: look again in three seconds
+                    job.rest = 6;   // nothing to sort: home, and look again in three seconds
+                    job.idle = true;
+                    idle(level, golem, home, job);
                     return;
                 }
+                job.idle = false;
+                job.homeSteps = 0;
+                undock(level, golem);
             }
             if (!near(golem, job.source)) {
                 walk(golem, job, job.source);
@@ -249,12 +305,16 @@ public final class CopperSorter {
                 golem.getPersistentData().putBoolean("wilds_sorter_likeness", likeness);
                 job.target = survey.best(taken, likeness);
                 job.steps = 0;
+                if (DEBUG) WildsCore.LOG.info("Copper golem {}: took {} from {}, to {} ({})", golem.getId(), taken, at, job.target,
+                        job.target == null ? "" : Survey.explain(level, job.target, taken.getItem()));
                 return;
             }
             return;
         }
 
         // carrying: to the best storage, then the next best while some is left, then back where it came from
+        job.idle = false;
+        undock(level, golem);
         if (job.target == null || handler(level, job.target) == null) {
             if (job.rest > 0) {
                 job.rest--;
@@ -284,11 +344,108 @@ public final class CopperSorter {
         if (left.isEmpty()) job.rest = 1;
     }
 
-    /** the place the golem works around: the chest it was built on, else the nearest source within 8 blocks (an F&F golem) */
+    // ---------------------------------------------------------------- home
+
+    /** nothing to do: to the station and onto its pad; a golem of before the stations waits beside its chest */
+    private static void idle(ServerLevel level, CopperGolemEntity golem, BlockPos home, Job job) {
+        var data = golem.getPersistentData();
+        if (!isDock(level, home)) {
+            double dx = golem.getX() - (home.getX() + 0.5), dz = golem.getZ() - (home.getZ() + 0.5);
+            if (dx * dx + dz * dz > 9) walkHome(level, golem, home, job);
+            else golem.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);   // no strolling away
+            return;
+        }
+        double x = home.getX() + 0.5, y = home.getY() + GolemDock.PAD, z = home.getZ() + 0.5;
+        if (data.getBoolean(DOCKED)) {
+            if (golem.distanceToSqr(x, y, z) > 0.01) golem.moveTo(x, y, z, yaw(level, home), 0);   // pushed: back in place
+            GolemDock.setOccupied(level, home, true);
+            return;
+        }
+        double dx = golem.getX() - x, dz = golem.getZ() - z, dy = golem.getY() - y;
+        if (dx * dx + dz * dz > 1.6 * 1.6 || Math.abs(dy) > 1.5) {
+            walkHome(level, golem, home, job);
+            return;
+        }
+        // another golem already stands there (two golems, one station): wait beside it
+        for (CopperGolemEntity other : level.getEntitiesOfClass(CopperGolemEntity.class, new net.minecraft.world.phys.AABB(home).inflate(0.2, 0.6, 0.2))) {
+            if (other != golem && other.getPersistentData().getBoolean(DOCKED)) {
+                golem.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
+                return;
+            }
+        }
+        float yaw = yaw(level, home);
+        golem.getNavigation().stop();
+        golem.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
+        golem.moveTo(x, y, z, yaw, 0);
+        golem.setYHeadRot(yaw);
+        golem.setYBodyRot(yaw);
+        golem.setDeltaMovement(0, 0, 0);
+        golem.setNoAi(true);
+        golem.setInvulnerable(true);
+        golem.setPersistenceRequired();
+        data.putBoolean(DOCKED, true);
+        job.homeSteps = 0;
+        GolemDock.setOccupied(level, home, true);
+        level.playSound(null, home, SoundEvents.COPPER_BULB_TURN_ON, SoundSource.BLOCKS, 0.6f, 1.2f);
+    }
+
+    private static float yaw(ServerLevel level, BlockPos dock) {
+        BlockState s = level.getBlockState(dock);
+        return s.hasProperty(GolemDock.FACING) ? s.getValue(GolemDock.FACING).toYRot() : 0;
+    }
+
+    /** off the pad and switched on again */
+    private static void undock(ServerLevel level, CopperGolemEntity golem) {
+        var data = golem.getPersistentData();
+        if (!data.getBoolean(DOCKED)) return;
+        data.remove(DOCKED);
+        golem.setNoAi(false);
+        golem.setInvulnerable(false);
+        BlockPos home = NbtUtils.readBlockPos(data, HOME).orElse(null);
+        if (home != null && isDock(level, home)) {
+            GolemDock.setOccupied(level, home, false);
+            level.playSound(null, home, SoundEvents.COPPER_BULB_TURN_OFF, SoundSource.BLOCKS, 0.6f, 1.2f);
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void walkHome(ServerLevel level, CopperGolemEntity golem, BlockPos home, Job job) {
+        if (++job.homeSteps > 40) {   // twenty seconds and still not home: something is in the way
+            job.homeSteps = 0;
+            bringHome(level, golem, home);
+            return;
+        }
+        var brain = golem.getBrain();
+        brain.setMemory(MemoryModuleType.WALK_TARGET, new WalkTarget(home, 1.0f, 0));
+        BuiltInRegistries.MEMORY_MODULE_TYPE.getOptional(BUTTON_COOLDOWN).ifPresent(t -> brain.setMemory((MemoryModuleType<Integer>) t, 200));
+    }
+
+    /** puts the golem beside its home (on the station's pad) wherever it is */
+    private static void bringHome(ServerLevel level, CopperGolemEntity golem, BlockPos home) {
+        if (DEBUG) WildsCore.LOG.info("Copper golem {}: brought home from {}", golem.getId(), golem.blockPosition());
+        level.sendParticles(net.minecraft.core.particles.ParticleTypes.ELECTRIC_SPARK, golem.getX(), golem.getY() + 0.6, golem.getZ(), 12, 0.2, 0.3, 0.2, 0.05);
+        golem.getNavigation().stop();
+        if (isDock(level, home)) golem.teleportTo(home.getX() + 0.5, home.getY() + GolemDock.PAD, home.getZ() + 0.5);
+        else {
+            BlockPos spot = home.above();
+            for (Direction d : Direction.Plane.HORIZONTAL) {
+                BlockPos p = home.relative(d);
+                if (level.getBlockState(p).getCollisionShape(level, p).isEmpty() && level.getBlockState(p.above()).getCollisionShape(level, p.above()).isEmpty()) {
+                    spot = p;
+                    break;
+                }
+            }
+            golem.teleportTo(spot.getX() + 0.5, spot.getY(), spot.getZ() + 0.5);
+        }
+        level.sendParticles(net.minecraft.core.particles.ParticleTypes.ELECTRIC_SPARK, golem.getX(), golem.getY() + 0.6, golem.getZ(), 12, 0.2, 0.3, 0.2, 0.05);
+        level.playSound(null, golem.blockPosition(), SoundEvents.COPPER_PLACE, SoundSource.NEUTRAL, 0.6f, 1.4f);
+    }
+
+    /** the place the golem works around: its station, else (a golem of before the stations) its chest, else the nearest source within 8 blocks (an F&F golem) */
     private static BlockPos home(ServerLevel level, CopperGolemEntity golem) {
         var data = golem.getPersistentData();
         BlockPos home = NbtUtils.readBlockPos(data, HOME).orElse(null);
-        if (home != null && level.isLoaded(home) && handler(level, home) != null) return home;
+        if (home != null && level.isLoaded(home) && (isDock(level, home) || handler(level, home) != null)) return home;
         if ((golem.tickCount / 10) % 6 != 0 && home == null) return null;   // a golem with no source near looks every 3 s
         BlockPos found = null;
         double best = Double.MAX_VALUE;
@@ -420,7 +577,18 @@ public final class CopperSorter {
 
     /** what is where around the golem's home: every storage it may put things in, with what it holds */
     static final class Survey {
-        private record Box(BlockPos pos, IItemHandler handler, Map<Item, Integer> items, double dist) {}
+        private record Box(BlockPos pos, IItemHandler handler, Map<Item, Integer> items, double dist, Likeness.Theme[] cache) {
+            Likeness.Theme theme() {
+                if (cache[0] == null) cache[0] = Likeness.theme(items.keySet());
+                return cache[0];
+            }
+
+            int total() {
+                int n = 0;
+                for (int c : items.values()) n += c;
+                return n;
+            }
+        }
 
         private final List<Box> boxes = new ArrayList<>();
         private Box misc;
@@ -443,7 +611,7 @@ public final class CopperSorter {
                     ItemStack st = h.getStackInSlot(i);
                     if (!st.isEmpty()) items.merge(st.getItem(), st.getCount(), Integer::sum);
                 }
-                Box box = new Box(p, h, items, p.distSqr(home));
+                Box box = new Box(p, h, items, p.distSqr(home), new Likeness.Theme[1]);
                 if (status == SortStatus.MISC) {
                     if (s.misc == null || box.dist < s.misc.dist) s.misc = box;
                 } else s.boxes.add(box);
@@ -457,14 +625,10 @@ public final class CopperSorter {
             int bestD = Likeness.NONE, bestN = 0;
             for (Box b : boxes) {
                 if (b.items.isEmpty()) continue;
-                int d = Likeness.NONE, n = 0;
-                for (var e : b.items.entrySet()) {
-                    int di = e.getKey() == stack.getItem() ? 0 : likeness ? Likeness.distance(stack.getItem(), e.getKey()) : Likeness.NONE;
-                    if (di < d) {
-                        d = di;
-                        n = e.getValue();
-                    } else if (di == d) n += e.getValue();
-                }
+                // where the very same item lies always comes first; then the storage whose theme fits it best
+                Integer same = b.items.get(stack.getItem());
+                int d = same != null ? 0 : likeness ? Likeness.fit(stack.getItem(), b.theme()) : Likeness.NONE;
+                int n = same != null ? same : b.total();
                 if (d == Likeness.NONE || d > bestD) continue;
                 if (d == bestD && (n < bestN || (n == bestN && best != null && b.dist >= best.dist))) continue;
                 if (!room(b.handler, stack)) continue;
@@ -478,6 +642,17 @@ public final class CopperSorter {
 
         private static boolean room(IItemHandler h, ItemStack stack) {
             return ItemHandlerHelper.insertItemStacked(h, stack.copy(), true).getCount() < stack.getCount();
+        }
+
+        /** /wildssort: what the storage is about and how a thing fits it */
+        static String explain(ServerLevel level, BlockPos p, Item item) {
+            IItemHandler h = handler(level, p);
+            if (h == null) return "not a storage";
+            java.util.Set<Item> items = new java.util.HashSet<>();
+            for (int i = 0; i < h.getSlots(); i++) if (!h.getStackInSlot(i).isEmpty()) items.add(h.getStackInSlot(i).getItem());
+            if (items.isEmpty()) return "empty";
+            Likeness.Theme t = Likeness.theme(items);
+            return item == null ? Likeness.describe(t) : Likeness.why(item, t);
         }
 
         /** a storage, not a furnace, a machine or a hopper: chests, barrels, crates, drawers, shulker boxes and the like */

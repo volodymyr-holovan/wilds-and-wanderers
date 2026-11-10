@@ -1,6 +1,8 @@
 ---
 for: sophisticatedstorage:chest
 keywords: Розумні скрині
+category: q_survival
+summary: Sophisticated Storage додає скрині й бочки, які можна покращувати (більше місця) і ставити в них модулі: сорту
 ---
 # Квест «Розумні скрині»
 `Книга квестів → **Виживання**`

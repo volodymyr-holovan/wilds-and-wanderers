@@ -87,7 +87,7 @@ public enum SortStatus {
      * the other half of a double chest, vanilla's or any mod's that uses the same "type" and "facing" properties
      * (Sophisticated Storage), or null
      */
-    static BlockPos partner(ServerLevel level, BlockPos pos) {
+    public static BlockPos partner(net.minecraft.world.level.BlockGetter level, BlockPos pos) {
         BlockState state = level.getBlockState(pos);
         ChestType type = null;
         Direction facing = null;

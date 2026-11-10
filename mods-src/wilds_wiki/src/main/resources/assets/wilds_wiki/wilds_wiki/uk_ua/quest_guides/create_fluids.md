@@ -1,6 +1,8 @@
 ---
 for: create:mechanical_pump, create:fluid_pipe, create:spout, create:item_drain, create:fluid_tank
 keywords: Рідини
+category: q_create
+summary: Помпа жене рідину трубами, носик наливає її в предмети (мед у пляшки, воду в цеглу), зливач спорожнює. Великі 
 ---
 # Квест «Рідини»
 `Книга квестів → **Create**`

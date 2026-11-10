@@ -1,6 +1,8 @@
 ---
 for: irons_spellbooks:netherite_spell_book, irons_spellbooks:legendary_ink
 keywords: Незеритова книга
+category: q_irons
+summary: Незеритова книга заклинань — найбільше місць для заклять. Разом з легендарними чорнилами — вершина Iron's Spel
 ---
 # Квест «Незеритова книга»
 `Книга квестів → Iron's Spells`

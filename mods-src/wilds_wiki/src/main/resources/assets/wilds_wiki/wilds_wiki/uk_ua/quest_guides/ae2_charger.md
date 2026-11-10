@@ -1,6 +1,8 @@
 ---
 for: ae2:charger, ae2:charged_certus_quartz_crystal, ae2:fluix_crystal
 keywords: Зарядник і флюікс
+category: q_ae2
+summary: Зарядник заряджає кварц енергією. Заряджений Certus, кварц незеру й червоний пил, кинуті у воду, стають флюікс
 ---
 # Квест «Зарядник і флюікс»
 `Книга квестів → AE2`

@@ -1,6 +1,8 @@
 ---
 for: alexscaves:tough_hide, alexscaves:heavy_bone
 keywords: Здобич динозаврів
+category: q_caves
+summary: Динозаври дають:
 ---
 # Квест «Здобич динозаврів»
 `Книга квестів → **Печери Алекса**`

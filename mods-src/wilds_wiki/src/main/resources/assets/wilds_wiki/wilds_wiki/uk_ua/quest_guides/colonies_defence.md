@@ -1,6 +1,8 @@
 ---
 for: minecolonies:blockhutguardtower, entity:minecolonies:barbarian
 keywords: Варта колонії
+category: q_colonies
+summary: Колонію раз на кілька тижнів атакують набіги: варвари, пірати, амазонки, мумії, нормани. Сторожові вежі і Каза
 ---
 # Квест «Варта колонії»
 `Книга квестів → **Села й колонії**`

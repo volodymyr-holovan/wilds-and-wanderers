@@ -1,6 +1,8 @@
 ---
 for: irons_spellbooks:arcane_essence
 keywords: Тайна есенція
+category: q_irons
+summary: Iron's Spells — готові закляття восьми шкіл (вогонь, лід, блискавка, світло, природа, енд, кров, закликання) і
 ---
 # Квест «Тайна есенція»
 `Книга квестів → Iron's Spells`

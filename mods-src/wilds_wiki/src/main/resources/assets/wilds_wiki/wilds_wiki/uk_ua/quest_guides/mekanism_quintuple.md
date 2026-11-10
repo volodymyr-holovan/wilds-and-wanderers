@@ -1,6 +1,8 @@
 ---
 for: mekanism:chemical_dissolution_chamber, mekanism:chemical_washer, mekanism:chemical_crystallizer
 keywords: Руда ×5
+category: q_mekanism
+summary: Вершина переробки: розчинна камера (сірчана кислота) робить з руди «брудну суспензію», промивач її чистить, кр
 ---
 # Квест «Руда ×5»
 `Книга квестів → **Mekanism**`

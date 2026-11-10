@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
@@ -42,7 +43,9 @@ import java.util.Set;
  * <li>prospector "Рудознатець": sneak and use a pickaxe on stone - ores around (radius 6, +2 per level) glint for you;
  * once a minute;</li>
  * <li>smelters_touch "Дотик горна": a mined ore's raw drop sometimes comes out already smelted (20% per level);</li>
- * <li>thrifty_crafter "Ощадливий майстер": crafting sometimes gives one ingredient back (8% per level);</li>
+ * <li>smith_hands "Вправні руки коваля": work on the anvil costs a quarter fewer levels per level of the skill, and the
+ * anvil does not wear from it (it replaced "thrifty crafter", whose returned ingredients could be multiplied through
+ * recipes that undo each other);</li>
  * <li>vein_miner "Жила": breaking an ore while sneaking also breaks the same ore touching it (up to 6, +4 per level).</li>
  * </ul>
  * Perks: extra_ore (an ore drops one more), harvest (a ripe crop drops one more), tool_saver (see the durability mixin).
@@ -57,7 +60,7 @@ public final class CraftSkills {
     public static void register() {
         NeoForge.EVENT_BUS.addListener(CraftSkills::prospect);
         NeoForge.EVENT_BUS.addListener(CraftSkills::drops);
-        NeoForge.EVENT_BUS.addListener(CraftSkills::crafted);
+        NeoForge.EVENT_BUS.addListener(CraftSkills::anvilUsed);
         NeoForge.EVENT_BUS.addListener(CraftSkills::vein);
     }
 
@@ -116,21 +119,15 @@ public final class CraftSkills {
                 .map(h -> h.value().getResultItem(lvl.registryAccess())).filter(s -> !s.isEmpty());
     }
 
-    private static void crafted(PlayerEvent.ItemCraftedEvent e) {
-        if (!(e.getEntity() instanceof ServerPlayer p)) return;
-        int lv = SkillState.level(p, "thrifty_crafter");
-        if (lv <= 0 || p.getRandom().nextFloat() >= 0.08f * lv) return;
-        Container grid = e.getInventory();
-        List<ItemStack> candidates = new ArrayList<>();
-        for (int i = 0; i < grid.getContainerSize(); i++) {
-            ItemStack s = grid.getItem(i);
-            // nothing that stays in the grid anyway (buckets, tools) and nothing unique
-            if (!s.isEmpty() && s.getMaxStackSize() > 1 && !s.hasCraftingRemainingItem()) candidates.add(s);
-        }
-        if (candidates.isEmpty()) return;
-        ItemStack back = candidates.get(p.getRandom().nextInt(candidates.size())).copyWithCount(1);
-        if (!p.getInventory().add(back)) p.drop(back, false);
-        p.displayClientMessage(Component.translatable("wilds_core.skill.thrifty_crafter.saved", back.getHoverName()).withStyle(ChatFormatting.GREEN), true);
+    /** smith_hands: what a job on the anvil costs this player (a quarter less per level, never under one level) */
+    public static int anvilCost(Player p, int cost) {
+        int lv = p.level().isClientSide ? ua.wilds.core.skills.ClientAbilities.level("smith_hands") : SkillState.level(p, "smith_hands");
+        return lv <= 0 ? cost : Math.max(1, Math.round(cost * (1 - 0.25f * Math.min(2, lv))));
+    }
+
+    /** smith_hands: the anvil does not wear from this player's work */
+    private static void anvilUsed(net.neoforged.neoforge.event.entity.player.AnvilRepairEvent e) {
+        if (e.getEntity() instanceof ServerPlayer p && SkillState.level(p, "smith_hands") > 0) e.setBreakChance(0);
     }
 
     private static void vein(BlockEvent.BreakEvent e) {

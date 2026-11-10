@@ -1,6 +1,8 @@
 ---
 for: mekanism:metallurgic_infuser, mekanism:ingot_steel, mekanism:alloy_infused, mekanism:basic_control_circuit
 keywords: Металургійний наповнювач
+category: q_mekanism
+summary: Наповнювач «вливає» в метал вугілля, редстоун, алмаз чи обсидіан: так виходять сталь, наповнений сплав і контр
 ---
 # Квест «Металургійний наповнювач»
 `Книга квестів → **Mekanism**`

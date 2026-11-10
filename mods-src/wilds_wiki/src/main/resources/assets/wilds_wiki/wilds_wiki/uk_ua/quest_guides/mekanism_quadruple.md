@@ -1,6 +1,8 @@
 ---
 for: mekanism:chemical_injection_chamber, mekanism:chemical_infuser
 keywords: Руда ×4
+category: q_mekanism
+summary: Камера хімічного впорскування з газом хлороводню дає з руди чотири осколки. Хлороводень — з солі (термальне ви
 ---
 # Квест «Руда ×4»
 `Книга квестів → **Mekanism**`

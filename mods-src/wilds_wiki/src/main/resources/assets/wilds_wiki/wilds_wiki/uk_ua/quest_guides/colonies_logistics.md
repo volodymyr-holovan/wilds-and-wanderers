@@ -1,6 +1,8 @@
 ---
 for: minecolonies:blockhutwarehouse, minecolonies:blockhutdeliveryman
 keywords: Склад і кур'єр
+category: q_colonies
+summary: Коли будівель багато, ресурси треба розвозити. Склад збирає все добро колонії, а кур'єри носять його туди, де 
 ---
 # Квест «Склад і кур'єр»
 `Книга квестів → **Села й колонії**`

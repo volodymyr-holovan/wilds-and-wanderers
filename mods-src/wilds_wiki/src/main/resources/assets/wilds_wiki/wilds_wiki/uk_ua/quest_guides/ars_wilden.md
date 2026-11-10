@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:wilden_horn, ars_nouveau:wilden_spike, ars_nouveau:wilden_wing
 keywords: Дикі
+category: q_ars
+summary: Дикі (Wilden) — звірі, зіткані з джерела: мисливці, вартові, переслідувачі. Їхні роги, шипи й крила потрібні д
 ---
 # Квест «Дикі»
 `Книга квестів → Ars Nouveau`

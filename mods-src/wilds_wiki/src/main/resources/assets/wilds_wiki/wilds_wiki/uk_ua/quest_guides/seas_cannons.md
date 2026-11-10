@@ -1,6 +1,8 @@
 ---
 for: smallships:cannon, smallships:cannon_ball
 keywords: Гармати
+category: q_seas
+summary: Гармату ставлять на борт через верф. Набої:
 ---
 # Квест «Гармати»
 `Книга квестів → **Моря і кораблі**`

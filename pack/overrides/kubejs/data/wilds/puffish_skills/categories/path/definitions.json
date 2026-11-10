@@ -2318,13 +2318,13 @@
   "cost": 2,
   "extra_description": "Ціна: 2 очки."
  },
- "cra_u_thrifty_crafter": {
-  "title": "Ощадливий майстер",
-  "description": "Велика навичка гілки «Майстер». Під час крафту з шансом 8% за рівень один інгредієнт повертається.",
+ "cra_u_smith_hands": {
+  "title": "Вправні руки коваля",
+  "description": "Велика навичка гілки «Майстер». Ремонт, поєднання й перейменування на ковадлі коштують на чверть менше рівнів досвіду за кожен рівень навички, а ковадло від вашої роботи не зношується.",
   "icon": {
    "type": "item",
    "data": {
-    "item": "minecraft:crafting_table"
+    "item": "minecraft:anvil"
    }
   },
   "frame": {
@@ -2337,20 +2337,20 @@
    {
     "type": "wilds_core:ability",
     "data": {
-     "ability": "thrifty_crafter"
+     "ability": "smith_hands"
     }
    }
   ],
   "cost": 3,
   "extra_description": "Ціна: 3 очки."
  },
- "cra_mastery_thrifty_crafter": {
-  "title": "Ощадливий майстер II",
-  "description": "Майстерність: «Ощадливий майстер» сильніша (2-й рівень).",
+ "cra_mastery_smith_hands": {
+  "title": "Вправні руки коваля II",
+  "description": "Майстерність: «Вправні руки коваля» сильніша (2-й рівень).",
   "icon": {
    "type": "item",
    "data": {
-    "item": "minecraft:crafting_table"
+    "item": "minecraft:anvil"
    }
   },
   "frame": {
@@ -2363,7 +2363,7 @@
    {
     "type": "wilds_core:ability",
     "data": {
-     "ability": "thrifty_crafter"
+     "ability": "smith_hands"
     }
    }
   ],

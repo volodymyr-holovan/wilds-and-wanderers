@@ -1,6 +1,8 @@
 ---
 for: create:shaft, create:cogwheel, create:water_wheel
 keywords: Обертання
+category: q_create
+summary: Перша сила — водяне колесо. Поставте його так, щоб вода текла по лопатях, — воно крутиться саме. Від нього вал
 ---
 # Квест «Обертання»
 `Книга квестів → **Create**`

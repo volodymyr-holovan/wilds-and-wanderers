@@ -1,6 +1,8 @@
 ---
 for: farmersdelight:flint_knife
 keywords: Кремнієвий ніж
+category: q_survival
+summary: Farmer's Delight перетворює їжу на цілу кухню. Почніть із кремнієвого ножа: ним можна різати траву (дає волокн
 ---
 # Квест «Кремнієвий ніж»
 `Книга квестів → **Виживання**`

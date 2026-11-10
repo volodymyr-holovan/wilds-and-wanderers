@@ -1,6 +1,8 @@
 ---
 for: biome:aether:skyroot_forest, biome:aether:skyroot_woodland, biome:aether:skyroot_meadow, biome:aether:skyroot_grove
 keywords: Портал в Етер
+category: q_aether
+summary: Збудуйте рамку, як для порталу в Незер, але зі світлокаменю, і вилийте в неї воду — відкриється блакитний порт
 ---
 # Квест «Портал в Етер»
 `Книга квестів → **Етер**`

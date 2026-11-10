@@ -60,8 +60,13 @@ public final class WikiScreen extends Screen implements Page {
         this.parent = parent;
         this.data = WikiData.get();
         if (initialQuery != null) query = initialQuery;
+        // opened without a page to show: the page that was open when the wiki was closed, where it was scrolled to
+        Entry last = open == null && initialQuery == null ? data.entries.get(String.valueOf(History.get().last)) : null;
         if (open != null) show(open, false);
-        else showHome();
+        else if (last != null) {
+            show(last, false);
+            restoreScroll = History.get().lastScroll;
+        } else showHome();
         refreshRows();
     }
 
@@ -112,6 +117,7 @@ public final class WikiScreen extends Screen implements Page {
 
     @Override
     public void removed() {
+        History.get().setLast(current == null ? "" : current.key, pageScroll);
         cursor(false);
         super.removed();
     }
@@ -129,6 +135,8 @@ public final class WikiScreen extends Screen implements Page {
     }
 
     // ------------------------------------------------------------------ navigation
+
+    private double restoreScroll = -1;
 
     private void show(Entry e, boolean push) {
         if (push && current != e) {
@@ -327,6 +335,10 @@ public final class WikiScreen extends Screen implements Page {
             } catch (Throwable t) {
                 broken(e, t);
             }
+        }
+        if (restoreScroll >= 0) {
+            pageScroll = Math.max(0, Math.min(restoreScroll, Math.max(0, pageHeight - view())));
+            restoreScroll = -1;
         }
     }
 

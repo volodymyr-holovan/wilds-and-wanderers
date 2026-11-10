@@ -1,0 +1,681 @@
+{
+ "bosses": [
+  "minecraft:ender_dragon",
+  "minecraft:wither",
+  "minecraft:warden",
+  "minecraft:elder_guardian",
+  "twilightforest:naga",
+  "twilightforest:lich",
+  "twilightforest:minoshroom",
+  "twilightforest:hydra",
+  "twilightforest:knight_phantom",
+  "twilightforest:ur_ghast",
+  "twilightforest:alpha_yeti",
+  "twilightforest:snow_queen",
+  "aether:slider",
+  "aether:valkyrie_queen",
+  "aether:sun_spirit",
+  "cataclysm:netherite_monstrosity",
+  "cataclysm:ignis",
+  "cataclysm:ender_guardian",
+  "cataclysm:the_harbinger",
+  "cataclysm:the_leviathan",
+  "cataclysm:ancient_remnant",
+  "cataclysm:maledictus",
+  "cataclysm:scylla",
+  "mowziesmobs:ferrous_wroughtnaut",
+  "mowziesmobs:frostmaw",
+  "mowziesmobs:umvuthi",
+  "mowziesmobs:sculptor",
+  "iceandfire:fire_dragon",
+  "iceandfire:ice_dragon",
+  "iceandfire:lightning_dragon",
+  "iceandfire:hydra",
+  "iceandfire:gorgon",
+  "iceandfire:cyclops",
+  "iceandfire:sea_serpent",
+  "alexscaves:luxtructosaurus",
+  "alexscaves:tremorzilla",
+  "alexscaves:forsaken",
+  "alexscaves:hullbreaker",
+  "alexscaves:atlatitan",
+  "alexsmobs:void_worm",
+  "alexsmobs:warped_mosco",
+  "alexsmobs:farseer",
+  "irons_spellbooks:dead_king",
+  "irons_spellbooks:fire_boss",
+  "ars_nouveau:wilden_boss",
+  "friendsandfoes:wildfire",
+  "netherexotics:moloch",
+  "hybrid_aquatic:karkinos",
+  "upgrade_aquatic:great_thrasher"
+ ],
+ "categories": [
+  {
+   "id": "start",
+   "top": true,
+   "title": "Початок гри й сервер",
+   "icon": "minecraft:compass",
+   "note": "Як користуватися вікі, команди сервера, квести, навички, гроші, спорядження.",
+   "keywords": [
+    "початок",
+    "старт",
+    "новачок",
+    "основи"
+   ],
+   "sections": [
+    {
+     "title": "Перші кроки",
+     "pages": [
+      "wiki_help",
+      "server",
+      "friends",
+      "quest_givers",
+      "skills",
+      "money"
+     ]
+    },
+    {
+     "title": "Зручності збірки",
+     "pages": [
+      "equipment",
+      "finder",
+      "copper_golem",
+      "gathering",
+      "tents",
+      "seasons",
+      "music",
+      "links"
+     ]
+    },
+    {
+     "children": [
+      "faq",
+      "quests"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "faq",
+   "top": true,
+   "title": "Часті питання",
+   "icon": "minecraft:writable_book",
+   "note": "Короткі відповіді: як зняти кислотний дощ, як потрапити до печер тролів, де шукати печери Alex's Caves…",
+   "keywords": [
+    "питання",
+    "faq",
+    "як",
+    "чому",
+    "де знайти"
+   ],
+   "sections": [
+    {
+     "articles": "faq"
+    }
+   ]
+  },
+  {
+   "id": "walkthrough",
+   "top": true,
+   "title": "Проходження: виміри й пригоди",
+   "icon": "minecraft:filled_map",
+   "note": "Покрокові гайди: Сутінковий ліс, Етер, Незер, Енд, печери, дракони, катаклізм.",
+   "keywords": [
+    "проходження",
+    "гайд",
+    "прогресія",
+    "виміри",
+    "пригоди"
+   ],
+   "sections": [
+    {
+     "title": "Виміри",
+     "articles": "dimensions"
+    },
+    {
+     "title": "Пригоди у звичайному світі",
+     "articles": "adventures",
+     "pages": [
+      "dragons",
+      "world_tiers",
+      "peoples",
+      "seas",
+      "colonies"
+     ]
+    },
+    {
+     "children": [
+      "bosses",
+      "quests"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bosses",
+   "top": true,
+   "title": "Боси",
+   "icon": "minecraft:wither_skeleton_skull",
+   "note": "Усі боси збірки: де шукати, як викликати, що падає.",
+   "keywords": [
+    "бос",
+    "боси",
+    "boss"
+   ],
+   "sections": [
+    {
+     "title": "Гайди по босах",
+     "articles": "bosses"
+    },
+    {
+     "title": "Cataclysm",
+     "articles": "path:guides/cataclysm/"
+    },
+    {
+     "title": "Усі боси",
+     "query": "entity:boss"
+    }
+   ]
+  },
+  {
+   "id": "mobs",
+   "top": true,
+   "title": "Істоти",
+   "icon": "minecraft:creeper_head",
+   "note": "Вороги, тварини, морські мешканці, народи. На сторінці кожної — де живе й що з неї падає.",
+   "keywords": [
+    "моби",
+    "істоти",
+    "тварини",
+    "вороги",
+    "монстри"
+   ],
+   "sections": [
+    {
+     "title": "Народи й приручення",
+     "pages": [
+      "peoples",
+      "dragons",
+      "quest_givers"
+     ],
+     "articles": "mobs"
+    },
+    {
+     "title": "Боси",
+     "children": [
+      "bosses"
+     ]
+    },
+    {
+     "title": "Вороги",
+     "query": "entity:monster"
+    },
+    {
+     "title": "Тварини й мирні істоти",
+     "query": "entity:creature"
+    },
+    {
+     "title": "Водні мешканці",
+     "query": "entity:water"
+    },
+    {
+     "title": "Інші",
+     "query": "entity:ambient"
+    }
+   ]
+  },
+  {
+   "id": "world",
+   "top": true,
+   "title": "Світ: біоми та споруди",
+   "icon": "minecraft:grass_block",
+   "note": "Біоми кожного виміру й споруди в них: що там живе, що лежить у скринях.",
+   "keywords": [
+    "біоми",
+    "споруди",
+    "структури",
+    "виміри",
+    "світ"
+   ],
+   "sections": [
+    {
+     "title": "Про генерацію світу",
+     "articles": "world"
+    },
+    {
+     "title": "Біоми звичайного світу",
+     "query": "biome:minecraft:overworld"
+    },
+    {
+     "title": "Біоми Сутінкового лісу",
+     "query": "biome:twilightforest:twilight_forest"
+    },
+    {
+     "title": "Біоми Етеру",
+     "query": "biome:aether:the_aether"
+    },
+    {
+     "title": "Біоми Незеру",
+     "query": "biome:minecraft:the_nether"
+    },
+    {
+     "title": "Біоми Енду",
+     "query": "biome:minecraft:the_end"
+    },
+    {
+     "title": "Споруди звичайного світу",
+     "query": "structure:minecraft:overworld"
+    },
+    {
+     "title": "Споруди Сутінкового лісу",
+     "query": "structure:twilightforest:twilight_forest"
+    },
+    {
+     "title": "Споруди Етеру",
+     "query": "structure:aether:the_aether"
+    },
+    {
+     "title": "Споруди Незеру",
+     "query": "structure:minecraft:the_nether"
+    },
+    {
+     "title": "Споруди Енду",
+     "query": "structure:minecraft:the_end"
+    }
+   ]
+  },
+  {
+   "id": "gear",
+   "top": true,
+   "title": "Зброя, броня, інструменти",
+   "icon": "minecraft:diamond_sword",
+   "note": "Уся зброя ближнього й далекого бою, броня за частинами, щити, інструменти, самоцвіти.",
+   "keywords": [
+    "зброя",
+    "броня",
+    "інструменти",
+    "мечі",
+    "луки",
+    "щити",
+    "спорядження"
+   ],
+   "sections": [
+    {
+     "title": "Покращення спорядження",
+     "pages": [
+      "gems",
+      "world_tiers",
+      "equipment"
+     ],
+     "articles": "gear"
+    },
+    {
+     "title": "Apotheosis",
+     "articles": "path:guides/apotheosis/"
+    },
+    {
+     "title": "Зброя ближнього бою",
+     "query": "item:melee"
+    },
+    {
+     "title": "Сокири",
+     "query": "item:axe"
+    },
+    {
+     "title": "Зброя далекого бою",
+     "query": "item:ranged"
+    },
+    {
+     "title": "Стріли й набої",
+     "query": "item:ammo"
+    },
+    {
+     "title": "Щити",
+     "query": "item:shield"
+    },
+    {
+     "title": "Шоломи",
+     "query": "item:armor_head"
+    },
+    {
+     "title": "Нагрудники",
+     "query": "item:armor_chest"
+    },
+    {
+     "title": "Поножі",
+     "query": "item:armor_legs"
+    },
+    {
+     "title": "Чоботи",
+     "query": "item:armor_feet"
+    },
+    {
+     "title": "Кирки",
+     "query": "item:pickaxe"
+    },
+    {
+     "title": "Лопати",
+     "query": "item:shovel"
+    },
+    {
+     "title": "Мотики",
+     "query": "item:hoe"
+    },
+    {
+     "title": "Інші інструменти",
+     "query": "item:tool"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "top": true,
+   "title": "Їжа, зілля, ефекти",
+   "icon": "minecraft:bread",
+   "note": "Уся їжа й напої, кухня Farmer's Delight, зілля й що робить кожен ефект.",
+   "keywords": [
+    "їжа",
+    "зілля",
+    "ефекти",
+    "кухня",
+    "напої"
+   ],
+   "sections": [
+    {
+     "title": "Кухня",
+     "articles": "path:guides/farmersdelight/",
+     "pages": [
+      "topic:wilds_wiki:mod/farmersdelight",
+      "topic:wilds_wiki:mod/oceansdelight"
+     ]
+    },
+    {
+     "title": "Їжа",
+     "query": "item:food"
+    },
+    {
+     "title": "Зілля",
+     "query": "item:potion"
+    },
+    {
+     "title": "Корисні ефекти",
+     "query": "effect:beneficial"
+    },
+    {
+     "title": "Шкідливі ефекти",
+     "query": "effect:harmful"
+    },
+    {
+     "title": "Нейтральні ефекти",
+     "query": "effect:neutral"
+    }
+   ]
+  },
+  {
+   "id": "magic",
+   "top": true,
+   "title": "Магія й зачарування",
+   "icon": "minecraft:enchanted_book",
+   "note": "Що робить кожне зачарування, стіл і бібліотека зачарувань, заклинання, мана.",
+   "keywords": [
+    "магія",
+    "зачарування",
+    "заклинання",
+    "мана",
+    "чари"
+   ],
+   "sections": [
+    {
+     "title": "Зачарування",
+     "articles": "path:guides/enchanting/",
+     "pages": [
+      "item:minecraft:enchanted_book",
+      "topic:wilds_wiki:mod/apothic_enchanting"
+     ]
+    },
+    {
+     "title": "Школи магії",
+     "pages": [
+      "topic:wilds_wiki:mod/irons_spellbooks",
+      "topic:wilds_wiki:mod/ars_nouveau",
+      "topic:wilds_wiki:mod/ars_n_spells"
+     ],
+     "articles": "magic"
+    },
+    {
+     "title": "Усі зачарування",
+     "query": "enchantment:all"
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "top": true,
+   "title": "Механізми й техніка",
+   "icon": "create:cogwheel",
+   "note": "Create та його доповнення, Mekanism, Applied Energistics 2, кораблі й літальні машини.",
+   "keywords": [
+    "техніка",
+    "механізми",
+    "автоматизація",
+    "машини",
+    "енергія"
+   ],
+   "sections": [
+    {
+     "title": "Моди",
+     "pages": [
+      "topic:wilds_wiki:mod/create",
+      "topic:wilds_wiki:mod/createaddition",
+      "topic:wilds_wiki:mod/create_enchantment_industry",
+      "topic:wilds_wiki:mod/create_dragons_plus",
+      "topic:wilds_wiki:mod/copycats",
+      "topic:wilds_wiki:mod/aeronautics",
+      "topic:wilds_wiki:mod/simulated",
+      "topic:wilds_wiki:mod/offroad",
+      "topic:wilds_wiki:mod/mekanism",
+      "topic:wilds_wiki:mod/mekanismgenerators",
+      "topic:wilds_wiki:mod/mekanismtools",
+      "topic:wilds_wiki:mod/ae2",
+      "topic:wilds_wiki:mod/appmek",
+      "topic:wilds_wiki:mod/ae2wtlib"
+     ]
+    },
+    {
+     "title": "Гайди",
+     "articles": "tech"
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "top": true,
+   "title": "Дім, сховища, подорожі",
+   "icon": "minecraft:chest",
+   "note": "Скрині й рюкзаки, сортування, шляхові камені, намети, кораблі, колонії.",
+   "keywords": [
+    "сховище",
+    "скрині",
+    "рюкзак",
+    "подорожі",
+    "дім",
+    "транспорт"
+   ],
+   "sections": [
+    {
+     "title": "Сховища",
+     "pages": [
+      "copper_golem",
+      "finder",
+      "topic:wilds_wiki:mod/sophisticatedstorage",
+      "topic:wilds_wiki:mod/sophisticatedbackpacks"
+     ]
+    },
+    {
+     "title": "Подорожі",
+     "articles": "path:guides/waystones/",
+     "pages": [
+      "tents",
+      "seas",
+      "topic:wilds_wiki:mod/waystones",
+      "topic:wilds_wiki:mod/smallships"
+     ]
+    },
+    {
+     "title": "Поселення",
+     "pages": [
+      "colonies",
+      "peoples",
+      "topic:wilds_wiki:mod/minecolonies",
+      "topic:wilds_wiki:mod/easy_villagers",
+      "topic:wilds_wiki:mod/villagersplus",
+      "topic:wilds_wiki:mod/guardvillagers"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mods",
+   "top": true,
+   "title": "Моди",
+   "icon": "minecraft:bookshelf",
+   "note": "Кожен мод збірки: що він додає, його істоти, предмети, біоми й гайди.",
+   "keywords": [
+    "моди",
+    "мод",
+    "mods"
+   ],
+   "sections": [
+    {
+     "query": "mods"
+    }
+   ]
+  },
+  {
+   "id": "quests",
+   "title": "Квести за розділами",
+   "icon": "ftbquests:book",
+   "note": "Підказки до кожного квесту з книги квестів (J): де, наскільки небезпечно, що взяти.",
+   "keywords": [
+    "квести",
+    "завдання",
+    "книга квестів"
+   ],
+   "sections": [
+    {
+     "title": "Перші кроки",
+     "articles": "q_start"
+    },
+    {
+     "title": "Основи",
+     "articles": "q_welcome"
+    },
+    {
+     "title": "Виживання",
+     "articles": "q_survival"
+    },
+    {
+     "title": "Create",
+     "articles": "q_create"
+    },
+    {
+     "title": "Create: додатки",
+     "articles": "q_create_addons"
+    },
+    {
+     "title": "Mekanism",
+     "articles": "q_mekanism"
+    },
+    {
+     "title": "AE2",
+     "articles": "q_ae2"
+    },
+    {
+     "title": "Ars Nouveau",
+     "articles": "q_ars"
+    },
+    {
+     "title": "Iron's Spells",
+     "articles": "q_irons"
+    },
+    {
+     "title": "Зачарування",
+     "articles": "q_apotheosis"
+    },
+    {
+     "title": "Сутінковий ліс",
+     "articles": "q_twilight"
+    },
+    {
+     "title": "Етер",
+     "articles": "q_aether"
+    },
+    {
+     "title": "Дракони",
+     "articles": "q_dragons"
+    },
+    {
+     "title": "Печери Алекса",
+     "articles": "q_caves"
+    },
+    {
+     "title": "Великі боси",
+     "articles": "q_bosses"
+    },
+    {
+     "title": "Зв'язки світу",
+     "articles": "q_links"
+    },
+    {
+     "title": "Моря і кораблі",
+     "articles": "q_seas"
+    },
+    {
+     "title": "Народи",
+     "articles": "q_peoples"
+    },
+    {
+     "title": "Села й колонії",
+     "articles": "q_colonies"
+    },
+    {
+     "title": "Похідне життя",
+     "articles": "q_camping"
+    },
+    {
+     "title": "Дика природа",
+     "articles": "q_wildlife"
+    },
+    {
+     "title": "Незер і Енд",
+     "articles": "q_nether_end"
+    },
+    {
+     "title": "Кухня",
+     "articles": "q_kitchen"
+    },
+    {
+     "title": "Речі на місцях",
+     "articles": "q_storage"
+    },
+    {
+     "title": "Звіринець",
+     "articles": "q_bestiary"
+    },
+    {
+     "title": "Село й торгівля",
+     "articles": "q_village"
+    },
+    {
+     "title": "Гілки навичок",
+     "articles": "q_paths"
+    },
+    {
+     "title": "Доручення",
+     "articles": "q_errands"
+    }
+   ]
+  }
+ ]
+}

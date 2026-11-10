@@ -1,6 +1,8 @@
 ---
 for: mekanismgenerators:heat_generator, mekanism:basic_universal_cable, mekanism:basic_energy_cube
 keywords: Перша енергія
+category: q_mekanism
+summary: Тепловий генератор дає енергію від палива або від лави поруч; сонячний — удень; універсальні кабелі несуть ене
 ---
 # Квест «Перша енергія»
 `Книга квестів → **Mekanism**`

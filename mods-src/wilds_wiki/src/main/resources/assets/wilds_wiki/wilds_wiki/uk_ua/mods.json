@@ -1,0 +1,555 @@
+{
+ "create": {
+  "name": "Create",
+  "note": "Механізми на обертанні: вали, шестерні, конвеєри, преси, поїзди. Основа автоматизації збірки.",
+  "keywords": [
+   "механізми",
+   "автоматизація",
+   "шестерня"
+  ],
+  "icon": "create:cogwheel",
+  "text": [
+   "# З чого почати",
+   "- Усе крутиться від **обертання**: водяне колесо чи вітряк дає оберти, вали й шестерні передають їх машинам.",
+   "- Перший верстат — [[create:andesite_alloy|андезитовий сплав]] і [[create:mechanical_press]].",
+   "- Наведіть мишу на будь-яку деталь Create і **утримуйте W**: гра покаже анімовану інструкцію (Ponder).",
+   "- Розділи квестів «Create» у книзі квестів (J) ведуть крок за кроком: [[wilds_wiki:cat/quests|Квести за розділами]]."
+  ]
+ },
+ "createaddition": {
+  "name": "Create Crafts & Additions",
+  "note": "Електрика для Create: генератор і мотор, що перетворюють обертання на енергію й назад.",
+  "keywords": []
+ },
+ "create_enchantment_industry": {
+  "name": "Create: Enchantment Industry",
+  "note": "Автоматичне зачарування й рідкий досвід для Create.",
+  "keywords": []
+ },
+ "create_dragons_plus": {
+  "name": "Create: Dragons Plus",
+  "note": "Доповнення Create: нові способи обробки, зокрема подихом дракона.",
+  "keywords": []
+ },
+ "copycats": {
+  "name": "Create: Copycats+",
+  "note": "Блоки-хамелеони: сходи, плити й панелі, що набувають вигляду будь-якого блока.",
+  "keywords": []
+ },
+ "aeronautics": {
+  "name": "Create Aeronautics",
+  "note": "Літальні апарати з блоків: повітряні кулі, гвинти, дирижаблі.",
+  "keywords": [
+   "дирижабль",
+   "літак"
+  ]
+ },
+ "simulated": {
+  "name": "Simulated",
+  "note": "Фізика для машин Create Aeronautics: рухомі конструкції, канати, шарніри.",
+  "keywords": []
+ },
+ "offroad": {
+  "name": "Offroad",
+  "note": "Наземні машини на колесах для Create Aeronautics.",
+  "keywords": []
+ },
+ "mekanism": {
+  "name": "Mekanism",
+  "note": "Техніка високого рівня: переробка руди в кілька разів вигідніше, енергія, гази, ядерний реактор.",
+  "keywords": [
+   "техніка",
+   "енергія"
+  ],
+  "icon": "mekanism:steel_casing",
+  "text": [
+   "# З чого почати",
+   "- Перші кроки: [[mekanism:metallurgic_infuser]] для сталі, далі [[mekanism:enrichment_chamber]] — подвоює руду.",
+   "- Машинам потрібна енергія: почніть із [[mekanismgenerators:heat_generator]] або вітряка.",
+   "- Ланцюжок переробки руди росте до ×5; кожен крок описано в розділі квестів «Mekanism»."
+  ]
+ },
+ "mekanismgenerators": {
+  "name": "Mekanism: Generators",
+  "note": "Генератори Mekanism: сонячні, вітрові, газові, турбіна й реактори.",
+  "keywords": []
+ },
+ "mekanismtools": {
+  "name": "Mekanism: Tools",
+  "note": "Броня та інструменти з матеріалів Mekanism: бронза, сталь, рафінований обсидіан.",
+  "keywords": []
+ },
+ "ae2": {
+  "name": "Applied Energistics 2",
+  "note": "Цифрове сховище: усі речі в одній мережі з пошуком, автокрафтом і бездротовим доступом.",
+  "keywords": [
+   "мережа",
+   "автокрафт"
+  ],
+  "icon": "ae2:controller",
+  "text": [
+   "# З чого почати",
+   "- Шукайте **метеорити**: у них кристали церту й преси для процесорів. Компас метеоритів веде до найближчого.",
+   "- Основа мережі: [[ae2:controller]], накопичувач із комірками й термінал.",
+   "- У грі є вбудований довідник AE2: утримуйте G, навівши мишу на предмет мода."
+  ]
+ },
+ "appmek": {
+  "name": "Applied Mekanistics",
+  "note": "Зберігання газів і речовин Mekanism у мережі AE2.",
+  "keywords": []
+ },
+ "ae2wtlib": {
+  "name": "AE2WTLib",
+  "note": "Бездротові термінали AE2 з додатковими можливостями.",
+  "keywords": []
+ },
+ "twilightforest": {
+  "name": "Сутінковий ліс",
+  "note": "Окремий вимір вічних сутінків з вісьмома босами, лабіринтами й замками. Проходиться по порядку.",
+  "keywords": [
+   "twilight forest",
+   "сутінковий",
+   "тф"
+  ],
+  "icon": "twilightforest:naga_trophy",
+  "text": [
+   "# З чого почати",
+   "- Портал: яма 2×2 з водою, обсаджена квітами, і діамант у воду.",
+   "- Вимір проходять по порядку: кожен бос відкриває наступні біоми. Увесь шлях — у статті [[wilds_wiki:guides/progress/twilight_forest|Сутінковий ліс: проходження]].",
+   "- [[twilightforest:magic_map]] показує всі великі споруди довкола.",
+   "> Якщо біом вас ранить або над горами йде кислотний дощ — це не помилка, а порядок проходження: див. [[wilds_wiki:guides/faq/biome_locked|Чому мене ранить біом]]."
+  ]
+ },
+ "aether": {
+  "name": "Етер",
+  "note": "Вимір небесних островів над хмарами: три підземелля з босами, літаючі тварини, особлива зброя.",
+  "keywords": [
+   "aether",
+   "етер",
+   "ефір",
+   "небо"
+  ],
+  "icon": "aether:skyroot_sapling",
+  "text": [
+   "# З чого почати",
+   "- Портал: рамка зі світлокаменю й відро води всередину.",
+   "- Візьміть парашут: падіння з острова закінчується в небі звичайного світу.",
+   "- Три підземелля з босами й ключами від скарбниць: [[wilds_wiki:guides/progress/aether|Етер: проходження]]."
+  ]
+ },
+ "alexscaves": {
+  "name": "Alex's Caves",
+  "note": "Шість величезних печерних біомів під землею: первісні з динозаврами, магнітні, токсичні, безодня, цукрові й занедбані.",
+  "keywords": [
+   "печери",
+   "динозаври",
+   "alex's caves"
+  ],
+  "icon": "alexscaves:cave_map",
+  "text": [
+   "# З чого почати",
+   "- Печери шукають так: [[alexscaves:cave_tablet]] зі скрині → [[alexscaves:cave_map]] → копати. Докладно: [[wilds_wiki:guides/progress/alexscaves|Печери Alex's Caves]].",
+   "- [[alexscaves:cave_book]] розповідає про кожну істоту й предмет печер.",
+   "- У кожній печері свої небезпеки: радіація в токсичних, темрява в занедбаних, тиск і хижаки в безодні. Читайте сторінку біому перед походом."
+  ]
+ },
+ "alexsmobs": {
+  "name": "Alex's Mobs",
+  "note": "Понад 80 нових тварин з усього світу, кожна з власною поведінкою й користю.",
+  "keywords": [
+   "тварини",
+   "alex's mobs"
+  ],
+  "icon": "alexsmobs:animal_dictionary"
+ },
+ "iceandfire": {
+  "name": "Ice and Fire",
+  "note": "Дракони трьох стихій, міфічні істоти (гідри, горгони, циклопи, сирени) і спорядження з них.",
+  "keywords": [
+   "дракони",
+   "міфи"
+  ],
+  "icon": "iceandfire:dragonegg_red",
+  "text": [
+   "# З чого почати",
+   "- [[iceandfire:bestiary]] — довідник: сторінки відкриваються рукописними нотатками, які знаходять у скринях.",
+   "- Дракони трьох стихій живуть у лігвах під землею (дорослі, зі скарбами) і в гніздах на поверхні (молоді). Усе про них: [[wilds_wiki:dragons|Дракони]].",
+   "- Міфічні істоти мають власні споруди: храми горгон на узбережжі, печери циклопів, лігва гідр у болотах, острови сирен."
+  ]
+ },
+ "cataclysm": {
+  "name": "L_Ender's Cataclysm",
+  "note": "Найскладніші боси збірки у власних спорудах і легендарна зброя з них.",
+  "keywords": [
+   "катаклізм",
+   "боси"
+  ],
+  "icon": "cataclysm:ignitium_ingot",
+  "text": [
+   "# З чого почати",
+   "- Кожен бос живе у власній споруді, до якої веде особливе **око**: воно летить до найближчої такої споруди, як око Енду.",
+   "- Гайди, як знайти й викликати кожного, — у розділі [[wilds_wiki:cat/bosses|Боси]].",
+   "- Після перемоги бій можна повторити через [[cataclysm:boss_respawner]]."
+  ]
+ },
+ "mowziesmobs": {
+  "name": "Mowzie's Mobs",
+  "note": "Кілька дуже виразних босів і істот: Залізний кривдник, Морозна паща, Умвуті, Скульптор.",
+  "keywords": [
+   "mowzie"
+  ]
+ },
+ "irons_spellbooks": {
+  "name": "Iron's Spells 'n Spellbooks",
+  "note": "Магія із заклинаннями у книгах: мана, сувої, школи вогню, льоду, блискавки, крові та інші.",
+  "keywords": [
+   "заклинання",
+   "мана",
+   "магія"
+  ],
+  "icon": "irons_spellbooks:copper_spell_book",
+  "text": [
+   "# З чого почати",
+   "- Заклинання записані на **сувоях**: їх знаходять у скринях, купують або пишуть на [[irons_spellbooks:scroll_forge]].",
+   "- Сувої вставляють у **книгу заклинань** на [[irons_spellbooks:inscription_table]]; з книги чаклують без витрати сувою.",
+   "- Мана відновлюється сама; її запас і силу шкіл підвищують броня, кільця й навички гілки «Маг»."
+  ]
+ },
+ "ars_nouveau": {
+  "name": "Ars Nouveau",
+  "note": "Магія, де заклинання складають із гліфів, а джерело дає силу машинам і фамільярам.",
+  "keywords": [
+   "заклинання",
+   "гліфи",
+   "джерело"
+  ],
+  "icon": "ars_nouveau:novice_spell_book",
+  "text": [
+   "# З чого почати",
+   "- [[ars_nouveau:novice_spell_book]] і [[ars_nouveau:worn_notebook]] — книга заклинань і довідник.",
+   "- Заклинання складають із **гліфів**: форма (доторк, снаряд, на себе) + ефекти + посилювачі.",
+   "- Машинам потрібне **джерело**: його збирають джерелозбірники з життя довкола й зберігають у глеках."
+  ]
+ },
+ "ars_n_spells": {
+  "name": "Ars 'n' Spells",
+  "note": "З'єднує ману Ars Nouveau та Iron's Spells в одну.",
+  "keywords": []
+ },
+ "apotheosis": {
+  "name": "Apotheosis",
+  "note": "Рідкісність спорядження, самоцвіти в гніздах, міні-боси й світові рівні складності.",
+  "keywords": [
+   "самоцвіти",
+   "рідкісність",
+   "світові рівні"
+  ],
+  "icon": "apotheosis:gem_dust",
+  "text": [
+   "# З чого почати",
+   "- Спорядження має **рідкість** і **гнізда** для самоцвітів: [[wilds_wiki:gems|Самоцвіти, гнізда й рідкісна зброя]].",
+   "- Складність світу росте **світовими рівнями**: [[wilds_wiki:world_tiers|як перейти на наступний]]."
+  ]
+ },
+ "apothic_enchanting": {
+  "name": "Apothic Enchanting",
+  "note": "Перероблений стіл зачарувань: вищі рівні, нові зачарування, бібліотека для зберігання книг.",
+  "keywords": [
+   "зачарування"
+  ]
+ },
+ "minecolonies": {
+  "name": "MineColonies",
+  "note": "Власне місто з найнятими жителями: будівельники, шахтарі, фермери, варта.",
+  "keywords": [
+   "колонія",
+   "місто"
+  ],
+  "icon": "minecolonies:blockhuttownhall",
+  "text": [
+   "# З чого почати",
+   "- Колонію засновують табором чи кораблем постачання й ратушею: [[wilds_wiki:colonies|Колонії й найняті робітники]].",
+   "- Будівельник зводить усі будівлі за схемами; ви лише даєте матеріали й ставите завдання."
+  ]
+ },
+ "domum_ornamentum": {
+  "name": "Domum Ornamentum",
+  "note": "Декоративні блоки для будівель MineColonies з будь-яких матеріалів.",
+  "keywords": []
+ },
+ "structurize": {
+  "name": "Structurize",
+  "note": "Інструменти для схем будівель MineColonies.",
+  "keywords": []
+ },
+ "multipiston": {
+  "name": "Multi-Piston",
+  "note": "Поршень MineColonies, що рухає блоки на кілька клітин у будь-який бік.",
+  "keywords": []
+ },
+ "farmersdelight": {
+  "name": "Farmer's Delight",
+  "note": "Кухня: казан, дошка для нарізання, нові культури й десятки страв.",
+  "keywords": [
+   "кухня",
+   "їжа",
+   "готування"
+  ],
+  "icon": "farmersdelight:cooking_pot",
+  "text": [
+   "# З чого почати",
+   "- [[farmersdelight:cutting_board]] і ніж — для нарізання, [[farmersdelight:cooking_pot]] — для страв.",
+   "- Ситні страви дають ефекти **насичення** та **затишку** надовго. Гайди — у розділі [[wilds_wiki:cat/food|Їжа, зілля, ефекти]]."
+  ]
+ },
+ "oceansdelight": {
+  "name": "Ocean's Delight",
+  "note": "Морські страви для Farmer's Delight.",
+  "keywords": []
+ },
+ "hybrid_aquatic": {
+  "name": "Hybrid Aquatic",
+  "note": "Сотні видів риб, акул і морських істот, нові морські біоми й риболовля.",
+  "keywords": [
+   "риба",
+   "море",
+   "акули"
+  ]
+ },
+ "upgrade_aquatic": {
+  "name": "Upgrade Aquatic",
+  "note": "Оновлені океани: нові корали, водорості, медузи, трешери.",
+  "keywords": [
+   "океан"
+  ]
+ },
+ "fishofthieves": {
+  "name": "Fish of Thieves",
+  "note": "Риби із Sea of Thieves з рідкісними різновидами та морські пости.",
+  "keywords": [
+   "риба"
+  ]
+ },
+ "naturalist": {
+  "name": "Naturalist",
+  "note": "Дикі тварини лісів і саван: ведмеді, олені, леви, слони, птахи.",
+  "keywords": [
+   "тварини"
+  ]
+ },
+ "friendsandfoes": {
+  "name": "Friends & Foes",
+  "note": "Істоти з голосувань Minecraft: мідний голем, льодовик, ілюзіоніст, мох-голем.",
+  "keywords": [
+   "мідний голем"
+  ],
+  "icon": "minecraft:copper_block"
+ },
+ "goblins_tyranny": {
+  "name": "Goblin's Tyranny",
+  "note": "Гобліни: табори, вояки, торговці й власна валюта.",
+  "keywords": [
+   "гобліни"
+  ],
+  "icon": "goblins_tyranny:coin"
+ },
+ "kobolds": {
+  "name": "Kobolds",
+  "note": "Кобольди — підземний народ ковалів і торговців.",
+  "keywords": [
+   "кобольди"
+  ]
+ },
+ "orc_hut": {
+  "name": "Orc Hut",
+  "note": "Хатини орків у світі.",
+  "keywords": [
+   "орки"
+  ]
+ },
+ "guardvillagers": {
+  "name": "Guard Villagers",
+  "note": "Вартові в селах, яких можна споряджати й наймати.",
+  "keywords": [
+   "вартові"
+  ]
+ },
+ "villagersplus": {
+  "name": "VillagersPlus",
+  "note": "Нові професії селян: алхімік, садівник, океанограф, окультист.",
+  "keywords": [
+   "селяни"
+  ]
+ },
+ "easy_villagers": {
+  "name": "Easy Villagers",
+  "note": "Блоки для зручної торгівлі й розведення селян без загонів.",
+  "keywords": [
+   "селяни",
+   "торгівля"
+  ]
+ },
+ "bountiful": {
+  "name": "Bountiful",
+  "note": "Дошка оголошень у селах: завдання за нагороду.",
+  "keywords": [
+   "завдання"
+  ]
+ },
+ "smallships": {
+  "name": "Small Ships",
+  "note": "Вітрильники з гарматами й трюмом: коги, бриги, галери, драккари.",
+  "keywords": [
+   "кораблі",
+   "вітрильник"
+  ],
+  "icon": "smallships:oak_cog"
+ },
+ "waystones": {
+  "name": "Waystones",
+  "note": "Шляхові камені для швидких подорожей між відвіданими місцями.",
+  "keywords": [
+   "телепорт",
+   "шляховий камінь"
+  ],
+  "icon": "waystones:waystone"
+ },
+ "sophisticatedstorage": {
+  "name": "Sophisticated Storage",
+  "note": "Скрині, бочки й шалкери з рівнями та покращеннями.",
+  "keywords": [
+   "скрині",
+   "сховище"
+  ]
+ },
+ "sophisticatedbackpacks": {
+  "name": "Sophisticated Backpacks",
+  "note": "Рюкзаки з покращеннями: магніт, сортування, крафт, стискання.",
+  "keywords": [
+   "рюкзак"
+  ]
+ },
+ "sophisticatedcore": {
+  "hide": true
+ },
+ "nomadictents": {
+  "name": "Nomadic Tents",
+  "note": "Юрти, типі й шатра, що згортаються в предмет разом із вмістом.",
+  "keywords": [
+   "намет",
+   "юрта"
+  ]
+ },
+ "simplytents": {
+  "name": "SimplyTents",
+  "note": "Прості намети й спальники для ночівлі в дорозі.",
+  "keywords": [
+   "намет"
+  ]
+ },
+ "comforts": {
+  "name": "Comforts",
+  "note": "Спальні мішки й гамаки: сон без зміни точки відродження.",
+  "keywords": [
+   "спальник",
+   "гамак"
+  ]
+ },
+ "sereneseasons": {
+  "name": "Serene Seasons",
+  "note": "Пори року: змінюються погода, колір листя й ріст урожаю.",
+  "keywords": [
+   "пори року"
+  ]
+ },
+ "enderscape": {
+  "name": "Enderscape",
+  "note": "Оновлений Енд: нові біоми, рослини, істоти й матеріали.",
+  "keywords": [
+   "енд"
+  ]
+ },
+ "eternalnether": {
+  "name": "Eternal Nether",
+  "note": "Нові споруди й істоти Незеру: катакомби, цитаделі, маєтки піґлінів.",
+  "keywords": [
+   "незер"
+  ]
+ },
+ "netherdepthsupgrade": {
+  "name": "Nether Depths Upgrade",
+  "note": "Життя в лавових морях Незеру: риби, рослини, риболовля в лаві.",
+  "keywords": [
+   "незер",
+   "лава",
+   "риба"
+  ]
+ },
+ "netherexotics": {
+  "name": "Nether Exotics",
+  "note": "Екзотичні плоди й рослини Незеру.",
+  "keywords": [
+   "незер",
+   "плоди"
+  ]
+ },
+ "seamlessores": {
+  "name": "Seamless Ores",
+  "note": "Руда в будь-якому камені виглядає як частина цього каменю.",
+  "keywords": []
+ },
+ "gew2": {
+  "name": "Ground Elements World",
+  "note": "Камінці, гілки й дрібниці на землі, що оживляють краєвид.",
+  "keywords": []
+ },
+ "lootr": {
+  "name": "Lootr",
+  "note": "Скрині зі здобиччю дають власний вміст кожному гравцю.",
+  "keywords": [
+   "здобич",
+   "скрині"
+  ]
+ },
+ "explorerscompass": {
+  "name": "Explorer's Compass",
+  "note": "Компас, що шукає будь-яку споруду за назвою.",
+  "keywords": [
+   "компас",
+   "споруди"
+  ],
+  "icon": "explorerscompass:explorerscompass"
+ },
+ "naturescompass": {
+  "name": "Nature's Compass",
+  "note": "Компас, що шукає будь-який біом за назвою.",
+  "keywords": [
+   "компас",
+   "біоми"
+  ],
+  "icon": "naturescompass:naturescompass"
+ },
+ "ftbquests": {
+  "name": "FTB Quests",
+  "note": "Книга квестів (клавіша J).",
+  "keywords": [
+   "квести"
+  ]
+ },
+ "patchouli": {
+  "hide": true
+ },
+ "guideme": {
+  "hide": true
+ },
+ "hapi": {
+  "hide": true
+ },
+ "ftblibrary": {
+  "hide": true
+ },
+ "irons_lib": {
+  "hide": true
+ }
+}

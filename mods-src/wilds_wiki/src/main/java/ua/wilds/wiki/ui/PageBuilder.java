@@ -74,8 +74,17 @@ public final class PageBuilder {
         PageBuilder b = new PageBuilder(data);
         b.out.add(new Header(e));
         b.out.add(new Spacer(4));
-        for (Article a : e.articles) b.article(a);
+        List<Entry> guides = new ArrayList<>();
+        for (Article a : e.articles) {
+            if (b.inline(a, e)) b.article(a);
+            else if (a.page != null && !guides.contains(a.page)) guides.add(a.page);
+        }
+        b.guides = guides;
         try {
+            if (e.special != null) {
+                if (e.special.startsWith("cat:")) b.category(data.categories.get(e.special.substring(4)));
+                else if (e.special.startsWith("mod:")) b.mod(e, e.special.substring(4));
+            }
             switch (e.kind) {
                 case ITEM -> b.item(e);
                 case BLOCK -> b.blockOnly(e);
@@ -89,11 +98,146 @@ public final class PageBuilder {
         } catch (Exception ex) {
             WildsWiki.LOG.warn("Wilds Wiki: page {} is incomplete", e.key, ex);
         }
+        b.guideCards();
         if (e.kind != Entry.Kind.TOPIC) {
+            Entry mod = data.modEntry(e.id.getNamespace());
+            if (mod != null) {
+                b.out.add(new Spacer(4));
+                b.out.add(new Chips(List.of(mod), false));
+            }
             b.out.add(new Spacer(8));
             b.out.add(new Paragraph(t("footer", e.id.toString(), e.modName), Paragraph.Kind.MUTED));
         }
         return b.out;
+    }
+
+    private List<Entry> guides = List.of();
+
+    /**
+     * whether the article is shown in full on this page: on its own page always; on the page of a thing only when the
+     * article is about that thing (it is the first, or one of at most three, things the article is for). An article about
+     * a whole group, a mod or a quest is a card with a link at the end of the page: the page itself is about the thing.
+     */
+    private boolean inline(Article a, Entry e) {
+        if (a.page == e) return true;
+        if (a.source.contains("quest_guides/") || a.wildcard) return false;
+        if (a.targets.size() <= 3) return true;
+        Entry first = data.resolve(a.targets.get(0));
+        return first == e;
+    }
+
+    private void guideCards() {
+        if (guides.isEmpty()) return;
+        heading("guides");
+        out.add(new Cards(guides));
+    }
+
+    // ================================================================== categories, mods
+
+    private void lists(String title, List<Entry> list) {
+        if (list.isEmpty()) return;
+        if (title != null) out.add(new Heading(Component.literal(title + "  (" + list.size() + ")"), 1));
+        if (list.size() <= 30) {
+            out.add(new Chips(list, false, 400));
+            return;
+        }
+        // a long list: by mod, the mods with the most first
+        Map<String, List<Entry>> byMod = new LinkedHashMap<>();
+        for (Entry x : list) byMod.computeIfAbsent(x.modName, k -> new ArrayList<>()).add(x);
+        List<Map.Entry<String, List<Entry>>> groups = new ArrayList<>(byMod.entrySet());
+        groups.sort((a, c) -> a.getKey().equals("Minecraft") ? -1 : c.getKey().equals("Minecraft") ? 1 : c.getValue().size() - a.getValue().size());
+        for (var g : groups) {
+            g.getValue().sort(Comparator.comparing(x -> x.name.getString()));
+            out.add(new Heading(Component.literal(g.getKey() + "  (" + g.getValue().size() + ")"), 2));
+            out.add(new Chips(g.getValue(), false, 400));
+        }
+    }
+
+    private void category(WikiData.Category c) {
+        if (c == null) return;
+        if (c.note() != null && !c.note().isEmpty()) out.add(new Paragraph(Component.literal(c.note()), Paragraph.Kind.NORMAL));
+        for (WikiData.Section sec : c.sections()) {
+            List<Entry> cards = new ArrayList<>();
+            for (String child : sec.children()) {
+                Entry ce = data.categoryEntry(child);
+                if (ce != null) cards.add(ce);
+            }
+            for (String ref : sec.pages()) {
+                Entry pe = data.resolve(ref.contains(":") ? ref : "topic:wilds_wiki:" + ref);
+                if (pe != null) cards.add(pe);
+                else WildsWiki.LOG.warn("Wilds Wiki: category {} lists unknown page {}", c.id(), ref);
+            }
+            if (sec.articles() != null) for (Entry ae : data.query("articles:" + sec.articles())) if (!cards.contains(ae)) cards.add(ae);
+            List<Entry> listed = sec.query() == null ? List.of() : data.query(sec.query());
+            if (cards.isEmpty() && listed.isEmpty()) continue;
+            if (sec.title() != null && (!cards.isEmpty() || listed.size() <= 30)) out.add(new Heading(Component.literal(sec.title()), 1));
+            if (sec.note() != null) out.add(new Paragraph(RichText.parse(sec.note(), data, Theme.TEXT), Paragraph.Kind.MUTED));
+            if (!cards.isEmpty()) out.add(new Cards(cards));
+            if (!listed.isEmpty()) {
+                if (sec.query().equals("mods")) out.add(new Cards(listed));
+                else lists(listed.size() > 30 ? sec.title() : null, listed);
+            }
+        }
+    }
+
+    private void mod(Entry e, String ns) {
+        var note = data.modNote(ns);
+        if (!e.note.isEmpty()) out.add(new Paragraph(Component.literal(e.note), Paragraph.Kind.NORMAL));
+        if (note.has("text")) for (var t : note.getAsJsonArray("text")) {
+            String l = t.getAsString();
+            if (l.startsWith("# ")) out.add(new Heading(RichText.parse(l.substring(2), data, Theme.ACCENT), 1));
+            else if (l.startsWith("- ")) out.add(new Paragraph(RichText.parse(l.substring(2), data, Theme.TEXT), Paragraph.Kind.BULLET));
+            else if (l.startsWith("> ")) out.add(new Paragraph(RichText.parse(l.substring(2), data, Theme.TEXT), Paragraph.Kind.TIP));
+            else out.add(new Paragraph(RichText.parse(l, data, Theme.TEXT), Paragraph.Kind.NORMAL));
+        }
+        List<Entry> arts = new ArrayList<>();
+        for (Article a : data.articles) {
+            if (a.page == null || a.source.contains("quest_guides/")) continue;
+            boolean of = ns.equals(a.mod);
+            if (!of && a.mod == null) for (String t : a.targets) {
+                String id = t.replaceFirst("^(item|entity|block|structure|biome|effect|enchantment):", "");
+                if (id.startsWith(ns + ":")) {
+                    of = true;
+                    break;
+                }
+            }
+            if (of && !arts.contains(a.page)) arts.add(a.page);
+        }
+        if (!arts.isEmpty()) {
+            heading("guides");
+            out.add(new Cards(arts));
+        }
+        String[][] kinds = {{"entity", "mod.mobs"}, {"biome", "mod.biomes"}, {"structure", "mod.structures"}, {"enchantment", "mod.enchantments"},
+                {"effect", "mod.effects"}};
+        List<Entry> bosses = new ArrayList<>(), mobs = new ArrayList<>();
+        for (Entry x : data.query("mod:" + ns + ":entity")) (data.boss(x) ? bosses : mobs).add(x);
+        if (!bosses.isEmpty()) {
+            out.add(new Heading(t("mod.bosses"), 1));
+            out.add(new Chips(bosses, false, 400));
+        }
+        for (String[] k : kinds) {
+            List<Entry> list = k[0].equals("entity") ? mobs : data.query("mod:" + ns + ":" + k[0]);
+            if (list.isEmpty()) continue;
+            list.sort(Comparator.comparing(x -> x.name.getString()));
+            out.add(new Heading(t(k[1]).append("  (" + list.size() + ")"), 1));
+            out.add(new Chips(list, false, 400));
+        }
+        // the mod's items by what they are
+        Map<String, List<Entry>> groups = new LinkedHashMap<>();
+        for (String g : new String[]{"weapon", "armor", "tool", "food", "block", "other"}) groups.put(g, new ArrayList<>());
+        for (Entry x : data.query("mod:" + ns + ":item")) {
+            String c = WikiData.itemClass(x.stack);
+            String g = c.equals("melee") || c.equals("ranged") || c.equals("ammo") || c.equals("shield") ? "weapon" : c.startsWith("armor_") ? "armor"
+                    : c.equals("pickaxe") || c.equals("axe") || c.equals("shovel") || c.equals("hoe") || c.equals("tool") ? "tool"
+                    : c.equals("food") || c.equals("potion") ? "food" : x.block != null ? "block" : "other";
+            groups.get(g).add(x);
+        }
+        for (var g : groups.entrySet()) {
+            if (g.getValue().isEmpty()) continue;
+            g.getValue().sort(Comparator.comparing(x -> x.name.getString()));
+            out.add(new Heading(t("mod.items." + g.getKey()).append("  (" + g.getValue().size() + ")"), 1));
+            out.add(new Chips(g.getValue(), g.getValue().size() > 60, 600));
+        }
     }
 
     private void heading(String key) {
@@ -103,10 +247,10 @@ public final class PageBuilder {
     private void item(Entry e) {
         ItemStack stack = e.stack;
         description(stack.getDescriptionId(), e.id, stack);
-        books("item:" + e.id);
-        advancements(e);
+        if (stack.is(net.minecraft.world.item.Items.ENCHANTED_BOOK)) allEnchantments();
         obtain(e);
         uses(e);
+        if (e.block != null) drops("block|" + BuiltInRegistries.BLOCK.getKey(e.block), e);
         Facts f = new Facts();
         itemFacts(stack, f);
         if (e.block != null) blockFacts(e.block, f);
@@ -114,8 +258,16 @@ public final class PageBuilder {
             heading("facts");
             out.add(f);
         }
-        if (e.block != null) drops("block|" + BuiltInRegistries.BLOCK.getKey(e.block), e);
-        tags(e);
+        books("item:" + e.id);
+        advancements(e);
+    }
+
+    /** on the enchanted book's page: every enchantment, each a link to what it does */
+    private void allEnchantments() {
+        List<Entry> all = data.query("enchantment:all");
+        if (all.isEmpty()) return;
+        out.add(new Paragraph(t("enchantment.book_hint"), Paragraph.Kind.TIP));
+        lists(t("section.enchantments").getString(), all);
     }
 
     private void blockOnly(Entry e) {
@@ -154,7 +306,7 @@ public final class PageBuilder {
         }
         // Ponder scenes: Create explains its machines step by step, the same texts make a good description
         List<String> scenes = data.ponderScenes(id);
-        for (int s = 0; s < Math.min(3, scenes.size()); s++) {
+        for (int s = 0; s < Math.min(1, scenes.size()); s++) {
             String k = scenes.get(s);
             parts.add(new Heading(Component.literal(I18n.get(k + ".header")), 2));
             for (int i = 1; i <= 24 && I18n.exists(k + ".text_" + i); i++) {
@@ -264,7 +416,7 @@ public final class PageBuilder {
         boolean jei = WildsWiki.jei && Jei.ready();
         int recipes = jei ? Jei.count(e.stack, Jei.Role.RECIPES) : 0;
         if (recipes > 0) {
-            for (RecipeView v : Jei.recipes(e.stack, Jei.Role.RECIPES, 2)) parts.add(recipe(v));
+            for (RecipeView v : Jei.mainRecipes(e.stack, Jei.Role.RECIPES, 2)) parts.add(recipe(v));
             parts.add(new Buttons(List.of(new Button(t("button.recipes", recipes), () -> Jei.show(e.stack, Jei.Role.RECIPES)))));
         }
         List<String[]> sources = data.lootSources.getOrDefault(e.id.toString(), List.of());
@@ -345,9 +497,10 @@ public final class PageBuilder {
         heading("uses");
         if (station > 0) {
             out.add(new Paragraph(t("uses.station"), Paragraph.Kind.TIP));
-            for (RecipeView v : Jei.recipes(e.stack, Jei.Role.STATION, 1)) out.add(recipe(v));
+            for (RecipeView v : Jei.mainRecipes(e.stack, Jei.Role.STATION, 1)) out.add(recipe(v));
         }
-        if (uses > 0) for (RecipeView v : Jei.recipes(e.stack, Jei.Role.USES, 1)) out.add(recipe(v));
+        // one example of what is crafted from it; what machines do to it in passing is behind the button
+        if (uses > 0) for (RecipeView v : Jei.mainRecipes(e.stack, Jei.Role.USES, 1)) out.add(recipe(v));
         List<Button> buttons = new ArrayList<>();
         if (uses > 0) buttons.add(new Button(t("button.uses", uses), () -> Jei.show(e.stack, Jei.Role.USES)));
         if (station > 0) buttons.add(new Button(t("button.station", station), () -> Jei.show(e.stack, Jei.Role.STATION)));
@@ -478,30 +631,58 @@ public final class PageBuilder {
         out.add(f);
     }
 
+    private static final String[][] ENCH_SOURCES = {{"in_enchanting_table", "table"}, {"tradeable", "trade"}, {"on_random_loot", "loot"}, {"treasure", "treasure"},
+            {"curse", "curse"}};
+
     private void enchantment(Entry e) {
         var level = Minecraft.getInstance().level;
         if (level == null) return;
-        Optional<Holder.Reference<Enchantment>> h = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT)
-                .getHolder(e.id);
-        description("enchantment." + e.id.getNamespace() + "." + e.id.getPath(), e.id, ItemStack.EMPTY);
+        var reg = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
+        Optional<Holder.Reference<Enchantment>> h = reg.getHolder(e.id);
+        // what it does: the pack's own text first, then the mod's
+        String own = "wilds_wiki.ench." + e.id.getNamespace() + "." + e.id.getPath().replace('/', '.');
+        if (I18n.exists(own)) {
+            heading("description");
+            for (String l : I18n.get(own).split("\n")) out.add(new Paragraph(RichText.parse(l, data, Theme.TEXT), Paragraph.Kind.NORMAL));
+        } else description("enchantment." + e.id.getNamespace() + "." + e.id.getPath(), e.id, ItemStack.EMPTY);
         if (h.isEmpty()) return;
-        Enchantment.EnchantmentDefinition d = h.get().value().definition();
+        Enchantment en = h.get().value();
+        Enchantment.EnchantmentDefinition d = en.definition();
         Facts f = new Facts();
         f.add(t("fact.max_level"), Component.literal(String.valueOf(d.maxLevel())));
-        f.add(t("fact.weight"), Component.literal(String.valueOf(d.weight())));
+        // what it goes on, in words: the tag's own name, or the first few items
+        String tagName = d.supportedItems().unwrapKey().map(k -> {
+            String key = "tag.item." + k.location().getNamespace() + "." + k.location().getPath().replace('/', '.');
+            String ours = "wilds_wiki.enchantable." + k.location().getPath().replace("enchantable/", "").replace('/', '.');
+            return I18n.exists(ours) ? I18n.get(ours) : I18n.exists(key) ? I18n.get(key) : null;
+        }).orElse(null);
+        if (tagName == null) {
+            List<String> names = new ArrayList<>();
+            for (Holder<Item> i : d.supportedItems()) {
+                if (names.size() >= 6) {
+                    names.add("…");
+                    break;
+                }
+                names.add(new ItemStack(i.value()).getHoverName().getString());
+            }
+            tagName = String.join(", ", names);
+        }
+        if (!tagName.isEmpty()) f.add(t("fact.enchant_on"), Component.literal(tagName));
+        List<String> from = new ArrayList<>();
+        for (String[] src : ENCH_SOURCES) {
+            if (h.get().is(net.minecraft.tags.TagKey.create(Registries.ENCHANTMENT, ResourceLocation.withDefaultNamespace(src[0])))) from.add(t("enchantment.from." + src[1]).getString());
+        }
+        f.add(t("fact.enchant_from"), Component.literal(from.isEmpty() ? t("enchantment.from.special").getString() : String.join(", ", from)));
+        List<String> not = new ArrayList<>();
+        for (Holder<Enchantment> x : en.exclusiveSet()) {
+            if (x.value() != en && not.size() < 8) not.add(x.value().description().getString());
+        }
+        if (!not.isEmpty()) f.add(t("fact.enchant_not_with"), Component.literal(String.join(", ", not)));
         f.add(t("fact.anvil_cost"), Component.literal(String.valueOf(d.anvilCost())));
         heading("facts");
         out.add(f);
-        List<Entry> items = new ArrayList<>();
-        for (Holder<Item> i : d.supportedItems()) {
-            Entry ie = data.byItem.get(i.value());
-            if (ie != null) items.add(ie);
-            if (items.size() >= 80) break;
-        }
-        if (!items.isEmpty()) {
-            heading("enchant_items");
-            out.add(new Chips(items, true));
-        }
+        Entry book = data.resolve("item:minecraft:enchanted_book");
+        if (book != null) out.add(new Chips(List.of(book), false));
     }
 
     private void biome(Entry e) {
@@ -778,17 +959,21 @@ public final class PageBuilder {
         } else {
             b.out.add(new Heading(t("title"), 1));
         }
-        b.out.add(new Paragraph(t("home.stats", data.entries.size()), Paragraph.Kind.MUTED));
-        List<Entry> topics = new ArrayList<>();
-        for (Article a : data.topics) {
-            if (a.topic == null || a.topic.equals("home")) continue;
-            ResourceLocation id = ResourceLocation.tryParse(a.topic.contains(":") ? a.topic : WildsWiki.ID + ":" + a.topic);
-            Entry e = id == null ? null : data.entries.get(Entry.key(Entry.Kind.TOPIC, id));
-            if (e != null) topics.add(e);
+        List<Entry> cats = new ArrayList<>();
+        for (WikiData.Category c : data.categories.values()) {
+            Entry ce = data.categoryEntry(c.id());
+            if (c.top() && ce != null) cats.add(ce);
         }
-        if (!topics.isEmpty()) {
-            b.heading("topics");
-            b.out.add(new Chips(topics, false));
+        if (!cats.isEmpty()) {
+            b.heading("categories");
+            b.out.add(new Cards(cats));
+        } else {
+            List<Entry> topics = data.topicEntries();
+            topics.remove(home);
+            if (!topics.isEmpty()) {
+                b.heading("topics");
+                b.out.add(new Chips(topics, false));
+            }
         }
         List<Entry> viewed = new ArrayList<>();
         for (String k : History.get().viewed) {
@@ -800,6 +985,8 @@ public final class PageBuilder {
             b.out.add(new Chips(viewed, false));
             b.out.add(new Buttons(List.of(new Button(t("button.clear_history"), clearHistory))));
         }
+        b.out.add(new Spacer(6));
+        b.out.add(new Paragraph(t("home.stats", data.entries.size()), Paragraph.Kind.MUTED));
         return b.out;
     }
 }

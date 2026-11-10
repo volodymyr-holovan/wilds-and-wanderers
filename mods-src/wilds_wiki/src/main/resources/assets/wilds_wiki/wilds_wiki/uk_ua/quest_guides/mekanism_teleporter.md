@@ -1,6 +1,8 @@
 ---
 for: mekanism:teleporter, mekanism:teleporter_frame, mekanism:portable_teleporter
 keywords: Телепорт
+category: q_mekanism
+summary: Рамка з рамок телепорта і сам телепорт: увійдіть у портал — і ви на іншому кінці світу або в іншому вимірі. Ки
 ---
 # Квест «Телепорт»
 `Книга квестів → **Mekanism**`

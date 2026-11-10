@@ -1,6 +1,8 @@
 ---
 for: create:mechanical_drill, create:mechanical_harvester, create:mechanical_saw
 keywords: Бур і жатка
+category: q_create
+summary: Механічний бур на рухомій платформі копає тунелі, жатка збирає врожай, пилка рубає дерева. Поставте їх на порш
 ---
 # Квест «Бур і жатка»
 `Книга квестів → **Create**`

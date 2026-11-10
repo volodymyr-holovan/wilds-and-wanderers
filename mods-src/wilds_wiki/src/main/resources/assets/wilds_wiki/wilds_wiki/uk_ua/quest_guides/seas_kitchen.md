@@ -1,6 +1,8 @@
 ---
 for: oceansdelight:fugu_roll, oceansdelight:squid_rings
 keywords: Морська кухня
+category: q_seas
+summary: Ocean's Delight навчає готувати морське: ролли з фугу, кільця кальмара, суп з вартового. Риба Fish of Thieves 
 ---
 # Квест «Морська кухня»
 `Книга квестів → **Моря і кораблі**`

@@ -84,6 +84,19 @@ public final class Searcher<T> {
             if (best >= 0.5f) hits.add(new Hit<>(d.value, best * d.boost));
         }
         hits.sort(Comparator.comparingDouble((Hit<T> h) -> -h.score()));
+        // when something matches well, what matches far worse is noise: a typo-level hit beside an exact one
+        if (!hits.isEmpty()) {
+            float top = hits.get(0).score();
+            float floor = top >= 1.2f ? top * 0.52f : top >= 0.9f ? top * 0.6f : top * 0.72f;
+            int keep = hits.size();
+            for (int i = 0; i < hits.size(); i++) {
+                if (hits.get(i).score() < floor && i >= 3) {
+                    keep = i;
+                    break;
+                }
+            }
+            if (keep < hits.size()) hits = new ArrayList<>(hits.subList(0, keep));
+        }
         return hits.size() > limit ? new ArrayList<>(hits.subList(0, limit)) : hits;
     }
 

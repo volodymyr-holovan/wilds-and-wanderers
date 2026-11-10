@@ -1,6 +1,8 @@
 ---
 for: mekanism:purification_chamber, mekanism:electrolytic_separator, mekanism:electric_pump
 keywords: Потрійна обробка
+category: q_mekanism
+summary: Очищувальна камера з киснем перетворює руду на три грудки. Кисень дає електролітичний сепаратор з води (а ще в
 ---
 # Квест «Потрійна обробка»
 `Книга квестів → **Mekanism**`

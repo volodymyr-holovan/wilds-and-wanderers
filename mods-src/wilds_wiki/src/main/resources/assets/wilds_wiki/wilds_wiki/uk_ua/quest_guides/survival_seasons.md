@@ -1,6 +1,8 @@
 ---
 for: sereneseasons:calendar
 keywords: Пори року
+category: q_survival
+summary: У світі змінюються пори року (Serene Seasons): весна, літо, осінь, зима. Взимку частина культур не росте, а ли
 ---
 # Квест «Пори року»
 `Книга квестів → **Виживання**`

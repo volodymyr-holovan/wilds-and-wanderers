@@ -1,6 +1,8 @@
 ---
 for: create:mechanical_crafter, create:deployer, create:mechanical_arm
 keywords: Механічний верстат
+category: q_create
+summary: Сітка механічних верстатів крафтить великі рецепти (до 9×9) самостійно. Разом із розміщувачем і механічною рук
 ---
 # Квест «Механічний верстат»
 `Книга квестів → **Create**`

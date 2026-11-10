@@ -1,6 +1,8 @@
 ---
 for: mekanism:ingot_osmium
 keywords: Осмій
+category: q_mekanism
+summary: Mekanism — це електрика, хімія й машини, що множать руду в 2, 3, 4 і навіть 5 разів. Усе починається з осмію —
 ---
 # Квест «Осмій»
 `Книга квестів → **Mekanism**`

@@ -1,6 +1,8 @@
 ---
 for: minecolonies:blockhuttownhall
 keywords: Своя колонія
+category: q_colonies
+summary: MineColonies — це місто з найнятими робітниками: лісоруби рубають і садять ліс, шахтарі копають шахти, фермери
 ---
 # Квест «Своя колонія»
 `Книга квестів → **Села й колонії**`

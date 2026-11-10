@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:source_jar, ars_nouveau:volcanic_sourcelink
 keywords: Джерело
+category: q_ars
+summary: Джерело (source) — магічна рідина для машин Ars. Його виробляють джерельні зв'язки: вулканічний (з палива), аг
 ---
 # Квест «Джерело»
 `Книга квестів → Ars Nouveau`

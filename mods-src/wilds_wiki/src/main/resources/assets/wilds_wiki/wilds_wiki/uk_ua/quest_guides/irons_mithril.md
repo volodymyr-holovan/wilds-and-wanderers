@@ -1,6 +1,8 @@
 ---
 for: irons_spellbooks:mithril_ingot
 keywords: Мітрил
+category: q_irons
+summary: Мітрил — рідкісний метал глибоко під землею. З нього найкращі книги заклинань і магічна зброя.
 ---
 # Квест «Мітрил»
 `Книга квестів → Iron's Spells`

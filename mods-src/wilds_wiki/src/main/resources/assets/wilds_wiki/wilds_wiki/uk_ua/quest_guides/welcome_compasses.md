@@ -1,6 +1,8 @@
 ---
 for: explorerscompass:explorerscompass, naturescompass:naturescompass
 keywords: Куди йти?
+category: q_welcome
+summary: Два компаси допоможуть знайти будь-що у світі:
 ---
 # Квест «Куди йти?»
 `Книга квестів → **Основи**`

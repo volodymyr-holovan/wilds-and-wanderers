@@ -29,10 +29,17 @@ import java.util.OptionalDouble;
  * Item finder, the client half: a search field in the inventory. What the player types is matched against every
  * item's name in the game's language, its id and the same text typed in the other keyboard layout (ліжко / kspmrj),
  * the matching ids go to the server ({@link ua.wilds.core.finder.Finder}), and the places it answers with are outlined
- * in gold through walls for {@link #SHOW} seconds, with the count beside the field.
+ * in gold through walls for {@link #SHOW} seconds, with the count beside the field. A double chest is one place: one
+ * outline around both halves, one in the count. And in any storage opened while the search stands (until the field is
+ * cleared, at most {@link #MARK} minutes), the slots holding what was looked for, or a shulker box or bundle with it
+ * inside, are framed in gold.
  */
 public final class FinderField {
-    private static final int SHOW = 20;
+    private static final int SHOW = 20, MARK = 10;
+    /** what the last search looked for, for the slots of an opened storage */
+    private static java.util.Set<Item> wanted = java.util.Set.of();
+    private static long wantedUntil;
+    private static List<AABB> boxes = List.of();
     static final int W = 120, H = 12;
     private static EditBox box;
     private static String sent = "";
@@ -93,7 +100,7 @@ public final class FinderField {
         box.render(g, mouseX, mouseY, partial);
         if (!status.isEmpty()) {
             Minecraft mc = Minecraft.getInstance();
-            g.drawString(mc.font, status, box.getX() + box.getWidth() - mc.font.width(status), box.getY() + H + 2, hits.isEmpty() ? 0xA0A0A0 : 0xF2C94C, true);
+            g.drawString(mc.font, status, box.getX() + box.getWidth() - mc.font.width(status), box.getY() + H + 2, boxes.isEmpty() ? 0xA0A0A0 : 0xF2C94C, true);
         }
         g.pose().popPose();
     }
@@ -108,15 +115,23 @@ public final class FinderField {
         sent = q;
         if (q.length() < 2) {
             hits = List.of();
+            boxes = List.of();
+            wanted = java.util.Set.of();
             status = "";
             return;
         }
         List<String> ids = match(q);
         if (ids.isEmpty()) {
             hits = List.of();
+            boxes = List.of();
+            wanted = java.util.Set.of();
             status = "немає такого предмета";
             return;
         }
+        java.util.Set<Item> set = new java.util.HashSet<>();
+        for (String id : ids) BuiltInRegistries.ITEM.getOptional(net.minecraft.resources.ResourceLocation.parse(id)).ifPresent(set::add);
+        wanted = set;
+        wantedUntil = System.currentTimeMillis() + MARK * 60_000L;
         status = "шукаю…";
         PacketDistributor.sendToServer(new Net.FinderQuery(ids));
     }
@@ -147,8 +162,49 @@ public final class FinderField {
 
     public static void answer(List<BlockPos> found) {
         hits = found;
+        // a double chest is one place: its halves come as two blocks
+        var level = Minecraft.getInstance().level;
+        java.util.Set<BlockPos> all = new java.util.HashSet<>(found), done = new java.util.HashSet<>();
+        List<AABB> out = new ArrayList<>();
+        for (BlockPos p : found) {
+            if (!done.add(p)) continue;
+            AABB bb = new AABB(p);
+            BlockPos other = level == null ? null : ua.wilds.core.golem.SortStatus.partner(level, p);
+            if (other != null) {
+                done.add(other);
+                bb = bb.minmax(new AABB(other));
+            }
+            out.add(bb);
+        }
+        boxes = out;
         shownUntil = System.currentTimeMillis() + SHOW * 1000L;
-        status = found.isEmpty() ? "поруч немає" : "знайдено: " + found.size();
+        status = out.isEmpty() ? "поруч немає" : "знайдено: " + out.size();
+    }
+
+    /** the slots of an open storage that hold what the search looks for */
+    public static void markSlots(net.neoforged.neoforge.client.event.ContainerScreenEvent.Render.Foreground e) {
+        if (wanted.isEmpty()) return;
+        if (System.currentTimeMillis() > wantedUntil) {
+            wanted = java.util.Set.of();
+            return;
+        }
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null) return;
+        var g = e.getGuiGraphics();
+        float pulse = 0.75f + 0.25f * (float) Math.sin(System.currentTimeMillis() / 180.0);
+        int a = (int) (255 * pulse) << 24, edge = a | 0xF2C94C, fill = ((int) (70 * pulse) << 24) | 0xF2C94C;
+        for (var slot : e.getContainerScreen().getMenu().slots) {
+            if (!slot.isActive() || slot.container == mc.player.getInventory() || !ua.wilds.core.finder.Finder.matches(slot.getItem(), wanted)) continue;
+            int x = slot.x, y = slot.y;
+            g.pose().pushPose();
+            g.pose().translate(0, 0, 250);
+            g.fill(x, y, x + 16, y + 16, fill);
+            g.fill(x - 1, y - 1, x + 17, y, edge);
+            g.fill(x - 1, y + 16, x + 17, y + 17, edge);
+            g.fill(x - 1, y, x, y + 16, edge);
+            g.fill(x + 16, y, x + 17, y + 16, edge);
+            g.pose().popPose();
+        }
     }
 
     static List<String> match(String query) {
@@ -169,10 +225,11 @@ public final class FinderField {
     // ---------------------------------------------------------------- outlines through walls
 
     public static void render(RenderLevelStageEvent e) {
-        if (e.getStage() != RenderLevelStageEvent.Stage.AFTER_TRANSLUCENT_BLOCKS || hits.isEmpty()) return;
+        if (e.getStage() != RenderLevelStageEvent.Stage.AFTER_TRANSLUCENT_BLOCKS || boxes.isEmpty()) return;
         long left = shownUntil - System.currentTimeMillis();
         if (left <= 0) {
             hits = List.of();
+            boxes = List.of();
             status = "";
             return;
         }
@@ -181,8 +238,8 @@ public final class FinderField {
         PoseStack pose = e.getPoseStack();
         MultiBufferSource.BufferSource buf = Minecraft.getInstance().renderBuffers().bufferSource();
         var vc = buf.getBuffer(Lines.THROUGH_WALLS);
-        for (BlockPos p : hits) {
-            AABB bb = new AABB(p).inflate(0.02).move(-cam.x, -cam.y, -cam.z);
+        for (AABB box : boxes) {
+            AABB bb = box.inflate(0.02).move(-cam.x, -cam.y, -cam.z);
             LevelRenderer.renderLineBox(pose, vc, bb, 0.95f, 0.79f, 0.30f, a);
         }
         buf.endBatch(Lines.THROUGH_WALLS);

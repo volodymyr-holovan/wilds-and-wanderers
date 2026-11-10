@@ -1,6 +1,8 @@
 ---
 for: minecolonies:blockhutfarmer, minecolonies:blockhutfisherman
 keywords: Ферма й рибалка
+category: q_colonies
+summary: Ферма з полями: фермер сам сіє, поливає і збирає. Рибальська хатина дає рибу; разом із їдальнею колонія годує 
 ---
 # Квест «Ферма й рибалка»
 `Книга квестів → **Села й колонії**`

@@ -1,6 +1,8 @@
 ---
 for: entity:irons_spellbooks:fire_boss
 keywords: Вогняна відьма
+category: q_irons
+summary: У вежі піроманта, на самій вершині, чекає господар вогню. Її поразка дає рідкісну вогняну есенцію.
 ---
 # Квест «Вогняна відьма»
 `Книга квестів → Iron's Spells`

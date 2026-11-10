@@ -27,7 +27,8 @@ public final class SelfTest {
     public static final boolean ON = Boolean.getBoolean("wilds_wiki.selftest");
     private static final String[] QUERIES = {"дракон", "дркон", "lhfrjy", "drakon", "dragon", "діамант", "daimond", "кайло", "руда",
             "меч", "жорна", "камера збагачення", "бурштин", "mekanism", "create", "слиз", "вогняна кров", "яйце дракона", "сезони",
-            "home", "команди", "швидкість", "рівнини", "гострота", "zombie", "зомбі", "ящірка", "динозавр", "tyrannosaurus"};
+            "home", "команди", "швидкість", "рівнини", "гострота", "zombie", "зомбі", "ящірка", "динозавр", "tyrannosaurus",
+            "кислотний дощ", "печери тролів", "ур гаст", "боси", "зачарування", "сутінковий ліс", "лагодженя", "як викликати", "нага", "моди"};
 
     private static int ticks = -1, step;
     private static final List<Runnable[]> steps = new ArrayList<>();
@@ -80,6 +81,7 @@ public final class SelfTest {
         all = new ArrayList<>(d.entries.values());
         Collections.shuffle(all, new Random(7));
         all = new ArrayList<>(all.subList(0, Math.min(1200, all.size())));
+        for (Entry e : d.entries.values()) if (e.special != null || e.kind == Entry.Kind.ENCHANTMENT) all.add(e);   // every category, mod and enchantment page
         probe = new WikiScreen(null, null, null);
         probe.init(mc, 854, 480);
         buildStart = System.currentTimeMillis();
@@ -107,28 +109,34 @@ public final class SelfTest {
     }
 
     private static void plan(WikiData d) {
-        shot("home", () -> WildsWiki.open(null, null, null));
-        shot("search_drakon", () -> WildsWiki.open(null, null, "дракон"));
-        shot("search_layout", () -> WildsWiki.open(null, null, "lhfrjy"));
-        shot("search_ore", () -> WildsWiki.open(null, null, "руда"));
-        page("fire_dragon", d, "entity:iceandfire:fire_dragon", 0);
-        page("topic_dragons", d, "topic:wilds_wiki:dragons", 0);
-        page("topic_dragons_2", d, "topic:wilds_wiki:dragons", 260);
-        page("dragonbone", d, "item:iceandfire:dragonbone", 0);
-        page("dragonbone_2", d, "item:iceandfire:dragonbone", 300);
-        page("mana_orb", d, "item:irons_spellbooks:mana_upgrade_orb", 120);
+        shot("home", () -> {
+            ua.wilds.wiki.data.History.get().setLast("", 0);
+            WildsWiki.open(null, null, null);
+        });
+        shot("search_acid", () -> WildsWiki.open(null, null, "кислотний дощ"));
+        shot("search_trolls", () -> WildsWiki.open(null, null, "печери троллів"));
+        shot("search_typo", () -> WildsWiki.open(null, null, "гострта"));
+        page("cat_bosses", d, "topic:wilds_wiki:cat/bosses", 0);
+        page("cat_bosses_2", d, "topic:wilds_wiki:cat/bosses", 420);
+        page("cat_gear", d, "topic:wilds_wiki:cat/gear", 0);
+        page("cat_mods", d, "topic:wilds_wiki:cat/mods", 0);
+        page("cat_quests", d, "topic:wilds_wiki:cat/quests", 0);
+        page("mod_tf", d, "topic:wilds_wiki:mod/twilightforest", 0);
+        page("mod_tf_2", d, "topic:wilds_wiki:mod/twilightforest", 400);
+        page("guide_tf", d, "topic:wilds_wiki:guides/progress/twilight_forest", 0);
+        page("guide_tf_2", d, "topic:wilds_wiki:guides/progress/twilight_forest", 420);
+        page("ur_ghast", d, "entity:twilightforest:ur_ghast", 0);
+        page("ur_ghast_2", d, "entity:twilightforest:ur_ghast", 380);
+        page("sharpness", d, "enchantment:minecraft:sharpness", 0);
+        page("reactive", d, "enchantment:ars_nouveau:reactive", 0);
+        page("enchanted_book", d, "item:minecraft:enchanted_book", 0);
         page("press", d, "item:create:mechanical_press", 0);
         page("press_2", d, "item:create:mechanical_press", 300);
-        page("iron_ore", d, "item:minecraft:iron_ore", 0);
-        page("iron_ore_2", d, "item:minecraft:iron_ore", 250);
-        page("enrichment", d, "item:mekanism:enrichment_chamber", 0);
-        page("speed", d, "effect:minecraft:speed", 0);
-        page("plains", d, "biome:minecraft:plains", 0);
-        page("sharpness", d, "enchantment:minecraft:sharpness", 0);
-        page("heavy_bone", d, "item:alexscaves:heavy_bone", 0);
-        page("water", d, "block:minecraft:water", 0);
-        page("links", d, "topic:wilds_wiki:links", 0);
-        page("links_2", d, "topic:wilds_wiki:links", 330);
+        page("iron_ingot", d, "item:minecraft:iron_ingot", 0);
+        page("iron_ingot_2", d, "item:minecraft:iron_ingot", 280);
+        page("dragonbone", d, "item:iceandfire:dragonbone", 0);
+        page("faq", d, "topic:wilds_wiki:cat/faq", 0);
+        shot("last_page", () -> WildsWiki.open(null, null, null));
         shot("jei_mana_orb", () -> {
             if (WildsWiki.jei && Jei.ready()) {
                 Entry e = d.entries.get("item:irons_spellbooks:mana_upgrade_orb");

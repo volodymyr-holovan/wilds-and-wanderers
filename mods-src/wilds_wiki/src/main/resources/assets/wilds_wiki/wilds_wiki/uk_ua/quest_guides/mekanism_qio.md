@@ -1,6 +1,8 @@
 ---
 for: mekanism:qio_drive_array, mekanism:qio_dashboard, mekanism:qio_drive_base, mekanism:portable_qio_dashboard
 keywords: Квантове сховище QIO
+category: q_mekanism
+summary: QIO — сховище на квантових дисках: масив дисків, панель доступу, імпортери й експортери. Як ME-мережа, але без
 ---
 # Квест «Квантове сховище QIO»
 `Книга квестів → **Mekanism**`

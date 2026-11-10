@@ -46,6 +46,15 @@ public final class WikiData {
 
     public final Map<String, Entry> entries = new LinkedHashMap<>();
     public final List<Article> topics = new ArrayList<>();
+    public final List<Article> articles = new ArrayList<>();
+    /** the catalogue: categories of the home page and their sections (categories.json) */
+    public final Map<String, Category> categories = new LinkedHashMap<>();
+    public final Set<String> bosses = new LinkedHashSet<>();
+    private JsonObject modNotes = new JsonObject();
+
+    public record Section(String title, String note, List<String> pages, String query, String articles, List<String> children) {}
+
+    public record Category(String id, String title, String icon, String note, boolean top, List<Section> sections) {}
     public final Map<Item, Entry> byItem = new HashMap<>();
     public final Map<Block, Entry> byBlock = new HashMap<>();
     public final Map<EntityType<?>, Entry> byEntity = new HashMap<>();
@@ -162,6 +171,7 @@ public final class WikiData {
         addStructures();
         addTagNames();
         readArticles(rm);
+        readCatalogue(rm);
         for (Entry e : entries.values()) index(e);
     }
 
@@ -343,22 +353,39 @@ public final class WikiData {
             }
         }
         for (Article a : chosen.values()) {
-            if (a.topic != null) {
-                ResourceLocation id = ResourceLocation.tryParse(a.topic.contains(":") ? a.topic : WildsWiki.ID + ":" + a.topic);
-                if (id == null) continue;
-                Entry e = new Entry(Entry.Kind.TOPIC, id);
-                Item icon = a.icon != null ? BuiltInRegistries.ITEM.get(ResourceLocation.parse(a.icon)) : Items.BOOK;
-                e.icon = new ItemStack(icon == Items.AIR ? Items.BOOK : icon);
-                e.name = Component.literal(a.title != null ? a.title : id.getPath());
-                e.nameEn = "";
-                e.modName = "Wilds & Wanderers";
-                e.articles.add(a);
-                e.keywords.addAll(a.keywords);
-                entries.put(e.key, e);
-                topics.add(a);
+            // every article has a page of its own: its topic, or one named after its file (guides/cataclysm/harbinger)
+            String own = a.topic != null ? a.topic : a.source.substring(a.source.indexOf(':') + 1).replaceAll("\\.md$", "");
+            ResourceLocation id = ResourceLocation.tryParse(own.contains(":") ? own : WildsWiki.ID + ":" + own);
+            if (id == null) continue;
+            Entry page = new Entry(Entry.Kind.TOPIC, id);
+            String title = a.title;
+            if (title == null) for (String l : a.body) {
+                if (l.startsWith("# ")) {
+                    title = l.substring(2).replaceAll("\\[\\[[^|\\]]*\\|([^\\]]*)]]", "$1").replaceAll("[\\[\\]*`]", "").trim();
+                    break;
+                }
             }
+            Item icon = a.icon != null ? BuiltInRegistries.ITEM.get(ResourceLocation.parse(a.icon)) : Items.AIR;
+            if (icon == Items.AIR && !a.targets.isEmpty() && !a.targets.get(0).contains("*")) {
+                Entry first = resolve(a.targets.get(0));
+                if (first != null && !first.icon.isEmpty()) icon = first.icon.getItem();
+            }
+            page.icon = new ItemStack(icon == Items.AIR ? Items.BOOK : icon);
+            page.name = Component.literal(title != null ? title : id.getPath());
+            page.nameEn = "";
+            page.modName = "Wilds & Wanderers";
+            page.note = a.summary == null ? "" : a.summary;
+            page.articles.add(a);
+            page.keywords.addAll(a.keywords);
+            // headings of the article find it too ("кислотний дощ" is a heading of the Twilight Forest guide)
+            for (String l : a.body) if (l.startsWith("#")) page.keywords.add(l.replaceAll("^#+\\s*", "").replaceAll("[\\[\\]*`|]", " "));
+            a.page = page;
+            entries.put(page.key, page);
+            articles.add(a);
+            if (a.topic != null) topics.add(a);
             for (String target : a.targets) {
                 if (target.contains("*")) { // "smallships:*_cog": every item of that pattern (ship woods, dye colours)
+                    a.wildcard = true;
                     java.util.regex.Pattern pat = java.util.regex.Pattern.compile("item:" + target.replace(".", "\\.").replace("*", "[a-z0-9_/]*"));
                     for (Entry e : entries.values()) {
                         if (e.kind == Entry.Kind.ITEM && pat.matcher(e.key).matches() && !e.articles.contains(a)) {
@@ -378,6 +405,219 @@ public final class WikiData {
             }
         }
         topics.sort(Comparator.comparingInt((Article a) -> a.order).thenComparing(a -> a.title == null ? "" : a.title));
+    }
+
+    // ---------------------------------------------------------------- the catalogue: categories, mods, lists
+
+    private JsonObject langJson(ResourceManager rm, String name) {
+        String lang = Minecraft.getInstance().getLanguageManager().getSelected();
+        for (String l : List.of(lang, "uk_ua", "en_us")) {
+            Optional<Resource> r = rm.getResource(ResourceLocation.fromNamespaceAndPath(WildsWiki.ID, "wilds_wiki/" + l + "/" + name));
+            if (r.isEmpty()) continue;
+            try (Reader reader = r.get().openAsReader()) {
+                return JsonParser.parseReader(reader).getAsJsonObject();
+            } catch (Exception ex) {
+                WildsWiki.LOG.warn("Wilds Wiki: cannot read {}", name, ex);
+            }
+        }
+        return new JsonObject();
+    }
+
+    private static List<String> list(JsonObject o, String key) {
+        List<String> out = new ArrayList<>();
+        if (o.has(key)) for (JsonElement e : o.getAsJsonArray(key)) out.add(e.getAsString());
+        return out;
+    }
+
+    private static String str(JsonObject o, String key) {
+        return o.has(key) ? o.get(key).getAsString() : null;
+    }
+
+    private void readCatalogue(ResourceManager rm) {
+        JsonObject cat = langJson(rm, "categories.json");
+        bosses.addAll(list(cat, "bosses"));
+        modNotes = langJson(rm, "mods.json");
+        // a page for every mod that brought something
+        Map<String, Entry> firstOf = new LinkedHashMap<>();
+        Map<String, Integer> count = new HashMap<>();
+        for (Entry e : entries.values()) {
+            if (e.kind == Entry.Kind.TOPIC) continue;
+            count.merge(e.id.getNamespace(), 1, Integer::sum);
+            if (e.kind == Entry.Kind.ITEM) firstOf.putIfAbsent(e.id.getNamespace(), e);
+        }
+        for (var en : count.entrySet()) {
+            String ns = en.getKey();
+            if (ns.equals("minecraft") || ns.equals(WildsWiki.ID)) continue;
+            JsonObject note = modNotes.has(ns) ? modNotes.getAsJsonObject(ns) : new JsonObject();
+            if (note.has("hide")) continue;
+            Entry e = new Entry(Entry.Kind.TOPIC, ResourceLocation.fromNamespaceAndPath(WildsWiki.ID, "mod/" + ns));
+            e.special = "mod:" + ns;
+            String name = str(note, "name");
+            e.name = Component.literal(name != null ? name : modName(ns));
+            e.nameEn = modName(ns);
+            e.modName = modName(ns);
+            e.note = note.has("note") ? note.get("note").getAsString() : "";
+            Item icon = note.has("icon") ? BuiltInRegistries.ITEM.get(ResourceLocation.parse(note.get("icon").getAsString())) : Items.AIR;
+            e.icon = icon != Items.AIR ? new ItemStack(icon) : firstOf.containsKey(ns) ? firstOf.get(ns).icon : new ItemStack(Items.BOOK);
+            e.keywords.add(ns);
+            e.keywords.addAll(list(note, "keywords"));
+            entries.put(e.key, e);
+        }
+        if (!cat.has("categories")) return;
+        for (JsonElement ce : cat.getAsJsonArray("categories")) {
+            JsonObject c = ce.getAsJsonObject();
+            List<Section> sections = new ArrayList<>();
+            if (c.has("sections")) for (JsonElement se : c.getAsJsonArray("sections")) {
+                JsonObject s = se.getAsJsonObject();
+                sections.add(new Section(str(s, "title"), str(s, "note"), list(s, "pages"), str(s, "query"), str(s, "articles"), list(s, "children")));
+            }
+            Category category = new Category(c.get("id").getAsString(), c.get("title").getAsString(), str(c, "icon"), str(c, "note"),
+                    c.has("top") && c.get("top").getAsBoolean(), sections);
+            categories.put(category.id(), category);
+            Entry e = new Entry(Entry.Kind.TOPIC, ResourceLocation.fromNamespaceAndPath(WildsWiki.ID, "cat/" + category.id()));
+            e.special = "cat:" + category.id();
+            e.name = Component.literal(category.title());
+            e.modName = "Wilds & Wanderers";
+            e.note = category.note() == null ? "" : category.note();
+            Item icon = category.icon() == null ? Items.AIR : BuiltInRegistries.ITEM.get(ResourceLocation.parse(category.icon()));
+            e.icon = new ItemStack(icon == Items.AIR ? Items.BOOKSHELF : icon);
+            e.keywords.addAll(list(c, "keywords"));
+            entries.put(e.key, e);
+        }
+    }
+
+    public Entry categoryEntry(String id) {
+        return entries.get(Entry.key(Entry.Kind.TOPIC, ResourceLocation.fromNamespaceAndPath(WildsWiki.ID, "cat/" + id)));
+    }
+
+    public Entry modEntry(String ns) {
+        return entries.get(Entry.key(Entry.Kind.TOPIC, ResourceLocation.fromNamespaceAndPath(WildsWiki.ID, "mod/" + ns)));
+    }
+
+    public JsonObject modNote(String ns) {
+        return modNotes.has(ns) ? modNotes.getAsJsonObject(ns) : new JsonObject();
+    }
+
+    public boolean boss(Entry e) {
+        return e.kind == Entry.Kind.ENTITY && (bosses.contains(e.id.toString())
+                || (e.entityType != null && e.entityType.is(net.neoforged.neoforge.common.Tags.EntityTypes.BOSSES)));
+    }
+
+    /** what kind of thing an item is, for the lists: food, melee, ranged, armor_head..., pickaxe, axe, shovel, hoe, shield, potion, disc, or "" */
+    public static String itemClass(ItemStack s) {
+        Item i = s.getItem();
+        if (i instanceof net.minecraft.world.item.ArmorItem a) return "armor_" + a.getEquipmentSlot().getName();
+        if (i instanceof net.minecraft.world.item.ShieldItem) return "shield";
+        if (i instanceof net.minecraft.world.item.ProjectileWeaponItem || i instanceof net.minecraft.world.item.TridentItem) return "ranged";
+        if (i instanceof net.minecraft.world.item.ArrowItem) return "ammo";
+        if (i instanceof net.minecraft.world.item.PickaxeItem) return "pickaxe";
+        if (i instanceof net.minecraft.world.item.ShovelItem) return "shovel";
+        if (i instanceof net.minecraft.world.item.HoeItem) return "hoe";
+        if (i instanceof net.minecraft.world.item.SwordItem || i instanceof net.minecraft.world.item.MaceItem) return "melee";
+        if (i instanceof net.minecraft.world.item.AxeItem) return "axe";
+        if (s.is(net.minecraft.tags.ItemTags.SWORDS) || s.is(net.neoforged.neoforge.common.Tags.Items.MELEE_WEAPON_TOOLS)) return "melee";
+        if (s.has(net.minecraft.core.component.DataComponents.FOOD)) return "food";
+        if (i instanceof net.minecraft.world.item.PotionItem) return "potion";
+        if (s.has(net.minecraft.core.component.DataComponents.JUKEBOX_PLAYABLE)) return "disc";
+        if (i instanceof net.minecraft.world.item.DiggerItem || i instanceof net.minecraft.world.item.ShearsItem || i instanceof net.minecraft.world.item.FishingRodItem
+                || i instanceof net.minecraft.world.item.FlintAndSteelItem) return "tool";
+        var mods = s.get(net.minecraft.core.component.DataComponents.ATTRIBUTE_MODIFIERS);
+        if (mods != null) for (var m : mods.modifiers()) {
+            if (m.attribute().is(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) && m.modifier().amount() >= 3) return "melee";
+        }
+        return "";
+    }
+
+    /**
+     * the pages of a list: "mods", "articles:<category>", "entity:boss|monster|creature|water|ambient",
+     * "item:<class>" (see itemClass; "armor" all armour, "weapon" melee and ranged), "effect:beneficial|harmful|neutral",
+     * "enchantment:all", "biome:<dimension id>", "structure:<namespace or *>", "mod:<namespace>:<kind>"
+     */
+    public List<Entry> query(String q) {
+        List<Entry> out = new ArrayList<>();
+        String[] p = q.split(":", 2);
+        String arg = p.length > 1 ? p[1] : "";
+        switch (p[0]) {
+            case "mods" -> {
+                for (Entry e : entries.values()) if (e.special != null && e.special.startsWith("mod:")) out.add(e);
+                out.sort(Comparator.comparing(e -> e.name.getString().toLowerCase(Locale.ROOT)));
+            }
+            case "articles" -> {
+                List<Article> list = new ArrayList<>();
+                for (Article a : articles) {
+                    if (arg.startsWith("path:") ? a.source.contains(arg.substring(5)) : a.categories.contains(arg)) list.add(a);
+                }
+                list.sort(Comparator.comparingInt((Article a) -> a.order).thenComparing(a -> a.page.name.getString()));
+                for (Article a : list) out.add(a.page);
+            }
+            case "entity" -> {
+                for (Entry e : entries.values()) {
+                    if (e.kind != Entry.Kind.ENTITY || e.entityType == null) continue;
+                    boolean boss = boss(e);
+                    MobCategory c = e.entityType.getCategory();
+                    boolean ok = switch (arg) {
+                        case "boss" -> boss;
+                        case "monster" -> !boss && c == MobCategory.MONSTER;
+                        case "creature" -> !boss && c == MobCategory.CREATURE;
+                        case "water" -> !boss && (c == MobCategory.WATER_CREATURE || c == MobCategory.WATER_AMBIENT || c == MobCategory.UNDERGROUND_WATER_CREATURE || c == MobCategory.AXOLOTLS);
+                        case "ambient" -> !boss && (c == MobCategory.AMBIENT || c == MobCategory.MISC);
+                        default -> false;
+                    };
+                    if (ok) out.add(e);
+                }
+            }
+            case "item" -> {
+                for (Entry e : entries.values()) {
+                    if (e.kind != Entry.Kind.ITEM) continue;
+                    String c = itemClass(e.stack);
+                    if (c.equals(arg) || (arg.equals("armor") && c.startsWith("armor_")) || (arg.equals("weapon") && (c.equals("melee") || c.equals("ranged")))) out.add(e);
+                }
+            }
+            case "effect" -> {
+                for (Entry e : entries.values()) if (e.kind == Entry.Kind.EFFECT && e.effect.value().getCategory().name().equalsIgnoreCase(arg)) out.add(e);
+            }
+            case "enchantment" -> {
+                for (Entry e : entries.values()) if (e.kind == Entry.Kind.ENCHANTMENT) out.add(e);
+            }
+            case "biome" -> {
+                for (Entry e : entries.values()) {
+                    if (e.kind != Entry.Kind.BIOME) continue;
+                    JsonObject o = info("biomes", e.id.toString());
+                    List<String> dims = o == null ? List.of() : list(o, "dims");
+                    if (dims.contains(arg) || (dims.isEmpty() && arg.equals(dimensionOf(e.id.getNamespace())))) out.add(e);
+                }
+            }
+            case "structure" -> {
+                for (Entry e : entries.values()) {
+                    if (e.kind != Entry.Kind.STRUCTURE) continue;
+                    JsonObject o = info("structures", e.id.toString());
+                    List<String> dims = o == null ? List.of() : list(o, "dims");
+                    String dim = dims.isEmpty() ? dimensionOf(e.id.getNamespace()) : dims.get(0);
+                    if (dim.equals(arg)) out.add(e);
+                }
+            }
+            case "mod" -> {
+                String[] a = arg.split(":", 2);
+                for (Entry e : entries.values()) {
+                    if (!e.id.getNamespace().equals(a[0]) || e.kind == Entry.Kind.TOPIC) continue;
+                    if (e.name.getString().startsWith(e.kind.name().toLowerCase() + ".")) continue;   // unfinished things without a name
+                    if (a.length < 2 || e.kind.name().equalsIgnoreCase(a[1])) out.add(e);
+                }
+            }
+            default -> WildsWiki.LOG.warn("Wilds Wiki: unknown list {}", q);
+        }
+        return out;
+    }
+
+    /** where things of a mod live when the world dump did not say */
+    private static String dimensionOf(String ns) {
+        return switch (ns) {
+            case "twilightforest" -> "twilightforest:twilight_forest";
+            case "aether" -> "aether:the_aether";
+            case "incendium", "eternalnether", "netherdepthsupgrade", "betterfortresses" -> "minecraft:the_nether";
+            case "enderscape", "betterendisland" -> "minecraft:the_end";
+            default -> "minecraft:overworld";
+        };
     }
 
     private void readLoot(ResourceManager rm) {
@@ -540,6 +780,9 @@ public final class WikiData {
             case STRUCTURE -> 0.96f;
         };
         if (!e.articles.isEmpty() && e.kind != Entry.Kind.TOPIC) boost += 0.03f;
+        if (e.special != null) boost = 1.1f;
+        // a quest's hint is found after the thing itself and its guide
+        if (e.kind == Entry.Kind.TOPIC && !e.articles.isEmpty() && e.articles.get(0).source.contains("quest_guides/")) boost = 0.9f;
         Searcher.Doc<Entry> d = new Searcher.Doc<>(e, name, e.nameEn, boost);
         d.field(Searcher.NAME, Text.words(name));
         d.field(Searcher.NAME_EN, Text.words(e.nameEn));

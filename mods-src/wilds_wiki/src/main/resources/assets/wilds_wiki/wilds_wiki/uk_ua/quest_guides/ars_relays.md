@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:relay, ars_nouveau:dominion_wand
 keywords: Ретранслятори
+category: q_ars
+summary: Ретранслятори передають джерело між глечиками й машинами на відстань — зв'яжіть їх жезлом панування.
 ---
 # Квест «Ретранслятори»
 `Книга квестів → Ars Nouveau`

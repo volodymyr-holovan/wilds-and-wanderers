@@ -1,6 +1,8 @@
 ---
 for: irons_spellbooks:pyromancer_helmet
 keywords: Броня мага
+category: q_irons
+summary: Кожна школа має свій обладунок: пірoманта, кріоманта, електроманта, священника, архівокера, культиста... Вони 
 ---
 # Квест «Броня мага»
 `Книга квестів → Iron's Spells`

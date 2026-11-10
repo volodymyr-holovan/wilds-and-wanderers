@@ -1,6 +1,8 @@
 ---
 for: create:copper_backtank, create:copper_diving_helmet
 keywords: Мідний акваланг
+category: q_create
+summary: Мідний балон на спині заповнюється повітрям від обертання й живить мідний шолом (дихання під водою) та інструм
 ---
 # Квест «Мідний акваланг»
 `Книга квестів → **Create**`

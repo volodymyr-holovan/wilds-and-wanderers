@@ -1,6 +1,8 @@
 ---
 for: ars_nouveau:magebloom_fiber, ars_nouveau:sorcerer_robes
 keywords: Мантія чарівника
+category: q_ars
+summary: Мантії Ars збільшують ману й її відновлення. Найкращі — з тканини магоцвіту (рослина, що росте на землі, полит
 ---
 # Квест «Мантія чарівника»
 `Книга квестів → Ars Nouveau`
