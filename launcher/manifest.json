@@ -1,5 +1,5 @@
 {
- "version": "2026.11.06.1",
+ "version": "2026.11.10.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -914,15 +914,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.06.1/wilds_core-0.1.0.jar",
-   "sha1": "5ab9f480f07504814a61755953f4d137d1bc19be",
-   "size": 318536
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.10.1/wilds_core-0.1.0.jar",
+   "sha1": "99922f807a55d6a72801d7120bec0b1971842054",
+   "size": 355487
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.06.1/wilds_wiki-0.2.0.jar",
-   "sha1": "21e3a22c769143ea2b7c9872728ebf158350b407",
-   "size": 843505
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.10.1/wilds_wiki-0.2.0.jar",
+   "sha1": "cd98ace7fd0136135aa489a39a4f956dc5bf5e67",
+   "size": 1006269
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -970,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.06.1/overrides.zip",
-   "sha1": "545dc78a5cb0ac61722a3e1d6a4193aa03766b5c",
-   "size": 28255246
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.10.1/overrides.zip",
+   "sha1": "2d7d73dfb203e3cb4b5fb5d1219d39d4d6d6f975",
+   "size": 28255346
   },
   "overrides": [
    {
@@ -1212,13 +1212,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "d4ec63766c61945608ea3018f2e3ad88782490a4",
-    "size": 881581
+    "sha1": "376bc992bd6453d80e545d9cefe1b9e11bca39f5",
+    "size": 881723
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "d4ec63766c61945608ea3018f2e3ad88782490a4",
-    "size": 881581
+    "sha1": "376bc992bd6453d80e545d9cefe1b9e11bca39f5",
+    "size": 881723
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -3122,8 +3122,8 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/definitions.json",
-    "sha1": "624f9587ad6297d0dbb3a7b73f6a0de7e6f0fdfa",
-    "size": 103221
+    "sha1": "b08ec1814ef57b4d2c77a132ffda7388e630a69a",
+    "size": 103356
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/experience.json",
@@ -3132,8 +3132,8 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/skills.json",
-    "sha1": "60b5f05c11bfcc9e9771d2d4c0e13f2cb62572c0",
-    "size": 21939
+    "sha1": "aa66886d6523aa08bf6bf61d8d97dd556b1252c1",
+    "size": 21931
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/config.json",
