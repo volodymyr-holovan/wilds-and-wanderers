@@ -1,5 +1,5 @@
 {
- "version": "2026.11.10.1",
+ "version": "2026.11.11.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -914,15 +914,15 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.10.1/wilds_core-0.1.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.11.1/wilds_core-0.1.0.jar",
    "sha1": "99922f807a55d6a72801d7120bec0b1971842054",
    "size": 355487
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.10.1/wilds_wiki-0.2.0.jar",
-   "sha1": "cd98ace7fd0136135aa489a39a4f956dc5bf5e67",
-   "size": 1006269
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.11.1/wilds_wiki-0.2.0.jar",
+   "sha1": "93884e5264d5aff39833fce4b9a264bb8b1ca645",
+   "size": 1242381
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -970,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.10.1/overrides.zip",
-   "sha1": "2d7d73dfb203e3cb4b5fb5d1219d39d4d6d6f975",
-   "size": 28255346
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.11.1/overrides.zip",
+   "sha1": "96e11677c83732676069678f5c724e5fee20e1d7",
+   "size": 28266852
   },
   "overrides": [
    {
@@ -1092,8 +1092,8 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/bosses.snbt",
-    "sha1": "274562230318820b6f8665efdb6c57386a17c29a",
-    "size": 13469
+    "sha1": "4f66103847e4d0a8f80e9072911543953007880b",
+    "size": 13496
    },
    {
     "path": "config/ftbquests/quests/chapters/camping.snbt",
@@ -1212,13 +1212,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "376bc992bd6453d80e545d9cefe1b9e11bca39f5",
-    "size": 881723
+    "sha1": "6a2c14a5424a4af4493827e0526dbc5fe42a9032",
+    "size": 939521
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "376bc992bd6453d80e545d9cefe1b9e11bca39f5",
-    "size": 881723
+    "sha1": "6a2c14a5424a4af4493827e0526dbc5fe42a9032",
+    "size": 939521
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -1512,8 +1512,8 @@
    },
    {
     "path": "kubejs/assets/enderscape/lang/uk_ua.json",
-    "sha1": "113c10a79eb019dba5814bf116892221dfbd0ead",
-    "size": 60947
+    "sha1": "1da8e6516a4eb3dc919a53ddebbb4ad9c97b301a",
+    "size": 60326
    },
    {
     "path": "kubejs/assets/entityculling/lang/uk_ua.json",
@@ -1522,8 +1522,8 @@
    },
    {
     "path": "kubejs/assets/eternalnether/lang/uk_ua.json",
-    "sha1": "420eeb346b3bf9fa171faec62b1794cbed4ec6c0",
-    "size": 7066
+    "sha1": "0bca8db6fa014f77a8ebe34a266edfd5bf7b64b9",
+    "size": 6990
    },
    {
     "path": "kubejs/assets/fallingtree/lang/uk_ua.json",
@@ -1777,8 +1777,8 @@
    },
    {
     "path": "kubejs/assets/mowziesmobs/lang/uk_ua.json",
-    "sha1": "f6ae2acd25fecbc908231409885360e9a0affdc3",
-    "size": 17407
+    "sha1": "f483aeefb1c8265b42a100b3b4394927e8e3ee1c",
+    "size": 19210
    },
    {
     "path": "kubejs/assets/multipiston/lang/uk_ua.json",
@@ -1802,13 +1802,13 @@
    },
    {
     "path": "kubejs/assets/netherdepthsupgrade/lang/uk_ua.json",
-    "sha1": "0a4899a313acd4d11843a60931d5cac327323aa2",
-    "size": 558
+    "sha1": "6c27e2d2f61215207c3be01702aabc98a36856b1",
+    "size": 551
    },
    {
     "path": "kubejs/assets/netherexotics/lang/uk_ua.json",
-    "sha1": "4f34855d184506365932a32bb44644256c188de6",
-    "size": 13170
+    "sha1": "371035d0e91645688b4a60074a00e617e458e204",
+    "size": 13006
    },
    {
     "path": "kubejs/assets/nitrogen_internals/lang/uk_ua.json",
@@ -1992,8 +1992,8 @@
    },
    {
     "path": "kubejs/assets/trimmed/lang/uk_ua.json",
-    "sha1": "f243adc84b3970c53ad072b2e352dd874052c2f3",
-    "size": 237
+    "sha1": "9459404f698016ef5bab2e97a66e4be029229f8f",
+    "size": 234
    },
    {
     "path": "kubejs/assets/twilightforest/lang/uk_ua.json",
@@ -2002,8 +2002,8 @@
    },
    {
     "path": "kubejs/assets/upgrade_aquatic/lang/uk_ua.json",
-    "sha1": "92860683077532b8e863d3e317ffa0758f60f582",
-    "size": 4093
+    "sha1": "9923f086a0e82625e79d5c3c4614a573ee6406a1",
+    "size": 4075
    },
    {
     "path": "kubejs/assets/veil/lang/uk_ua.json",
