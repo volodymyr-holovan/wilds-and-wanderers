@@ -1,3 +1,4 @@
+"""Quest chapter «Сутінковий ліс» (11 quests): Вимір вічних сутінків і ланцюжок босів. Read by gen_quests.py."""
 CHAPTER = {
     "key": "twilight",
     "title": "&2Сутінковий ліс",

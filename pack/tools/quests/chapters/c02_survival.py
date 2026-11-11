@@ -1,3 +1,4 @@
+"""Quest chapter «Виживання» (12 quests): Їжа, пори року, скрині й скарби. Read by gen_quests.py."""
 CHAPTER = {
     "key": "survival",
     "title": "&aВиживання",

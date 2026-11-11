@@ -1,3 +1,4 @@
+"""Quest chapter «Зачарування» (12 quests): Рідкісні речі, самоцвіти, бібліотека чар. Read by gen_quests.py."""
 CHAPTER = {
     "key": "apotheosis",
     "title": "&eЗачарування",

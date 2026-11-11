@@ -1,3 +1,4 @@
+"""Quest chapter «Дракони» (8 quests): Ice and Fire: гнізда, лут і драконяча сталь. Read by gen_quests.py."""
 CHAPTER = {
     "key": "dragons",
     "title": "&cДракони",

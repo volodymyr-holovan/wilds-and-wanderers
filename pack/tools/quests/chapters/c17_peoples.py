@@ -1,3 +1,4 @@
+"""Quest chapter «Народи» (9 quests): Дикі народи світу: табори, торгівля, війна. Read by gen_quests.py."""
 CHAPTER = {
     "key": "peoples",
     "title": "&2Народи",

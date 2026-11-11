@@ -1,3 +1,4 @@
+"""Quest chapter «Create» (28 quests): Від водяного колеса до автоматичних заводів і потягів. Read by gen_quests.py."""
 CHAPTER = {
     "key": "create",
     "title": "&6Create",

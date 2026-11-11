@@ -1,3 +1,4 @@
+"""Quest chapter «Основи» (7 quests): Акаунт, дім, телепорти, друзі, намет. Read by gen_quests.py."""
 CHAPTER = {
     "key": "welcome",
     "title": "&6Основи",

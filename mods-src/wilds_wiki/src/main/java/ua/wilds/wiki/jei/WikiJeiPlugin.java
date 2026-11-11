@@ -19,6 +19,10 @@ import ua.wilds.wiki.data.WikiData;
 
 import java.util.Map;
 
+/**
+ * The wiki's JEI plugin: keeps the JEI runtime for recipe views on wiki pages, opens a page from JEI (the wiki key over an
+ * ingredient) and frames in gold the recipes the pack added or changed (generated/changed_recipes.json).
+ */
 @JeiPlugin
 public final class WikiJeiPlugin implements IModPlugin {
     static IJeiRuntime runtime;

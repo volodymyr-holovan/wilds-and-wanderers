@@ -1,3 +1,4 @@
+"""Quest chapter «Села й колонії» (14 quests): Селяни, охорона, власне місто з робітниками. Read by gen_quests.py."""
 CHAPTER = {
     "key": "colonies",
     "title": "&6Села й колонії",

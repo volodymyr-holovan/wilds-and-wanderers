@@ -1,3 +1,4 @@
+"""Quest chapter «Дика природа» (6 quests): Звірі, птахи, комахи і дрібниці під ногами. Read by gen_quests.py."""
 CHAPTER = {
     "key": "wildlife",
     "title": "&2Дика природа",

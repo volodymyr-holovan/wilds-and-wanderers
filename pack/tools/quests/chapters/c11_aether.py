@@ -1,3 +1,4 @@
+"""Quest chapter «Етер» (12 quests): Небесні острови і три підземелля. Read by gen_quests.py."""
 CHAPTER = {
     "key": "aether",
     "title": "&eЕтер",

@@ -1,3 +1,4 @@
+"""Quest chapter «Незер і Енд» (20 quests): Новий Незер, рибалка в лаві, дракон і зовнішні острови. Read by gen_quests.py."""
 CHAPTER = {
     "key": "nether_end",
     "title": "&cНезер &7і &5Енд",

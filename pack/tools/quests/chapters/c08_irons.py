@@ -1,3 +1,4 @@
+"""Quest chapter «Iron's Spells» (17 quests): Сувої, книги заклинань, школи магії й Мертвий король. Read by gen_quests.py."""
 CHAPTER = {
     "key": "irons",
     "title": "&5Iron's Spells",

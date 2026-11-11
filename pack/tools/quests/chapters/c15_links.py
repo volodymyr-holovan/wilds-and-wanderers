@@ -1,3 +1,4 @@
+"""Quest chapter «Зв'язки світу» (7 quests): Як моди цієї збірки доповнюють один одного. Read by gen_quests.py."""
 CHAPTER = {
     "key": "links",
     "title": "&9Зв'язки світу",

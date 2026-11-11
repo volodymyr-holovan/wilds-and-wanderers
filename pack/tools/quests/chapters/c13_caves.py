@@ -1,3 +1,4 @@
+"""Quest chapter «Печери Алекса» (10 quests): Шість величезних підземних світів. Read by gen_quests.py."""
 CHAPTER = {
     "key": "caves",
     "title": "&6Печери Алекса",

@@ -1,3 +1,4 @@
+"""Quest chapter «Mekanism» (23 quests): Від осмію до термоядерного реактора й МекаКостюма. Read by gen_quests.py."""
 CHAPTER = {
     "key": "mekanism",
     "title": "&bMekanism",

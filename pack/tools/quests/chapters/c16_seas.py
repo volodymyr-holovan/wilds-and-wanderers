@@ -1,3 +1,4 @@
+"""Quest chapter «Моря і кораблі» (14 quests): Верф, гармати, затонулі міста й морські звірі. Read by gen_quests.py."""
 CHAPTER = {
     "key": "seas",
     "title": "&bМоря і кораблі",

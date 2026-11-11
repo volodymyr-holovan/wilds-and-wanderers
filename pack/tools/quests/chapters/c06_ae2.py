@@ -1,3 +1,4 @@
+"""Quest chapter «AE2» (16 quests): Цифрове сховище, автокрафт і квантові мости. Read by gen_quests.py."""
 CHAPTER = {
     "key": "ae2",
     "title": "&3AE2",

@@ -1,3 +1,4 @@
+"""Quest chapter «Великі боси» (13 quests): L_Ender's Cataclysm і Mowzie's Mobs. Read by gen_quests.py."""
 CHAPTER = {
     "key": "bosses",
     "title": "&4Великі боси",

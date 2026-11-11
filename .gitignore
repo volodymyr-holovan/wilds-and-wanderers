@@ -8,6 +8,11 @@
 !/mods-src/
 !/docs/
 !/launcher/
+!/AGENTS.md
+!/CLAUDE.md
+!/PROJECT_MAP.md
+!/.graphifyignore
+!/graphify-out/
 
 # copies of other mods' English texts and leftovers of removed mods
 /pack/_removed/
@@ -27,3 +32,8 @@
 *.jar
 *.log
 
+
+# the knowledge graph: only the graph and its report are shared (graph.html is big and made locally, the rest is per-machine)
+/graphify-out/*
+!/graphify-out/graph.json
+!/graphify-out/GRAPH_REPORT.md

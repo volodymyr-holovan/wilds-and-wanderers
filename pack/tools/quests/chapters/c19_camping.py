@@ -1,3 +1,4 @@
+"""Quest chapter «Похідне життя» (8 quests): Намети, юрти, гамаки — дім, що їде з вами. Read by gen_quests.py."""
 CHAPTER = {
     "key": "camping",
     "title": "&aПохідне життя",

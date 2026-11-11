@@ -1,3 +1,4 @@
+"""Quest chapter «Create: додатки» (5 quests): Електрика для інших модів і зачарування машинами. Read by gen_quests.py."""
 CHAPTER = {
     "key": "create_addons",
     "title": "&6Create: додатки",

@@ -1,3 +1,4 @@
+"""Quest chapter «Ars Nouveau» (16 quests): Власні заклинання з гліфів, ритуали й чарівні помічники. Read by gen_quests.py."""
 CHAPTER = {
     "key": "ars",
     "title": "&dArs Nouveau",

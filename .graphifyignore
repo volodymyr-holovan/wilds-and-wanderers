@@ -1,0 +1,21 @@
+# graphify (the project map, see PROJECT_MAP.md) reads the pack's code and its few documents about the project.
+# Data files (translations, quest books, configs, registry dumps, wiki articles) are content, not structure:
+# they are described in PROJECT_MAP.md and left out of the graph.
+docs/registries/
+docs/*.json
+pack/overrides/config/
+pack/overrides/kubejs/data/
+pack/overrides/kubejs/assets/
+pack/overrides-initial/
+pack/i18n/
+pack/removed.txt
+pack/tools/scenarios/
+pack/tools/quests/.cache/
+mods-src/*/src/main/resources/
+mods-src/wilds_wiki/guides_src/
+launcher/*.json
+graphify-out/
+*.mp3
+*.ogg
+*.png
+*.ico
