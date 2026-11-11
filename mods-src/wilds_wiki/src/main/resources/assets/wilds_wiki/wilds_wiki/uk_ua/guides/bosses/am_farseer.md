@@ -1,6 +1,7 @@
 ---
 for: entity:alexsmobs:farseer, alexsmobs:shattered_dimensional_carver, alexsmobs:dimensional_carver
 title: Далекозорець (Farseer)
+mod: alexsmobs
 category: bosses
 summary: Істота з-поза вимірів, що з'являється лише біля межі світу.
 order: 630

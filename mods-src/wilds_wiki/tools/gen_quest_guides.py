@@ -74,6 +74,6 @@ for f in sorted(glob.glob(os.path.join(CHAPTERS, "c*.py"))):
                     continue
                 v = STARS[:int(g[k])] + "☆" * (5 - int(g[k])) if k == "danger" else md(str(g[k]))
                 lines.append(f"- **{LABEL[k]}:** {v}")
-        open(os.path.join(OUT, f"{ch['key']}_{q['key']}.md"), "w", encoding="utf-8").write("\n".join(lines).rstrip() + "\n")
+        open(os.path.join(OUT, f"{ch['key']}_{q['key']}.md"), "w", encoding="utf-8", newline="\n").write("\n".join(lines).rstrip() + "\n")
         n += 1
 print(n, "quest guides written")

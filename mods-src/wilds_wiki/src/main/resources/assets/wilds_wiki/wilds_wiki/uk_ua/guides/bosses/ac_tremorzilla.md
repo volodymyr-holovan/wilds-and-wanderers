@@ -1,6 +1,7 @@
 ---
 for: entity:alexscaves:tremorzilla, alexscaves:tremorzilla_egg
 title: Тремордзилла
+mod: alexscaves
 category: bosses
 summary: Радіоактивний велетень, якого гравець вирощує сам із яйця.
 order: 540

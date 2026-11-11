@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:maledictus, cataclysm:cursed_tombstone, cataclysm:cursed_eye, structure:cataclysm:frosted_prison
 keywords: маледиктус, maledictus, проклятий надгробок, морозна в'язниця, frosted prison, як викликати
 ---

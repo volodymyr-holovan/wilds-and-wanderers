@@ -1,5 +1,6 @@
 ---
 topic: quest_givers
+for: entity:wilds_core:wanderer
 title: Мандрівники з дорученнями
 icon: minecraft:writable_book
 order: 16

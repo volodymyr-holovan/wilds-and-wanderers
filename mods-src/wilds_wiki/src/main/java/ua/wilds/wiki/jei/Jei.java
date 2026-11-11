@@ -4,6 +4,7 @@ import com.mojang.blaze3d.platform.InputConstants;
 import mezz.jei.api.constants.RecipeTypes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayoutDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.recipe.IFocus;
 import mezz.jei.api.recipe.IFocusFactory;
 import mezz.jei.api.recipe.IRecipeManager;
@@ -53,14 +54,37 @@ public final class Jei {
 
     private static List<IRecipeCategory<?>> categories(List<IFocus<?>> f) {
         return WikiJeiPlugin.runtime.getRecipeManager().createRecipeCategoryLookup().limitFocus(f).get()
-                .filter(c -> !c.getRecipeType().equals(RecipeTypes.INFORMATION) && !tagList(c))
+                .filter(c -> !c.getRecipeType().equals(RecipeTypes.INFORMATION) && !tagList(c) && !mirror(c))
                 .sorted(java.util.Comparator.comparingInt(Jei::rank)).toList();
+    }
+
+    /**
+     * Create's copies of ordinary recipes: every crafting recipe again for the mechanical crafter and the basin, every 3x3
+     * block again for the press, every stonecutter recipe again for the saw, every potion again for the basin. On a page
+     * they only repeat the real recipe ("can also be made by Create machines"), so the wiki leaves them to JEI.
+     */
+    private static boolean mirror(IRecipeCategory<?> c) {
+        var uid = c.getRecipeType().getUid();
+        return uid.getNamespace().equals("create") && (uid.getPath().startsWith("automatic_") || uid.getPath().equals("block_cutting"));
+    }
+
+    /** a slot with this many items takes (or makes) nearly anything: "any item can get Reactive", "socket a gem into any gear" */
+    private static final int ANY_ITEM = 200;
+
+    /** the recipe is not about this item: the slot that holds it holds almost every other item too */
+    private static boolean generic(IRecipeLayoutDrawable<?> d, ItemStack stack) {
+        for (IRecipeSlotView s : d.getRecipeSlotsView().getSlotViews()) {
+            List<ItemStack> items = s.getItemStacks().limit(ANY_ITEM + 1).toList();
+            if (items.size() > ANY_ITEM && s.getItemStacks().anyMatch(i -> ItemStack.isSameItem(i, stack))) return true;
+        }
+        return false;
     }
 
     /** by-products of machines and bulk processing: ways nobody looks for first */
     private static final String[] SIDE = {"item_application", "deploying", "sandpaper", "polishing", "crushing", "milling", "pressing", "compacting",
             "cutting", "sawing", "haunting", "splashing", "washing", "fan_", "mystery", "packing", "spout", "draining", "recycling", "uncrafting",
-            "grinding", "sieving", "composting", "fuel", "anvil", "grindstone", "decorated_pot", "loom", "enrich", "inscriber_", "entropy", "transform"};
+            "grinding", "sieving", "composting", "fuel", "anvil", "grindstone", "decorated_pot", "loom", "enrich", "inscriber_", "entropy", "transform",
+            "repair", "salvag"};
 
     /**
      * how soon a kind of recipe is shown: the crafting table first, then furnaces, smithing, the stonecutter and brewing,
@@ -80,6 +104,9 @@ public final class Jei {
             };
         }
         for (String s : SIDE) if (p.contains(s)) return 50;
+        // MineColonies shows what each colony worker can make: mostly ordinary recipes again (the blacksmith forges
+        // what a crafting table makes); first only when a worker is the one way to get the item
+        if (uid.getNamespace().equals("minecolonies")) return 50;
         return 20;
     }
 
@@ -91,10 +118,14 @@ public final class Jei {
             List<IFocus<?>> f = focus(stack, r);
             IRecipeManager rm = WikiJeiPlugin.runtime.getRecipeManager();
             List<IRecipeCategory<?>> cats = categories(f);
-            boolean anyMain = cats.stream().anyMatch(c -> rank(c) < 50);
             for (IRecipeCategory<?> c : cats) {
-                if (out.size() >= max || (rank(c) >= 50 && (anyMain || r != Role.RECIPES))) break;
-                layout(rm, c, f).ifPresent(out::add);
+                if (out.size() >= max || rank(c) >= 50) break;
+                layout(rm, c, f, stack).ifPresent(out::add);
+            }
+            // by-products only when they are the sole way to get the item
+            if (out.isEmpty() && r == Role.RECIPES) for (IRecipeCategory<?> c : cats) {
+                if (out.size() >= max) break;
+                if (rank(c) >= 50) layout(rm, c, f, stack).ifPresent(out::add);
             }
         } catch (Exception ignored) {
             // a category of some mod failing to lay out must not take the page down
@@ -113,15 +144,22 @@ public final class Jei {
             List<IFocus<?>> f = focus(stack, r);
             IRecipeManager rm = WikiJeiPlugin.runtime.getRecipeManager();
             int n = 0;
-            for (IRecipeCategory<?> c : categories(f)) n += countIn(rm, c, f);
+            for (IRecipeCategory<?> c : categories(f)) n += countIn(rm, c, f, stack);
             return n;
         } catch (Exception e) {
             return 0;
         }
     }
 
-    private static <T> int countIn(IRecipeManager rm, IRecipeCategory<T> c, List<IFocus<?>> f) {
-        return (int) rm.createRecipeLookup(c.getRecipeType()).limitFocus(f).get().count();
+    /** recipes of the category for the item; a small category is looked into, so a lone generic recipe is not counted */
+    private static <T> int countIn(IRecipeManager rm, IRecipeCategory<T> c, List<IFocus<?>> f, ItemStack stack) {
+        int n = (int) rm.createRecipeLookup(c.getRecipeType()).limitFocus(f).get().count();
+        if (n == 0 || n > 3) return n;
+        IFocusFactory ff = WikiJeiPlugin.runtime.getJeiHelpers().getFocusFactory();
+        return (int) rm.createRecipeLookup(c.getRecipeType()).limitFocus(f).get()
+                .map(recipe -> rm.createRecipeLayoutDrawable(c, recipe, ff.createFocusGroup(f)))
+                .flatMap(Optional::stream)
+                .filter(d -> !generic(d, stack)).count();
     }
 
     public static void show(ItemStack stack, Role r) {
@@ -137,7 +175,7 @@ public final class Jei {
             IRecipeManager rm = WikiJeiPlugin.runtime.getRecipeManager();
             for (IRecipeCategory<?> c : categories(f)) {
                 if (out.size() >= max) break;
-                layout(rm, c, f).ifPresent(out::add);
+                layout(rm, c, f, stack).ifPresent(out::add);
             }
         } catch (Exception ignored) {
             // a category of some mod failing to lay out must not take the page down
@@ -145,12 +183,19 @@ public final class Jei {
         return out;
     }
 
-    private static <T> Optional<RecipeView> layout(IRecipeManager rm, IRecipeCategory<T> c, List<IFocus<?>> f) {
+    /** the first recipe of the category that is about this item (generic ones skipped), laid out for a page */
+    private static <T> Optional<RecipeView> layout(IRecipeManager rm, IRecipeCategory<T> c, List<IFocus<?>> f, ItemStack stack) {
         IFocusFactory ff = WikiJeiPlugin.runtime.getJeiHelpers().getFocusFactory();
-        return rm.createRecipeLookup(c.getRecipeType()).limitFocus(f).get().findFirst()
-                .flatMap(recipe -> rm.createRecipeLayoutDrawable(c, recipe, ff.createFocusGroup(f)))
+        return rm.createRecipeLookup(c.getRecipeType()).limitFocus(f).get().limit(LOOK)
+                .map(recipe -> rm.createRecipeLayoutDrawable(c, recipe, ff.createFocusGroup(f)))
+                .flatMap(Optional::stream)
+                .filter(d -> !generic(d, stack))
+                .findFirst()
                 .map(Layout::new);
     }
+
+    /** how many recipes of a category are looked at for one that is about the item */
+    private static final int LOOK = 8;
 
     /** Text of the JEI information pages of the item (mods and our own KubeJS info pages). */
     public static List<FormattedText> info(ItemStack stack) {
@@ -265,6 +310,10 @@ public final class Jei {
 
         public String categoryTitle() {
             return d.getRecipeCategory().getTitle().getString();
+        }
+
+        public String categoryId() {
+            return d.getRecipeCategory().getRecipeType().getUid().toString();
         }
 
         public void tick() {

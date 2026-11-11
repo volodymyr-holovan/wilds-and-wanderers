@@ -157,6 +157,7 @@ public final class WikiData {
         readBooks(rm);
         JsonObject w = json(rm, "generated/world.json");
         if (w != null) world = w;
+        modNotes = langJson(rm, "mods.json");  // before any page: modName() falls back to it
         for (Item item : BuiltInRegistries.ITEM) {
             if (item instanceof SpawnEggItem egg) spawnEggs.putIfAbsent(egg.getType(new ItemStack(egg)), item);
         }
@@ -226,15 +227,28 @@ public final class WikiData {
 
     private void addEntities() {
         for (EntityType<?> type : BuiltInRegistries.ENTITY_TYPE) {
-            Item egg = spawnEggs.get(type);
-            if (egg == null && type.getCategory() == MobCategory.MISC) continue;
-            ResourceLocation id = BuiltInRegistries.ENTITY_TYPE.getKey(type);
-            Entry e = new Entry(Entry.Kind.ENTITY, id);
-            e.entityType = type;
-            e.icon = new ItemStack(egg != null ? egg : Items.EGG);
-            put(e, type.getDescription(), type.getDescriptionId());
-            byEntity.put(type, e);
+            // "misc" without a spawn egg: arrows, minecarts, item frames... not creatures (unless an article asks for them)
+            if (spawnEggs.get(type) == null && type.getCategory() == MobCategory.MISC) continue;
+            addEntity(type);
         }
+    }
+
+    /** the first item page (by id) that a pattern like "smallships:*_cog" matches */
+    private Entry firstMatch(String target) {
+        java.util.regex.Pattern pat = java.util.regex.Pattern.compile("item:" + target.replace(".", "\\.").replace("*", "[a-z0-9_/]*"));
+        return entries.values().stream().filter(e -> e.kind == Entry.Kind.ITEM && pat.matcher(e.key).matches())
+                .min(Comparator.comparing(e -> e.key)).orElse(null);
+    }
+
+    private Entry addEntity(EntityType<?> type) {
+        Item egg = spawnEggs.get(type);
+        ResourceLocation id = BuiltInRegistries.ENTITY_TYPE.getKey(type);
+        Entry e = new Entry(Entry.Kind.ENTITY, id);
+        e.entityType = type;
+        e.icon = new ItemStack(egg != null ? egg : Items.EGG);
+        put(e, type.getDescription(), type.getDescriptionId());
+        byEntity.put(type, e);
+        return e;
     }
 
     private void addEffects() {
@@ -366,14 +380,17 @@ public final class WikiData {
                 }
             }
             Item icon = a.icon != null ? BuiltInRegistries.ITEM.get(ResourceLocation.parse(a.icon)) : Items.AIR;
-            if (icon == Items.AIR && !a.targets.isEmpty() && !a.targets.get(0).contains("*")) {
-                Entry first = resolve(a.targets.get(0));
+            // no icon given: the first page it is written for (a pattern like "smallships:*_cog" takes its first item)
+            for (String t : a.targets) {
+                if (icon != Items.AIR) break;
+                Entry first = t.contains("*") ? firstMatch(t) : resolve(t);
                 if (first != null && !first.icon.isEmpty()) icon = first.icon.getItem();
             }
             page.icon = new ItemStack(icon == Items.AIR ? Items.BOOK : icon);
             page.name = Component.literal(title != null ? title : id.getPath());
             page.nameEn = "";
-            page.modName = "Wilds & Wanderers";
+            // the mod it is about (guides/<mod>/... bundles say so), else the pack's own
+            page.modName = a.mod != null && !a.mod.equals(WildsWiki.ID) ? modName(a.mod) : "Wilds & Wanderers";
             page.note = a.summary == null ? "" : a.summary;
             page.articles.add(a);
             page.keywords.addAll(a.keywords);
@@ -396,6 +413,11 @@ public final class WikiData {
                     continue;
                 }
                 Entry e = resolve(target);
+                if (e == null && target.startsWith("entity:")) {
+                    // an article written for it makes a "misc" entity (the pack's wanderers, a hermit crab's shell...) a page too
+                    ResourceLocation rl = ResourceLocation.tryParse(target.substring(7));
+                    if (rl != null && BuiltInRegistries.ENTITY_TYPE.containsKey(rl)) e = addEntity(BuiltInRegistries.ENTITY_TYPE.get(rl));
+                }
                 if (e == null) {
                     WildsWiki.LOG.warn("Wilds Wiki: article {} is for unknown {}", a.source, target);
                     continue;
@@ -436,7 +458,6 @@ public final class WikiData {
     private void readCatalogue(ResourceManager rm) {
         JsonObject cat = langJson(rm, "categories.json");
         bosses.addAll(list(cat, "bosses"));
-        modNotes = langJson(rm, "mods.json");
         // a page for every mod that brought something
         Map<String, Entry> firstOf = new LinkedHashMap<>();
         Map<String, Integer> count = new HashMap<>();
@@ -763,9 +784,13 @@ public final class WikiData {
         return byBlock.get(b);
     }
 
+    /** the mod's name: as the mod calls itself, or from mods.json for server-only mods (world generation) the client does not have */
     public String modName(String ns) {
         return modNames.computeIfAbsent(ns, n -> ModList.get().getModContainerById(n)
-                .map(c -> c.getModInfo().getDisplayName()).orElse(n.equals("minecraft") ? "Minecraft" : n));
+                .map(c -> c.getModInfo().getDisplayName()).orElseGet(() -> {
+                    String s = modNotes.has(n) ? str(modNotes.getAsJsonObject(n), "name") : null;
+                    return s != null ? s : n.equals("minecraft") ? "Minecraft" : n;
+                }));
     }
 
     // ---------------------------------------------------------------- search index

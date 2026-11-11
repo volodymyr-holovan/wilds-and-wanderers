@@ -189,7 +189,7 @@ for rid in re.findall(r"\.id\('(wilds:[^']+)'\)", links):
     changed[rid] = "added"
 
 os.makedirs(OUT, exist_ok=True)
-json.dump(loot, open(os.path.join(OUT, "loot.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-json.dump(changed, open(os.path.join(OUT, "changed_recipes.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-open(os.path.join(OUT, "loot_tables.txt"), "w", encoding="utf-8").write("\n".join(sorted(named_tables)) + "\n")
+json.dump(loot, open(os.path.join(OUT, "loot.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
+json.dump(changed, open(os.path.join(OUT, "changed_recipes.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
+open(os.path.join(OUT, "loot_tables.txt"), "w", encoding="utf-8", newline="\n").write("\n".join(sorted(named_tables)) + "\n")
 print(f"tables {len(tables)}, items with sources {len(item_sources)}, named tables {len(named_tables)}, changed recipes {len(changed)}")

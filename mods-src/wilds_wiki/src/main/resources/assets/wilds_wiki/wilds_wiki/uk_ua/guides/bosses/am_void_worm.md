@@ -1,6 +1,7 @@
 ---
 for: entity:alexsmobs:void_worm, alexsmobs:mysterious_worm, alexsmobs:capsid
 title: Хробак порожнечі
+mod: alexsmobs
 category: bosses
 summary: Бос Енду, якого виманюють із порожнечі Таємничим хробаком.
 order: 610

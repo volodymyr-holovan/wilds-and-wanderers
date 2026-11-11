@@ -1,0 +1,79 @@
+=== liquid_experience.md
+---
+for: create_enchantment_industry:experience_bucket, create_enchantment_industry:experience_hatch, create_enchantment_industry:mechanical_grindstone, create_enchantment_industry:grindstone_drain, create_enchantment_industry:experience_lantern, create:experience_nugget, create:experience_block
+title: Рідкий досвід
+summary: Як злити свій досвід у бак, як добувати рідкий досвід автоматично і що з нього роблять.
+keywords: рідкий досвід, досвід, опит, люк досвіду, механічне точило, ліхтар досвіду, блок досвіду, liquid experience, xp, experience hatch, mechanical grindstone, enchantment industry
+category: tech
+---
+# Рідкий досвід (Enchantment Industry)
+У цьому моді досвід — це **рідина**. Вона тече трубами, лежить у баках і живить машини для зачарування.
+
+# Як злити свій досвід
+- [[create_enchantment_industry:experience_hatch]] ставлять на рідинний резервуар. Клацніть ПКМ — ваш досвід переллється в бак; Shift+ПКМ — забере досвід назад. Скільки за раз — задає панель на люку.
+- Люк роблять, приклавши [[create:experience_block]] до [[create_dragons_plus:fluid_hatch]].
+- [[create_enchantment_industry:experience_lantern]] сама вбирає досвід гравців поруч і кулі досвіду; світиться тим яскравіше, що більше в ній набралося. Працює й на рухомих приладинах.
+
+# Як добувати автоматично
+- Пляшечки досвіду зливає [[create:item_drain]]: одна пляшечка — 10 мБ.
+- [[create_enchantment_industry:mechanical_grindstone]]: клацніть ним по стоку для предметів — вийде **стік точила**; поставте зверху ще одне точило. Воно перемелює [[create:experience_nugget]] (3 мБ) і [[create:experience_block]] (27 мБ) на рідкий досвід. Точило вміє й те, що звичайне точило, і шліфує, як наждачний папір.
+- Дробильні колеса й застосовувачі, що вбивають істот, інколи кидають шматочки досвіду.
+
+# Що з ним робити
+- [[create:spout]] наливає досвід назад у пляшечки (10 мБ на пляшечку).
+- Чаша під пресом стискає 27 мБ на [[create:experience_block]], а прес із блоку досвіду робить [[create_enchantment_industry:enchanting_template]].
+- Досвід, що витікає з відкритої труби, перетворюється на кулі досвіду.
+- Головне — машини зачарування: [[wilds_wiki:guides/create_enchantment_industry/blaze_enchanting|пломеневий зачарувальник і кузня]].
+
+=== blaze_enchanting.md
+---
+for: create_enchantment_industry:blaze_enchanter, create_enchantment_industry:blaze_forger, create_enchantment_industry:enchanting_template, create_enchantment_industry:super_enchanting_template, create_enchantment_industry:super_experience_block, create_enchantment_industry:super_experience_nugget, create_enchantment_industry:experience_cake, create_enchantment_industry:experience_cake_base, create_enchantment_industry:experience_cake_slice, create_dragons_plus:blaze_upgrade_smithing_template
+title: Пломеневий зачарувальник і кузня
+summary: Зачарування й ковадло на рідкому досвіді: шаблони, рівень зачарування, суперзачарування.
+keywords: пломеневий зачарувальник, пломенева кузня, шаблон зачарування, суперзачарування, торт зачарування, ковальський шаблон, blaze enchanter, blaze forger, enchanting template, super enchanting
+category: tech
+---
+# Як їх зробити
+Обидві машини — це [[create:blaze_burner]], покращений на ковальському столі:
+- [[create:blaze_burner]] + [[minecraft:enchanting_table]] + [[create_dragons_plus:blaze_upgrade_smithing_template]] → [[create_enchantment_industry:blaze_enchanter]].
+- [[create:blaze_burner]] + ковадло + той самий шаблон → [[create_enchantment_industry:blaze_forger]].
+- Перший **ковальський шаблон** шукайте в скринях бастіонів і незерських фортець. Далі його копіюють у верстаті: шаблон, пекельний камінь і 7 стрижнів іфрита дають 2 шаблони.
+
+# Пломеневий зачарувальник
+Працює як стіл зачарувань, але на **рідкому досвіді** замість ваших рівнів.
+- Подайте в нього рідкий досвід трубою.
+- На панелі задайте **рівень зачарування** (у звичайного столу межа — 30). Вищий рівень — не завжди краще: деякі зачарування на високому рівні не випадають.
+- Панель — це ще й слот-фільтр. Покладіть туди предмет-зразок (наприклад, алмазний нагрудник), і зачарувальник накладатиме на [[create_enchantment_industry:enchanting_template]] лише ті чари, що підходять цьому предмету.
+- Предмети подає й забирає [[create:mechanical_arm]]; вона ж може підкидати паливо з досвідом.
+
+# Пломенева кузня
+Працює як ковадло, але **без ціни ремонту**, яка росте з кожним разом.
+- Об'єднує чари однакових предметів і шаблонів.
+- **Накладає шаблон зачарування** на предмет.
+- Знімає чари з речі, книги чи шаблону на порожній шаблон.
+
+# Суперзачарування
+- Нагодуйте зачарувальник чи кузню [[create_enchantment_industry:experience_cake]] — пломінь закипить. Цей «другий шлунок» трубою не наповнити, лише тортом.
+- У цьому режимі межа рівнів зачарування значно вища, з'являються скарбові чари, а кузня може поєднати навіть несумісні чари й перевищити звичайні межі рівнів.
+- Але працюють вони тоді лише з [[create_enchantment_industry:super_enchanting_template]]: його пресують з [[create_enchantment_industry:super_experience_block]].
+- Блок супердосвіду виходить, коли блискавка вдаряє в [[create:experience_block]]. Звичайна гроза робить це не завжди, а блискавка від суперзачарування — завжди.
+>! Суперзачарування кличе блискавки. Поставте поруч громовідвід. Якщо накрити машину блоком, блискавок не буде, зате на предмет може лягти прокляття (у кузні — з'явиться ціна ремонту).
+
+> Торт зачарування: основу (яйце, цукор, лазурит) пресують у чаші, а потім дозатор доливає 1000 мБ рідкого досвіду.
+
+=== printer.md
+---
+for: create_enchantment_industry:printer
+title: Принтер
+summary: Копіює зачаровані й написані книги, дає назви предметам, міняє адреси пакунків — за рідину.
+keywords: принтер, копія книги, копіювання зачарованої книги, printer, copy book
+category: tech
+---
+# Принтер
+[[create_enchantment_industry:printer]] друкує копії й написи, витрачаючи рідину.
+- Спершу покладіть у слот-фільтр **зразок** — те, що треба надрукувати, — і подайте трубою потрібну рідину.
+- **Зачарована книга** → копії на звичайні книги, за рідкий досвід. Деякі чари копіювати не можна — принтер про це скаже.
+- **Написана книга** → копії тексту.
+- Ще принтер дає предметам назву, копіює розклад потяга й нотатки, змінює адресу й візерунок пакунків, переносить візерунок прапора.
+- Скільки рідини йде на кожен друк, показує JEI (вид рецептів «Друк») та [[create:goggles]], якщо подивитися на принтер.
+!recipe create_enchantment_industry:printer

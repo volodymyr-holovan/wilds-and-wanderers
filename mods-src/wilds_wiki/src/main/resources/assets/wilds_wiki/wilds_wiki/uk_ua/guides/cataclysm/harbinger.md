@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:the_harbinger, cataclysm:mech_eye, structure:cataclysm:ancient_factory, cataclysm:emp
 keywords: вісник, harbinger, стародавня фабрика, ancient factory, зоря незеру, як викликати вісника
 ---

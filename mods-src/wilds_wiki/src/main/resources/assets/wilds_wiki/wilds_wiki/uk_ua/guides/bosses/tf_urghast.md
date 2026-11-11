@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:ur_ghast, twilightforest:fiery_tears, twilightforest:ghast_trap, twilightforest:carminite, twilightforest:ur_ghast_trophy
 title: Ур-ґаст
+mod: twilightforest
 category: bosses
 summary: Велетенський ґаст на вершині Темної вежі. Один із трьох босів, що тримають кислотний дощ.
 order: 60

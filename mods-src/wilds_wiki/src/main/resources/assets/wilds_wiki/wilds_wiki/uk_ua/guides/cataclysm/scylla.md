@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:scylla, cataclysm:storm_eye, structure:cataclysm:acropolis
 keywords: сцилла, scylla, імператриця бурі, акрополь, acropolis, як викликати
 ---

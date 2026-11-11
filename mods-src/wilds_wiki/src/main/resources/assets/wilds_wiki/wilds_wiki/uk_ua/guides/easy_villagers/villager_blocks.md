@@ -1,0 +1,27 @@
+---
+mod: easy_villagers
+for: easy_villagers:villager, easy_villagers:trader, easy_villagers:auto_trader, easy_villagers:farmer, easy_villagers:breeder, easy_villagers:converter, easy_villagers:iron_farm, easy_villagers:incubator
+title: Селянин у кишені
+summary: Як підняти селянина й посадити його в блок: торгівля, ферма, розведення.
+category: mobs
+keywords: селянин у блоці, підняти селянина, торговець, автоматичний торговець, ферма заліза, розмножувач, інкубатор, конвертер, змінити торги, easy villagers, villager block, trader, iron farm, breeder, cycle trades
+---
+Селянина можна взяти в руки, як предмет, і посадити в скляний блок — там він торгує, фермерує чи розмножується, не тікаючи й не займаючи місця.
+
+# Підняти селянина
+- **Shift + ПКМ** по селянину (або клавіша **V**, коли дивитеся на нього) — і він стане предметом [[easy_villagers:villager]] у вашому інвентарі. Сплячого селянина підняти не можна.
+- Поставте його ПКМ на землю — і він знову ходить.
+- Щоб посадити селянина в блок, клацніть ПКМ по блоку, тримаючи селянина в руці.
+
+# Блоки
+- [[easy_villagers:trader]] — торгівля без прогулянок. Дайте селянину ще й **робоче місце** (кафедру, точило тощо) — він отримає професію. Товар поповнюється сам раз на 1–3 хвилини.
+- [[easy_villagers:auto_trader]] — обирає один обмін і повторює його сам: кладіть плату, забирайте товар.
+- [[easy_villagers:farmer]] — дайте насіння, і селянин вирощуватиме врожай у блоці.
+- [[easy_villagers:breeder]] — два селяни й їжа дають дитину-селянина. [[easy_villagers:incubator]] вирощує дітей удвічі швидше.
+- [[easy_villagers:converter]] — перетворює селянина на зомбі й лікує назад (потрібні [[minecraft:golden_apple]] і зілля слабкості). Вилікуваний селянин торгує дешевше, і знижка діє для всіх гравців.
+- [[easy_villagers:iron_farm]] — селянин усередині раз на кілька хвилин «кличе» залізного голема, і блок віддає його здобич.
+
+!items easy_villagers:trader easy_villagers:auto_trader easy_villagers:farmer easy_villagers:breeder easy_villagers:converter easy_villagers:iron_farm easy_villagers:incubator
+
+# Змінити товари
+Не подобаються обміни нового селянина? Поки з ним ще ніхто не торгував, у вікні торгівлі натисніть кнопку зміни товарів або клавішу **C** — і він запропонує інші.

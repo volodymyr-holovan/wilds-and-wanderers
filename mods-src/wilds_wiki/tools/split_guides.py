@@ -19,8 +19,13 @@ for kind, f in (("item", "item.txt"), ("entity", "entity_type.txt"), ("structure
         known[kind] = set(open(p, encoding="utf-8").read().split())
 
 
+MODS = set(open(os.path.join(ROOT, "pack", "i18n", "namespaces.txt"), encoding="utf-8").read().split())
+
+
 def check(ref, where, bad):
     ref = ref.strip()
+    if ref.startswith("wilds_wiki:"):  # wiki pages exist only after every generator ran: check_links.py checks them
+        return
     if "*" in ref:  # a pattern must match at least one item
         pat = re.compile(re.escape(ref.split(":", 1)[1] if ref.startswith("item:") else ref).replace(r"\*", "[a-z0-9_/]*") + "$")
         if not any(pat.match(i) for i in known["item"]):
@@ -52,8 +57,11 @@ for bundle in sorted(glob.glob(os.path.join(SRC, "*.txt"))):
             for ref in line.split():
                 if not ref.isdigit():
                     check(ref if ":" in ref else ref, where, bad)
+        # a bundle named after a mod (guides_src/smallships.txt): its articles are about that mod (tag, mod page)
+        if mod in MODS and not re.search(r"^mod:", body, re.M):
+            body = re.sub(r"^(\s*---\s*\n)", lambda m: m.group(1) + f"mod: {mod}\n", body, count=1)
         os.makedirs(os.path.join(OUT, mod), exist_ok=True)
-        open(os.path.join(OUT, mod, name), "w", encoding="utf-8").write(body.strip() + "\n")
+        open(os.path.join(OUT, mod, name), "w", encoding="utf-8", newline="\n").write(body.strip() + "\n")
         count += 1
 print(count, "guides written")
 if bad:

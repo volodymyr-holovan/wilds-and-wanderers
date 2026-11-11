@@ -1,4 +1,5 @@
 ---
+mod: farmersdelight
 for: farmersdelight:cutting_board, farmersdelight:flint_knife, farmersdelight:iron_knife, farmersdelight:golden_knife, farmersdelight:diamond_knife, farmersdelight:netherite_knife, farmersdelight:tree_bark
 keywords: обробна дошка, ніж, нарізати, кора, cutting board, knife
 ---

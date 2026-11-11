@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:mysterious_scrap_metal, apotheosis:timeworn_fabric, apotheosis:luminous_crystal_shard, apotheosis:arcane_sands, apotheosis:godforged_pearl
 keywords: рідкісність, афікс, афікси, звичайний, незвичайний, рідкісний, епічний, міфічний, affix, rarity, рідкісні речі, кольорова назва
 ---

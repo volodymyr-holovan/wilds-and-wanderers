@@ -260,8 +260,8 @@ for sid in IDS:
     enn[key] = en(sid)
     if not ok:
         rough.append(sid)
-json.dump(ukn, open(os.path.join(LANG, "uk_ua.structures.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-json.dump(enn, open(os.path.join(LANG, "en_us.structures.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(ukn, open(os.path.join(LANG, "uk_ua.structures.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
+json.dump(enn, open(os.path.join(LANG, "en_us.structures.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
 print(len(IDS), "structures named,", len(rough), "spelled out word by word:")
 for r in rough:
     print(" ", r, "->", ukn["wilds_wiki.structure." + r.replace(":", ".").replace("/", ".")])

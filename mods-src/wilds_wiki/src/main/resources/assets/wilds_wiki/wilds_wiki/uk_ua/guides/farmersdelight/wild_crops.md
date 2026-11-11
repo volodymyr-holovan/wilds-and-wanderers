@@ -1,4 +1,5 @@
 ---
+mod: farmersdelight
 for: farmersdelight:wild_cabbages, farmersdelight:wild_onions, farmersdelight:wild_tomatoes, farmersdelight:wild_carrots, farmersdelight:wild_potatoes, farmersdelight:wild_beetroots, farmersdelight:wild_rice, farmersdelight:cabbage_seeds, farmersdelight:tomato_seeds, farmersdelight:onion, farmersdelight:rice
 keywords: дикі рослини, капуста, цибуля, помідори, рис, насіння, wild crops
 ---

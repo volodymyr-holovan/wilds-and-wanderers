@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:augmenting_table, apotheosis:sigil_of_enhancement, apotheosis:sigil_of_malice, apotheosis:sigil_of_supremacy, apotheosis:sigil_of_unnaming
 keywords: доповнення, стіл доповнення, сигіл вдосконалення, посилити афікс, перекинути афікс, augmenting
 ---

@@ -28,5 +28,10 @@ public interface RecipeView {
 
     String categoryTitle();
 
+    /** JEI's id of the recipe's category (mod:kind), for the self-test report */
+    default String categoryId() {
+        return "";
+    }
+
     void tick();
 }

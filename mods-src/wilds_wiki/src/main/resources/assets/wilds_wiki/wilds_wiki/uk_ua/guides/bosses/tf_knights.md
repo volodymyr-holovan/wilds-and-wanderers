@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:knight_phantom, twilightforest:phantom_helmet, twilightforest:phantom_chestplate
 title: Лицарі-привиди
+mod: twilightforest
 category: bosses
 summary: Шість привидів у гробниці під Темним лісом. Відкривають Темну вежу.
 order: 50

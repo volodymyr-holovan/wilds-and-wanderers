@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:gem, apotheosis:sigil_of_socketing, apotheosis:sigil_of_withdrawal, apotheosis:gem_dust, apotheosis:gem_fused_slate, apotheosis:gem_case
 keywords: самоцвіт, гніздо, гнізда, каст, порожній каст, сокет, socket, gem, вставити самоцвіт, як вставити самоцвіт, інкрустація, сигіл інкрустації, як зробити гніздо, вийняти самоцвіт, сигіл зняття, apotheosis
 ---

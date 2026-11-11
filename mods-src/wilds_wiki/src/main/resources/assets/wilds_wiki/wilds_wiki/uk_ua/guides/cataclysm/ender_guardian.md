@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:ender_guardian, cataclysm:altar_of_void, cataclysm:void_eye, cataclysm:void_core, structure:cataclysm:ruined_citadel, entity:cataclysm:ender_golem
 keywords: охоронець енду, ender guardian, вівтар порожнечі, зруйнована цитадель, ruined citadel, як викликати
 ---

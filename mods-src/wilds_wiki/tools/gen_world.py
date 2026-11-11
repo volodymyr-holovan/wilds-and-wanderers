@@ -139,6 +139,12 @@ for s, o in sorted(structs.items()):
 # structures without a dump record yet still get a page (biomes from the registry are unknown then)
 for s in open(os.path.join(REG, "worldgen_structure.txt"), encoding="utf-8").read().split():
     out_structs.setdefault(s, {"dims": [], "biomes": []})
+# what the dump does not know yet (dimensions from the /wildsgen audit, icons): world_extra.json, kept by hand
+for s, rec in json.load(open(os.path.join(HERE, "world_extra.json"), encoding="utf-8"))["structures"].items():
+    if s in out_structs:
+        for k, v in rec.items():
+            if not out_structs[s].get(k):
+                out_structs[s][k] = v
 
 # ---------------------------------------------------------------- reverse lookups
 mob_biomes, mob_structures, item_structures, block_biomes, block_structures = (defaultdict(list) for _ in range(5))
@@ -177,7 +183,7 @@ for who, levels in trades.items():
             if res in ITEMS and res != "minecraft:emerald":
                 tr[res].append([who, int(lv), a, na, b, nb, n])
 world["trades"] = {i: sorted(l, key=lambda x: (x[0] != "wandering_trader", x[1]))[:12] for i, l in tr.items()}
-json.dump(world, open(os.path.join(GEN, "world.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump(world, open(os.path.join(GEN, "world.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
 
 # ---------------------------------------------------------------- camera points for PhotoMode
 shots = []
@@ -202,7 +208,7 @@ for b, o in sorted(biomes.items()):
     ns, path = b.split(":", 1)
     shots.append({"name": f"biome/{ns}/{path}", "dim": smp["dimension"], "x": smp["x"] + 0.5, "y": smp["y"] + 14, "z": smp["z"] + 0.5,
                   "yaw": 35.0, "pitch": 14.0})
-json.dump(shots, open(os.path.join(DUMP, "photos.json"), "w", encoding="utf-8"), indent=0)
+json.dump(shots, open(os.path.join(DUMP, "photos.json"), "w", encoding="utf-8", newline="\n"), indent=0)
 print(len(shots), "camera points ->", os.path.join(DUMP, "photos.json"))
 print(f"biomes {len(out_biomes)} (sampled {len(samples)}), structures {len(out_structs)} (scanned {len(structs)}), trades for {len(world['trades'])} items,"
       f" {os.path.getsize(os.path.join(GEN, 'world.json')) // 1024} KB")

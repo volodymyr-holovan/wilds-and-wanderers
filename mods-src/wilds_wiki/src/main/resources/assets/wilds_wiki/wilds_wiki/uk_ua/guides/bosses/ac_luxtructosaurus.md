@@ -1,6 +1,7 @@
 ---
 for: entity:alexscaves:luxtructosaurus, alexscaves:ominous_catalyst, alexscaves:tectonic_shard, entity:alexscaves:atlatitan
 title: Люкструктозавр
+mod: alexscaves
 category: bosses
 summary: Немертвий динозавр у серці вулкана Первісних печер. Його будить Зловісний каталізатор.
 order: 510

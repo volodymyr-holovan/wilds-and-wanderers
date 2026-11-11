@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:gem_cutting_table
 keywords: огранювання, огранування, покращити самоцвіт, чистота самоцвіту, тріснутий, досконалий, gem cutting, purity
 ---

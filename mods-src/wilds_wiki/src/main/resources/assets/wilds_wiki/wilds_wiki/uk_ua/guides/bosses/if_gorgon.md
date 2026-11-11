@@ -1,6 +1,7 @@
 ---
 for: entity:iceandfire:gorgon, iceandfire:gorgon_head, iceandfire:blindfold
 title: Горгона
+mod: iceandfire
 category: bosses
 summary: Не дивіться їй в очі: погляд обертає на камінь. Живе під храмом на узбережжі.
 order: 420

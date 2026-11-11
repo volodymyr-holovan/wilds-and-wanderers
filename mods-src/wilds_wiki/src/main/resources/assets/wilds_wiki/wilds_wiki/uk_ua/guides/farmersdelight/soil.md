@@ -1,4 +1,5 @@
 ---
+mod: farmersdelight
 for: farmersdelight:rich_soil, farmersdelight:rich_soil_farmland, farmersdelight:organic_compost, farmersdelight:brown_mushroom_colony, farmersdelight:red_mushroom_colony
 keywords: родючий ґрунт, компост, грибна колонія, rich soil, compost
 ---

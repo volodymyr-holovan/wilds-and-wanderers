@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: cataclysm:boss_respawner
 keywords: відроджувач боса, boss respawner, повторний бій
 ---

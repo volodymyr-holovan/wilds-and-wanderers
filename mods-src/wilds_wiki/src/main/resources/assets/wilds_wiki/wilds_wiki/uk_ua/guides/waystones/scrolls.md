@@ -1,4 +1,5 @@
 ---
+mod: waystones
 for: waystones:blank_scroll, waystones:bound_scroll, waystones:warp_scroll, waystones:return_scroll, waystones:portal_scroll
 keywords: сувій, сувій повернення, сувій переміщення, scroll
 ---

@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:netherite_monstrosity, cataclysm:monstrous_eye, structure:cataclysm:soul_black_smith
 keywords: незеритове чудовисько, netherite monstrosity, кузня душ, soul forge, як викликати
 ---

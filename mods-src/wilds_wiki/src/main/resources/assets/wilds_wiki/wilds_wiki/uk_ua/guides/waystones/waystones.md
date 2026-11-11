@@ -1,4 +1,5 @@
 ---
+mod: waystones
 for: waystones:waystone, waystones:mossy_waystone, waystones:sandy_waystone, waystones:deepslate_waystone, waystones:blackstone_waystone, waystones:end_stone_waystone, waystones:mud_bricks_waystone, waystones:prismarine_waystone, waystones:purpur_waystone, waystones:red_nether_bricks_waystone, waystones:warp_stone, waystones:warp_dust
 keywords: путівний камінь, телепорт, вейстоун, waystone, warp stone, як телепортуватися
 ---

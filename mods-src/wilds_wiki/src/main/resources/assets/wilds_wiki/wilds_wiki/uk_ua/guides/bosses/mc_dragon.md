@@ -1,6 +1,7 @@
 ---
 for: entity:minecraft:ender_dragon, minecraft:dragon_egg, minecraft:end_crystal
 title: Дракон Енду
+mod: minecraft
 category: bosses
 summary: Головний бос Minecraft на центральному острові Енду.
 order: 310

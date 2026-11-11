@@ -1,6 +1,7 @@
 ---
 for: entity:minecraft:wither, minecraft:nether_star, minecraft:wither_skeleton_skull
 title: Візер
+mod: minecraft
 category: bosses
 summary: Триголовий бос, якого гравець збирає сам. З нього падає зірка Незеру для маяка.
 order: 320

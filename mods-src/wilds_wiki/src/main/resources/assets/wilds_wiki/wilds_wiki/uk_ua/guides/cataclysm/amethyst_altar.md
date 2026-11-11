@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: cataclysm:altar_of_amethyst, cataclysm:amethyst_crab_meat, cataclysm:blessed_amethyst_crab_meat, entity:cataclysm:amethyst_crab
 keywords: вівтар аметисту, освячене м'ясо, аметистовий краб, благословення аметисту
 ---

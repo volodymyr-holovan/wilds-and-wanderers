@@ -1,3 +1,12 @@
 {
- "subtitles.mowziesmobs.black_pink": "Black Pink у вашому районі!"
+ "subtitles.mowziesmobs.black_pink": "Black Pink у вашому районі!",
+ "item.mowziesmobs.earthrend_gauntlet.text.0": "§lПідйом брили§r§7\nКлацніть ПКМ по землі, щоб підняти брилу\nВдарте брилу, щоб метнути її\nУтримуйте ПКМ довше, щоб підняти більшу брилу\n",
+ "item.mowziesmobs.earthrend_gauntlet.text.1": "§lТунель§r§7\nКлацніть ПКМ у повітря, щоб почати прокопуватися крізь землю\nУтримуйте ПКМ і дивіться туди, куди хочете копати\nВідпустіть ПКМ, щоб вибратися нагору\n",
+ "item.mowziesmobs.earthrend_gauntlet.text.2": "§lКам'яний стовп§r§7\nУтримуйте присідання й стрибок, щоб піднятися на земляному стовпі\nСтовп ширшає, якщо росте крізь брили геоманта",
+ "item.mowziesmobs.earthrend_gauntlet.text.3": "Перезаряджається, поки лежить в інвентарі",
+ "item.mowziesmobs.grant_suns_blessing.text.0": "Дає благословення сонця на",
+ "item.mowziesmobs.grant_suns_blessing.text.1": "хвилин",
+ "item.mowziesmobs.grant_suns_blessing.text.2": "Відлік починається, щойно ви скористаєтеся здібністю\n",
+ "item.mowziesmobs.grant_suns_blessing.text.3": "§lСонячний удар§r§7\nПорожньою рукою клацніть ПКМ по землі, щоб викликати удар з неба\n",
+ "item.mowziesmobs.grant_suns_blessing.text.4": "§lСонячний спалах§r§7\nПорожньою рукою присядьте й клацніть ЛКМ, щоб відкинути ворогів\n"
 }

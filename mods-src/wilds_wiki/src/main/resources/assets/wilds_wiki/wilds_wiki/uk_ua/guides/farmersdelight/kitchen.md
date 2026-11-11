@@ -1,4 +1,5 @@
 ---
+mod: farmersdelight
 for: farmersdelight:cooking_pot, farmersdelight:stove, farmersdelight:skillet
 keywords: каструля, плита, сковорода, як готувати, кухня, cooking pot, stove, skillet
 ---

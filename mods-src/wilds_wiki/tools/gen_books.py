@@ -343,14 +343,14 @@ def main():
                 dk = de.get("translate") if isinstance(de, dict) else None
                 if iid in ITEMS and tk and dk and dk in lang and [tk, dk] not in adv[iid]:
                     adv[iid].append([tk, dk])
-    json.dump(adv, open(os.path.join(OUT, "advancements.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(adv, open(os.path.join(OUT, "advancements.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
     print("advancement hints for", len(adv), "items")
     os.makedirs(OUT, exist_ok=True)
     for v in books.values():
         for b in v:
             b.pop("_key", None)
-    json.dump(books, open(os.path.join(OUT, "books.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    json.dump(keys, open(os.path.join(OUT, "desc_keys.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(books, open(os.path.join(OUT, "books.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(keys, open(os.path.join(OUT, "desc_keys.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
     by_book = defaultdict(int)
     for v in books.values():
         for b in v:

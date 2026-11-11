@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:lich, twilightforest:lich_trophy, twilightforest:twilight_scepter, twilightforest:lifedrain_scepter, twilightforest:zombie_scepter, twilightforest:fortification_scepter
 title: Ліч
+mod: twilightforest
 category: bosses
 summary: Другий бос: чаклун-скелет на вершині білої вежі. Його скіпетр відкриває три біоми.
 order: 20

@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:the_leviathan, cataclysm:altar_of_abyss, cataclysm:abyssal_sacrifice, cataclysm:abyss_eye, structure:cataclysm:sunken_city
 keywords: левіафан, leviathan, вівтар безодні, жертва безодні, затонуле місто, sunken city, як викликати левіафана
 ---

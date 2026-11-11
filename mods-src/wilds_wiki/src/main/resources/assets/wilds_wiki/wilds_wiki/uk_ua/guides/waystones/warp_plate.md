@@ -1,4 +1,5 @@
 ---
+mod: waystones
 for: waystones:warp_plate, waystones:dormant_shard, waystones:attuned_shard, waystones:crumbling_attuned_shard, waystones:deepslate_shard
 keywords: плита переміщення, уламок, warp plate, shard
 ---

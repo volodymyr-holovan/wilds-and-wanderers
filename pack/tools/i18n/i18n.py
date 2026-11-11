@@ -89,6 +89,24 @@ def tokens(s):
     return sorted(re.sub(r"^%\d+\$", "%", t) for t in TOKEN.findall(s))
 
 
+_english = None
+
+
+def english(ns):
+    """English text of a namespace, read from the pack's mod jars (client/mods, server/mods) once, when a fix needs it"""
+    global _english
+    if _english is None:
+        found = {}
+        for d in ("client", "server"):
+            mods = os.path.join(os.path.dirname(PACK), d, "mods")
+            for fn in sorted(os.listdir(mods)) if os.path.isdir(mods) else []:
+                if fn.endswith(".jar"):
+                    with zipfile.ZipFile(os.path.join(mods, fn)) as z:
+                        scan(z, found)
+        _english = {n: en for n, (en, uk) in found.items()}
+    return _english.get(ns, {})
+
+
 def build():
     problems, written = [], 0
     names = set(os.listdir(UK)) if os.path.isdir(UK) else set()
@@ -113,7 +131,8 @@ def build():
                 base = ref.get(k, src.get(k))
                 if base is None:
                     problems.append(f"{ns}: fix for unknown key {k}")
-                elif tokens(base) != tokens(v):
+                elif tokens(base) != tokens(v) and tokens(english(ns).get(k, base)) != tokens(v):
+                    # the mod's own Ukrainian may be the broken thing (lines shifted, codes lost): the English decides
                     problems.append(f"{ns}: placeholder mismatch in fix {k}")
                 else:
                     good[k] = v

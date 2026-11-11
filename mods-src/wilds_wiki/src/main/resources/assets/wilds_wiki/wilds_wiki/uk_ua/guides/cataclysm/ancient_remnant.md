@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:ancient_remnant, cataclysm:necklace_of_the_desert, cataclysm:desert_eye, structure:cataclysm:cursed_pyramid
 keywords: стародавній залишок, ancient remnant, проклята піраміда, cursed pyramid, намисто пустелі, як викликати
 ---

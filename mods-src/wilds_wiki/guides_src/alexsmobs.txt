@@ -1,0 +1,129 @@
+=== taming.md
+---
+for: entity:alexsmobs:capuchin_monkey, entity:alexsmobs:bald_eagle, entity:alexsmobs:crow, entity:alexsmobs:tarantula_hawk, entity:alexsmobs:caiman, entity:alexsmobs:crocodile, entity:alexsmobs:mantis_shrimp, entity:alexsmobs:mimic_octopus, entity:alexsmobs:mudskipper, entity:alexsmobs:flutter, entity:alexsmobs:warped_toad, entity:alexsmobs:sugar_glider, entity:alexsmobs:cosmaw, entity:alexsmobs:raccoon, entity:alexsmobs:kangaroo, entity:alexsmobs:elephant, entity:alexsmobs:komodo_dragon, entity:alexsmobs:endergrade, entity:alexsmobs:laviathan, entity:alexsmobs:tusklin, entity:alexsmobs:grizzly_bear, alexsmobs:falconry_glove, alexsmobs:falconry_hood, alexsmobs:fish_oil, alexsmobs:ancient_dart, alexsmobs:acacia_blossom, alexsmobs:chorus_on_a_stick, alexsmobs:straddle_saddle, alexsmobs:straddle_helmet, alexsmobs:pigshoes, alexsmobs:potted_flutter
+title: Приручення тварин (Alex's Mobs)
+summary: Кого з тварин Alex's Mobs можна приручити, чим і що вони вміють.
+category: mobs
+keywords: приручити, приручення, улюбленець, верхи, осідлати, тварина-помічник, tame, taming, pet, mount, ride, alex's mobs, капуцин, орлан, ворона, слон, варан, кенгуру
+---
+# Приручення тварин (Alex's Mobs)
+Багатьох тварин Alex's Mobs можна приручити. Приручені зазвичай слухаються, як вовк: клацніть по них ПКМ, щоб вони **сиділи**, **йшли за вами** чи **гуляли** поруч. Подробиці про кожну тварину — в [[alexsmobs:animal_dictionary]].
+
+# Помічники в бою
+- [[entity:alexsmobs:capuchin_monkey]] — годуйте **бананами** (падають з листя джунглів). Сідає вам на плече й кидає каміння у ворогів. Дайте йому [[alexsmobs:ancient_dart]] зі скринь храмів у джунглях — стрілятиме дротиками, що пробивають наскрізь. Лікується яйцями.
+- [[entity:alexsmobs:bald_eagle]] — приручається [[alexsmobs:fish_oil]]. З [[alexsmobs:falconry_glove]] у руці орлана можна взяти на руку й запустити ударом у моба, а з [[alexsmobs:falconry_hood]] на голові ним можна керувати самому (Shift — припинити). Лікується будь-якою рибою.
+- [[entity:alexsmobs:tarantula_hawk]] — 15–25 павучих очей. Паралізує павуків та інших членистоногих.
+- [[entity:alexsmobs:mantis_shrimp]] — 10–30 тропічних риб. Б'є так, що ламає блоки: дайте йому блок (Shift + ПКМ), і він шукатиме й ламатиме такі самі. На суші висихає за 5 хвилин — напоїть його відро води (Shift + ПКМ).
+- [[entity:alexsmobs:mimic_octopus]] — 5–8 хвостів лобстера, поки він не замаскувався. Лякає ворогів, перетворюючись на чудовиськ; після 5–8 [[alexsmobs:mimicream]] ще й б'ється, як вартовий, риба-фугу чи кріпер.
+- [[entity:alexsmobs:mudskipper]] — хвости лобстера; плюється багном, що сповільнює.
+- [[entity:alexsmobs:flutter]] — дайте 4–6 **різних** квітів. Стріляє самонавідним пилком. Вазон на ньому — додатковий захист; тріпотуна у вазоні можна підняти (Shift).
+- [[entity:alexsmobs:warped_toad]] — кілька личинок багряного комара (опариш + хоботок багряного комара). Добрий захист від велетенських комах Незеру.
+- [[entity:alexsmobs:caiman]] і [[entity:alexsmobs:crocodile]] — не приручаються дорослими, але дитинча з яйця **вважає мамою того, хто поруч**, коли воно вилуплюється. Кайман хапає й тримає ворога.
+- [[entity:alexsmobs:kangaroo]] — 10–15 морквин. Shift + ПКМ відкриває сумку: покладіть туди зброю — битиметься нею, шолом чи нагрудник — вдягне.
+
+# Верхові тварини
+- [[entity:alexsmobs:elephant]] — [[alexsmobs:acacia_blossom]] (зрідка падає з акацій). Дорослого з бивнями не приручити — лише слоненя чи слона без бивнів. Скриня на спині — велика сумка (відкривати Shift + ПКМ). Слон із бивнями, якщо годувати його пшеницею верхи, кидається в атаку.
+- [[entity:alexsmobs:komodo_dragon]] — кілька **повних стосів** гнилої плоті. Сідлається, швидкий, але такий самий лютий.
+- [[entity:alexsmobs:grizzly_bear]] — підходьте, коли він наївся меду, і годуйте лососем.
+- [[entity:alexsmobs:endergrade]] — сідло й [[alexsmobs:chorus_on_a_stick]], щоб кермувати. Повільний, зате літає над островами Енду.
+- [[entity:alexsmobs:laviathan]] — пливе лавою Незеру. Потрібні [[alexsmobs:straddle_saddle]] (до 4 вершників) і [[alexsmobs:straddle_helmet]] для керування.
+- [[entity:alexsmobs:tusklin]] — сідлається, але скоро скидає вершника. [[alexsmobs:pigshoes]] роблять його кращим скакуном.
+
+# Інші друзі
+- [[entity:alexsmobs:crow]] — насіння гарбуза. Розносить предмети: поставте на скриню чи піч рамку з предметом, і ворона кластиме туди такі ж. Лікується на блоці сіна.
+- [[entity:alexsmobs:sugar_glider]] — солодкі ягоди. Посадіть на голову (Shift + ПКМ) — повільне падіння. Шукає в листі дрібнички, інколи цінні.
+- [[entity:alexsmobs:cosmaw]] — кілька космічних трісок. Не б'ється, зате **ловить вас, коли падаєте з острова в Енді**.
+- [[entity:alexsmobs:raccoon]] — лише яйце **біля води**: він спершу його помиє.
+
+> Деякі тварини не приручаються, але стають союзниками: див. [[wilds_wiki:guides/alexsmobs/helpers|Корисні тварини]].
+
+=== helpers.md
+---
+for: entity:alexsmobs:seagull, entity:alexsmobs:seal, entity:alexsmobs:blue_jay, entity:alexsmobs:toucan, entity:alexsmobs:platypus, entity:alexsmobs:mungus, entity:alexsmobs:catfish, entity:alexsmobs:underminer, entity:alexsmobs:cachalot_whale, entity:alexsmobs:gorilla, entity:alexsmobs:rhinoceros, entity:alexsmobs:tiger, entity:alexsmobs:bunfungus, entity:alexsmobs:tasmanian_devil, entity:alexsmobs:jerboa, entity:alexsmobs:spectre, entity:alexsmobs:sunbird, entity:alexsmobs:hummingbird, entity:alexsmobs:gelada_monkey, entity:alexsmobs:maned_wolf, entity:alexsmobs:leafcutter_ant, entity:alexsmobs:banana_slug, alexsmobs:ambergris, alexsmobs:hummingbird_feeder, alexsmobs:gongylidia, alexsmobs:leafcutter_ant_pupa, alexsmobs:mungal_spores
+title: Корисні тварини (Alex's Mobs)
+summary: Тварини, які допомагають без приручення: шукають скарби, руду, садять дерева, міняються.
+category: mobs
+keywords: чайка скарб, тюлень обмін, сойка, тукан саджанці, качкодзьоб глина, рудокоп руда, кашалот амбра, союзник, alex's mobs, helpful animals
+---
+# Корисні тварини (Alex's Mobs)
+Ці тварини не стають улюбленцями, але можуть добре допомогти.
+
+# Скарби й руда
+- [[entity:alexsmobs:seagull]] — візьміть **карту скарбів** у другу руку й киньте на землю хвіст лобстера. Чайка, що його з'їсть, сяде просто над скарбом. Зате чайки крадуть їжу з рук.
+- [[entity:alexsmobs:seal]] — нагодуйте тюленя, що лежить на березі, **трьома рибинами**: він принесе щось із дна. Часто мотлох, але бувають акулячі зуби, щитки й мушлі наутилуса.
+- [[entity:alexsmobs:underminer]] — привид у покинутих шахтах. Киньте поруч руду — і він покаже, де в стінах ховається така сама.
+- [[entity:alexsmobs:cachalot_whale]] — у сильну грозу кашалоти бувають викинуті на берег. Зіштовхніть кита у воду, не поранивши, — він віддячить [[alexsmobs:ambergris]]: її дорого купують рибалки, з неї роблять [[alexsmobs:echolocator]], а в печі вона переплавляє 64 предмети.
+- [[entity:alexsmobs:blue_jay]] — дайте будь-яке насіння: сойка заспіває й покаже всіх монстрів поруч (так знаходять печери). Нагодуйте сяйними ягодами сойку, а потім єнота — і вони подружаться.
+
+# Сад і ферма
+- [[entity:alexsmobs:toucan]] — дайте фрукт з дерева, і тукан посадить саджанець цього дерева (яблуко — дуб, банан — джунглі). Від золотого яблука садить швидше, від зачарованого — більше не потребує фруктів.
+- [[entity:alexsmobs:hummingbird]] — запилює краще за бджіл. [[alexsmobs:hummingbird_feeder]] з водою й цукром тримає колібрі поблизу.
+- [[entity:alexsmobs:platypus]] — нагодуйте редстоуном біля глини: викопає грудки глини й опаришів (блок редстоуну — набагато більше).
+- [[entity:alexsmobs:mungus]] — годуйте грибом: вирощує такі гриби поруч і навіть великі гриби на міцелії. Обережно: убитий мунгус із п'ятьма грибами вибухає й перетворює місцевість на інший біом.
+- [[entity:alexsmobs:gelada_monkey]] з'їсть траву довкола, якщо дати пшеницю. [[entity:alexsmobs:maned_wolf]] за яблуко пахне так, що збирає довкола тварин.
+- [[entity:alexsmobs:leafcutter_ant]] — мурашник у джунглях. Під ним у камерах росте [[alexsmobs:gongylidia]] (дуже ситна), але без грибосвіту поруч мурахи нападуть. [[alexsmobs:leafcutter_ant_pupa]] на землі засновує нову колонію.
+- [[entity:alexsmobs:catfish]] — ковтає предмети (малий — 3 стоси, середній — 9). Зачерпніть його відром — і перенесете вміст разом із рибою.
+- [[entity:alexsmobs:banana_slug]] лишає слиз; блок із нього висушує воду довкола.
+
+# Союзники
+- [[entity:alexsmobs:gorilla]] — після кількох бананів слухається й захищає вас.
+- [[entity:alexsmobs:rhinoceros]] — заспокоюється від пшениці й допомагає в бою. Застосуйте на ньому зілля — ефект перейде на ріг і діятиме на тих, кого він ударить.
+- [[entity:alexsmobs:tiger]] — нагодуйте курятиною чи свининою: «благословення тигра» на кілька хвилин, тигри не нападуть і навіть допоможуть.
+- [[entity:alexsmobs:bunfungus]] — морква робить його мирним; він сам б'є монстрів.
+- [[entity:alexsmobs:tasmanian_devil]] — за гнилу плоть виє й відганяє монстрів.
+- [[entity:alexsmobs:jerboa]] — за насіння дає ефект швидкого бігу зі стрибками.
+- [[entity:alexsmobs:spectre]] — у порожнечі Енду. З [[alexsmobs:soul_heart]] у руці він летить за вами; прив'яжіть його повідцем — і він тягтиме вас до нових островів.
+- [[entity:alexsmobs:sunbird]] — над найвищими горами. Долетіть до неї — благословення допоможе з елітрами. Не бийте: прокляття скине вас на землю.
+
+=== gear.md
+---
+for: alexsmobs:roadrunner_boots, alexsmobs:moose_headgear, alexsmobs:crocodile_chestplate, alexsmobs:centipede_leggings, alexsmobs:emu_leggings, alexsmobs:flying_fish_boots, alexsmobs:froststalker_helmet, alexsmobs:frontier_cap, alexsmobs:rocky_chestplate, alexsmobs:spiked_turtle_shell, alexsmobs:tarantula_hawk_elytra, alexsmobs:unsettling_kimono, alexsmobs:shield_of_the_deep, alexsmobs:tendon_whip, alexsmobs:blood_sprayer, alexsmobs:stink_ray, alexsmobs:squid_grapple, alexsmobs:ghostly_pickaxe, alexsmobs:vine_lasso, alexsmobs:straddleboard, alexsmobs:shark_tooth_arrow, alexsmobs:skelewag_sword, alexsmobs:pocket_sand, alexsmobs:echolocator, alexsmobs:endolocator, alexsmobs:pupfish_locator, alexsmobs:mimicream, alexsmobs:capsid, alexsmobs:enderiophage_rocket, alexsmobs:banana_slug_slime_block, alexsmobs:rainbow_glass, alexsmobs:gustmaker, alexsmobs:sculk_boomer, alexsmobs:bone_serpent_tooth, alexsmobs:dropbear_claw, alexsmobs:gazelle_horn, alexsmobs:bear_fur, alexsmobs:soul_heart, alexsmobs:centipede_leg, alexsmobs:rattlesnake_rattle, alexsmobs:cockroach_wing, alexsmobs:komodo_spit
+title: Спорядження й зілля з тварин (Alex's Mobs)
+summary: Що зробити зі здобичі тварин Alex's Mobs: броня з особливими силами, незвичні знаряддя, зілля.
+category: mobs
+keywords: броня з тварин, чоботи бігуна, лосиний шолом, ласо, гак, щупальце, зілля лавового зору, мімікрем, копія зачарувань, alex's mobs, gear, armor, potion
+---
+# Спорядження й зілля з тварин (Alex's Mobs)
+Майже з кожної тварини Alex's Mobs щось падає. Ось найкорисніше. Рецепт кожної речі — на її сторінці.
+
+# Броня з особливими силами
+- [[alexsmobs:roadrunner_boots]] — з пір'я таязури-подорожника: швидкий біг по піску.
+- [[alexsmobs:moose_headgear]] — з двох лосиних рогів (лосі скидають їх самі): сильніше відкидання.
+- [[alexsmobs:crocodile_chestplate]] — з крокодилячих щитків: швидше плаваєте.
+- [[alexsmobs:centipede_leggings]] — з ніг печерної сколопендри: лазите по стінах.
+- [[alexsmobs:emu_leggings]] — з пір'я ему: інколи ухиляєтеся від снарядів.
+- [[alexsmobs:flying_fish_boots]] — з летючої риби: вистрибуєте з води (з елітрами ще краще).
+- [[alexsmobs:spiked_turtle_shell]] — щиток із замшілої грифової черепахи (постригти): не відкидає, дихаєте під водою на 15 секунд довше.
+- [[alexsmobs:rocky_chestplate]] — з панцира скелястого ковзуна: котитеся під час бігу й менше б'єтеся при падінні, але у воді тонете.
+- [[alexsmobs:frontier_cap]] — з хвоста єнота: швидші, коли крадетеся.
+- [[alexsmobs:froststalker_helmet]] — крижані сталкери вважають вас своїм (поки ви їх не скривдите).
+- [[alexsmobs:unsettling_kimono]] — рідко з муркуна: більшість нежиті не нападає, ставите блоки на 2 далі.
+- [[alexsmobs:tarantula_hawk_elytra]] — елітри з двома крилами тарантул-яструба: +3 броні, міцніші, зачаровуються.
+- [[alexsmobs:shield_of_the_deep]] — щит із зубів плащоносної акули: блокуючи, ранить нападника кровотечею.
+
+# Знаряддя
+- [[alexsmobs:squid_grapple]] — гак із загублених щупалець архітеутиса (їх відриває кашалот у бою): притягує вас до будь-якої поверхні.
+- [[alexsmobs:vine_lasso]] — зі скинутої шкіри анаконди: ловить будь-якого моба, навіть ворожого, щоб відвести куди треба.
+- [[alexsmobs:ghostly_pickaxe]] — з рудокопа (бити лише магією, напр. зіллям): коли інвентар повний, зберігає в собі до 9 стосів здобутого.
+- [[alexsmobs:echolocator]] показує напрямок до печер, [[alexsmobs:endolocator]] — до порталу в Енд, [[alexsmobs:pupfish_locator]] — до єдиного чанка, де живе коропозуб.
+- [[alexsmobs:straddleboard]] — дошка для швидкого (й ризикованого) плавання лавою.
+- [[alexsmobs:tendon_whip]], [[alexsmobs:blood_sprayer]], [[alexsmobs:stink_ray]], [[alexsmobs:skelewag_sword]], [[alexsmobs:pocket_sand]], [[alexsmobs:shark_tooth_arrow]] — незвична зброя; що вона робить, читайте в підказці.
+- [[alexsmobs:enderiophage_rocket]] — замість феєрверка для елітр.
+
+# Особливі речі
+- [[alexsmobs:mimicream]] (з мімікубів у містах Енду): 8 мімікрему + будь-яка річ з міцністю = **копія** цієї речі майже з усіма зачаруваннями, але повністю зношена — її треба полагодити.
+- [[alexsmobs:capsid]] (з ендеріофагів) тримає стос предметів і передає їх угору іншому капсиду чи скрині.
+- [[alexsmobs:banana_slug_slime_block]] миттю перетворює воду довкола на слиз — так осушують озера.
+- [[alexsmobs:rainbow_glass]] світиться й міняє колір, [[alexsmobs:gustmaker]] від редстоуну здіймає вітер, [[alexsmobs:sculk_boomer]] б'є мобів поруч, коли спрацьовує скалковий сенсор.
+- [[alexsmobs:transmutation_table]] перетворює цілі стоси на інші предмети за досвід; його роблять із руки провидця: див. [[wilds_wiki:guides/bosses/am_farseer|Провидець]].
+
+# Зілля
+- [[alexsmobs:bone_serpent_tooth]] + пляшечка лави → бачите крізь лаву.
+- [[alexsmobs:dropbear_claw]] → ходите по стелі.
+- [[alexsmobs:gazelle_horn]] + зілля швидкості II → швидкість III.
+- [[alexsmobs:bear_fur]] + зілля сили → стійкість до відкидання.
+- [[alexsmobs:soul_heart]] (стерв'ятник душ) → крадете здоров'я, як він.
+- [[alexsmobs:rattlesnake_rattle]] + зілля отрути → отруйна есенція; есенція (або пляшечка слини варана) + [[alexsmobs:centipede_leg]] → стійкість до отрути.
+- [[alexsmobs:cockroach_wing]] (з 9 уламків) → павуки й інші членистоногі вас майже не помічають.
+
+Див. також: [[wilds_wiki:guides/bosses/am_void_worm|Пустотний хробак]], [[wilds_wiki:guides/bosses/am_warped_mosco|Химерний комар]].

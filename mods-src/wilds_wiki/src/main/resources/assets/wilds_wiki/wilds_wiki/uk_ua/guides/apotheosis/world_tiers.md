@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:boss_summoner
 keywords: світовий рівень, рівні світу, world tier, ctrl+t, притулок, кордон, сходження, вершина, пік, haven, frontier, ascent, summit, pinnacle, нерозпізнаний
 ---

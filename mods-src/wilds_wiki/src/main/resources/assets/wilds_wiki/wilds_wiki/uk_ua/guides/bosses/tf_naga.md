@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:naga, twilightforest:naga_scale, twilightforest:naga_trophy
 title: Наґа
+mod: twilightforest
 category: bosses
 summary: Перший бос Сутінкового лісу: велетенська змія у кам'яному дворі.
 order: 10

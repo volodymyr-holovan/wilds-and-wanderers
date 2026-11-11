@@ -1,4 +1,5 @@
 ---
+mod: iceandfire
 for: iceandfire:dragonbone, entity:iceandfire:fire_dragon, entity:iceandfire:ice_dragon, entity:iceandfire:lightning_dragon, iceandfire:fire_dragon_blood, iceandfire:ice_dragon_blood, iceandfire:lightning_dragon_blood, iceandfire:fire_dragon_heart, iceandfire:ice_dragon_heart, iceandfire:lightning_dragon_heart, iceandfire:dragonscales_red, iceandfire:dragonscales_blue, iceandfire:dragonscales_electric, iceandfire:dragon_skull_fire, iceandfire:dragon_skull_ice, iceandfire:dragon_skull_lightning, iceandfire:fire_dragon_flesh, iceandfire:ice_dragon_flesh, iceandfire:lightning_dragon_flesh
 keywords: кістка дракона, скелет дракона, тіло дракона, кров дракона, серце дракона, луска, як отримати кістки, dragon bone, dragon skeleton, corpse
 ---

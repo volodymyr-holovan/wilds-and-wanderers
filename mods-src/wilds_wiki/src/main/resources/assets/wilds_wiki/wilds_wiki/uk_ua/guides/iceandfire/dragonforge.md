@@ -1,4 +1,5 @@
 ---
+mod: iceandfire
 for: iceandfire:dragonforge_fire_core_disabled, iceandfire:dragonforge_ice_core_disabled, iceandfire:dragonforge_lightning_core_disabled, iceandfire:dragonforge_fire_brick, iceandfire:dragonforge_ice_brick, iceandfire:dragonforge_lightning_brick, iceandfire:dragonforge_fire_input, iceandfire:dragonforge_ice_input, iceandfire:dragonforge_lightning_input, iceandfire:dragonsteel_fire_ingot, iceandfire:dragonsteel_ice_ingot, iceandfire:dragonsteel_lightning_ingot
 keywords: драконяча кузня, драконяча сталь, dragonforge, dragonsteel, як зробити драконячу сталь
 ---

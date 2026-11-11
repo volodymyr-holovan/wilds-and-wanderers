@@ -1,0 +1,2606 @@
+{
+ "_about": "Facts about structures that the test server's dump (testserver/wilds_dump) does not have yet: dimensions from the world generation audit (/wildsgen) of 10.11.2026 and icons of the Nether and End structures added that day. gen_world.py lays these over what the dump gives.",
+ "structures": {
+  "ae2:meteorite": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "aether:bronze_dungeon": {
+   "dims": [
+    "aether:the_aether"
+   ]
+  },
+  "aether:gold_dungeon": {
+   "dims": [
+    "aether:the_aether"
+   ]
+  },
+  "aether:large_aercloud": {
+   "dims": [
+    "aether:the_aether"
+   ]
+  },
+  "aether:silver_dungeon": {
+   "dims": [
+    "aether:the_aether"
+   ]
+  },
+  "alexscaves:acid_pit": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:cake_cave": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:dino_bowl": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:donut_arch": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:ferrocave": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:forlorn_bridge": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:forlorn_canyon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:gingerbread_town": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:licowitch_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:soda_bottle": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:underground_cabin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "alexscaves:volcano": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "apotheosis:tower_leaf": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "apotheosis:tower_main": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "apotheosis:tower_sand": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "apotheosis:tower_spruce": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ars_nouveau:guardian_wilden_den": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ars_nouveau:hunter_wilden_den": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ars_nouveau:stalker_wilden_den": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betterdungeons:skeleton_dungeon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betterdungeons:small_dungeon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betterdungeons:small_nether_dungeon": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "betterdungeons:spider_dungeon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betterdungeons:zombie_dungeon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betterfortresses:fortress": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:nether_bricks"
+  },
+  "bettermineshafts:mineshaft_acacia": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_dripstone": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_jungle": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_lush": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_mesa": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_overgrown": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_red_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_spruce": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "bettermineshafts:mineshaft_spruce_snowy": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betteroceanmonuments:ocean_monument": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "betterstrongholds:stronghold": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:abandoned_spire": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:abandoned_temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:abandoned_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:amethyst_nest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:ancient_factory": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:burning_arena": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "cataclysm:desert_occupied_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:desert_site": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:desert_temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "cataclysm:ruined_citadel": {
+   "dims": [
+    "minecraft:the_end"
+   ]
+  },
+  "cataclysm:soul_black_smith": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "cataclysm:sunken_city": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_beach": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_christmas": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_dark_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_desert_oasis": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_mesa": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_mesa_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_mountain": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_mountain_alpine": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_plains": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_plains_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_savanna": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_savanna_na": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_snowy_igloo": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:large/village_taiga_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_beach": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_christmas": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_dark_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_desert_oasis": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_mesa": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_mesa_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_mountain": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_mountain_alpine": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_plains": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_plains_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_savanna": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_savanna_na": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_snowy_igloo": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:medium/village_taiga_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:pillager_outpost_mountain": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:pillager_outpost_plains": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:pillager_outpost_snowy": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:pillager_outpost_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_beach": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_christmas": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_dark_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_desert_oasis": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_mesa": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_mesa_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_mountain": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_mountain_alpine": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_plains": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_plains_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_savanna": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_savanna_na": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_snowy_igloo": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ctov:small/village_taiga_fortified": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:abandoned_temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:aviary": {
+   "dims": [
+    "minecraft:the_end"
+   ]
+  },
+  "dungeons_arise:bandit_towers": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:bandit_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:bathhouse": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:ceryneian_hind": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:coliseum": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:fishing_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:foundry": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:greenwood_pub": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:heavenly_challenger": {
+   "dims": [
+    "minecraft:overworld",
+    "minecraft:the_end"
+   ]
+  },
+  "dungeons_arise:heavenly_conqueror": {
+   "dims": [
+    "minecraft:overworld",
+    "minecraft:the_end"
+   ]
+  },
+  "dungeons_arise:heavenly_rider": {
+   "dims": [
+    "minecraft:overworld",
+    "minecraft:the_end"
+   ]
+  },
+  "dungeons_arise:illager_campsite": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:illager_corsair": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:illager_fort": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:illager_galley": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:illager_windmill": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:infested_temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:keep_kayra": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:kisegi_sanctuary": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:lighthouse": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:mechanical_nest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:merchant_campsite": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:mining_complex": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:monastery": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:mushroom_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:mushroom_mines": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:mushroom_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:plague_asylum": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:scorched_mines": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:shiraz_palace": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:small_blimp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:thornborn_towers": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:typhon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:undead_pirate_ship": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise:wishing_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise_seven_seas:corsair_corvette": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise_seven_seas:pirate_junk": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise_seven_seas:small_yacht": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise_seven_seas:unicorn_galleon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "dungeons_arise_seven_seas:victory_frigate": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "enderscape:center_gateway": {
+   "dims": [
+    "minecraft:the_end"
+   ],
+   "icon": "minecraft:end_stone_bricks"
+  },
+  "enderscape:end_city": {
+   "dims": [
+    "minecraft:the_end"
+   ],
+   "icon": "minecraft:purpur_block"
+  },
+  "enderscape:large_center_gateway": {
+   "dims": [
+    "minecraft:the_end"
+   ],
+   "icon": "minecraft:end_stone_bricks"
+  },
+  "enderscape:mirestone_ruins": {
+   "dims": [
+    "minecraft:the_end"
+   ],
+   "icon": "minecraft:end_stone"
+  },
+  "eternalnether:catacomb": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:soul_soil"
+  },
+  "eternalnether:citadel": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:blackstone"
+  },
+  "eternalnether:piglin_manor": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:gilded_blackstone"
+  },
+  "fishofthieves:guardian_fruit_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "fishofthieves:seapost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "friendsandfoes:citadel": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "friendsandfoes:iceologer_cabin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "friendsandfoes:illusioner_shack": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "friendsandfoes:illusioner_training_grounds": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "goblins_tyranny:goblins_caravan": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "goblins_tyranny:goblins_spot": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "goblins_tyranny:goblinscamp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "hopo:underwater/underwater_city": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "hopo:underwater/underwater_fossils": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "hopo:underwater/underwater_small_ruins": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "hopo:underwater/underwater_warm_small_ruins": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "hybrid_aquatic:whale_fall": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:cyclops_cave": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:fire_dragon_cave": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:fire_dragon_roost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:gorgon_temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:graveyard": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:ice_dragon_cave": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:ice_dragon_roost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:lightning_dragon_cave": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:lightning_dragon_roost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:mausoleum": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:pixie_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "iceandfire:siren_island": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "incendium:abandoned_tower": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:basalt"
+  },
+  "incendium:forbidden_castle": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:polished_blackstone_bricks"
+  },
+  "incendium:infernal_altar": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:crying_obsidian"
+  },
+  "incendium:nether_reactor": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:gold_block"
+  },
+  "incendium:piglin_village": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:crimson_planks"
+  },
+  "incendium:pipeline": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:copper_block"
+  },
+  "incendium:quartz_kitchen": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:quartz_block"
+  },
+  "incendium:ruined_lab": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:warped_planks"
+  },
+  "incendium:sanctum": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:red_nether_bricks"
+  },
+  "irons_spellbooks:ancient_battleground": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "irons_spellbooks:catacombs": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "irons_spellbooks:citadel": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "irons_spellbooks:evoker_fort": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "irons_spellbooks:ice_spider_den": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "irons_spellbooks:impaled_icebreaker": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "irons_spellbooks:mangrove_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "irons_spellbooks:mountain_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "irons_spellbooks:pyromancer_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "joshie:village_ocean": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "kobolds:kobold_den": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:asian_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:barbarian_camp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:caledonia_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:colonial_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:desert_camp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:lostmesacity_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:medieval_birch_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:medieval_dark_oak_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:medieval_oak_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:medieval_spruce_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:ship": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:shire_colony": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecolonies:warpednetherlands_colony": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "minecraft:ancient_city": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:bastion_remnant": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "minecraft:buried_treasure": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:desert_pyramid": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:fortress": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "minecraft:igloo": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:mansion": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:mineshaft": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:mineshaft_mesa": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:monument": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:nether_fossil": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "minecraft:ocean_ruin_cold": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:ocean_ruin_warm": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:pillager_outpost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:ruined_portal": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:ruined_portal_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:ruined_portal_mountain": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:ruined_portal_nether": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "minecraft:ruined_portal_ocean": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:shipwreck": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:shipwreck_beached": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:stronghold": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:swamp_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:trail_ruins": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:trial_chambers": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:village_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:village_plains": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:village_savanna": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:village_snowy": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "minecraft:village_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:atlantis_tribune": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:buried_treasure": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:conduit_arch": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:dragon_skeleton": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:hauling_ship_1": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:long_ship": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:magma_block_ravine": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:nether_portal_archway": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ocean_decor": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:prismarine_dog_statue": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:rare_travel_ship": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ruined_archway": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ruined_castle": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ruined_church": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ruined_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ruins_atlantis": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:sea_dragon_skeleton": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ship_small": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ship_wreck_dark_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ship_wreck_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:ship_wreck_spruce": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:small_ocean_temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:sunken_ship": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:underwater_garden": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:underwater_shrine": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mos:wanderer_raft": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mowziesmobs:frostmaw_spawn": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mowziesmobs:monastery": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mowziesmobs:umvuthana_grove": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mowziesmobs:wrought_chamber": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:acacia_log_pile": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:acacia_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:acacia_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:azelea_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:barn": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:bench": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:big_oak_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:blue_stall": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:boulder": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:campsite": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:cart": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:cartographer_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:castle_ruins": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:cathedral": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:cherry_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:crimson_enchanting_table": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "mvs:crystal": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:dark_oak_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:dark_oak_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:dead_tree_acacia": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:dead_tree_dark_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:dead_tree_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:dead_tree_spruce": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:deepslate_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:desert_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:diorite_and_deepslate_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:diorite_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:duck": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:fire_camp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:floating_islands": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:flower_hole": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:fox_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:gallows": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:haystack": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:horse_campsite": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:horse_pen": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:jungle_palm_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:jungle_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:lamp_chest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:large_cart_1": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:large_cart_2": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:large_floating_island": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:large_mushroom": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:large_warped_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:lecturn_garden": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:lil_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:log_ruin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:medium_bamboo_cart": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:medium_igloo_1": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:medium_igloo_2": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:medium_oak_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:mine_with_campsite": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:mushroom_pond": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:mushroom_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:nether_devil": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "mvs:nether_well": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "mvs:oak_log_pile": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:oak_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:oak_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:ocean_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:orange_stall": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:paths": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:pile": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:pink_stall": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:railway": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:rare_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:red_stall": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:red_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:rocky_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:ruined_beacon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:shed": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_acacia_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_bamboo_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_birch_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_campfire_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_cherry_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_copper_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_dark_oak_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_igloo": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_jungle_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_oak_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_oak_pond": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_pillager_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_ruin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_ship": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_spruce_lantern": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_swamp_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_tower_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:small_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:snowy_dog_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:snowy_fossil": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:snowy_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:spruce_log_pile": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:spruce_tree": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:spruce_well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:statue_ruins": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:stone_fountain": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:stone_pillars": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:stone_rock": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:sunzi_gate": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:tall_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:tree_monument": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:villager_statue": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:warped_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:well": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:wheat_grain_bin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:windmill": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "mvs:wooden_wheat_farm": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "netherdepthsupgrade:nether_fortress_piece": {
+   "dims": [
+    "minecraft:the_nether"
+   ],
+   "icon": "minecraft:nether_bricks"
+  },
+  "nova_structures:bunker": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:conduit_ruin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:creeping_crypt": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:deepslate_camp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:end_castle": {
+   "dims": [
+    "minecraft:the_end"
+   ]
+  },
+  "nova_structures:end_lighthouse": {
+   "dims": [
+    "minecraft:the_end"
+   ]
+  },
+  "nova_structures:end_ship": {
+   "dims": [
+    "minecraft:the_end"
+   ]
+  },
+  "nova_structures:firewatch_tower_birch": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:firewatch_tower_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:firewatch_tower_savanna": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:firewatch_tower_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:hamlet": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:illager_camp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:illager_hideout": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:illager_manor": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:nether_keep": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:nether_port": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:piglin_camp": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:piglin_donjon": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:piglin_outstation": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:remnant_big_remnant": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_big_remnant_2": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_big_remnant_3": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_bridge_remnant": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_classic_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_medium_remnant": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_medium_remnant_2": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_miner_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_ruin_farmer": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_ruin_smith": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:remnant_school_remnant": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:ruin_town": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:shrine_combat_tier_1": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:shrine_combat_tier_2": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:shrine_combat_tier_3": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:shrine_combat_tier_4": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:shrine_combat_tier_5": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:shrine_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:skeleton_camp_crimson": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:skeleton_camp_soul": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:skeleton_camp_warped": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:skeleton_camp_waste": {
+   "dims": [
+    "minecraft:the_nether"
+   ]
+  },
+  "nova_structures:tavern_acacia": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:tavern_birch": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:tavern_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:tavern_jungle": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:tavern_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:tavern_snowy": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:tavern_spruce": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:trident_trial_monument": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:undead_crypt": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:underground_house": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:village_birch": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:well_birch": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:well_dark_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:well_oak": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:well_savana": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:well_spruce": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "nova_structures:wild_ruin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:butcherhouse": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:farm": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:farmerhouse": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:fishermanhouse": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:fletcherhouse": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:forge": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:hay": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:house_1": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:library": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:market": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:mason": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:shepherd": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:stable": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:temple": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:toolsmith": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "ocean_lily_pad_village:watchtower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "orc_hut:orc_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:desert_outpost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:fortified_village": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:glacial_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:igloo": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:mage_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:rubble_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:rubble_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:rubble_jungle": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:rubble_mesa": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:rubble_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:underground/frosted_dungeon": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:underground/giant_bee_hive": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:underground/mining_outpost": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:underground/oak_cabin": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:underground/old_refinery": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:underground/sunken_tower": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "terralith:witch_hut": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:exclusives/village_mediterranean": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:exclusives/village_swedish": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:mimic_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:pillager_outpost_desert": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:pillager_outpost_old_growth_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:pillager_outpost_sunflower_plains": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_badlands": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_birch_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_forest": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_grove": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_jungle": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_meadow": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_ocean": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_old_growth_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_savanna_plateau": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_snowy_taiga": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:village_swamp": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "towns_and_towers:wreckage_ocean": {
+   "dims": [
+    "minecraft:overworld"
+   ]
+  },
+  "twilightforest:aurora_palace": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:camp": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:dark_tower": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:fallen_trunk": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:final_castle": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:giant_house": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:hedge_maze": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:hollow_tree": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:hydra_lair": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:knight_stronghold": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:labyrinth": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:large_hollow_hill": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:lich_tower": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:medium_hollow_hill": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:naga_courtyard": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:quest_grove": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:small_hollow_hill": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:swamp_hollow_tree": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:troll_cave": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  },
+  "twilightforest:yeti_cave": {
+   "dims": [
+    "twilightforest:twilight_forest"
+   ]
+  }
+ }
+}

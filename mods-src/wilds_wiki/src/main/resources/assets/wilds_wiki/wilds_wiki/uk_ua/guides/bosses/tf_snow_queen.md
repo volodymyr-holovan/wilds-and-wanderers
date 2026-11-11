@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:snow_queen, twilightforest:triple_bow, twilightforest:seeker_bow, twilightforest:snow_queen_trophy
 title: Снігова королева
+mod: twilightforest
 category: bosses
 summary: Володарка Палацу сяйва на Льодовику. Один із трьох босів, що тримають кислотний дощ.
 order: 80

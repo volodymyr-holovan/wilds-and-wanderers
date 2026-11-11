@@ -1,6 +1,7 @@
 ---
 for: entity:iceandfire:hydra, iceandfire:hydra_fang, iceandfire:hydra_heart
 title: Гідра (Ice and Fire)
+mod: iceandfire
 category: bosses
 summary: Багатоголова змія в болотах. Без вогню на місці кожної голови виростають дві.
 order: 410

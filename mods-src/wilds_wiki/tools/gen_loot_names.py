@@ -307,7 +307,7 @@ def main():
             out["wilds_wiki.loot." + t.replace(":", ".", 1).replace("/", ".")] = n
         else:
             missing.append(t)
-    json.dump(out, open(os.path.join(RES, "lang", "uk_ua.loot.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(out, open(os.path.join(RES, "lang", "uk_ua.loot.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
     print(f"{len(out)} named, {len(missing)} missing")
     for m in missing:
         print("  ", m)

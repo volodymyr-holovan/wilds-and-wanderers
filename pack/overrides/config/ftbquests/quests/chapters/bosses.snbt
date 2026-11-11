@@ -242,10 +242,12 @@
 			]
 			tasks: [
 				{
-					entity: "mowziesmobs:sculptor"
 					id: "517E50AB1E526A6E"
-					type: "kill"
-					value: 1L
+					item: {
+						count: 1
+						id: "mowziesmobs:earthrend_gauntlet"
+					}
+					type: "item"
 				}
 			]
 			x: 2.0d

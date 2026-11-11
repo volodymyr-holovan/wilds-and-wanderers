@@ -1,6 +1,7 @@
 ---
 for: entity:alexscaves:forsaken
 title: Покинутий (Forsaken)
+mod: alexscaves
 category: bosses
 summary: Найсильніша істота Занедбаних пустот. Лікується в темряві.
 order: 520

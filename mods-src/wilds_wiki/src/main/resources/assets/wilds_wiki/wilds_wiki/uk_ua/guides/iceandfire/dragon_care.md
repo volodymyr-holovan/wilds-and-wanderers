@@ -1,4 +1,5 @@
 ---
+mod: iceandfire
 for: iceandfire:dragon_horn, iceandfire:dragon_meal, iceandfire:sickly_dragon_meal, iceandfire:dragon_stick, iceandfire:dragon_flute
 keywords: ріг дракона, драконяча їжа, жезл дракона, флейта, приручений дракон, як вигодувати дракона
 ---

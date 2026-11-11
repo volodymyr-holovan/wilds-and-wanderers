@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:ender_gem_case
 keywords: загарбник, загарбники, апотичний загарбник, invader, еліта, елітні моби, промінь з неба, підземелля загарбника
 ---

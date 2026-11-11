@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:hydra, twilightforest:hydra_chop, twilightforest:fiery_blood, twilightforest:hydra_trophy
 title: Гідра
+mod: twilightforest
 category: bosses
 summary: Багатоголова рептилія у Вогняному болоті. Один із трьох босів, що тримають кислотний дощ.
 order: 40

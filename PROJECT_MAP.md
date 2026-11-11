@@ -481,7 +481,7 @@ Every code file of the repository (264), with the first sentence of its own docu
 
 | File | What it is |
 |---|---|
-| `bosses_more.py` | More boss guides for gen_bosses.py: Ice and Fire (from its Bestiary), Alex's Caves (its Cave Codex), Alex's Mobs (its Animal Dictionary), Iron's Spells. |
+| `bosses_more.py` | More boss guides for gen_bosses.py: Ice and Fire (from its Bestiary), Alex's Caves (its Cave Codex), Alex's Mobs (its Animal Dictionary), Iron's Spells, Ars Nouveau, Friends &… |
 | `check_links.py` | Checks every link of every article against what exists: [[refs]], "for:" targets, !items, pages of categories.json. |
 | `ench_texts.py` | What every enchantment does, for those whose mods ship no description (all of vanilla, Dungeons and Taverns). |
 | `gen_books.py` | Collect what the mods themselves write about their things, so a wiki page says at least what the in-game guide says. |
@@ -663,9 +663,9 @@ Every code file of the repository (264), with the first sentence of its own docu
 | `launcher/src/WildsLauncher/` | 5 |
 | `mods-src/wilds_core/src/` | 22 |
 | `mods-src/wilds_dump/src/` | 3 |
-| `mods-src/wilds_wiki/guides_src/` | 7 |
-| `mods-src/wilds_wiki/src/` | 488 |
-| `mods-src/wilds_wiki/tools/` | 1 |
+| `mods-src/wilds_wiki/guides_src/` | 26 |
+| `mods-src/wilds_wiki/src/` | 526 |
+| `mods-src/wilds_wiki/tools/` | 2 |
 | `pack/` | 1 |
 | `pack/i18n/` | 2 |
 | `pack/i18n/fixes/` | 24 |

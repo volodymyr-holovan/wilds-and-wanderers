@@ -1,0 +1,34 @@
+=== animals.md
+---
+for: entity:naturalist:deer, entity:naturalist:boar, entity:naturalist:bear, entity:naturalist:mammoth, entity:naturalist:elephant, entity:naturalist:rhino, entity:naturalist:giraffe, entity:naturalist:hippo, entity:naturalist:ostrich, entity:naturalist:duck, entity:naturalist:firefly, entity:naturalist:snail, entity:naturalist:tortoise, entity:naturalist:alligator, entity:naturalist:great_white_shark, entity:naturalist:whale, entity:naturalist:desert_scorpion, entity:naturalist:ant, naturalist:fur, naturalist:hide, naturalist:fat, naturalist:tooth, naturalist:antler, naturalist:glow_goop, naturalist:snail_shell, naturalist:shellstone, naturalist:duck_egg, naturalist:knapsack, naturalist:whistle, naturalist:ant_hill, naturalist:queen_ant, naturalist:scorpion_poison_gland, naturalist:mammoth_meat, naturalist:bushmeat, naturalist:venison, naturalist:drumstick
+title: Звірі та їхня здобич (Naturalist)
+summary: Що дають тварини Naturalist: хутро, шкура, жир, роги, сяйна рідина, мушлі, і як це використати.
+category: mobs
+keywords: naturalist, олень, вепр, ведмідь, мамонт, слон, носоріг, жираф, бегемот, страус, качка, світлячок, равлик, хутро, шкура, жир, оленячий ріг, сяйна рідина, мушля равлика, рюкзачок, hide, fur, antler
+---
+# Звірі та їхня здобич (Naturalist)
+Naturalist заселяє ліси, савани, болота й моря справжніми тваринами. На полювання беріть зброю: ведмеді, алігатори й леви нападають першими.
+
+# Що з кого падає
+- [[entity:naturalist:deer]] — шкіра, [[naturalist:venison]] і зрідка [[naturalist:antler]].
+- [[entity:naturalist:boar]] — свинина, [[naturalist:fat]] і [[naturalist:hide]].
+- [[entity:naturalist:bear]] — [[naturalist:fur]]. [[entity:naturalist:mammoth]] — хутро, жир і [[naturalist:mammoth_meat]].
+- [[entity:naturalist:elephant]], [[entity:naturalist:rhino]] — шкура й [[naturalist:bushmeat]]; [[entity:naturalist:giraffe]] — дичина й сіно.
+- [[entity:naturalist:ostrich]] — [[naturalist:drumstick]] і пір'я; [[entity:naturalist:duck]] — качатина й пір'я.
+- [[entity:naturalist:alligator]] і [[entity:naturalist:great_white_shark]] — [[naturalist:tooth]]; [[entity:naturalist:whale]] — риба й жир.
+- [[entity:naturalist:tortoise]] — щиток черепахи. [[entity:naturalist:desert_scorpion]] — зрідка [[naturalist:scorpion_poison_gland]].
+- [[entity:naturalist:firefly]] — [[naturalist:glow_goop]] (її ж можна отримати, засмаживши сяйні ягоди). [[entity:naturalist:snail]] — [[naturalist:snail_shell]] і слиз.
+
+# Як це використати
+- **Шкура** в збірці підходить **замість шкіри** в рецептах (рюкзаки, намети, броня), її можна й переплавити на шкіру. 4 хутра складаються в білу вовну.
+- З шкури шиють [[naturalist:knapsack]].
+- 8 сяйної рідини навколо стріли — 2 спектральні стріли.
+- Мушлі равлика з кальцитом — 8 блоків [[naturalist:shellstone]] для будівництва; мушлі можна фарбувати.
+- [[naturalist:duck_egg]] годиться замість курячого яйця в торт і гарбузовий пиріг.
+- Оленячі роги жорна Create мелють на кістяне борошно.
+- Мурашник із королевою, якщо його зламати, віддає [[naturalist:queen_ant]].
+
+# Цікаве
+- Нагодуйте ведмедя медовим стільником, а бегемота — кавуном.
+- Візьміть мапу, сидячи на жирафі: з висоти мапа охоплює більше.
+- Дрібних тварин (метеликів, світлячків, равликів) ловлять [[naturalist:capture_net]]: див. квест «Сачок для звірів».

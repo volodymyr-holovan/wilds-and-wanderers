@@ -1,4 +1,5 @@
 ---
+mod: apotheosis
 for: apotheosis:salvaging_table, apotheosis:simple_reforging_table, apotheosis:reforging_table, apotheosis:sigil_of_rebirth
 keywords: розібрати, перероблення, стіл перероблення, перекування, перекувати, стіл перекування, сигіл відродження, salvage, reforge
 ---

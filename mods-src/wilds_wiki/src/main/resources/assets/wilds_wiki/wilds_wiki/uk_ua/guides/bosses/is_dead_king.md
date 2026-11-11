@@ -1,6 +1,7 @@
 ---
 for: entity:irons_spellbooks:dead_king
 title: Мертвий король
+mod: irons_spellbooks
 category: bosses
 summary: Бос катакомб Iron's Spells: пробуджений король-чаклун.
 order: 710

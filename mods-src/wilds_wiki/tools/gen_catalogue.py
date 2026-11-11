@@ -30,7 +30,7 @@ iceandfire:fire_dragon iceandfire:ice_dragon iceandfire:lightning_dragon iceandf
 alexscaves:luxtructosaurus alexscaves:tremorzilla alexscaves:forsaken alexscaves:hullbreaker alexscaves:atlatitan
 alexsmobs:void_worm alexsmobs:warped_mosco alexsmobs:farseer
 irons_spellbooks:dead_king irons_spellbooks:fire_boss
-ars_nouveau:wilden_boss friendsandfoes:wildfire netherexotics:moloch hybrid_aquatic:karkinos upgrade_aquatic:great_thrasher""".split()
+ars_nouveau:wilden_boss friendsandfoes:wildfire hybrid_aquatic:karkinos upgrade_aquatic:great_thrasher""".split()
 
 CHAPTERS = []
 for f in sorted(glob.glob(os.path.join(ROOT, "pack", "tools", "quests", "chapters", "c*.py"))):
@@ -194,6 +194,24 @@ MODS = {
     "explorerscompass": ("Explorer's Compass", "explorerscompass:explorerscompass", "Компас, що шукає будь-яку споруду за назвою.", ["компас", "споруди"]),
     "naturescompass": ("Nature's Compass", "naturescompass:naturescompass", "Компас, що шукає будь-який біом за назвою.", ["компас", "біоми"]),
     "ftbquests": ("FTB Quests", None, "Книга квестів (клавіша J).", ["квести"]),
+    # world generation (mostly server-only: the client cannot tell their names, so they are written here)
+    "terralith": ("Terralith", None, "95 нових біомів звичайного світу й 28 споруд у них: укріплені села, застави.", ["біоми"]),
+    "incendium": ("Incendium", None, "Нові біоми й споруди Незеру: Заборонений замок, Санктум та інші.", ["незер"]),
+    "mvs": ("Moog's Voyager Structures", None, "130 невеликих споруд для мандрівників у звичайному світі й кілька в Незері.", ["споруди"]),
+    "nova_structures": ("Dungeons and Taverns", None, "96 споруд: таверни, підземелля, крипти й застави у звичайному світі, Незері та Енді.", ["таверна", "підземелля"]),
+    "ctov": ("ChoiceTheorem's Overhauled Village", None, "Оновлені села: 78 різновидів для різних біомів.", ["село"]),
+    "towns_and_towers": ("Towns and Towers", None, "Села й застави розбійників у різних стилях: 60 споруд.", ["село", "застава"]),
+    "dungeons_arise": ("When Dungeons Arise", None, "40 великих підземель, веж і таборів розбійників, кілька — в Енді.", ["підземелля"]),
+    "dungeons_arise_seven_seas": ("When Dungeons Arise: Seven Seas", None, "Кораблі в морі: галеон, корвет корсарів, піратська джонка, яхта.", ["корабель"]),
+    "mos": ("Moog's Ocean Structures", None, "26 морських споруд: руїни, закопані скарби, скелет дракона.", ["море", "руїни"]),
+    "hopo": ("Hopo Better Underwater Ruins", None, "Підводні руїни, скам'янілості й місто під водою.", ["руїни"]),
+    "ocean_lily_pad_village": ("Ocean Lily Pad Village", None, "Село на лататтях посеред океану.", ["село"]),
+    "joshie": ("Tidal Towns", None, "Село на воді посеред океану.", ["село"]),
+    "bettermineshafts": ("YUNG's Better Mineshafts", None, "Шахти в 13 стилях, кожен під свій біом.", ["шахта"]),
+    "betterdungeons": ("YUNG's Better Dungeons", None, "Підземелля скелетів і павуків, малі підземелля й одне в Незері.", ["підземелля"]),
+    "betterfortresses": ("YUNG's Better Nether Fortresses", None, "Оновлена незерська фортеця.", ["фортеця"]),
+    "betteroceanmonuments": ("YUNG's Better Ocean Monuments", None, "Оновлений океанський монумент.", ["монумент"]),
+    "betterstrongholds": ("YUNG's Better Strongholds", None, "Оновлена споруда з порталом в Енд.", ["портал енду"]),
     "patchouli": None, "guideme": None, "hapi": None, "ftblibrary": None, "irons_lib": None,
 }
 

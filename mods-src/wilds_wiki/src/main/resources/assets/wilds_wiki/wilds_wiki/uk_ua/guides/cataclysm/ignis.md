@@ -1,4 +1,5 @@
 ---
+mod: cataclysm
 for: entity:cataclysm:ignis, cataclysm:altar_of_fire, cataclysm:burning_ashes, cataclysm:dying_ember, cataclysm:flame_eye, structure:cataclysm:burning_arena, entity:cataclysm:ignited_revenant, entity:cataclysm:ignited_berserker
 keywords: ігніс, ignis, вівтар вогню, палаючий попіл, палаюча арена, burning arena, як викликати ігніса
 ---

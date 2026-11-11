@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:alpha_yeti, twilightforest:alpha_yeti_fur, twilightforest:ice_bomb
 title: Альфа-єті
+mod: twilightforest
 category: bosses
 summary: Ватажок єті в печері Снігового лісу. Його хутро рятує від холоду Льодовика.
 order: 70

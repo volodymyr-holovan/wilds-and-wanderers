@@ -1,6 +1,7 @@
 ---
 for: entity:alexsmobs:warped_mosco, alexsmobs:warped_muscle, alexsmobs:hemolymph_sac, alexsmobs:hemolymph_blaster
 title: Викривлений моско
+mod: alexsmobs
 category: bosses
 summary: Мутант багряного москіта з Незеру.
 order: 620

@@ -1,4 +1,5 @@
 ---
+mod: farmersdelight
 for: farmersdelight:roast_chicken_block, farmersdelight:honey_glazed_ham_block, farmersdelight:shepherds_pie_block, farmersdelight:stuffed_pumpkin_block, farmersdelight:rice_roll_medley_block, farmersdelight:apple_pie, farmersdelight:chocolate_pie
 keywords: бенкет, пиріг, страва на столі, feast
 ---

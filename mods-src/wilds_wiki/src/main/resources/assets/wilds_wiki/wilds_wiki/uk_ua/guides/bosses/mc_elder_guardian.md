@@ -1,6 +1,7 @@
 ---
 for: entity:minecraft:elder_guardian, minecraft:sponge
 title: Древній вартовий
+mod: minecraft
 category: bosses
 summary: Три стражі океанського монумента. Накладають утому копання.
 order: 340

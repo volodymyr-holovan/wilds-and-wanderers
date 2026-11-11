@@ -1,6 +1,7 @@
 ---
 for: entity:iceandfire:cyclops, iceandfire:sheep_helmet
 title: Циклоп
+mod: iceandfire
 category: bosses
 summary: Одноокий велетень-пастух у печері на березі. Осліпіть його стрілою в око.
 order: 430

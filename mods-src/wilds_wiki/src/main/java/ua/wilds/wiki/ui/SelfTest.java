@@ -136,6 +136,36 @@ public final class SelfTest {
         page("iron_ingot_2", d, "item:minecraft:iron_ingot", 280);
         page("dragonbone", d, "item:iceandfire:dragonbone", 0);
         page("faq", d, "topic:wilds_wiki:cat/faq", 0);
+        // no generic recipes on item pages: "any item can get Reactive", Create's copies of ordinary recipes
+        page("diamond_sword", d, "item:minecraft:diamond_sword", 0);
+        page("diamond_sword_2", d, "item:minecraft:diamond_sword", 300);
+        page("crafting_table", d, "item:minecraft:crafting_table", 0);
+        shot("recipes_report", () -> {
+            if (!WildsWiki.jei || !Jei.ready()) return;
+            for (String id : new String[]{"minecraft:diamond_sword", "minecraft:iron_pickaxe", "minecraft:crafting_table", "minecraft:iron_block",
+                    "minecraft:oak_planks", "minecraft:iron_ingot", "minecraft:bread", "create:andesite_alloy", "minecraft:leather_chestplate"}) {
+                Entry e = d.entries.get("item:" + id);
+                if (e == null) continue;
+                for (Jei.Role r : Jei.Role.values()) {
+                    StringBuilder sb = new StringBuilder();
+                    for (var v : Jei.mainRecipes(e.stack, r, 3)) sb.append(" [").append(v.categoryTitle()).append(" ").append(v.categoryId()).append(" ").append(v.recipeId()).append("]");
+                    out.println("recipes " + id + " " + r + " (" + Jei.count(e.stack, r) + "):" + sb);
+                }
+            }
+            out.flush();
+        });
+        // new articles and boss guides
+        page("mod_smallships", d, "topic:wilds_wiki:mod/smallships", 0);
+        page("guide_sailing", d, "topic:wilds_wiki:guides/smallships/sailing", 0);
+        page("guide_backpacks", d, "topic:wilds_wiki:guides/sophisticatedbackpacks/backpacks", 0);
+        page("guide_electricity", d, "topic:wilds_wiki:guides/createaddition/electricity", 0);
+        page("guide_alex_taming", d, "topic:wilds_wiki:guides/alexsmobs/taming", 0);
+        page("boss_tyros", d, "entity:irons_spellbooks:fire_boss", 0);
+        page("boss_karkinos", d, "entity:hybrid_aquatic:karkinos", 0);
+        page("structure_fortress", d, "structure:betterfortresses:fortress", 0);
+        page("mod_mvs", d, "topic:wilds_wiki:mod/mvs", 0);
+        page("wanderer", d, "entity:wilds_core:wanderer", 0);
+        page("boss_frostmaw", d, "topic:wilds_wiki:guides/bosses/mm_frostmaw", 0);
         shot("last_page", () -> WildsWiki.open(null, null, null));
         shot("jei_mana_orb", () -> {
             if (WildsWiki.jei && Jei.ready()) {

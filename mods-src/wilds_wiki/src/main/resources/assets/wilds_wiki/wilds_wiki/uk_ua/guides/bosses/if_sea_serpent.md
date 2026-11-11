@@ -1,6 +1,7 @@
 ---
 for: entity:iceandfire:sea_serpent
 title: Морський змій
+mod: iceandfire
 category: bosses
 summary: Швидкий хижак теплих океанів. Нападає на човни й навіть на тих, хто на березі.
 order: 440

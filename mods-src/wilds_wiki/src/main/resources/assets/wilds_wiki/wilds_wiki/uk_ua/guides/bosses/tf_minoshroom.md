@@ -1,6 +1,7 @@
 ---
 for: entity:twilightforest:minoshroom, twilightforest:meef_stroganoff, twilightforest:diamond_minotaur_axe
 title: Гриботавр (Minoshroom)
+mod: twilightforest
 category: bosses
 summary: Бос лабіринту під Болотом. Його страва відкриває Вогняне болото.
 order: 30

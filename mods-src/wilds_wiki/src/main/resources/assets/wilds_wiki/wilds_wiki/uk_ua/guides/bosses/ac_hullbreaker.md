@@ -1,12 +1,13 @@
 ---
 for: entity:alexscaves:hullbreaker, alexscaves:enigmatic_engine, alexscaves:immortal_embryo
-title: Трощитель (Hullbreaker)
+title: Суднолам (Hullbreaker)
+mod: alexscaves
 category: bosses
 summary: Риба завдовжки п'ятнадцять блоків у Безодні. Пливе на світло.
 order: 530
 keywords: трощитель, hullbreaker, безодня, підводний човен
 ---
-# Трощитель
+# Суднолам
 - **Де:** [[biome:alexscaves:abyssal_chasm|Безодня]] під океаном.
 - **Складність:** ★★★★★ (400 сердець)
 

@@ -1,6 +1,7 @@
 ---
 for: entity:minecraft:warden, minecraft:sculk_shrieker
 title: Вартовий
+mod: minecraft
 category: bosses
 summary: Сліпий велетень Глибокої темряви. Битися з ним не треба — його треба уникати.
 order: 330
