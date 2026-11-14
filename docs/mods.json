@@ -2484,16 +2484,16 @@
   "title": "Structurize",
   "slug": "structurize",
   "cf_project": 298744,
-  "cf_file": 8610535,
-  "version": "structurize-1.0.832-1.21.1.jar",
+  "cf_file": 9556249,
+  "version": "structurize-1.0.839-1.21.1.jar",
   "type": "release",
   "where": "both",
   "dependency": false,
-  "file": "structurize-1.0.832-1.21.1.jar",
-  "url": "https://mediafilez.forgecdn.net/files/8610/535/structurize-1.0.832-1.21.1.jar",
-  "sha1": "be15d6924bcca76bf5ac107e2ce5ac4d948d82e2",
-  "sha512": "0d535f32033d4e2369e35c061cfc4efa994836d5bacd2d503765b79857728ef69297a6997c30e44ecfd74c058b8e7e4624c85dfbc1993013e8c20110afaf7945",
-  "size": 1063849
+  "file": "structurize-1.0.839-1.21.1.jar",
+  "url": "https://mediafilez.forgecdn.net/files/9556/249/structurize-1.0.839-1.21.1.jar",
+  "sha1": "2959f37afb78e987dcf7b7279ce7322baff308e1",
+  "sha512": "36c2689f3e2bb6df204a6d2e0cfd2d448ab06a07de41f059b14a35c041c930c86a3fec899a9736796d66e240c9a1cb6db2c16a25f6d8cac29a24507faf045d32",
+  "size": 1064211
  },
  {
   "source": "modrinth",

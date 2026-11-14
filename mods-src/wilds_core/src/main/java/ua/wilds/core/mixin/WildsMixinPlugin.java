@@ -29,6 +29,10 @@ public final class WildsMixinPlugin implements IMixinConfigPlugin {
     }
 
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
+        if (mixinClassName.startsWith("ua.wilds.core.mixin.colony.")) {
+            // -Dwilds_core.colonyfix=false turns the MineColonies fixes off (comparison tests, or a quick way back)
+            return LoadingModList.get().getModFileById("minecolonies") != null && !"false".equals(System.getProperty("wilds_core.colonyfix"));
+        }
         String mod = NEEDS.get(mixinClassName);
         return mod == null || LoadingModList.get().getModFileById(mod) != null;
     }

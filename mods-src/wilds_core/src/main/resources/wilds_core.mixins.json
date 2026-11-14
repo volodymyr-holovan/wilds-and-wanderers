@@ -32,6 +32,14 @@
     "EnchantRandomlyMixin",
     "EnchantWithLevelsMixin",
     "RecipeBookKnowsMixin",
-    "AnvilSmithMixin"
+    "AnvilSmithMixin",
+    "colony.PathStartMixin",
+    "colony.ColonyNavigateMixin",
+    "colony.PathJobMixin",
+    "colony.MoveToLocationMixin",
+    "colony.PathThreadsMixin",
+    "colony.WorkerErrorPauseMixin",
+    "colony.BuilderSpeedMixin",
+    "colony.BuilderMiningMixin"
   ]
 }

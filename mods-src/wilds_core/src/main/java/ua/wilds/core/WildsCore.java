@@ -70,5 +70,7 @@ public final class WildsCore {
         Skills.init();
         ua.wilds.core.worldgen.WorldgenAudit.register();
         ua.wilds.core.worldgen.CaveBiomes.register();
+        // test bench for the MineColonies fixes: only on a test server started with -Dwilds_core.colonytest=true
+        if (ua.wilds.core.colony.ColonyStats.ON && net.neoforged.fml.ModList.get().isLoaded("minecolonies")) ua.wilds.core.colony.ColonyTest.register();
     }
 }

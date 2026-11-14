@@ -48,7 +48,7 @@
 	#This controls how many chunks are loaded with the "Chunk Load Colony" option. The higher this value, the fewer chunks will be loaded. (The innermost chunks will be loaded first.) 1 = load all claimed chunks. [Default: 3, min: 1, max: 15]
 	# Default: 3
 	# Range: 1 ~ 15
-	colonyloadstrictness = 3
+	colonyloadstrictness = 1
 	#Max log count in one tree for the Forester to check during their tree search. [Default: 400, min: 1, max: 1000]
 	# Default: 400
 	# Range: 1 ~ 1000
