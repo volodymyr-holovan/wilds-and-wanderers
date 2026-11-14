@@ -1,5 +1,5 @@
 {
- "version": "2026.11.11.1",
+ "version": "2026.11.14.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -834,10 +834,10 @@
    "size": 3642581
   },
   {
-   "file": "structurize-1.0.832-1.21.1.jar",
-   "url": "https://mediafilez.forgecdn.net/files/8610/535/structurize-1.0.832-1.21.1.jar",
-   "sha1": "be15d6924bcca76bf5ac107e2ce5ac4d948d82e2",
-   "size": 1063849
+   "file": "structurize-1.0.839-1.21.1.jar",
+   "url": "https://mediafilez.forgecdn.net/files/9556/249/structurize-1.0.839-1.21.1.jar",
+   "sha1": "2959f37afb78e987dcf7b7279ce7322baff308e1",
+   "size": 1064211
   },
   {
    "file": "super_resolution-neoforge-1.21..1.21.1-0.9.2-alpha.2+opengl.jar",
@@ -914,13 +914,13 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.11.1/wilds_core-0.1.0.jar",
-   "sha1": "99922f807a55d6a72801d7120bec0b1971842054",
-   "size": 355487
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.14.1/wilds_core-0.1.0.jar",
+   "sha1": "c37b29417df510277f384c122b5b13532db0aa2d",
+   "size": 378397
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.11.1/wilds_wiki-0.2.0.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.14.1/wilds_wiki-0.2.0.jar",
    "sha1": "93884e5264d5aff39833fce4b9a264bb8b1ca645",
    "size": 1242381
   },
@@ -970,9 +970,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.11.1/overrides.zip",
-   "sha1": "96e11677c83732676069678f5c724e5fee20e1d7",
-   "size": 28266852
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.14.1/overrides.zip",
+   "sha1": "1e2bd1419670d394629b96882d3d3bc6c748ab27",
+   "size": 28266842
   },
   "overrides": [
    {
@@ -1222,8 +1222,8 @@
    },
    {
     "path": "config/minecolonies-server.toml",
-    "sha1": "0c759bc93f3ba83eee8a69a1e5ba94d79f25619f",
-    "size": 9355
+    "sha1": "1847ca5bd23236346573da5a1d5712785a7bdba9",
+    "size": 9170
    },
    {
     "path": "config/nomadictents-common.toml",
