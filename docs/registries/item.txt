@@ -8776,6 +8776,8 @@ twilightforest:firefly
 twilightforest:firefly_jar
 twilightforest:firefly_particle_spawner
 twilightforest:fluffy_cloud
+twilightforest:forge_harbinger_boss_spawner
+twilightforest:forge_harbinger_spawn_egg
 twilightforest:fortification_scepter
 twilightforest:four_leaf_clover
 twilightforest:fugu_jerky
@@ -9007,6 +9009,7 @@ twilightforest:pinch_beetle_spawn_egg
 twilightforest:pink_castle_door
 twilightforest:pink_castle_rune_brick
 twilightforest:pink_force_field
+twilightforest:plateau_boss_spawn_egg
 twilightforest:player_skull_candle
 twilightforest:pocket_watch
 twilightforest:pork_jerky
@@ -9031,6 +9034,7 @@ twilightforest:redcap_spawn_egg
 twilightforest:root
 twilightforest:root_strand
 twilightforest:rope
+twilightforest:rune_scepter
 twilightforest:salmon_jerky
 twilightforest:seeker_bow
 twilightforest:shika_senbei

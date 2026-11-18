@@ -1,0 +1,2411 @@
+From 674df5474e16030077e53e3dd9535b4907c703ef Mon Sep 17 00:00:00 2001
+From: volodymyr-holovan <285621215+volodymyr-holovan@users.noreply.github.com>
+Date: Tue, 17 Nov 2026 22:07:55 +0100
+Subject: [PATCH 3/3] Final Castle: own models and animations, bug fixes
+
+Own models for the Rune Sovereign, the Forge Harbinger and the rune ward (geometry and
+textures generated together), glow layers, gestures that match what the bosses do (staff
+levelled for a volley, struck down for a rune circle, arms flung up to call), the body
+turned to the target, the Harbinger's state synced for its poses. Fixed: /kill on a stunned
+boss left NaN health and absorption (an unkillable ghost), rune circles under players outside
+the gazebo, a second ward wave leaving the first one behind.
+---
+ .../event/ClientRegistrationEvents.java       |   5 +-
+ .../client/model/TFModelLayers.java           |   3 +
+ .../client/model/entity/AdherentModel.java    |   6 +-
+ .../client/model/entity/DebugPose.java        |  28 +++
+ .../model/entity/ForgeHarbingerModel.java     | 148 ++++++++++++
+ .../model/entity/HarbingerCubeModel.java      |   4 +-
+ .../model/entity/RuneSovereignModel.java      | 210 ++++++++++++++++++
+ .../client/model/entity/RuneWardModel.java    |  66 ++++++
+ .../renderer/entity/AdherentRenderer.java     |   4 +-
+ .../entity/ForgeHarbingerRenderer.java        |  42 +++-
+ .../entity/RuneSovereignRenderer.java         |  42 +++-
+ .../renderer/entity/RuneWardRenderer.java     |  43 ++--
+ .../entity/boss/CastleBossRules.java          |  20 +-
+ .../entity/boss/ForgeHarbinger.java           |  75 ++++++-
+ .../entity/boss/PlateauBoss.java              |  98 +++++++-
+ .../textures/entity/forge_harbinger.png       | Bin 16701 -> 18875 bytes
+ .../textures/entity/forge_harbinger_glow.png  | Bin 0 -> 888 bytes
+ .../textures/entity/rune_bolt.png             | Bin 0 -> 537 bytes
+ .../textures/entity/rune_sovereign.png        | Bin 4282 -> 13477 bytes
+ .../textures/entity/rune_sovereign_glow.png   | Bin 0 -> 397 bytes
+ .../textures/entity/rune_ward.png             | Bin 0 -> 2218 bytes
+ .../textures/entity/rune_ward_glow.png        | Bin 0 -> 160 bytes
+ 22 files changed, 725 insertions(+), 69 deletions(-)
+ create mode 100644 src/main/java/twilightforest/client/model/entity/DebugPose.java
+ create mode 100644 src/main/java/twilightforest/client/model/entity/ForgeHarbingerModel.java
+ create mode 100644 src/main/java/twilightforest/client/model/entity/RuneSovereignModel.java
+ create mode 100644 src/main/java/twilightforest/client/model/entity/RuneWardModel.java
+ create mode 100644 src/main/resources/assets/twilightforest/textures/entity/forge_harbinger_glow.png
+ create mode 100644 src/main/resources/assets/twilightforest/textures/entity/rune_bolt.png
+ create mode 100644 src/main/resources/assets/twilightforest/textures/entity/rune_sovereign_glow.png
+ create mode 100644 src/main/resources/assets/twilightforest/textures/entity/rune_ward.png
+ create mode 100644 src/main/resources/assets/twilightforest/textures/entity/rune_ward_glow.png
+
+diff --git a/src/main/java/twilightforest/client/event/ClientRegistrationEvents.java b/src/main/java/twilightforest/client/event/ClientRegistrationEvents.java
+index 44736e7c8..ccb675e5d 100644
+--- a/src/main/java/twilightforest/client/event/ClientRegistrationEvents.java
++++ b/src/main/java/twilightforest/client/event/ClientRegistrationEvents.java
+@@ -416,7 +416,7 @@ public class ClientRegistrationEvents {
+ 		event.registerEntityRenderer(TFEntities.PLATEAU_BOSS.get(), RuneSovereignRenderer::new);
+ 		event.registerEntityRenderer(TFEntities.FORGE_HARBINGER.get(), ForgeHarbingerRenderer::new);
+ 		event.registerEntityRenderer(TFEntities.RUNE_WARD.get(), RuneWardRenderer::new);
+-		event.registerEntityRenderer(TFEntities.RUNE_BOLT.get(), c -> new CustomProjectileTextureRenderer(c, TwilightForestMod.prefix("textures/particle/twilight_orb.png"), 1.2F, true, false));
++		event.registerEntityRenderer(TFEntities.RUNE_BOLT.get(), c -> new CustomProjectileTextureRenderer(c, TwilightForestMod.prefix("textures/entity/rune_bolt.png"), 1.2F, true, true));
+ 
+ 		// projectiles
+ 		event.registerEntityRenderer(TFEntities.NATURE_BOLT.get(), ThrownItemRenderer::new);
+@@ -503,6 +503,9 @@ public class ClientRegistrationEvents {
+ 		event.registerLayerDefinition(TFModelLayers.FIRE_BEETLE, FireBeetleModel::checkForPack);
+ 		event.registerLayerDefinition(TFModelLayers.GIANT_MINER, () -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0.0F), 64, 32));
+ 		event.registerLayerDefinition(TFModelLayers.HARBINGER_CUBE, HarbingerCubeModel::create);
++		event.registerLayerDefinition(TFModelLayers.FORGE_HARBINGER, ForgeHarbingerModel::create);
++		event.registerLayerDefinition(TFModelLayers.RUNE_SOVEREIGN, RuneSovereignModel::create);
++		event.registerLayerDefinition(TFModelLayers.RUNE_WARD, RuneWardModel::create);
+ 		event.registerLayerDefinition(TFModelLayers.HEDGE_SPIDER, SpiderModel::createSpiderBodyLayer);
+ 		event.registerLayerDefinition(TFModelLayers.HELMET_CRAB, HelmetCrabModel::checkForPack);
+ 		event.registerLayerDefinition(TFModelLayers.HOSTILE_WOLF, () -> LayerDefinition.create(WolfModel.createMeshDefinition(CubeDeformation.NONE), 64, 32));
+diff --git a/src/main/java/twilightforest/client/model/TFModelLayers.java b/src/main/java/twilightforest/client/model/TFModelLayers.java
+index f29b2a971..c323f0785 100644
+--- a/src/main/java/twilightforest/client/model/TFModelLayers.java
++++ b/src/main/java/twilightforest/client/model/TFModelLayers.java
+@@ -48,6 +48,9 @@ public class TFModelLayers {
+ 	public static final ModelLayerLocation FIRE_BEETLE = register("fire_beetle");
+ 	public static final ModelLayerLocation GIANT_MINER = register("giant_miner");
+ 	public static final ModelLayerLocation HARBINGER_CUBE = register("harbinger_cube");
++	public static final ModelLayerLocation FORGE_HARBINGER = register("forge_harbinger");
++	public static final ModelLayerLocation RUNE_SOVEREIGN = register("rune_sovereign");
++	public static final ModelLayerLocation RUNE_WARD = register("rune_ward");
+ 	public static final ModelLayerLocation HEDGE_SPIDER = register("hedge_spider");
+ 	public static final ModelLayerLocation HELMET_CRAB = register("helmet_crab");
+ 	public static final ModelLayerLocation HOSTILE_WOLF = register("hostile_wolf");
+diff --git a/src/main/java/twilightforest/client/model/entity/AdherentModel.java b/src/main/java/twilightforest/client/model/entity/AdherentModel.java
+index 09206e2f7..5a2d85926 100644
+--- a/src/main/java/twilightforest/client/model/entity/AdherentModel.java
++++ b/src/main/java/twilightforest/client/model/entity/AdherentModel.java
+@@ -5,9 +5,9 @@ import net.minecraft.client.model.geom.ModelPart;
+ import net.minecraft.client.model.geom.PartPose;
+ import net.minecraft.client.model.geom.builders.*;
+ import net.minecraft.util.Mth;
+-import net.minecraft.world.entity.LivingEntity;
++import twilightforest.entity.monster.Adherent;
+ 
+-public class AdherentModel<T extends LivingEntity> extends HumanoidModel<T> {
++public class AdherentModel extends HumanoidModel<Adherent> {
+ 
+ 	public AdherentModel(ModelPart root) {
+ 		super(root);
+@@ -64,7 +64,7 @@ public class AdherentModel<T extends LivingEntity> extends HumanoidModel<T> {
+ 	}
+ 
+ 	@Override
+-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
++	public void setupAnim(Adherent entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+ 		// rotate head normally
+ 		this.head.yRot = netHeadYaw * Mth.DEG_TO_RAD;
+ 		this.head.xRot = headPitch * Mth.DEG_TO_RAD;
+diff --git a/src/main/java/twilightforest/client/model/entity/DebugPose.java b/src/main/java/twilightforest/client/model/entity/DebugPose.java
+new file mode 100644
+index 000000000..1ecc9001d
+--- /dev/null
++++ b/src/main/java/twilightforest/client/model/entity/DebugPose.java
+@@ -0,0 +1,28 @@
++package twilightforest.client.model.entity;
++
++import net.minecraft.world.entity.Entity;
++import org.jetbrains.annotations.Nullable;
++
++/**
++ * A test hook for the models of the Final Castle completion: with the JVM flag {@code -Dtwilightforest.debugPoses=true},
++ * a mob without AI named {@code pose:<name>@<0..1>} holds that pose (for example {@code pose:volley@0.5}), so every
++ * gesture can be looked at and photographed from any side. Without the flag nothing changes.
++ */
++public record DebugPose(String name, float progress) {
++
++	private static final boolean ENABLED = Boolean.getBoolean("twilightforest.debugPoses");
++
++	@Nullable
++	public static DebugPose of(Entity entity) {
++		if (!ENABLED || entity.getCustomName() == null) return null;
++		String text = entity.getCustomName().getString();
++		if (!text.startsWith("pose:")) return null;
++		String[] parts = text.substring(5).split("@");
++		float progress = 0.5F;
++		try {
++			if (parts.length > 1) progress = Float.parseFloat(parts[1]);
++		} catch (NumberFormatException ignored) {
++		}
++		return new DebugPose(parts[0], progress);
++	}
++}
+diff --git a/src/main/java/twilightforest/client/model/entity/ForgeHarbingerModel.java b/src/main/java/twilightforest/client/model/entity/ForgeHarbingerModel.java
+new file mode 100644
+index 000000000..e145cb306
+--- /dev/null
++++ b/src/main/java/twilightforest/client/model/entity/ForgeHarbingerModel.java
+@@ -0,0 +1,148 @@
++package twilightforest.client.model.entity;
++
++import net.minecraft.client.model.HierarchicalModel;
++import net.minecraft.client.model.geom.ModelPart;
++import net.minecraft.client.model.geom.PartPose;
++import net.minecraft.client.model.geom.builders.CubeListBuilder;
++import net.minecraft.client.model.geom.builders.LayerDefinition;
++import net.minecraft.client.model.geom.builders.MeshDefinition;
++import net.minecraft.client.model.geom.builders.PartDefinition;
++import net.minecraft.util.Mth;
++import twilightforest.entity.boss.ForgeHarbinger;
++
++/**
++ * The Forge Harbinger (Wilds &amp; Wanderers completion of the Final Castle): a walking forge. A charred iron body with
++ * molten seams, riveted side plates, a fire grate for a mouth, an anvil for a back with a chimney, four stumpy clawed
++ * legs. Drawn at half size (the renderer doubles it). Geometry from make_models.py, like the texture.
++ * <p>
++ * Poses: a heavy walk; before a charge it crouches with its legs braced; charging it leans in; stunned it sags to one
++ * side with its legs splayed.
++ */
++public class ForgeHarbingerModel extends HierarchicalModel<ForgeHarbinger> {
++
++	private final ModelPart root;
++	private final ModelPart body;
++	private final ModelPart chimney;
++	private final ModelPart frontRight;
++	private final ModelPart frontLeft;
++	private final ModelPart backRight;
++	private final ModelPart backLeft;
++
++	public ForgeHarbingerModel(ModelPart root) {
++		this.root = root;
++		this.body = root.getChild("body");
++		this.chimney = this.body.getChild("anvil").getChild("chimney");
++		this.frontRight = root.getChild("leg_front_right");
++		this.frontLeft = root.getChild("leg_front_left");
++		this.backRight = root.getChild("leg_back_right");
++		this.backLeft = root.getChild("leg_back_left");
++	}
++
++	public static LayerDefinition create() {
++		// ---- generated by make_models.py
++		MeshDefinition mesh = new MeshDefinition();
++		PartDefinition root = mesh.getRoot();
++		PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create()
++				.texOffs(0, 0).addBox(-13.0F, -20.0F, -13.0F, 26.0F, 20.0F, 26.0F),
++			PartPose.offset(0.0F, 16.0F, 0.0F));
++		PartDefinition mouth = body.addOrReplaceChild("mouth", CubeListBuilder.create()
++				.texOffs(204, 46).addBox(-10.0F, -7.0F, -1.0F, 20.0F, 11.0F, 1.0F),
++			PartPose.offset(0.0F, -9.0F, -13.0F));
++		PartDefinition plates = body.addOrReplaceChild("plates", CubeListBuilder.create()
++				.texOffs(216, 0).addBox(-14.0F, -17.0F, -9.0F, 1.0F, 12.0F, 18.0F)
++				.texOffs(0, 46).mirror().addBox(13.0F, -17.0F, -9.0F, 1.0F, 12.0F, 18.0F)
++				.texOffs(166, 46).addBox(-9.0F, -17.0F, 13.0F, 18.0F, 12.0F, 1.0F),
++			PartPose.offset(0.0F, 0.0F, 0.0F));
++		PartDefinition anvil = body.addOrReplaceChild("anvil", CubeListBuilder.create()
++				.texOffs(104, 0).addBox(-14.0F, -3.0F, -14.0F, 28.0F, 3.0F, 28.0F),
++			PartPose.offset(0.0F, -20.0F, 0.0F));
++		PartDefinition chimney = anvil.addOrReplaceChild("chimney", CubeListBuilder.create()
++				.texOffs(0, 76).addBox(-3.0F, -4.0F, -3.0F, 6.0F, 4.0F, 6.0F),
++			PartPose.offset(6.0F, -3.0F, 7.0F));
++		PartDefinition horn = anvil.addOrReplaceChild("horn", CubeListBuilder.create()
++				.texOffs(24, 76).addBox(-2.0F, -3.0F, -2.0F, 4.0F, 3.0F, 4.0F),
++			PartPose.offset(-8.0F, -3.0F, 8.0F));
++		PartDefinition leg_front_right = root.addOrReplaceChild("leg_front_right", CubeListBuilder.create()
++				.texOffs(38, 46).addBox(-4.0F, 0.0F, -4.0F, 8.0F, 8.0F, 8.0F),
++			PartPose.offset(-9.0F, 16.0F, -9.0F));
++		PartDefinition leg_front_left = root.addOrReplaceChild("leg_front_left", CubeListBuilder.create()
++				.texOffs(70, 46).addBox(-4.0F, 0.0F, -4.0F, 8.0F, 8.0F, 8.0F),
++			PartPose.offset(9.0F, 16.0F, -9.0F));
++		PartDefinition leg_back_right = root.addOrReplaceChild("leg_back_right", CubeListBuilder.create()
++				.texOffs(102, 46).addBox(-4.0F, 0.0F, -4.0F, 8.0F, 8.0F, 8.0F),
++			PartPose.offset(-9.0F, 16.0F, 9.0F));
++		PartDefinition leg_back_left = root.addOrReplaceChild("leg_back_left", CubeListBuilder.create()
++				.texOffs(134, 46).addBox(-4.0F, 0.0F, -4.0F, 8.0F, 8.0F, 8.0F),
++			PartPose.offset(9.0F, 16.0F, 9.0F));
++		return LayerDefinition.create(mesh, 256, 128);
++		// ---- end of generated
++	}
++
++	@Override
++	public ModelPart root() {
++		return this.root;
++	}
++
++	@Override
++	public void setupAnim(ForgeHarbinger entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
++		this.root().getAllParts().forEach(ModelPart::resetPose);
++		float swing = Mth.cos(limbSwing * 0.5F) * 0.9F * limbSwingAmount;
++		this.frontRight.xRot = swing;
++		this.backLeft.xRot = swing;
++		this.frontLeft.xRot = -swing;
++		this.backRight.xRot = -swing;
++		// the heavy body rolls with each step
++		this.body.zRot = Mth.sin(limbSwing * 0.5F) * 0.04F * limbSwingAmount;
++		this.body.y += Math.abs(Mth.sin(limbSwing * 0.5F)) * 0.8F * limbSwingAmount;
++		this.chimney.y += Mth.sin(ageInTicks * 0.3F) * 0.15F;
++
++		ForgeHarbinger.AnimState state = entity.getAnimState();
++		float blow = entity.getAttackAnim(ageInTicks - (int) ageInTicks);
++		float ember = entity.getEmberFlash(ageInTicks - (int) ageInTicks);
++		DebugPose pose = DebugPose.of(entity);
++		if (pose != null) {
++			switch (pose.name()) {
++				case "attack" -> blow = pose.progress();
++				case "ember" -> ember = pose.progress();
++				default -> {
++					try {
++						state = ForgeHarbinger.AnimState.valueOf(pose.name().toUpperCase(java.util.Locale.ROOT));
++					} catch (IllegalArgumentException ignored) {
++					}
++				}
++			}
++		}
++		// a melee blow: the body lunges, the front legs come up
++		if (blow > 0.0F) {
++			float k = Mth.sin(blow * Mth.PI);
++			this.body.xRot += 0.25F * k;
++			this.frontRight.xRot -= 0.8F * k;
++			this.frontLeft.xRot -= 0.8F * k;
++		}
++		// embers: the body recoils from its own fire
++		this.body.xRot -= 0.15F * ember;
++
++		switch (state) {
++			case TELEGRAPH -> {
++				this.body.y += 1.5F;
++				this.body.xRot = 0.08F;
++				this.frontRight.zRot = 0.2F;
++				this.backRight.zRot = 0.2F;
++				this.frontLeft.zRot = -0.2F;
++				this.backLeft.zRot = -0.2F;
++			}
++			case CHARGE -> this.body.xRot = 0.2F;
++			case STUNNED -> {
++				this.body.y += 2.0F;
++				this.body.zRot = 0.2F;
++				this.body.xRot = -0.05F;
++				this.frontRight.zRot = 0.4F;
++				this.backRight.zRot = 0.4F;
++				this.frontLeft.zRot = -0.4F;
++				this.backLeft.zRot = -0.4F;
++			}
++			default -> {
++			}
++		}
++	}
++}
+diff --git a/src/main/java/twilightforest/client/model/entity/HarbingerCubeModel.java b/src/main/java/twilightforest/client/model/entity/HarbingerCubeModel.java
+index e7013d3ec..97f1519d9 100644
+--- a/src/main/java/twilightforest/client/model/entity/HarbingerCubeModel.java
++++ b/src/main/java/twilightforest/client/model/entity/HarbingerCubeModel.java
+@@ -4,9 +4,9 @@ import net.minecraft.client.model.QuadrupedModel;
+ import net.minecraft.client.model.geom.ModelPart;
+ import net.minecraft.client.model.geom.PartPose;
+ import net.minecraft.client.model.geom.builders.*;
+-import net.minecraft.world.entity.LivingEntity;
++import twilightforest.entity.monster.HarbingerCube;
+ 
+-public class HarbingerCubeModel<T extends LivingEntity> extends QuadrupedModel<T> {
++public class HarbingerCubeModel<T extends HarbingerCube> extends QuadrupedModel<T> {
+ 
+ 	public HarbingerCubeModel(ModelPart part) {
+ 		super(part, false, 0.0F, 0.0F, 0.0F, 0.0F, 4); //All this is from AgeableModel. Do we scale?
+diff --git a/src/main/java/twilightforest/client/model/entity/RuneSovereignModel.java b/src/main/java/twilightforest/client/model/entity/RuneSovereignModel.java
+new file mode 100644
+index 000000000..ccb957c84
+--- /dev/null
++++ b/src/main/java/twilightforest/client/model/entity/RuneSovereignModel.java
+@@ -0,0 +1,210 @@
++package twilightforest.client.model.entity;
++
++import net.minecraft.client.model.HierarchicalModel;
++import net.minecraft.client.model.geom.ModelPart;
++import net.minecraft.client.model.geom.PartPose;
++import net.minecraft.client.model.geom.builders.CubeListBuilder;
++import net.minecraft.client.model.geom.builders.LayerDefinition;
++import net.minecraft.client.model.geom.builders.MeshDefinition;
++import net.minecraft.client.model.geom.builders.PartDefinition;
++import net.minecraft.util.Mth;
++import twilightforest.entity.boss.PlateauBoss;
++
++/**
++ * The Rune Sovereign (Wilds &amp; Wanderers completion of the Final Castle): a floating figure in a white robe that widens
++ * to a hem above the ground, gold pauldrons, a deep hood with glowing eyes, a violet cape, a ring of rune cubes above
++ * its head and a rune staff. The geometry is written by mods-src/twilightforest-completion/tools/make_models.py together
++ * with the texture, so the two always match.
++ * <p>
++ * Poses: it floats with its arms a little apart and the halo turning; it raises the staff to cast; with its wards up it
++ * spreads its arms and the halo spins fast; stunned, it slumps forward with its arms hanging.
++ */
++public class RuneSovereignModel extends HierarchicalModel<PlateauBoss> {
++
++	private final ModelPart root;
++	private final ModelPart body;
++	private final ModelPart hem;
++	private final ModelPart cape;
++	private final ModelPart head;
++	private final ModelPart halo;
++	private final ModelPart rightArm;
++	private final ModelPart staff;
++	private final ModelPart leftArm;
++
++	public RuneSovereignModel(ModelPart root) {
++		this.root = root;
++		this.body = root.getChild("body");
++		this.hem = this.body.getChild("skirt").getChild("hem");
++		this.cape = this.body.getChild("cape");
++		this.head = this.body.getChild("head");
++		this.halo = this.head.getChild("halo");
++		this.rightArm = this.body.getChild("right_arm");
++		this.staff = this.rightArm.getChild("staff");
++		this.leftArm = this.body.getChild("left_arm");
++	}
++
++	public static LayerDefinition create() {
++		// ---- generated by make_models.py
++		MeshDefinition mesh = new MeshDefinition();
++		PartDefinition root = mesh.getRoot();
++		PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create()
++				.texOffs(74, 0).addBox(-6.0F, -14.0F, -3.5F, 12.0F, 12.0F, 7.0F)
++				.texOffs(0, 68).addBox(-6.5F, -3.0F, -4.0F, 13.0F, 2.0F, 8.0F)
++				.texOffs(76, 51).addBox(-7.0F, -15.0F, -4.5F, 14.0F, 2.0F, 9.0F),
++			PartPose.offset(0.0F, 0.0F, 0.0F));
++		PartDefinition skirt = body.addOrReplaceChild("skirt", CubeListBuilder.create()
++				.texOffs(0, 32).addBox(-7.0F, 0.0F, -4.5F, 14.0F, 10.0F, 9.0F),
++			PartPose.offset(0.0F, -2.0F, 0.0F));
++		PartDefinition hem = skirt.addOrReplaceChild("hem", CubeListBuilder.create()
++				.texOffs(46, 32).addBox(-8.0F, 0.0F, -5.0F, 16.0F, 9.0F, 10.0F),
++			PartPose.offset(0.0F, 10.0F, 0.0F));
++		PartDefinition cape = body.addOrReplaceChild("cape", CubeListBuilder.create()
++				.texOffs(8, 0).addBox(-6.0F, 0.0F, 0.0F, 12.0F, 29.0F, 1.0F),
++			PartPose.offset(0.0F, -14.0F, 3.5F));
++		PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create()
++				.texOffs(34, 0).addBox(-5.0F, -11.0F, -5.0F, 10.0F, 11.0F, 10.0F)
++				.texOffs(42, 68).addBox(-2.0F, -13.0F, -1.0F, 4.0F, 3.0F, 6.0F)
++				.texOffs(72, 78).addBox(-5.5F, -11.5F, -6.0F, 11.0F, 3.0F, 2.0F),
++			PartPose.offset(0.0F, -14.0F, 0.0F));
++		PartDefinition halo = head.addOrReplaceChild("halo", CubeListBuilder.create()
++				.texOffs(78, 68).addBox(7.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F)
++				.texOffs(90, 68).addBox(4.86F, -1.5F, 4.86F, 3.0F, 3.0F, 3.0F)
++				.texOffs(102, 68).addBox(-1.5F, -1.5F, 7.5F, 3.0F, 3.0F, 3.0F)
++				.texOffs(114, 68).addBox(-7.86F, -1.5F, 4.86F, 3.0F, 3.0F, 3.0F)
++				.texOffs(0, 78).addBox(-10.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F)
++				.texOffs(12, 78).addBox(-7.86F, -1.5F, -7.86F, 3.0F, 3.0F, 3.0F)
++				.texOffs(24, 78).addBox(-1.5F, -1.5F, -10.5F, 3.0F, 3.0F, 3.0F)
++				.texOffs(36, 78).addBox(4.86F, -1.5F, -7.86F, 3.0F, 3.0F, 3.0F),
++			PartPose.offset(0.0F, -15.0F, 0.0F));
++		PartDefinition right_arm = body.addOrReplaceChild("right_arm", CubeListBuilder.create()
++				.texOffs(20, 51).addBox(-4.0F, -2.5F, -4.0F, 6.0F, 4.0F, 8.0F)
++				.texOffs(98, 32).addBox(-3.5F, 1.0F, -2.5F, 5.0F, 12.0F, 5.0F)
++				.texOffs(48, 78).addBox(-2.5F, 13.0F, -1.5F, 3.0F, 3.0F, 3.0F),
++			PartPose.offset(-7.0F, -12.0F, 0.0F));
++		PartDefinition staff = right_arm.addOrReplaceChild("staff", CubeListBuilder.create()
++				.texOffs(0, 0).addBox(-1.0F, -20.0F, -1.0F, 2.0F, 30.0F, 2.0F)
++				.texOffs(98, 78).addBox(-1.5F, -21.0F, -1.5F, 3.0F, 1.0F, 3.0F)
++				.texOffs(62, 68).addBox(-2.0F, -26.0F, -2.0F, 4.0F, 5.0F, 4.0F)
++				.texOffs(110, 78).addBox(-1.5F, 10.0F, -1.5F, 3.0F, 1.0F, 3.0F),
++			PartPose.offset(-1.0F, 14.5F, 0.0F));
++		PartDefinition left_arm = body.addOrReplaceChild("left_arm", CubeListBuilder.create()
++				.texOffs(48, 51).mirror().addBox(-2.0F, -2.5F, -4.0F, 6.0F, 4.0F, 8.0F)
++				.texOffs(0, 51).mirror().addBox(-1.5F, 1.0F, -2.5F, 5.0F, 12.0F, 5.0F)
++				.texOffs(60, 78).mirror().addBox(-0.5F, 13.0F, -1.5F, 3.0F, 3.0F, 3.0F),
++			PartPose.offset(7.0F, -12.0F, 0.0F));
++		return LayerDefinition.create(mesh, 128, 128);
++		// ---- end of generated
++	}
++
++	@Override
++	public ModelPart root() {
++		return this.root;
++	}
++
++	@Override
++	public void setupAnim(PlateauBoss entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
++		this.root().getAllParts().forEach(ModelPart::resetPose);
++		float t = ageInTicks;
++		float partial = t - (int) t;
++		PlateauBoss.Gesture gesture = entity.getGesture();
++		float a = entity.getCastAmount(partial);
++		float p = entity.getGestureProgress(partial);
++		boolean shielded = entity.isShielded();
++		boolean stunned = entity.isStunned();
++		DebugPose pose = DebugPose.of(entity);
++		if (pose != null) {
++			switch (pose.name()) {
++				case "shield" -> shielded = true;
++				case "stunned" -> stunned = true;
++				default -> {
++					try {
++						gesture = PlateauBoss.Gesture.valueOf(pose.name().toUpperCase(java.util.Locale.ROOT));
++						p = pose.progress();
++						a = p < 0.25F ? p / 0.25F : p > 0.75F ? (1.0F - p) / 0.25F : 1.0F;
++					} catch (IllegalArgumentException ignored) {
++					}
++				}
++			}
++		}
++
++		this.head.yRot = netHeadYaw * Mth.DEG_TO_RAD;
++		this.head.xRot = headPitch * Mth.DEG_TO_RAD * 0.5F;
++
++		// floating: the robe and cape stir, the arms drift, the halo turns
++		this.hem.xRot = Mth.sin(t * 0.07F) * 0.06F;
++		this.hem.zRot = Mth.cos(t * 0.05F) * 0.04F;
++		this.cape.xRot = 0.08F + Mth.sin(t * 0.06F) * 0.05F;
++		this.rightArm.zRot = 0.12F + Mth.sin(t * 0.08F) * 0.05F;
++		this.leftArm.zRot = -0.12F - Mth.sin(t * 0.08F) * 0.05F;
++		this.rightArm.xRot = -0.15F;
++		this.leftArm.xRot = Mth.sin(t * 0.06F) * 0.08F;
++		this.halo.yRot = t * 0.05F;
++
++		if (shielded) {
++			// arms spread, holding the wards in their orbit
++			this.rightArm.zRot = 1.0F + Mth.sin(t * 0.2F) * 0.05F;
++			this.leftArm.zRot = -1.0F - Mth.sin(t * 0.2F) * 0.05F;
++			this.rightArm.xRot = -0.35F;
++			this.leftArm.xRot = -0.35F;
++			this.halo.yRot = t * 0.25F;
++		}
++
++		switch (gesture) {
++			case VOLLEY -> {
++				// the staff levelled at the target like a wand, the other hand pushing the runes after it
++				this.rightArm.xRot = Mth.lerp(a, this.rightArm.xRot, -Mth.HALF_PI);
++				this.rightArm.zRot = Mth.lerp(a, this.rightArm.zRot, 0.0F);
++				this.staff.xRot = (Mth.PI - 0.3F) * a;
++				float push = p > 0.35F && p < 0.6F ? Mth.sin((p - 0.35F) / 0.25F * Mth.PI) : 0.0F;
++				this.leftArm.xRot = Mth.lerp(a, this.leftArm.xRot, -1.25F - push * 0.3F);
++				this.leftArm.zRot = Mth.lerp(a, this.leftArm.zRot, 0.25F);
++				this.body.xRot = 0.12F * a + push * 0.08F;
++				this.head.xRot += 0.15F * a;
++			}
++			case CIRCLE -> {
++				// both hands raise the staff overhead, then strike it down at the ground
++				float strike = p < 0.5F ? 0.0F : Math.min(1.0F, (p - 0.5F) / 0.15F);
++				float arm = Mth.lerp(strike, -2.9F, -0.6F);
++				this.rightArm.xRot = Mth.lerp(a, this.rightArm.xRot, arm);
++				this.leftArm.xRot = Mth.lerp(a, this.leftArm.xRot, arm);
++				this.rightArm.zRot = Mth.lerp(a, this.rightArm.zRot, -0.25F);
++				this.leftArm.zRot = Mth.lerp(a, this.leftArm.zRot, 0.25F);
++				this.staff.xRot = Mth.PI * a;
++				this.body.xRot = Mth.lerp(strike, -0.12F, 0.3F) * a;
++				this.head.xRot += 0.3F * strike * a;
++			}
++			case SUMMON -> {
++				// arms flung up and apart, head back, the halo racing
++				this.rightArm.zRot = Mth.lerp(a, this.rightArm.zRot, 2.3F);
++				this.leftArm.zRot = Mth.lerp(a, this.leftArm.zRot, -2.3F);
++				this.rightArm.xRot = Mth.lerp(a, this.rightArm.xRot, -0.3F);
++				this.leftArm.xRot = Mth.lerp(a, this.leftArm.xRot, -0.3F);
++				this.body.xRot = -0.15F * a;
++				this.head.xRot -= 0.4F * a;
++				this.halo.yRot = t * (0.05F + 0.4F * a);
++			}
++			default -> {
++				// drifting: lean into the movement
++				float dx = (float) (entity.getX() - entity.xo), dz = (float) (entity.getZ() - entity.zo);
++				float yaw = entity.yBodyRot * Mth.DEG_TO_RAD;
++				float forward = -Mth.sin(yaw) * dx + Mth.cos(yaw) * dz;
++				float side = Mth.cos(yaw) * dx + Mth.sin(yaw) * dz;
++				this.body.xRot = Mth.clamp(forward * 1.5F, -0.2F, 0.2F);
++				this.body.zRot = Mth.clamp(-side * 1.5F, -0.15F, 0.15F);
++			}
++		}
++
++		if (stunned) {
++			this.body.xRot = 0.38F;
++			this.head.xRot = 0.55F;
++			this.head.yRot = 0.0F;
++			this.rightArm.xRot = -0.25F;
++			this.leftArm.xRot = -0.25F;
++			this.rightArm.zRot = 0.05F;
++			this.leftArm.zRot = -0.05F;
++			this.halo.y += 3.0F;
++			this.halo.xRot = 0.3F;
++			this.halo.yRot = t * 0.01F;
++		}
++	}
++}
+diff --git a/src/main/java/twilightforest/client/model/entity/RuneWardModel.java b/src/main/java/twilightforest/client/model/entity/RuneWardModel.java
+new file mode 100644
+index 000000000..32e14c1f5
+--- /dev/null
++++ b/src/main/java/twilightforest/client/model/entity/RuneWardModel.java
+@@ -0,0 +1,66 @@
++package twilightforest.client.model.entity;
++
++import net.minecraft.client.model.HierarchicalModel;
++import net.minecraft.client.model.geom.ModelPart;
++import net.minecraft.client.model.geom.PartPose;
++import net.minecraft.client.model.geom.builders.CubeListBuilder;
++import net.minecraft.client.model.geom.builders.LayerDefinition;
++import net.minecraft.client.model.geom.builders.MeshDefinition;
++import net.minecraft.client.model.geom.builders.PartDefinition;
++import net.minecraft.util.Mth;
++import twilightforest.entity.boss.RuneWard;
++
++/**
++ * A rune ward (Wilds &amp; Wanderers completion of the Final Castle): a violet rune core spinning inside a gold frame that
++ * turns the other way. Geometry from make_models.py, like the texture.
++ */
++public class RuneWardModel extends HierarchicalModel<RuneWard> {
++
++	private final ModelPart root;
++	private final ModelPart frame;
++	private final ModelPart core;
++
++	public RuneWardModel(ModelPart root) {
++		this.root = root;
++		this.frame = root.getChild("frame");
++		this.core = root.getChild("core");
++	}
++
++	public static LayerDefinition create() {
++		// ---- generated by make_models.py
++		MeshDefinition mesh = new MeshDefinition();
++		PartDefinition root = mesh.getRoot();
++		PartDefinition frame = root.addOrReplaceChild("frame", CubeListBuilder.create()
++				.texOffs(24, 0).addBox(-5.0F, -5.0F, -5.0F, 1.0F, 10.0F, 1.0F)
++				.texOffs(28, 0).addBox(-5.0F, -5.0F, 4.0F, 1.0F, 10.0F, 1.0F)
++				.texOffs(32, 0).addBox(4.0F, -5.0F, -5.0F, 1.0F, 10.0F, 1.0F)
++				.texOffs(36, 0).addBox(4.0F, -5.0F, 4.0F, 1.0F, 10.0F, 1.0F)
++				.texOffs(0, 21).addBox(-4.0F, -5.0F, -5.0F, 8.0F, 1.0F, 1.0F)
++				.texOffs(18, 21).addBox(-4.0F, -5.0F, 4.0F, 8.0F, 1.0F, 1.0F)
++				.texOffs(40, 0).addBox(-5.0F, -5.0F, -4.0F, 1.0F, 1.0F, 8.0F)
++				.texOffs(0, 12).addBox(4.0F, -5.0F, -4.0F, 1.0F, 1.0F, 8.0F)
++				.texOffs(36, 21).addBox(-4.0F, 4.0F, -5.0F, 8.0F, 1.0F, 1.0F)
++				.texOffs(0, 23).addBox(-4.0F, 4.0F, 4.0F, 8.0F, 1.0F, 1.0F)
++				.texOffs(18, 12).addBox(-5.0F, 4.0F, -4.0F, 1.0F, 1.0F, 8.0F)
++				.texOffs(36, 12).addBox(4.0F, 4.0F, -4.0F, 1.0F, 1.0F, 8.0F),
++			PartPose.offset(0.0F, 17.0F, 0.0F));
++		PartDefinition core = root.addOrReplaceChild("core", CubeListBuilder.create()
++				.texOffs(0, 0).addBox(-3.0F, -3.0F, -3.0F, 6.0F, 6.0F, 6.0F),
++			PartPose.offset(0.0F, 17.0F, 0.0F));
++		return LayerDefinition.create(mesh, 64, 64);
++		// ---- end of generated
++	}
++
++	@Override
++	public ModelPart root() {
++		return this.root;
++	}
++
++	@Override
++	public void setupAnim(RuneWard entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
++		this.core.yRot = ageInTicks * 0.2F;
++		this.core.xRot = ageInTicks * 0.13F;
++		this.frame.yRot = -ageInTicks * 0.05F;
++		this.frame.zRot = Mth.sin(ageInTicks * 0.04F) * 0.3F;
++	}
++}
+diff --git a/src/main/java/twilightforest/client/renderer/entity/AdherentRenderer.java b/src/main/java/twilightforest/client/renderer/entity/AdherentRenderer.java
+index 8cf6619f9..60dcdd0c6 100644
+--- a/src/main/java/twilightforest/client/renderer/entity/AdherentRenderer.java
++++ b/src/main/java/twilightforest/client/renderer/entity/AdherentRenderer.java
+@@ -7,9 +7,9 @@ import twilightforest.client.model.TFModelLayers;
+ import twilightforest.client.model.entity.AdherentModel;
+ import twilightforest.entity.monster.Adherent;
+ 
+-public class AdherentRenderer extends TFBipedRenderer<Adherent, AdherentModel<Adherent>> {
++public class AdherentRenderer extends TFBipedRenderer<Adherent, AdherentModel> {
+ 	public AdherentRenderer(EntityRendererProvider.Context context) {
+-		super(context, new AdherentModel<>(context.bakeLayer(TFModelLayers.ADHERENT)), 0.625F, "adherent.png");
++		super(context, new AdherentModel(context.bakeLayer(TFModelLayers.ADHERENT)), 0.625F, "adherent.png");
+ 	}
+ 
+ 	@Override
+diff --git a/src/main/java/twilightforest/client/renderer/entity/ForgeHarbingerRenderer.java b/src/main/java/twilightforest/client/renderer/entity/ForgeHarbingerRenderer.java
+index c10f8a0aa..de87f315e 100644
+--- a/src/main/java/twilightforest/client/renderer/entity/ForgeHarbingerRenderer.java
++++ b/src/main/java/twilightforest/client/renderer/entity/ForgeHarbingerRenderer.java
+@@ -1,33 +1,43 @@
+ package twilightforest.client.renderer.entity;
+ 
+ import com.mojang.blaze3d.vertex.PoseStack;
++import com.mojang.blaze3d.vertex.VertexConsumer;
++import net.minecraft.client.renderer.MultiBufferSource;
++import net.minecraft.client.renderer.RenderType;
+ import net.minecraft.client.renderer.entity.EntityRendererProvider;
+ import net.minecraft.client.renderer.entity.MobRenderer;
++import net.minecraft.client.renderer.entity.RenderLayerParent;
++import net.minecraft.client.renderer.entity.layers.RenderLayer;
++import net.minecraft.client.renderer.texture.OverlayTexture;
+ import net.minecraft.resources.ResourceLocation;
++import net.minecraft.util.FastColor;
+ import net.minecraft.util.Mth;
+ import twilightforest.TwilightForestMod;
+ import twilightforest.client.model.TFModelLayers;
+-import twilightforest.client.model.entity.HarbingerCubeModel;
++import twilightforest.client.model.entity.ForgeHarbingerModel;
+ import twilightforest.entity.boss.ForgeHarbinger;
+ 
+ /**
+- * The Forge Harbinger: a Harbinger Cube twice the size, glowing like metal in a forge (texture derived from TF's
+- * apocalypse2.png, CC BY-NC-SA 4.0). It shudders while it gathers itself for a charge.
++ * The Forge Harbinger (Wilds &amp; Wanderers completion of the Final Castle): its own model at twice its drawn size.
++ * Its seams and fire glow in the dark, slowly breathing; the fire flares while it gathers itself and charges, and
++ * dims while it is stunned. It shudders before a charge.
+  */
+-public class ForgeHarbingerRenderer extends MobRenderer<ForgeHarbinger, HarbingerCubeModel<ForgeHarbinger>> {
++public class ForgeHarbingerRenderer extends MobRenderer<ForgeHarbinger, ForgeHarbingerModel> {
+ 
+ 	private static final ResourceLocation TEXTURE = TwilightForestMod.getModelTexture("forge_harbinger.png");
++	private static final RenderType GLOW = RenderType.eyes(TwilightForestMod.getModelTexture("forge_harbinger_glow.png"));
+ 	public static final float SCALE = 2.0F;
+ 
+ 	public ForgeHarbingerRenderer(EntityRendererProvider.Context context) {
+-		super(context, new HarbingerCubeModel<>(context.bakeLayer(TFModelLayers.HARBINGER_CUBE)), 2.0F);
++		super(context, new ForgeHarbingerModel(context.bakeLayer(TFModelLayers.FORGE_HARBINGER)), 1.9F);
++		this.addLayer(new Glow(this));
+ 	}
+ 
+ 	@Override
+ 	protected void scale(ForgeHarbinger entity, PoseStack stack, float partialTicks) {
+ 		stack.scale(SCALE, SCALE, SCALE);
+ 		if (entity.isTelegraphing()) {
+-			float shake = Mth.sin((entity.tickCount + partialTicks) * 2.5F) * 0.03F;
++			float shake = Mth.sin((entity.tickCount + partialTicks) * 2.5F) * 0.02F;
+ 			stack.translate(shake, 0.0F, -shake);
+ 		}
+ 	}
+@@ -36,4 +46,24 @@ public class ForgeHarbingerRenderer extends MobRenderer<ForgeHarbinger, Harbinge
+ 	public ResourceLocation getTextureLocation(ForgeHarbinger entity) {
+ 		return TEXTURE;
+ 	}
++
++	private static final class Glow extends RenderLayer<ForgeHarbinger, ForgeHarbingerModel> {
++		Glow(RenderLayerParent<ForgeHarbinger, ForgeHarbingerModel> parent) {
++			super(parent);
++		}
++
++		@Override
++		public void render(PoseStack stack, MultiBufferSource buffer, int light, ForgeHarbinger entity, float limbSwing, float limbSwingAmount,
++						   float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
++			float heat = switch (entity.getAnimState()) {
++				case TELEGRAPH, CHARGE -> 1.0F;
++				case STUNNED -> 0.3F;
++				default -> 0.7F + Mth.sin(ageInTicks * 0.12F) * 0.15F;
++			};
++			heat = Math.min(1.0F, heat + entity.getEmberFlash(partialTicks) * 0.4F);
++			int c = (int) (heat * 255.0F);
++			VertexConsumer consumer = buffer.getBuffer(GLOW);
++			this.getParentModel().renderToBuffer(stack, consumer, 15728640, OverlayTexture.NO_OVERLAY, FastColor.ARGB32.color(255, c, c, c));
++		}
++	}
+ }
+diff --git a/src/main/java/twilightforest/client/renderer/entity/RuneSovereignRenderer.java b/src/main/java/twilightforest/client/renderer/entity/RuneSovereignRenderer.java
+index 53045aa11..2faae3055 100644
+--- a/src/main/java/twilightforest/client/renderer/entity/RuneSovereignRenderer.java
++++ b/src/main/java/twilightforest/client/renderer/entity/RuneSovereignRenderer.java
+@@ -1,28 +1,52 @@
+ package twilightforest.client.renderer.entity;
+ 
+ import com.mojang.blaze3d.vertex.PoseStack;
++import net.minecraft.client.renderer.RenderType;
+ import net.minecraft.client.renderer.entity.EntityRendererProvider;
++import net.minecraft.client.renderer.entity.MobRenderer;
++import net.minecraft.client.renderer.entity.layers.EyesLayer;
++import net.minecraft.resources.ResourceLocation;
+ import net.minecraft.util.Mth;
++import twilightforest.TwilightForestMod;
+ import twilightforest.client.model.TFModelLayers;
+-import twilightforest.client.model.entity.AdherentModel;
++import twilightforest.client.model.entity.RuneSovereignModel;
+ import twilightforest.entity.boss.PlateauBoss;
+ 
+ /**
+- * The Rune Sovereign: an Adherent grown half again as tall, in white and violet robes (texture derived from TF's
+- * adherent.png, CC BY-NC-SA 4.0 like the rest of TF's art). It bobs while it floats and sinks when stunned.
++ * The Rune Sovereign (Wilds &amp; Wanderers completion of the Final Castle): its own model, with eyes, runes, staff
++ * crystal and halo glowing in the dark. It bobs while it floats; it does not tip over when it dies (it is not standing),
++ * the death is told by its particles.
+  */
+-public class RuneSovereignRenderer extends TFBipedRenderer<PlateauBoss, AdherentModel<PlateauBoss>> {
++public class RuneSovereignRenderer extends MobRenderer<PlateauBoss, RuneSovereignModel> {
+ 
+-	public static final float SCALE = 1.5F;
++	private static final ResourceLocation TEXTURE = TwilightForestMod.getModelTexture("rune_sovereign.png");
++	private static final RenderType GLOW = RenderType.eyes(TwilightForestMod.getModelTexture("rune_sovereign_glow.png"));
+ 
+ 	public RuneSovereignRenderer(EntityRendererProvider.Context context) {
+-		super(context, new AdherentModel<>(context.bakeLayer(TFModelLayers.ADHERENT)), 0.9F, "rune_sovereign.png");
++		super(context, new RuneSovereignModel(context.bakeLayer(TFModelLayers.RUNE_SOVEREIGN)), 0.8F);
++		this.addLayer(new EyesLayer<>(this) {
++			@Override
++			public RenderType renderType() {
++				return GLOW;
++			}
++		});
+ 	}
+ 
+ 	@Override
+ 	protected void scale(PlateauBoss entity, PoseStack stack, float partialTicks) {
+-		stack.scale(SCALE, SCALE, SCALE);
+-		float bounce = entity.tickCount + partialTicks;
+-		stack.translate(0.0F, -0.125F - Mth.sin(bounce * 0.1F) * 0.08F, 0.0F);
++		if (!entity.isStunned()) {
++			float bounce = entity.tickCount + partialTicks;
++			stack.translate(0.0F, -Mth.sin(bounce * 0.1F) * 0.08F, 0.0F);
++		}
++	}
++
++	@Override
++	protected float getFlipDegrees(PlateauBoss entity) {
++		return 0.0F;
++	}
++
++	@Override
++	public ResourceLocation getTextureLocation(PlateauBoss entity) {
++		return TEXTURE;
+ 	}
+ }
+diff --git a/src/main/java/twilightforest/client/renderer/entity/RuneWardRenderer.java b/src/main/java/twilightforest/client/renderer/entity/RuneWardRenderer.java
+index 6c2a34e72..f766c9ae8 100644
+--- a/src/main/java/twilightforest/client/renderer/entity/RuneWardRenderer.java
++++ b/src/main/java/twilightforest/client/renderer/entity/RuneWardRenderer.java
+@@ -1,43 +1,34 @@
+ package twilightforest.client.renderer.entity;
+ 
+-import com.mojang.blaze3d.vertex.PoseStack;
+-import com.mojang.blaze3d.vertex.VertexConsumer;
+-import com.mojang.math.Axis;
+-import net.minecraft.client.model.Model;
+-import net.minecraft.client.renderer.MultiBufferSource;
+-import net.minecraft.client.renderer.entity.EntityRenderer;
++import net.minecraft.client.renderer.RenderType;
+ import net.minecraft.client.renderer.entity.EntityRendererProvider;
+-import net.minecraft.client.renderer.texture.OverlayTexture;
++import net.minecraft.client.renderer.entity.MobRenderer;
++import net.minecraft.client.renderer.entity.layers.EyesLayer;
+ import net.minecraft.resources.ResourceLocation;
+-import net.minecraft.util.FastColor;
+-import net.minecraft.util.Mth;
+ import twilightforest.TwilightForestMod;
+ import twilightforest.client.model.TFModelLayers;
+-import twilightforest.client.model.entity.CubeOfAnnihilationModel;
++import twilightforest.client.model.entity.RuneWardModel;
+ import twilightforest.entity.boss.RuneWard;
+ 
+-/** A rune ward: a spinning cube of annihilation tinted violet, flashing red when hit. */
+-public class RuneWardRenderer extends EntityRenderer<RuneWard> {
++/** A rune ward (Wilds &amp; Wanderers completion of the Final Castle): a glowing rune core in a turning gold frame. */
++public class RuneWardRenderer extends MobRenderer<RuneWard, RuneWardModel> {
+ 
+-	private static final ResourceLocation TEXTURE = TwilightForestMod.getModelTexture("cubeofannihilation.png");
+-	private final Model model;
++	private static final ResourceLocation TEXTURE = TwilightForestMod.getModelTexture("rune_ward.png");
++	private static final RenderType GLOW = RenderType.eyes(TwilightForestMod.getModelTexture("rune_ward_glow.png"));
+ 
+ 	public RuneWardRenderer(EntityRendererProvider.Context context) {
+-		super(context);
+-		this.model = new CubeOfAnnihilationModel(context.bakeLayer(TFModelLayers.CUBE_OF_ANNIHILATION));
++		super(context, new RuneWardModel(context.bakeLayer(TFModelLayers.RUNE_WARD)), 0.25F);
++		this.addLayer(new EyesLayer<>(this) {
++			@Override
++			public RenderType renderType() {
++				return GLOW;
++			}
++		});
+ 	}
+ 
+ 	@Override
+-	public void render(RuneWard entity, float yaw, float partialTicks, PoseStack stack, MultiBufferSource buffer, int light) {
+-		stack.pushPose();
+-		VertexConsumer consumer = buffer.getBuffer(this.model.renderType(TEXTURE));
+-		stack.translate(0.0F, 0.45F, 0.0F);
+-		stack.mulPose(Axis.YP.rotationDegrees(Mth.wrapDegrees(entity.tickCount + partialTicks) * 9.0F));
+-		stack.mulPose(Axis.XP.rotationDegrees(Mth.wrapDegrees(entity.tickCount + partialTicks) * 5.0F));
+-		int colour = entity.hurtTime > 0 ? FastColor.ARGB32.color(255, 255, 110, 110) : FastColor.ARGB32.color(255, 190, 120, 255);
+-		this.model.renderToBuffer(stack, consumer, light, OverlayTexture.NO_OVERLAY, colour);
+-		stack.popPose();
+-		super.render(entity, yaw, partialTicks, stack, buffer, light);
++	protected float getFlipDegrees(RuneWard entity) {
++		return 0.0F;
+ 	}
+ 
+ 	@Override
+diff --git a/src/main/java/twilightforest/entity/boss/CastleBossRules.java b/src/main/java/twilightforest/entity/boss/CastleBossRules.java
+index cb95c3aa0..3dc72cf48 100644
+--- a/src/main/java/twilightforest/entity/boss/CastleBossRules.java
++++ b/src/main/java/twilightforest/entity/boss/CastleBossRules.java
+@@ -60,7 +60,8 @@ public final class CastleBossRules {
+ 	 * @param arena the arena the attacker must stand in, or null if anywhere within {@link #MAX_ATTACK_DISTANCE} is fine
+ 	 */
+ 	public static float adjust(LivingEntity boss, DamageSource source, float amount, @Nullable AABB arena) {
+-		if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) return amount; // /kill and the void
++		if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) return amount; // /kill and the void, as they come
++		if (!Float.isFinite(amount)) return MAX_DAMAGE_PER_HIT;
+ 		Entity attacker = source.getEntity();
+ 		if (attacker == boss) return 0.0F;
+ 		if (attacker != null) {
+@@ -84,6 +85,23 @@ public final class CastleBossRules {
+ 		boss.level().getEntitiesOfClass(net.minecraft.world.entity.Mob.class, area, e -> e.getTags().contains(PlateauBoss.MINION_TAG)).forEach(net.minecraft.world.entity.Entity::discard);
+ 	}
+ 
++	/**
++	 * A bonus multiplier for a stunned boss, applied to ordinary hits only. /kill deals Float.MAX_VALUE: doubled it
++	 * is infinity, and armour turns infinity into NaN health, which leaves a boss neither alive nor dead.
++	 */
++	public static float bonus(DamageSource source, float amount, float multiplier) {
++		return source.is(DamageTypeTags.BYPASSES_INVULNERABILITY) ? amount : amount * multiplier;
++	}
++
++	/**
++	 * A boss whose health or absorption became NaN (see {@link #bonus}; the absorption keeps poisoning every later hit)
++	 * is made whole again instead of staying an unkillable ghost. Cheap enough to check every tick.
++	 */
++	public static void repairHealth(LivingEntity boss) {
++		if (Float.isNaN(boss.getAbsorptionAmount()) || Float.isInfinite(boss.getAbsorptionAmount())) boss.setAbsorptionAmount(0.0F);
++		if (Float.isNaN(boss.getHealth())) boss.setHealth(boss.getMaxHealth());
++	}
++
+ 	/** Living players near the arena that are really fighting (not in creative or spectator). */
+ 	public static List<ServerPlayer> engagedPlayers(LivingEntity boss, BlockPos home) {
+ 		AABB box = new AABB(home).inflate(ENGAGED_RANGE);
+diff --git a/src/main/java/twilightforest/entity/boss/ForgeHarbinger.java b/src/main/java/twilightforest/entity/boss/ForgeHarbinger.java
+index 35c3aa2e7..b5f152b1d 100644
+--- a/src/main/java/twilightforest/entity/boss/ForgeHarbinger.java
++++ b/src/main/java/twilightforest/entity/boss/ForgeHarbinger.java
+@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceKey;
+ import net.minecraft.server.level.ServerLevel;
+ import net.minecraft.sounds.SoundEvent;
+ import net.minecraft.sounds.SoundEvents;
++import net.minecraft.util.Mth;
+ import net.minecraft.util.RandomSource;
+ import net.minecraft.world.DifficultyInstance;
+ import net.minecraft.world.damagesource.DamageSource;
+@@ -70,9 +71,13 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 	private static final double CHARGE_SPEED = 0.85D;
+ 	public static final float CHARGE_DAMAGE = 12.0F;
+ 
+-	private enum State { WALK, TELEGRAPH, CHARGE, STUNNED }
++	/** What the Harbinger is doing; synched, so the client can pose and light it. */
++	public enum AnimState { WALK, TELEGRAPH, CHARGE, STUNNED }
+ 
+-	private State state = State.WALK;
++	private static final net.minecraft.network.syncher.EntityDataAccessor<Byte> ANIM_STATE =
++		net.minecraft.network.syncher.SynchedEntityData.defineId(ForgeHarbinger.class, net.minecraft.network.syncher.EntityDataSerializers.BYTE);
++
++	private AnimState state = AnimState.WALK;
+ 	private int stateTicks;
+ 	private int chargeCooldown = 160;
+ 	private int emberCooldown = 120;
+@@ -112,12 +117,12 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, true) {
+ 			@Override
+ 			public boolean canUse() {
+-				return ForgeHarbinger.this.state == State.WALK && super.canUse();
++				return ForgeHarbinger.this.state == AnimState.WALK && super.canUse();
+ 			}
+ 
+ 			@Override
+ 			public boolean canContinueToUse() {
+-				return ForgeHarbinger.this.state == State.WALK && super.canContinueToUse();
++				return ForgeHarbinger.this.state == AnimState.WALK && super.canContinueToUse();
+ 			}
+ 
+ 			// a heavy blow every 1.5 s rather than every second
+@@ -173,8 +178,45 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 		return 0xFF7A1A;
+ 	}
+ 
++	private void setState(AnimState state) {
++		this.state = state;
++		this.getEntityData().set(ANIM_STATE, (byte) state.ordinal());
++	}
++
++	public AnimState getAnimState() {
++		return AnimState.values()[Math.floorMod(this.getEntityData().get(ANIM_STATE), AnimState.values().length)];
++	}
++
++	/** Entity event: embers thrown (the forge mouth flares and the body recoils). */
++	public static final byte EMBER_EVENT = 73;
++	private int emberFlash;
++
++	/** 1 right after the embers fly, fading to 0 over half a second (client). */
++	public float getEmberFlash(float partialTick) {
++		return Mth.clamp((this.emberFlash - partialTick) / 10.0F, 0.0F, 1.0F);
++	}
++
++	@Override
++	public void handleEntityEvent(byte id) {
++		if (id == EMBER_EVENT) this.emberFlash = 10;
++		else super.handleEntityEvent(id);
++	}
++
++	@Override
++	public void aiStep() {
++		if (!this.level().isClientSide()) CastleBossRules.repairHealth(this);
++		super.aiStep();
++		if (this.level().isClientSide() && this.emberFlash > 0) this.emberFlash--;
++	}
++
+ 	public boolean isTelegraphing() {
+-		return this.state == State.TELEGRAPH;
++		return this.getAnimState() == AnimState.TELEGRAPH;
++	}
++
++	@Override
++	protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData.Builder builder) {
++		super.defineSynchedData(builder);
++		builder.define(ANIM_STATE, (byte) 0);
+ 	}
+ 
+ 	private BlockPos homePos() {
+@@ -208,7 +250,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 			case WALK -> {
+ 				if (target == null) return;
+ 				if (--this.chargeCooldown <= 0 && this.distanceToSqr(target) > 16.0D && this.distanceToSqr(target) < 400.0D && this.hasLineOfSight(target)) {
+-					this.state = State.TELEGRAPH;
++					this.setState(AnimState.TELEGRAPH);
+ 					this.stateTicks = TELEGRAPH_TICKS;
+ 					this.getNavigation().stop();
+ 					this.playSound(SoundEvents.RAVAGER_ROAR, 1.5F, 0.6F);
+@@ -223,10 +265,14 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 				if (target != null) {
+ 					this.getLookControl().setLookAt(target, 30.0F, 30.0F);
+ 					this.chargeDirection = target.position().subtract(this.position()).multiply(1.0D, 0.0D, 1.0D).normalize();
++					float yaw = (float) (Math.atan2(this.chargeDirection.z, this.chargeDirection.x) * (180.0D / Math.PI)) - 90.0F;
++					this.setYRot(yaw);
++					this.yBodyRot = yaw;
++					this.yHeadRot = yaw;
+ 				}
+ 				server.sendParticles(ParticleTypes.LARGE_SMOKE, this.getX(), this.getY() + 0.3D, this.getZ(), 4, 1.0D, 0.2D, 1.0D, 0.02D);
+ 				if (--this.stateTicks <= 0) {
+-					this.state = State.CHARGE;
++					this.setState(AnimState.CHARGE);
+ 					this.stateTicks = CHARGE_TICKS;
+ 					this.hitThisCharge.clear();
+ 					if (this.chargeDirection.lengthSqr() < 1.0E-4D) this.chargeDirection = this.getLookAngle().multiply(1.0D, 0.0D, 1.0D).normalize();
+@@ -234,7 +280,10 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 			}
+ 			case CHARGE -> {
+ 				this.setDeltaMovement(this.chargeDirection.x * CHARGE_SPEED, this.getDeltaMovement().y, this.chargeDirection.z * CHARGE_SPEED);
+-				this.setYRot((float) (Math.atan2(this.chargeDirection.z, this.chargeDirection.x) * (180.0D / Math.PI)) - 90.0F);
++				float chargeYaw = (float) (Math.atan2(this.chargeDirection.z, this.chargeDirection.x) * (180.0D / Math.PI)) - 90.0F;
++				this.setYRot(chargeYaw);
++				this.yBodyRot = chargeYaw;
++				this.yHeadRot = chargeYaw;
+ 				AABB reach = this.getBoundingBox().inflate(0.5D);
+ 				for (LivingEntity hit : server.getEntitiesOfClass(LivingEntity.class, reach, e -> e != this && e.isAlive() && !(e instanceof HarbingerCube))) {
+ 					if (this.hitThisCharge.add(hit.getId()) && hit.hurt(this.damageSources().mobAttack(this), CHARGE_DAMAGE)) {
+@@ -243,7 +292,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 					}
+ 				}
+ 				if (this.horizontalCollision && this.stateTicks < CHARGE_TICKS - 2) {
+-					this.state = State.STUNNED;
++					this.setState(AnimState.STUNNED);
+ 					this.stateTicks = STUN_TICKS;
+ 					this.setDeltaMovement(Vec3.ZERO);
+ 					this.playSound(SoundEvents.ANVIL_LAND, 1.5F, 0.5F);
+@@ -261,7 +310,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 	}
+ 
+ 	private void endCharge() {
+-		this.state = State.WALK;
++		this.setState(AnimState.WALK);
+ 		this.chargeCooldown = 160 + this.random.nextInt(40);
+ 	}
+ 
+@@ -274,6 +323,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 			server.addFreshEntity(ember);
+ 		}
+ 		this.playSound(SoundEvents.BLAZE_SHOOT, 1.5F, 0.7F);
++		server.broadcastEntityEvent(this, EMBER_EVENT);
+ 	}
+ 
+ 	private void callHarbingerCube(ServerLevel server, @Nullable LivingEntity target) {
+@@ -294,7 +344,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 	}
+ 
+ 	private void resetFight() {
+-		this.state = State.WALK;
++		this.setState(AnimState.WALK);
+ 		this.lastEngaged = 0;
+ 		this.calledHelp = false;
+ 		this.participants.clear();
+@@ -310,7 +360,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 		if (this.level().isClientSide() || this.isInvulnerableTo(source)) return false;
+ 		Entity attacker = source.getEntity();
+ 		if (attacker != null && attacker.getTags().contains(PlateauBoss.MINION_TAG)) return false;
+-		float adjusted = CastleBossRules.adjust(this, source, this.state == State.STUNNED ? amount * 1.5F : amount, null);
++		float adjusted = CastleBossRules.adjust(this, source, this.state == AnimState.STUNNED ? CastleBossRules.bonus(source, amount, 1.5F) : amount, null);
+ 		if (adjusted <= 0.0F) return false;
+ 		boolean hurt = super.hurt(source, adjusted);
+ 		if (hurt) {
+@@ -384,6 +434,7 @@ public class ForgeHarbinger extends BaseTFBoss {
+ 		super.readAdditionalSaveData(tag);
+ 		this.calledHelp = tag.getBoolean("HarbingerCalledHelp");
+ 		this.healthScaled = tag.getBoolean("HarbingerScaled");
++		CastleBossRules.repairHealth(this);
+ 		this.lastEngaged = tag.hasUUID("HarbingerSession") && tag.getUUID("HarbingerSession").equals(CastleBossRules.SESSION) ? tag.getLong("HarbingerLastEngaged") : 0L;
+ 		this.participants.clear();
+ 		for (Tag id : tag.getList("HarbingerParticipants", Tag.TAG_INT_ARRAY)) this.participants.add(NbtUtils.loadUUID(id));
+diff --git a/src/main/java/twilightforest/entity/boss/PlateauBoss.java b/src/main/java/twilightforest/entity/boss/PlateauBoss.java
+index 8782d8af7..5ea5dbc8b 100644
+--- a/src/main/java/twilightforest/entity/boss/PlateauBoss.java
++++ b/src/main/java/twilightforest/entity/boss/PlateauBoss.java
+@@ -102,6 +102,16 @@ public class PlateauBoss extends BaseTFBoss {
+ 
+ 	private static final EntityDataAccessor<Boolean> SHIELDED = SynchedEntityData.defineId(PlateauBoss.class, EntityDataSerializers.BOOLEAN);
+ 	private static final EntityDataAccessor<Integer> PHASE = SynchedEntityData.defineId(PlateauBoss.class, EntityDataSerializers.INT);
++	private static final EntityDataAccessor<Boolean> STUNNED = SynchedEntityData.defineId(PlateauBoss.class, EntityDataSerializers.BOOLEAN);
++	/** Entity events of the Sovereign's gestures: a volley (staff pointed), a rune circle (staff struck down), a call. */
++	public static final byte CAST_EVENT = 70;
++	public static final byte CIRCLE_EVENT = 71;
++	public static final byte SUMMON_EVENT = 72;
++	public static final int CAST_ANIM_TICKS = 14;
++	private static final int VOLLEY_WINDUP = 6;
++
++	/** The gesture the client is showing. */
++	public enum Gesture { NONE, VOLLEY, CIRCLE, SUMMON }
+ 
+ 	private final List<UUID> wards = new ArrayList<>();
+ 	private final List<UUID> minions = new ArrayList<>();
+@@ -142,6 +152,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 		super.defineSynchedData(builder);
+ 		builder.define(SHIELDED, false);
+ 		builder.define(PHASE, 1);
++		builder.define(STUNNED, false);
+ 	}
+ 
+ 	@Override
+@@ -218,14 +229,71 @@ public class PlateauBoss extends BaseTFBoss {
+ 	}
+ 
+ 	public boolean isStunned() {
+-		return this.stunTicks > 0;
++		return this.level().isClientSide() ? this.getEntityData().get(STUNNED) : this.stunTicks > 0;
++	}
++
++	private void setStunTicks(int ticks) {
++		this.stunTicks = ticks;
++		if (this.getEntityData().get(STUNNED) != ticks > 0) this.getEntityData().set(STUNNED, ticks > 0);
++	}
++
++	private int castAnim;
++	private Gesture gesture = Gesture.NONE;
++
++	public Gesture getGesture() {
++		return this.castAnim > 0 ? this.gesture : Gesture.NONE;
++	}
++
++	/** How far into the gesture, 0 at the start, 1 at the end (client). */
++	public float getGestureProgress(float partialTick) {
++		if (this.castAnim <= 0) return 1.0F;
++		return Mth.clamp(1.0F - (this.castAnim - partialTick) / CAST_ANIM_TICKS, 0.0F, 1.0F);
++	}
++
++	/** 0..1..0 over a gesture: up quickly, held, down. */
++	public float getCastAmount(float partialTick) {
++		if (this.castAnim <= 0) return 0.0F;
++		float t = this.getGestureProgress(partialTick);
++		return t < 0.25F ? t / 0.25F : t > 0.75F ? (1.0F - t) / 0.25F : 1.0F;
++	}
++
++	@Override
++	public void handleEntityEvent(byte id) {
++		switch (id) {
++			case CAST_EVENT -> this.startGesture(Gesture.VOLLEY);
++			case CIRCLE_EVENT -> this.startGesture(Gesture.CIRCLE);
++			case SUMMON_EVENT -> this.startGesture(Gesture.SUMMON);
++			default -> super.handleEntityEvent(id);
++		}
++	}
++
++	private void startGesture(Gesture gesture) {
++		this.gesture = gesture;
++		this.castAnim = CAST_ANIM_TICKS;
++	}
++
++	/** The whole figure turns with its head: a floating caster faces whom it casts at, not where it drifts. */
++	@Override
++	protected float tickHeadTurn(float yRot, float animStep) {
++		this.yBodyRot = this.yHeadRot;
++		return animStep;
++	}
++
++	private void faceTarget(LivingEntity target) {
++		double dx = target.getX() - this.getX(), dz = target.getZ() - this.getZ();
++		float yaw = (float) (Mth.atan2(dz, dx) * Mth.RAD_TO_DEG) - 90.0F;
++		this.setYRot(yaw);
++		this.yHeadRot = yaw;
++		this.yBodyRot = yaw;
+ 	}
+ 
+ 	// ---- ticking -------------------------------------------------------------------------------------------------
+ 
+ 	@Override
+ 	public void aiStep() {
++		if (!this.level().isClientSide()) CastleBossRules.repairHealth(this);
+ 		super.aiStep();
++		if (this.level().isClientSide() && this.castAnim > 0) this.castAnim--;
+ 		if (this.level().isClientSide() && (this.isShielded() || this.random.nextInt(3) == 0)) {
+ 			this.level().addParticle(TFParticleType.ANNIHILATE.get(), this.getRandomX(0.8D), this.getRandomY(), this.getRandomZ(0.8D), 0.0D, 0.0D, 0.0D);
+ 		}
+@@ -270,7 +338,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 		if (this.isShielded()) this.orbitWards(server);
+ 
+ 		if (this.stunTicks > 0) {
+-			this.stunTicks--;
++			this.setStunTicks(this.stunTicks - 1);
+ 			this.setNoGravity(this.stunTicks == 0);
+ 			if (this.stunTicks % 5 == 0) server.sendParticles(ParticleTypes.CRIT, this.getX(), this.getY() + this.getBbHeight(), this.getZ(), 6, 0.4D, 0.2D, 0.4D, 0.05D);
+ 			return;
+@@ -278,9 +346,12 @@ public class PlateauBoss extends BaseTFBoss {
+ 		this.setNoGravity(true);
+ 		this.hover(target, home);
+ 		if (target == null) return;
++		this.faceTarget(target);
+ 		this.getLookControl().setLookAt(target, 30.0F, 30.0F);
+ 
+ 		int phase = this.getPhase();
++		// the gesture starts a moment before the runes fly, so they leave from a levelled staff
++		if (this.volleyCooldown == VOLLEY_WINDUP) server.broadcastEntityEvent(this, CAST_EVENT);
+ 		if (--this.volleyCooldown <= 0) {
+ 			this.volley(server, target, phase == 3 ? 5 : 3);
+ 			this.volleyCooldown = phase == 1 ? 80 : phase == 2 ? 70 : 50;
+@@ -298,7 +369,12 @@ public class PlateauBoss extends BaseTFBoss {
+ 		}
+ 		if (phase >= 2 && --this.circleCooldown <= 0) {
+ 			this.markCircle(server, target);
+-			if (phase == 3) this.markCircle(server, engaged.get(this.random.nextInt(engaged.size())));
++			if (phase == 3) {
++				// a second circle under another fighter, never under someone outside the gazebo
++				AABB arena = this.getArena();
++				List<ServerPlayer> inside = engaged.stream().filter(p -> arena.contains(p.position())).toList();
++				if (!inside.isEmpty()) this.markCircle(server, inside.get(this.random.nextInt(inside.size())));
++			}
+ 			this.circleCooldown = 160;
+ 		}
+ 	}
+@@ -394,6 +470,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 				minion.setPersistenceRequired();
+ 				minion.addTag(MINION_TAG);
+ 				if (target != null) minion.setTarget(target);
++				server.broadcastEntityEvent(this, SUMMON_EVENT);
+ 				server.addFreshEntity(minion);
+ 				this.minions.add(minion.getUUID());
+ 				server.sendParticles(TFParticleType.ANNIHILATE.get(), x, centre.y + 1.0D, z, 20, 0.4D, 0.8D, 0.4D, 0.02D);
+@@ -404,6 +481,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 
+ 	private void markCircle(ServerLevel server, LivingEntity target) {
+ 		this.circles.add(new RuneCircle(target.position(), 30));
++		server.broadcastEntityEvent(this, CIRCLE_EVENT);
+ 		server.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.BEACON_ACTIVATE, SoundSource.HOSTILE, 1.0F, 1.6F);
+ 	}
+ 
+@@ -436,6 +514,11 @@ public class PlateauBoss extends BaseTFBoss {
+ 	// ---- rune wards ----------------------------------------------------------------------------------------------
+ 
+ 	private void raiseWards(ServerLevel server) {
++		// a wave that comes while the last one still stands replaces it
++		for (UUID id : this.wards) {
++			Entity old = server.getEntity(id);
++			if (old != null) old.discard();
++		}
+ 		this.wards.clear();
+ 		for (int i = 0; i < WARD_COUNT; i++) {
+ 			RuneWard ward = new RuneWard(TFEntities.RUNE_WARD.get(), server);
+@@ -474,7 +557,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 		if (!this.isShielded()) return;
+ 		this.wards.clear();
+ 		this.getEntityData().set(SHIELDED, false);
+-		this.stunTicks = STUN_TICKS;
++		this.setStunTicks(STUN_TICKS);
+ 		this.setNoGravity(false);
+ 		this.playSound(SoundEvents.BEACON_DEACTIVATE, 2.0F, 0.7F);
+ 		server.sendParticles(TFParticleType.SHIELD_BREAK.get(), this.getX(), this.getY() + 1.5D, this.getZ(), 40, 1.0D, 1.0D, 1.0D, 0.1D);
+@@ -502,7 +585,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 			if (this.level() instanceof ServerLevel server) server.sendParticles(TFParticleType.PROTECTION.get(), this.getX(), this.getY() + 1.5D, this.getZ(), 6, 0.6D, 0.8D, 0.6D, 0.0D);
+ 			return false;
+ 		}
+-		float adjusted = CastleBossRules.adjust(this, source, this.isStunned() ? amount * 2.0F : amount, this.getArena());
++		float adjusted = CastleBossRules.adjust(this, source, this.isStunned() ? CastleBossRules.bonus(source, amount, 2.0F) : amount, this.getArena());
+ 		if (adjusted <= 0.0F) return false;
+ 		boolean hurt = super.hurt(source, adjusted);
+ 		if (hurt) {
+@@ -542,7 +625,7 @@ public class PlateauBoss extends BaseTFBoss {
+ 		this.recentHits.clear();
+ 		this.wardWaves = 0;
+ 		this.harbingerCalled = false;
+-		this.stunTicks = 0;
++		this.setStunTicks(0);
+ 		this.lastEngaged = 0;
+ 		this.getEntityData().set(SHIELDED, false);
+ 		this.getEntityData().set(PHASE, 1);
+@@ -658,7 +741,8 @@ public class PlateauBoss extends BaseTFBoss {
+ 		this.getEntityData().set(SHIELDED, tag.getBoolean("SovereignShielded"));
+ 		this.wardWaves = tag.getInt("SovereignWardWaves");
+ 		this.harbingerCalled = tag.getBoolean("SovereignHarbinger");
+-		this.stunTicks = tag.getInt("SovereignStun");
++		this.setStunTicks(tag.getInt("SovereignStun"));
++		CastleBossRules.repairHealth(this);
+ 		// saved in an earlier run of the server: the fight goes on once players are back
+ 		this.lastEngaged = tag.hasUUID("SovereignSession") && tag.getUUID("SovereignSession").equals(CastleBossRules.SESSION) ? tag.getLong("SovereignLastEngaged") : 0L;
+ 		this.healthScaled = tag.getBoolean("SovereignScaled");
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/forge_harbinger.png b/src/main/resources/assets/twilightforest/textures/entity/forge_harbinger.png
+index c5ee94fea34949bf166810407fe23299a0a182f3..20a097d195713c06fd1591df78f6cc3b91928c2e 100644
+GIT binary patch
+literal 18875
+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
+
+literal 16701
+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
+Vx`1VGKJZus22WQ%mvv4FO#qsMs^0(r
+
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/forge_harbinger_glow.png b/src/main/resources/assets/twilightforest/textures/entity/forge_harbinger_glow.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..9347adf3d317103143e5fbd4619bfbace25a9266
+GIT binary patch
+literal 888
+zcmeAS@N?(olHy`uVBq!ia0y~yU<5K58aUX1<dd!2ffCI2o-U3d6?5L+U0-zDLx$nO
+zRbSiS0)vPr9&(G8u(tDjkzv%cc;s%txx#VYVFir`UcUs?RF5^X&ego3tbTP<s%zo3
+z|JUxj3!Qwuwa)n7-TUvN$~ZuFpo0T}qRaO&>=66-(5y|sNg`a)M(-AX*&OY6)2wf&
+zpW4OHkgcrSpxnv7y)fgH+_6xNQ<48g6ar%z4s3nt%dPfQ<6QXuO`ftv-R-A^!Y^Bx
+zr1JN7|BG#CDJ`8fWw8WMMAQ9asJ~6{&ZEqldtTR;Y&N%?uw#~4Z_)LnqZ5qut%7U{
+zG=Et)6p9{t^Y25r;gZB<8GDX*u@_B<-ZdxM=0lji9@D;%gPLMj%VMv4U!MdLvR=+G
+zxkzMx&F|%NtFEu^dHm}8PX6!iv61tqEdG)D>-sn5$69AjNB;k8)WsgOW0j!s_KF88
+zK!+Y{zn!z~N>Mj^+pot0Q=eU%0AyzUE@ycC`I+h0Io}>h`R08*!0>lI^NqxPzd~iI
+zH@*R>Xv->PSTFfB$ZXo#^Do{T-ztms&->_*<;#BImfGse535eEd2MmA<K~`s|G%2v
+zPI|q5=e&9EcP+d5eXZN{V4DJtwdN6Bf}86O*Uzh!H|e^{`|NZ3?`3~1QyHF%@W-@V
+z-}6xaq2As*j~Z_|ZeuK#-V3zwoLAoB)Vz<tXqv#<9lfF5^Jn_zbH?$1HO%_||NX7j
+zCU7X}=Vr?|o%+0~^ViqS*}^NABF?bRvGjM{>;GSicb_Vm%4}g3%y7eb?xS{rL(7*x
+zS9|(D;%>{MyhxM%_oSU(|9JgqXXwAnmp5xN#H{MS>ihcrg-_3u*57V?c&pU($+ey9
+z;$Obh`u%0jw?lEBYz!-N>Q<ilRrvRRpZ+{cQCWs1SFUrm6qN1vOXUK}nZ5h^*f{$K
+zJV`n5MSWK?|87uz_vDqrbvvTp?U`<w8q2`opmjUAp;5D1B7C7n`rqINmr`JIU%6#D
+z!|F_#S)1CAyZ+a6IJ66BOoRFBx#jEs@ABlZTg$%l<JJcSM@tw$m_!h>=s&|mxrf_+
+S+Nb^jY4vpVb6Mw<&;$T?35~S?
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/rune_bolt.png b/src/main/resources/assets/twilightforest/textures/entity/rune_bolt.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..83c302ffec2fd6745462abf8e9ea9e1dbfb04ea8
+GIT binary patch
+literal 537
+zcmV+!0_OdRP)<h;3K|Lk000e1NJLTq000mG000mO1^@s6AM^iV0005tNkl<Zc$}@1
+zKWkG_7{;IT_nvTb&8dYzgpvfZM7rb-n%%GAXK<1Z9SS;hkWSs*{4lXYT!b!xCO8CA
+z)If5{x%d2Y@dm1OkoMW$clhzb?|Fd-hWxoW%_k}W>j}czjF1!ne2j&SepSNH&!=Pa
+zPrzAzb(B(ZtSB2u$~uga3;=wHn=1IF34T@t`}O_w#kaozXZh7pM&-*U7kNYQVIo+U
+zQ=$RDg}5%QU+k>A-a0$ogz9q*;q}=m6~|33@+=YKREd#NTnkPC0M-Q<<NDl?761en
+zi_?5^dp;c-3IGXMPf<2#2tG`e7-dbVbxY#a$7eV=OrTp5SySp%iBUuFp`vV%fb{@?
+z0)QZ_Eh+0Hf_0VRI!!somu&z*{^1Z$4kXf)Ln*Ek!Mc*Njv%bP2QWfXMoGpg(SlQq
+zFWb1e*a854e5&yLorY8lf>UrxG@~S|4bl7DPEWqynQPd6p|xip;>Lxzwl1JD9{smX
+z++1w&^tHrp<4_q7>jGSeYaimq$5`ww*yvYP@XONrg)y#QaH=P7R*;I}=Shjmcoc<$
+zF>YO2zo>#=+UQq%KnXuL!Ox_1o!_cP)&(t!I~v!8v0rx9U7O%%CH(wRiu8C@uJgao
+b^x*sgSxpgAUHu6D00000NkvXXu0mjfl1Tb;
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/rune_sovereign.png b/src/main/resources/assets/twilightforest/textures/entity/rune_sovereign.png
+index 5e81fa0f6eaa0c93f6edb23f745fbfc0f1e01fb7..2e416e5ed9ad496cee718e2195cdbdaf2e4357fc 100644
+GIT binary patch
+literal 13477
+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
+
+literal 4282
+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
+
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/rune_sovereign_glow.png b/src/main/resources/assets/twilightforest/textures/entity/rune_sovereign_glow.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..1acf3130ba3d9d77e32b8f018694a978e7816509
+GIT binary patch
+literal 397
+zcmeAS@N?(olHy`uVBq!ia0vp^4Is?H1|$#LC7xzrU<~neaSW-L^Y)IR-(dq0h5+`B
+zMeJ!}=MLE3m}ucDzAm71ZneU;c?*m$bZ%;BxT({-LMy|GsZeIWx~tb!jbEGUbB=!U
+z=KvbVz)-Sf&hZ&mZDxEy>;|r-&!10X`Lpoux#=vemp-z7{=%=Im(<g}p6%XWUa)E?
+z;c)F%$eU?V$DjXZXk87|*z$hfyUC|lW&P^!{Fyl;{9J5@S@C`qgboGkZ~OC2-m=Zh
+zTHA1HL2vuj)AtsiEMwYwGs<q-YxS8|V`Jvuf1i7$d-h|`ZC4XtF&ukT_;r>QOB>K_
+zH=eI}zp-}zopa6_6<j;!?)|F8XgyojchTFfxlHq}$***lXl)XHU|Y(u_<|<mt4fvU
+z<&VE^7F1|ya&K6@`*O}?@qgzd!dC2x<3F&zCoy!@`z|qrvyfRS&xJ2*r5s%<799f;
+N_H^}gS?83{1ORT`q8I=G
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/rune_ward.png b/src/main/resources/assets/twilightforest/textures/entity/rune_ward.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..123483b7949f800878648cba8147b0f7f959ac22
+GIT binary patch
+literal 2218
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/main/resources/assets/twilightforest/textures/entity/rune_ward_glow.png b/src/main/resources/assets/twilightforest/textures/entity/rune_ward_glow.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..5c31331ad8b64d48738ee93bade3059f0ca9dfd7
+GIT binary patch
+literal 160
+zcmeAS@N?(olHy`uVBq!ia0vp^4j|0I1|(Ny7TyC=>7Fi*Ar*7pUNz)8puod=;lbbM
+za%-<|3>IJLbxiHOuG1X5C)r01)}Ea?^Z(f!vHKLSZ;1aKbZx@&&1+tX-pGn=EZej?
+zZmE>A(*9RVS52&ad-@+=thRvQS#6-v2oP|RS?b)5#BFtIG9W=uS3j3^P6<r_AvZh3
+
+literal 0
+HcmV?d00001
+
+-- 
+2.49.0.windows.1
+

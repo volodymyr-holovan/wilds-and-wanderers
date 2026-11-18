@@ -11,7 +11,8 @@ PINNED = {}
 if not UPGRADE and os.path.exists(os.path.join(ROOT, "docs", "mods.json")):
     PINNED = {m["slug"]: m for m in json.load(open(os.path.join(ROOT, "docs", "mods.json"), encoding="utf-8"))}
 
-# Placement: "both" (server + client), "server", "client", "opt-client"
+# Placement: "both" (server + client), "server", "client", "opt-client"; "replaced": kept on record only, the pack ships
+# its own build instead (a wilds_*.jar from mods-src/), so it is neither downloaded nor given to players
 MODRINTH = {
     # --- technology ---
     "create": "both", "create-enchantment-industry": "both", "createaddition": "both", "copycats": "both",
@@ -106,7 +107,9 @@ MODRINTH = {
 
 # CurseForge-only projects: project id -> placement (files come from the public CFWidget API)
 CURSEFORGE = {
-    227639: ("twilightforest", "both"),
+    # The Twilight Forest is rebuilt from its sources with the completion of the Final Castle
+    # (mods-src/twilightforest-completion, installed as wilds_twilightforest-*.jar); the official file stays on record
+    227639: ("twilightforest", "replaced"),
     289412: ("ftb-quests", "both"), 404468: ("ftb-teams", "both"), 404465: ("ftb-library", "both"),
     410811: ("ftb-essentials", "server"),
     238794: ("nomadic-tents", "both"),
@@ -147,7 +150,7 @@ def pick_mr(project):
 
 def targets(where):
     return {"both": ["server/mods", "client/mods"], "server": ["server/mods"],
-            "client": ["client/mods"], "opt-client": ["optional/client-mods"]}[where]
+            "client": ["client/mods"], "opt-client": ["optional/client-mods"], "replaced": []}[where]
 
 
 def merge(a, b):
@@ -198,6 +201,12 @@ for pid, (slug, where) in CURSEFORGE.items():
     if slug in PINNED and PINNED[slug]["source"] == "curseforge":
         resolved[slug] = dict(PINNED[slug], where=where)
         continue
+    if where == "replaced" and os.path.exists(os.path.join(ROOT, "docs", "mods.json")):
+        # an upgrade must not move the record away from the version the pack's own build is made from
+        kept = {m["slug"]: m for m in json.load(open(os.path.join(ROOT, "docs", "mods.json"), encoding="utf-8"))}.get(slug)
+        if kept:
+            resolved[slug] = dict(kept, where=where)
+            continue
     d = get(f"https://api.cfwidget.com/{pid}")
     fs = [f for f in d["files"] if GV in f["versions"] and "NeoForge" in f["versions"]]
     rel = [f for f in fs if f["type"] == "release"] or fs

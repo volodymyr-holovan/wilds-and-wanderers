@@ -1083,6 +1083,7 @@ twilightforest:deer
 twilightforest:dwarf_rabbit
 twilightforest:falling_ice
 twilightforest:fire_beetle
+twilightforest:forge_harbinger
 twilightforest:giant_miner
 twilightforest:harbinger_cube
 twilightforest:hedge_spider
@@ -1121,6 +1122,8 @@ twilightforest:redcap
 twilightforest:redcap_sapper
 twilightforest:rising_zombie
 twilightforest:roving_cube
+twilightforest:rune_bolt
+twilightforest:rune_ward
 twilightforest:seeker_arrow
 twilightforest:skeleton_druid
 twilightforest:slider

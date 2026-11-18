@@ -1,0 +1,50 @@
+From b74a5666f9c23d46b731e2a75f1c155bd6d65596 Mon Sep 17 00:00:00 2001
+From: Drullkus <5010174+Drullkus@users.noreply.github.com>
+Date: Tue, 13 Oct 2026 10:31:46 -0700
+Subject: [PATCH 1/3] Fix Curios dep
+
+---
+ build.gradle      | 6 +++---
+ gradle.properties | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/build.gradle b/build.gradle
+index 0e5dcaca3..7b55326e8 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -165,8 +165,8 @@ repositories {
+ 		url 'https://maven.blamejared.com/'
+ 	}
+ 	maven {
+-		name = "OctoStudios" //Curios
+-		url = uri("https://maven.octo-studios.com/releases")
++		name = "TheIllusiveC4" //Curios
++		url = uri("https://maven.theillusivec4.top/")
+ 	}
+ 	maven {
+ 		name 'Shedaniel\'s Maven' //REI
+@@ -213,7 +213,7 @@ dependencies {
+ 	compileOnly "dev.emi:emi-neoforge:${project.emi_version}+${project.minecraft_version}"
+ 
+ 	// theillusivec4
+-	implementation "top.theillusivec4.curios:curios-neoforge:${project.curios_version}+${project.base_minecraft_version}"
++	implementation "top.theillusivec4.curios:curios-neoforge:${project.curios_version}+${project.minecraft_version}"
+ 
+ 	//curse maven
+ 	implementation "curse.maven:jade-324717:5529595"
+diff --git a/gradle.properties b/gradle.properties
+index aaa4bee54..2678db3fb 100644
+--- a/gradle.properties
++++ b/gradle.properties
+@@ -24,7 +24,7 @@ beanification_version=1.6.109
+ jei_version=19.25.1.332
+ rei_version=16.0.799
+ emi_version=1.1.22
+-curios_version=9.0.5
++curios_version=9.5.1
+ top_version=1.21_neo-12.0.3-5
+ 
+ enable_tips_mod=false
+-- 
+2.49.0.windows.1
+

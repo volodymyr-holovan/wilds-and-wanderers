@@ -1,3 +1,6 @@
 {
+ "advancement.twilightforest.progression_end": "Кінцеве плато",
+ "advancement.twilightforest.progression_end.desc": "Ступіть на голе плато, де стоїть білий замок",
+ "block.twilightforest.final_boss_boss_spawner": "Породжувач рунного володаря",
  "twilightforest.tips.giant_block": "Якщо видобути кайлом велетня ділянку 4×4×4 з однакових блоків, випаде один велетенський блок."
 }

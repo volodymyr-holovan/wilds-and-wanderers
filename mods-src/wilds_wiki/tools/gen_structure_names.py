@@ -128,7 +128,7 @@ NAMES = {
     "terralith:underground/witch_hut": "Підземна хатинка відьми", "terralith:underground_cabin": "Підземна хатина",
     "terralith:valley_lodge": "Долинна садиба", "terralith:witch_hut": "Хатинка відьми",
     "twilightforest:aurora_palace": "Палац Аврори", "twilightforest:camp": "Табір", "twilightforest:dark_tower": "Темна вежа",
-    "twilightforest:fallen_trunk": "Повалений стовбур", "twilightforest:final_castle": "Останній замок", "twilightforest:giant_house": "Будинок велетнів",
+    "twilightforest:fallen_trunk": "Повалений стовбур", "twilightforest:final_castle": "Кінцевий замок", "twilightforest:giant_house": "Будинок велетнів",
     "twilightforest:hedge_maze": "Живоплотовий лабіринт", "twilightforest:hollow_tree": "Дупласте дерево", "twilightforest:hydra_lair": "Лігво гідри",
     "twilightforest:knight_stronghold": "Лицарська фортеця", "twilightforest:labyrinth": "Лабіринт", "twilightforest:large_hollow_hill": "Великий порожнистий пагорб",
     "twilightforest:lich_tower": "Вежа ліча", "twilightforest:medium_hollow_hill": "Середній порожнистий пагорб", "twilightforest:mushroom_tower": "Грибна вежа",
