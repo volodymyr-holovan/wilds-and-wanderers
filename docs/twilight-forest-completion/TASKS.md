@@ -28,6 +28,6 @@
 | 22 | Встановлення в client/mods, server/mods, testserver/mods | Completed | оригінал перейменовано на `.jar.replaced` |
 | 23 | Скрипти випуску (`build_neo.py`, `docs/mods.json`) | Completed | TF має `"where": "replaced"` |
 | 24 | Документація й інструкція відкату | Completed | [technical-architecture.md](technical-architecture.md) §6 |
-| 25 | Випуск збірки для гравців | Not Started | лише на прохання власника |
-| 26 | Заливка на Crafty | Not Started | лише на прохання власника; jar вручну |
+| 25 | Випуск збірки для гравців | Completed | `pack-2026.11.18.1`, 18.11.2026 |
+| 26 | Заливка на Crafty | Completed | 18.11.2026, старт без помилок TF |
 | 27 | Продуктивність на продакшні (i5-2500) | Not Started | після заливки: `spark` під час бою |
