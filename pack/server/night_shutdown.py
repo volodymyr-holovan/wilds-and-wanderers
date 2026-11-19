@@ -7,6 +7,11 @@ At the set time (00:00 by default, in the TZ of the container), when the switch 
      the remaining apps and powers off cleanly.
 If Minecraft does not stop, TrueNAS is NOT switched off (a half-saved world is worse than a night of power).
 
+Docker never brings back a container that was stopped by hand ("docker stop"; the apps' restart policy is
+unless-stopped), so the stopped Crafty containers are written down and, when TrueNAS comes back on (this app starts
+with it), started again; Crafty then starts Minecraft itself (its server has auto start on). If the night stop goes
+wrong and TrueNAS stays on, Crafty is started again at once.
+
 The switch, the time and a log are on the app's web page (the 🌐 button of the app's dashboard widget). Stopping the
 app also switches the feature off.
 
@@ -42,7 +47,7 @@ def now():
 
 
 def load():
-    state = {"enabled": True, "time": "00:00", "last_run": "", "skip": ""}
+    state = {"enabled": True, "time": "00:00", "last_run": "", "skip": "", "restart": []}
     try:
         with open(STATE_FILE, encoding="utf-8") as f:
             state.update(json.load(f))
@@ -102,6 +107,37 @@ def crafty_containers():
     return [line.split(" ", 1) for line in r.stdout.splitlines() if CRAFTY in line.split(" ", 1)[-1]]
 
 
+def start_containers(names, why):
+    """start the Crafty containers the night stop left stopped; True when every one of them runs"""
+    ok = True
+    for name in names:
+        r = host("docker", "start", name, timeout=300)
+        if r.returncode == 0:
+            log(f"{name} запущено ({why}); Crafty сам запустить Minecraft")
+        else:
+            ok = False
+            log(f"{name} не запустився: " + (r.stderr or r.stdout).strip()[:300])
+    return ok
+
+
+def restart_after_boot():
+    """after TrueNAS is switched on: start what the last night stop stopped (docker may still be coming up)"""
+    names = load().get("restart") or []
+    if not names:
+        return
+    for attempt in range(60):
+        try:
+            if host("docker", "info", "--format", "{{.ServerVersion}}", timeout=30).returncode == 0 and start_containers(names, "TrueNAS увімкнено"):
+                state = load()
+                state["restart"] = []
+                save(state)
+                return
+        except Exception as e:
+            log("Запуск Crafty після ввімкнення: " + str(e))
+        time.sleep(20)
+    log("Crafty так і не вдалося запустити після ввімкнення TrueNAS — запустіть застосунок вручну.")
+
+
 def shutdown_truenas():
     reason = "Нічне вимкнення (Wilds & Wanderers)"
     for cmd in (["midclt", "call", "system.shutdown", reason], ["midclt", "call", "system.shutdown"]):
@@ -130,6 +166,9 @@ def run(dry):
         if dry:
             log("Перевірку завершено: опівночі все це спрацює так само, але насправді.")
             return
+        state = load()
+        state["restart"] = sorted(set(state.get("restart") or []) | {name for _, name in containers})
+        save(state)
         for cid, name in containers:
             log(f"Зупиняю {name}: Crafty зберігає світ і зупиняє Minecraft (до {STOP_TIMEOUT // 60} хв)…")
             r = host("docker", "stop", "-t", str(STOP_TIMEOUT), cid, timeout=STOP_TIMEOUT + 120)
@@ -141,12 +180,23 @@ def run(dry):
         left = minecraft_pids()
         if left:
             log(f"Minecraft досі працює ({left}): TrueNAS НЕ вимикаю, щоб не зіпсувати світ.")
+            undo()
             return
         log("Світ збережено, Minecraft зупинено. Вимикаю TrueNAS…")
         if not shutdown_truenas():
             log("Не вдалося вимкнути TrueNAS.")
+            undo()
     finally:
         BUSY.release()
+
+
+def undo():
+    """the night stop did not end in a shutdown: bring Crafty back now instead of leaving the server down all night"""
+    names = load().get("restart") or []
+    if names and start_containers(names, "TrueNAS лишився ввімкненим"):
+        state = load()
+        state["restart"] = []
+        save(state)
 
 
 def target_today(state):
@@ -301,6 +351,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
 def main():
     os.makedirs(DATA, exist_ok=True)
     log(f"Запущено. Вимкнення {'увімкнено' if load()['enabled'] else 'вимкнено'}, час {load()['time']} ({os.environ.get('TZ', 'UTC')})")
+    threading.Thread(target=restart_after_boot, daemon=True).start()
     threading.Thread(target=scheduler, daemon=True).start()
     http.server.ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
 
