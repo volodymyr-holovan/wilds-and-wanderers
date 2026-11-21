@@ -1,5 +1,5 @@
 {
- "version": "2026.11.21.2",
+ "version": "2026.11.21.3",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -150,6 +150,12 @@
    "size": 1214507
   },
   {
+   "file": "born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar",
+   "url": "https://cdn.modrinth.com/data/1kcHy4de/versions/ttcWWp3r/born_in_chaos_%5BNeoforge%5D_1.21.1_1.7.6.jar",
+   "sha1": "73704f38ac368c03716f9cc8f537470d3b352fa2",
+   "size": 11842184
+  },
+  {
    "file": "bountiful-neoforge-8.0.0-beta.2.jar",
    "url": "https://cdn.modrinth.com/data/BpwWFOVM/versions/swTb6NU9/bountiful-neoforge-8.0.0-beta.2.jar",
    "sha1": "8c1786d2850bd15c3a2dd0f50fccfda09125faa5",
@@ -264,6 +270,12 @@
    "size": 1085674
   },
   {
+   "file": "CreeperOverhaul-neoforge-1.21.1-4.0.6.jar",
+   "url": "https://cdn.modrinth.com/data/MI1LWe93/versions/HNrAYCLH/CreeperOverhaul-neoforge-1.21.1-4.0.6.jar",
+   "sha1": "5a07cc032df790e7d110ad3dedb7a76253ffd565",
+   "size": 1185088
+  },
+  {
    "file": "cristellib-neoforge-1.21.1-3.1.7.jar",
    "url": "https://cdn.modrinth.com/data/cl223EMc/versions/Sduz0AWP/cristellib-neoforge-1.21.1-3.1.7.jar",
    "sha1": "d250804b7ecea365bc736ec36ec6fc3f933917f1",
@@ -304,6 +316,12 @@
    "url": "https://cdn.modrinth.com/data/Kaov2qgi/versions/Z8Z2WZUm/easy-villagers-neoforge-1.21.1-1.1.49.jar",
    "sha1": "bb021918037fb2ceba03456948eaa966c7f28d53",
    "size": 456636
+  },
+  {
+   "file": "endermanoverhaul-neoforge-1.21.1-2.0.3.jar",
+   "url": "https://cdn.modrinth.com/data/Lq6ojcWv/versions/TH9YXp9r/endermanoverhaul-neoforge-1.21.1-2.0.3.jar",
+   "sha1": "f71aa503738f2e23a8d939b7ea9f96f2fe203f11",
+   "size": 1330403
   },
   {
    "file": "enderscape-neoforge-1.0.9+mc1.21.1.jar",
@@ -648,6 +666,12 @@
    "size": 34139
   },
   {
+   "file": "MutantMonsters-v21.1.1-1.21.1-NeoForge.jar",
+   "url": "https://cdn.modrinth.com/data/derP0ten/versions/dauEcrnZ/MutantMonsters-v21.1.1-1.21.1-NeoForge.jar",
+   "sha1": "c9981cf323d5e0fd49387ad20dafec1f58b2c88d",
+   "size": 1346730
+  },
+  {
    "file": "naturalist-2.0.7-neoforge-1.21.1.jar",
    "url": "https://cdn.modrinth.com/data/F8BQNPWX/versions/9Yn8ig4c/naturalist-2.0.7-neoforge-1.21.1.jar",
    "sha1": "a7f9f6d9991880c377d2248af5c1ea05a0aa1039",
@@ -732,6 +756,12 @@
    "size": 326063
   },
   {
+   "file": "Platform-neoforge-1.21.1-1.4.2.jar",
+   "url": "https://cdn.modrinth.com/data/i6fiqm5y/versions/rh4p4ixM/Platform-neoforge-1.21.1-1.4.2.jar",
+   "sha1": "38947983b65b08bffdcbbc347949a7bc5c6426e1",
+   "size": 550771
+  },
+  {
    "file": "player-animation-lib-forge-2.0.4+1.21.1.jar",
    "url": "https://cdn.modrinth.com/data/gedNE4y2/versions/HJZB6bmA/player-animation-lib-forge-2.0.4%2B1.21.1.jar",
    "sha1": "05be8ddcc78532b9a5520c718edc6c971cd0057c",
@@ -762,6 +792,12 @@
    "size": 258894
   },
   {
+   "file": "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+   "url": "https://cdn.modrinth.com/data/M1953qlQ/versions/lSbyRD6v/resourcefulconfig-neoforge-1.21-3.0.11.jar",
+   "sha1": "6bf2b6ea9c071c00a2abcdc552667fb6f7d21031",
+   "size": 341009
+  },
+  {
    "file": "resourcefullib-neoforge-1.21-3.0.12.jar",
    "url": "https://cdn.modrinth.com/data/G1hIVOrD/versions/x99nCLTm/resourcefullib-neoforge-1.21-3.0.12.jar",
    "sha1": "24389c8e48ff0e8594e4686b750c494c66a5f8df",
@@ -772,6 +808,12 @@
    "url": "https://cdn.modrinth.com/data/sk9knFPE/versions/cQ4POTah/rhino-2101.2.7-build.85.jar",
    "sha1": "3c8d34c7efe9e42fc90506acbf9fc842d36f9a42",
    "size": 882075
+  },
+  {
+   "file": "rottencreatures-neoforge-1.21.1-1.1.2.jar",
+   "url": "https://cdn.modrinth.com/data/5Zusp48B/versions/EkvVbxeM/rottencreatures-neoforge-1.21.1-1.1.2.jar",
+   "sha1": "c44de2c17018ffb8141ee68caaa4a71d979b96b2",
+   "size": 2608616
   },
   {
    "file": "sable-neoforge-1.21.1-2.0.6.jar",
@@ -895,6 +937,12 @@
    "size": 281114
   },
   {
+   "file": "undead_unleashed-2.0.6-hotfix-neoforge-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/9kMGkRHe/versions/Y7ldRTTu/undead_unleashed-2.0.6-hotfix-neoforge-1.21.1.jar",
+   "sha1": "7bc796a3e63fe07a7a7a9de254db0595561cebc0",
+   "size": 932320
+  },
+  {
    "file": "upgrade_aquatic-1.21.1-7.0.2.jar",
    "url": "https://cdn.modrinth.com/data/gTuTFFyz/versions/9zf6y4e4/upgrade_aquatic-1.21.1-7.0.2.jar",
    "sha1": "b60f38a304dd29e6c6caf187d4abb8d1d4a15845",
@@ -905,6 +953,12 @@
    "url": "https://cdn.modrinth.com/data/3Acxy864/versions/1YdU56pR/uranus-2.4.1-1.21.1-neoforge.jar",
    "sha1": "2d689d2d9e5861ea0a382a459fa8fb0a3e4b5091",
    "size": 847732
+  },
+  {
+   "file": "variantsandventures-neoforge-1.0.30+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/lNDRiXkY/versions/Efvt97uC/variantsandventures-neoforge-1.0.30%2Bmc1.21.1.jar",
+   "sha1": "5cccc4eeee90a01ec090aec0c54c12b253b5a3cd",
+   "size": 1101030
   },
   {
    "file": "villagernames-1.21.1-8.9.jar",
@@ -932,21 +986,21 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/wilds_core-0.1.0.jar",
-   "sha1": "887af0f9af528f3af3d185996b629131a2ec796f",
-   "size": 446399
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/wilds_core-0.1.0.jar",
+   "sha1": "ab851281828827d2889e077b327280404d03954b",
+   "size": 447570
   },
   {
    "file": "wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
    "sha1": "edca8c289575fb518c180fec18881dd27891c5db",
    "size": 27292528
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/wilds_wiki-0.2.0.jar",
-   "sha1": "bb0118c0af6b82afb549b359d2853aae6fdd4c8f",
-   "size": 1249884
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/wilds_wiki-0.2.0.jar",
+   "sha1": "edb7f89d0821b046abdb34b8e8a8c5f9cf8998e9",
+   "size": 1250144
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -994,9 +1048,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/overrides.zip",
-   "sha1": "454bb76a8267beaaa3ef161e5a90c3f2efd02135",
-   "size": 28470494
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/overrides.zip",
+   "sha1": "07775f39f332c4fb795a84d7e5df5362f9827e27",
+   "size": 28489132
   },
   "overrides": [
    {
@@ -1271,8 +1325,8 @@
    },
    {
     "path": "config/servercore/config.yml",
-    "sha1": "85bc2c5d0c92c16cd1f233f6fdab3a980b1b8c69",
-    "size": 11296
+    "sha1": "9e095bed79d3f852792d11f3a53625ab3bd8cb81",
+    "size": 11407
    },
    {
     "path": "config/servercore/optimizations.yml",
@@ -1418,6 +1472,11 @@
     "path": "kubejs/assets/blueprint/lang/uk_ua.json",
     "sha1": "7970a034ebb0bb622f99f9ef7f0566c86c697113",
     "size": 66
+   },
+   {
+    "path": "kubejs/assets/born_in_chaos_v1/lang/uk_ua.json",
+    "sha1": "a4ea20c8a429a4f374979fd6f4f86ea0c513bbc9",
+    "size": 75815
    },
    {
     "path": "kubejs/assets/bountiful/lang/uk_ua.json",
@@ -1830,6 +1889,11 @@
     "size": 185
    },
    {
+    "path": "kubejs/assets/mutantmonsters/lang/uk_ua.json",
+    "sha1": "8c3f76847e2ff6f2a950587f0f68db92a5ab1e80",
+    "size": 9466
+   },
+   {
     "path": "kubejs/assets/mvs/lang/en_us.json",
     "sha1": "32aafef9c21d06b1ecfa2cbe1d797254138f26a1",
     "size": 853
@@ -2048,6 +2112,11 @@
     "path": "kubejs/assets/twilightforest/lang/uk_ua.json",
     "sha1": "b80d261465e5f8845531121c4500556182a24197",
     "size": 6319
+   },
+   {
+    "path": "kubejs/assets/undead_unleashed/lang/uk_ua.json",
+    "sha1": "3ec7db97ca6659cf344443a2a5e17d45d1129188",
+    "size": 3485
    },
    {
     "path": "kubejs/assets/upgrade_aquatic/lang/uk_ua.json",
