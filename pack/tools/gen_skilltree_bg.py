@@ -48,7 +48,7 @@ def cloth():
     uneven = (np.asarray(low, dtype=float) / 255 - 0.5) * 8
     d = np.hypot(x - C, y - C) / C
     dark = np.maximum(0.4, 1.0 - 0.45 * d * d)
-    base = 27 + weave + uneven
+    base = 31 + weave + uneven
     rgb = np.stack([base * dark * 1.05, (base - 4) * dark, (base - 7) * dark], axis=-1)
     return Image.fromarray(np.clip(rgb, 0, 255).astype("uint8"), "RGB")
 
@@ -236,24 +236,25 @@ a.......a
 
 def name_label(name, col, emblem, font):
     """the branch's emblem and, under it, its name, stitched on a transparent piece of cloth"""
-    mask = Image.new("L", (200, 20), 0)
+    mask = Image.new("L", (400, 40), 0)
     ImageDraw.Draw(mask).text((0, 0), name, font=font, fill=255)
     mask = mask.crop(mask.getbbox())
     w, h = mask.size
-    t = 2                                          # the letters' stitch, finer than the rest
+    t = 3                                          # the letters' stitch (21.11: larger, the names were hard to read)
     rows = EMBLEMS[emblem].strip("\n").split("\n")
-    ew, eh = max(len(r) for r in rows) * S, len(rows) * S
+    ES = S * 2                                     # the emblem twice as large as before
+    ew, eh = max(len(r) for r in rows) * ES, len(rows) * ES
     lw, lh = max(ew, w * t) + 8, eh + 6 + h * t + 8
     label = Image.new("RGBA", (lw, lh), (0, 0, 0, 0))
     # a darker patch under the letters, so they read over the branch's lattice
     ImageDraw.Draw(label).rounded_rectangle([0, eh + 2, lw - 1, lh - 1], radius=6, fill=(18, 13, 10, 170))
     d = ImageDraw.Draw(label)
     colours = {"a": col, "b": dim(col, 1.3), "c": GOLD}
-    ex = (lw - ew) // 2 // S
+    ex = (lw - ew) // 2 // ES
     for j, row in enumerate(rows):
         for k, ch in enumerate(row):
             if ch in colours:
-                cross(d, ex + k, j, colours[ch])
+                cross(d, ex + k, j, colours[ch], s=ES)
     mp = mask.load()
     ox, oy = (lw - w * t) // 2, eh + 6 + 2
     for j in range(h):
@@ -283,7 +284,7 @@ def main():
             if off > SECTOR / 2 - 2:
                 continue
             fade = 1 - (r - R_FIELD_IN) / (R_FIELD_OUT - R_FIELD_IN)
-            blend_cross(img, gx, gy, BRANCHES[bi][1], 0.30 + 0.40 * fade * (1 - off / (SECTOR / 2 + 3)))
+            blend_cross(img, gx, gy, BRANCHES[bi][1], 0.40 + 0.45 * fade * (1 - off / (SECTOR / 2 + 3)))
     d = ImageDraw.Draw(img)
 
     # the borders between branches: chains of small rhombi in gold, each with a stitch of the branch's colour
@@ -296,7 +297,8 @@ def main():
             r += 40
 
     # under the root: the rose; around the inner ring: a red and gold band
-    stamp(d, ROSE, C // S, C // S, {"a": dim(GOLD, 0.7), "b": RED, "c": GOLD, "d": (230, 205, 150)}, scale=2)
+    # 21.11: half the size and dimmer — at the screen's opening zoom the big rose sat right behind the root's sixteen links
+    stamp(d, ROSE, C // S, C // S, {"a": dim(GOLD, 0.45), "b": dim(RED, 0.6), "c": dim(GOLD, 0.6), "d": (150, 130, 95)}, scale=1)
     ring(d, R_INNER_BAND - 6, dim(RED, 0.9))
     ring(d, R_INNER_BAND + 6, dim(GOLD, 0.55))
 
@@ -311,7 +313,7 @@ def main():
     # (gen_skilltree.py: spokes at the axis and 13 degrees to each side), between the 9th and 10th nodes: always on the
     # screen, never over a node, all read the same way
     try:
-        font = ImageFont.truetype("C:/Windows/Fonts/georgiab.ttf", 10)
+        font = ImageFont.truetype("C:/Windows/Fonts/georgiab.ttf", 13)
     except OSError:
         font = ImageFont.load_default()
     for i, (name, col, emblem) in enumerate(BRANCHES):

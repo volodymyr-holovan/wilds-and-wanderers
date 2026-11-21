@@ -1,0 +1,1472 @@
+{
+ "settings": {
+  "radius": 128,
+  "update_ticks": 200,
+  "spawn_spread": [
+   0.9,
+   1.05
+  ],
+  "step_base": 1.0,
+  "step_rate": 0.01,
+  "replace_base": 0.2,
+  "replace_rate": 0.002,
+  "replace_max": 0.7,
+  "world_tier": {
+   "haven": 1.0,
+   "frontier": 1.15,
+   "ascent": 1.3,
+   "summit": 1.5,
+   "pinnacle": 1.75
+  },
+  "hp_rate": 0.008,
+  "dmg_rate": 0.006,
+  "boss_hp_rate": 0.005,
+  "boss_dmg_rate": 0.012,
+  "tier_hits": 3.7,
+  "tier_player_hits": 10,
+  "boss_hits": 60,
+  "boss_player_hits": 5,
+  "defence": [
+   [
+    0,
+    7,
+    0,
+    0,
+    20
+   ],
+   [
+    15,
+    15,
+    0,
+    0,
+    20
+   ],
+   [
+    30,
+    17,
+    2,
+    4,
+    20
+   ],
+   [
+    60,
+    20,
+    8,
+    8,
+    22
+   ],
+   [
+    100,
+    20,
+    12,
+    12,
+    24
+   ],
+   [
+    150,
+    22,
+    14,
+    16,
+    28
+   ],
+   [
+    200,
+    24,
+    16,
+    18,
+    32
+   ],
+   [
+    300,
+    27,
+    18,
+    20,
+    40
+   ],
+   [
+    400,
+    30,
+    20,
+    20,
+    48
+   ]
+  ],
+  "tiers": [
+   {
+    "tier": 1,
+    "unlock": 10
+   },
+   {
+    "tier": 2,
+    "unlock": 20
+   },
+   {
+    "tier": 3,
+    "unlock": 35
+   },
+   {
+    "tier": 4,
+    "unlock": 50
+   },
+   {
+    "tier": 5,
+    "unlock": 70
+   },
+   {
+    "tier": 6,
+    "unlock": 95
+   },
+   {
+    "tier": 7,
+    "unlock": 125
+   },
+   {
+    "tier": 8,
+    "unlock": 160
+   },
+   {
+    "tier": 9,
+    "unlock": 200
+   },
+   {
+    "tier": 10,
+    "unlock": 250
+   },
+   {
+    "tier": 11,
+    "unlock": 310
+   },
+   {
+    "tier": 12,
+    "unlock": 380
+   }
+  ],
+  "level_abilities": [
+   [
+    "family_hit",
+    40,
+    0.4
+   ],
+   [
+    "leap",
+    90,
+    0.3
+   ],
+   [
+    "enrage",
+    150,
+    0.3
+   ],
+   [
+    "shockwave",
+    220,
+    0.25
+   ],
+   [
+    "blink",
+    300,
+    0.25
+   ]
+  ],
+  "boss_abilities": [
+   "shockwave",
+   "enrage",
+   "summon_guard"
+  ],
+  "plain_loot_base": 0.12,
+  "plain_loot_rate": 0.001
+ },
+ "families": {
+  "zombie": {
+   "bases": [
+    "minecraft:zombie",
+    "minecraft:husk",
+    "minecraft:zombie_villager"
+   ],
+   "hit": [
+    "minecraft:hunger",
+    100,
+    0
+   ],
+   "uk": "Зомбі",
+   "en": "Zombies"
+  },
+  "skeleton": {
+   "bases": [
+    "minecraft:skeleton",
+    "minecraft:stray"
+   ],
+   "hit": [
+    "minecraft:slowness",
+    60,
+    0
+   ],
+   "uk": "Скелети",
+   "en": "Skeletons"
+  },
+  "spider": {
+   "bases": [
+    "minecraft:spider",
+    "minecraft:cave_spider"
+   ],
+   "hit": [
+    "minecraft:poison",
+    80,
+    0
+   ],
+   "uk": "Павуки",
+   "en": "Spiders"
+  },
+  "creeper": {
+   "bases": [
+    "minecraft:creeper"
+   ],
+   "hit": [
+    "minecraft:nausea",
+    100,
+    0
+   ],
+   "uk": "Кріпери",
+   "en": "Creepers"
+  },
+  "witch": {
+   "bases": [
+    "minecraft:witch"
+   ],
+   "hit": [
+    "minecraft:weakness",
+    100,
+    0
+   ],
+   "uk": "Відьми",
+   "en": "Witches"
+  },
+  "enderman": {
+   "bases": [
+    "minecraft:enderman"
+   ],
+   "hit": [
+    "minecraft:blindness",
+    40,
+    0
+   ],
+   "uk": "Ендермени",
+   "en": "Endermen"
+  },
+  "illager": {
+   "bases": [
+    "minecraft:pillager",
+    "minecraft:vindicator"
+   ],
+   "hit": [
+    "minecraft:mining_fatigue",
+    100,
+    0
+   ],
+   "uk": "Розбійники",
+   "en": "Illagers"
+  },
+  "piglin": {
+   "bases": [
+    "minecraft:zombified_piglin",
+    "minecraft:piglin"
+   ],
+   "hit": [
+    "minecraft:wither",
+    60,
+    0
+   ],
+   "uk": "Пігліни",
+   "en": "Piglins"
+  },
+  "blaze": {
+   "bases": [
+    "minecraft:blaze"
+   ],
+   "hit": [
+    "minecraft:wither",
+    40,
+    0
+   ],
+   "uk": "Іфрити",
+   "en": "Blazes"
+  },
+  "slime": {
+   "bases": [
+    "minecraft:slime",
+    "minecraft:magma_cube"
+   ],
+   "hit": [
+    "minecraft:slowness",
+    60,
+    1
+   ],
+   "uk": "Слизні",
+   "en": "Slimes"
+  },
+  "drowned": {
+   "bases": [
+    "minecraft:drowned"
+   ],
+   "hit": [
+    "minecraft:mining_fatigue",
+    100,
+    0
+   ],
+   "uk": "Утопленики",
+   "en": "Drowned"
+  }
+ },
+ "variants": [
+  {
+   "id": "mummy",
+   "family": "zombie",
+   "tier": 1,
+   "entity": "minecraft:husk",
+   "abilities": [],
+   "hits": [
+    [
+     "minecraft:hunger",
+     160,
+     1
+    ],
+    [
+     "minecraft:slowness",
+     40,
+     0
+    ]
+   ],
+   "scale": 1.05,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "kobold_dead",
+   "family": "zombie",
+   "tier": 2,
+   "entity": "kobolds:kobold_zombie",
+   "abilities": [
+    "leap"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "catacomb_dead",
+   "family": "zombie",
+   "tier": 3,
+   "entity": "irons_spellbooks:catacombs_zombie",
+   "abilities": [
+    "summon:minecraft:zombie:2"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "bog_walker",
+   "family": "zombie",
+   "tier": 4,
+   "entity": null,
+   "abilities": [
+    "regen"
+   ],
+   "hits": [
+    [
+     "minecraft:poison",
+     80,
+     0
+    ]
+   ],
+   "scale": 1.15,
+   "equip": {
+    "head": "minecraft:leather_helmet"
+   },
+   "loot": "zombie"
+  },
+  {
+   "id": "dread_thrall",
+   "family": "zombie",
+   "tier": 5,
+   "entity": "iceandfire:dread_thrall",
+   "abilities": [
+    "shield"
+   ],
+   "hits": [
+    [
+     "minecraft:weakness",
+     100,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "draugr",
+   "family": "zombie",
+   "tier": 6,
+   "entity": "cataclysm:draugr",
+   "abilities": [
+    "shield",
+    "leap"
+   ],
+   "hits": [
+    [
+     "minecraft:slowness",
+     60,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "troll",
+   "family": "zombie",
+   "tier": 7,
+   "entity": "iceandfire:troll",
+   "abilities": [
+    "shockwave"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "ghoul",
+   "family": "zombie",
+   "tier": 8,
+   "entity": "iceandfire:dread_ghoul",
+   "abilities": [
+    "lifesteal",
+    "leap"
+   ],
+   "hits": [
+    [
+     "minecraft:hunger",
+     200,
+     2
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "minotaur",
+   "family": "zombie",
+   "tier": 9,
+   "entity": "twilightforest:minotaur",
+   "abilities": [
+    "leap",
+    "shockwave",
+    "enrage"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "elite_draugr",
+   "family": "zombie",
+   "tier": 10,
+   "entity": "cataclysm:elite_draugr",
+   "abilities": [
+    "reflect",
+    "lifesteal",
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "dread_knight",
+   "family": "zombie",
+   "tier": 11,
+   "entity": "iceandfire:dread_knight",
+   "abilities": [
+    "enrage",
+    "shockwave",
+    "armor_break"
+   ],
+   "hits": [
+    [
+     "minecraft:wither",
+     80,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "royal_draugr",
+   "family": "zombie",
+   "tier": 12,
+   "entity": "cataclysm:royal_draugr",
+   "abilities": [
+    "shield",
+    "shockwave",
+    "summon:cataclysm:draugr:2",
+    "enrage"
+   ],
+   "hits": [
+    [
+     "minecraft:slowness",
+     80,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "zombie"
+  },
+  {
+   "id": "frost_archer",
+   "family": "skeleton",
+   "tier": 1,
+   "entity": "minecraft:stray",
+   "abilities": [],
+   "hits": [
+    [
+     "minecraft:slowness",
+     80,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "skeleton"
+  },
+  {
+   "id": "flame_archer",
+   "family": "skeleton",
+   "tier": 2,
+   "entity": null,
+   "abilities": [
+    "ignite"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {
+    "head": "minecraft:golden_helmet"
+   },
+   "loot": "skeleton"
+  },
+  {
+   "id": "druid",
+   "family": "skeleton",
+   "tier": 3,
+   "entity": "twilightforest:skeleton_druid",
+   "abilities": [
+    "regen"
+   ],
+   "hits": [
+    [
+     "minecraft:poison",
+     60,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "skeleton"
+  },
+  {
+   "id": "volley_archer",
+   "family": "skeleton",
+   "tier": 4,
+   "entity": null,
+   "abilities": [
+    "volley"
+   ],
+   "hits": [],
+   "scale": 1.05,
+   "equip": {
+    "chest": "minecraft:chainmail_chestplate"
+   },
+   "loot": "skeleton"
+  },
+  {
+   "id": "koboleton",
+   "family": "skeleton",
+   "tier": 6,
+   "entity": "cataclysm:koboleton",
+   "abilities": [
+    "leap",
+    "armor_break"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "skeleton"
+  },
+  {
+   "id": "aptrgangr",
+   "family": "skeleton",
+   "tier": 8,
+   "entity": "cataclysm:aptrgangr",
+   "abilities": [
+    "shockwave",
+    "armor_break"
+   ],
+   "hits": [
+    [
+     "minecraft:mining_fatigue",
+     120,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "skeleton"
+  },
+  {
+   "id": "wither_knight",
+   "family": "skeleton",
+   "tier": 9,
+   "entity": "eternalnether:wither_skeleton_knight",
+   "abilities": [
+    "shield",
+    "enrage"
+   ],
+   "hits": [
+    [
+     "minecraft:wither",
+     100,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "skeleton"
+  },
+  {
+   "id": "wraith",
+   "family": "skeleton",
+   "tier": 11,
+   "entity": "twilightforest:wraith",
+   "abilities": [
+    "blink",
+    "lifesteal"
+   ],
+   "hits": [
+    [
+     "minecraft:darkness",
+     80,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "skeleton"
+  },
+  {
+   "id": "bone_king",
+   "family": "skeleton",
+   "tier": 12,
+   "entity": "minecraft:wither_skeleton",
+   "abilities": [
+    "volley",
+    "blink",
+    "shield"
+   ],
+   "hits": [
+    [
+     "minecraft:wither",
+     120,
+     2
+    ]
+   ],
+   "scale": 1.3,
+   "equip": {
+    "head": "minecraft:golden_helmet",
+    "mainhand": "minecraft:bow"
+   },
+   "loot": "skeleton"
+  },
+  {
+   "id": "venom_spider",
+   "family": "spider",
+   "tier": 1,
+   "entity": "minecraft:cave_spider",
+   "abilities": [],
+   "hits": [
+    [
+     "minecraft:poison",
+     120,
+     1
+    ]
+   ],
+   "scale": 1.4,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "hedge_spider",
+   "family": "spider",
+   "tier": 2,
+   "entity": "twilightforest:hedge_spider",
+   "abilities": [
+    "leap"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "swarm_spider",
+   "family": "spider",
+   "tier": 3,
+   "entity": "twilightforest:swarm_spider",
+   "abilities": [
+    "split:twilightforest:swarm_spider:2"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "weaver",
+   "family": "spider",
+   "tier": 4,
+   "entity": null,
+   "abilities": [
+    "web",
+    "pull"
+   ],
+   "hits": [],
+   "scale": 1.2,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "ice_spider",
+   "family": "spider",
+   "tier": 5,
+   "entity": "irons_spellbooks:ice_spider",
+   "abilities": [
+    "frost_aura"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "king_spider",
+   "family": "spider",
+   "tier": 8,
+   "entity": "twilightforest:king_spider",
+   "abilities": [
+    "summon:minecraft:cave_spider:3",
+    "web"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "crimson_weaver",
+   "family": "spider",
+   "tier": 10,
+   "entity": null,
+   "abilities": [
+    "web",
+    "leap",
+    "lifesteal"
+   ],
+   "hits": [
+    [
+     "minecraft:wither",
+     80,
+     1
+    ]
+   ],
+   "scale": 1.6,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "brood_mother",
+   "family": "spider",
+   "tier": 12,
+   "entity": null,
+   "abilities": [
+    "summon:minecraft:cave_spider:4",
+    "web",
+    "shockwave",
+    "enrage"
+   ],
+   "hits": [
+    [
+     "minecraft:poison",
+     160,
+     2
+    ]
+   ],
+   "scale": 2.2,
+   "equip": {},
+   "loot": "spider"
+  },
+  {
+   "id": "silent_creeper",
+   "family": "creeper",
+   "tier": 2,
+   "entity": null,
+   "abilities": [
+    "invisible"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "fire_creeper",
+   "family": "creeper",
+   "tier": 3,
+   "entity": null,
+   "abilities": [
+    "fire_aura",
+    "burst_fire"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "ender_creeper",
+   "family": "creeper",
+   "tier": 5,
+   "entity": null,
+   "abilities": [
+    "blink"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "swarm_creeper",
+   "family": "creeper",
+   "tier": 6,
+   "entity": null,
+   "abilities": [
+    "split:minecraft:creeper:3"
+   ],
+   "hits": [],
+   "scale": 1.2,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "storm_creeper",
+   "family": "creeper",
+   "tier": 8,
+   "entity": null,
+   "abilities": [
+    "powered"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "frost_creeper",
+   "family": "creeper",
+   "tier": 10,
+   "entity": null,
+   "abilities": [
+    "frost_aura",
+    "powered"
+   ],
+   "hits": [
+    [
+     "minecraft:slowness",
+     100,
+     2
+    ]
+   ],
+   "scale": 1.1,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "titan_creeper",
+   "family": "creeper",
+   "tier": 12,
+   "entity": null,
+   "abilities": [
+    "powered",
+    "blink",
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.8,
+   "equip": {},
+   "loot": "creeper"
+  },
+  {
+   "id": "herbalist",
+   "family": "witch",
+   "tier": 2,
+   "entity": null,
+   "abilities": [
+    "regen"
+   ],
+   "hits": [
+    [
+     "minecraft:poison",
+     80,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "cultist",
+   "family": "witch",
+   "tier": 3,
+   "entity": "irons_spellbooks:cultist",
+   "abilities": [
+    "blink"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "illusioner",
+   "family": "witch",
+   "tier": 4,
+   "entity": "friendsandfoes:illusioner",
+   "abilities": [
+    "blink"
+   ],
+   "hits": [
+    [
+     "minecraft:blindness",
+     60,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "frost_witch",
+   "family": "witch",
+   "tier": 6,
+   "entity": null,
+   "abilities": [
+    "frost_aura",
+    "blink"
+   ],
+   "hits": [
+    [
+     "minecraft:slowness",
+     80,
+     1
+    ]
+   ],
+   "scale": 1.05,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "ember_witch",
+   "family": "witch",
+   "tier": 7,
+   "entity": null,
+   "abilities": [
+    "fire_aura",
+    "ignite",
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.05,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "necromancer",
+   "family": "witch",
+   "tier": 8,
+   "entity": "irons_spellbooks:necromancer",
+   "abilities": [
+    "summon:minecraft:skeleton:2",
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "archevoker",
+   "family": "witch",
+   "tier": 10,
+   "entity": "irons_spellbooks:archevoker",
+   "abilities": [
+    "shield",
+    "blink"
+   ],
+   "hits": [
+    [
+     "minecraft:weakness",
+     120,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "hex_witch",
+   "family": "witch",
+   "tier": 12,
+   "entity": null,
+   "abilities": [
+    "blink",
+    "pull",
+    "shield",
+    "summon:minecraft:vex:3"
+   ],
+   "hits": [
+    [
+     "minecraft:levitation",
+     40,
+     1
+    ],
+    [
+     "minecraft:wither",
+     100,
+     1
+    ]
+   ],
+   "scale": 1.15,
+   "equip": {},
+   "loot": "witch"
+  },
+  {
+   "id": "warped_enderman",
+   "family": "enderman",
+   "tier": 3,
+   "entity": "eternalnether:warped_enderman",
+   "abilities": [],
+   "hits": [
+    [
+     "minecraft:nausea",
+     100,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "enderman"
+  },
+  {
+   "id": "shade_walker",
+   "family": "enderman",
+   "tier": 5,
+   "entity": null,
+   "abilities": [
+    "blink"
+   ],
+   "hits": [
+    [
+     "minecraft:darkness",
+     100,
+     0
+    ]
+   ],
+   "scale": 1.1,
+   "equip": {},
+   "loot": "enderman"
+  },
+  {
+   "id": "endermaptera",
+   "family": "enderman",
+   "tier": 8,
+   "entity": "cataclysm:endermaptera",
+   "abilities": [
+    "leap",
+    "blink"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "enderman"
+  },
+  {
+   "id": "void_caller",
+   "family": "enderman",
+   "tier": 10,
+   "entity": null,
+   "abilities": [
+    "pull",
+    "blink",
+    "lifesteal"
+   ],
+   "hits": [
+    [
+     "minecraft:levitation",
+     30,
+     1
+    ]
+   ],
+   "scale": 1.2,
+   "equip": {},
+   "loot": "enderman"
+  },
+  {
+   "id": "ender_golem",
+   "family": "enderman",
+   "tier": 12,
+   "entity": "cataclysm:ender_golem",
+   "abilities": [
+    "shockwave",
+    "enrage"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "enderman"
+  },
+  {
+   "id": "orc",
+   "family": "illager",
+   "tier": 4,
+   "entity": "orc_hut:orc",
+   "abilities": [
+    "leap"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "illager"
+  },
+  {
+   "id": "goblin_knight",
+   "family": "illager",
+   "tier": 6,
+   "entity": "twilightforest:upper_goblin_knight",
+   "abilities": [
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "illager"
+  },
+  {
+   "id": "magehunter",
+   "family": "illager",
+   "tier": 7,
+   "entity": "irons_spellbooks:magehunter_vindicator",
+   "abilities": [
+    "armor_break"
+   ],
+   "hits": [
+    [
+     "minecraft:weakness",
+     100,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "illager"
+  },
+  {
+   "id": "umvuthana_raptor",
+   "family": "illager",
+   "tier": 9,
+   "entity": "mowziesmobs:umvuthana_raptor",
+   "abilities": [
+    "leap",
+    "enrage"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "illager"
+  },
+  {
+   "id": "warlord",
+   "family": "illager",
+   "tier": 11,
+   "entity": null,
+   "abilities": [
+    "shockwave",
+    "shield",
+    "summon:minecraft:vindicator:2",
+    "enrage"
+   ],
+   "hits": [
+    [
+     "minecraft:slowness",
+     60,
+     1
+    ]
+   ],
+   "scale": 1.25,
+   "equip": {
+    "head": "minecraft:netherite_helmet",
+    "mainhand": "minecraft:netherite_axe"
+   },
+   "loot": "illager"
+  },
+  {
+   "id": "piglin_hunter",
+   "family": "piglin",
+   "tier": 3,
+   "entity": "eternalnether:piglin_hunter",
+   "abilities": [
+    "leap"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "piglin"
+  },
+  {
+   "id": "corpor",
+   "family": "piglin",
+   "tier": 5,
+   "entity": "eternalnether:corpor",
+   "abilities": [
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "piglin"
+  },
+  {
+   "id": "ignited_revenant",
+   "family": "piglin",
+   "tier": 7,
+   "entity": "cataclysm:ignited_revenant",
+   "abilities": [
+    "fire_aura"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "piglin"
+  },
+  {
+   "id": "wraither",
+   "family": "piglin",
+   "tier": 9,
+   "entity": "eternalnether:wraither",
+   "abilities": [
+    "blink",
+    "lifesteal"
+   ],
+   "hits": [
+    [
+     "minecraft:wither",
+     80,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "piglin"
+  },
+  {
+   "id": "ignited_berserker",
+   "family": "piglin",
+   "tier": 11,
+   "entity": "cataclysm:ignited_berserker",
+   "abilities": [
+    "enrage",
+    "fire_aura",
+    "leap"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "piglin"
+  },
+  {
+   "id": "hellflare",
+   "family": "blaze",
+   "tier": 4,
+   "entity": null,
+   "abilities": [
+    "fire_aura",
+    "shield"
+   ],
+   "hits": [],
+   "scale": 1.1,
+   "equip": {},
+   "loot": "blaze"
+  },
+  {
+   "id": "wildfire",
+   "family": "blaze",
+   "tier": 9,
+   "entity": "friendsandfoes:wildfire",
+   "abilities": [
+    "fire_aura",
+    "enrage"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "blaze"
+  },
+  {
+   "id": "maze_slime",
+   "family": "slime",
+   "tier": 2,
+   "entity": "twilightforest:maze_slime",
+   "abilities": [],
+   "hits": [
+    [
+     "minecraft:slowness",
+     60,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "slime"
+  },
+  {
+   "id": "acid_slime",
+   "family": "slime",
+   "tier": 6,
+   "entity": null,
+   "abilities": [
+    "armor_break",
+    "regen"
+   ],
+   "hits": [
+    [
+     "minecraft:poison",
+     100,
+     1
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "slime"
+  },
+  {
+   "id": "ferrouslime",
+   "family": "slime",
+   "tier": 9,
+   "entity": "alexscaves:ferrouslime",
+   "abilities": [
+    "shield",
+    "pull"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "slime"
+  },
+  {
+   "id": "deepling",
+   "family": "drowned",
+   "tier": 3,
+   "entity": "cataclysm:deepling",
+   "abilities": [
+    "leap"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "drowned"
+  },
+  {
+   "id": "deepling_angler",
+   "family": "drowned",
+   "tier": 5,
+   "entity": "cataclysm:deepling_angler",
+   "abilities": [
+    "pull"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "drowned"
+  },
+  {
+   "id": "deepling_priest",
+   "family": "drowned",
+   "tier": 7,
+   "entity": "cataclysm:deepling_priest",
+   "abilities": [
+    "shield",
+    "regen"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "drowned"
+  },
+  {
+   "id": "deepling_brute",
+   "family": "drowned",
+   "tier": 9,
+   "entity": "cataclysm:deepling_brute",
+   "abilities": [
+    "shockwave",
+    "enrage"
+   ],
+   "hits": [],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "drowned"
+  },
+  {
+   "id": "deepling_warlock",
+   "family": "drowned",
+   "tier": 11,
+   "entity": "cataclysm:deepling_warlock",
+   "abilities": [
+    "blink",
+    "shield",
+    "lifesteal"
+   ],
+   "hits": [
+    [
+     "minecraft:darkness",
+     80,
+     0
+    ]
+   ],
+   "scale": 1.0,
+   "equip": {},
+   "loot": "drowned"
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "type": "minecraft:entity",
+ "random_sequence": "wilds_core:mobs",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 1,
+    "max": 4
+   },
+   "bonus_rolls": 0.5,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_scrap",
+     "weight": 8,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:ancient_debris",
+     "weight": 4,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "irons_spellbooks:epic_ink",
+     "weight": 4,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "cataclysm:ancient_metal_ingot",
+     "weight": 6,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "cataclysm:witherite_ingot",
+     "weight": 3,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "twilightforest:fiery_ingot",
+     "weight": 4,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "apotheosis:sigil_of_enhancement",
+     "weight": 2,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "apotheosis:godforged_pearl",
+     "weight": 1,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:enchanted_golden_apple",
+     "weight": 1,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:nether_star",
+     "weight": 1,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:experience_bottle",
+     "weight": 12,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 4,
+        "max": 8
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

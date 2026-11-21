@@ -1,0 +1,118 @@
+{
+ "type": "minecraft:entity",
+ "random_sequence": "wilds_core:mobs",
+ "pools": [
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 1,
+    "max": 4
+   },
+   "bonus_rolls": 0.5,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 15,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:netherite_scrap",
+     "weight": 5,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "irons_spellbooks:rare_ink",
+     "weight": 5,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "irons_spellbooks:upgrade_orb",
+     "weight": 4,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "cataclysm:ancient_metal_nugget",
+     "weight": 8,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 5
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "twilightforest:knightmetal_ingot",
+     "weight": 6,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "apotheosis:luminous_crystal_shard",
+     "weight": 4,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "apotheosis:sigil_of_socketing",
+     "weight": 2,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:echo_shard",
+     "weight": 4,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:totem_of_undying",
+     "weight": 1,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:experience_bottle",
+     "weight": 12,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 5
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
