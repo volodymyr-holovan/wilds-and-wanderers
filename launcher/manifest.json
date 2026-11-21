@@ -1,5 +1,5 @@
 {
- "version": "2026.11.21.3",
+ "version": "2026.11.21.4",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -986,21 +986,21 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/wilds_core-0.1.0.jar",
-   "sha1": "ab851281828827d2889e077b327280404d03954b",
-   "size": 447570
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.4/wilds_core-0.1.0.jar",
+   "sha1": "7cb308dfd0c65cd3ec6f76aa4304a301f5489900",
+   "size": 456819
   },
   {
    "file": "wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.4/wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
    "sha1": "edca8c289575fb518c180fec18881dd27891c5db",
    "size": 27292528
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/wilds_wiki-0.2.0.jar",
-   "sha1": "edb7f89d0821b046abdb34b8e8a8c5f9cf8998e9",
-   "size": 1250144
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.4/wilds_wiki-0.2.0.jar",
+   "sha1": "d84790698dea9f859d8bb0a8c9158e5042b04559",
+   "size": 1247892
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -1048,9 +1048,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.3/overrides.zip",
-   "sha1": "07775f39f332c4fb795a84d7e5df5362f9827e27",
-   "size": 28489132
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.4/overrides.zip",
+   "sha1": "b1f8d28ba554e310f644f8bd0d6629073fa14596",
+   "size": 28699669
   },
   "overrides": [
    {
@@ -1150,143 +1150,143 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/ae2.snbt",
-    "sha1": "c68f3f85485dbff70bea58a4022e7a377af413d8",
-    "size": 14458
+    "sha1": "b9e5aa83186697d8c4972f6f912279cb98bcb2c4",
+    "size": 18071
    },
    {
     "path": "config/ftbquests/quests/chapters/aether.snbt",
-    "sha1": "27d08587016189f7fc183378c65f8ba05c0ad86d",
-    "size": 10445
+    "sha1": "96ee791e75a7a2204912aba78b9e75e0210fdf4a",
+    "size": 12904
    },
    {
     "path": "config/ftbquests/quests/chapters/apotheosis.snbt",
-    "sha1": "ae62a6210ef5793df5f365861a91f7bbd59eaf13",
-    "size": 9773
+    "sha1": "b368eb817f7dc26f453b6270705a7359e273a126",
+    "size": 12282
    },
    {
     "path": "config/ftbquests/quests/chapters/ars.snbt",
-    "sha1": "1f2b651c10246d33cd2acd64c3430c6ceb44add7",
-    "size": 12742
+    "sha1": "ced6375ec39354e8624ba75f0fbb3c3e447b0fe8",
+    "size": 16262
    },
    {
     "path": "config/ftbquests/quests/chapters/bestiary.snbt",
-    "sha1": "dc09b2e5c12b1e2c738f3eba7602d3decede1aa9",
-    "size": 10332
+    "sha1": "0391d51ba56f8bd663f6a50c6c0276987767872b",
+    "size": 13385
    },
    {
     "path": "config/ftbquests/quests/chapters/bosses.snbt",
-    "sha1": "e57b679f1c86a9f18d9a98b25fb232ef07bb3726",
-    "size": 13681
+    "sha1": "5fddf4e971ed2fa72613771687002f80762ca2b7",
+    "size": 16428
    },
    {
     "path": "config/ftbquests/quests/chapters/camping.snbt",
-    "sha1": "7281af2536f0e9c5482413abdb7adfba1520d53e",
-    "size": 6590
+    "sha1": "74753b2de7425d2976014a8415d6a899842a41e6",
+    "size": 8222
    },
    {
     "path": "config/ftbquests/quests/chapters/caves.snbt",
-    "sha1": "d11e85c5d44176dfffddc7784f292180e9d6848f",
-    "size": 8780
+    "sha1": "8e0cbcdfac242efd8575007444fbc5da336498b1",
+    "size": 10900
    },
    {
     "path": "config/ftbquests/quests/chapters/colonies.snbt",
-    "sha1": "2019d332e8f81ea885ec1127f38b55539b31f215",
-    "size": 12934
+    "sha1": "849c6ed21477ef7da803011fdf6e4e0133d6fed7",
+    "size": 16003
    },
    {
     "path": "config/ftbquests/quests/chapters/create.snbt",
-    "sha1": "5e22bd55cf019f99b225ce56cbd767d3966efa56",
-    "size": 23742
+    "sha1": "b4e5b18c855a1a8a3df8f4ee63ab702b6183b817",
+    "size": 29272
    },
    {
     "path": "config/ftbquests/quests/chapters/create_addons.snbt",
-    "sha1": "aa49349a1d5094072a4b8d36fb5c5fd7d3310a0f",
-    "size": 7717
+    "sha1": "16c4d80c14515eb0b561d19b9c65540a138d11d4",
+    "size": 9646
    },
    {
     "path": "config/ftbquests/quests/chapters/dragons.snbt",
-    "sha1": "584313d48d3231905b2e6e993a1d7dd0b036a981",
-    "size": 7152
+    "sha1": "876cbc8b064d48fc392e59ad348809505497db0a",
+    "size": 8789
    },
    {
     "path": "config/ftbquests/quests/chapters/errands.snbt",
-    "sha1": "770290153c6046d2f1d6588c3c1925e39e3236f2",
-    "size": 56546
+    "sha1": "227ea1b24b4f94aad3d4e4311a4e6c34eb86a84f",
+    "size": 65757
    },
    {
     "path": "config/ftbquests/quests/chapters/irons.snbt",
-    "sha1": "f19829c1be1cfd72b0b45dd015dc14b520d0aae3",
-    "size": 13226
+    "sha1": "e9f08d486d16e6f86cf0eba6f3074edc0fc8f899",
+    "size": 16901
    },
    {
     "path": "config/ftbquests/quests/chapters/kitchen.snbt",
-    "sha1": "836d1e51067ec959e22bff594a25baf3d81f4277",
-    "size": 10173
+    "sha1": "7fda1e9e7e2dd86418b3ccaa48ee74c5cdfe6914",
+    "size": 12730
    },
    {
     "path": "config/ftbquests/quests/chapters/links.snbt",
-    "sha1": "5a367a2842eee092dfb142a861249189a6811b38",
-    "size": 4321
+    "sha1": "0bc27bcd28839cb9a7cb1e38086f4f6c92f5d7e3",
+    "size": 5842
    },
    {
     "path": "config/ftbquests/quests/chapters/mekanism.snbt",
-    "sha1": "80e4ddf8a2d453777b0d73f3ec9b50690b9ce5d9",
-    "size": 23135
+    "sha1": "158b7742edc9af50c3bddc8020ef010d05051d0e",
+    "size": 28402
    },
    {
     "path": "config/ftbquests/quests/chapters/nether_end.snbt",
-    "sha1": "1134c84f000e02b8c1f8434e93f7bc8fb9c4bef9",
-    "size": 18452
+    "sha1": "59c5665cfb90c6b1463cca9a15dbd5a9577affce",
+    "size": 22896
    },
    {
     "path": "config/ftbquests/quests/chapters/paths.snbt",
-    "sha1": "121863d39a916a7b1f7b8d8c42bb03e354f3e683",
-    "size": 5220
+    "sha1": "b6d1263fd24a4b1dfd7a0246b88e59f73c3d13ea",
+    "size": 6986
    },
    {
     "path": "config/ftbquests/quests/chapters/peoples.snbt",
-    "sha1": "7aa2b991fb2dabe4021a398f9226c4abdf3035c7",
-    "size": 9013
+    "sha1": "c6f6243adb68e72d19c891cbd52a14bde55ddb31",
+    "size": 10786
    },
    {
     "path": "config/ftbquests/quests/chapters/seas.snbt",
-    "sha1": "d000c0805558a632f38c5958b3703d21d1066fa1",
-    "size": 13135
+    "sha1": "815ff2e46810e81d9f72c1ca985d08c2542fcc66",
+    "size": 16135
    },
    {
     "path": "config/ftbquests/quests/chapters/start.snbt",
-    "sha1": "2ec3fcbe52f3ef9c164391952bcea06f33887ddf",
-    "size": 7104
+    "sha1": "4222b985544c214617ffbcd9c03cb0d1af18bf46",
+    "size": 9288
    },
    {
     "path": "config/ftbquests/quests/chapters/storage.snbt",
-    "sha1": "2b9d8e537440f3ebf9491df0d3c2a77997e47f88",
-    "size": 8094
+    "sha1": "7e5a9aa6b57e6bc88cb8bce3aeba9aab72a29ba9",
+    "size": 10661
    },
    {
     "path": "config/ftbquests/quests/chapters/survival.snbt",
-    "sha1": "eda3d61d4d97fa45b4021517c4a029e496ef007c",
-    "size": 9017
+    "sha1": "5873fc90603c5eb04fc0afc8ae55fedc6bfc0e16",
+    "size": 11605
    },
    {
     "path": "config/ftbquests/quests/chapters/twilight.snbt",
-    "sha1": "7bf4fde5fecf04dc42c009c3f91bf8cf8f672633",
-    "size": 14877
+    "sha1": "4e0908ba08017214aba4dd7b74eec321dc14f5bb",
+    "size": 18280
    },
    {
     "path": "config/ftbquests/quests/chapters/village.snbt",
-    "sha1": "533237ab82b90f3c0a9aca20cf8a2091061cd336",
-    "size": 8223
+    "sha1": "3dbb1695899ddfd95894ec5b2bb5a1cfb3d04752",
+    "size": 10384
    },
    {
     "path": "config/ftbquests/quests/chapters/welcome.snbt",
-    "sha1": "f9da8f308ecd1c9d31be1d891723c249059f9d3a",
-    "size": 5023
+    "sha1": "a0c19e3466b622bf6b327f8f1c57f0ff69254e49",
+    "size": 6507
    },
    {
     "path": "config/ftbquests/quests/chapters/wildlife.snbt",
-    "sha1": "878ff17578f86703847415884d74d1a3eb095541",
-    "size": 5123
+    "sha1": "6485d4b30e41d58f9ba96a90c780b155be212e7f",
+    "size": 6442
    },
    {
     "path": "config/ftbquests/quests/data.snbt",
@@ -1684,6 +1684,186 @@
     "size": 28662
    },
    {
+    "path": "kubejs/assets/ftbquests/textures/shapes/circle/background.png",
+    "sha1": "2e750bee15e40ed4b688e4fdb4b0549638103360",
+    "size": 18375
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/circle/background.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/circle/outline.png",
+    "sha1": "c50505a0a84840c95f8ed8784d453fcffbd36b94",
+    "size": 12475
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/circle/outline.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/circle/shape.png",
+    "sha1": "9442b4d049d9c5a905440eef5d8f4900fd70feab",
+    "size": 3237
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/circle/shape.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/diamond/background.png",
+    "sha1": "a7383da5f1e98d42b0e8af6955e9321228924b6c",
+    "size": 12547
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/diamond/background.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/diamond/outline.png",
+    "sha1": "1d8b9fcae71d096c8b5fdea788ff5caa4e169ba3",
+    "size": 6933
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/diamond/outline.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/diamond/shape.png",
+    "sha1": "01c506f687a98640534d24f25b77425867329513",
+    "size": 1354
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/diamond/shape.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/gear/background.png",
+    "sha1": "c14711f077974ec0c142b3209e68cce70c58d853",
+    "size": 18127
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/gear/background.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/gear/outline.png",
+    "sha1": "6463b6aee853ae578b339b49c14859af8f5ece76",
+    "size": 13676
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/gear/outline.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/gear/shape.png",
+    "sha1": "ad8ea21beb86e1430ce084e22acb0ae3237ce090",
+    "size": 3962
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/gear/shape.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/hexagon/background.png",
+    "sha1": "85b35a123d5417f6cf50e87a6eaedb4e9c199e58",
+    "size": 15239
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/hexagon/background.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/hexagon/outline.png",
+    "sha1": "b304fe190d086b18731983e9509b15148c93f17b",
+    "size": 8653
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/hexagon/outline.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/hexagon/shape.png",
+    "sha1": "e63be7106a926c216bc84e50d132cd26623747d4",
+    "size": 2195
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/hexagon/shape.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/octagon/background.png",
+    "sha1": "722632427eca5f505ec56ea9970cc36f37e69037",
+    "size": 14264
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/octagon/background.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/octagon/outline.png",
+    "sha1": "79ed08cdac3b0804343f359516d52e04ddec0e1c",
+    "size": 5758
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/octagon/outline.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/octagon/shape.png",
+    "sha1": "ade1aef529f1ed4d7720fbe63b46e5a8d5d5ae62",
+    "size": 1181
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/octagon/shape.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/rsquare/background.png",
+    "sha1": "22bf35ec4aaa85fac8af4624fe07a2492cf56bc3",
+    "size": 14190
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/rsquare/background.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/rsquare/outline.png",
+    "sha1": "9f8cbcd3714cabbdc9a063da0684bc16e031d786",
+    "size": 4705
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/rsquare/outline.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/rsquare/shape.png",
+    "sha1": "53df48f492512c64f1ca7831c343b24623e15aea",
+    "size": 1414
+   },
+   {
+    "path": "kubejs/assets/ftbquests/textures/shapes/rsquare/shape.png.mcmeta",
+    "sha1": "809dfb6d0f7b76b31459eb734827089680a44090",
+    "size": 40
+   },
+   {
     "path": "kubejs/assets/ftbteams/lang/uk_ua.json",
     "sha1": "2582cedc203db59eead23011be5778781f65aeda",
     "size": 3155
@@ -1847,6 +2027,116 @@
     "path": "kubejs/assets/minecraft/font/illageralt.json",
     "sha1": "c85c2a049ab19b48f30779c5d24c37abe0fbaeb6",
     "size": 5653
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/hud/hotbar.png",
+    "sha1": "444dde4123e3f62172c08152a0244e5ace1cdf8e",
+    "size": 716
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/hud/hotbar_offhand_left.png",
+    "sha1": "5634f39412fe9054819ece7d420763683a92ca2d",
+    "size": 443
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/hud/hotbar_offhand_right.png",
+    "sha1": "7711164f0e375b9366a2c9021ca050e0ee884ebd",
+    "size": 423
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/hud/hotbar_selection.png",
+    "sha1": "e3b3a3c61dabf1274b1480721f68ec444dc74d7f",
+    "size": 197
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/button.png",
+    "sha1": "b98570a8f81d6dd411230b0569c819d61da35ccb",
+    "size": 3963
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/button.png.mcmeta",
+    "sha1": "11bf074d748f2449c8133e33f5c4ff652092d2de",
+    "size": 164
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/button_disabled.png",
+    "sha1": "76fb7648502e9347b22117533cd2e42751434444",
+    "size": 3463
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/button_disabled.png.mcmeta",
+    "sha1": "9ffeef6939aac78028b8dc7a8d637f03ba6f4b01",
+    "size": 164
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/button_highlighted.png",
+    "sha1": "a9fb9c004f4b926bc103046f46d4bbc2a7fca130",
+    "size": 3992
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/button_highlighted.png.mcmeta",
+    "sha1": "11bf074d748f2449c8133e33f5c4ff652092d2de",
+    "size": 164
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider.png",
+    "sha1": "3e544cbf8cec2bc347897c2b4d8d1c7931dba7af",
+    "size": 3395
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider.png.mcmeta",
+    "sha1": "9ffeef6939aac78028b8dc7a8d637f03ba6f4b01",
+    "size": 164
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle.png",
+    "sha1": "e61c7d3c546f31dc6acd6e78446a6bd47a0116a4",
+    "size": 298
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle.png.mcmeta",
+    "sha1": "ca537cb0bdecc7e8692958f8b48af7f8cc017f71",
+    "size": 285
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle_highlighted.png",
+    "sha1": "c9e3d467b8aa2286dc9639aa7910e82b3c79c646",
+    "size": 308
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle_highlighted.png.mcmeta",
+    "sha1": "ca537cb0bdecc7e8692958f8b48af7f8cc017f71",
+    "size": 285
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_highlighted.png",
+    "sha1": "9aaff1c3359e7cf41048ebaf72b63a57cc277157",
+    "size": 3960
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_highlighted.png.mcmeta",
+    "sha1": "9ffeef6939aac78028b8dc7a8d637f03ba6f4b01",
+    "size": 164
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field.png",
+    "sha1": "d055db5696daaa895756aee76248f1a91594d821",
+    "size": 210
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field.png.mcmeta",
+    "sha1": "9ffeef6939aac78028b8dc7a8d637f03ba6f4b01",
+    "size": 164
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field_highlighted.png",
+    "sha1": "392e3acdc8dcd6485d66153e15966b0745d30931",
+    "size": 209
+   },
+   {
+    "path": "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field_highlighted.png.mcmeta",
+    "sha1": "9ffeef6939aac78028b8dc7a8d637f03ba6f4b01",
+    "size": 164
    },
    {
     "path": "kubejs/assets/modernfix/lang/uk_ua.json",
@@ -2139,14 +2429,19 @@
     "size": 12192
    },
    {
+    "path": "kubejs/assets/wilds/jade_themes/journal.json",
+    "sha1": "a2d7d7ea4a9458971eb3b533ec24390706ed7a57",
+    "size": 313
+   },
+   {
     "path": "kubejs/assets/wilds/lang/en_us.json",
-    "sha1": "7793c347b187dd9f24f062730e6f7a0db87409bc",
-    "size": 1443
+    "sha1": "734d40cbd2f4666fcf9f9c1be653ca12bea21da8",
+    "size": 1481
    },
    {
     "path": "kubejs/assets/wilds/lang/uk_ua.json",
-    "sha1": "00c30562affe87567bff46b2ce90b0980774b20e",
-    "size": 2228
+    "sha1": "aae6a939a87ddb18ba217520415a84bce6478bc8",
+    "size": 2337
    },
    {
     "path": "kubejs/assets/wilds/sidebar_buttons/skills.json",
@@ -2167,6 +2462,16 @@
     "path": "kubejs/assets/wilds/textures/gui/skilltree.png",
     "sha1": "4f84c9b891a3cf05411216c41e2019ed6f4e8fc4",
     "size": 5039632
+   },
+   {
+    "path": "kubejs/assets/wilds_names/lang/en_us.json",
+    "sha1": "eeef4d49ee6ed5d06cb632871d3eb4260f8deed4",
+    "size": 14391
+   },
+   {
+    "path": "kubejs/assets/wilds_names/lang/uk_ua.json",
+    "sha1": "8f3466e682ed59480e97d12e5f0c4355849cc08a",
+    "size": 18574
    },
    {
     "path": "kubejs/assets/xaerobetterpvp/lang/uk_ua.json",
@@ -3417,13 +3722,13 @@
   "initial": [
    {
     "path": "config/DistantHorizons.toml",
-    "sha1": "d348318fb146f7e82561a5fa9688b9f860ad244b",
-    "size": 775
+    "sha1": "5983ddc8f8f21b262c5734ab7636ba10c5a5a087",
+    "size": 1203
    },
    {
     "path": "config/ftbquests-client.snbt",
-    "sha1": "d35cbdec1d3eb57f37505aed38984374f7817f7c",
-    "size": 351
+    "sha1": "098f58e1f7c56a4da0668cd81d1def156bd7234f",
+    "size": 412
    },
    {
     "path": "config/sodium-extra-options.json",
