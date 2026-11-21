@@ -9,15 +9,70 @@
 	id: "22E1A37F318050E4"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.7250000000000005d
+			height: 3.15d
 			image: "item:minecraft:oak_sapling"
 			order: -1
 			rotation: 0.0d
-			width: 4.7250000000000005d
-			x: 4.0d
+			width: 3.15d
+			x: -2.3625d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:minecraft:book"
+			order: -2
+			rotation: 11.0d
+			width: 1.1d
+			x: 2.097d
+			y: 3.366d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecraft:knowledge_book"
+			order: -2
+			rotation: -7.0d
+			width: 1.0d
+			x: 8.565d
+			y: 3.399d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:minecraft:compass"
+			order: -2
+			rotation: -1.0d
+			width: 1.1d
+			x: -0.543d
+			y: -3.234d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecraft:filled_map"
+			order: -2
+			rotation: 2.0d
+			width: 1.0d
+			x: 9.115d
+			y: -2.128d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:crafting_table"
+			order: -2
+			rotation: 10.0d
+			width: 1.2000000000000002d
+			x: 7.795d
+			y: -3.514d
 		}
 	]
 	order_index: 0
@@ -65,6 +120,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				1BD29F9EBE206381: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"1BD29F9EBE206381"
 			]
@@ -87,6 +150,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "5FC93AE4A6CFC901"
@@ -98,6 +163,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				1BD29F9EBE206381: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"1BD29F9EBE206381"
 			]
@@ -120,6 +193,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "63EF98AE8618B608"
@@ -131,6 +206,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				7B4743A248E46AF1: [
+					2.9d
+					-0.875d
+					3.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"7B4743A248E46AF1"
 			]
@@ -153,6 +236,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "1798168496956DA4"
@@ -164,6 +249,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				7B4743A248E46AF1: [
+					2.9d
+					-0.875d
+					3.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"7B4743A248E46AF1"
 			]
@@ -186,6 +279,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "42B08382FA16889B"
@@ -197,6 +292,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				77215B6E09402AA4: [
+					2.9d
+					0.875d
+					3.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"77215B6E09402AA4"
 			]
@@ -228,6 +331,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "205AD8E5E2AE5994"
@@ -239,6 +344,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				6D6EF2E6F0E90114: [
+					4.9d
+					-0.875d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"6D6EF2E6F0E90114"
 			]
@@ -261,6 +374,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "41D3E08EB62BBF2C"
@@ -272,6 +387,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				60B32C5A3603EFB3: [
+					6.9d
+					-0.875d
+					7.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"60B32C5A3603EFB3"
 			]
@@ -303,6 +426,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "186E3CADCD57831E"
@@ -314,6 +439,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				60B32C5A3603EFB3: [
+					6.9d
+					-0.875d
+					7.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"60B32C5A3603EFB3"
 			]
@@ -336,6 +469,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "544E936B2E2F9B20"
@@ -347,6 +482,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				7E869C5832BD6B12: [
+					4.0d
+					-1.05d
+					6.0d
+					-0.7d
+				]
+			}
 			dependencies: [
 				"7E869C5832BD6B12"
 			]
@@ -378,6 +521,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "54224D6514B79246"
@@ -389,6 +534,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				7B4743A248E46AF1: [
+					2.0d
+					0.7d
+					4.0d
+					1.05d
+				]
+			}
 			dependencies: [
 				"7B4743A248E46AF1"
 			]
@@ -412,6 +565,8 @@
 					type: "command"
 				}
 			]
+			shape: "diamond"
+			size: 0.9d
 			tasks: [
 				{
 					id: "510AB9BCE5590BA9"

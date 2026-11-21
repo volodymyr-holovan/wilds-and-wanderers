@@ -12,5 +12,5 @@ summary: Учениця Мілена, учениця мага (дорученн�
 «Щоб показати йому, я маю зробити свій перший сувій. Для цього потрібна тайна есенція — вона сиплеться з магів і їхніх скринь у вежах.»
 Принесіть дванадцять тайної есенції. Чарівники Iron's Spells і їхні вежі — найкращі джерела.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "block.irons_spellbooks.inscription_table", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.lapis_lazuli", "color": "aqua"}, {"text": " ×16", "color": "gray"}, {"text": ", 220 досвіду, скриня здобичі, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[irons_spellbooks:inscription_table]], [[minecraft:lapis_lazuli]] ×16, 220 досвіду, скриня здобичі, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

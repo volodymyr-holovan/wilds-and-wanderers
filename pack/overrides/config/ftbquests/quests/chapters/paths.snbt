@@ -9,15 +9,59 @@
 	id: "23A0EECBA717BD81"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.0d
+			height: 3.0d
 			image: "item:minecraft:compass"
 			order: -1
 			rotation: 0.0d
-			width: 4.0d
-			x: 1.0d
+			width: 3.0d
+			x: -2.25d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:iron_sword"
+			order: -2
+			rotation: 9.0d
+			width: 1.2000000000000002d
+			x: 0.105d
+			y: -6.191d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:minecraft:bow"
+			order: -2
+			rotation: 1.0d
+			width: 1.1d
+			x: -0.225d
+			y: 3.172d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:minecraft:enchanted_book"
+			order: -2
+			rotation: -10.0d
+			width: 0.8d
+			x: -0.455d
+			y: -1.678d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecraft:diamond_pickaxe"
+			order: -2
+			rotation: 2.0d
+			width: 1.0d
+			x: 1.185d
+			y: 7.351d
 		}
 	]
 	order_index: 26
@@ -56,6 +100,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.0d
+					-2.756d
+					2.0d
+					-3.369d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -78,6 +130,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "43350FF4B1481F29"
@@ -88,6 +142,14 @@
 			y: -6.125d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.0d
+					-1.969d
+					2.0d
+					-2.406d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -110,6 +172,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "58A86B683B0EA580"
@@ -120,6 +184,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.9d
+					0.0d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -142,6 +214,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1D21351328F14D9E"
@@ -152,6 +226,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -174,6 +256,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "16C8771A835A6EFD"
@@ -184,6 +268,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -206,6 +298,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "63AC53A3545A51D6"
@@ -216,6 +310,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.9d
+					0.0d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -238,6 +340,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "22DACF811BC9BB74"
@@ -248,6 +352,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.0d
+					1.969d
+					2.0d
+					2.406d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -270,6 +382,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "5902C71456A4B4B2"
@@ -280,6 +394,14 @@
 			y: 4.375d
 		}
 		{
+			dep_control_pts: {
+				6DCE07A225BACFE6: [
+					0.0d
+					2.756d
+					2.0d
+					3.369d
+				]
+			}
 			dependencies: [
 				"6DCE07A225BACFE6"
 			]
@@ -302,6 +424,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1B70CAFC69DCF8D7"

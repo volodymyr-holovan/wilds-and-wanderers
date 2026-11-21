@@ -12,5 +12,5 @@ summary: Учениця Мілена, учениця мага (дорученн�
 «Тепер я мушу писати сувої сама, а для цього потрібні чорнила. Їх варять у казані алхіміка з чорнильного мішка й тайної есенції.»
 Принесіть вісім звичайних чорнил.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "block.irons_spellbooks.scroll_forge", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 200 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[irons_spellbooks:scroll_forge]], [[minecraft:emerald]] ×8, 200 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

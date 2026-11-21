@@ -9,15 +9,59 @@
 	id: "204CF9B6DEB92A50"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.7250000000000005d
+			height: 3.15d
 			image: "item:goblins_tyranny:coin"
 			order: -1
 			rotation: 0.0d
-			width: 4.7250000000000005d
-			x: 4.0d
+			width: 3.15d
+			x: -2.3625d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:goblins_tyranny:hut_logs"
+			order: -2
+			rotation: 2.0d
+			width: 1.1d
+			x: 7.575d
+			y: 3.449d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:goblins_tyranny:fake_goblin_ears_helmet"
+			order: -2
+			rotation: 2.0d
+			width: 0.8d
+			x: 0.293d
+			y: -2.475d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:goblins_tyranny:goblin_upgraded_mace"
+			order: -2
+			rotation: 1.0d
+			width: 1.1d
+			x: 3.395d
+			y: -2.657d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:goblins_tyranny:goblins_prototype_chestplate"
+			order: -2
+			rotation: -13.0d
+			width: 1.0d
+			x: -1.401d
+			y: -2.954d
 		}
 	]
 	order_index: 17
@@ -67,6 +111,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				13105751B35D9192: [
+					0.9d
+					0.0d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"13105751B35D9192"
 			]
@@ -107,6 +159,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "117EEEF7D1DB6981"
@@ -121,6 +175,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				13105751B35D9192: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"13105751B35D9192"
 			]
@@ -165,6 +227,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "goblins_tyranny:leader_goblin"
@@ -183,6 +247,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				15D3F3415C3EBCAD: [
+					2.9d
+					-0.875d
+					3.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"15D3F3415C3EBCAD"
 			]
@@ -216,6 +288,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "4CF8F157E42FE10D"
@@ -230,6 +304,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				13105751B35D9192: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"13105751B35D9192"
 			]
@@ -271,6 +353,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "7830736569086438"
@@ -282,6 +366,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				13105751B35D9192: [
+					0.9d
+					0.0d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"13105751B35D9192"
 			]
@@ -315,6 +407,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					entity: "orc_hut:orc"
@@ -327,6 +421,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				15D3F3415C3EBCAD: [
+					2.9d
+					-0.875d
+					3.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"15D3F3415C3EBCAD"
 			]
@@ -360,6 +462,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "2DB2982274D6D0FE"
@@ -371,6 +475,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				14038EE3F653F0D0: [
+					4.9d
+					0.875d
+					5.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"14038EE3F653F0D0"
 			]
@@ -415,6 +527,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "33B94606DBE53F72"
@@ -426,6 +540,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				3E1ECC59C27AA30D: [
+					6.9d
+					0.0d
+					7.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"3E1ECC59C27AA30D"
 			]
@@ -459,6 +581,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "14A0F09F84D3F710"

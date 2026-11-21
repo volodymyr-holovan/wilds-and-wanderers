@@ -12,5 +12,5 @@ summary: Отець Мирон, мандрівний священник:
 «Мертві не винні, що вони мертві. Але їм не можна блукати серед живих. Моя віра сильна, а руки слабкі.»
 Упокойте п'ятнадцятьох зомбі. Хай Бог прийме їх душі.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.golden_apple", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.experience_bottle", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 180 досвіду, 70 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:golden_apple]], [[minecraft:experience_bottle]] ×8, 180 досвіду, 70 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

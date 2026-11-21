@@ -12,5 +12,5 @@ summary: Відлюдник Йоахим, старий шукач порталі
 «Я віддам вам усе, що зібрав за життя, — тільки поверніться і розкажіть, як вона падала.»
 Подолайте Дракона Енду. Спершу розбийте кристали на вежах — вони його лікують.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.netherite_ingot", "color": "aqua"}, {"text": " ×2", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.elytra", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.diamond", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 1500 досвіду, скриня здобичі, 600 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:netherite_ingot]] ×2, [[minecraft:elytra]], [[minecraft:diamond]] ×10, 1500 досвіду, скриня здобичі, 600 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

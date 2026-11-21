@@ -12,5 +12,5 @@ summary: Лукія, сільська лікарка (доручення 4 з 4)
 «Закликач живе в лісовому особняку або ходить з патрулями. Поки він живий, усе почнеться знову.»
 Знайдіть і зупиніть закликача.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.totem_of_undying", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×16", "color": "gray"}, {"text": ", 420 досвіду, скриня здобичі, 160 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:totem_of_undying]], [[minecraft:emerald]] ×16, 420 досвіду, скриня здобичі, 160 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

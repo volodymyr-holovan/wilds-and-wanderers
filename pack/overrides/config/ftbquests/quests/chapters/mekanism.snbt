@@ -9,15 +9,125 @@
 	id: "10138904D2605D92"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 9.450000000000001d
+			height: 5.0d
 			image: "item:mekanism:metallurgic_infuser"
 			order: -1
 			rotation: 0.0d
-			width: 9.450000000000001d
-			x: 8.0d
+			width: 5.0d
+			x: -3.75d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:mekanism:ingot_osmium"
+			order: -2
+			rotation: -1.0d
+			width: 0.8d
+			x: 8.114d
+			y: -4.117d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:mekanismgenerators:heat_generator"
+			order: -2
+			rotation: 10.0d
+			width: 1.2000000000000002d
+			x: 11.8d
+			y: -3.659d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:mekanism:enrichment_chamber"
+			order: -2
+			rotation: -13.0d
+			width: 1.2000000000000002d
+			x: 1.958d
+			y: -4.604d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:mekanism:configurator"
+			order: -2
+			rotation: 2.0d
+			width: 1.1d
+			x: 3.288d
+			y: 3.686d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:mekanism:purification_chamber"
+			order: -2
+			rotation: -6.0d
+			width: 1.2000000000000002d
+			x: 1.692d
+			y: 2.551d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:mekanism:advanced_control_circuit"
+			order: -2
+			rotation: 10.0d
+			width: 1.1d
+			x: 10.318d
+			y: 2.74d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:mekanism:jetpack"
+			order: -2
+			rotation: 4.0d
+			width: 0.9d
+			x: 16.208d
+			y: -6.466d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:mekanism:chemical_injection_chamber"
+			order: -2
+			rotation: -12.0d
+			width: 1.0d
+			x: 15.676d
+			y: 4.279d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:mekanism:chemical_crystallizer"
+			order: -2
+			rotation: 5.0d
+			width: 1.1d
+			x: 11.192d
+			y: -5.495d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:mekanism:thermal_evaporation_controller"
+			order: -2
+			rotation: -15.0d
+			width: 1.2000000000000002d
+			x: 14.042d
+			y: 4.846d
 		}
 	]
 	order_index: 5
@@ -69,6 +179,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				2FFB22C0A92AC872: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"2FFB22C0A92AC872"
 			]
@@ -91,6 +209,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "6F11ADBDB8F29BF0"
@@ -132,6 +252,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				2FFB22C0A92AC872: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"2FFB22C0A92AC872"
 			]
@@ -154,6 +282,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "1EE0F49964A034E6"
@@ -185,6 +315,20 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				39832A1BF377750A: [
+					2.9d
+					0.875d
+					3.1d
+					-1.75d
+				]
+				413043436901FC89: [
+					2.9d
+					-0.875d
+					3.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"413043436901FC89"
 				"39832A1BF377750A"
@@ -208,6 +352,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "66BA8049232AA888"
@@ -230,6 +376,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				5B2012F494AA9FD1: [
+					4.0d
+					-3.325d
+					6.0d
+					-3.675d
+				]
+			}
 			dependencies: [
 				"5B2012F494AA9FD1"
 			]
@@ -252,6 +406,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "4FA3583DAC79FEC1"
@@ -266,6 +422,14 @@
 			y: -5.25d
 		}
 		{
+			dep_control_pts: {
+				5B2012F494AA9FD1: [
+					4.9d
+					-1.75d
+					5.1d
+					-3.5d
+				]
+			}
 			dependencies: [
 				"5B2012F494AA9FD1"
 			]
@@ -288,6 +452,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "25F569E3F23FF0E4"
@@ -318,6 +484,14 @@
 			y: -3.5d
 		}
 		{
+			dep_control_pts: {
+				413043436901FC89: [
+					2.9d
+					-0.875d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"413043436901FC89"
 			]
@@ -340,6 +514,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 4L
@@ -382,6 +558,20 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					5.8d
+					0.0d
+					6.2d
+					-1.75d
+				]
+				68634AF527B8D1B6: [
+					6.9d
+					-3.5d
+					7.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"68634AF527B8D1B6"
 				"39D714F252160877"
@@ -405,6 +595,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "2E520E08BC77BF14"
@@ -419,6 +611,20 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					5.8d
+					0.0d
+					6.2d
+					0.0d
+				]
+				68634AF527B8D1B6: [
+					6.0d
+					-1.925d
+					8.0d
+					-1.575d
+				]
+			}
 			dependencies: [
 				"68634AF527B8D1B6"
 				"39D714F252160877"
@@ -442,6 +648,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "61E2CC23665A388A"
@@ -464,6 +672,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				4B6DEB35841B67C8: [
+					8.9d
+					0.0d
+					9.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"4B6DEB35841B67C8"
 			]
@@ -497,6 +713,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "5EE4004A8F734DED"
@@ -527,6 +745,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				68634AF527B8D1B6: [
+					6.0d
+					-1.137d
+					8.0d
+					-0.613d
+				]
+			}
 			dependencies: [
 				"68634AF527B8D1B6"
 			]
@@ -549,6 +775,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "5A626E5E4574B10C"
@@ -581,6 +809,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					4.9d
+					0.0d
+					5.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"39D714F252160877"
 			]
@@ -603,6 +839,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 16L
@@ -644,6 +882,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				39832A1BF377750A: [
+					2.9d
+					0.875d
+					3.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"39832A1BF377750A"
 			]
@@ -667,6 +913,8 @@
 					type: "command"
 				}
 			]
+			shape: "diamond"
+			size: 0.9d
 			tasks: [
 				{
 					id: "13321E3034AC6628"
@@ -697,6 +945,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					4.9d
+					0.0d
+					5.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"39D714F252160877"
 			]
@@ -719,6 +975,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "11AEADBF0AA86171"
@@ -733,6 +991,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					4.9d
+					0.0d
+					5.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"39D714F252160877"
 			]
@@ -755,6 +1021,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "794ABBB1898FD0AC"
@@ -786,6 +1054,20 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				3B7E4423F12FACFD: [
+					7.8d
+					-1.75d
+					8.2d
+					0.875d
+				]
+				4B6DEB35841B67C8: [
+					8.9d
+					0.0d
+					9.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"4B6DEB35841B67C8"
 				"3B7E4423F12FACFD"
@@ -809,6 +1091,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 24L
@@ -858,6 +1142,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				450FD4F2B4192C24: [
+					10.9d
+					0.875d
+					11.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"450FD4F2B4192C24"
 			]
@@ -880,6 +1172,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 32L
@@ -948,6 +1242,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				450FD4F2B4192C24: [
+					10.9d
+					0.875d
+					11.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"450FD4F2B4192C24"
 			]
@@ -970,6 +1272,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "4EE4AACE92E5032B"
@@ -1002,6 +1306,20 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				213057252DB3BB90: [
+					12.9d
+					-0.875d
+					13.1d
+					-0.875d
+				]
+				71D2BD5535739D9F: [
+					12.9d
+					0.875d
+					13.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"71D2BD5535739D9F"
 				"213057252DB3BB90"
@@ -1036,6 +1354,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 24L
@@ -1076,6 +1396,20 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				17D0656FAD6AEFB4: [
+					10.7d
+					1.75d
+					11.3d
+					0.875d
+				]
+				213057252DB3BB90: [
+					12.9d
+					-0.875d
+					13.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"213057252DB3BB90"
 				"17D0656FAD6AEFB4"
@@ -1158,6 +1492,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					4.0d
+					1.575d
+					6.0d
+					1.925d
+				]
+			}
 			dependencies: [
 				"39D714F252160877"
 			]
@@ -1180,6 +1522,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "4B0D4E7C82FC7A8F"
@@ -1219,6 +1563,14 @@
 			y: 3.5d
 		}
 		{
+			dep_control_pts: {
+				39D714F252160877: [
+					4.0d
+					2.363d
+					6.0d
+					2.887d
+				]
+			}
 			dependencies: [
 				"39D714F252160877"
 			]
@@ -1241,6 +1593,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "46D1D106040A2020"
@@ -1255,6 +1609,20 @@
 			y: 5.25d
 		}
 		{
+			dep_control_pts: {
+				418978ACFC21C8F0: [
+					14.9d
+					0.875d
+					15.1d
+					0.0d
+				]
+				7962AB82AD302E11: [
+					14.9d
+					-0.875d
+					15.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"7962AB82AD302E11"
 				"418978ACFC21C8F0"

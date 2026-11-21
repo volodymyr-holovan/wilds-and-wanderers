@@ -20,6 +20,7 @@ import ua.wilds.core.skills.ClientAbilities;
 public final class WildsCoreClient {
     public WildsCoreClient(IEventBus modBus) {
         FirstRunDefaults.init();
+        ConfigPatches.run();
         ua.wilds.core.client.music.MusicPack.prepare();
         NeoForge.EVENT_BUS.addListener(ua.wilds.core.client.music.MusicPack::tick);
         NeoForge.EVENT_BUS.addListener(FirstRunDefaults::tick);
@@ -60,6 +61,7 @@ public final class WildsCoreClient {
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> ua.wilds.core.client.gear.FinderField.tick());
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> PlaceTest.tick());
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> CmdTest.tick());
+        if (UiTour.on()) NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> UiTour.tick());
         NeoForge.EVENT_BUS.addListener(SortTitle::onInit);
         NeoForge.EVENT_BUS.addListener(SortTitle::onClick);
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.client.event.ClientTickEvent.Post t) -> AllRecipes.tick());

@@ -12,5 +12,5 @@ summary: Інженер Онисим, механік-самоук (доруче�
 «Колесо роблять із дощок і валу. Четверо коліс — і млин молотиме навіть у штиль.»
 Принесіть чотири водяні колеса.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.create.goggles", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 200 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[create:goggles]], [[minecraft:emerald]] ×10, 200 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

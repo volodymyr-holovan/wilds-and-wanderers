@@ -1,0 +1,20 @@
+{
+	"version": 100,
+	"tooltipStyle": {
+		"backgroundColor": "#E6150F0B",
+		"borderColor": [
+			"#B08434",
+			"#B08434",
+			"#5A4220",
+			"#5A4220"
+		]
+	},
+	"textColors": {
+		"title": "#F2D08A",
+		"info": "#D8CDB8",
+		"success": "#8FD67C",
+		"warning": "#F2C94C",
+		"danger": "#E8705A",
+		"failure": "#C85A4A"
+	}
+}

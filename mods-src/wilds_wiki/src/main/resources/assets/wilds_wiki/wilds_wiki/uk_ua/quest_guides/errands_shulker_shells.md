@@ -12,5 +12,5 @@ summary: Торговка Ліза, купчиха шовку:
 «Для цього потрібні мушлі. Шалкери ховаються в баштах міст Енду й прикидаються блоками.»
 Принесіть вісім мушель шалкерів.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "block.minecraft.shulker_box", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.diamond", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 320 досвіду, 120 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:shulker_box]], [[minecraft:diamond]] ×4, 320 досвіду, 120 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

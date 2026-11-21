@@ -12,5 +12,5 @@ summary: Ярема, колишній солдат (доручення 1 з 4):
 «Зараз їхня застава знову стоїть неподалік. Мої руки трусяться, коли беру арбалет. Але ваші, бачу, ні.»
 Покладіть вісьмох розбійників. Може, тоді я засну хоч одну ніч без того вогню перед очима.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.crossbow", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.arrow", "color": "aqua"}, {"text": " ×32", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 200 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:crossbow]], [[minecraft:arrow]] ×32, [[minecraft:emerald]] ×8, 200 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

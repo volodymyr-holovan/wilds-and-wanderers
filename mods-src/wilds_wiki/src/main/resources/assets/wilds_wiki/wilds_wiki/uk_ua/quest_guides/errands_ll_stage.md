@@ -12,5 +12,5 @@ summary: Тарас, мандрівний бард (доручення 3 з 3):
 «Щоб її чули й без мене, мені потрібен програвач. Запишу баладу на платівку — і вона житиме довше за мене.»
 Принесіть програвач.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.music_disc_otherside", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 180 досвіду, 70 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:music_disc_otherside]], [[minecraft:emerald]] ×10, 180 досвіду, 70 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

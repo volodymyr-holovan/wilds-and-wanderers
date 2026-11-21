@@ -9,15 +9,125 @@
 	id: "3544A01D328B9026"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 10.0d
+			height: 5.0d
 			image: "item:minecraft:writable_book"
 			order: -1
 			rotation: 0.0d
-			width: 10.0d
-			x: 0.0d
+			width: 5.0d
+			x: -10.15d
 			y: 26.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:minecraft:golden_helmet"
+			order: -2
+			rotation: -13.0d
+			width: 0.8d
+			x: 5.688d
+			y: 31.775d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:brewing_stand"
+			order: -2
+			rotation: -7.0d
+			width: 0.9d
+			x: 6.162d
+			y: 29.905d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:ghast_tear"
+			order: -2
+			rotation: 4.0d
+			width: 0.9d
+			x: -2.591d
+			y: 24.955d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:wither_skeleton_skull"
+			order: -2
+			rotation: -13.0d
+			width: 0.9d
+			x: -7.552d
+			y: 35.405d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:netherite_scrap"
+			order: -2
+			rotation: -2.0d
+			width: 1.2000000000000002d
+			x: 3.539d
+			y: 39.695d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:gold_ingot"
+			order: -2
+			rotation: -15.0d
+			width: 1.2000000000000002d
+			x: 4.708d
+			y: 44.645d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:warped_fungus_on_a_stick"
+			order: -2
+			rotation: 13.0d
+			width: 1.2000000000000002d
+			x: 2.907d
+			y: 41.895d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:phantom_membrane"
+			order: -2
+			rotation: -12.0d
+			width: 0.9d
+			x: 3.255d
+			y: 25.505d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecraft:shulker_shell"
+			order: -2
+			rotation: -6.0d
+			width: 1.0d
+			x: 1.074d
+			y: 43.435d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:irons_spellbooks:arcane_essence"
+			order: -2
+			rotation: 3.0d
+			width: 1.2000000000000002d
+			x: 7.078d
+			y: 50.695d
 		}
 	]
 	order_index: 27
@@ -53,6 +163,8 @@
 			id: "7F747290A4A52051"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "76D9135EFA0E26F7"
@@ -72,6 +184,8 @@
 			}
 			id: "19DEA2F58FA143A2"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -90,6 +204,8 @@
 			id: "618C95D0AE6DACC4"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1A2E9EBF3E959C86"
@@ -109,6 +225,8 @@
 			}
 			id: "36E9654C4C616D0A"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:pillager"
@@ -124,6 +242,8 @@
 			id: "12A8D042F72D17A8"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "39668C371428687A"
@@ -143,6 +263,8 @@
 			}
 			id: "3E94444CB462EAF5"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -161,6 +283,8 @@
 			id: "75B7D7B8C81F2887"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "732ED0DECB62E552"
@@ -180,6 +304,8 @@
 			}
 			id: "488D62A844F2EA3C"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "157A1F42A17C1A52"
@@ -197,6 +323,8 @@
 			id: "3940A7C0195F7970"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "66A9A1926E4A8B03"
@@ -216,6 +344,8 @@
 			}
 			id: "424B8F8834C8B61F"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "iceandfire:fire_dragon"
@@ -231,6 +361,8 @@
 			id: "1B55A44445E9790E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "44A610FEBE87A4E2"
@@ -250,6 +382,8 @@
 			}
 			id: "506205457D8D3353"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -268,6 +402,8 @@
 			id: "10354F8A8551E38F"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "41A72888812E0351"
@@ -287,6 +423,8 @@
 			}
 			id: "17C171B972451303"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -305,6 +443,8 @@
 			id: "40ABBB3E4D623973"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "71116FE7A6FE7A76"
@@ -324,6 +464,8 @@
 			}
 			id: "3751AFAC5DD312EC"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -342,6 +484,8 @@
 			id: "70D97CF21BA82000"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "5F98A3A26785B773"
@@ -361,6 +505,8 @@
 			}
 			id: "78C5A7DE40D82CFB"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -379,6 +525,8 @@
 			id: "2F8116C8BB1F52C9"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3CD1423B98CE7A50"
@@ -398,6 +546,8 @@
 			}
 			id: "64F19821B5FF6E39"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -416,6 +566,8 @@
 			id: "1290F8470CF31418"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "74E115D4EAB83F44"
@@ -435,6 +587,8 @@
 			}
 			id: "4C7219F5707835B6"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "71F84B77C935EA96"
@@ -452,6 +606,8 @@
 			id: "138A16DCFE107162"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "7AB5CAAFD7E06A8E"
@@ -471,6 +627,8 @@
 			}
 			id: "612E0F8D3BF1CC77"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "53892A55AA13ADF0"
@@ -488,6 +646,8 @@
 			id: "67C2D380381D64FC"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6CF4ECF1425DC1CF"
@@ -507,6 +667,8 @@
 			}
 			id: "55357BE579DC7F5C"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -525,6 +687,8 @@
 			id: "6D20C6DF112D13BD"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3B298A4559797918"
@@ -544,6 +708,8 @@
 			}
 			id: "60584997CF39B901"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 12L
@@ -562,6 +728,8 @@
 			id: "7B3587FD82C5EFC4"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "11CFEBF49FFB97CE"
@@ -581,6 +749,8 @@
 			}
 			id: "553EB0D6A8673AD6"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -599,6 +769,8 @@
 			id: "197B1013DBBCFA4B"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "583D7343FF86EC33"
@@ -618,6 +790,8 @@
 			}
 			id: "3494F7114B615967"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 2L
@@ -636,6 +810,8 @@
 			id: "1099241061D2A9F4"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "55B56180C3994DDB"
@@ -655,6 +831,8 @@
 			}
 			id: "6C2223F4311DCF8E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 16L
@@ -673,6 +851,8 @@
 			id: "7FBB1A9E6FECEF4E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3E4EC666F10472AB"
@@ -692,6 +872,8 @@
 			}
 			id: "33AE7A44B420D400"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "ars_nouveau:wilden_hunter"
@@ -707,6 +889,8 @@
 			id: "3D170866B6747B3F"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "728EC9CB2578D2A9"
@@ -726,6 +910,8 @@
 			}
 			id: "2F4F59D90EBF02C5"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "irons_spellbooks:dead_king"
@@ -741,6 +927,8 @@
 			id: "138A3FAD187372F1"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "258263E9A97C2D2D"
@@ -760,6 +948,8 @@
 			}
 			id: "7B369B6F92AEE1F9"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 32L
@@ -778,6 +968,8 @@
 			id: "45E52B7BEEC45241"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1DC73658156A7FDC"
@@ -797,6 +989,8 @@
 			}
 			id: "7467DC0664AB429C"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -815,6 +1009,8 @@
 			id: "100433C49D1CD8B9"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "33B496B06582BF81"
@@ -834,6 +1030,8 @@
 			}
 			id: "383A8FFECFA5087E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1AF4E6FA06090A97"
@@ -851,6 +1049,8 @@
 			id: "381FF0A2D76A6D89"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "11C6D0AFCDDA3AAA"
@@ -870,6 +1070,8 @@
 			}
 			id: "718CCB18B06473A3"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 16L
@@ -888,6 +1090,8 @@
 			id: "6734983E6B8EE291"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "13489664C6DB321B"
@@ -907,6 +1111,8 @@
 			}
 			id: "3237832AA97A9C77"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -925,6 +1131,8 @@
 			id: "15A00B67B6842B83"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "28BC3A2722A21D96"
@@ -944,6 +1152,8 @@
 			}
 			id: "26FFE6750D6C789F"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -962,6 +1172,8 @@
 			id: "657D2D7C3024415E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "191CCBA9E0CB2663"
@@ -981,6 +1193,8 @@
 			}
 			id: "57283EB763F37AF2"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 2L
@@ -999,6 +1213,8 @@
 			id: "5774D3E58745ABF1"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6DA1D4A8B08F8194"
@@ -1018,6 +1234,8 @@
 			}
 			id: "3F18DDC5E0924722"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6208EEE7E64EF9AC"
@@ -1035,6 +1253,8 @@
 			id: "2E867FAE0AD0E328"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "38B3C6C6C3F216FF"
@@ -1054,6 +1274,8 @@
 			}
 			id: "719C5DC4376B0241"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 24L
@@ -1072,6 +1294,8 @@
 			id: "216043C196C14D18"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "56CD799B0467EEBC"
@@ -1091,6 +1315,8 @@
 			}
 			id: "2CBCB19969813639"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 16L
@@ -1109,6 +1335,8 @@
 			id: "247BD2D658E04A53"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1DCAA42C999D2B35"
@@ -1128,6 +1356,8 @@
 			}
 			id: "698AEAD5F8A419D7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -1146,6 +1376,8 @@
 			id: "18C25A9BAEDC017D"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "15738EF0F8D3889E"
@@ -1165,6 +1397,8 @@
 			}
 			id: "16BDC13AE064569E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1E2AE10C86D7A5BD"
@@ -1182,6 +1416,8 @@
 			id: "6156FE514919AF1E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4BB83099FCBF9FCF"
@@ -1201,6 +1437,8 @@
 			}
 			id: "4426FE841F4EE5CE"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1718970A1AB6C2E9"
@@ -1216,6 +1454,8 @@
 			id: "471AAFD53ED3CF06"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "5FAA2838571432C0"
@@ -1235,6 +1475,8 @@
 			}
 			id: "66F4D653B82E9440"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "632359F3DC871DFA"
@@ -1250,6 +1492,8 @@
 			id: "18EA9EEB2F3019C5"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "325A3EB8B62CCC5B"
@@ -1269,6 +1513,8 @@
 			}
 			id: "6F076A61B61582CA"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:ender_dragon"
@@ -1284,6 +1530,8 @@
 			id: "27D8AD582BAB2E4E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4362CFB26496251A"
@@ -1303,6 +1551,8 @@
 			}
 			id: "4B48363F7B1742E7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 6L
@@ -1321,6 +1571,8 @@
 			id: "2901270CF77DB874"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4D0156BACE95579A"
@@ -1340,6 +1592,8 @@
 			}
 			id: "6D97E432CD1B45C0"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -1358,6 +1612,8 @@
 			id: "7F55A391D09CAB64"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4A1560753C2E493B"
@@ -1377,6 +1633,8 @@
 			}
 			id: "58A4F42C33E80EF5"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:wolf"
@@ -1392,6 +1650,8 @@
 			id: "10C8AD389E6FDBC9"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "395B149FDFE45D62"
@@ -1411,6 +1671,8 @@
 			}
 			id: "1B27A9A24C6E41BE"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 24L
@@ -1429,6 +1691,8 @@
 			id: "1F494230CFE55225"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1533B8C4ADDB01E0"
@@ -1448,6 +1712,8 @@
 			}
 			id: "1AA805516D7E7EE7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "28F391493315A66E"
@@ -1465,6 +1731,8 @@
 			id: "4C887C73FF4A70DC"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "19CDCBFDD10C03E6"
@@ -1484,6 +1752,8 @@
 			}
 			id: "32B0AF60C0EAA599"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 12L
@@ -1502,6 +1772,8 @@
 			id: "1C3126CB24BA3232"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3AE5E8549F5F1057"
@@ -1521,6 +1793,8 @@
 			}
 			id: "1A097EB5195DD26E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "7AD128AB1D8CAC18"
@@ -1538,6 +1812,8 @@
 			id: "11146B6C59F5E94E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1752FEF2EAD45F8C"
@@ -1557,6 +1833,8 @@
 			}
 			id: "15F2F41165352878"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 48L
@@ -1575,6 +1853,8 @@
 			id: "6A88CF5569A3A0BF"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "53C1F70A9A5DDE1E"
@@ -1594,6 +1874,8 @@
 			}
 			id: "1378D3A1FE92702D"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:zombie_villager"
@@ -1609,6 +1891,8 @@
 			id: "12DCDE38F58179CF"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "18ABF68897859509"
@@ -1628,6 +1912,8 @@
 			}
 			id: "62CF778823702155"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 2L
@@ -1646,6 +1932,8 @@
 			id: "20C02CA38C808053"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "36F1616B915DFDA8"
@@ -1665,6 +1953,8 @@
 			}
 			id: "35F877DCC1C9BE5A"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:witch"
@@ -1680,6 +1970,8 @@
 			id: "1E576DF52769FB90"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "741445DE4870D484"
@@ -1699,6 +1991,8 @@
 			}
 			id: "744AB33E8C168DB9"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:evoker"
@@ -1714,6 +2008,8 @@
 			id: "3C15D16943C95214"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "19F51DA407FBE97A"
@@ -1733,6 +2029,8 @@
 			}
 			id: "1A80E0B75FE45763"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "496308237A550DA4"
@@ -1750,6 +2048,8 @@
 			id: "3510673887BABBAC"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "34A3056D0E54B6E3"
@@ -1769,6 +2069,8 @@
 			}
 			id: "7B386AF636C682BE"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 6L
@@ -1787,6 +2089,8 @@
 			id: "7ADA42540EC8871F"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3A1F3762BEA4014B"
@@ -1806,6 +2110,8 @@
 			}
 			id: "2DEE36FD7A0874C7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:pillager"
@@ -1821,6 +2127,8 @@
 			id: "3D40018EC10987E1"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "5F656F0D09A2B166"
@@ -1840,6 +2148,8 @@
 			}
 			id: "4F69A01081418F8F"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:pillager"
@@ -1855,6 +2165,8 @@
 			id: "7588A9722C7E7771"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "108D6F33A260E252"
@@ -1874,6 +2186,8 @@
 			}
 			id: "118702233F19D4E7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:vindicator"
@@ -1889,6 +2203,8 @@
 			id: "1D12A470F162C870"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3360DC9172D859FC"
@@ -1908,6 +2224,8 @@
 			}
 			id: "6064D1D5583DC921"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:ravager"
@@ -1923,6 +2241,8 @@
 			id: "3119A57797A8FE02"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "37F6689353F4F003"
@@ -1942,6 +2262,8 @@
 			}
 			id: "132890CBB2E83CE2"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:evoker"
@@ -1957,6 +2279,8 @@
 			id: "16CF56C1A34F57C5"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2BA606F499060382"
@@ -1976,6 +2300,8 @@
 			}
 			id: "4D99A8CFA26DCE2B"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 6L
@@ -1994,6 +2320,8 @@
 			id: "7382A5E317DA0EB8"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "25D4D84EEE64F22F"
@@ -2013,6 +2341,8 @@
 			}
 			id: "1352F233D895E2CB"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:spider"
@@ -2028,6 +2358,8 @@
 			id: "53403F160B19E27A"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4090785DAE327FBE"
@@ -2047,6 +2379,8 @@
 			}
 			id: "1A655C74CC018367"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -2065,6 +2399,8 @@
 			id: "4B6C8F4CC345EEFF"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "36D7F1C6E1EE59EB"
@@ -2084,6 +2420,8 @@
 			}
 			id: "78B146B3414A0A24"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:witch"
@@ -2099,6 +2437,8 @@
 			id: "6770ED84F80FD89F"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "555F9812B7C728A1"
@@ -2118,6 +2458,8 @@
 			}
 			id: "2D611B6D05A7193E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:cave_spider"
@@ -2133,6 +2475,8 @@
 			id: "539F4F9B8E67FE93"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "14181FC213A05732"
@@ -2152,6 +2496,8 @@
 			}
 			id: "44ED1F2F0B642A12"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "30983D1BBDF31156"
@@ -2167,6 +2513,8 @@
 			id: "77114252EC07B1F6"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1062D9AE65C49E4B"
@@ -2186,6 +2534,8 @@
 			}
 			id: "12F61822E40941E4"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -2204,6 +2554,8 @@
 			id: "32686447C605B300"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4EE439CE7253CAFC"
@@ -2223,6 +2575,8 @@
 			}
 			id: "7C2F1AEEB6DE6691"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 20L
@@ -2241,6 +2595,8 @@
 			id: "6E5201CA4F165AB7"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "19AC899BA08A5750"
@@ -2260,6 +2616,8 @@
 			}
 			id: "50903549F148981B"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -2278,6 +2636,8 @@
 			id: "70FDEE2E1D50EDA5"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2140C02E1D6988B7"
@@ -2297,6 +2657,8 @@
 			}
 			id: "3CE7724F11BD29E1"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -2315,6 +2677,8 @@
 			id: "6D1191B1821F8D4A"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3F1C0BE8B930B313"
@@ -2334,6 +2698,8 @@
 			}
 			id: "77EDA5C620F40B0D"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "13B7703924D60383"
@@ -2348,6 +2714,8 @@
 			id: "29BC3975BE8C0813"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2C34611FCDF2378D"
@@ -2367,6 +2735,8 @@
 			}
 			id: "5C3BB6FF2C8487B5"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:fox"
@@ -2382,6 +2752,8 @@
 			id: "1F884CD73C9922B8"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2FFFFBDB71FAB04E"
@@ -2401,6 +2773,8 @@
 			}
 			id: "68702D578FC0195A"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 16L
@@ -2419,6 +2793,8 @@
 			id: "3D2928726EDA0090"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "103EDC87D29AD253"
@@ -2438,6 +2814,8 @@
 			}
 			id: "76742920779DBC3B"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:skeleton"
@@ -2453,6 +2831,8 @@
 			id: "6A5036C3CC3BFABD"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3FFE7209E3B2BD44"
@@ -2472,6 +2852,8 @@
 			}
 			id: "7438D7B35711D6B7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6A09C28E828FB0DE"
@@ -2489,6 +2871,8 @@
 			id: "51AD0F5A93F1FB51"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6533315E978587F6"
@@ -2508,6 +2892,8 @@
 			}
 			id: "2AE72A48ECF251E7"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 16L
@@ -2526,6 +2912,8 @@
 			id: "64A2C1C192811B50"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "5FF2259FBE6C9473"
@@ -2545,6 +2933,8 @@
 			}
 			id: "118B6A678B33FDCF"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 32L
@@ -2563,6 +2953,8 @@
 			id: "120BB2862BC3FBD3"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4F21EC917E0B5CF1"
@@ -2582,6 +2974,8 @@
 			}
 			id: "16BF35D0C86DB3DE"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:zombie"
@@ -2597,6 +2991,8 @@
 			id: "4AA53735D401CF8A"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "42C8F626143278C9"
@@ -2616,6 +3012,8 @@
 			}
 			id: "2A60F49A771295A2"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -2634,6 +3032,8 @@
 			id: "386E6AE4EBEE441C"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "170F9BE2CDFDFFC3"
@@ -2653,6 +3053,8 @@
 			}
 			id: "10C6B480D72A6D90"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -2671,6 +3073,8 @@
 			id: "2FD79A1E365F8863"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "3929F159BB079BE4"
@@ -2690,6 +3094,8 @@
 			}
 			id: "368C8EAA1FF395BB"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "eternalnether:warped_enderman"
@@ -2705,6 +3111,8 @@
 			id: "6CCD3E2DA6DAF986"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "454830500C28F41D"
@@ -2724,6 +3132,8 @@
 			}
 			id: "3D1FA2A4F0016CCB"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -2742,6 +3152,8 @@
 			id: "25B780C81C507DEC"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "197C1845901BB302"
@@ -2761,6 +3173,8 @@
 			}
 			id: "1356C4778974BDDC"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2DDD5129807C78B9"
@@ -2778,6 +3192,8 @@
 			id: "6DEA2AB3F2DD3A75"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "7459FB8F9EC8E478"
@@ -2797,6 +3213,8 @@
 			}
 			id: "3DC6AF5FCC69F2CF"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:drowned"
@@ -2812,6 +3230,8 @@
 			id: "609DAB50742C9626"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "72E8F1962CF7B3D6"
@@ -2831,6 +3251,8 @@
 			}
 			id: "6856727C54AFEFB9"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1537B88DE6F0F1F4"
@@ -2848,6 +3270,8 @@
 			id: "2DC370FC3B95A86A"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "56E08D05D54D50CF"
@@ -2867,6 +3291,8 @@
 			}
 			id: "15A615A877798006"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:elder_guardian"
@@ -2882,6 +3308,8 @@
 			id: "5046CED417FCD255"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1F9A83B42759AD4A"
@@ -2901,6 +3329,8 @@
 			}
 			id: "11B26EF16F0E3B4E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 3L
@@ -2919,6 +3349,8 @@
 			id: "2F485A59598F8E18"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1FF160353E103E66"
@@ -2938,6 +3370,8 @@
 			}
 			id: "6078951E61452282"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "hybrid_aquatic:great_white_shark"
@@ -2953,6 +3387,8 @@
 			id: "4BDF0543B35691C4"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "40F724A174E34883"
@@ -2972,6 +3408,8 @@
 			}
 			id: "53128291C55543CE"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "iceandfire:siren"
@@ -2987,6 +3425,8 @@
 			id: "140BBBFC6D69FCF4"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "52535E7409581E35"
@@ -3006,6 +3446,8 @@
 			}
 			id: "270946DD9D57B2D9"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "14E042DFCCCF9D41"
@@ -3020,6 +3462,8 @@
 			id: "5596A8BADC6F1D6A"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "7A3DADD3F47C9A6F"
@@ -3039,6 +3483,8 @@
 			}
 			id: "69BE065DA73428B0"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -3057,6 +3503,8 @@
 			id: "784305CFF4BC30C7"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "188041865D34D738"
@@ -3076,6 +3524,8 @@
 			}
 			id: "583A84F598382B3A"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "cataclysm:deepling"
@@ -3091,6 +3541,8 @@
 			id: "4D805B465BE380D3"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "34AE14DB48346132"
@@ -3110,6 +3562,8 @@
 			}
 			id: "5F048F31DB7EB7C8"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "670157B99722850C"
@@ -3124,6 +3578,8 @@
 			id: "1DDC0C4ED2079852"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "14487C801D722F27"
@@ -3143,6 +3599,8 @@
 			}
 			id: "781C5D0CE26AF876"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:skeleton"
@@ -3158,6 +3616,8 @@
 			id: "75F88FCB43F2697B"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "668A31DC6E1D34AB"
@@ -3177,6 +3637,8 @@
 			}
 			id: "629EEEEBA7DFF410"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "minecraft:silverfish"
@@ -3192,6 +3654,8 @@
 			id: "4DF64BB8F53D030D"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1C8FB1E2BBB3D307"
@@ -3211,6 +3675,8 @@
 			}
 			id: "15FAC0D539CF130C"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 12L
@@ -3229,6 +3695,8 @@
 			id: "3EBCF7322AF4B7C6"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "519CC34827F4BF2C"
@@ -3248,6 +3716,8 @@
 			}
 			id: "78400B46D202825E"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 6L
@@ -3266,6 +3736,8 @@
 			id: "4D55A499F9F381DB"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1CFE3E4303703066"
@@ -3285,6 +3757,8 @@
 			}
 			id: "2274A249DAA19B5C"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -3303,6 +3777,8 @@
 			id: "6491ACE47996C671"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "11CD24B1DCC9C46E"
@@ -3322,6 +3798,8 @@
 			}
 			id: "13CD1454E5F8B072"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L
@@ -3340,6 +3818,8 @@
 			id: "5857B0B345D52EDD"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "126EC5ED73DFDDE3"
@@ -3359,6 +3839,8 @@
 			}
 			id: "799E867A6C053342"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "51A3583496B0C39B"
@@ -3376,6 +3858,8 @@
 			id: "1DF674E467619582"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "4A2DD800C61D3430"
@@ -3395,6 +3879,8 @@
 			}
 			id: "15A0C063E3AFF4E9"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "iceandfire:troll"
@@ -3410,6 +3896,8 @@
 			id: "53875BB61887A973"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "78D45EB698EB3890"
@@ -3429,6 +3917,8 @@
 			}
 			id: "3D410BCE0B163955"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "iceandfire:cockatrice"
@@ -3444,6 +3934,8 @@
 			id: "16985E828456BE28"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "5F621603639AFB3E"
@@ -3463,6 +3955,8 @@
 			}
 			id: "2B972E12F96CCDCC"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 8L
@@ -3481,6 +3975,8 @@
 			id: "6F3D86DE56D15BBE"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6BBBEDFD1A28B3D0"
@@ -3500,6 +3996,8 @@
 			}
 			id: "1386403DCD6EB039"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "alexscaves:vallumraptor"
@@ -3515,6 +4013,8 @@
 			id: "49053BD3207400C9"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "29CA470AC6ED91DE"
@@ -3534,6 +4034,8 @@
 			}
 			id: "7D301ACA6819F135"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2D94BF3C0872752A"
@@ -3551,6 +4053,8 @@
 			id: "470770840ED2623E"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "54FC1FA6EC51AFFC"
@@ -3570,6 +4074,8 @@
 			}
 			id: "61A0C134105F2F53"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 6L
@@ -3588,6 +4094,8 @@
 			id: "3DA94307BF753970"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1AFA88A379FC7399"
@@ -3607,6 +4115,8 @@
 			}
 			id: "525608CD2339968F"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					dimension: "twilightforest:twilight_forest"
@@ -3621,6 +4131,8 @@
 			id: "132C4AF0A4E35B7A"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6D4D1AEEC2712E85"
@@ -3640,6 +4152,8 @@
 			}
 			id: "179A7F98C194B097"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 6L
@@ -3658,6 +4172,8 @@
 			id: "1262AEA77BCB5895"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "510405CE1A0CA228"
@@ -3677,6 +4193,8 @@
 			}
 			id: "4720862DF6AF0F4B"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "5E89DBD996E4A63E"
@@ -3694,6 +4212,8 @@
 			id: "43043663512BAACC"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "75C9B17CF85CE06E"
@@ -3713,6 +4233,8 @@
 			}
 			id: "6362E4839B2B6EB2"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 5L
@@ -3731,6 +4253,8 @@
 			id: "7588BF137F56050B"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "10D80BE39CE1574A"
@@ -3750,6 +4274,8 @@
 			}
 			id: "7F9968585593284D"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 12L
@@ -3768,6 +4294,8 @@
 			id: "2FFD781546BD9CE2"
 			invisible: true
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "748D239E4CB3718E"
@@ -3787,6 +4315,8 @@
 			}
 			id: "24BDDE2D454C2941"
 			rewards: [ ]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					entity: "aether:slider"

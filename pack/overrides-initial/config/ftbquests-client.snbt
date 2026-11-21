@@ -1,10 +1,11 @@
-# Wilds & Wanderers: pinned quests (the start quests and any you pin) sit under the minimap, top left.
+# Wilds & Wanderers: pinned quests (the start quests and any you pin) sit in the middle of the right edge (22.11: under
+# the minimap they covered its coordinates at GUI scales 1-2).
 # Copied only on first install.
 {
 	pinned: {
-		pinned_quests_pos: "top_left"
-		pinned_quests_inset_x: 4
-		pinned_quests_inset_y: 132
+		pinned_quests_pos: "right"
+		pinned_quests_inset_x: 6
+		pinned_quests_inset_y: 0
 		pinned_quests_scale: 0.75d
 		pinned_visibility: "all"
 	}

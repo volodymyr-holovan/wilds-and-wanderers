@@ -124,14 +124,67 @@ def item_stack(spec):
     return item, int(count or 1)
 
 
+def curve(a, b):
+    """control points of a smooth S-curve from quest a to quest b, like the links of a node graph (22.11): the line
+    leaves and enters sideways when the quests stand side by side, up and down when one is above the other"""
+    (x1, y1), (x2, y2) = a, b
+    dx, dy = x2 - x1, y2 - y1
+    if abs(dx) >= abs(dy) * 0.6:
+        k = max(0.5, abs(dx) * 0.45) * (1 if dx >= 0 else -1)
+        return [round(x1 + k, 3), round(y1, 3), round(x2 - k, 3), round(y2, 3)]
+    k = max(0.5, abs(dy) * 0.45) * (1 if dy >= 0 else -1)
+    return [round(x1, 3), round(y1 + k, 3), round(x2, 3), round(y2 - k, 3)]
+
+
+def role_shape(q, has_dependents, local_deps):
+    """medallions by role (gen_quest_shapes.py draws them): the chapter's first steps big and square, its goals gears,
+    milestones hexagons, optional side quests small diamonds, the rest round"""
+    if q.get("optional"):
+        return "diamond", 0.9
+    if not local_deps:
+        return "rsquare", 1.35
+    if not has_dependents:
+        return "gear", 1.25
+    if q.get("skill", 25) >= 80:
+        return "hexagon", 1.15
+    return "circle", 1.0
+
+
+def decorations(ch, quests, items):
+    """faint pictures of the chapter's own items in the free space between quests, so the page is not empty"""
+    if not quests:
+        return []
+    xs, ys = [q["x"] for q in quests], [q["y"] for q in quests]
+    x0, x1, y0, y1 = min(xs) - 1.5, max(xs) + 1.5, min(ys) - 1.5, max(ys) + 1.5
+    seed = sum(ord(c) for c in ch["key"])
+    out, placed, i = [], [], 0
+    pool = [it for it in dict.fromkeys(items) if it and it != ch["icon"]]
+    for n in range(400):
+        if len(out) >= min(10, max(4, len(quests) // 2)) or not pool:
+            break
+        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF
+        x = x0 + (seed % 1000) / 1000 * (x1 - x0)
+        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF
+        y = y0 + (seed % 1000) / 1000 * (y1 - y0)
+        if any((x - q["x"]) ** 2 + (y - q["y"]) ** 2 < 1.3 ** 2 for q in quests) or any((x - a) ** 2 + (y - b) ** 2 < 1.6 ** 2 for a, b in placed):
+            continue
+        placed.append((x, y))
+        size = 0.8 + (seed % 5) * 0.1
+        out.append({"x": round(x, 3), "y": round(y, 3), "width": size, "height": size, "rotation": float((seed % 31) - 15),
+                    "image": "item:" + pool[i % len(pool)], "color": 16777215, "alpha": 90, "order": -2})
+        i += 1
+    return out
+
+
 def watermark(ch, quests):
-    """the chapter's emblem, large and faint, behind the middle of its quests (drawn under them: order -1)"""
+    """the chapter's emblem, faint, beside its first column (drawn under everything: order -1)"""
     xs, ys = [q["x"] for q in quests], [q["y"] for q in quests]
     span = min(max(xs) - min(xs), max(ys) - min(ys)) if quests else 4.0
-    size = max(4.0, min(10.0, span * 0.9))
-    return {"x": (min(xs) + max(xs)) / 2 if quests else 0.0, "y": (min(ys) + max(ys)) / 2 if quests else 0.0,
+    size = max(3.0, min(5.0, span * 0.6))
+    # beside the first column, not under the quests (22.11: a big pixelated icon behind the links looked like a smudge)
+    return {"x": (min(xs) - size * 0.75) if quests else 0.0, "y": (min(ys) + max(ys)) / 2 if quests else 0.0,
             "width": size, "height": size, "rotation": 0.0, "image": "item:" + ch["icon"], "color": 16777215,
-            "alpha": 36, "order": -1}
+            "alpha": 70, "order": -1}
 
 
 def parse_task(spec, qid, n, where):
@@ -407,6 +460,9 @@ def main():
             lang[f"chapter.{cid}.chapter_subtitle"] = [ch["subtitle"]]
         auto_layout(ch["quests"])
         out_quests = []
+        pos = {quest_ids[f'{ch["key"]}:{q["key"]}']: q["pos"] for q in ch["quests"]}
+        local_keys = {q["key"] for q in ch["quests"]}
+        depended = {k for q in ch["quests"] for k in q.get("deps", []) if ":" not in k}
         for q in ch["quests"]:
             where = f'{ch["key"]}:{q["key"]}'
             qid = quest_ids[where]
@@ -428,10 +484,12 @@ def main():
             if q.get("icon"):
                 check("item", q["icon"], where)
                 entry["icon"] = {"id": q["icon"]}
-            if q.get("shape"):
-                entry["shape"] = q["shape"]
-            if q.get("size"):
-                entry["size"] = float(q["size"])
+            shape, size = role_shape(q, q["key"] in depended, [k for k in q.get("deps", []) if ":" not in k and k in local_keys])
+            entry["shape"] = q.get("shape") or shape
+            entry["size"] = float(q.get("size") or size)
+            curves = {d: curve(pos[d], (x, y)) for d in deps if d in pos}
+            if curves:
+                entry["dep_control_pts"] = curves
             out_quests.append(entry)
             if len(re.sub(r"&.", "", q["title"])) > MAX_QUEST_TITLE:
                 ERRORS.append(f"{where}: title longer than {MAX_QUEST_TITLE}: {q['title']}")
@@ -456,7 +514,8 @@ def main():
         check("item", ch["icon"], ch["key"])
         chapter = {"id": cid, "filename": ch["key"], "group": gid, "order_index": order,
                    "icon": {"id": ch["icon"]}, "default_quest_shape": "", "default_hide_dependency_lines": False,
-                   "quest_links": [], "quests": out_quests, "images": [watermark(ch, out_quests)]}
+                   "quest_links": [], "quests": out_quests,
+                   "images": [watermark(ch, out_quests)] + decorations(ch, out_quests, [q.get("icon") for q in ch["quests"]])}
         open(os.path.join(OUT, "chapters", ch["key"] + ".snbt"), "w", encoding="utf-8", newline="\n").write(snbt(chapter) + "\n")
 
     group_names = {}

@@ -12,5 +12,5 @@ summary: Мисливець Устим, мисливець за магічним
 «Вони полюють групою і швидкі, як вітер. Я двічі ледве втік.»
 Подолайте трьох диких мисливців (Wilden Hunter). Вони живуть у лігвах серед лісів і гір.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.ars_nouveau.wilden_horn", "color": "aqua"}, {"text": " ×2", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×12", "color": "gray"}, {"text": ", 260 досвіду, скриня здобичі, 100 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[ars_nouveau:wilden_horn]] ×2, [[minecraft:emerald]] ×12, 260 досвіду, скриня здобичі, 100 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

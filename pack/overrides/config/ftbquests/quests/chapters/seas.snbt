@@ -9,15 +9,92 @@
 	id: "1E64422DEC6BFC0D"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 7.2d
+			height: 4.8d
 			image: "item:smallships:cannon"
 			order: -1
 			rotation: 0.0d
-			width: 7.2d
-			x: 4.0d
+			width: 4.8d
+			x: -3.5999999999999996d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:smallships:dockyard"
+			order: -2
+			rotation: 1.0d
+			width: 1.1d
+			x: 1.723d
+			y: -3.784d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:smallships:oak_cog"
+			order: -2
+			rotation: -13.0d
+			width: 1.1d
+			x: 8.037d
+			y: 2.679d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:skeleton_skull"
+			order: -2
+			rotation: 13.0d
+			width: 1.2000000000000002d
+			x: -1.313d
+			y: 3.22d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:hybrid_aquatic:diving_helmet"
+			order: -2
+			rotation: 8.0d
+			width: 1.1d
+			x: 9.357d
+			y: 1.269d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:prismarine_bricks"
+			order: -2
+			rotation: -3.0d
+			width: 0.9d
+			x: 0.425d
+			y: 1.598d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:bone_block"
+			order: -2
+			rotation: -6.0d
+			width: 1.2000000000000002d
+			x: 2.603d
+			y: 2.985d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:prismarine_crystals"
+			order: -2
+			rotation: 8.0d
+			width: 0.9d
+			x: 6.079d
+			y: 4.536d
 		}
 	]
 	order_index: 16
@@ -70,6 +147,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				6CBDFCD22B595363: [
+					0.9d
+					0.0d
+					1.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"6CBDFCD22B595363"
 			]
@@ -100,6 +185,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "5E2467AF5186F368"
@@ -110,6 +197,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				18C990156988DB4F: [
+					2.9d
+					-1.75d
+					3.1d
+					-4.375d
+				]
+			}
 			dependencies: [
 				"18C990156988DB4F"
 			]
@@ -143,6 +238,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "534A96E3A3269784"
@@ -166,6 +263,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				46D334DCD21AD77A: [
+					4.0d
+					-2.8d
+					6.0d
+					-2.45d
+				]
+			}
 			dependencies: [
 				"46D334DCD21AD77A"
 			]
@@ -210,6 +315,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "101D54915BB834F7"
@@ -221,6 +328,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				6CBDFCD22B595363: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"6CBDFCD22B595363"
 			]
@@ -252,6 +367,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "38522D4068258143"
@@ -274,6 +391,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				55B0697D6C4F26A1: [
+					2.9d
+					0.0d
+					3.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"55B0697D6C4F26A1"
 			]
@@ -307,6 +432,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "42D07FA2498E8543"
@@ -318,6 +445,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				55B0697D6C4F26A1: [
+					2.9d
+					0.0d
+					3.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"55B0697D6C4F26A1"
 			]
@@ -351,6 +486,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1FDB363EE1C58A8F"
@@ -362,6 +499,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				7E7D9635D39F2C39: [
+					4.0d
+					-1.05d
+					6.0d
+					-0.7d
+				]
+			}
 			dependencies: [
 				"7E7D9635D39F2C39"
 			]
@@ -406,6 +551,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "minecraft:elder_guardian"
@@ -418,6 +565,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				4419BAEE2267E7DA: [
+					6.9d
+					0.875d
+					7.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"4419BAEE2267E7DA"
 			]
@@ -451,6 +606,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					entity: "upgrade_aquatic:thrasher"
@@ -463,6 +620,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				55B0697D6C4F26A1: [
+					2.9d
+					0.0d
+					3.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"55B0697D6C4F26A1"
 			]
@@ -485,6 +650,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "25AB837D2EA37099"
@@ -499,6 +666,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				6CBDFCD22B595363: [
+					0.9d
+					0.0d
+					1.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"6CBDFCD22B595363"
 			]
@@ -529,6 +704,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "57850BD4884AA8B4"
@@ -559,6 +736,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				19662D7C24479FE2: [
+					2.9d
+					1.75d
+					3.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"19662D7C24479FE2"
 			]
@@ -592,6 +777,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "6F947914164324EE"
@@ -614,6 +801,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				18C990156988DB4F: [
+					2.0d
+					1.006d
+					4.0d
+					1.619d
+				]
+			}
 			dependencies: [
 				"18C990156988DB4F"
 			]
@@ -647,6 +842,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "34CF4382C1763ACD"
@@ -658,6 +855,14 @@
 			y: 4.375d
 		}
 		{
+			dep_control_pts: {
+				4419BAEE2267E7DA: [
+					6.9d
+					0.875d
+					7.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"4419BAEE2267E7DA"
 				"602F4CCF2594D07B"
@@ -703,6 +908,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					entity: "cataclysm:the_leviathan"

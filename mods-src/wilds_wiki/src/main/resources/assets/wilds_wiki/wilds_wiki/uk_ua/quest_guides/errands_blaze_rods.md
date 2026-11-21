@@ -12,5 +12,5 @@ summary: Алхімік Северин, алхімік у вигнанні:
 «Тепер я варю зілля тут, у пеклі, і мені потрібні стрижні іфритів. Іфрити літають біля фортець і плюються вогнем. Я одного разу пробував — бачите мої брови? Їх нема.»
 Принесіть вісім стрижнів іфрита. Іфрити живуть у незерських фортецях біля своїх спавнерів. Візьміть зілля вогнестійкості.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "block.minecraft.brewing_stand", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.potion", "color": "aqua"}, {"text": " ×3", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 220 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:brewing_stand]], [[minecraft:potion]] ×3, [[minecraft:emerald]] ×10, 220 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

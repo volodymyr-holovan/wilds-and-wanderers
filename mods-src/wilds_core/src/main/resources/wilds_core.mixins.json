@@ -10,7 +10,8 @@
     "client.DhClientWorldMixin",
     "client.ContainerTitleAccessor",
     "client.FtbTeamsSelfMixin",
-    "client.ApothTooltipMixin"
+    "client.ApothTooltipMixin",
+    "client.PinnedQuestsHideMixin"
   ],
   "injectors": {
     "defaultRequire": 0

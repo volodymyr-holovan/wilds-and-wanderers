@@ -12,5 +12,5 @@ summary: Лукія, сільська лікарка (доручення 2 з 4)
 «Зілля я зварю сама. А от золота в мене нема — тільки трави.»
 Принесіть два золоті яблука.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.glistering_melon_slice", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 160 досвіду, 60 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:emerald]] ×10, [[minecraft:glistering_melon_slice]] ×4, 160 досвіду, 60 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

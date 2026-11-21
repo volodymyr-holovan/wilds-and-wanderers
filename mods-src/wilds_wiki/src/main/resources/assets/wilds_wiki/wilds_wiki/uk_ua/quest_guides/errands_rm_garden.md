@@ -12,5 +12,5 @@ summary: Остап, старий садівник (доручення 2 з 2):
 «Конвалії ростуть у лісах, у тіні високих дерев. Вісім кущиків — і в мене буде сад.»
 Принесіть вісім конвалій.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "block.minecraft.flowering_azalea", "color": "aqua"}, {"text": " ×2", "color": "gray"}, {"text": ", 120 досвіду, 50 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:emerald]] ×8, [[minecraft:flowering_azalea]] ×2, 120 досвіду, 50 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

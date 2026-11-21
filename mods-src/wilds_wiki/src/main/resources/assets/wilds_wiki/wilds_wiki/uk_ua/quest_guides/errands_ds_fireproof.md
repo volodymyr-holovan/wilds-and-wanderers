@@ -12,5 +12,5 @@ summary: Король-вигнанець Мстислав, король без �
 «Мені потрібен один злиток. Не для мене — для щита, за яким ви підете на звіра.»
 Добудьте злиток незериту: древні уламки з Незеру, переплавлені з золотом.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.enchanted_golden_apple", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×16", "color": "gray"}, {"text": ", 400 досвіду, 150 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:enchanted_golden_apple]], [[minecraft:emerald]] ×16, 400 досвіду, 150 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -12,5 +12,5 @@ summary: Друїд Гордомир, хранитель гаю:
 «Камені джерела роблять із лазуриту й аметисту на зачаровувальному столі. Але мій стіл давно поріс мохом.»
 Принесіть шістнадцять каменів джерела. Рецепт — у JEI; найпростіше — лазурит і аметист в імбуювальній камері Ars Nouveau.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.ars_nouveau.novice_spell_book", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.experience_bottle", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 240 досвіду, скриня здобичі, 90 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[ars_nouveau:novice_spell_book]], [[minecraft:experience_bottle]] ×8, 240 досвіду, скриня здобичі, 90 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

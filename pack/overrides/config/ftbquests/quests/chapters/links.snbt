@@ -9,15 +9,59 @@
 	id: "2DF9230657F55BA4"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.0d
+			height: 3.0d
 			image: "item:minecraft:chain"
 			order: -1
 			rotation: 0.0d
-			width: 4.0d
-			x: 1.0d
+			width: 3.0d
+			x: -2.25d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:mekanism:ingot_uranium"
+			order: -2
+			rotation: -13.0d
+			width: 1.2000000000000002d
+			x: 0.65d
+			y: 3.983d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:alexscaves:heavy_bone"
+			order: -2
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.38d
+			y: -3.325d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:alexscaves:tough_hide"
+			order: -2
+			rotation: 0.0d
+			width: 0.9d
+			x: 0.57d
+			y: 1.539d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:twilightforest:fiery_blood"
+			order: -2
+			rotation: 12.0d
+			width: 0.8d
+			x: 0.48d
+			y: -2.526d
 		}
 	]
 	order_index: 15
@@ -43,6 +87,7 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
 			size: 1.5d
 			tasks: [
 				{
@@ -54,6 +99,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				232D4746AC41BBCB: [
+					0.0d
+					-1.969d
+					2.0d
+					-2.406d
+				]
+			}
 			dependencies: [
 				"232D4746AC41BBCB"
 			]
@@ -76,6 +129,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "109D9884583AD14C"
@@ -86,6 +141,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				232D4746AC41BBCB: [
+					0.9d
+					0.0d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"232D4746AC41BBCB"
 			]
@@ -112,6 +175,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1877E93D4711AC77"
@@ -126,6 +191,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				232D4746AC41BBCB: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"232D4746AC41BBCB"
 			]
@@ -148,6 +221,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "14ADF72F68F3C0DA"
@@ -162,6 +237,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				232D4746AC41BBCB: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"232D4746AC41BBCB"
 			]
@@ -184,6 +267,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1D4CC23634FF8B8A"
@@ -194,6 +279,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				232D4746AC41BBCB: [
+					0.9d
+					0.0d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"232D4746AC41BBCB"
 			]
@@ -216,6 +309,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1190EF331C47F6D8"
@@ -226,6 +321,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				232D4746AC41BBCB: [
+					0.0d
+					1.969d
+					2.0d
+					2.406d
+				]
+			}
 			dependencies: [
 				"232D4746AC41BBCB"
 			]
@@ -248,6 +351,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "15F230A56662B1FD"

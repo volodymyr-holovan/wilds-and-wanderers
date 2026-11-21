@@ -25,8 +25,38 @@ STARS = "★★★★★"
 LABEL = {"where": "Де", "danger": "Складність", "gear": "Що взяти", "find": "Як знайти", "tip": "Порада"}
 
 
+def flat(s):
+    """a quest line written as a JSON text component (the errands' promised pay) -> plain wiki text: its texts in a row,
+    each translated name as a wiki link to that item (22.11: the wiki showed the raw JSON)"""
+    t = s.strip()
+    if not (t.startswith("[") or t.startswith("{")):
+        return s
+    try:
+        import json
+        parts = json.loads(t)
+    except ValueError:
+        return s
+    out = []
+
+    def walk(p):
+        if isinstance(p, str):
+            out.append(p)
+        elif isinstance(p, list):
+            for x in p: walk(x)
+        elif isinstance(p, dict):
+            if "text" in p:
+                out.append(("**" + p["text"] + "**") if p.get("color") == "gold" and p["text"].strip() else p["text"])
+            if "translate" in p:
+                m = re.match(r"(?:item|block|entity)\.([a-z0-9_]+)\.([a-z0-9_./]+)$", p["translate"])
+                out.append(f"[[{m.group(1)}:{m.group(2)}]]" if m else "")
+            for x in p.get("extra", []): walk(x)
+    walk(parts)
+    return re.sub(r"\*\*\s*\*\*", "", "".join(out))
+
+
 def md(s):
     """FTB colour codes -> wiki markup: &a/&e/&6 highlighted words become bold, the rest is dropped"""
+    s = flat(s)
     s = re.sub(r"&[aeb6](.+?)(&r|$)", r"**\1**", s)
     s = re.sub(r"&[0-9a-fk-or]", "", s)
     return s.replace("****", "").strip()

@@ -12,5 +12,5 @@ summary: Дорко, фермер:
 «Гарбузи в мене є, а різати не вмію — у мене руки тремтять від старості.»
 Принесіть три вирізьблені гарбузи: гарбуз і ножиці — і клацніть ножицями по гарбузу.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.pumpkin_pie", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 80 досвіду, 30 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:pumpkin_pie]] ×8, [[minecraft:emerald]] ×4, 80 досвіду, 30 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -9,15 +9,81 @@
 	id: "1E6EF59D382AFAD7"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 5.4d
+			height: 3.5999999999999996d
 			image: "item:farmersdelight:cooking_pot"
 			order: -1
 			rotation: 0.0d
-			width: 5.4d
-			x: 3.0d
+			width: 3.5999999999999996d
+			x: -2.6999999999999997d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:farmersdelight:flint_knife"
+			order: -2
+			rotation: -7.0d
+			width: 0.8d
+			x: -0.591d
+			y: 1.5d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:farmersdelight:cutting_board"
+			order: -2
+			rotation: -1.0d
+			width: 1.2000000000000002d
+			x: 0.885d
+			y: 3.94d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:sereneseasons:calendar"
+			order: -2
+			rotation: -4.0d
+			width: 1.1d
+			x: -0.645d
+			y: -4.72d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:lootr:lootr_chest"
+			order: -2
+			rotation: 7.0d
+			width: 1.1d
+			x: 5.889d
+			y: 2.78d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:sophisticatedstorage:chest"
+			order: -2
+			rotation: 10.0d
+			width: 0.8d
+			x: 5.439d
+			y: -5.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:minecraft:iron_chestplate"
+			order: -2
+			rotation: -9.0d
+			width: 1.1d
+			x: 7.419d
+			y: -3.92d
 		}
 	]
 	order_index: 2
@@ -52,6 +118,8 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "2C4028FF7F40FF6A"
@@ -66,6 +134,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				3A2E297B2C382295: [
+					0.9d
+					0.0d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"3A2E297B2C382295"
 			]
@@ -88,6 +164,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "69BEEE31606CEC40"
@@ -102,6 +180,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				4332297DBDD8288C: [
+					2.9d
+					-2.625d
+					3.1d
+					-3.5d
+				]
+			}
 			dependencies: [
 				"4332297DBDD8288C"
 			]
@@ -133,6 +219,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "2676B91800038068"
@@ -155,6 +243,14 @@
 			y: -3.5d
 		}
 		{
+			dep_control_pts: {
+				3A2E297B2C382295: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"3A2E297B2C382295"
 			]
@@ -177,6 +273,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "2F846F4CBF6A5D92"
@@ -191,6 +289,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				3A2E297B2C382295: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"3A2E297B2C382295"
 			]
@@ -213,6 +319,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "604B580A920CA579"
@@ -223,6 +331,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				3AC47F975D87FFA0: [
+					2.9d
+					0.875d
+					3.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"3AC47F975D87FFA0"
 			]
@@ -245,6 +361,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "451A5301219C5E84"
@@ -259,6 +377,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				3A2E297B2C382295: [
+					0.9d
+					0.0d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"3A2E297B2C382295"
 			]
@@ -290,6 +416,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "50C925C0FB5AB449"
@@ -328,6 +456,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				4422C00E0126E210: [
+					2.9d
+					2.625d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"4422C00E0126E210"
 			]
@@ -350,6 +486,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "7DC39A6632265111"
@@ -364,6 +502,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				4422C00E0126E210: [
+					2.9d
+					2.625d
+					3.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"4422C00E0126E210"
 			]
@@ -395,6 +541,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "3944633145534298"
@@ -418,6 +566,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				2075BCFC42EA468F: [
+					4.9d
+					-3.5d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"2075BCFC42EA468F"
 			]
@@ -449,6 +605,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					count: 32L
@@ -464,6 +622,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				4422C00E0126E210: [
+					2.9d
+					2.625d
+					3.1d
+					3.5d
+				]
+			}
 			dependencies: [
 				"4422C00E0126E210"
 			]
@@ -486,6 +652,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "6F4B9C294832A350"
@@ -500,6 +668,14 @@
 			y: 3.5d
 		}
 		{
+			dep_control_pts: {
+				7BCC169BCF207508: [
+					4.9d
+					3.5d
+					5.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"7BCC169BCF207508"
 			]
@@ -531,6 +707,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "431EE1C09D2F8DB6"

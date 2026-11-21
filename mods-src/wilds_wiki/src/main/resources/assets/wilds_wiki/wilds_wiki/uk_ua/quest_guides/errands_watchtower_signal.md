@@ -12,5 +12,5 @@ summary: Святослав, вартовий:
 «Нас троє вартових на тридцять родин. Якщо я піду, нікому стежити за дорогою.»
 Перебийте десятьох скелетів. Щит — ваш найкращий друг проти стріл.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.bow", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.arrow", "color": "aqua"}, {"text": " ×48", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", 140 досвіду, 55 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:bow]], [[minecraft:arrow]] ×48, [[minecraft:emerald]] ×6, 140 досвіду, 55 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

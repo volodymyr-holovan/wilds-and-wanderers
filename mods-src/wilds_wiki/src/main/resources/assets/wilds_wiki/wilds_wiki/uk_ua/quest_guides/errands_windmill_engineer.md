@@ -12,5 +12,5 @@ summary: Інженер Онисим, механік-самоук (доруче�
 «Його роблять з андезиту й заліза. Просто, але довго. А я вже старий, щоб місити андезит.»
 Принесіть тридцять два андезитові сплави (Create): андезит і залізні самородки на верстаті або в змішувачі.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.create.wrench", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.create.goggles", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 220 досвіду, скриня здобичі, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[create:wrench]], [[create:goggles]], [[minecraft:emerald]] ×10, 220 досвіду, скриня здобичі, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -12,5 +12,5 @@ summary: Тиміш, розорений лицар:
 «Але там скелети. Багато. Я спробував спуститися — ледве виліз. Мені потрібен соратник.»
 Розчистіть підземелля: дванадцять скелетів. Половину знайденого — вам, слово лицаря.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.iron_chestplate", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.shield", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 200 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:iron_chestplate]], [[minecraft:shield]], [[minecraft:emerald]] ×8, 200 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

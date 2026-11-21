@@ -12,5 +12,5 @@ summary: Корній, картограф-невдаха:
 «Купці подали на мене в суд. Мені потрібні справжні мапи — з цих країв. Хоч три, щоб показати суддям.»
 Намалюйте три мапи — порожню мапу візьміть у руки, ходіть, і вона сама промалюється. Принесіть мені три заповнені.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.compass", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.spyglass", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.paper", "color": "aqua"}, {"text": " ×16", "color": "gray"}, {"text": ", 140 досвіду, 50 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:compass]], [[minecraft:spyglass]], [[minecraft:paper]] ×16, 140 досвіду, 50 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -9,15 +9,103 @@
 	id: "7F389844624DA709"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.7250000000000005d
+			height: 3.15d
 			image: "item:irons_spellbooks:iron_spell_book"
 			order: -1
 			rotation: 0.0d
-			width: 4.7250000000000005d
-			x: 8.0d
+			width: 3.15d
+			x: -2.3625d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:irons_spellbooks:arcane_essence"
+			order: -2
+			rotation: -5.0d
+			width: 1.1d
+			x: 17.006d
+			y: -3.275d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:irons_spellbooks:inscription_table"
+			order: -2
+			rotation: 8.0d
+			width: 0.8d
+			x: 12.75d
+			y: -1.691d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:irons_spellbooks:scroll"
+			order: -2
+			rotation: 6.0d
+			width: 1.1d
+			x: -0.778d
+			y: -2.945d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:irons_spellbooks:alchemist_cauldron"
+			order: -2
+			rotation: 0.0d
+			width: 0.8d
+			x: 3.516d
+			y: 2.681d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:irons_spellbooks:scroll_forge"
+			order: -2
+			rotation: 2.0d
+			width: 1.2000000000000002d
+			x: 15.334d
+			y: -1.823d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:irons_spellbooks:rare_ink"
+			order: -2
+			rotation: -15.0d
+			width: 1.1d
+			x: 10.09d
+			y: -4.1d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:irons_spellbooks:fire_rune"
+			order: -2
+			rotation: 5.0d
+			width: 1.0d
+			x: 5.378d
+			y: 3.358d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:irons_spellbooks:arcane_anvil"
+			order: -2
+			rotation: -10.0d
+			width: 1.2000000000000002d
+			x: 4.428d
+			y: -3.061d
 		}
 	]
 	order_index: 8
@@ -60,6 +148,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				778F6554553B5817: [
+					0.9d
+					0.0d
+					1.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"778F6554553B5817"
 			]
@@ -82,6 +178,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "276DB356C2E6C5F3"
@@ -96,6 +194,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				39B1E2698AAF715C: [
+					2.9d
+					-1.75d
+					3.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"39B1E2698AAF715C"
 			]
@@ -118,6 +224,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "1B7617EE40A00688"
@@ -132,6 +240,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				75A7A3E23028FD59: [
+					4.9d
+					-0.875d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"75A7A3E23028FD59"
 			]
@@ -154,6 +270,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "57B77D6B863AC89A"
@@ -168,6 +286,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				778F6554553B5817: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"778F6554553B5817"
 			]
@@ -190,6 +316,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "6DC20DEBF7096A59"
@@ -213,6 +341,20 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				4B6FF15B9353A971: [
+					6.9d
+					-0.875d
+					7.1d
+					-0.875d
+				]
+				50696DEA5644BEE3: [
+					4.7d
+					0.0d
+					5.3d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"50696DEA5644BEE3"
 				"4B6FF15B9353A971"
@@ -236,6 +378,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "499B11E82B5AE247"
@@ -250,6 +394,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				22B0BD4870DE7077: [
+					8.9d
+					-0.875d
+					9.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"22B0BD4870DE7077"
 			]
@@ -272,6 +424,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					count: 2L
@@ -304,6 +458,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				778F6554553B5817: [
+					0.9d
+					0.0d
+					1.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"778F6554553B5817"
 			]
@@ -326,6 +488,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 4L
@@ -357,6 +521,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				22B0BD4870DE7077: [
+					8.9d
+					-0.875d
+					9.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"22B0BD4870DE7077"
 			]
@@ -379,6 +551,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "36D66090BD78A83A"
@@ -409,6 +583,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				1F2890B34D4C0D30: [
+					2.9d
+					1.75d
+					3.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"1F2890B34D4C0D30"
 			]
@@ -431,6 +613,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "45C9BC49894D2758"
@@ -445,6 +629,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				75A7A3E23028FD59: [
+					4.9d
+					-0.875d
+					5.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"75A7A3E23028FD59"
 			]
@@ -467,6 +659,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1D93E50AD1CD687A"
@@ -489,6 +683,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				16408663A924D059: [
+					10.9d
+					-0.875d
+					11.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"16408663A924D059"
 			]
@@ -511,6 +713,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 4L
@@ -526,6 +730,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				225FF8472BB47E8F: [
+					12.9d
+					0.0d
+					13.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"225FF8472BB47E8F"
 			]
@@ -548,6 +760,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "2707FF17CF216964"
@@ -570,6 +784,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				4B6FF15B9353A971: [
+					6.9d
+					-0.875d
+					7.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"4B6FF15B9353A971"
 			]
@@ -603,6 +825,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "4F4C09F07ED8661B"
@@ -614,6 +838,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				4B235C856EFB8D66: [
+					8.9d
+					0.875d
+					9.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"4B235C856EFB8D66"
 			]
@@ -647,6 +879,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					entity: "irons_spellbooks:fire_boss"
@@ -659,6 +893,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				4B235C856EFB8D66: [
+					8.9d
+					0.875d
+					9.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"4B235C856EFB8D66"
 			]
@@ -706,6 +948,20 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				2085016BC6AEBEED: [
+					14.9d
+					0.0d
+					15.1d
+					0.0d
+				]
+				564886FCBCC75EA7: [
+					12.7d
+					2.625d
+					13.3d
+					0.0d
+				]
+			}
 			dependencies: [
 				"2085016BC6AEBEED"
 				"564886FCBCC75EA7"

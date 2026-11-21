@@ -12,5 +12,5 @@ summary: Мар'яна, ловчиня перлів:
 «Раковини наутилуса дають утопленики й рибалки. Принесете три — і я віддам вам те, що беріг мій дід: серце моря.»
 Принесіть три раковини наутилуса.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.heart_of_the_sea", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", 200 досвіду, 70 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:heart_of_the_sea]], [[minecraft:emerald]] ×6, 200 досвіду, 70 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -12,5 +12,5 @@ summary: Оксана, наречена:
 «Бджоли його мене не знають і жалять. Я вже двічі пробувала. Подивіться на мою руку!»
 Принесіть шість пляшечок меду. Порада від пасічника: розведіть під вуликом багаття — дим заспокоює бджіл.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "block.minecraft.cake", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×5", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.honeycomb", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", 90 досвіду, 30 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:cake]], [[minecraft:emerald]] ×5, [[minecraft:honeycomb]] ×6, 90 досвіду, 30 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -9,15 +9,70 @@
 	id: "2BE3562A22DFA19F"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.0d
+			height: 3.0d
 			image: "item:createaddition:electric_motor"
 			order: -1
 			rotation: 0.0d
-			width: 4.0d
-			x: 1.0d
+			width: 3.0d
+			x: -2.25d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:createaddition:rolling_mill"
+			order: -2
+			rotation: -13.0d
+			width: 0.9d
+			x: 3.465d
+			y: -2.515d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:createaddition:alternator"
+			order: -2
+			rotation: -7.0d
+			width: 0.8d
+			x: -1.495d
+			y: 1.527d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:create_enchantment_industry:experience_bucket"
+			order: -2
+			rotation: 3.0d
+			width: 1.2000000000000002d
+			x: 0.095d
+			y: 4.982d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:create_enchantment_industry:blaze_enchanter"
+			order: -2
+			rotation: 0.0d
+			width: 0.8d
+			x: -1.475d
+			y: -4.348d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:sliceanddice:slicer"
+			order: -2
+			rotation: 4.0d
+			width: 1.2000000000000002d
+			x: 0.685d
+			y: -5.005d
 		}
 	]
 	order_index: 4
@@ -46,6 +101,8 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1485FF107BF443D1"
@@ -69,6 +126,14 @@
 			y: -3.5d
 		}
 		{
+			dep_control_pts: {
+				7641DDBE037BBCAC: [
+					0.9d
+					-3.5d
+					1.1d
+					-4.375d
+				]
+			}
 			dependencies: [
 				"7641DDBE037BBCAC"
 			]
@@ -91,6 +156,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1958DA69E947659E"
@@ -114,6 +181,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				7641DDBE037BBCAC: [
+					0.9d
+					-3.5d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"7641DDBE037BBCAC"
 			]
@@ -136,6 +211,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "3A350B06B2FEC195"
@@ -172,6 +249,8 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "121996DBFF5E30CD"
@@ -186,6 +265,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				12FF5C0C56FA8D1D: [
+					0.9d
+					-1.75d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"12FF5C0C56FA8D1D"
 			]
@@ -208,6 +295,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "4DBC19A566759F81"
@@ -245,6 +334,8 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "6FBA9D62404E99CA"
@@ -259,6 +350,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				4DE31CB5ED414030: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"4DE31CB5ED414030"
 			]
@@ -281,6 +380,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "6DB9ABF731740353"
@@ -317,6 +418,8 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					id: "1765F7F3514464D5"
@@ -331,6 +434,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				7B3F7AEB33B6102B: [
+					0.9d
+					1.75d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"7B3F7AEB33B6102B"
 			]
@@ -353,6 +464,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "4CC6C3456ED93787"
@@ -367,6 +480,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				7B3F7AEB33B6102B: [
+					0.9d
+					1.75d
+					1.1d
+					4.375d
+				]
+			}
 			dependencies: [
 				"7B3F7AEB33B6102B"
 			]
@@ -389,6 +510,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "6AC9871A1568359A"
@@ -425,6 +548,8 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
+			size: 1.35d
 			tasks: [
 				{
 					count: 4L

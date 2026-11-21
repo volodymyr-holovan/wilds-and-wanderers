@@ -12,5 +12,5 @@ summary: Мирослава, травниця з печер:
 «Але в печерах я сліпа, як кріт, а павуки бачать у темряві чудово. Нечесна гра.»
 Принесіть дванадцять павучих очей.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.potion", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.fermented_spider_eye", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", 150 досвіду, 60 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:potion]], [[minecraft:fermented_spider_eye]] ×6, [[minecraft:emerald]] ×6, 150 досвіду, 60 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

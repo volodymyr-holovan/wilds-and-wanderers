@@ -9,15 +9,70 @@
 	id: "2D95229FE2CA724C"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 5.4d
+			height: 3.5999999999999996d
 			image: "item:alexscaves:amber"
 			order: -1
 			rotation: 0.0d
-			width: 5.4d
-			x: 3.0d
+			width: 3.5999999999999996d
+			x: -2.6999999999999997d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:alexscaves:cave_map"
+			order: -2
+			rotation: 13.0d
+			width: 1.1d
+			x: 6.951d
+			y: 3.149d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:alexscaves:dinosaur_nugget"
+			order: -2
+			rotation: 3.0d
+			width: 0.9d
+			x: 0.741d
+			y: -4.864d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:alexscaves:tough_hide"
+			order: -2
+			rotation: 13.0d
+			width: 1.0d
+			x: 5.187d
+			y: 4.606d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:alexscaves:subterranodon_egg"
+			order: -2
+			rotation: -10.0d
+			width: 1.0d
+			x: 4.701d
+			y: 2.844d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:alexscaves:tectonic_shard"
+			order: -2
+			rotation: -4.0d
+			width: 0.9d
+			x: -0.357d
+			y: 2.068d
 		}
 	]
 	order_index: 13
@@ -54,6 +109,7 @@
 					type: "command"
 				}
 			]
+			shape: "rsquare"
 			size: 1.5d
 			tasks: [
 				{
@@ -69,6 +125,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				116DEDD639324352: [
+					0.0d
+					-1.969d
+					2.0d
+					-2.406d
+				]
+			}
 			dependencies: [
 				"116DEDD639324352"
 			]
@@ -91,6 +155,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					biome: "alexscaves:primordial_caves"
@@ -102,6 +168,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				51900552A76C9E91: [
+					2.0d
+					-2.406d
+					4.0d
+					-1.969d
+				]
+			}
 			dependencies: [
 				"51900552A76C9E91"
 			]
@@ -135,6 +209,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 4L
@@ -159,6 +235,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				17FFF5CD503E185C: [
+					4.9d
+					0.0d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"17FFF5CD503E185C"
 			]
@@ -181,6 +265,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "69E270E2663F2F3D"
@@ -195,6 +281,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				17FFF5CD503E185C: [
+					4.9d
+					0.0d
+					5.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"17FFF5CD503E185C"
 			]
@@ -239,6 +333,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					entity: "alexscaves:luxtructosaurus"
@@ -251,6 +347,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				116DEDD639324352: [
+					0.9d
+					0.0d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"116DEDD639324352"
 			]
@@ -284,6 +388,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					biome: "alexscaves:toxic_caves"
@@ -303,6 +409,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				116DEDD639324352: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"116DEDD639324352"
 			]
@@ -336,6 +450,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					biome: "alexscaves:magnetic_caves"
@@ -347,6 +463,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				116DEDD639324352: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"116DEDD639324352"
 			]
@@ -380,6 +504,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					biome: "alexscaves:abyssal_chasm"
@@ -391,6 +517,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				116DEDD639324352: [
+					0.9d
+					0.0d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"116DEDD639324352"
 			]
@@ -424,6 +558,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					biome: "alexscaves:forlorn_hollows"
@@ -435,6 +571,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				116DEDD639324352: [
+					0.0d
+					1.969d
+					2.0d
+					2.406d
+				]
+			}
 			dependencies: [
 				"116DEDD639324352"
 			]
@@ -468,6 +612,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					biome: "alexscaves:candy_cavity"

@@ -9,15 +9,59 @@
 	id: "1411BE41EE7975F4"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.0d
+			height: 3.0d
 			image: "item:simplytents:tent"
 			order: -1
 			rotation: 0.0d
-			width: 4.0d
-			x: 4.0d
+			width: 3.0d
+			x: -2.25d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:comforts:sleeping_bag_brown"
+			order: -2
+			rotation: -7.0d
+			width: 1.0d
+			x: -0.136d
+			y: 2.711d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:simplytents:large_tent"
+			order: -2
+			rotation: -15.0d
+			width: 1.0d
+			x: 2.284d
+			y: -2.88d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:nomadictents:tent_canvas"
+			order: -2
+			rotation: -3.0d
+			width: 0.8d
+			x: 6.486d
+			y: 2.567d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:nomadictents:mallet"
+			order: -2
+			rotation: 5.0d
+			width: 1.2000000000000002d
+			x: 7.586d
+			y: 1.293d
 		}
 	]
 	order_index: 19
@@ -68,6 +112,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				47292410B032CA71: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"47292410B032CA71"
 			]
@@ -99,6 +151,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "46F457BD48FA97AC"
@@ -113,6 +167,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				3D4B0FC59AE5247B: [
+					2.9d
+					0.0d
+					3.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"3D4B0FC59AE5247B"
 			]
@@ -146,6 +208,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "7DB8F7F00229B393"
@@ -160,6 +224,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				3D4B0FC59AE5247B: [
+					2.9d
+					0.0d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"3D4B0FC59AE5247B"
 			]
@@ -191,6 +263,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 3L
@@ -206,6 +280,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				30E44BAFD7B7089F: [
+					4.9d
+					0.0d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"30E44BAFD7B7089F"
 			]
@@ -228,6 +310,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "6812F899BBEE741F"
@@ -250,6 +334,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				54F0CEB696FD7B47: [
+					6.9d
+					-0.875d
+					7.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"54F0CEB696FD7B47"
 			]
@@ -283,6 +375,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1F7922DD000C8033"
@@ -297,6 +391,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				3D4B0FC59AE5247B: [
+					2.9d
+					0.0d
+					3.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"3D4B0FC59AE5247B"
 			]
@@ -328,6 +430,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "6F75F0F58786C37E"
@@ -342,6 +446,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				46C87D2FEBB383BF: [
+					4.9d
+					1.75d
+					5.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"46C87D2FEBB383BF"
 			]
@@ -373,6 +485,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "31D77F69D958C5D2"

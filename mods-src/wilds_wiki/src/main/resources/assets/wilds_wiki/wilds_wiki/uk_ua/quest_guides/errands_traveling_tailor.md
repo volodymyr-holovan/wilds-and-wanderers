@@ -12,5 +12,5 @@ summary: Філімон, кравець:
 «Обіцяю: принесете шкіру — пошию вам таку куртку, що й дракон не подряпає. Ну, принаймні не одразу.»
 Принесіть шістнадцять шкір — корови, коні, ламі.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.leather_chestplate", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.leather_boots", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", 100 досвіду, 40 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:leather_chestplate]], [[minecraft:leather_boots]], [[minecraft:emerald]] ×6, 100 досвіду, 40 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

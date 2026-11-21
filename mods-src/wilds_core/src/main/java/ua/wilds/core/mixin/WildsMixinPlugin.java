@@ -18,6 +18,7 @@ public final class WildsMixinPlugin implements IMixinConfigPlugin {
             Map.entry("ua.wilds.core.mixin.FtbQuestsTeamMixin", "ftbquests"),
             Map.entry("ua.wilds.core.mixin.FtbQuestsPartyMixin", "ftbquests"),
             Map.entry("ua.wilds.core.mixin.client.ApothTooltipMixin", "apotheosis"),
+            Map.entry("ua.wilds.core.mixin.client.PinnedQuestsHideMixin", "ftbquests"),
             Map.entry("ua.wilds.core.mixin.CopperGolemStatueMixin", "friendsandfoes"),
             Map.entry("ua.wilds.core.mixin.AccessoriesArmorShiftMixin", "accessories"),
             Map.entry("ua.wilds.core.mixin.LithostitchedSourceMixin", "lithostitched"));

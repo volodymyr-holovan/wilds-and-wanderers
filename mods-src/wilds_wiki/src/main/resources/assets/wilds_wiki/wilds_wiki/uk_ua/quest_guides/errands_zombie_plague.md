@@ -12,5 +12,5 @@ summary: Лукія, сільська лікарка (доручення 1 з 4)
 «Я знаю, як лікувати ранніх — золоте яблуко і слабкість. Але поки троє обернених бродять навколо, хвороба ширитиметься.»
 Зупиніть трьох обернених селян-зомбі. Знаю, це важко. Але це милосердя.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.golden_apple", "color": "aqua"}, {"text": " ×2", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.glistering_melon_slice", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 150 досвіду, 60 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:golden_apple]] ×2, [[minecraft:glistering_melon_slice]] ×4, 150 досвіду, 60 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

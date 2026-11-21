@@ -12,5 +12,5 @@ summary: Тиха Злата, провидиця:
 «Але птахи мене обминають — бояться. Ви ж тихо підкрадетеся, правда?»
 Принесіть п'ять пір'їн ворона. Ворони сидять на землі й злітають, коли підходите — крадіться присівши.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.twilightforest.magic_map_focus", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 180 досвіду, 70 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[twilightforest:magic_map_focus]], [[minecraft:emerald]] ×8, 180 досвіду, 70 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

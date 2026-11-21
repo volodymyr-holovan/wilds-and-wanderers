@@ -9,15 +9,92 @@
 	id: "21A91F42ACAD414E"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.7250000000000005d
+			height: 3.15d
 			image: "item:minecolonies:blockhuttownhall"
 			order: -1
 			rotation: 0.0d
-			width: 4.7250000000000005d
-			x: 7.0d
+			width: 3.15d
+			x: -2.3625d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecraft:bell"
+			order: -2
+			rotation: 7.0d
+			width: 1.0d
+			x: 3.209d
+			y: 3.482d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:minecraft:iron_sword"
+			order: -2
+			rotation: -6.0d
+			width: 1.2000000000000002d
+			x: 14.293d
+			y: 1.6d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:easy_villagers:villager"
+			order: -2
+			rotation: 8.0d
+			width: 1.0d
+			x: 5.929d
+			y: -4.109d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecolonies:supplycampdeployer"
+			order: -2
+			rotation: -6.0d
+			width: 1.0d
+			x: 15.075d
+			y: -2.706d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecolonies:blockhutbuilder"
+			order: -2
+			rotation: 4.0d
+			width: 1.0d
+			x: -1.279d
+			y: -2.788d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecolonies:blockhutcitizen"
+			order: -2
+			rotation: 6.0d
+			width: 0.9d
+			x: 7.799d
+			y: -3.003d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:minecolonies:blockhutlumberjack"
+			order: -2
+			rotation: -2.0d
+			width: 0.8d
+			x: 3.923d
+			y: -3.63d
 		}
 	]
 	order_index: 18
@@ -65,6 +142,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				7BADB20F26C8C650: [
+					0.9d
+					0.0d
+					1.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"7BADB20F26C8C650"
 			]
@@ -103,6 +188,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					entity: "minecraft:pillager"
@@ -115,6 +202,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				7BADB20F26C8C650: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"7BADB20F26C8C650"
 			]
@@ -148,6 +243,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "2BA4516F710C9D7E"
@@ -162,6 +259,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				7BADB20F26C8C650: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"7BADB20F26C8C650"
 			]
@@ -192,6 +297,7 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
 			size: 1.5d
 			tasks: [
 				{
@@ -207,6 +313,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				7316FA6B28EC3B0B: [
+					2.9d
+					0.875d
+					3.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"7316FA6B28EC3B0B"
 			]
@@ -247,6 +361,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "1123906CA9766F8D"
@@ -269,6 +385,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				538C863C36A22199: [
+					4.9d
+					-0.875d
+					5.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"538C863C36A22199"
 			]
@@ -300,6 +424,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "4935AB38FB498B0E"
@@ -322,6 +448,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				538C863C36A22199: [
+					4.9d
+					-0.875d
+					5.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"538C863C36A22199"
 			]
@@ -352,6 +486,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "17939F9565835900"
@@ -366,6 +502,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				538C863C36A22199: [
+					4.9d
+					-0.875d
+					5.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"538C863C36A22199"
 			]
@@ -405,6 +549,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "5E8ADC45EF2C80B4"
@@ -419,6 +565,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				1C89EB51D23F6C42: [
+					6.9d
+					-1.75d
+					7.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"1C89EB51D23F6C42"
 			]
@@ -459,6 +613,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "3B8AAEFB44C0EA1E"
@@ -489,6 +645,26 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				102DE72CB57467CC: [
+					7.8d
+					0.0d
+					8.2d
+					0.0d
+				]
+				59A1BD92AED461CD: [
+					7.8d
+					1.75d
+					8.2d
+					0.0d
+				]
+				6AD292256C16F1C0: [
+					8.9d
+					0.0d
+					9.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"6AD292256C16F1C0"
 				"102DE72CB57467CC"
@@ -524,6 +700,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "3151FEFCA68B8B97"
@@ -546,6 +724,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				454CF63929EC1CFD: [
+					10.9d
+					0.0d
+					11.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"454CF63929EC1CFD"
 			]
@@ -579,6 +765,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "13E2853D88008C0E"
@@ -599,6 +787,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				39F6F1EB4894D893: [
+					12.9d
+					0.0d
+					13.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"39F6F1EB4894D893"
 			]
@@ -640,6 +836,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "56BD027CFD6DB385"
@@ -654,6 +852,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				7316FA6B28EC3B0B: [
+					2.9d
+					0.875d
+					3.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"7316FA6B28EC3B0B"
 			]
@@ -687,6 +893,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "18D22BC70BB77020"
@@ -698,6 +906,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				7BADB20F26C8C650: [
+					0.9d
+					0.0d
+					1.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"7BADB20F26C8C650"
 			]
@@ -728,6 +944,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					count: 64L

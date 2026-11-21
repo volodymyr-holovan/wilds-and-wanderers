@@ -9,15 +9,103 @@
 	id: "375AE59F12D2E91D"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.0d
+			height: 3.0d
 			image: "item:twilightforest:naga_scale"
 			order: -1
 			rotation: 0.0d
-			width: 4.0d
-			x: 14.0d
+			width: 3.0d
+			x: -2.25d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:minecraft:diamond"
+			order: -2
+			rotation: 6.0d
+			width: 1.0d
+			x: 23.269d
+			y: -1.178d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:twilightforest:magic_map"
+			order: -2
+			rotation: -8.0d
+			width: 0.8d
+			x: 17.999d
+			y: 1.853d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:twilightforest:naga_trophy"
+			order: -2
+			rotation: 6.0d
+			width: 1.0d
+			x: 7.025d
+			y: -1.273d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:twilightforest:lich_trophy"
+			order: -2
+			rotation: -12.0d
+			width: 1.0d
+			x: 15.829d
+			y: -2.128d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:twilightforest:minoshroom_trophy"
+			order: -2
+			rotation: -2.0d
+			width: 1.2000000000000002d
+			x: 12.543d
+			y: 1.777d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:twilightforest:hydra_trophy"
+			order: -2
+			rotation: 10.0d
+			width: 0.9d
+			x: 20.417d
+			y: -1.539d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:twilightforest:knight_phantom_trophy"
+			order: -2
+			rotation: -10.0d
+			width: 1.1d
+			x: 29.283d
+			y: 1.035d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:twilightforest:ur_ghast_trophy"
+			order: -2
+			rotation: -1.0d
+			width: 0.8d
+			x: 22.215d
+			y: 1.283d
 		}
 	]
 	order_index: 10
@@ -76,6 +164,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				6F6FA0289022C21D: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"6F6FA0289022C21D"
 			]
@@ -107,6 +203,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "79BBF5F4ED25BFB3"
@@ -121,6 +219,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				6F6FA0289022C21D: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"6F6FA0289022C21D"
 			]
@@ -154,6 +260,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:naga"
@@ -166,6 +274,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				55CBF3EEE1C73453: [
+					2.9d
+					0.875d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"55CBF3EEE1C73453"
 			]
@@ -210,6 +326,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:lich"
@@ -222,6 +340,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				1CF1DCB1CC1D0A6D: [
+					4.9d
+					0.0d
+					5.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"1CF1DCB1CC1D0A6D"
 			]
@@ -255,6 +381,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:minoshroom"
@@ -267,6 +395,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				105E9A0C2CEC95C4: [
+					6.9d
+					0.0d
+					7.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"105E9A0C2CEC95C4"
 			]
@@ -300,6 +436,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:hydra"
@@ -312,6 +450,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				175253F3A02AF69E: [
+					8.9d
+					0.0d
+					9.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"175253F3A02AF69E"
 			]
@@ -354,6 +500,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:knight_phantom"
@@ -366,6 +514,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				1692E0F37F6EF9C5: [
+					10.9d
+					0.0d
+					11.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"1692E0F37F6EF9C5"
 			]
@@ -399,6 +555,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:ur_ghast"
@@ -411,6 +569,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				493C01348F1C1D75: [
+					12.9d
+					0.0d
+					13.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"493C01348F1C1D75"
 			]
@@ -444,6 +610,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:alpha_yeti"
@@ -456,6 +624,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				46D9BA6A550DD1BB: [
+					14.9d
+					0.0d
+					15.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"46D9BA6A550DD1BB"
 			]
@@ -500,6 +676,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:snow_queen"
@@ -512,6 +690,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				3ACD85537A1172C3: [
+					16.9d
+					0.0d
+					17.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"3ACD85537A1172C3"
 			]
@@ -545,6 +731,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "1A6C3B50E4003D0D"
@@ -556,6 +744,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				7A80A65D549B5969: [
+					18.9d
+					0.0d
+					19.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"7A80A65D549B5969"
 			]
@@ -589,6 +785,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					biome: "twilightforest:final_plateau"
@@ -600,6 +798,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				3E661D591077146D: [
+					20.9d
+					0.0d
+					21.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"3E661D591077146D"
 			]
@@ -633,6 +839,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "1A3D2266B957A3E7"
@@ -644,6 +852,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				2DC8AE232D25BC48: [
+					22.9d
+					0.0d
+					23.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"2DC8AE232D25BC48"
 			]
@@ -677,6 +893,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					entity: "twilightforest:forge_harbinger"
@@ -689,6 +907,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				10EF9F40C910CEF9: [
+					24.9d
+					0.0d
+					25.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"10EF9F40C910CEF9"
 			]
@@ -720,6 +946,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "2C3A1F747F1E8181"
@@ -734,6 +962,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				22A5022F8D773C79: [
+					26.9d
+					0.0d
+					27.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"22A5022F8D773C79"
 			]

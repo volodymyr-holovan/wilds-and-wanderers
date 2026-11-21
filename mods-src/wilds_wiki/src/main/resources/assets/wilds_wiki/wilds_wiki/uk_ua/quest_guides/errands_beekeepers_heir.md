@@ -12,5 +12,5 @@ summary: Ничипір, молодий пасічник:
 «Кажуть, дике бджолине гніздо можна перенести, якщо копати шовковим дотиком. У мене нема такого інструменту.»
 Принесіть мені бджолине гніздо з бджолами — кирка з чарами «Шовковий дотик» або багаття під гніздом, щоб бджоли не розлютилися.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.honeycomb", "color": "aqua"}, {"text": " ×12", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "block.minecraft.honey_block", "color": "aqua"}, {"text": " ×2", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×5", "color": "gray"}, {"text": ", 110 досвіду, 40 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:honeycomb]] ×12, [[minecraft:honey_block]] ×2, [[minecraft:emerald]] ×5, 110 досвіду, 40 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

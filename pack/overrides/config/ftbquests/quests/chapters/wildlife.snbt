@@ -9,15 +9,59 @@
 	id: "7D2F7748380711AD"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 4.0d
+			height: 3.0d
 			image: "item:naturalist:capture_net"
 			order: -1
 			rotation: 0.0d
-			width: 4.0d
-			x: 2.0d
+			width: 3.0d
+			x: -2.25d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:gew2:pebble"
+			order: -2
+			rotation: 9.0d
+			width: 1.1d
+			x: 4.681d
+			y: 3.042d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:naturalist:venison"
+			order: -2
+			rotation: 1.0d
+			width: 1.0d
+			x: 1.895d
+			y: 3.003d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:naturalist:antler"
+			order: -2
+			rotation: -11.0d
+			width: 1.0d
+			x: -0.163d
+			y: -2.652d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:naturalist:ostrich_egg"
+			order: -2
+			rotation: 9.0d
+			width: 0.9d
+			x: -0.667d
+			y: 1.924d
 		}
 	]
 	order_index: 20
@@ -77,6 +121,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				75DD4FF10BEB44DE: [
+					0.9d
+					0.0d
+					1.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"75DD4FF10BEB44DE"
 			]
@@ -99,6 +151,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "6B7A532B4BA5EDF2"
@@ -113,6 +167,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				75DD4FF10BEB44DE: [
+					0.9d
+					0.0d
+					1.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"75DD4FF10BEB44DE"
 			]
@@ -146,6 +208,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 4L
@@ -170,6 +234,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				54F518DCEF80B223: [
+					2.9d
+					0.875d
+					3.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"54F518DCEF80B223"
 			]
@@ -201,6 +273,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "4FAD11F8CD4B228A"
@@ -215,6 +289,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				54F518DCEF80B223: [
+					2.9d
+					0.875d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"54F518DCEF80B223"
 			]
@@ -248,6 +330,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					biome: "minecraft:savanna"
@@ -265,6 +349,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				54F518DCEF80B223: [
+					2.9d
+					0.875d
+					3.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"54F518DCEF80B223"
 			]
@@ -287,6 +379,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1E2A31F439A6B815"

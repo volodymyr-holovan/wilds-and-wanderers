@@ -13,3 +13,13 @@
 	lodChunkRenderDistanceRadius = 64
 	horizontalQuality = "LOW"
 	verticalQuality = "LOW"
+
+# no technical notes in chat at start (garbage collector, memory, mod lists): players cannot act on them (22.11)
+[common.logging.warning]
+	showLowMemoryWarningOnStartup = false
+	showReplayWarningOnStartup = false
+	showModCompatibilityWarningsOnStartup = false
+	showHighVanillaRenderDistanceWarning = false
+	showPoolInsufficientMemoryWarning = false
+	showGarbageCollectorWarning = false
+	showSlowWorldGenSettingWarnings = false

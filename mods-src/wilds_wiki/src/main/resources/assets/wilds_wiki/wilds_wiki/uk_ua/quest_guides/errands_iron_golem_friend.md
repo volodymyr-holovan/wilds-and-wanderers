@@ -12,5 +12,5 @@ summary: Василько, сирота:
 «Тітка каже, голема можна збудувати знову: чотири блоки заліза й гарбуз. Гарбуз я виростив сам! А заліза в нас немає.»
 Принесіть мені чотири блоки заліза... будь ласка.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "block.minecraft.poppy", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.iron_ingot", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 140 досвіду, 50 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:poppy]] ×4, [[minecraft:emerald]] ×8, [[minecraft:iron_ingot]] ×8, 140 досвіду, 50 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

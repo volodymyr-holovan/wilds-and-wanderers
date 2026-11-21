@@ -9,15 +9,103 @@
 	id: "32F4545024F13413"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 7.875d
+			height: 5.0d
 			image: "item:ae2:controller"
 			order: -1
 			rotation: 0.0d
-			width: 7.875d
-			x: 8.0d
+			width: 5.0d
+			x: -3.75d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:ae2:mysterious_cube"
+			order: -2
+			rotation: -1.0d
+			width: 0.8d
+			x: 13.871d
+			y: -5.522d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:ae2:certus_quartz_crystal"
+			order: -2
+			rotation: 10.0d
+			width: 0.8d
+			x: 12.921d
+			y: -4.23d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:ae2:fluix_crystal"
+			order: -2
+			rotation: -6.0d
+			width: 1.2000000000000002d
+			x: 3.003d
+			y: 2.514d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:ae2:logic_processor"
+			order: -2
+			rotation: 10.0d
+			width: 0.8d
+			x: 5.701d
+			y: 2.585d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:ae2:crafting_terminal"
+			order: -2
+			rotation: -9.0d
+			width: 0.8d
+			x: 13.111d
+			y: 4.348d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:ae2:import_bus"
+			order: -2
+			rotation: -13.0d
+			width: 0.9d
+			x: 16.645d
+			y: -3.337d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:ae2:item_storage_cell_64k"
+			order: -2
+			rotation: -4.0d
+			width: 1.2000000000000002d
+			x: 15.847d
+			y: -1.481d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:ae2:molecular_assembler"
+			order: -2
+			rotation: -3.0d
+			width: 1.0d
+			x: 0.913d
+			y: 1.786d
 		}
 	]
 	order_index: 6
@@ -92,6 +180,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				7F7888BD3F3C1098: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"7F7888BD3F3C1098"
 			]
@@ -123,6 +219,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 16L
@@ -138,6 +236,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				33F8E054F5C30742: [
+					2.9d
+					0.0d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"33F8E054F5C30742"
 			]
@@ -160,6 +266,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "2E600BE644E21340"
@@ -192,6 +300,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				50990F8F550A840B: [
+					4.9d
+					0.0d
+					5.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"50990F8F550A840B"
 			]
@@ -214,6 +330,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "29EBE9912FB41AB8"
@@ -264,6 +382,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				1EDC12F3B3E54499: [
+					6.9d
+					0.0d
+					7.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"1EDC12F3B3E54499"
 			]
@@ -286,6 +412,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "6774F8DD7A47101A"
@@ -341,6 +469,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				167B1925FDFDBA87: [
+					8.0d
+					-1.969d
+					10.0d
+					-2.406d
+				]
+			}
 			dependencies: [
 				"167B1925FDFDBA87"
 			]
@@ -363,6 +499,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "7D15B08900742B36"
@@ -377,6 +515,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				167B1925FDFDBA87: [
+					8.9d
+					0.0d
+					9.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"167B1925FDFDBA87"
 			]
@@ -399,6 +545,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "228240CCF16759D6"
@@ -429,6 +577,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				167B1925FDFDBA87: [
+					8.9d
+					0.0d
+					9.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"167B1925FDFDBA87"
 			]
@@ -451,6 +607,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "40E749E846B0D22C"
@@ -473,6 +631,20 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				1D9FEE7CF036927F: [
+					10.9d
+					-2.625d
+					11.1d
+					-0.875d
+				]
+				3BE927627069B499: [
+					10.0d
+					-2.8d
+					12.0d
+					-2.45d
+				]
+			}
 			dependencies: [
 				"3BE927627069B499"
 				"1D9FEE7CF036927F"
@@ -496,6 +668,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "4BE5FF9DDBA5A1FD"
@@ -551,6 +725,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				5A58857FD0D63BB0: [
+					12.9d
+					-0.875d
+					13.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"5A58857FD0D63BB0"
 			]
@@ -573,6 +755,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 4L
@@ -597,6 +781,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				167B1925FDFDBA87: [
+					8.9d
+					0.0d
+					9.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"167B1925FDFDBA87"
 			]
@@ -619,6 +811,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 2L
@@ -642,6 +836,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				167B1925FDFDBA87: [
+					8.9d
+					0.0d
+					9.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"167B1925FDFDBA87"
 			]
@@ -664,6 +866,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "512B1EE79D04623B"
@@ -686,6 +890,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				167B1925FDFDBA87: [
+					8.0d
+					1.969d
+					10.0d
+					2.406d
+				]
+			}
 			dependencies: [
 				"167B1925FDFDBA87"
 				"68634AF527B8D1B6"
@@ -709,6 +921,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "3FDA3F5A587A96AA"
@@ -723,6 +937,20 @@
 			y: 4.375d
 		}
 		{
+			dep_control_pts: {
+				19155CB614BB5BBB: [
+					10.9d
+					-0.875d
+					11.1d
+					0.875d
+				]
+				5238F7F69B050C3D: [
+					10.9d
+					0.875d
+					11.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"5238F7F69B050C3D"
 				"19155CB614BB5BBB"
@@ -746,6 +974,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					count: 16L
@@ -770,6 +1000,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				1F7CF4639F4C3D2F: [
+					12.9d
+					0.875d
+					13.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"1F7CF4639F4C3D2F"
 			]
@@ -793,6 +1031,8 @@
 					type: "command"
 				}
 			]
+			shape: "diamond"
+			size: 0.9d
 			tasks: [
 				{
 					id: "42E7E2432A42FEA3"
@@ -824,6 +1064,20 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				1F7CF4639F4C3D2F: [
+					13.8d
+					0.875d
+					14.2d
+					0.0d
+				]
+				2D128C087D09ED9C: [
+					14.9d
+					-0.875d
+					15.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"2D128C087D09ED9C"
 				"1F7CF4639F4C3D2F"

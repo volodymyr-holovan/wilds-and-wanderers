@@ -12,5 +12,5 @@ summary: Коваль Свирид, коваль, що кує легенди:
 «Шукати їх — як голку в лаві. Але є хитрість: ліжка в Незері вибухають. Вибухи відкривають уламки, бо їх не бере вогонь.»
 Принесіть чотири давні уламки. Копайте на рівні 8–22 у Незері; вибухи ліжок чи TNT відкривають великі ділянки.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.netherite_upgrade_smithing_template", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.diamond", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 400 досвіду, скриня здобичі, 150 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:netherite_upgrade_smithing_template]], [[minecraft:diamond]] ×4, 400 досвіду, скриня здобичі, 150 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

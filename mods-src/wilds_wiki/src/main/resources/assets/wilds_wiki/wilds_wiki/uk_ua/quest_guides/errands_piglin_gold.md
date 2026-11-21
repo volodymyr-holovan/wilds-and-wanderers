@@ -12,5 +12,5 @@ summary: Посол Тодор, посол до піглінів:
 «Чотири блоки золота — і пігліни відкриють нам шлях до бастіону, де полонені наші люди.»
 Принесіть чотири блоки золота. Носіть золоту броню — тоді пігліни вас не чіпатимуть.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.ender_pearl", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.fire_charge", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×15", "color": "gray"}, {"text": ", 260 досвіду, 100 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:ender_pearl]] ×8, [[minecraft:fire_charge]] ×8, [[minecraft:emerald]] ×15, 260 досвіду, 100 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

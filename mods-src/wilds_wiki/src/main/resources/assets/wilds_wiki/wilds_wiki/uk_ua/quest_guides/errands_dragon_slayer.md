@@ -12,5 +12,5 @@ summary: Король-вигнанець Мстислав, король без �
 «Мені не потрібна його голова — мені потрібен лише знак, що його більше нема. А все, що лишилося в моїй скарбниці, — ваше.»
 Подолайте вогняного дракона — щонайменше третьої стадії. Зілля вогнестійкості, лук і рухливість — ваша надія.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.netherite_ingot", "color": "aqua"}, {"text": " ×2", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.enchanted_golden_apple", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.diamond", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 1000 досвіду, скриня здобичі, 400 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:netherite_ingot]] ×2, [[minecraft:enchanted_golden_apple]], [[minecraft:diamond]] ×10, 1000 досвіду, скриня здобичі, 400 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

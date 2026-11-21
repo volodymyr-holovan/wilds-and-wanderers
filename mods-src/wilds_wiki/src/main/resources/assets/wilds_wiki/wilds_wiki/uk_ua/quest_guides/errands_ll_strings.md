@@ -12,5 +12,5 @@ summary: Тарас, мандрівний бард (доручення 2 з 3):
 «Аметистові жеоди ховаються під землею: фіолетові печери, що співають, коли по них ідеш.»
 Принесіть дванадцять уламків аметисту.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.music_disc_mall", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", 120 досвіду, 50 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:music_disc_mall]], [[minecraft:emerald]] ×6, 120 досвіду, 50 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

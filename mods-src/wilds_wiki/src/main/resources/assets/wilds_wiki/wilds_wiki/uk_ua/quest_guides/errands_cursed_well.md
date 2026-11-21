@@ -12,5 +12,5 @@ summary: Явдоха, знахарка:
 «Вона й ще одна сестра живуть на болоті, у хатинці на палях. Мене вони знають і проженуть. А вас — ні.»
 Зупиніть двох відьом. Остерігайтеся їхніх зіль — пийте молоко, якщо отруять.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.potion", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.glowstone_dust", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "block.minecraft.nether_wart", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 180 досвіду, скриня здобичі, 70 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:potion]], [[minecraft:glowstone_dust]] ×8, [[minecraft:nether_wart]] ×4, 180 досвіду, скриня здобичі, 70 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

@@ -12,5 +12,5 @@ summary: Ганна, польова лікарка:
 «Сік ківано гасить жар у тілі краще за будь-яке зілля. Але химерний ліс кишить ендерменами, а я вмію тримати голку, не меч.»
 Принесіть мені вісім ківано. Я зварю з них ліки для всіх, хто тут ходить.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.potion", "color": "aqua"}, {"text": " ×3", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.gold_ingot", "color": "aqua"}, {"text": " ×6", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.golden_carrot", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", 220 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:potion]] ×3, [[minecraft:gold_ingot]] ×6, [[minecraft:golden_carrot]] ×8, 220 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

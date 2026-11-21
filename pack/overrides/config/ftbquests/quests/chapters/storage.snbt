@@ -9,15 +9,81 @@
 	id: "1E77E388D0A9F0D1"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 6.3d
+			height: 4.2d
 			image: "item:sophisticatedstorage:barrel"
 			order: -1
 			rotation: 0.0d
-			width: 6.3d
-			x: 4.0d
+			width: 4.2d
+			x: -3.1500000000000004d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:sophisticatedstorage:basic_tier_upgrade"
+			order: -2
+			rotation: 5.0d
+			width: 0.8d
+			x: 7.344d
+			y: 3.45d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:sophisticatedstorage:stack_upgrade_tier_1"
+			order: -2
+			rotation: 12.0d
+			width: 0.8d
+			x: 9.038d
+			y: -3.65d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:sophisticatedstorage:compacting_upgrade"
+			order: -2
+			rotation: 8.0d
+			width: 1.0d
+			x: 1.47d
+			y: 3.07d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:sophisticatedstorage:controller"
+			order: -2
+			rotation: -7.0d
+			width: 1.1d
+			x: 6.816d
+			y: -3.67d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:sophisticatedbackpacks:pickup_upgrade"
+			order: -2
+			rotation: -9.0d
+			width: 1.0d
+			x: 5.694d
+			y: 3.07d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:sophisticatedbackpacks:magnet_upgrade"
+			order: -2
+			rotation: 15.0d
+			width: 1.2000000000000002d
+			x: 4.484d
+			y: -4.91d
 		}
 	]
 	order_index: 23
@@ -59,6 +125,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				2C4D537C18CE8E78: [
+					0.9d
+					0.0d
+					1.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"2C4D537C18CE8E78"
 			]
@@ -81,6 +155,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "496F80EF212268B0"
@@ -95,6 +171,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				2302649E3042C382: [
+					2.9d
+					-1.75d
+					3.1d
+					-3.5d
+				]
+			}
 			dependencies: [
 				"2302649E3042C382"
 			]
@@ -117,6 +201,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "1EA9B1EFEA79E53B"
@@ -131,6 +217,14 @@
 			y: -3.5d
 		}
 		{
+			dep_control_pts: {
+				37A92CBE0A6428C1: [
+					4.9d
+					-3.5d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"37A92CBE0A6428C1"
 			]
@@ -153,6 +247,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "5D85556F12AB2AD4"
@@ -167,6 +263,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				2302649E3042C382: [
+					2.9d
+					-1.75d
+					3.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"2302649E3042C382"
 			]
@@ -200,6 +304,7 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
 			size: 1.25d
 			tasks: [
 				{
@@ -215,6 +320,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				2C4D537C18CE8E78: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"2C4D537C18CE8E78"
 			]
@@ -237,6 +350,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "12AAC838C3850C0D"
@@ -251,6 +366,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				5AB35EF7031FD5B4: [
+					2.9d
+					0.0d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"5AB35EF7031FD5B4"
 			]
@@ -273,6 +396,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1B2AF1754CE4DAA1"
@@ -287,6 +412,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				5AB35EF7031FD5B4: [
+					2.9d
+					0.0d
+					3.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"5AB35EF7031FD5B4"
 			]
@@ -309,6 +442,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1490B8164280126C"
@@ -323,6 +458,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				5AB35EF7031FD5B4: [
+					2.0d
+					1.575d
+					4.0d
+					1.925d
+				]
+			}
 			dependencies: [
 				"5AB35EF7031FD5B4"
 			]
@@ -345,6 +488,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "2E86506839879BB7"
@@ -359,6 +504,14 @@
 			y: 3.5d
 		}
 		{
+			dep_control_pts: {
+				2C4D537C18CE8E78: [
+					0.9d
+					0.0d
+					1.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"2C4D537C18CE8E78"
 			]
@@ -381,6 +534,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1C1DFB7CD7439F5B"
@@ -391,6 +546,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				1BB89F9CA91EC911: [
+					4.9d
+					-1.75d
+					5.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"1BB89F9CA91EC911"
 			]
@@ -422,6 +585,7 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
 			size: 1.25d
 			tasks: [
 				{
@@ -433,6 +597,14 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				404FE4606A41CCEA: [
+					6.9d
+					0.875d
+					7.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"404FE4606A41CCEA"
 			]
@@ -455,6 +627,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1D2AFC07C6F30AFD"

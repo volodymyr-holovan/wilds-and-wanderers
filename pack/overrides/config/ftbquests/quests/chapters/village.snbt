@@ -9,15 +9,70 @@
 	id: "3DE7DEB16DC88274"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 5.4d
+			height: 3.5999999999999996d
 			image: "item:bountiful:bountyboard"
 			order: -1
 			rotation: 0.0d
-			width: 5.4d
-			x: 3.0d
+			width: 3.5999999999999996d
+			x: -2.6999999999999997d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:bountiful:bounty"
+			order: -2
+			rotation: -3.0d
+			width: 1.1d
+			x: 0.813d
+			y: 4.58d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:minecraft:clock"
+			order: -2
+			rotation: -2.0d
+			width: 0.9d
+			x: 3.387d
+			y: -3.44d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:villagersplus:alchemist_table"
+			order: -2
+			rotation: 2.0d
+			width: 1.2000000000000002d
+			x: 7.473d
+			y: -3.06d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:villagersplus:oak_horticulturist_table"
+			order: -2
+			rotation: 2.0d
+			width: 0.8d
+			x: 5.943d
+			y: 3.8d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.1d
+			image: "item:villagersplus:oceanographer_table"
+			order: -2
+			rotation: -11.0d
+			width: 1.1d
+			x: 6.375d
+			y: -4.52d
 		}
 	]
 	order_index: 25
@@ -66,6 +121,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				7D78C285D73CCE61: [
+					0.0d
+					-1.575d
+					2.0d
+					-1.925d
+				]
+			}
 			dependencies: [
 				"7D78C285D73CCE61"
 			]
@@ -99,6 +162,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					advancement: "bountiful:bountiful/bounty_complete"
@@ -111,6 +176,14 @@
 			y: -3.5d
 		}
 		{
+			dep_control_pts: {
+				32731728A9CFF4C4: [
+					2.9d
+					-3.5d
+					3.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"32731728A9CFF4C4"
 			]
@@ -142,6 +215,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					advancement: "bountiful:bountiful/rush_order"
@@ -154,6 +229,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				7D78C285D73CCE61: [
+					0.9d
+					0.0d
+					1.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"7D78C285D73CCE61"
 			]
@@ -185,6 +268,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "1E41391B309CCEF0"
@@ -199,6 +284,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				7D78C285D73CCE61: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"7D78C285D73CCE61"
 			]
@@ -230,6 +323,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "1616F03954F3FBFC"
@@ -244,6 +339,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				7D78C285D73CCE61: [
+					0.9d
+					0.0d
+					1.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"7D78C285D73CCE61"
 			]
@@ -275,6 +378,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "2E1FCB91F32945F3"
@@ -289,6 +394,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				7D78C285D73CCE61: [
+					0.0d
+					1.575d
+					2.0d
+					1.925d
+				]
+			}
 			dependencies: [
 				"7D78C285D73CCE61"
 			]
@@ -320,6 +433,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "10AC485EAEDFA482"
@@ -334,6 +449,14 @@
 			y: 3.5d
 		}
 		{
+			dep_control_pts: {
+				1F88FE33F9A5FE67: [
+					2.9d
+					-1.75d
+					3.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"1F88FE33F9A5FE67"
 			]
@@ -365,6 +488,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "6EDCCC6FB89F7180"
@@ -379,6 +504,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				5DCB18D4DA899083: [
+					2.9d
+					3.5d
+					3.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"5DCB18D4DA899083"
 			]
@@ -401,6 +534,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "2C789AD3F83E0B7A"
@@ -415,6 +550,20 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				1464C57CE71E2593: [
+					4.9d
+					0.0d
+					5.1d
+					0.0d
+				]
+				32731728A9CFF4C4: [
+					3.8d
+					-3.5d
+					4.2d
+					0.0d
+				]
+			}
 			dependencies: [
 				"32731728A9CFF4C4"
 				"1464C57CE71E2593"

@@ -12,5 +12,5 @@ summary: Параска, господиня:
 «Чоловік поїхав на заробітки, син малий. Я би й сама, та лисиці моторні — не наздоженеш.»
 Проженіть двох лисиць. Вони ходять опівночі від лісу, з тайги чи ялинника.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.minecraft.egg", "color": "aqua"}, {"text": " ×16", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.cooked_chicken", "color": "aqua"}, {"text": " ×8", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×4", "color": "gray"}, {"text": ", 70 досвіду, 25 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[minecraft:egg]] ×16, [[minecraft:cooked_chicken]] ×8, [[minecraft:emerald]] ×4, 70 досвіду, 25 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

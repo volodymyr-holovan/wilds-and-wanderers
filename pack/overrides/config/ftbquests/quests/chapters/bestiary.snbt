@@ -9,15 +9,92 @@
 	id: "7F48B7868B9603D0"
 	images: [
 		{
-			alpha: 36
+			alpha: 70
 			color: 16777215
-			height: 5.4d
+			height: 3.5999999999999996d
 			image: "item:alexsmobs:animal_dictionary"
 			order: -1
 			rotation: 0.0d
-			width: 5.4d
-			x: 3.0d
+			width: 3.5999999999999996d
+			x: -2.6999999999999997d
 			y: 0.0d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:alexsmobs:banana"
+			order: -2
+			rotation: -15.0d
+			width: 1.2000000000000002d
+			x: 5.106d
+			y: 5.863d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:alexsmobs:roadrunner_feather"
+			order: -2
+			rotation: 3.0d
+			width: 1.0d
+			x: 1.632d
+			y: -5.44d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:alexsmobs:bison_fur"
+			order: -2
+			rotation: 1.0d
+			width: 1.0d
+			x: 6.6d
+			y: -2.62d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.2000000000000002d
+			image: "item:alexsmobs:moose_antler"
+			order: -2
+			rotation: -12.0d
+			width: 1.2000000000000002d
+			x: -1.05d
+			y: -3.302d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.8d
+			image: "item:alexsmobs:crocodile_scute"
+			order: -2
+			rotation: 2.0d
+			width: 0.8d
+			x: 6.348d
+			y: 4.289d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 1.0d
+			image: "item:alexsmobs:bear_fur"
+			order: -2
+			rotation: -12.0d
+			width: 1.0d
+			x: -0.312d
+			y: 3.49d
+		}
+		{
+			alpha: 90
+			color: 16777215
+			height: 0.9d
+			image: "item:alexsmobs:shark_tooth"
+			order: -2
+			rotation: 13.0d
+			width: 0.9d
+			x: 0.372d
+			y: -2.103d
 		}
 	]
 	order_index: 24
@@ -59,6 +136,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				2E53FC88D2DA4DCF: [
+					0.0d
+					-1.575d
+					2.0d
+					-1.925d
+				]
+			}
 			dependencies: [
 				"2E53FC88D2DA4DCF"
 			]
@@ -81,6 +166,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 4L
@@ -96,6 +183,14 @@
 			y: -3.5d
 		}
 		{
+			dep_control_pts: {
+				2E53FC88D2DA4DCF: [
+					0.9d
+					0.0d
+					1.1d
+					-1.75d
+				]
+			}
 			dependencies: [
 				"2E53FC88D2DA4DCF"
 			]
@@ -118,6 +213,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					count: 3L
@@ -133,6 +230,14 @@
 			y: -1.75d
 		}
 		{
+			dep_control_pts: {
+				2E53FC88D2DA4DCF: [
+					0.9d
+					0.0d
+					1.1d
+					0.0d
+				]
+			}
 			dependencies: [
 				"2E53FC88D2DA4DCF"
 			]
@@ -155,6 +260,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 4L
@@ -170,6 +277,14 @@
 			y: 0.0d
 		}
 		{
+			dep_control_pts: {
+				1CF8A7E2D3B3F4DF: [
+					2.0d
+					-1.969d
+					4.0d
+					-2.406d
+				]
+			}
 			dependencies: [
 				"1CF8A7E2D3B3F4DF"
 			]
@@ -192,6 +307,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					count: 2L
@@ -207,6 +324,14 @@
 			y: -4.375d
 		}
 		{
+			dep_control_pts: {
+				1961C3CF9D7C5092: [
+					2.9d
+					-3.5d
+					3.1d
+					-2.625d
+				]
+			}
 			dependencies: [
 				"1961C3CF9D7C5092"
 			]
@@ -240,6 +365,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					entity: "alexsmobs:crocodile"
@@ -261,6 +388,14 @@
 			y: -2.625d
 		}
 		{
+			dep_control_pts: {
+				1CF8A7E2D3B3F4DF: [
+					2.9d
+					0.0d
+					3.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"1CF8A7E2D3B3F4DF"
 			]
@@ -283,6 +418,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "38DE82D9764B890F"
@@ -297,6 +434,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				2E53FC88D2DA4DCF: [
+					0.9d
+					0.0d
+					1.1d
+					1.75d
+				]
+			}
 			dependencies: [
 				"2E53FC88D2DA4DCF"
 			]
@@ -328,6 +473,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					count: 3L
@@ -343,6 +490,14 @@
 			y: 1.75d
 		}
 		{
+			dep_control_pts: {
+				3E23395529E6F737: [
+					2.9d
+					1.75d
+					3.1d
+					0.875d
+				]
+			}
 			dependencies: [
 				"3E23395529E6F737"
 			]
@@ -365,6 +520,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "16D09B8F0A56E150"
@@ -379,6 +536,20 @@
 			y: 0.875d
 		}
 		{
+			dep_control_pts: {
+				37142B45B8C59C6D: [
+					4.9d
+					0.875d
+					5.1d
+					-0.875d
+				]
+				7292053316304090: [
+					4.9d
+					-2.625d
+					5.1d
+					-0.875d
+				]
+			}
 			dependencies: [
 				"37142B45B8C59C6D"
 				"7292053316304090"
@@ -427,6 +598,14 @@
 			y: -0.875d
 		}
 		{
+			dep_control_pts: {
+				2E53FC88D2DA4DCF: [
+					0.0d
+					1.575d
+					2.0d
+					1.925d
+				]
+			}
 			dependencies: [
 				"2E53FC88D2DA4DCF"
 			]
@@ -449,6 +628,8 @@
 					type: "command"
 				}
 			]
+			shape: "circle"
+			size: 1.0d
 			tasks: [
 				{
 					id: "741116A300EAA911"
@@ -463,6 +644,14 @@
 			y: 3.5d
 		}
 		{
+			dep_control_pts: {
+				720B742C351A7D39: [
+					2.9d
+					3.5d
+					3.1d
+					2.625d
+				]
+			}
 			dependencies: [
 				"720B742C351A7D39"
 			]
@@ -485,6 +674,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					count: 2L
@@ -500,6 +691,14 @@
 			y: 2.625d
 		}
 		{
+			dep_control_pts: {
+				720B742C351A7D39: [
+					2.9d
+					3.5d
+					3.1d
+					4.375d
+				]
+			}
 			dependencies: [
 				"720B742C351A7D39"
 			]
@@ -533,6 +732,8 @@
 					type: "command"
 				}
 			]
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [
 				{
 					id: "5D1F19F3E48207F1"
@@ -547,6 +748,14 @@
 			y: 4.375d
 		}
 		{
+			dep_control_pts: {
+				52EC13BF14023679: [
+					4.0d
+					2.8d
+					6.0d
+					2.45d
+				]
+			}
 			dependencies: [
 				"52EC13BF14023679"
 			]
@@ -580,6 +789,8 @@
 					type: "command"
 				}
 			]
+			shape: "gear"
+			size: 1.25d
 			tasks: [
 				{
 					id: "32D3490AD80197DD"

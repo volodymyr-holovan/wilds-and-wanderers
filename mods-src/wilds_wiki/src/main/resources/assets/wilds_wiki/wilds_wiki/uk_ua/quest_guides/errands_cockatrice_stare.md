@@ -12,5 +12,5 @@ summary: Свирид, кам'яний пастух:
 «Їх двоє, гніздо на пасовищі за пагорбом. Не дивіться їм в очі. Я серйозно.»
 Подолайте двох півнозміїв. Вони водяться в саванах і лісах. Не дивіться на них довго — дивіться під ноги.
 
-["", {"text": "Обіцяна плата: ", "color": "gold"}, {"translate": "item.iceandfire.cockatrice_eye", "color": "aqua"}, {"text": "", "color": "gray"}, {"text": ", ", "color": "gray"}, {"translate": "item.minecraft.emerald", "color": "aqua"}, {"text": " ×10", "color": "gray"}, {"text": ", 220 досвіду, 80 очок шляху", "color": "gray"}]
+**Обіцяна плата: **[[iceandfire:cockatrice_eye]], [[minecraft:emerald]] ×10, 220 досвіду, 80 очок шляху
 Плату видає замовник: поверніться до нього, коли виконаєте.

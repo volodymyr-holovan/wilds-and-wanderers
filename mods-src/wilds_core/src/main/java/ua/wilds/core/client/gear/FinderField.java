@@ -70,6 +70,10 @@ public final class FinderField {
         box.setX(x);
         box.setY(y);
         if (w > 0) box.setWidth(w);
+        // the hint is drawn past the box's edge when it does not fit (at GUI scale 4 it ran under the inventory): a
+        // short one in a narrow box (22.11)
+        String hint = Minecraft.getInstance().font.width("Знайти в скринях…") + 8 <= box.getWidth() ? "Знайти в скринях…" : "Пошук…";
+        box.setHint(Component.literal(hint).withStyle(st -> st.withColor(0x8a8a8a)));
     }
 
     static boolean focused() {
