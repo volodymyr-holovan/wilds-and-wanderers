@@ -7,6 +7,19 @@
 		id: "irons_spellbooks:iron_spell_book"
 	}
 	id: "7F389844624DA709"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.7250000000000005d
+			image: "item:irons_spellbooks:iron_spell_book"
+			order: -1
+			rotation: 0.0d
+			width: 4.7250000000000005d
+			x: 8.0d
+			y: 0.0d
+		}
+	]
 	order_index: 8
 	quest_links: [ ]
 	quests: [

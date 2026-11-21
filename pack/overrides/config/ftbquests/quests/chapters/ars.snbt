@@ -7,6 +7,19 @@
 		id: "ars_nouveau:novice_spell_book"
 	}
 	id: "1772A1F000AC15F1"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:ars_nouveau:novice_spell_book"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 8.0d
+			y: 0.0d
+		}
+	]
 	order_index: 7
 	quest_links: [ ]
 	quests: [

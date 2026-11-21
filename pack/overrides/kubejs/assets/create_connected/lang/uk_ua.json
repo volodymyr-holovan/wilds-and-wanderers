@@ -1,0 +1,14 @@
+{
+ "block.create_connected.brass_gearbox.tooltip.summary": "Редуктор, у якому напрям обертання кожної з 4 сторін _окремо налаштовується ключем_.",
+ "create_connected.battery.consumption": "Витрата заряду:",
+ "create_connected.battery.powering_belts": "живлення стрічок",
+ "create_connected.ponder.kinetic_battery.text_3": "Отримавши сигнал редстоуну, вона розряджається й створює певну потужність навантаження на сталій швидкості",
+ "create_connected.ponder.kinetic_battery.text_4": "Але скільки заряду витрачається, залежить від того, скільки потужності насправді використовується",
+ "create_connected.ponder.kinetic_battery.text_5": "Коли інші кінетичні джерела дають достатньо потужності, батареї не розряджаються",
+ "create_connected.ponder.kinetic_battery.text_6": "Навіть якщо мережа нічого не навантажує, батареї витрачають крихту заряду, щоб рухати стрічки з предметами",
+ "create_connected.ponder.kinetic_battery.text_9": "Або покажіть рівень заряду через передавач даних",
+ "create_connected.ponder.kinetic_battery_automation.text_1": "У вигляді предмета батарея зберігає свій заряд",
+ "create_connected.ponder.kinetic_battery_automation.text_3": "Коли батарея заряджається, клацніть по ній ПКМ іншою батареєю, щоб розрядити",
+ "create_connected.ponder.kinetic_battery_chaining.text_5": "Коли одна батарея отримує сигнал редстоуну, живлення отримують усі батареї ланцюжка",
+ "item.create_connected.charged_kinetic_battery.tooltip.summary": "Застаріле. Перетворіть на звичайну кінетичну батарею крафтом."
+}

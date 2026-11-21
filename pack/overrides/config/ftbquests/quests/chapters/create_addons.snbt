@@ -7,6 +7,19 @@
 		id: "createaddition:electric_motor"
 	}
 	id: "2BE3562A22DFA19F"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:createaddition:electric_motor"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 1.0d
+			y: 0.0d
+		}
+	]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
@@ -53,7 +66,7 @@
 				}
 			]
 			x: 0.0d
-			y: -0.875d
+			y: -3.5d
 		}
 		{
 			dependencies: [
@@ -98,7 +111,7 @@
 				}
 			]
 			x: 2.0d
-			y: -1.75d
+			y: -4.375d
 		}
 		{
 			dependencies: [
@@ -134,7 +147,7 @@
 				}
 			]
 			x: 2.0d
-			y: 0.0d
+			y: -2.625d
 		}
 		{
 			dependencies: [
@@ -170,7 +183,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.875d
+			y: -1.75d
 		}
 		{
 			dependencies: [
@@ -206,7 +219,234 @@
 				}
 			]
 			x: 2.0d
+			y: -0.875d
+		}
+		{
+			dependencies: [
+				"43CDFE0D36955627"
+				"53AEA2FEA515F3AE"
+			]
+			icon: {
+				id: "sliceanddice:slicer"
+			}
+			id: "4DE31CB5ED414030"
+			rewards: [
+				{
+					id: "441A456D09F4CE1A"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 40"
+					elevate_perms: true
+					id: "3559DEED5C23724A"
+					silent: true
+					title: "+40 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6FBA9D62404E99CA"
+					item: {
+						count: 1
+						id: "sliceanddice:slicer"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4DE31CB5ED414030"
+			]
+			icon: {
+				id: "sliceanddice:sprinkler"
+			}
+			id: "3C707F4B0284DA8A"
+			rewards: [
+				{
+					id: "718039D212335676"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "78249F3420F8765B"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6DB9ABF731740353"
+					item: {
+						count: 1
+						id: "sliceanddice:sprinkler"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.875d
+		}
+		{
+			dependencies: [
+				"13FE9795096BB208"
+			]
+			icon: {
+				id: "create_connected:brass_gearbox"
+			}
+			id: "7B3F7AEB33B6102B"
+			rewards: [
+				{
+					id: "697E5E6C2F6D3C48"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "33A1BD6E289B689A"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1765F7F3514464D5"
+					item: {
+						count: 1
+						id: "create_connected:brass_gearbox"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
 			y: 1.75d
+		}
+		{
+			dependencies: [
+				"7B3F7AEB33B6102B"
+			]
+			icon: {
+				id: "create_connected:kinetic_battery"
+			}
+			id: "199BCC2E1E7FBA03"
+			rewards: [
+				{
+					id: "612E3C1E7C10F323"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 50"
+					elevate_perms: true
+					id: "2794100BFDDAAFD0"
+					silent: true
+					title: "+50 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4CC6C3456ED93787"
+					item: {
+						count: 1
+						id: "create_connected:kinetic_battery"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.625d
+		}
+		{
+			dependencies: [
+				"7B3F7AEB33B6102B"
+			]
+			icon: {
+				id: "create_connected:item_silo"
+			}
+			id: "1940396DBDB19048"
+			rewards: [
+				{
+					id: "6A98D2D51A1B8D52"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "337BF27761429D54"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6AC9871A1568359A"
+					item: {
+						count: 1
+						id: "create_connected:item_silo"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 4.375d
+		}
+		{
+			dependencies: [
+				"43CDFE0D36955627"
+			]
+			icon: {
+				id: "createdeco:industrial_iron_ingot"
+			}
+			id: "17C3F7358A3D2A36"
+			rewards: [
+				{
+					id: "1F22445775CE7A8D"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} wilds:path 25"
+					elevate_perms: true
+					id: "660FE1FBB3A6C210"
+					silent: true
+					title: "+25 досвіду навичок"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "12A931D5F4CC6D6D"
+					item: {
+						count: 1
+						id: "createdeco:industrial_iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7E64567944120C03"
+					item: {
+						count: 1
+						id: "createdeco:andesite_catwalk"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.5d
 		}
 	]
 }

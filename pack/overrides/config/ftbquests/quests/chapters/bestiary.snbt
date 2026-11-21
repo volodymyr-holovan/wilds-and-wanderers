@@ -7,6 +7,19 @@
 		id: "alexsmobs:animal_dictionary"
 	}
 	id: "7F48B7868B9603D0"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 5.4d
+			image: "item:alexsmobs:animal_dictionary"
+			order: -1
+			rotation: 0.0d
+			width: 5.4d
+			x: 3.0d
+			y: 0.0d
+		}
+	]
 	order_index: 24
 	quest_links: [ ]
 	quests: [

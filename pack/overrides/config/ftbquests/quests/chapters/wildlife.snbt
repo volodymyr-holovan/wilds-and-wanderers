@@ -7,6 +7,19 @@
 		id: "naturalist:capture_net"
 	}
 	id: "7D2F7748380711AD"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:naturalist:capture_net"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 2.0d
+			y: 0.0d
+		}
+	]
 	order_index: 20
 	quest_links: [ ]
 	quests: [

@@ -124,6 +124,16 @@ def item_stack(spec):
     return item, int(count or 1)
 
 
+def watermark(ch, quests):
+    """the chapter's emblem, large and faint, behind the middle of its quests (drawn under them: order -1)"""
+    xs, ys = [q["x"] for q in quests], [q["y"] for q in quests]
+    span = min(max(xs) - min(xs), max(ys) - min(ys)) if quests else 4.0
+    size = max(4.0, min(10.0, span * 0.9))
+    return {"x": (min(xs) + max(xs)) / 2 if quests else 0.0, "y": (min(ys) + max(ys)) / 2 if quests else 0.0,
+            "width": size, "height": size, "rotation": 0.0, "image": "item:" + ch["icon"], "color": 16777215,
+            "alpha": 36, "order": -1}
+
+
 def parse_task(spec, qid, n, where):
     kind, _, rest = spec.partition(":")
     tid = hid(qid, "task", str(n))
@@ -446,7 +456,7 @@ def main():
         check("item", ch["icon"], ch["key"])
         chapter = {"id": cid, "filename": ch["key"], "group": gid, "order_index": order,
                    "icon": {"id": ch["icon"]}, "default_quest_shape": "", "default_hide_dependency_lines": False,
-                   "quest_links": [], "quests": out_quests}
+                   "quest_links": [], "quests": out_quests, "images": [watermark(ch, out_quests)]}
         open(os.path.join(OUT, "chapters", ch["key"] + ".snbt"), "w", encoding="utf-8", newline="\n").write(snbt(chapter) + "\n")
 
     group_names = {}

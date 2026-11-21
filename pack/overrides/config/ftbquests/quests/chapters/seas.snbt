@@ -7,6 +7,19 @@
 		id: "smallships:cannon"
 	}
 	id: "1E64422DEC6BFC0D"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 7.2d
+			image: "item:smallships:cannon"
+			order: -1
+			rotation: 0.0d
+			width: 7.2d
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	order_index: 16
 	quest_links: [ ]
 	quests: [

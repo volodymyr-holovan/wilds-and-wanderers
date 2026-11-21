@@ -58,6 +58,59 @@ public final class ColonyTest {
                 .then(Commands.literal("upgrade").executes(c -> upgrade(c.getSource())))
                 .then(Commands.literal("status").executes(c -> status(c.getSource())))
                 .then(Commands.literal("supply").executes(c -> supply(c.getSource())))
+                // "toolcheck": would a level 1 hut (tools up to level 1) accept an Efficiency V diamond pickaxe?
+                .then(Commands.literal("toolcheck").executes(c -> {
+                    final var stack = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIAMOND_PICKAXE);
+                    stack.enchant(c.getSource().getLevel().registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.ENCHANTMENT)
+                            .getHolderOrThrow(net.minecraft.world.item.enchantment.Enchantments.EFFICIENCY), 5);
+                    final boolean ok = com.minecolonies.api.util.ItemStackUtils.hasEquipmentLevel(stack,
+                            com.minecolonies.api.equipment.ModEquipmentTypes.pickaxe.get(), 0, 1);
+                    say(c.getSource(), "Efficiency V diamond pickaxe for a level 1 hut: " + (ok ? "accepted" : "refused"));
+                    return 1;
+                }))
+                // "tools": the builders lose their tools; Efficiency V diamond ones wait in the hut (the hut level used to refuse them)
+                .then(Commands.literal("tools").executes(c -> {
+                    final IColony colony = colony(c.getSource());
+                    final var ench = c.getSource().getLevel().registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.ENCHANTMENT)
+                            .getHolderOrThrow(net.minecraft.world.item.enchantment.Enchantments.EFFICIENCY);
+                    for (IBuilding b : colony.getServerBuildingManager().getBuildings().values()) {
+                        if (!(b instanceof AbstractBuildingStructureBuilder)) continue;
+                        for (ICitizenData worker : b.getAllAssignedCitizen()) {
+                            final var inv = worker.getInventory();
+                            for (int s = 0; s < inv.getSlots(); s++) {
+                                if (inv.getStackInSlot(s).getItem() instanceof net.minecraft.world.item.TieredItem) inv.extractItem(s, 64, false);
+                            }
+                            worker.getEntity().ifPresent(ent -> ent.setItemSlot(net.minecraft.world.entity.EquipmentSlot.MAINHAND, net.minecraft.world.item.ItemStack.EMPTY));
+                        }
+                        for (var item : List.of(net.minecraft.world.item.Items.DIAMOND_PICKAXE, net.minecraft.world.item.Items.DIAMOND_SHOVEL,
+                                net.minecraft.world.item.Items.DIAMOND_AXE)) {
+                            final var stack = new net.minecraft.world.item.ItemStack(item);
+                            stack.enchant(ench, 5);
+                            com.minecolonies.api.util.InventoryUtils.addItemStackToProviderWithResult(b.getTileEntity(), stack);
+                        }
+                    }
+                    say(c.getSource(), "builders' tools taken; Efficiency V diamond pickaxe, shovel and axe put into their huts");
+                    return 1;
+                }))
+                // "map N": a filled map of scale N, centred on the town hall and drawn from the biomes, into the town hall
+                .then(Commands.literal("map").then(Commands.argument("scale", IntegerArgumentType.integer(0, 4)).executes(c -> {
+                    final IColony colony = colony(c.getSource());
+                    final IBuilding hall = colony.getServerBuildingManager().getTownHall();
+                    final var level = c.getSource().getLevel();
+                    final var map = net.minecraft.world.item.MapItem.create(level, hall.getPosition().getX(), hall.getPosition().getZ(),
+                            (byte) IntegerArgumentType.getInteger(c, "scale"), true, false);
+                    // a red and blue checkerboard: unmistakable on the window's parchment (a biome preview looks like it)
+                    final var data = net.minecraft.world.item.MapItem.getSavedData(map, level);
+                    for (int x = 0; x < 128; x++) for (int z = 0; z < 128; z++) {
+                        final var color = ((x / 16 + z / 16) % 2 == 0 ? net.minecraft.world.level.material.MapColor.COLOR_RED
+                                : net.minecraft.world.level.material.MapColor.COLOR_BLUE).getPackedId(net.minecraft.world.level.material.MapColor.Brightness.HIGH);
+                        data.setColor(x, z, color);
+                    }
+                    final var left = com.minecolonies.api.util.InventoryUtils.addItemStackToProviderWithResult(hall.getTileEntity(), map);
+                    hall.markDirty();
+                    say(c.getSource(), "map of scale " + IntegerArgumentType.getInteger(c, "scale") + " put into the town hall: " + (left.isEmpty() ? "ok" : "no room"));
+                    return 1;
+                })))
                 .then(Commands.literal("summon").then(Commands.argument("id", IntegerArgumentType.integer(1)).executes(c -> {
                     final ICitizenData data = colony(c.getSource()).getCitizenManager().getCivilian(IntegerArgumentType.getInteger(c, "id"));
                     data.setNextRespawnPosition(BlockPos.containing(c.getSource().getPosition()));

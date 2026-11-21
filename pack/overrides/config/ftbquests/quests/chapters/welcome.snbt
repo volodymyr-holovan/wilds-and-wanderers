@@ -7,6 +7,19 @@
 		id: "minecraft:compass"
 	}
 	id: "793E32936A23A83E"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:minecraft:compass"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 2.0d
+			y: 0.0d
+		}
+	]
 	order_index: 1
 	quest_links: [ ]
 	quests: [

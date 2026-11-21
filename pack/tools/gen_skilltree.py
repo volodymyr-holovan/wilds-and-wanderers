@@ -353,7 +353,7 @@ for bi in range(len(ORDER)):
 category = {
     "unlocked_by_default": True,
     "title": "Шлях мандрівника",
-    "description": "Дев'ять гілок розвитку. Досвід дають бої, видобуток, мандри, відкриття нових біомів і споруд, риболовля, торгівля, "
+    "description": "Вісім гілок розвитку. Досвід дають бої, видобуток, мандри, відкриття нових біомів і споруд, риболовля, торгівля, "
                    "розведення тварин, досягнення й квести. Великі навички на кінцях гілок змінюють гру; ключові — на краю.",
     "icon": icon("minecraft:compass"),
     # an embroidered cloth (gen_skilltree_bg.py): every branch in its own thread, names and emblems on the rim
@@ -377,8 +377,9 @@ def tag_test(kind, tag):
 
 
 experience = {
-    # slower than before: level 10 needs 100, level 50 needs 340, from level 144 on 900 per level
-    "experience_per_level": {"type": "expression", "data": {"expression": "min(40 + level * 6, 900)"}},
+    # about a third slower than until 20.11 (40 + 6*level, cap 900): level 10 needs 130, level 50 needs 450, from
+    # level 144 on 1200 per level
+    "experience_per_level": {"type": "expression", "data": {"expression": "min(50 + level * 8, 1200)"}},
     "sources": [
         {"type": "puffish_skills:kill_entity", "data": {
             "variables": {"dropped_xp": {"operations": [{"type": "get_dropped_experience"}]},

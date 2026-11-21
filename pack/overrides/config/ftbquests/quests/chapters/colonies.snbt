@@ -7,6 +7,19 @@
 		id: "minecolonies:blockhuttownhall"
 	}
 	id: "21A91F42ACAD414E"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.7250000000000005d
+			image: "item:minecolonies:blockhuttownhall"
+			order: -1
+			rotation: 0.0d
+			width: 4.7250000000000005d
+			x: 7.0d
+			y: 0.0d
+		}
+	]
 	order_index: 18
 	quest_links: [ ]
 	quests: [
@@ -428,7 +441,7 @@
 					id: "1D934609AF0A0B63"
 					item: {
 						count: 1
-						id: "farmersdelight:tomato_seeds"
+						id: "farmersdelight:onion"
 					}
 					type: "item"
 				}
@@ -457,6 +470,14 @@
 				}
 				{
 					id: "31547C363AAE05FF"
+					item: {
+						count: 1
+						id: "minecolonies:blockhutfield"
+					}
+					type: "item"
+				}
+				{
+					id: "6C016315148C4308"
 					item: {
 						count: 1
 						id: "minecolonies:blockhutfisherman"

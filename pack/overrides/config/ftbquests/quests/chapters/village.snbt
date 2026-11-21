@@ -7,6 +7,19 @@
 		id: "bountiful:bountyboard"
 	}
 	id: "3DE7DEB16DC88274"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 5.4d
+			image: "item:bountiful:bountyboard"
+			order: -1
+			rotation: 0.0d
+			width: 5.4d
+			x: 3.0d
+			y: 0.0d
+		}
+	]
 	order_index: 25
 	quest_links: [ ]
 	quests: [

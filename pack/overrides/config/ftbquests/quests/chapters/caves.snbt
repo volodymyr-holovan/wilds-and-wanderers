@@ -7,6 +7,19 @@
 		id: "alexscaves:amber"
 	}
 	id: "2D95229FE2CA724C"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 5.4d
+			image: "item:alexscaves:amber"
+			order: -1
+			rotation: 0.0d
+			width: 5.4d
+			x: 3.0d
+			y: 0.0d
+		}
+	]
 	order_index: 13
 	quest_links: [ ]
 	quests: [

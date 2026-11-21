@@ -7,6 +7,19 @@
 		id: "mekanism:metallurgic_infuser"
 	}
 	id: "10138904D2605D92"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 9.450000000000001d
+			image: "item:mekanism:metallurgic_infuser"
+			order: -1
+			rotation: 0.0d
+			width: 9.450000000000001d
+			x: 8.0d
+			y: 0.0d
+		}
+	]
 	order_index: 5
 	quest_links: [ ]
 	quests: [

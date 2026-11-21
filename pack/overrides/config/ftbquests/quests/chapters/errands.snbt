@@ -7,6 +7,19 @@
 		id: "minecraft:writable_book"
 	}
 	id: "3544A01D328B9026"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 10.0d
+			image: "item:minecraft:writable_book"
+			order: -1
+			rotation: 0.0d
+			width: 10.0d
+			x: 0.0d
+			y: 26.0d
+		}
+	]
 	order_index: 27
 	quest_links: [ ]
 	quests: [

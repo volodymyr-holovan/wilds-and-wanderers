@@ -40,6 +40,9 @@
     "colony.PathThreadsMixin",
     "colony.WorkerErrorPauseMixin",
     "colony.BuilderSpeedMixin",
-    "colony.BuilderMiningMixin"
+    "colony.BuilderMiningMixin",
+    "colony.TownHallMapMixin",
+    "colony.WorkerToolLevelMixin",
+    "colony.LeafSaplingMapMixin"
   ]
 }

@@ -17,6 +17,7 @@ appleskin
 appmek
 ars_n_spells
 ars_nouveau
+atmosphere
 balm
 betteradvancedtooltips
 bettercombat
@@ -40,9 +41,12 @@ controlling
 copycats
 corpse
 create
+create_central_kitchen
+create_connected
 create_dragons_plus
 create_enchantment_industry
 createaddition
+createdeco
 cristellib
 ctov
 cumulus_menus
@@ -130,6 +134,7 @@ shulkerboxtooltip
 simplytents
 simulated
 skinrestorer
+sliceanddice
 smallships
 sodium
 sodium-extra

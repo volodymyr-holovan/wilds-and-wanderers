@@ -7,6 +7,19 @@
 		id: "twilightforest:naga_scale"
 	}
 	id: "375AE59F12D2E91D"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:twilightforest:naga_scale"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 14.0d
+			y: 0.0d
+		}
+	]
 	order_index: 10
 	quest_links: [ ]
 	quests: [

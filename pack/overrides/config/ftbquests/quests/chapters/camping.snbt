@@ -7,6 +7,19 @@
 		id: "simplytents:tent"
 	}
 	id: "1411BE41EE7975F4"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:simplytents:tent"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	order_index: 19
 	quest_links: [ ]
 	quests: [

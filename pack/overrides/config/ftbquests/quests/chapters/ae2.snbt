@@ -7,6 +7,19 @@
 		id: "ae2:controller"
 	}
 	id: "32F4545024F13413"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 7.875d
+			image: "item:ae2:controller"
+			order: -1
+			rotation: 0.0d
+			width: 7.875d
+			x: 8.0d
+			y: 0.0d
+		}
+	]
 	order_index: 6
 	quest_links: [ ]
 	quests: [

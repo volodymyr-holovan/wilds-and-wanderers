@@ -30,7 +30,7 @@ import ua.wilds.core.WildsCore;
  * conflict context) on the first client tick, so overlapping keys can be found per context.
  */
 public final class KeyLayout {
-    private static final int VERSION = 4;
+    private static final int VERSION = 5;
     private static final String FLAG = "wilds_core-keys.txt";
     private static final String DUMP = System.getProperty("wilds_core.keydump");
     /** mapping -> {key it moves from (its default), key it moves to, Alt or none} */
@@ -55,7 +55,11 @@ public final class KeyLayout {
             Map.entry("key.ftbteams.open_gui", new Object[]{-1, InputConstants.KEY_T, KeyModifier.ALT}),
             // Mekanism's leg armour mode took J by default, and the quest book was left with no key: J opens the quests
             Map.entry("key.mekanism.legs_mode", new Object[]{InputConstants.KEY_J, InputConstants.KEY_J, KeyModifier.ALT}),
-            Map.entry("key.ftbquests.quests", new Object[]{-1, InputConstants.KEY_J, KeyModifier.NONE}));
+            Map.entry("key.ftbquests.quests", new Object[]{-1, InputConstants.KEY_J, KeyModifier.NONE}),
+            // layout 5 (20.11): the backpack's "put into the container you look at" shared C with Ars Nouveau's book, and
+            // Easy Villagers' "pick up a villager" shared V with Iron's spell cast (casting at a villager picked it up)
+            Map.entry("key.sophisticatedbackpacks.inventory_interaction", new Object[]{InputConstants.KEY_C, InputConstants.KEY_C, KeyModifier.ALT}),
+            Map.entry("key.easy_villagers.pick_up", new Object[]{InputConstants.KEY_V, InputConstants.KEY_P, KeyModifier.ALT}));
     private static boolean done, dumped;
     private static final List<String> moved = new ArrayList<>();
 

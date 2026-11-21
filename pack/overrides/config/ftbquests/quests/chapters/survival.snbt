@@ -7,6 +7,19 @@
 		id: "farmersdelight:cooking_pot"
 	}
 	id: "1E6EF59D382AFAD7"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 5.4d
+			image: "item:farmersdelight:cooking_pot"
+			order: -1
+			rotation: 0.0d
+			width: 5.4d
+			x: 3.0d
+			y: 0.0d
+		}
+	]
 	order_index: 2
 	quest_links: [ ]
 	quests: [

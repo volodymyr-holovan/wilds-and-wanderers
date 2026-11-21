@@ -7,6 +7,19 @@
 		id: "apotheosis:gem"
 	}
 	id: "3340A80A91A38798"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.7250000000000005d
+			image: "item:apotheosis:gem"
+			order: -1
+			rotation: 0.0d
+			width: 4.7250000000000005d
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	order_index: 9
 	quest_links: [ ]
 	quests: [

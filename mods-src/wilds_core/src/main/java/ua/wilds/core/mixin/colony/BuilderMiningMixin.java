@@ -8,11 +8,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-/** The builder clears and breaks blocks twice as fast as well (see BuilderSpeedMixin). */
+/** The builder clears and breaks blocks four times as fast as well (see BuilderSpeedMixin). */
 @Mixin(value = EntityAIStructureBuilder.class, remap = false)
 public abstract class BuilderMiningMixin {
     @Inject(method = "getBlockMiningTime", at = @At("RETURN"), cancellable = true, require = 1)
     private void wilds$fasterMining(BlockState state, BlockPos pos, CallbackInfoReturnable<Integer> cir) {
-        cir.setReturnValue(cir.getReturnValueI() / 2);
+        cir.setReturnValue(cir.getReturnValueI() / 4);
     }
 }

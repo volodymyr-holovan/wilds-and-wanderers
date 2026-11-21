@@ -1,0 +1,16 @@
+{
+  "replace": true,
+  "values": [
+    "#minecraft:is_overworld",
+    "#minecraft:is_nether",
+    "#minecraft:is_end",
+    {
+      "id": "#twilightforest:in_twilight_forest",
+      "required": false
+    },
+    {
+      "id": "#aether:is_aether",
+      "required": false
+    }
+  ]
+}

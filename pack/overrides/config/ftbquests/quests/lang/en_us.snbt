@@ -48,7 +48,7 @@
 	]
 	chapter.23A0EECBA717BD81.title: "&eГілки навичок"
 	chapter.2BE3562A22DFA19F.chapter_subtitle: [
-		"Електрика для інших модів і зачарування машинами"
+		"Електрика, зачарування машинами, кухня, деталі й заводський стиль"
 	]
 	chapter.2BE3562A22DFA19F.title: "&6Create: додатки"
 	chapter.2D95229FE2CA724C.chapter_subtitle: [
@@ -1161,6 +1161,17 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:ghast_tear\"}}]"
 	]
 	quest.17C171B972451303.title: "Сльози ґаста"
+	quest.17C3F7358A3D2A36.quest_desc: [
+		"Create Deco дає будівлям заводу власний вигляд: місточки з поручнями, ґрати, лампи в клітках, вантажні контейнери й вісім видів цегли."
+		"Частину з цього роблять із &aпромислового заліза&r."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.createdeco.industrial_iron_ingot\", \"color\": \"aqua\", \"fallback\": \"Industrial iron ingot\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki createdeco:industrial_iron_ingot\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"createdeco:industrial_iron_ingot\"}}}, {\"text\": \" ×4\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.createdeco.andesite_catwalk\", \"color\": \"aqua\", \"fallback\": \"Andesite catwalk\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki createdeco:andesite_catwalk\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"createdeco:andesite_catwalk\"}}}, {\"text\": \" ×4\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki createdeco:industrial_iron_ingot\"}}]"
+	]
+	quest.17C3F7358A3D2A36.title: "Заводський стиль"
 	quest.17D0656FAD6AEFB4.quest_desc: [
 		"&aТермальна випарювальна вежа&r (до 4×4×18) випаровує морську воду на розсіл і літій. Літій потрібен для термоядерного палива."
 		""
@@ -1264,6 +1275,15 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki ae2:item_storage_cell_16k\"}}]"
 	]
 	quest.19155CB614BB5BBB.title: "Більші диски"
+	quest.1940396DBDB19048.quest_desc: [
+		"&aСилос&r — це вертикальне сховище Create: росте вгору, як вежа, і займає мало місця на землі."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.create_connected.item_silo\", \"color\": \"aqua\", \"fallback\": \"Item silo\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create_connected:item_silo\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"create_connected:item_silo\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create_connected:item_silo\"}}]"
+	]
+	quest.1940396DBDB19048.title: "Силос"
 	quest.19409746A6FD9BCC.quest_desc: [
 		"&aСачок&r ловить дрібних тварин — метеликів, світлячків, равликів, ящірок — і переносить їх живими. Так заселяють сад чи зоопарк біля бази."
 		""
@@ -1345,6 +1365,16 @@
 	quest.1977A2F5CCCCECFA.title: "Жорна й дроблення"
 	quest.197B1013DBBCFA4B.quest_desc: [ ]
 	quest.197B1013DBBCFA4B.title: "Рідкісні чорнила"
+	quest.199BCC2E1E7FBA03.quest_desc: [
+		"&aКінетична батарея&r запасає навантажувальну здатність: без сигналу редстоуну вона заряджається від обертання спереду, з сигналом — сама крутить механізми."
+		"Так вітряк чи водяне колесо працюють і тоді, коли вітру чи течії бракує. Рівень заряду показує компаратор."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.create_connected.kinetic_battery\", \"color\": \"aqua\", \"fallback\": \"Kinetic battery\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create_connected:kinetic_battery\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"create_connected:kinetic_battery\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create_connected:kinetic_battery\"}}]"
+	]
+	quest.199BCC2E1E7FBA03.title: "Кінетична батарея"
 	quest.19CA5557CF2E3052.quest_desc: [
 		"У світі змінюються &eпори року&r (Serene Seasons): весна, літо, осінь, зима. Взимку частина культур не росте, а листя змінює колір."
 		""
@@ -3361,6 +3391,16 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki aether:victory_medal\"}}]"
 	]
 	quest.3C683E2798058F0F.title: "Королева валькірій"
+	quest.3C707F4B0284DA8A.quest_desc: [
+		"&aДощувач&r ставлять під трубу Create: він розбризкує рідину на ділянку внизу. Вода зволожує грядки, а різні рідини по-різному діють і на істот поруч."
+		"Рідке добриво з того ж мода підживлює посіви."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sliceanddice.sprinkler\", \"color\": \"aqua\", \"fallback\": \"Sprinkler\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sliceanddice:sprinkler\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sliceanddice:sprinkler\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sliceanddice:sprinkler\"}}]"
+	]
+	quest.3C707F4B0284DA8A.title: "Дощувач"
 	quest.3C7738579429F6B5.quest_desc: [
 		"Сковорідку ставлять на плиту й смажать по одному продукту. А в руці вона — важка зброя."
 		"Спробуйте підсмажити яйце."
@@ -4487,6 +4527,16 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:honey_bottle\"}}]"
 	]
 	quest.4D99A8CFA26DCE2B.title: "Мед на весілля"
+	quest.4DE31CB5ED414030.quest_desc: [
+		"Slice \\& Dice автоматизує &eдошку для нарізання&r Farmer's Delight. Дайте &aрізаку&r інструмент (ПКМ ножем чи сокирою) — і він ріже все, що лежить під ним на депо, конвеєрі чи в чаші."
+		"З Create: Central Kitchen &aмеханічні руки&r ще й беруть порції святкових страв і пирогів самі."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.sliceanddice.slicer\", \"color\": \"aqua\", \"fallback\": \"Slicer\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sliceanddice:slicer\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"sliceanddice:slicer\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki sliceanddice:slicer\"}}]"
+	]
+	quest.4DE31CB5ED414030.title: "Різак"
 	quest.4DF64BB8F53D030D.quest_desc: [ ]
 	quest.4DF64BB8F53D030D.title: "Павуча королева"
 	quest.4F4657381B27B081.quest_desc: [
@@ -4856,7 +4906,7 @@
 		"[\"\", {\"translate\": \"item.structurize.sceptergold\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki structurize:sceptergold\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"structurize:sceptergold\"}}}]"
 		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
 		""
-		"&6Порада:&r у &aЗаписнику&r видно всі прохання поселенців: що кому бракує."
+		"&6Порада:&r у &aЗаписнику&r видно всі прохання поселенців: що кому бракує. «Полагодити» лише докладає зламані блоки (у цілої будівлі список порожній), а «Покращити» піднімає рівень і просить матеріали."
 		""
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutbuilder\"}}]"
 	]
@@ -5260,7 +5310,7 @@
 		"[\"\", {\"translate\": \"block.minecolonies.blockhutminer\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutminer\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutminer\"}}}]"
 		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
 		""
-		"&6Порада:&r шахту ставлять над твердим каменем, а не над печерою чи водою."
+		"&6Порада:&r шахту ставлять над твердим каменем, а не над печерою чи водою. Робітники беруть будь-який інструмент потрібного виду — кращий і зачарований теж: покладіть його в скриню хатини."
 		""
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutminer\"}}]"
 	]
@@ -5462,7 +5512,7 @@
 	quest.5CDB30EEC4C1DD9B.title: "Гілка: Маг"
 	quest.5D8AAFB547B62AF3.quest_desc: [
 		"Команди для зручної гри разом:"
-		" • &a/sethome назва&r, &a/home назва&r, &a/listhomes&r — точки дому."
+		" • &a/sethome&r — запам'ятати домівку (одна на гравця), &a/home&r — повернутися додому."
 		" • &a/tpa Нік&r — попросити телепорт до друга; він відповідає &a/tpaccept&r."
 		" • &a/back&r — повернутися на попереднє місце (і на місце смерті)."
 		" • &a/rtp&r — випадковий телепорт у дику місцевість, щоб оселитися подалі від інших."
@@ -6198,17 +6248,25 @@
 	quest.6A88CF5569A3A0BF.quest_desc: [ ]
 	quest.6A88CF5569A3A0BF.title: "Чорна хвороба"
 	quest.6AD292256C16F1C0.quest_desc: [
-		"&aФерма&r з полями: фермер сам сіє, поливає і збирає. &aРибальська хатина&r дає рибу; разом із їдальнею колонія годує себе сама."
+		"&aФерма&r з полями: фермер сам оре, сіє і збирає. &aРибальська хатина&r дає рибу; разом із їдальнею колонія годує себе сама."
+		""
+		"&eЯк влаштувати поле:&r поставте &aопудало&r посеред грядок і відкрийте його (ПКМ): там задаються розміри поля й &eнасіння&r, яке на ньому садити. Без насіння в опудалі фермер поле не засіє. На кожне поле — своя культура: пшениця, морква, картопля, буряк, гарбузи, кавуни, капуста й цибуля Farmer's Delight, а також овочі MineColonies (вони тепер ростуть у будь-якому біомі)."
+		"Не підходять культури, що ростуть інакше: томати Farmer's Delight (кущ) і рис (росте у воді)."
 		""
 		"&eЗавдання:"
 		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecolonies.blockhutfarmer\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfarmer\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutfarmer\"}}}, {\"text\": \"\"}]"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecolonies.blockhutfield\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfield\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutfield\"}}}, {\"text\": \"\"}]"
 		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecolonies.blockhutfisherman\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfisherman\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutfisherman\"}}}, {\"text\": \"\"}]"
 		""
 		"&6Де взяти:"
 		"[\"\", {\"translate\": \"block.minecolonies.blockhutfarmer\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfarmer\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutfarmer\"}}}]"
 		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		"[\"\", {\"translate\": \"block.minecolonies.blockhutfield\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfield\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutfield\"}}}]"
+		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
 		"[\"\", {\"translate\": \"block.minecolonies.blockhutfisherman\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfisherman\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhutfisherman\"}}}]"
 		"[\"\", {\"text\": \"   \"}, {\"text\": \"робиться: \", \"color\": \"gray\"}, {\"text\": \"верстак\", \"color\": \"white\"}]"
+		""
+		"&6Порада:&r скільки полів фермер обробляє, залежить від рівня ферми; культуру поля можна змінити в опудалі будь-коли."
 		""
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhutfarmer\"}}]"
 	]
@@ -6569,6 +6627,8 @@
 		"&eЯк почати:&r поставте &aТабір постачання&r (на суші) чи &aКорабель постачання&r (на воді). У його скрині — &aРатуша&r і &aІнструмент будівництва&r. Поставте Ратушу — і до вас прийдуть перші четверо поселенців."
 		""
 		"Табір постачання продає мандрівний торговець, а також він трапляється у торбах мандрівника за завдання."
+		""
+		"&eМапа колонії:&r покладіть у скриню ратуші заповнену мапу околиць (будь-якого масштабу) — у вікні ратуші з'явиться мапа з будинками й поселенцями."
 		""
 		"&eЗавдання:"
 		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"block.minecolonies.blockhuttownhall\", \"color\": \"aqua\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecolonies:blockhuttownhall\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"minecolonies:blockhuttownhall\"}}}, {\"text\": \"\"}]"
@@ -7163,6 +7223,16 @@
 		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki minecraft:copper_block\"}}]"
 	]
 	quest.7B386AF636C682BE.title: "Дах для дзвіниці"
+	quest.7B3F7AEB33B6102B.quest_desc: [
+		"Create: Connected додає дрібні, але корисні кінетичні деталі. У &aлатунного редуктора&r напрям обертання кожної з чотирьох сторін окремо перемикається ключем."
+		"&aВідцентрова муфта&r з'єднує вали, лише коли обертання досить швидке."
+		""
+		"&eЗавдання:"
+		"[\"\", {\"text\": \"• Мати в інвентарі: \", \"color\": \"gray\"}, {\"translate\": \"item.create_connected.brass_gearbox\", \"color\": \"aqua\", \"fallback\": \"Brass gearbox\", \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create_connected:brass_gearbox\"}, \"hoverEvent\": {\"action\": \"show_item\", \"contents\": {\"id\": \"create_connected:brass_gearbox\"}}}, {\"text\": \"\"}]"
+		""
+		"[\"\", {\"text\": \"➜ Відкрити у вікі\", \"color\": \"dark_aqua\", \"underlined\": true, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"/wiki create_connected:brass_gearbox\"}}]"
+	]
+	quest.7B3F7AEB33B6102B.title: "Латунний редуктор"
 	quest.7B4743A248E46AF1.quest_desc: [
 		"Енциклопедія всього у збірці: кожен предмет, блок, істота, біом і споруда, з рецептами, джерелами здобичі, тим, де це трапляється, і текстами довідників модів."
 		""

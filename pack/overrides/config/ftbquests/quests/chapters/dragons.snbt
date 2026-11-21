@@ -7,6 +7,19 @@
 		id: "iceandfire:dragon_skull_fire"
 	}
 	id: "2040C5A144D6F506"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.0d
+			image: "item:iceandfire:dragon_skull_fire"
+			order: -1
+			rotation: 0.0d
+			width: 4.0d
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	order_index: 12
 	quest_links: [ ]
 	quests: [

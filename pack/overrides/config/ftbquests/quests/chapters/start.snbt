@@ -7,6 +7,19 @@
 		id: "minecraft:oak_sapling"
 	}
 	id: "22E1A37F318050E4"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 4.7250000000000005d
+			image: "item:minecraft:oak_sapling"
+			order: -1
+			rotation: 0.0d
+			width: 4.7250000000000005d
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	order_index: 0
 	quest_links: [ ]
 	quests: [

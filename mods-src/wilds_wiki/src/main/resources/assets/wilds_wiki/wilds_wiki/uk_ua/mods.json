@@ -574,7 +574,7 @@
   ],
   "text": [
    "# З чого почати",
-   "- Shift + ПКМ по селянину (або клавіша V) — і він у вас в інвентарі, як предмет [[easy_villagers:villager]].",
+   "- Shift + ПКМ по селянину (або Alt + P) — і він у вас в інвентарі, як предмет [[easy_villagers:villager]].",
    "- Посадіть його в скляний блок: [[easy_villagers:trader]] для торгівлі, [[easy_villagers:iron_farm]] для заліза, [[easy_villagers:breeder]] для розведення.",
    "- Усі блоки й зміна товарів селянина: [[wilds_wiki:guides/easy_villagers/villager_blocks|Селянин у кишені]]."
   ]

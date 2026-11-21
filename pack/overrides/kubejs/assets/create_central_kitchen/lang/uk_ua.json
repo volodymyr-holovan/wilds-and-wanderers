@@ -1,0 +1,21 @@
+{
+ "create_central_kitchen.ponder.cultural_delights_portioning.header": "Автоматизація пармеджано з баклажанами",
+ "create_central_kitchen.ponder.cultural_delights_portioning.text_1": "Механічні руки беруть порції на тарілках без мисок",
+ "create_central_kitchen.ponder.cultural_delights_portioning.text_2": "Остання порція лишається, доки її не замінить нова ціла страва",
+ "create_central_kitchen.ponder.festive_delight_chicken.header": "Автоматична (майже) святкова курка",
+ "create_central_kitchen.ponder.festive_delight_chicken.text_1": "Механічні руки беруть чотири порції на тарілках і лишають залишки",
+ "create_central_kitchen.ponder.group.dragon_leg": "Драконяча ніжка",
+ "create_central_kitchen.ponder.group.eggplant_parmesan": "Страви пармеджано з баклажанами",
+ "create_central_kitchen.ponder.group.festive_chicken": "Святкова курка",
+ "create_central_kitchen.ponder.group.pancakes": "Стоси млинців",
+ "create_central_kitchen.ponder.group.portionable_foods": "Страви й пироги",
+ "create_central_kitchen.ponder.hearth_and_harvest_cask.header": "Автоматизація діжок Hearth and Harvest",
+ "create_central_kitchen.ponder.hearth_and_harvest_cask.text_1": "Пакунки приймаються, лише коли в них рівно один повний рецепт діжки",
+ "create_central_kitchen.ponder.hearth_and_harvest_cask.text_2": "Панель рецепта просить одну сіль і три окремі шматки сирого м'яса.",
+ "create_central_kitchen.ponder.hearth_and_harvest_cask.text_3": "Пакунок розпаковується цілком, і кожен повторений інгредієнт займає свою комірку",
+ "create_central_kitchen.ponder.hearth_and_harvest_cask.text_4": "Далі діжка витримує як звичайно — 1200 тіків — за своїми правилами",
+ "create_central_kitchen.ponder.hearth_and_harvest_cask.text_5": "Механічні руки не чіпають інгредієнтів, що витримуються, і забирають лише готовий результат",
+ "create_central_kitchen.ponder.rustic_delight_pancakes.header": "Автоматизація стосів млинців",
+ "create_central_kitchen.ponder.rustic_delight_pancakes.text_1": "Механічні руки можуть брати млинці з будь-якого стосу з начинкою",
+ "create_central_kitchen.ponder.rustic_delight_pancakes.text_2": "Додаються лише такі самі млинці, до стосу з дванадцяти"
+}

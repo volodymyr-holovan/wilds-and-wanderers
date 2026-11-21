@@ -17,6 +17,9 @@ MODRINTH = {
     # --- technology ---
     "create": "both", "create-enchantment-industry": "both", "createaddition": "both", "copycats": "both",
     "mekanism": "both", "mekanism-generators": "both", "mekanism-tools": "both",
+    # Create addons (20.11): Farmer's Delight cutting and cooking by machines, small kinetic parts, Create's
+    # own decorative metals (no second power system, no currency: Mekanism and the pack's currencies stay the only ones)
+    "slice-and-dice": "both", "create-connected": "both", "create-central-kitchen": "both", "create-deco": "both",
     "create-aeronautics": "both", "sable": "both",
     "ae2": "both", "applied-energistics-2-wireless-terminals": "both", "applied-mekanistics": "both",
     # --- magic & RPG ---

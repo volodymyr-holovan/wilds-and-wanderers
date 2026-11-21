@@ -7,6 +7,19 @@
 		id: "sophisticatedstorage:barrel"
 	}
 	id: "1E77E388D0A9F0D1"
+	images: [
+		{
+			alpha: 36
+			color: 16777215
+			height: 6.3d
+			image: "item:sophisticatedstorage:barrel"
+			order: -1
+			rotation: 0.0d
+			width: 6.3d
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	order_index: 23
 	quest_links: [ ]
 	quests: [
