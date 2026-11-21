@@ -64,12 +64,13 @@ dynamic:
 
 
 # huge animal pens tick every animal every tick: no more than 48 of one kind can be bred within 64 blocks;
-# villagers stop breeding when 100 of them live within 64 blocks (breeders and trading halls need room)
+# villagers stop breeding when 100 of them live within 32 blocks (breeders and trading halls need room; 22.11: the
+# range was 64, so the villagers of the whole neighbourhood counted and a hall stopped at about 64)
 breeding-cap:
   enabled: true
   villagers:
     limit: 100
-    range: 64
+    range: 32
     unlimited-height: false
   animals:
     limit: 48

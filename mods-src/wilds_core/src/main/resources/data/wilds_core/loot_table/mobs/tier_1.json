@@ -3,12 +3,8 @@
  "random_sequence": "wilds_core:mobs",
  "pools": [
   {
-   "rolls": {
-    "type": "minecraft:uniform",
-    "min": 1,
-    "max": 2
-   },
-   "bonus_rolls": 0.5,
+   "rolls": 1,
+   "bonus_rolls": 0,
    "entries": [
     {
      "type": "minecraft:item",
@@ -19,8 +15,8 @@
        "function": "minecraft:set_count",
        "count": {
         "type": "minecraft:uniform",
-        "min": 2,
-        "max": 6
+        "min": 1,
+        "max": 4
        }
       }
      ]
@@ -28,21 +24,6 @@
     {
      "type": "minecraft:item",
      "name": "minecraft:gold_nugget",
-     "weight": 20,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 2,
-        "max": 5
-       }
-      }
-     ]
-    },
-    {
-     "type": "minecraft:item",
-     "name": "minecraft:copper_ingot",
      "weight": 20,
      "functions": [
       {
@@ -57,8 +38,8 @@
     },
     {
      "type": "minecraft:item",
-     "name": "minecraft:leather",
-     "weight": 15,
+     "name": "minecraft:copper_ingot",
+     "weight": 20,
      "functions": [
       {
        "function": "minecraft:set_count",
@@ -72,6 +53,12 @@
     },
     {
      "type": "minecraft:item",
+     "name": "minecraft:leather",
+     "weight": 15,
+     "functions": []
+    },
+    {
+     "type": "minecraft:item",
      "name": "minecraft:arrow",
      "weight": 15,
      "functions": [
@@ -79,23 +66,11 @@
        "function": "minecraft:set_count",
        "count": {
         "type": "minecraft:uniform",
-        "min": 3,
-        "max": 8
+        "min": 2,
+        "max": 5
        }
       }
      ]
-    },
-    {
-     "type": "minecraft:item",
-     "name": "minecraft:book",
-     "weight": 6,
-     "functions": []
-    },
-    {
-     "type": "minecraft:item",
-     "name": "minecraft:experience_bottle",
-     "weight": 8,
-     "functions": []
     }
    ]
   }

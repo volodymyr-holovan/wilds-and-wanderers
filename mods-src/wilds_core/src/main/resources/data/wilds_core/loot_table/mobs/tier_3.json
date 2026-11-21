@@ -3,12 +3,8 @@
  "random_sequence": "wilds_core:mobs",
  "pools": [
   {
-   "rolls": {
-    "type": "minecraft:uniform",
-    "min": 1,
-    "max": 3
-   },
-   "bonus_rolls": 0.5,
+   "rolls": 1,
+   "bonus_rolls": 0,
    "entries": [
     {
      "type": "minecraft:item",
@@ -20,7 +16,7 @@
        "count": {
         "type": "minecraft:uniform",
         "min": 1,
-        "max": 3
+        "max": 2
        }
       }
      ]
@@ -28,47 +24,20 @@
     {
      "type": "minecraft:item",
      "name": "create:brass_ingot",
-     "weight": 15,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 2
-       }
-      }
-     ]
+     "weight": 12,
+     "functions": []
     },
     {
      "type": "minecraft:item",
      "name": "mekanism:ingot_osmium",
-     "weight": 15,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 2
-       }
-      }
-     ]
+     "weight": 12,
+     "functions": []
     },
     {
      "type": "minecraft:item",
      "name": "iceandfire:silver_ingot",
-     "weight": 12,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 2
-       }
-      }
-     ]
+     "weight": 10,
+     "functions": []
     },
     {
      "type": "minecraft:item",
@@ -80,7 +49,7 @@
        "count": {
         "type": "minecraft:uniform",
         "min": 1,
-        "max": 3
+        "max": 2
        }
       }
      ]
@@ -95,46 +64,16 @@
        "count": {
         "type": "minecraft:uniform",
         "min": 1,
-        "max": 3
+        "max": 2
        }
       }
      ]
-    },
-    {
-     "type": "minecraft:item",
-     "name": "apotheosis:gem_dust",
-     "weight": 6,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 3
-       }
-      }
-     ]
-    },
-    {
-     "type": "minecraft:item",
-     "name": "apotheosis:mysterious_scrap_metal",
-     "weight": 4,
-     "functions": []
     },
     {
      "type": "minecraft:item",
      "name": "minecraft:experience_bottle",
-     "weight": 10,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 2,
-        "max": 3
-       }
-      }
-     ]
+     "weight": 6,
+     "functions": []
     }
    ]
   }

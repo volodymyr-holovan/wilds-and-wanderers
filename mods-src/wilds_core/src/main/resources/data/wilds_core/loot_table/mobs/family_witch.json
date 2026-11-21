@@ -4,7 +4,7 @@
  "pools": [
   {
    "rolls": 1,
-   "bonus_rolls": 0.5,
+   "bonus_rolls": 0,
    "entries": [
     {
      "type": "minecraft:item",
@@ -16,7 +16,7 @@
        "count": {
         "type": "minecraft:uniform",
         "min": 1,
-        "max": 4
+        "max": 2
        }
       }
      ]
@@ -31,7 +31,7 @@
        "count": {
         "type": "minecraft:uniform",
         "min": 1,
-        "max": 4
+        "max": 2
        }
       }
      ]
@@ -40,51 +40,18 @@
      "type": "minecraft:item",
      "name": "minecraft:glass_bottle",
      "weight": 15,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 3
-       }
-      }
-     ]
+     "functions": []
     },
     {
      "type": "minecraft:item",
      "name": "irons_spellbooks:arcane_essence",
-     "weight": 12,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 3
-       }
-      }
-     ]
+     "weight": 10,
+     "functions": []
     },
     {
      "type": "minecraft:item",
      "name": "ars_nouveau:source_gem",
-     "weight": 10,
-     "functions": [
-      {
-       "function": "minecraft:set_count",
-       "count": {
-        "type": "minecraft:uniform",
-        "min": 1,
-        "max": 2
-       }
-      }
-     ]
-    },
-    {
-     "type": "minecraft:item",
-     "name": "apotheosis:potion_charm",
-     "weight": 1,
+     "weight": 8,
      "functions": []
     }
    ]

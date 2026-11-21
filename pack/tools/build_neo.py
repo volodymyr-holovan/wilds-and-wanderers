@@ -20,6 +20,9 @@ MODRINTH = {
     # Create addons (20.11): Farmer's Delight cutting and cooking by machines, small kinetic parts, Create's
     # own decorative metals (no second power system, no currency: Mekanism and the pack's currencies stay the only ones)
     "slice-and-dice": "both", "create-connected": "both", "create-central-kitchen": "both", "create-deco": "both",
+    # --- new creatures (22.11): replacements for vanilla mobs as players grow (wilds_core mobs) ---
+    "borninchaos": "both", "mutant-monsters": "both", "rottencreatures": "both", "platform": "both", "enderman-overhaul": "both",
+    "creeper-overhaul": "both", "variants-and-ventures": "both", "undead-unleashed": "both",
     "create-aeronautics": "both", "sable": "both",
     "ae2": "both", "applied-energistics-2-wireless-terminals": "both", "applied-mekanistics": "both",
     # --- magic & RPG ---

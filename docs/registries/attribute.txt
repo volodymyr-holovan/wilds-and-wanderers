@@ -110,3 +110,4 @@ sable:player.sub_level_punch_strength
 twilightforest:clone_count
 twilightforest:max_shield_strength
 twilightforest:minion_count
+undead_unleashed:projectile_immunity

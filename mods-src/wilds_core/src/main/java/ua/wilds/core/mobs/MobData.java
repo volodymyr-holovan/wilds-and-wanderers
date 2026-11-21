@@ -29,9 +29,14 @@ public final class MobData {
 
     static volatile boolean loaded;
     static double hpRate = 0.008, dmgRate = 0.006, bossHpRate = 0.02, bossDmgRate = 0.012;
-    static double tierHits = 3.7, tierPlayerHits = 10, bossHits = 60, bossPlayerHits = 5;
+    static double tierHits = 3.7, bossHits = 50, kindDmgStep = 0.04, capPlain = 0.2, capKind = 0.25, capBoss = 0.4;
+    static int version = 2;
+    static double weaponWeight = 0.65;
+    static double kindLootChance = 0.5, tierLootChance = 0.2, plainLootChance = 0.06;
+    /** natural spawns of these creatures wait until a player of this power is near */
+    static Map<ResourceLocation, Integer> gate = new HashMap<>();
     static double radius = 64, stepBase = 1, stepRate = 0.01, spreadLo = 0.9, spreadHi = 1.05;
-    static double replaceBase = 0.2, replaceRate = 0.002, replaceMax = 0.7, plainLootBase = 0.12, plainLootRate = 0.001;
+    static double replaceBase = 0.15, replaceRate = 0.0017, replaceMax = 0.55;
     static int updateTicks = 200;
     static double[][] defence = {{0, 7, 0, 0, 20}, {400, 30, 20, 20, 48}};
     static Map<Integer, Integer> unlock = new HashMap<>();
@@ -69,9 +74,19 @@ public final class MobData {
             bossHpRate = s.get("boss_hp_rate").getAsDouble();
             bossDmgRate = s.get("boss_dmg_rate").getAsDouble();
             tierHits = s.get("tier_hits").getAsDouble();
-            tierPlayerHits = s.get("tier_player_hits").getAsDouble();
             bossHits = s.get("boss_hits").getAsDouble();
-            bossPlayerHits = s.get("boss_player_hits").getAsDouble();
+            kindDmgStep = s.get("kind_dmg_step").getAsDouble();
+            capPlain = s.get("cap_plain").getAsDouble();
+            capKind = s.get("cap_kind").getAsDouble();
+            capBoss = s.get("cap_boss").getAsDouble();
+            version = s.get("version").getAsInt();
+            weaponWeight = s.get("weapon_weight").getAsDouble();
+            kindLootChance = s.get("kind_loot_chance").getAsDouble();
+            tierLootChance = s.get("tier_loot_chance").getAsDouble();
+            plainLootChance = s.get("plain_loot_chance").getAsDouble();
+            Map<ResourceLocation, Integer> g = new HashMap<>();
+            for (Map.Entry<String, JsonElement> e : s.getAsJsonObject("gate").entrySet()) g.put(ResourceLocation.parse(e.getKey()), e.getValue().getAsInt());
+            gate = g;
             radius = s.get("radius").getAsDouble();
             updateTicks = s.get("update_ticks").getAsInt();
             JsonArray spread = s.getAsJsonArray("spawn_spread");
@@ -82,8 +97,6 @@ public final class MobData {
             replaceBase = s.get("replace_base").getAsDouble();
             replaceRate = s.get("replace_rate").getAsDouble();
             replaceMax = s.get("replace_max").getAsDouble();
-            plainLootBase = s.get("plain_loot_base").getAsDouble();
-            plainLootRate = s.get("plain_loot_rate").getAsDouble();
             JsonArray def = s.getAsJsonArray("defence");
             double[][] d = new double[def.size()][];
             for (int i = 0; i < d.length; i++) {

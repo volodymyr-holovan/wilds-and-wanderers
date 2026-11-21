@@ -1,18 +1,23 @@
 package ua.wilds.core.mobs;
 
 /**
- * The balance formulas of pack/tools/gen_mob_balance.py (docs/balance/mob-levels.md shows their results). Every number
- * comes from the settings of data/wilds_core/wilds_mobs/variants.json, so the document and the game cannot drift apart.
+ * The balance formulas of pack/tools/gen_mob_balance.py, version 2 (docs/balance/mob-levels.md shows their results).
+ * Rates and tables come from data/wilds_core/wilds_mobs/variants.json, so the document and the game cannot drift apart.
  */
 public final class MobMath {
     private MobMath() {}
 
-    /** damage of one full-strength hit of the reference player at level L */
+    /** one full-strength hit of a player at power level L */
     public static double gearDamage(double l) {
         return 6.0 * Math.pow((l + 15.0) / 30.0, 0.8);
     }
 
-    /** reference player's {armor, toughness, protection EPF, max health} at level L (piecewise linear) */
+    /** the power level a weapon hit of this size is worth (inverse of gearDamage) */
+    public static double weaponLevel(double dmg) {
+        return Math.max(0, 30.0 * Math.pow(Math.max(dmg, 0.1) / 6.0, 1.25) - 15.0);
+    }
+
+    /** reference player's {armor, toughness, protection EPF, max health} at power level L (piecewise linear) */
     public static double[] defence(double l) {
         double[][] t = MobData.defence;
         l = Math.max(t[0][0], Math.min(t[t.length - 1][0], l));
@@ -35,48 +40,50 @@ public final class MobMath {
         return dmg * (1.0 - eff / 25.0);
     }
 
-    /** damage the reference player of level L takes from a raw hit */
-    public static double toPlayer(double raw, double l) {
-        double[] d = defence(l);
-        return afterArmor(raw, d[0], d[1]) * (1.0 - Math.min(20.0, d[2]) / 25.0);
+    /** health measured in raw 10-damage hits */
+    public static double ehp(double armor, double tough, double epf, double hp) {
+        return hp / (afterArmor(10.0, armor, tough) * (1.0 - Math.min(20.0, epf) / 25.0));
     }
 
-    /** raw damage that kills the reference player of level L in that many hits */
-    public static double rawForHits(double l, double hits) {
-        double hp = defence(l)[3], lo = 0, hi = 2000;
-        for (int i = 0; i < 60; i++) {
-            double mid = (lo + hi) / 2;
-            if (toPlayer(mid, l) * hits >= hp) hi = mid; else lo = mid;
+    /** the power level a defence is worth: the lowest reference level whose defence is at least as good */
+    public static double defenceLevel(double armor, double tough, double epf, double hp) {
+        double e = ehp(armor, tough, epf, hp);
+        for (int l = 0; l <= 400; l++) {
+            double[] d = defence(l);
+            if (ehp(d[0], d[1], d[2], d[3]) >= e) return l;
         }
-        return hi;
+        return 400;
+    }
+
+    /** the weapon counts more: mob health is measured in the player's hits, and a strong armor alone should not make every mob a sponge */
+    public static double powerLevel(double dmg, double armor, double tough, double epf, double hp) {
+        return Math.min(400, MobData.weaponWeight * weaponLevel(dmg) + (1 - MobData.weaponWeight) * defenceLevel(armor, tough, epf, hp));
     }
 
     public static double hpMult(double l) { return 1.0 + MobData.hpRate * l; }
     public static double dmgMult(double l) { return 1.0 + MobData.dmgRate * l; }
-    public static double armorAdd(double l, int tier) { return Math.min(12.0, l / 30.0) + 0.6 * tier; }
-    public static double toughAdd(double l) { return Math.min(8.0, l / 50.0); }
-    public static double speedAdd(double l) { return Math.min(0.20, l / 2000.0); }
+    public static double armorAdd(double l, int tier) { return Math.min(10.0, l / 35.0) + 0.4 * tier; }
+    public static double toughAdd(double l) { return Math.min(6.0, l / 60.0); }
+    public static double speedAdd(double l) { return Math.min(0.15, l / 2500.0); }
     public static double kbAdd(double l) { return Math.min(0.40, l / 1000.0); }
-    public static double resist(double l) { return Math.min(0.30, l / 1300.0); }
+    public static double resist(double l) { return Math.min(0.25, l / 1500.0); }
 
-    /** max health of a tier-k mob at mob level l */
-    public static double tierHp(int k, double l) {
+    /** max health of a tier-k creature at mob level l, wearing this much armor (its own and ours): the same hits whatever its armor */
+    public static double tierHp(int k, double l, double armor, double tough) {
         double u = MobData.unlock(k);
-        double base = MobData.tierHits * afterArmor(gearDamage(u), armorAdd(u, k), toughAdd(u));
-        return base * hpMult(l) / hpMult(u);
+        return MobData.tierHits * afterArmor(gearDamage(u), armor, tough) * hpMult(l) / hpMult(u);
     }
 
-    /** raw damage of a tier-k mob at mob level l */
-    public static double tierDmg(int k, double l) {
-        double u = MobData.unlock(k);
-        return rawForHits(u, MobData.tierPlayerHits) * dmgMult(l) / dmgMult(u);
+    /** a tier-k creature's damage multiplier at mob level l (on its own damage) */
+    public static double tierDmgMult(int k, double l) {
+        return dmgMult(l) * (1 + MobData.kindDmgStep * k);
     }
 
     public static double bossHp(double nativeHp, double l) {
         return Math.max(nativeHp * (1 + MobData.bossHpRate * l), MobData.bossHits * gearDamage(l));
     }
 
-    public static double bossDmg(double nativeDmg, double l) {
-        return Math.max(nativeDmg * (1 + MobData.bossDmgRate * l), rawForHits(l, MobData.bossPlayerHits));
+    public static double bossDmgMult(double l) {
+        return 1 + MobData.bossDmgRate * l;
     }
 }

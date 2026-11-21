@@ -129,6 +129,7 @@ public final class MobLevels {
         NeoForge.EVENT_BUS.addListener(EventPriority.LOW, MobLevels::onJoin);
         NeoForge.EVENT_BUS.addListener((EntityLeaveLevelEvent e) -> { if (e.getEntity() instanceof Mob m) TRACKED.remove(m); });
         NeoForge.EVENT_BUS.addListener(EventPriority.LOW, MobLevels::onDamage);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, MobLevels::onFinalDamage);
         NeoForge.EVENT_BUS.addListener(MobLevels::onDrops);
         NeoForge.EVENT_BUS.addListener(MobLevels::onXp);
         NeoForge.EVENT_BUS.addListener(MobLevels::onDeath);
@@ -148,8 +149,8 @@ public final class MobLevels {
         if (forced != null) return new double[]{forced, 1};
         double[] c = PLAYER_CACHE.get(p.getUUID());
         if (c != null && tick - (long) c[2] < 100) return c;
-        double lvl = 0;
-        if (ModList.get().isLoaded("puffish_skills")) lvl = SkillLevel.of(p);
+        double[] pw = power(p);
+        double lvl = pw[0];
         double wt = 1;
         try {
             if (!worldTierTried) {
@@ -169,6 +170,27 @@ public final class MobLevels {
         return c;
     }
 
+    /**
+     * {power, weapon level, defence level} of a player from what they wear and wield (docs/balance/mob-levels.md, A1):
+     * the main hand's attack damage with its enchantments, armor, toughness, protection enchantments and max health.
+     */
+    static double[] power(ServerPlayer p) {
+        ServerLevel level = p.serverLevel();
+        double dmg = p.getAttributeValue(Attributes.ATTACK_DAMAGE);
+        try {
+            dmg = net.minecraft.world.item.enchantment.EnchantmentHelper.modifyDamage(level, p.getMainHandItem(), p, p.damageSources().playerAttack(p), (float) dmg);
+        } catch (RuntimeException ignored) {
+        }
+        double epf = 0;
+        try {
+            epf = net.minecraft.world.item.enchantment.EnchantmentHelper.getDamageProtection(level, p, p.damageSources().generic());
+        } catch (RuntimeException ignored) {
+        }
+        double armor = p.getAttributeValue(Attributes.ARMOR), tough = p.getAttributeValue(Attributes.ARMOR_TOUGHNESS);
+        double wl = MobMath.weaponLevel(dmg), dl = MobMath.defenceLevel(armor, tough, epf, p.getMaxHealth());
+        return new double[]{MobMath.powerLevel(dmg, armor, tough, epf, p.getMaxHealth()), wl, dl, dmg, armor, tough, epf};
+    }
+
     /** effective level of the strongest player within the radius, or -1 when none is near */
     static double targetLevel(ServerLevel level, Entity at) {
         double best = -1, r2 = MobData.radius * MobData.radius;
@@ -185,6 +207,9 @@ public final class MobLevels {
         return BOSS_TYPES.computeIfAbsent(m.getType(), t -> {
             String id = BuiltInRegistries.ENTITY_TYPE.getKey(t).toString();
             if (BOSS_IDS.contains(id) || t.is(Tags.EntityTypes.BOSSES)) return true;
+            // a boss bar alone is not enough (pack leaders and mini-captains have one): a boss is also big
+            AttributeInstance hp = m.getAttribute(Attributes.MAX_HEALTH);
+            if (hp == null || hp.getBaseValue() < 100) return false;
             for (Class<?> c = m.getClass(); c != null && c != Mob.class && c != Object.class; c = c.getSuperclass()) {
                 for (Field f : c.getDeclaredFields()) if (BossEvent.class.isAssignableFrom(f.getType())) return true;
             }
@@ -209,7 +234,17 @@ public final class MobLevels {
         if (type != MobSpawnType.NATURAL && type != MobSpawnType.PATROL) return;
         if (!(e.getLevel() instanceof ServerLevel level)) return;
         Mob mob = e.getEntity();
-        MobData.Family fam = MobData.byBase.get(BuiltInRegistries.ENTITY_TYPE.getKey(mob.getType()));
+        ResourceLocation typeId = BuiltInRegistries.ENTITY_TYPE.getKey(mob.getType());
+        Integer gateAt = MobData.gate.get(typeId);
+        if (gateAt != null) {
+            // a creature of the new mods spawning by itself: only near a player strong enough for it
+            mob.setPos(e.getX(), e.getY(), e.getZ());
+            double tg = targetLevel(level, mob);
+            if (tg < gateAt) { e.setSpawnCancelled(true); stat("gated"); }
+            else stat("own_spawn");
+            return;
+        }
+        MobData.Family fam = MobData.byBase.get(typeId);
         if (fam == null) return;
         stat("family_spawn");
         mob.setPos(e.getX(), e.getY(), e.getZ());
@@ -271,14 +306,24 @@ public final class MobLevels {
         if (!MobData.loaded || !(e.getLevel() instanceof ServerLevel level) || !(e.getEntity() instanceof Mob mob)) return;
         CompoundTag pd = mob.getPersistentData();
         if (pd.contains(TAG, Tag.TAG_COMPOUND)) {
-            Info in = read(pd.getCompound(TAG));
-            TRACKED.put(mob, in);
-            if (in.variant != null) hostile(mob);
-            return;
+            CompoundTag old = pd.getCompound(TAG);
+            if (old.getInt("ver") == MobData.version) {
+                Info in = read(old);
+                TRACKED.put(mob, in);
+                if (in.variant != null) hostile(mob);
+                return;
+            }
+            // made by an older version of the rules (levels from the skill tree, renamed vanilla mobs): start afresh
+            String keep = old.contains("v") && MobData.variants.containsKey(old.getString("v")) ? old.getString("v") : null;
+            boolean wasKind = old.contains("v");
+            strip(mob, wasKind);
+            pd.remove(TAG);
+            if (keep != null) pd.putString(TAG + "_pending", keep);
+            stat("migrated");
         }
-        if (!eligible(mob)) return;
-        double t = targetLevel(level, mob);
         String pending = pd.getString(TAG + "_pending");
+        if (pending.isEmpty() && !eligible(mob)) return;
+        double t = targetLevel(level, mob);
         pd.remove(TAG + "_pending");
         Info in = new Info();
         ThreadLocalRandom rnd = ThreadLocalRandom.current();
@@ -299,6 +344,26 @@ public final class MobLevels {
         apply(mob, in, true);
         TRACKED.put(mob, in);
         if (v != null) hostile(mob);
+    }
+
+    /** removes everything an older version put on the mob */
+    private static void strip(Mob mob, boolean named) {
+        for (ResourceLocation id : List.of(HP, ARMOR, TOUGH, SPEED, KB, SCALE, ABSORB)) {
+            for (Holder<Attribute> a : List.of(Attributes.MAX_HEALTH, Attributes.ARMOR, Attributes.ARMOR_TOUGHNESS, Attributes.MOVEMENT_SPEED,
+                    Attributes.KNOCKBACK_RESISTANCE, Attributes.SCALE, Attributes.MAX_ABSORPTION)) {
+                AttributeInstance ai = mob.getAttribute(a);
+                if (ai != null) ai.removeModifier(id);
+            }
+        }
+        if (named) mob.setCustomName(null);
+        if (mob.getHealth() > mob.getMaxHealth()) mob.setHealth(mob.getMaxHealth());
+        if (mob instanceof Creeper c && c.isPowered()) {
+            CompoundTag t = new CompoundTag();
+            c.addAdditionalSaveData(t);
+            t.putBoolean("powered", false);
+            c.readAdditionalSaveData(t);
+        }
+        mob.removeEffect(MobEffects.INVISIBILITY);
     }
 
     /** a new kind attacks players even when its base mob is neutral (endermen, piglins, spiders by day, some mod mobs) */
@@ -336,23 +401,23 @@ public final class MobLevels {
         AttributeInstance hp = mob.getAttribute(Attributes.MAX_HEALTH);
         double baseHp = hp == null ? 20 : Math.max(1, hp.getBaseValue());
         double targetHp;
+        set(mob, Attributes.ARMOR, ARMOR, MobMath.armorAdd(l, tier), AttributeModifier.Operation.ADD_VALUE);
+        set(mob, Attributes.ARMOR_TOUGHNESS, TOUGH, MobMath.toughAdd(l), AttributeModifier.Operation.ADD_VALUE);
         if (in.boss) targetHp = MobMath.bossHp(baseHp, l);
-        else if (tier > 0) targetHp = MobMath.tierHp(tier, l);
+        else if (tier > 0) targetHp = MobMath.tierHp(tier, l, attr(mob, Attributes.ARMOR), attr(mob, Attributes.ARMOR_TOUGHNESS));
         else targetHp = baseHp * MobMath.hpMult(l);
         in.hpMult = targetHp / baseHp;
         double cap = Attributes.MAX_HEALTH.value() instanceof net.minecraft.world.entity.ai.attributes.RangedAttribute ra ? ra.getMaxValue() : 1024;
         in.extra = targetHp > cap ? targetHp / cap : 1;
         set(mob, Attributes.MAX_HEALTH, HP, Math.min(targetHp, cap) / baseHp - 1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
-        set(mob, Attributes.ARMOR, ARMOR, MobMath.armorAdd(l, tier), AttributeModifier.Operation.ADD_VALUE);
-        set(mob, Attributes.ARMOR_TOUGHNESS, TOUGH, MobMath.toughAdd(l), AttributeModifier.Operation.ADD_VALUE);
         set(mob, Attributes.MOVEMENT_SPEED, SPEED, MobMath.speedAdd(l), AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
         set(mob, Attributes.KNOCKBACK_RESISTANCE, KB, in.boss ? Math.max(0.6, MobMath.kbAdd(l)) : MobMath.kbAdd(l), AttributeModifier.Operation.ADD_VALUE);
         if (in.abilities.contains("shield")) set(mob, Attributes.MAX_ABSORPTION, ABSORB, targetHp * 0.15, AttributeModifier.Operation.ADD_VALUE);
 
         AttributeInstance atk = mob.getAttribute(Attributes.ATTACK_DAMAGE);
         double nativeDmg = atk != null && atk.getBaseValue() > 0 ? atk.getBaseValue() : 4;
-        if (in.boss) in.dmgMult = MobMath.bossDmg(nativeDmg, l) / nativeDmg;
-        else if (tier > 0) in.dmgMult = MobMath.tierDmg(tier, l) / nativeDmg;
+        if (in.boss) in.dmgMult = MobMath.bossDmgMult(l);
+        else if (tier > 0) in.dmgMult = MobMath.tierDmgMult(tier, l);
         else in.dmgMult = MobMath.dmgMult(l);
         if (in.minion) in.dmgMult *= 0.6;
 
@@ -361,6 +426,11 @@ public final class MobLevels {
         MobData.Variant v = in.kind();
         if (v != null) mob.setCustomName(Component.translatable("wilds_core.mob.named", Component.translatable("wilds_core.mob." + v.id()), (int) l));
         write(mob, in);
+    }
+
+    private static double attr(Mob mob, Holder<Attribute> a) {
+        AttributeInstance i = mob.getAttribute(a);
+        return i == null ? 0 : i.getValue();
     }
 
     private static void set(Mob mob, Holder<Attribute> attr, ResourceLocation id, double value, AttributeModifier.Operation op) {
@@ -372,6 +442,7 @@ public final class MobLevels {
 
     static void write(Mob mob, Info in) {
         CompoundTag t = new CompoundTag();
+        t.putInt("ver", MobData.version);
         t.putFloat("l", in.level);
         t.putFloat("a", in.applied);
         if (in.variant != null) t.putString("v", in.variant);
@@ -419,7 +490,9 @@ public final class MobLevels {
         Info in = new Info();
         in.level = (src == null ? 0 : src.level) * levelFactor;
         in.minion = true;
-        m.getPersistentData().put(TAG, new CompoundTag()); // marks it as handled before it joins
+        CompoundTag mark = new CompoundTag();
+        mark.putInt("ver", MobData.version);
+        m.getPersistentData().put(TAG, mark); // marks it as handled before it joins
         SWAPPING.set(true);
         try {
             EventHooks.finalizeMobSpawn(m, level, level.getCurrentDifficultyAt(m.blockPosition()), MobSpawnType.MOB_SUMMONED, null);
@@ -494,6 +567,16 @@ public final class MobLevels {
         }
     }
 
+    /** after armor, enchantments and every other mod: one hit of a leveled mob takes at most a share of the player's health */
+    private static void onFinalDamage(net.neoforged.neoforge.event.entity.living.LivingDamageEvent.Pre e) {
+        if (!MobData.loaded || !(e.getEntity() instanceof Player p) || !(e.getSource().getEntity() instanceof Mob am)) return;
+        Info in = TRACKED.get(am);
+        if (in == null) return;
+        double share = in.boss ? MobData.capBoss : in.variant != null ? MobData.capKind : MobData.capPlain;
+        float cap = (float) (share * p.getMaxHealth());
+        if (e.getNewDamage() > cap) { e.setNewDamage(cap); stat("hit_capped"); }
+    }
+
     private static void onDeath(LivingDeathEvent e) {
         if (e.getEntity() instanceof Mob m && m.level() instanceof ServerLevel level) {
             Info in = TRACKED.get(m);
@@ -510,15 +593,11 @@ public final class MobLevels {
         List<String> tables = new ArrayList<>();
         MobData.Variant v = in.kind();
         if (v != null) {
-            tables.add("mobs/family_" + v.loot());
-            tables.add("mobs/tier_" + Math.min(6, (v.tier() + 1) / 2));
-        } else if (in.boss) {
-            int band = (int) Math.max(1, Math.min(6, in.level / 70 + 1));
-            tables.add("mobs/tier_" + band);
-            tables.add("mobs/tier_" + band);
-        } else {
+            if (rnd.nextDouble() < MobData.kindLootChance) tables.add("mobs/family_" + v.loot());
+            if (rnd.nextDouble() < MobData.tierLootChance) tables.add("mobs/tier_" + Math.min(6, (v.tier() + 1) / 2));
+        } else if (!in.boss) {
             MobData.Family f = MobData.byBase.get(BuiltInRegistries.ENTITY_TYPE.getKey(m.getType()));
-            if (f != null && rnd.nextDouble() < MobData.plainLootBase + in.level * MobData.plainLootRate) tables.add("mobs/family_" + f.id());
+            if (f != null && rnd.nextDouble() < MobData.plainLootChance) tables.add("mobs/family_" + f.id());
         }
         for (String t : tables) {
             LootTable table = level.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, rl(t)));
@@ -529,7 +608,6 @@ public final class MobLevels {
                     .withOptionalParameter(LootContextParams.ATTACKING_ENTITY, p)
                     .withOptionalParameter(LootContextParams.DIRECT_ATTACKING_ENTITY, e.getSource().getDirectEntity())
                     .withParameter(LootContextParams.LAST_DAMAGE_PLAYER, p)
-                    .withLuck(p.getLuck())
                     .create(LootContextParamSets.ENTITY);
             for (ItemStack s : table.getRandomItems(params)) {
                 ItemEntity ie = new ItemEntity(level, m.getX(), m.getY() + 0.5, m.getZ(), s);
@@ -537,6 +615,7 @@ public final class MobLevels {
                 e.getDrops().add(ie);
             }
         }
+        MobCommand.capture(e, new ArrayList<>(e.getDrops()));
     }
 
     private static void onXp(LivingExperienceDropEvent e) {
@@ -544,7 +623,7 @@ public final class MobLevels {
         Info in = TRACKED.get(m);
         if (in == null) return;
         if (in.minion) { e.setDroppedExperience(0); return; }
-        double f = in.boss ? 1 + in.level / 100.0 : in.tier() > 0 ? 1 + 0.3 * in.tier() : 1 + in.level / 200.0;
+        double f = in.boss ? 1 + in.level / 200.0 : in.tier() > 0 ? 1 + 0.1 * in.tier() : 1 + in.level / 400.0;
         e.setDroppedExperience((int) Math.round(e.getDroppedExperience() * f));
     }
 

@@ -1,16 +1,22 @@
-"""Mob levels, new kinds of mobs and their loot: one source for the game data and the design document.
+"""Mob levels, new creatures and their loot (version 2, 22.11): one source for the game data and the design document.
 
   python pack/tools/gen_mob_balance.py
 
 Writes
   mods-src/wilds_core/src/main/resources/data/wilds_core/wilds_mobs/variants.json   read by ua.wilds.core.mobs.MobData
   mods-src/wilds_core/src/main/resources/data/wilds_core/loot_table/mobs/*.json      tier and family loot
-  mods-src/wilds_core/src/main/resources/assets/wilds_core/lang/{uk_ua,en_us}.json   names of the new mobs (merged)
+  mods-src/wilds_core/src/main/resources/assets/wilds_core/lang/{uk_ua,en_us}.json   names of the new creatures (merged)
   docs/balance/mob-levels.md                                                         formulas, tables, checks
 
-The formulas here and in ua.wilds.core.mobs.MobMath must stay the same: the document's numbers are what the game does.
-The check at the end fails (exit 1) when a stage misses the targets of the brief (4 hits early, 1-2 later, about 4 on
-the new kinds, bosses very hard).
+Version 1 (21.11) failed in play: it took the skill tree level as "the player's level", players there are at 270-470,
+so a fresh player met level-474 draugr that killed in two hits; half the "new kinds" were vanilla mobs renamed; and the
+tier loot gave enchanted apples and netherite by the stack. Version 2: the player's level is measured from what they
+actually wear and wield; no single hit of a mob can take more than a fixed share of the player's health; every new kind
+is a creature of its own (models and AI of Born in Chaos, Rotten Creatures, Mutant Monsters, Variants&Ventures,
+Undead Unleashed, Cataclysm, Ice and Fire, Twilight Forest, Iron's Spells...); loot is a small extra, not a jackpot.
+
+The formulas here and in ua.wilds.core.mobs.MobMath must stay the same. The checks at the end fail (exit 1) when a stage
+misses the brief's targets.
 """
 import json, math, os, sys
 
@@ -18,14 +24,18 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 RES = os.path.join(ROOT, "mods-src", "wilds_core", "src", "main", "resources")
 ITEMS = set(open(os.path.join(ROOT, "docs", "registries", "item.txt"), encoding="utf-8").read().split())
 ENTITIES = set(open(os.path.join(ROOT, "docs", "registries", "entity_type.txt"), encoding="utf-8").read().split())
+VERSION = 2
 
-# ---------------------------------------------------------------- formulas (mirror of MobMath.java)
+# ---------------------------------------------------------------- the reference player (mirror of MobMath.java)
 def gear_damage(L):
-    """damage of one full-strength hit of the reference player at level L (iron sword at 15, netherite with affixes
-    and gems around 150-200, the best of the pack at 400)"""
+    """one full-strength hit of a player at power level L: iron sword 6 at 15, diamond + Sharpness ~10 at 50,
+    netherite with affixes ~16-22 at 100-150, the best of the pack 30-45 at 250-400"""
     return 6.0 * ((L + 15.0) / 30.0) ** 0.8
 
-# reference player's defence by level: (level, armor, toughness, protection EPF, max health)
+def weapon_level(dmg):
+    return max(0.0, 30.0 * (max(dmg, 0.1) / 6.0) ** 1.25 - 15.0)
+
+# defence by power level: (level, armor, toughness, protection EPF, max health)
 DEFENCE = [(0, 7, 0, 0, 20), (15, 15, 0, 0, 20), (30, 17, 2, 4, 20), (60, 20, 8, 8, 22), (100, 20, 12, 12, 24),
            (150, 22, 14, 16, 28), (200, 24, 16, 18, 32), (300, 27, 18, 20, 40), (400, 30, 20, 20, 48)]
 
@@ -43,360 +53,390 @@ def after_armor(dmg, armor, tough):
     eff = max(min(armor - dmg / f, 20.0), armor * 0.2)
     return dmg * (1.0 - eff / 25.0)
 
+def ehp(armor, tough, epf, hp):
+    """health measured in raw 10-damage hits (what the player's defence is worth)"""
+    return hp / (after_armor(10.0, armor, tough) * (1.0 - min(20.0, epf) / 25.0))
+
+def defence_level(armor, tough, epf, hp):
+    e = ehp(armor, tough, epf, hp)
+    for L in range(0, 401):
+        if ehp(*defence(L)) >= e: return float(L)
+    return 400.0
+
+WEAPON_WEIGHT = 0.85  # the weapon counts more: mob health is measured in the player's hits
+
+def power_level(dmg, armor, tough, epf, hp):
+    """the player's level: what their weapon (85 %) and their defence (15 %) are worth"""
+    return min(400.0, WEAPON_WEIGHT * weapon_level(dmg) + (1 - WEAPON_WEIGHT) * defence_level(armor, tough, epf, hp))
+
 def to_player(raw, L):
     armor, tough, epf, hp = defence(L)
     return after_armor(raw, armor, tough) * (1.0 - min(20.0, epf) / 25.0), hp
 
-def raw_for_hits(L, hits):
-    """raw damage that kills the reference player of level L in that many hits"""
-    lo, hi = 0.0, 2000.0
-    for _ in range(60):
-        mid = (lo + hi) / 2
-        d, hp = to_player(mid, L)
-        if d * hits >= hp: hi = mid
-        else: lo = mid
-    return hi
-
-HP_RATE, DMG_RATE, BOSS_HP_RATE, BOSS_DMG_RATE = 0.008, 0.006, 0.005, 0.012
+# ---------------------------------------------------------------- mob side
+HP_RATE, DMG_RATE, BOSS_HP_RATE, BOSS_DMG_RATE = 0.006, 0.01, 0.005, 0.012
+CAP_PLAIN, CAP_KIND, CAP_BOSS = 0.20, 0.25, 0.40     # largest share of the player's max health one hit can take
+KIND_DMG_STEP = 0.10                                  # a kind of tier k hits (1 + 0.10 k) times its own damage
 def hp_mult(l): return 1.0 + HP_RATE * l
 def dmg_mult(l): return 1.0 + DMG_RATE * l
-def armor_add(l, tier=0): return min(12.0, l / 30.0) + 0.6 * tier
-def tough_add(l): return min(8.0, l / 50.0)
-def speed_add(l): return min(0.20, l / 2000.0)        # multiplied base
+def armor_add(l, tier=0): return min(10.0, l / 35.0) + 0.4 * tier
+def tough_add(l): return min(6.0, l / 60.0)
+def speed_add(l): return min(0.15, l / 2500.0)
 def kb_add(l): return min(0.40, l / 1000.0)
-def resist(l): return min(0.30, l / 1300.0)          # fire, lightning, explosions, magic, freezing
+def resist(l): return min(0.25, l / 1500.0)
 
-TIERS = [(1, 10), (2, 20), (3, 35), (4, 50), (5, 70), (6, 95), (7, 125), (8, 160), (9, 200), (10, 250), (11, 310), (12, 380)]
+TIERS = [(1, 8), (2, 15), (3, 25), (4, 35), (5, 50), (6, 65), (7, 85), (8, 105), (9, 130), (10, 160), (11, 200), (12, 250)]
 UNLOCK = dict(TIERS)
-TIER_HITS = 3.7          # hits of the reference player at the tier's own level (ceil: 4)
-TIER_PLAYER_HITS = 10    # a new kind kills the reference player of its level in this many hits
-BOSS_HITS = 60           # hits the reference player needs for a boss of their level
-BOSS_PLAYER_HITS = 5     # and the boss kills them in this many
+TIER_HITS = 3.7
+BOSS_HITS = 50
 
 def hits(hp, armor, tough, L):
     return hp / after_armor(gear_damage(L), armor, tough)
 
 def tier_hp(k, l):
-    """max health of a tier-k mob at mob level l (any base: the multiplier is computed from the base in game)"""
     u = UNLOCK[k]
-    base = TIER_HITS * after_armor(gear_damage(u), armor_add(u, k), tough_add(u))
-    return base * hp_mult(l) / hp_mult(u)
-
-def tier_dmg(k, l):
-    u = UNLOCK[k]
-    return raw_for_hits(u, TIER_PLAYER_HITS) * dmg_mult(l) / dmg_mult(u)
+    return TIER_HITS * after_armor(gear_damage(u), armor_add(u, k), tough_add(u)) * hp_mult(l) / hp_mult(u)
 
 def boss_hp(native, l): return max(native * (1 + BOSS_HP_RATE * l), BOSS_HITS * gear_damage(l))
-def boss_dmg(native, l): return max(native * (1 + BOSS_DMG_RATE * l), raw_for_hits(l, BOSS_PLAYER_HITS))
 
-WORLD_TIER = {"haven": 1.0, "frontier": 1.15, "ascent": 1.3, "summit": 1.5, "pinnacle": 1.75}
-SETTINGS = {"radius": 128, "update_ticks": 200, "spawn_spread": [0.9, 1.05], "step_base": 1.0, "step_rate": 0.01,
-            "replace_base": 0.2, "replace_rate": 1 / 500.0, "replace_max": 0.7, "world_tier": WORLD_TIER,
+def hits_to_die(raw, L, cap):
+    d, hp = to_player(raw, L)
+    return math.ceil(hp / min(d, cap * hp) - 1e-9)
+
+WORLD_TIER = {"haven": 1.0, "frontier": 1.1, "ascent": 1.2, "summit": 1.35, "pinnacle": 1.5}
+SETTINGS = {"version": VERSION, "weapon_weight": WEAPON_WEIGHT, "radius": 128, "update_ticks": 200, "spawn_spread": [0.9, 1.05], "step_base": 1.0, "step_rate": 0.01,
+            "replace_base": 0.15, "replace_rate": 1 / 600.0, "replace_max": 0.55, "world_tier": WORLD_TIER,
             "hp_rate": HP_RATE, "dmg_rate": DMG_RATE, "boss_hp_rate": BOSS_HP_RATE, "boss_dmg_rate": BOSS_DMG_RATE,
-            "tier_hits": TIER_HITS, "tier_player_hits": TIER_PLAYER_HITS, "boss_hits": BOSS_HITS, "boss_player_hits": BOSS_PLAYER_HITS,
+            "tier_hits": TIER_HITS, "boss_hits": BOSS_HITS, "kind_dmg_step": KIND_DMG_STEP,
+            "cap_plain": CAP_PLAIN, "cap_kind": CAP_KIND, "cap_boss": CAP_BOSS,
             "defence": DEFENCE, "tiers": [{"tier": k, "unlock": u} for k, u in TIERS],
-            # level-unlocked attacks every leveled mob may roll at spawn: (ability, from level, chance)
-            "level_abilities": [["family_hit", 40, 0.4], ["leap", 90, 0.3], ["enrage", 150, 0.3], ["shockwave", 220, 0.25], ["blink", 300, 0.25]],
+            "level_abilities": [["family_hit", 30, 0.35], ["leap", 70, 0.25], ["enrage", 120, 0.25], ["shockwave", 180, 0.2]],
             "boss_abilities": ["shockwave", "enrage", "summon_guard"],
-            "plain_loot_base": 0.12, "plain_loot_rate": 1 / 1000.0}
+            "kind_loot_chance": 0.5, "tier_loot_chance": 0.2, "plain_loot_chance": 0.06}
 
-# ---------------------------------------------------------------- families and the new kinds
+# ---------------------------------------------------------------- families and the new creatures
 FAMILIES = {
-    "zombie":   {"bases": ["minecraft:zombie", "minecraft:husk", "minecraft:zombie_villager"], "hit": ["minecraft:hunger", 100, 0], "uk": "Зомбі", "en": "Zombies"},
-    "skeleton": {"bases": ["minecraft:skeleton", "minecraft:stray"], "hit": ["minecraft:slowness", 60, 0], "uk": "Скелети", "en": "Skeletons"},
-    "spider":   {"bases": ["minecraft:spider", "minecraft:cave_spider"], "hit": ["minecraft:poison", 80, 0], "uk": "Павуки", "en": "Spiders"},
-    "creeper":  {"bases": ["minecraft:creeper"], "hit": ["minecraft:nausea", 100, 0], "uk": "Кріпери", "en": "Creepers"},
-    "witch":    {"bases": ["minecraft:witch"], "hit": ["minecraft:weakness", 100, 0], "uk": "Відьми", "en": "Witches"},
-    "enderman": {"bases": ["minecraft:enderman"], "hit": ["minecraft:blindness", 40, 0], "uk": "Ендермени", "en": "Endermen"},
-    "illager":  {"bases": ["minecraft:pillager", "minecraft:vindicator"], "hit": ["minecraft:mining_fatigue", 100, 0], "uk": "Розбійники", "en": "Illagers"},
-    "piglin":   {"bases": ["minecraft:zombified_piglin", "minecraft:piglin"], "hit": ["minecraft:wither", 60, 0], "uk": "Пігліни", "en": "Piglins"},
-    "blaze":    {"bases": ["minecraft:blaze"], "hit": ["minecraft:wither", 40, 0], "uk": "Іфрити", "en": "Blazes"},
-    "slime":    {"bases": ["minecraft:slime", "minecraft:magma_cube"], "hit": ["minecraft:slowness", 60, 1], "uk": "Слизні", "en": "Slimes"},
-    "drowned":  {"bases": ["minecraft:drowned"], "hit": ["minecraft:mining_fatigue", 100, 0], "uk": "Утопленики", "en": "Drowned"},
+    "zombie":   {"bases": ["minecraft:zombie", "minecraft:husk", "minecraft:zombie_villager"], "hit": ["minecraft:hunger", 100, 0], "uk": "Зомбі"},
+    "skeleton": {"bases": ["minecraft:skeleton", "minecraft:stray", "minecraft:bogged"], "hit": ["minecraft:slowness", 60, 0], "uk": "Скелети"},
+    "spider":   {"bases": ["minecraft:spider", "minecraft:cave_spider"], "hit": ["minecraft:poison", 60, 0], "uk": "Павуки"},
+    "creeper":  {"bases": ["minecraft:creeper"], "hit": ["minecraft:nausea", 80, 0], "uk": "Кріпери"},
+    "witch":    {"bases": ["minecraft:witch"], "hit": ["minecraft:weakness", 80, 0], "uk": "Відьми"},
+    "enderman": {"bases": ["minecraft:enderman"], "hit": ["minecraft:blindness", 30, 0], "uk": "Ендермени"},
+    "illager":  {"bases": ["minecraft:pillager", "minecraft:vindicator"], "hit": ["minecraft:mining_fatigue", 80, 0], "uk": "Розбійники"},
+    "piglin":   {"bases": ["minecraft:zombified_piglin", "minecraft:piglin"], "hit": ["minecraft:wither", 40, 0], "uk": "Пігліни"},
+    "blaze":    {"bases": ["minecraft:blaze"], "hit": ["minecraft:wither", 30, 0], "uk": "Іфрити"},
+    "drowned":  {"bases": ["minecraft:drowned"], "hit": ["minecraft:mining_fatigue", 80, 0], "uk": "Утопленики"},
 }
 
-def V(id, family, tier, entity, uk, en, abil=(), hit=(), scale=1.0, equip=None, loot=None, extra=None, mech_uk=""):
-    return {"id": id, "family": family, "tier": tier, "entity": entity, "uk": uk, "en": en, "abilities": list(abil),
-            "hits": [list(h) for h in hit], "scale": scale, "equip": equip or {}, "loot": loot or family,
-            "flags": extra or {}, "mech": mech_uk}
+def V(entity, family, tier, uk, abil=(), mech=""):
+    return {"id": entity.split(":")[1], "entity": entity, "family": family, "tier": tier, "uk": uk, "abilities": list(abil), "mech": mech}
 
-P = lambda e, d, a=0: (e, d, a)
+BIC = "born_in_chaos_v1:"
 VARIANTS = [
-    # zombies: mummies -> kobold dead -> catacomb dead -> dread thralls -> draugr -> trolls -> minotaurs -> elite draugr -> dread knights -> royal draugr
-    V("mummy", "zombie", 1, "minecraft:husk", "Мумія", "Mummy", [], [P("minecraft:hunger", 160, 1), P("minecraft:slowness", 40)], 1.05, mech_uk="голод і сповільнення на удар"),
-    V("kobold_dead", "zombie", 2, "kobolds:kobold_zombie", "Мертвий кобольд", "Dead Kobold", ["leap"], mech_uk="стрибає на ціль"),
-    V("catacomb_dead", "zombie", 3, "irons_spellbooks:catacombs_zombie", "Мрець із катакомб", "Catacomb Dead", ["summon:minecraft:zombie:2"], mech_uk="кличе двох зомбі, коли поранений"),
-    V("bog_walker", "zombie", 4, None, "Болотяний ходак", "Bog Walker", ["regen"], [P("minecraft:poison", 80)], 1.15, {"head": "minecraft:leather_helmet"}, mech_uk="отрута, відновлюється, коли його не б'ють"),
-    V("dread_thrall", "zombie", 5, "iceandfire:dread_thrall", "Невільник жаху", "Dread Thrall", ["shield"], [P("minecraft:weakness", 100)], mech_uk="щит поглинання, слабкість"),
-    V("draugr", "zombie", 6, "cataclysm:draugr", "Драугр", "Draugr", ["shield", "leap"], [P("minecraft:slowness", 60)], mech_uk="щит, стрибок, сповільнення"),
-    V("troll", "zombie", 7, "iceandfire:troll", "Троль-громило", "Troll Brute", ["shockwave"], [], mech_uk="ударна хвиля поруч"),
-    V("ghoul", "zombie", 8, "iceandfire:dread_ghoul", "Гуль", "Ghoul", ["lifesteal", "leap"], [P("minecraft:hunger", 200, 2)], mech_uk="висмоктує здоров'я, стрибає"),
-    V("minotaur", "zombie", 9, "twilightforest:minotaur", "Мінотавр", "Minotaur", ["leap", "shockwave", "enrage"], mech_uk="таран, хвиля, лють"),
-    V("elite_draugr", "zombie", 10, "cataclysm:elite_draugr", "Елітний драугр", "Elite Draugr", ["reflect", "lifesteal", "shield"], mech_uk="віддзеркалює удари, щит, кровопивство"),
-    V("dread_knight", "zombie", 11, "iceandfire:dread_knight", "Лицар жаху", "Dread Knight", ["enrage", "shockwave", "armor_break"], [P("minecraft:wither", 80, 1)], mech_uk="ламає броню, візер, лють"),
-    V("royal_draugr", "zombie", 12, "cataclysm:royal_draugr", "Королівський драугр", "Royal Draugr", ["shield", "shockwave", "summon:cataclysm:draugr:2", "enrage"], [P("minecraft:slowness", 80, 1)], mech_uk="кличе драугрів, щит, хвиля, лють"),
+    # zombies: mummies and swamp dead -> lumberjacks, miners, barrels -> clowns, burned, frostbitten -> bruisers, thralls,
+    # draugr -> immortals, trolls -> pumpkin bruisers, minotaurs -> elite draugr, dread knights -> mutant zombies, royal draugr
+    V("rottencreatures:mummy", "zombie", 1, "Мумія", mech="Rotten Creatures: виходить із піску пустель, кличе скарабеїв"),
+    V("variantsandventures:thicket", "zombie", 1, "Чагарник", mech="Variants&Ventures: зомбі, оброслий лісом"),
+    V(BIC + "decaying_zombie", "zombie", 1, "Гниючий зомбі", mech="Born in Chaos: розпадається, отруює"),
+    V("rottencreatures:swampy", "zombie", 2, "Болотяник", mech="Rotten Creatures: отруйний мешканець боліт"),
+    V("variantsandventures:gelid", "zombie", 2, "Крижаник", mech="Variants&Ventures: кидає сніжки, морозить"),
+    V(BIC + "zombie_lumberjack", "zombie", 2, "Мертвий лісоруб", mech="Born in Chaos: рубає сокирою"),
+    V("rottencreatures:undead_miner", "zombie", 3, "Мертвий шахтар", mech="Rotten Creatures: живе в шахтах, носить кирку"),
+    V(BIC + "barrel_zombie", "zombie", 3, "Зомбі-бочка", ["shield"], "Born in Chaos: ховається в бочці"),
+    V(BIC + "zombie_clown", "zombie", 4, "Зомбі-клоун", ["leap"], "Born in Chaos: стрибає й сміється"),
+    V("rottencreatures:burned", "zombie", 4, "Обвуглений", mech="Rotten Creatures: горить сам і підпалює"),
+    V("rottencreatures:frostbitten", "zombie", 5, "Обморожений", ["frost_aura"], "Rotten Creatures: холод, сповільнює"),
+    V(BIC + "zombie_bruiser", "zombie", 5, "Зомбі-громило", ["shockwave"], "Born in Chaos: важкий удар"),
+    V("iceandfire:dread_thrall", "zombie", 6, "Невільник жаху", ["shield"], "Ice and Fire: воїн Лича жаху"),
+    V("cataclysm:draugr", "zombie", 6, "Драугр", ["leap"], "Cataclysm: північний мертвий воїн"),
+    V("rottencreatures:immortal", "zombie", 7, "Безсмертний", ["regen"], "Rotten Creatures: воскресає, кличе блискавки"),
+    V("iceandfire:troll", "zombie", 7, "Троль", ["shockwave"], "Ice and Fire: великий троль із дрючком"),
+    V(BIC + "pumpkin_bruiser", "zombie", 8, "Гарбузовий громило", ["shockwave"], "Born in Chaos: гарбузоголовий велетень"),
+    V("twilightforest:minotaur", "zombie", 8, "Мінотавр", ["leap"], "Twilight Forest: таранить сокирою"),
+    V("cataclysm:elite_draugr", "zombie", 9, "Елітний драугр", ["shield"], "Cataclysm: драугр у важкій броні"),
+    V("undead_unleashed:dreadknight", "zombie", 10, "Лицар жаху", ["enrage"], "Undead Unleashed: проклятий лицар"),
+    V("mutantmonsters:mutant_zombie", "zombie", 11, "Мутант-зомбі", [], "Mutant Monsters: б'є землю, воскресає, кидається"),
+    V("cataclysm:royal_draugr", "zombie", 12, "Королівський драугр", ["shield", "enrage"], "Cataclysm: король драугрів"),
     # skeletons
-    V("frost_archer", "skeleton", 1, "minecraft:stray", "Морозний стрілець", "Frost Archer", [], [P("minecraft:slowness", 80, 1)], mech_uk="сильне сповільнення"),
-    V("flame_archer", "skeleton", 2, None, "Вогняний лучник", "Flame Archer", ["ignite"], [], 1.0, {"head": "minecraft:golden_helmet"}, mech_uk="підпалює стрілами"),
-    V("druid", "skeleton", 3, "twilightforest:skeleton_druid", "Кістяк-друїд", "Skeleton Druid", ["regen"], [P("minecraft:poison", 60)], mech_uk="отруйні чари, відновлення"),
-    V("volley_archer", "skeleton", 4, None, "Залповий стрілець", "Volley Archer", ["volley"], [], 1.05, {"chest": "minecraft:chainmail_chestplate"}, mech_uk="залп із трьох стріл"),
-    V("koboleton", "skeleton", 6, "cataclysm:koboleton", "Кобольдовий кістяк", "Koboleton", ["leap", "armor_break"], mech_uk="стрибок, ламає броню"),
-    V("aptrgangr", "skeleton", 8, "cataclysm:aptrgangr", "Аптрґанґр", "Aptrgangr", ["shockwave", "armor_break"], [P("minecraft:mining_fatigue", 120, 1)], mech_uk="хвиля, ламає броню, втома"),
-    V("wither_knight", "skeleton", 9, "eternalnether:wither_skeleton_knight", "Лицар-кістяк", "Wither Knight", ["shield", "enrage"], [P("minecraft:wither", 100, 1)], mech_uk="візер, щит, лють"),
-    V("wraith", "skeleton", 11, "twilightforest:wraith", "Мара", "Wraith", ["blink", "lifesteal"], [P("minecraft:darkness", 80)], mech_uk="переноситься, темрява, кровопивство"),
-    V("bone_king", "skeleton", 12, "minecraft:wither_skeleton", "Кістяний король", "Bone King", ["volley", "blink", "shield"], [P("minecraft:wither", 120, 2)], 1.3, {"head": "minecraft:golden_helmet", "mainhand": "minecraft:bow"}, mech_uk="залп, перенесення, щит, сильний візер"),
+    V("variantsandventures:murk", "skeleton", 1, "Мулистий кістяк", mech="Variants&Ventures: стріли сповільнюють"),
+    V(BIC + "decrepit_skeleton", "skeleton", 1, "Трухлявий кістяк", mech="Born in Chaos: старий скелет-воїн"),
+    V("variantsandventures:verdant", "skeleton", 2, "Зелений кістяк", mech="Variants&Ventures: отруйні стріли джунглів"),
+    V("twilightforest:skeleton_druid", "skeleton", 3, "Кістяк-друїд", mech="Twilight Forest: природні чари"),
+    V(BIC + "skeleton_thrasher", "skeleton", 3, "Кістяк-молотильник", mech="Born in Chaos: б'є з розмаху"),
+    V(BIC + "skeleton_demoman", "skeleton", 4, "Кістяк-підривник", mech="Born in Chaos: кидає бомби"),
+    V(BIC + "bonescaller", "skeleton", 5, "Кличник кісток", mech="Born in Chaos: піднімає скелетів"),
+    V(BIC + "siamese_skeletons", "skeleton", 6, "Сіамські кістяки", mech="Born in Chaos: двоє в одному, розділяються"),
+    V("cataclysm:koboleton", "skeleton", 6, "Кобольдовий кістяк", ["leap"], "Cataclysm: швидкий кістяк пустелі"),
+    V("cataclysm:aptrgangr", "skeleton", 8, "Аптрґанґр", ["armor_break"], "Cataclysm: мертвий велетень із сокирою"),
+    V("eternalnether:wither_skeleton_knight", "skeleton", 9, "Лицар-кістяк", ["shield"], "Eternal Nether: лицар із щитом"),
+    V("undead_unleashed:wraith", "skeleton", 10, "Мара", ["blink"], "Undead Unleashed: летючий привид"),
+    V(BIC + "supreme_bonescaller", "skeleton", 11, "Верховний кличник", [], "Born in Chaos: могутній некромант кісток"),
+    V("mutantmonsters:mutant_skeleton", "skeleton", 12, "Мутант-скелет", [], "Mutant Monsters: багатостріли, кидки"),
     # spiders
-    V("venom_spider", "spider", 1, "minecraft:cave_spider", "Отруйний павук", "Venom Spider", [], [P("minecraft:poison", 120, 1)], 1.4, mech_uk="сильна отрута"),
-    V("hedge_spider", "spider", 2, "twilightforest:hedge_spider", "Колючий павук", "Hedge Spider", ["leap"], mech_uk="стрибок"),
-    V("swarm_spider", "spider", 3, "twilightforest:swarm_spider", "Рійний павук", "Swarm Spider", ["split:twilightforest:swarm_spider:2"], mech_uk="розпадається на двох малих"),
-    V("weaver", "spider", 4, None, "Тенетник", "Weaver", ["web", "pull"], [], 1.2, mech_uk="кидає павутину, підтягує до себе"),
-    V("ice_spider", "spider", 5, "irons_spellbooks:ice_spider", "Крижаний павук", "Ice Spider", ["frost_aura"], mech_uk="морозна аура"),
-    V("king_spider", "spider", 8, "twilightforest:king_spider", "Павук-король", "King Spider", ["summon:minecraft:cave_spider:3", "web"], mech_uk="кличе павуків, павутина"),
-    V("crimson_weaver", "spider", 10, None, "Багряний ткач", "Crimson Weaver", ["web", "leap", "lifesteal"], [P("minecraft:wither", 80, 1)], 1.6, mech_uk="павутина, стрибок, візер, кровопивство"),
-    V("brood_mother", "spider", 12, None, "Матір виводку", "Brood Mother", ["summon:minecraft:cave_spider:4", "web", "shockwave", "enrage"], [P("minecraft:poison", 160, 2)], 2.2, mech_uk="кличе виводок, павутина, хвиля, лють"),
-    # creepers (all on the creeper itself)
-    V("silent_creeper", "creeper", 2, None, "Тихий кріпер", "Silent Creeper", ["invisible"], [], 1.0, mech_uk="майже невидимий"),
-    V("fire_creeper", "creeper", 3, None, "Вогняний кріпер", "Fire Creeper", ["fire_aura", "burst_fire"], [], 1.0, mech_uk="аура вогню, вибух підпалює"),
-    V("ender_creeper", "creeper", 5, None, "Ендер-кріпер", "Ender Creeper", ["blink"], [], 1.0, mech_uk="переноситься до гравця"),
-    V("swarm_creeper", "creeper", 6, None, "Рійний кріпер", "Swarm Creeper", ["split:minecraft:creeper:3"], [], 1.2, mech_uk="після смерті — три малі кріпери"),
-    V("storm_creeper", "creeper", 8, None, "Грозовий кріпер", "Storm Creeper", ["powered"], [], 1.0, mech_uk="заряджений"),
-    V("frost_creeper", "creeper", 10, None, "Морозний кріпер", "Frost Creeper", ["frost_aura", "powered"], [P("minecraft:slowness", 100, 2)], 1.1, mech_uk="морозна аура, заряджений"),
-    V("titan_creeper", "creeper", 12, None, "Кріпер-титан", "Titan Creeper", ["powered", "blink", "shield"], [], 1.8, mech_uk="заряджений, переноситься, щит"),
-    # witches
-    V("herbalist", "witch", 2, None, "Травниця", "Herbalist", ["regen"], [P("minecraft:poison", 80)], 1.0, mech_uk="відновлення"),
-    V("cultist", "witch", 3, "irons_spellbooks:cultist", "Сектант", "Cultist", ["blink"], mech_uk="заклинання, перенесення"),
-    V("illusioner", "witch", 4, "friendsandfoes:illusioner", "Ілюзіоніст", "Illusioner", ["blink"], [P("minecraft:blindness", 60)], mech_uk="двійники, сліпота"),
-    # Iron's cryomancer and pyromancer are neutral wizards (they ignored players in the test): witches with their magic instead
-    V("frost_witch", "witch", 6, None, "Морозна відьма", "Frost Witch", ["frost_aura", "blink"], [P("minecraft:slowness", 80, 1)], 1.05, mech_uk="морозна аура, перенесення, сповільнення"),
-    V("ember_witch", "witch", 7, None, "Жарова відьма", "Ember Witch", ["fire_aura", "ignite", "shield"], [], 1.05, mech_uk="аура вогню, підпалює, щит"),
-    V("necromancer", "witch", 8, "irons_spellbooks:necromancer", "Некромант", "Necromancer", ["summon:minecraft:skeleton:2", "shield"], mech_uk="піднімає мерців, щит"),
-    V("archevoker", "witch", 10, "irons_spellbooks:archevoker", "Архівокер", "Archevoker", ["shield", "blink"], [P("minecraft:weakness", 120, 1)], mech_uk="ікла, вексі, щит"),
-    V("hex_witch", "witch", 12, None, "Чаклунка проклять", "Hex Witch", ["blink", "pull", "shield", "summon:minecraft:vex:3"], [P("minecraft:levitation", 40, 1), P("minecraft:wither", 100, 1)], 1.15, mech_uk="левітація, візер, вексі, підтягує"),
-    # endermen
-    V("warped_enderman", "enderman", 3, "eternalnether:warped_enderman", "Викривлений ендермен", "Warped Enderman", [], [P("minecraft:nausea", 100)], mech_uk="нудота"),
-    V("shade_walker", "enderman", 5, None, "Тіньовий мандрівник", "Shade Walker", ["blink"], [P("minecraft:darkness", 100)], 1.1, mech_uk="темрява, перенесення за спину"),
-    V("endermaptera", "enderman", 8, "cataclysm:endermaptera", "Ендероптера", "Endermaptera", ["leap", "blink"], mech_uk="стрибки, перенесення"),
-    V("void_caller", "enderman", 10, None, "Поклик порожнечі", "Void Caller", ["pull", "blink", "lifesteal"], [P("minecraft:levitation", 30, 1)], 1.2, mech_uk="підтягує, левітація, кровопивство"),
-    V("ender_golem", "enderman", 12, "cataclysm:ender_golem", "Ендер-голем", "Ender Golem", ["shockwave", "enrage"], mech_uk="хвиля, лють"),
+    V("twilightforest:hedge_spider", "spider", 1, "Колючий павук", mech="Twilight Forest: живе в живоплотах"),
+    V("twilightforest:swarm_spider", "spider", 2, "Рійний павук", mech="Twilight Forest: нападає зграями"),
+    V(BIC + "diamond_termite", "spider", 3, "Алмазний терміт", mech="Born in Chaos: точить броню"),
+    V("irons_spellbooks:ice_spider", "spider", 5, "Крижаний павук", ["frost_aura"], "Iron's Spells: морозний павук"),
+    V("twilightforest:king_spider", "spider", 7, "Павук-король", ["web"], "Twilight Forest: великий павук"),
+    V(BIC + "mother_spider", "spider", 9, "Матір павуків", ["enrage"], "Born in Chaos: кличе павученят"),
+    # creepers (Creeper Overhaul gives every biome its own creeper; these come on top)
+    V(BIC + "phantom_creeper", "creeper", 5, "Фантомний кріпер", ["blink"], "Born in Chaos: напівпрозорий, двоїться"),
+    V("mutantmonsters:mutant_creeper", "creeper", 11, "Мутант-кріпер", [], "Mutant Monsters: стрибає й вибухає кілька разів"),
+    # witches and casters
+    V(BIC + "missioner", "witch", 3, "Місіонер", mech="Born in Chaos: темний проповідник"),
+    V("irons_spellbooks:cultist", "witch", 4, "Сектант", mech="Iron's Spells: кровна магія"),
+    V("friendsandfoes:illusioner", "witch", 5, "Ілюзіоніст", ["blink"], "Friends&Foes: двійники, сліпота"),
+    V("irons_spellbooks:necromancer", "witch", 7, "Некромант", mech="Iron's Spells: піднімає мерців"),
+    V("irons_spellbooks:archevoker", "witch", 9, "Архівокер", ["shield"], "Iron's Spells: ікла й вексі"),
+    V(BIC + "lifestealer", "witch", 10, "Життєкрад", ["lifesteal"], "Born in Chaos: краде життя"),
+    V(BIC + "fallen_chaos_knight", "witch", 12, "Занепалий лицар хаосу", ["enrage"], "Born in Chaos: лицар-маг хаосу"),
+    # endermen (Enderman Overhaul gives every biome its own enderman)
+    V(BIC + "nightmare_stalker", "enderman", 6, "Нічний переслідувач", ["blink"], "Born in Chaos: полює невидимим"),
+    V("cataclysm:endermaptera", "enderman", 8, "Ендероптера", ["leap"], "Cataclysm: ендер-комаха"),
+    V("mutantmonsters:mutant_enderman", "enderman", 11, "Мутант-ендермен", [], "Mutant Monsters: кидає блоки, клони"),
+    V("cataclysm:ender_golem", "enderman", 12, "Ендер-голем", ["shockwave"], "Cataclysm: кам'яний вартовий Енду"),
     # illagers
-    V("orc", "illager", 4, "orc_hut:orc", "Орк", "Orc", ["leap"], mech_uk="стрибок"),
-    V("goblin_knight", "illager", 6, "twilightforest:upper_goblin_knight", "Гоблін-лицар", "Goblin Knight", ["shield"], mech_uk="щит"),
-    V("magehunter", "illager", 7, "irons_spellbooks:magehunter_vindicator", "Мисливець на магів", "Magehunter", ["armor_break"], [P("minecraft:weakness", 100, 1)], mech_uk="ламає броню, слабкість"),
-    V("umvuthana_raptor", "illager", 9, "mowziesmobs:umvuthana_raptor", "Умвутана-хижак", "Umvuthana Raptor", ["leap", "enrage"], mech_uk="стрибок, лють"),
-    V("warlord", "illager", 11, None, "Воєвода", "Warlord", ["shockwave", "shield", "summon:minecraft:vindicator:2", "enrage"], [P("minecraft:slowness", 60, 1)], 1.25, {"head": "minecraft:netherite_helmet", "mainhand": "minecraft:netherite_axe"}, mech_uk="кличе загін, щит, хвиля, лють"),
-    # piglins
-    V("piglin_hunter", "piglin", 3, "eternalnether:piglin_hunter", "Піґлін-мисливець", "Piglin Hunter", ["leap"], mech_uk="стрибок"),
-    V("corpor", "piglin", 5, "eternalnether:corpor", "Корпор", "Corpor", ["shield"], mech_uk="щит"),
-    V("ignited_revenant", "piglin", 7, "cataclysm:ignited_revenant", "Палаючий ревенант", "Ignited Revenant", ["fire_aura"], mech_uk="аура вогню"),
-    V("wraither", "piglin", 9, "eternalnether:wraither", "Рейзер", "Wraither", ["blink", "lifesteal"], [P("minecraft:wither", 80, 1)], mech_uk="перенесення, візер"),
-    V("ignited_berserker", "piglin", 11, "cataclysm:ignited_berserker", "Палаючий берсерк", "Ignited Berserker", ["enrage", "fire_aura", "leap"], mech_uk="лють, вогонь, стрибок"),
-    # blazes and slimes
-    V("hellflare", "blaze", 4, None, "Пекельний вогник", "Hellflare", ["fire_aura", "shield"], [], 1.1, mech_uk="аура вогню, щит"),
-    V("wildfire", "blaze", 9, "friendsandfoes:wildfire", "Дикий вогонь", "Wildfire", ["fire_aura", "enrage"], mech_uk="щити-іфрити, аура вогню"),
-    V("maze_slime", "slime", 2, "twilightforest:maze_slime", "Лабіринтовий слиз", "Maze Slime", [], [P("minecraft:slowness", 60, 1)], mech_uk="сповільнення"),
-    V("acid_slime", "slime", 6, None, "Кислотний слиз", "Acid Slime", ["armor_break", "regen"], [P("minecraft:poison", 100, 1)], 1.0, mech_uk="ламає броню, отрута"),
-    V("ferrouslime", "slime", 9, "alexscaves:ferrouslime", "Залізний слиз", "Ferrouslime", ["shield", "pull"], mech_uk="магнітом підтягує, щит"),
+    V("orc_hut:orc", "illager", 4, "Орк", ["leap"], "Orc Hut: дикий орк"),
+    V("twilightforest:upper_goblin_knight", "illager", 6, "Гоблін-лицар", ["shield"], "Twilight Forest: лицар зі щитом"),
+    V("irons_spellbooks:magehunter_vindicator", "illager", 7, "Мисливець на магів", ["armor_break"], "Iron's Spells: проти магів"),
+    V("mowziesmobs:umvuthana_raptor", "illager", 9, "Умвутана-хижак", ["leap"], "Mowzie's Mobs: воїн у масці"),
+    V(BIC + "door_knight", "illager", 11, "Лицар-двері", ["shield"], "Born in Chaos: важкий лицар-щит"),
+    # piglins and blazes
+    V("eternalnether:piglin_hunter", "piglin", 3, "Піґлін-мисливець", ["leap"], "Eternal Nether: мисливець Незеру"),
+    V("eternalnether:corpor", "piglin", 5, "Корпор", ["shield"], "Eternal Nether: мертвий піґлін"),
+    V("cataclysm:ignited_revenant", "piglin", 7, "Палаючий ревенант", ["fire_aura"], "Cataclysm: вогняний щитоносець"),
+    V(BIC + "infernal_spirit", "piglin", 8, "Пекельний дух", ["fire_aura"], "Born in Chaos: вогняний дух"),
+    V("eternalnether:wraither", "piglin", 9, "Рейзер", ["blink"], "Eternal Nether: привид Незеру"),
+    V("undead_unleashed:flamebreather", "piglin", 10, "Вогнедих", [], "Undead Unleashed: дихає вогнем"),
+    V("cataclysm:ignited_berserker", "piglin", 11, "Палаючий берсерк", ["enrage"], "Cataclysm: вогняний берсерк"),
+    V(BIC + "seared_spirit", "blaze", 4, "Випалений дух", ["fire_aura"], "Born in Chaos: дух вогню"),
+    V("friendsandfoes:wildfire", "blaze", 9, "Дикий вогонь", ["fire_aura"], "Friends&Foes: щити-іфрити"),
     # drowned
-    V("deepling", "drowned", 3, "cataclysm:deepling", "Глибинник", "Deepling", ["leap"], mech_uk="стрибок"),
-    V("deepling_angler", "drowned", 5, "cataclysm:deepling_angler", "Глибинник-рибалка", "Deepling Angler", ["pull"], mech_uk="підтягує гаком"),
-    V("deepling_priest", "drowned", 7, "cataclysm:deepling_priest", "Глибинник-жрець", "Deepling Priest", ["shield", "regen"], mech_uk="щит, відновлення"),
-    V("deepling_brute", "drowned", 9, "cataclysm:deepling_brute", "Глибинник-громило", "Deepling Brute", ["shockwave", "enrage"], mech_uk="хвиля, лють"),
-    V("deepling_warlock", "drowned", 11, "cataclysm:deepling_warlock", "Глибинник-чорнокнижник", "Deepling Warlock", ["blink", "shield", "lifesteal"], [P("minecraft:darkness", 80)], mech_uk="перенесення, темрява, щит"),
+    V(BIC + "zombie_fisherman", "drowned", 2, "Мертвий рибалка", mech="Born in Chaos: підтягує вудкою"),
+    V("cataclysm:deepling", "drowned", 3, "Глибинник", ["leap"], "Cataclysm: житель глибин"),
+    V("cataclysm:deepling_angler", "drowned", 5, "Глибинник-рибалка", ["pull"], "Cataclysm: ліхтар і гак"),
+    V("rottencreatures:dead_beard", "drowned", 7, "Мертва Борода", [], "Rotten Creatures: капітан-мерць із гарматами"),
+    V("cataclysm:deepling_brute", "drowned", 9, "Глибинник-громило", ["shockwave"], "Cataclysm: важкий глибинник"),
+    V("cataclysm:deepling_warlock", "drowned", 11, "Глибинник-чорнокнижник", ["blink"], "Cataclysm: магія глибин"),
 ]
 
-ABILITY_UK = {"leap": "стрибок до цілі", "blink": "перенесення за спину цілі", "shockwave": "ударна хвиля (відкидає й ранить усіх поруч)",
-              "enrage": "лють нижче 30 % здоров'я (швидкість і сила)", "regen": "відновлення, коли його не б'ють 5 с", "shield": "щит поглинання кожні 15 с",
-              "lifesteal": "лікується на 25 % завданої шкоди", "reflect": "повертає 20 % шкоди ближнього бою", "armor_break": "удар знімає 4 одиниці броні на 6 с",
-              "ignite": "удар підпалює", "fire_aura": "підпалює гравців поруч", "frost_aura": "морозить і сповільнює гравців поруч", "web": "кидає павутину під ноги цілі (зникає за 5 с)",
-              "pull": "підтягує ціль до себе", "volley": "залп із трьох стріл", "invisible": "невидимий", "powered": "заряджений", "burst_fire": "вибух підпалює",
-              "summon": "кличе підмогу, коли здоров'я нижче половини", "split": "після смерті розпадається", "family_hit": "ефект родини на удар", "summon_guard": "кличе варту на 66 % і 33 % здоров'я"}
+# creatures of the new mods that spawn by themselves: not before the player is strong enough (their natural spawns wait)
+GATE_EXTRA = {BIC + "lord_pumpkinhead": 130, BIC + "lord_the_headless": 130, BIC + "sir_pumpkinhead": 85, BIC + "sir_the_headless": 85,
+              BIC + "krampus": 105, BIC + "scarlet_persecutor": 85, BIC + "dire_hound_leader": 65, BIC + "dread_hound": 35,
+              BIC + "pumpkinhead": 25, BIC + "restless_spirit": 25, BIC + "spirit_guide": 50, BIC + "swarmer": 35, BIC + "bone_imp": 25,
+              BIC + "glutton_fish": 25, BIC + "thornshell_crab": 15, BIC + "corpse_fly": 15, BIC + "bloody_gadfly": 25,
+              "rottencreatures:glacial_hunter": 50, "rottencreatures:zap": 65, "mutantmonsters:spider_pig": 50,
+              "undead_unleashed:tormentomb": 200}
 
-# ---------------------------------------------------------------- loot (item, weight, min, max) by tier band and by family
-def L(item, w, lo=1, hi=1): return (item, w, lo, hi)
+ABILITY_UK = {"leap": "стрибок до цілі", "blink": "перенесення за спину цілі", "shockwave": "ударна хвиля поруч",
+              "enrage": "лють нижче 30 % здоров'я", "regen": "відновлення, коли його не б'ють", "shield": "щит поглинання кожні 15 с",
+              "lifesteal": "лікується на 25 % шкоди", "armor_break": "удар знімає 4 броні на 6 с", "fire_aura": "підпалює гравців поруч",
+              "frost_aura": "морозить гравців поруч", "web": "павутина під ноги цілі", "pull": "підтягує ціль", "family_hit": "ефект родини на удар",
+              "summon_guard": "кличе варту на 66 % і 33 % здоров'я"}
+
+# ---------------------------------------------------------------- loot: a small extra, rarer and smaller than v1
+def Lt(item, w, lo=1, hi=1): return (item, w, lo, hi)
 TIER_LOOT = {
-    1: [L("minecraft:iron_nugget", 30, 2, 6), L("minecraft:gold_nugget", 20, 2, 5), L("minecraft:copper_ingot", 20, 1, 3), L("minecraft:leather", 15, 1, 2), L("minecraft:arrow", 15, 3, 8), L("minecraft:book", 6), L("minecraft:experience_bottle", 8)],
-    2: [L("minecraft:iron_ingot", 25, 1, 2), L("minecraft:gold_ingot", 15, 1, 2), L("minecraft:lapis_lazuli", 15, 2, 5), L("minecraft:redstone", 15, 2, 6), L("create:zinc_ingot", 12, 1, 2), L("mekanism:ingot_tin", 10, 1, 2), L("minecraft:experience_bottle", 10, 1, 2), L("minecraft:name_tag", 3), L("minecraft:saddle", 3)],
-    3: [L("minecraft:emerald", 20, 1, 3), L("create:brass_ingot", 15, 1, 2), L("mekanism:ingot_osmium", 15, 1, 2), L("iceandfire:silver_ingot", 12, 1, 2), L("ars_nouveau:source_gem", 12, 1, 3), L("irons_spellbooks:arcane_essence", 10, 1, 3), L("apotheosis:gem_dust", 6, 1, 3), L("apotheosis:mysterious_scrap_metal", 4), L("minecraft:experience_bottle", 10, 2, 3)],
-    4: [L("minecraft:diamond", 12), L("minecraft:emerald", 15, 2, 4), L("minecraft:amethyst_shard", 12, 2, 5), L("iceandfire:sapphire_gem", 8), L("irons_spellbooks:common_ink", 8), L("irons_spellbooks:uncommon_ink", 5), L("irons_spellbooks:mithril_scrap", 4), L("apotheosis:gem_dust", 8, 2, 4), L("apotheosis:timeworn_fabric", 4), L("minecraft:golden_apple", 4), L("create:experience_nugget", 10, 3, 8)],
-    5: [L("minecraft:diamond", 15, 1, 2), L("minecraft:netherite_scrap", 5), L("irons_spellbooks:rare_ink", 5), L("irons_spellbooks:upgrade_orb", 4), L("cataclysm:ancient_metal_nugget", 8, 2, 5), L("twilightforest:knightmetal_ingot", 6, 1, 2), L("apotheosis:luminous_crystal_shard", 4), L("apotheosis:sigil_of_socketing", 2), L("minecraft:echo_shard", 4), L("minecraft:totem_of_undying", 1), L("minecraft:experience_bottle", 12, 3, 5)],
-    6: [L("minecraft:netherite_scrap", 8, 1, 2), L("minecraft:ancient_debris", 4), L("irons_spellbooks:epic_ink", 4), L("cataclysm:ancient_metal_ingot", 6), L("cataclysm:witherite_ingot", 3), L("twilightforest:fiery_ingot", 4), L("apotheosis:sigil_of_enhancement", 2), L("apotheosis:godforged_pearl", 1), L("minecraft:enchanted_golden_apple", 1), L("minecraft:nether_star", 1), L("minecraft:experience_bottle", 12, 4, 8)],
+    1: [Lt("minecraft:iron_nugget", 30, 1, 4), Lt("minecraft:gold_nugget", 20, 1, 3), Lt("minecraft:copper_ingot", 20, 1, 2), Lt("minecraft:leather", 15), Lt("minecraft:arrow", 15, 2, 5)],
+    2: [Lt("minecraft:iron_ingot", 25), Lt("minecraft:gold_ingot", 12), Lt("minecraft:lapis_lazuli", 15, 1, 3), Lt("minecraft:redstone", 15, 1, 4), Lt("create:zinc_ingot", 12), Lt("mekanism:ingot_tin", 10), Lt("minecraft:experience_bottle", 6)],
+    3: [Lt("minecraft:emerald", 20, 1, 2), Lt("create:brass_ingot", 12), Lt("mekanism:ingot_osmium", 12), Lt("iceandfire:silver_ingot", 10), Lt("ars_nouveau:source_gem", 12, 1, 2), Lt("irons_spellbooks:arcane_essence", 10, 1, 2), Lt("minecraft:experience_bottle", 6)],
+    4: [Lt("minecraft:emerald", 15, 1, 3), Lt("minecraft:amethyst_shard", 15, 1, 3), Lt("minecraft:diamond", 4), Lt("iceandfire:sapphire_gem", 5), Lt("irons_spellbooks:common_ink", 8), Lt("apotheosis:gem_dust", 6, 1, 2), Lt("create:experience_nugget", 15, 2, 5)],
+    5: [Lt("minecraft:diamond", 6), Lt("irons_spellbooks:uncommon_ink", 6), Lt("cataclysm:ancient_metal_nugget", 10, 1, 3), Lt("twilightforest:knightmetal_ingot", 6), Lt("apotheosis:mysterious_scrap_metal", 4), Lt("minecraft:echo_shard", 3), Lt("minecraft:experience_bottle", 8, 1, 2)],
+    6: [Lt("minecraft:diamond", 6), Lt("minecraft:netherite_scrap", 2), Lt("irons_spellbooks:rare_ink", 4), Lt("cataclysm:ancient_metal_ingot", 4), Lt("twilightforest:fiery_ingot", 3), Lt("apotheosis:timeworn_fabric", 3), Lt("minecraft:experience_bottle", 10, 1, 3)],
 }
 def band(tier): return min(6, (tier + 1) // 2)
 
 FAMILY_LOOT = {
-    "zombie": [L("minecraft:rotten_flesh", 30, 1, 3), L("minecraft:iron_nugget", 15, 1, 4), L("minecraft:paper", 10, 1, 3), L("iceandfire:troll_tusk", 3), L("iceandfire:dread_shard", 4, 1, 2)],
-    "skeleton": [L("minecraft:bone", 30, 2, 4), L("minecraft:arrow", 20, 4, 10), L("minecraft:spectral_arrow", 8, 2, 4), L("minecraft:wither_skeleton_skull", 1), L("irons_spellbooks:frozen_bone", 4)],
-    "spider": [L("minecraft:string", 30, 2, 5), L("minecraft:spider_eye", 15, 1, 2), L("minecraft:cobweb", 8, 1, 3), L("twilightforest:naga_scale", 2)],
-    "creeper": [L("minecraft:gunpowder", 30, 2, 5), L("minecraft:fire_charge", 10, 1, 3), L("minecraft:glowstone_dust", 10, 2, 4), L("irons_spellbooks:lightning_upgrade_orb", 1)],
-    "witch": [L("minecraft:glowstone_dust", 15, 1, 4), L("minecraft:sugar", 15, 1, 4), L("minecraft:glass_bottle", 15, 1, 3), L("irons_spellbooks:arcane_essence", 12, 1, 3), L("ars_nouveau:source_gem", 10, 1, 2), L("apotheosis:potion_charm", 1)],
-    "enderman": [L("minecraft:ender_pearl", 30, 1, 2), L("minecraft:ender_eye", 6), L("minecraft:chorus_fruit", 10, 1, 3), L("minecraft:shulker_shell", 2), L("irons_spellbooks:ender_upgrade_orb", 1)],
-    "illager": [L("minecraft:emerald", 25, 1, 4), L("minecraft:arrow", 15, 3, 8), L("minecraft:goat_horn", 1), L("minecraft:ominous_trial_key", 1), L("minecraft:totem_of_undying", 1)],
-    "piglin": [L("minecraft:gold_ingot", 25, 1, 3), L("minecraft:quartz", 20, 2, 5), L("minecraft:blaze_rod", 8), L("cataclysm:ignitium_ingot", 1)],
-    "blaze": [L("minecraft:blaze_rod", 30, 1, 2), L("irons_spellbooks:cinder_essence", 10, 1, 2), L("minecraft:fire_charge", 15, 1, 3), L("irons_spellbooks:fire_upgrade_orb", 1)],
-    "slime": [L("minecraft:slime_ball", 30, 2, 5), L("minecraft:magma_cream", 15, 1, 3), L("minecraft:iron_ingot", 6), L("twilightforest:steeleaf_ingot", 4)],
-    "drowned": [L("minecraft:prismarine_shard", 20, 2, 5), L("minecraft:prismarine_crystals", 15, 1, 4), L("minecraft:nautilus_shell", 5), L("minecraft:trident", 1), L("minecraft:heart_of_the_sea", 1)],
+    "zombie": [Lt("minecraft:rotten_flesh", 30, 1, 2), Lt("minecraft:iron_nugget", 15, 1, 3), Lt("minecraft:paper", 10), Lt("iceandfire:dread_shard", 3)],
+    "skeleton": [Lt("minecraft:bone", 30, 1, 3), Lt("minecraft:arrow", 20, 2, 6), Lt("minecraft:spectral_arrow", 6, 1, 3), Lt("irons_spellbooks:frozen_bone", 3)],
+    "spider": [Lt("minecraft:string", 30, 1, 3), Lt("minecraft:spider_eye", 15), Lt("minecraft:cobweb", 6)],
+    "creeper": [Lt("minecraft:gunpowder", 30, 1, 3), Lt("minecraft:fire_charge", 8), Lt("minecraft:glowstone_dust", 8, 1, 2)],
+    "witch": [Lt("minecraft:glowstone_dust", 15, 1, 2), Lt("minecraft:sugar", 15, 1, 2), Lt("minecraft:glass_bottle", 15), Lt("irons_spellbooks:arcane_essence", 10), Lt("ars_nouveau:source_gem", 8)],
+    "enderman": [Lt("minecraft:ender_pearl", 30), Lt("minecraft:chorus_fruit", 10, 1, 2), Lt("minecraft:ender_eye", 3)],
+    "illager": [Lt("minecraft:emerald", 25, 1, 2), Lt("minecraft:arrow", 15, 2, 5), Lt("minecraft:leather", 10)],
+    "piglin": [Lt("minecraft:gold_nugget", 25, 2, 5), Lt("minecraft:quartz", 20, 1, 3), Lt("minecraft:blaze_powder", 6)],
+    "blaze": [Lt("minecraft:blaze_powder", 30, 1, 2), Lt("irons_spellbooks:cinder_essence", 8), Lt("minecraft:fire_charge", 12)],
+    "drowned": [Lt("minecraft:prismarine_shard", 20, 1, 3), Lt("minecraft:prismarine_crystals", 15, 1, 2), Lt("minecraft:nautilus_shell", 2)],
 }
 
-def loot_table(entries, rolls):
+def expected_items(entries, rolls=1):
+    tw = sum(w for _, w, *_ in entries)
+    return rolls * sum(w * (lo + hi) / 2 for _, w, lo, hi in entries) / tw
+
+def loot_table(entries):
     for it, *_ in entries:
         if it not in ITEMS: sys.exit(f"unknown item {it}")
     return {"type": "minecraft:entity", "random_sequence": "wilds_core:mobs", "pools": [{
-        "rolls": rolls, "bonus_rolls": 0.5,
+        "rolls": 1, "bonus_rolls": 0,
         "entries": [{"type": "minecraft:item", "name": it, "weight": w,
                      "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": lo, "max": hi}}] if hi > 1 else []}
                     for it, w, lo, hi in entries]}]}
 
 # ---------------------------------------------------------------- output
 def main():
-    errs = []
-    ids = set()
+    errs, ids = [], set()
     for v in VARIANTS:
         if v["id"] in ids: errs.append("duplicate " + v["id"])
         ids.add(v["id"])
-        if v["entity"] and v["entity"] not in ENTITIES: errs.append(f"{v['id']}: unknown entity {v['entity']}")
+        if v["entity"] not in ENTITIES: errs.append(f"{v['id']}: unknown entity {v['entity']} (refresh docs/registries after adding mods)")
         for a in v["abilities"]:
-            if a.startswith(("summon:", "split:")):
-                e = a.split(":", 1)[1].rsplit(":", 1)[0]
-                if e not in ENTITIES: errs.append(f"{v['id']}: unknown entity {e}")
-            elif a not in ABILITY_UK: errs.append(f"{v['id']}: unknown ability {a}")
-        for h in v["hits"]:
-            pass
+            if a not in ABILITY_UK: errs.append(f"{v['id']}: unknown ability {a}")
+        if v["entity"].startswith("minecraft:"): errs.append(f"{v['id']}: a vanilla mob is not a new creature")
+    for e in GATE_EXTRA:
+        if e not in ENTITIES: errs.append(f"gate: unknown entity {e}")
     if errs: sys.exit("\n".join(errs))
 
-    data = {"settings": SETTINGS, "families": FAMILIES, "variants": [{k: v[k] for k in ("id", "family", "tier", "entity", "abilities", "hits", "scale", "equip", "loot")} for v in VARIANTS]}
+    gate = {v["entity"]: UNLOCK[v["tier"]] for v in VARIANTS}
+    gate.update(GATE_EXTRA)
+    data = {"settings": dict(SETTINGS, gate=gate), "families": {k: {"bases": f["bases"], "hit": f["hit"]} for k, f in FAMILIES.items()},
+            "variants": [{"id": v["id"], "family": v["family"], "tier": v["tier"], "entity": v["entity"], "abilities": v["abilities"],
+                          "hits": [], "scale": 1.0, "equip": {}, "loot": v["family"]} for v in VARIANTS]}
     out = os.path.join(RES, "data", "wilds_core", "wilds_mobs")
     os.makedirs(out, exist_ok=True)
     json.dump(data, open(os.path.join(out, "variants.json"), "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
-
     lt = os.path.join(RES, "data", "wilds_core", "loot_table", "mobs")
     os.makedirs(lt, exist_ok=True)
+    for f in os.listdir(lt): os.remove(os.path.join(lt, f))
     for b, entries in TIER_LOOT.items():
-        json.dump(loot_table(entries, {"type": "minecraft:uniform", "min": 1, "max": 1 + (b + 1) // 2}), open(os.path.join(lt, f"tier_{b}.json"), "w", newline="\n"), indent=1)
+        json.dump(loot_table(entries), open(os.path.join(lt, f"tier_{b}.json"), "w", newline="\n"), indent=1)
     for f, entries in FAMILY_LOOT.items():
-        json.dump(loot_table(entries, 1), open(os.path.join(lt, f"family_{f}.json"), "w", newline="\n"), indent=1)
+        json.dump(loot_table(entries), open(os.path.join(lt, f"family_{f}.json"), "w", newline="\n"), indent=1)
 
-    for lang, key in (("uk_ua", "uk"), ("en_us", "en")):
+    for lang in ("uk_ua", "en_us"):
         p = os.path.join(RES, "assets", "wilds_core", "lang", lang + ".json")
         d = json.load(open(p, encoding="utf-8"))
-        for v in VARIANTS: d[f"wilds_core.mob.{v['id']}"] = v[key]
-        d["wilds_core.mob.named"] = "%s · %s рів." if key == "uk" else "%s · lvl %s"
-        d["wilds_core.mob.level"] = "Рівень істоти: %s" if key == "uk" else "Creature level: %s"
+        for k in [k for k in d if k.startswith("wilds_core.mob.")]: del d[k]
+        d["wilds_core.mob.level"] = "Рівень істоти: %s" if lang == "uk_ua" else "Creature level: %s"
+        d["wilds_core.mob.named"] = "%s · %s рів." if lang == "uk_ua" else "%s · lvl %s"
+        d["wilds_core.power"] = ("Ваша сила: %s (зброя %s, захист %s). Моби поруч підлаштовуються під найсильнішого гравця."
+                                 if lang == "uk_ua" else "Your power: %s (weapon %s, defence %s). Mobs near you follow the strongest player.")
         json.dump(d, open(p, "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=2)
 
     doc, ok = document()
     os.makedirs(os.path.join(ROOT, "docs", "balance"), exist_ok=True)
     open(os.path.join(ROOT, "docs", "balance", "mob-levels.md"), "w", encoding="utf-8", newline="\n").write(doc)
-    print(f"{len(VARIANTS)} variants, {len(TIER_LOOT)} tier and {len(FAMILY_LOOT)} family loot tables; checks {'passed' if ok else 'FAILED'}")
+    print(f"{len(VARIANTS)} creatures, {len(gate)} gated, {len(TIER_LOOT)} tier and {len(FAMILY_LOOT)} family loot tables; checks {'passed' if ok else 'FAILED'}")
     if not ok: sys.exit(1)
+
+
+GEAR = [("Кулаки, без броні", 1, 0, 0, 0, 20), ("Кам'яний меч, шкіра", 5, 7, 0, 0, 20), ("Залізний меч, залізна броня", 6, 15, 0, 0, 20),
+        ("Діамантовий меч + Гострота III, діамантова броня + Захист II", 9, 20, 8, 8, 20),
+        ("Незеритовий меч + Гострота V, незеритова броня + Захист IV", 12, 20, 12, 16, 20),
+        ("Незерит з афіксами й самоцвітами, +4 серця", 18, 22, 14, 16, 28), ("Найкраще у збірці (драконяча сталь, міфічні афікси)", 30, 28, 18, 20, 40)]
 
 
 def document():
     ok = True
     o = []
     w = o.append
-    w("# Рівні мобів, нові види, лут і боси\n")
-    w("Згенеровано `pack/tools/gen_mob_balance.py` — не редагуйте вручну. Код: `mods-src/wilds_core/src/main/java/ua/wilds/core/mobs/`, дані: "
-      "`data/wilds_core/wilds_mobs/variants.json` і `loot_table/mobs/`. Minecraft 1.21.1, NeoForge 21.1.264.\n")
-    w("## Припущення (позначені, можна змінити в генераторі)\n")
-    w("- **A1. «Рівень гравця»** — рівень дерева навичок «Шлях мандрівника» (Pufferfish's Skills). Він не падає після смерті й не витрачається на зачарування, на відміну від рівня досвіду. Рівень 15 — це приблизно залізне спорядження.")
-    w("- **A2. «Поряд»** — радіус 128 блоків від моба (куля; це межа, у якій гра взагалі спавнить мобів біля гравця). Враховуються гравці в режимі виживання й пригод. Моб бере рівень найсильнішого з них.")
-    w("- **A3. Складність світу Apotheosis** (вибір у меню) множить рівень: " + ", ".join(f"{k} ×{v}" for k, v in WORLD_TIER.items()) + ". Тепер вибір відчутний: на «Піку» гравець 100-го рівня зустрічає мобів 175-го (і кращий лут).")
-    w("- **A4. Еталонний гравець**: удар повної сили без крита. Шкода зброї — крива `D(L)`. Захист — таблиця нижче (броня, міцність, захист зачарувань, здоров'я).")
-    w("- **A5.** Рівень і посилення діють **проти гравців**. Мешканці колоній, селяни й улюбленці б'ють мобів і отримують від них шкоду так, ніби моби ванільні, тож колонії MineColonies не гинуть від сильних мобів поряд із гравцем.")
-    w("- **A6. Боси** — тег `c:bosses`, усі істоти зі смугою боса (клас має `ServerBossEvent`), список у коді. Дракони Ice and Fire, колонії, прирученці й закликані істоти рівнів не мають.")
-    w("- **A7.** Заміна стосується лише природного спавну (не спавнерів, не яєць, не структур із власними мобами).\n")
+    w("# Рівні мобів, нові істоти, лут і боси — версія 2\n")
+    w("Згенеровано `pack/tools/gen_mob_balance.py` — не редагуйте вручну. Код: `mods-src/wilds_core/src/main/java/ua/wilds/core/mobs/`. "
+      "Minecraft 1.21.1, NeoForge 21.1.264.\n")
+    w("## Що було не так у версії 1 (21.11) і що змінено\n")
+    w("- «Рівнем гравця» був рівень дерева навичок. На сервері він сягає 270–470, тому новачок отримував драугрів 474-го рівня, які вбивали за два удари. **Тепер рівень гравця — це його сила**: її рахують зі зброї та захисту, які він справді носить.")
+    w("- **Жоден удар моба не забирає більше** 20 % (звичайний моб), 25 % (новий вид) чи 40 % (бос) максимального здоров'я гравця, що б не трапилося з множниками.")
+    w("- Половина «нових видів» була ванільними мобами з іншою назвою. **Тепер кожен новий вид — окрема істота** з власною моделлю й поведінкою.")
+    w("- Лут ярусів давав зачаровані яблука, незеритові уламки й давні уламки стаками. **Тепер це невеликий додаток**: шанс, один кидок, удача не множить кидки.")
+    w("- **Старі моби з рівнями версії 1 перераховуються** під нову систему, щойно завантажуються.\n")
+    w("## Припущення (можна змінити в генераторі)\n")
+    w("- **A1. Рівень гравця = його сила.** Вона дорівнює середньому двох складників. Перший — що варта зброя (85 %): шкода атаки з урахуванням афіксів. Другий — що вартий захист (15 %): броня, міцність, зачарування захисту, здоров'я. Обидва звіряються з еталонною кривою, де залізо — це рівень 15. Гравець бачить свою силу командою `/wildspower`.")
+    w("- **A2. «Поряд»** — радіус 128 блоків (межа, у якій гра спавнить мобів біля гравця). Моб бере рівень найсильнішого гравця.")
+    w("- **A3. Складність світу Apotheosis** множить рівень: " + ", ".join(f"{k} ×{v}" for k, v in WORLD_TIER.items()) + ".")
+    w("- **A4.** Посилення діють лише проти гравців. Колонії, селяни й улюбленці б'ються з мобами, ніби ті ванільні.")
+    w("- **A5.** Нові істоти з'являються замість ванільних мобів своєї родини при природному спавні. Їхній власний природний спавн чекає, поки поруч не буде достатньо сильного гравця.\n")
+    w("## Сила гравця за спорядженням\n")
+    w("| Спорядження | Шкода | Броня / міцність / захист / здоров'я | Рівень зброї | Рівень захисту | **Сила** |\n|---|---|---|---|---|---|")
+    for name, dmg, a, t, e, hp in GEAR:
+        wl, dl = weapon_level(dmg), defence_level(a, t, e, hp)
+        w(f"| {name} | {dmg} | {a} / {t} / {e} / {hp} | {wl:.0f} | {dl:.0f} | **{power_level(dmg, a, t, e, hp):.0f}** |")
+    w("")
     w("## Формули\n")
     w("```")
-    w("ціль       T  = max по гравцях у радіусі 128 (рівень_навичок × множник_складності_світу)")
-    w("при появі  ℓ  = T × випадкове(0.9 … 1.05)")
-    w("кожні 10 с ℓ += обмежити(T − ℓ, ±(1 + 0.01·ℓ))      ← рівень змінюється плавно в обидва боки; якщо поруч нікого, не змінюється")
-    w("D(L)       = 6 · ((L + 15) / 30)^0.8                  ← шкода удару еталонного гравця")
-    w(f"звичайний моб: здоров'я × (1 + {HP_RATE}·ℓ), шкода × (1 + {DMG_RATE}·ℓ), броня + min(12, ℓ/25), міцність + min(8, ℓ/50)")
-    w("              швидкість × (1 + min(0.2, ℓ/2000)), опір відкиданню + min(0.4, ℓ/1000)")
-    w("              опір вогню, блискавці, вибухам, магії й морозу: min(30 %, ℓ/1300)")
-    w(f"новий вид рівня k (відкривається на U_k): здоров'я = {TIER_HITS} · D'(U_k) · (1 + {HP_RATE}ℓ)/(1 + {HP_RATE}U_k), де D' — шкода після броні моба")
-    w(f"              шкода = сира шкода, що вбиває еталонного гравця рівня U_k за {TIER_PLAYER_HITS} ударів, × (1 + {DMG_RATE}ℓ)/(1 + {DMG_RATE}U_k); броня + 0.6·k")
-    w(f"бос:          здоров'я = max(власне × (1 + {BOSS_HP_RATE}·ℓ), {BOSS_HITS} · D(ℓ)), шкода = max(власна × (1 + {BOSS_DMG_RATE}·ℓ), вбиває еталонного гравця за {BOSS_PLAYER_HITS} ударів)")
-    w("              рівень боса тільки росте (новий сильніший гравець поруч), але не падає — його не «приспиш», підвівши слабшого")
-    w("заміна при спавні: шанс = min(0.7, 0.2 + ℓ/500), якщо в родини вже є відкриті види; серед відкритих найновіший має вагу 1, попередній 1/2, далі 1/4…")
+    w("сила гравця P = 0.85·рівень_зброї + 0.15·рівень_захисту,   рівень_зброї = 30·(шкода/6)^1.25 − 15")
+    w("ціль         T = max по гравцях у радіусі 128 (P × множник_складності_світу)")
+    w("моб          ℓ = T × (0.9…1.05) при появі; далі кожні 10 с ℓ += обмежити(T − ℓ, ±(1 + 0.01ℓ))")
+    w("D(L)         = 6 · ((L + 15) / 30)^0.8        ← удар гравця сили L")
+    w(f"звичайний    здоров'я × (1 + {HP_RATE}ℓ), шкода × (1 + {DMG_RATE}ℓ), броня + min(10, ℓ/35), міцність + min(6, ℓ/60)")
+    w(f"новий вид k  здоров'я = {TIER_HITS} · D'(U_k) · (1+{HP_RATE}ℓ)/(1+{HP_RATE}U_k), D' — удар після ВЛАСНОЇ броні істоти (тож броньовані мають менше здоров'я); шкода = власна × (1 + {DMG_RATE}ℓ) × (1 + {KIND_DMG_STEP}k)")
+    w(f"бос          здоров'я = max(власне × (1 + {BOSS_HP_RATE}ℓ), {BOSS_HITS}·D(ℓ)); шкода = власна × (1 + {BOSS_DMG_RATE}ℓ); рівень не падає")
+    w(f"стеля удару  ≤ {int(CAP_PLAIN*100)} % / {int(CAP_KIND*100)} % / {int(CAP_BOSS*100)} % максимального здоров'я гравця (звичайний / новий вид / бос) — після броні й зачарувань")
+    w("заміна       шанс = min(0.55, 0.15 + ℓ/600); серед відкритих видів найновіший має вагу 1, попередній 1/2…")
     w("```\n")
-    w("Множник шкоди застосовується до всього, що завдає моб: удари, стріли, закляття. Вибухи множаться на корінь із множника, щоб кріпери не стали ваншотом.\n")
-    w("## Захист еталонного гравця\n")
-    w("| Рівень | Броня | Міцність | Захист (EPF) | Здоров'я | Шкода удару D(L) |\n|---|---|---|---|---|---|")
-    for L_ in (0, 15, 30, 60, 100, 150, 200, 300, 400):
-        a, t, e, hp = defence(L_)
-        w(f"| {L_} | {a:.0f} | {t:.0f} | {e:.0f} | {hp:.0f} | {gear_damage(L_):.1f} |")
-    w("\nЗбройна крива: залізний меч (6) на 15-му рівні, діамантовий із Гостротою — на 30–60-му, незерит з афіксами й самоцвітами — на 100–200-му, найкраще у збірці (драконяча сталь, міфічні афікси) — на 300–400-му.\n")
 
-    w("## Перевірка 1: ванільний моб (зомбі, 20 здоров'я, 2 броні)\n")
-    w("Ціль за брифом: 4 удари для еталону на 15-му рівні, 1–2 удари в пізній грі (≥150).\n")
-    w("| Рівень гравця = рівень моба | Здоров'я | Броня | Ударів гравця | Шкода зомбі по гравцю | Ударів, щоб убити гравця | OK |\n|---|---|---|---|---|---|---|")
-    for L_ in (0, 15, 30, 60, 100, 150, 200, 250, 300, 350, 400):
+    w("## Перевірка 1: ванільний зомбі (20 здоров'я, 2 броні)\n")
+    w("Ціль: 4 удари для еталону на 15-му рівні, 1–2 удари з 150-го.\n")
+    w("| Сила = рівень моба | Здоров'я | Броня | Ударів гравця | OK |\n|---|---|---|---|---|")
+    for L_ in (0, 15, 30, 60, 100, 150, 200, 300, 400):
         hp = 20 * hp_mult(L_); ar = 2 + armor_add(L_); to = tough_add(L_)
         h = hits(hp, ar, to, L_); n = math.ceil(h - 1e-9)
-        dmg = 3 * dmg_mult(L_); dp, php = to_player(dmg, L_)
         good = (n == 4) if L_ == 15 else (n <= 2) if L_ >= 150 else True
         ok &= good
-        w(f"| {L_} | {hp:.0f} | {ar:.1f} | {h:.2f} → **{n}** | {dmg:.1f} → {dp:.2f} | {math.ceil(php / dp)} | {'✓' if good else '✗'} |")
+        w(f"| {L_} | {hp:.0f} | {ar:.1f} | {h:.2f} → **{n}** | {'✓' if good else '✗'} |")
     w("")
-
-    w("## Перевірка 2: нові види на рівні відкриття і пізніше\n")
-    w(f"Ціль: на рівні відкриття близько 4 ударів (стеля від {TIER_HITS}), вид убиває еталонного гравця свого рівня за ~{TIER_PLAYER_HITS} ударів. На 100 рівнів пізніше гравець сильнішає, і вид легшає (але не до 1 удару — тоді вже з'явилися новіші).\n")
-    w("| Рівень виду | Відкривається | Здоров'я тоді | Ударів | Сира шкода | Ударів по гравцю | Через +100 рівнів: здоров'я / ударів | OK |\n|---|---|---|---|---|---|---|---|")
+    w("## Перевірка 2: нові види — близько 4 ударів, коли відкриваються\n")
+    w("| Ярус | Відкривається (сила) | Здоров'я | Ударів тоді | Через +100 сили | OK |\n|---|---|---|---|---|---|")
     for k, u in TIERS:
-        hp = tier_hp(k, u); ar = armor_add(u, k); to = tough_add(u)
-        h = hits(hp, ar, to, u); n = math.ceil(h - 1e-9)
-        dmg = tier_dmg(k, u); dp, php = to_player(dmg, u)
-        l2 = min(400, u + 100); hp2 = tier_hp(k, l2); h2 = hits(hp2, armor_add(l2, k), tough_add(l2), l2)
-        good = n == 4 and 8 <= php / dp <= 12
+        hp = tier_hp(k, u); h = hits(hp, armor_add(u, k), tough_add(u), u); n = math.ceil(h - 1e-9)
+        l2 = min(400, u + 100); h2 = hits(tier_hp(k, l2), armor_add(l2, k), tough_add(l2), l2)
+        good = n == 4
         ok &= good
-        w(f"| {k} | {u} | {hp:.0f} | {h:.2f} → **{n}** | {dmg:.1f} | {php / dp:.1f} | {hp2:.0f} / {h2:.1f} | {'✓' if good else '✗'} |")
+        w(f"| {k} | {u} | {hp:.0f} | {h:.2f} → **{n}** | {h2:.1f} | {'✓' if good else '✗'} |")
     w("")
-
-    w("## Перевірка 3: боси без зілля, яблук і заклять\n")
-    w(f"Ціль: «дуже складно» для гравця зі звичайним спорядженням свого рівня — щонайменше {BOSS_HITS} ударів, а бос вбиває за {BOSS_PLAYER_HITS} ударів. Приклади з власним здоров'ям і шкодою.\n")
-    w("| Бос (власні здоров'я / шкода) | Рівень | Здоров'я | Ударів гравця | Шкода | Ударів по гравцю | OK |\n|---|---|---|---|---|---|---|")
-    for name, nhp, nd in (("Нага TF", 120, 6), ("Візер", 300, 8), ("Ігніс (Cataclysm)", 800, 18), ("Ендер-дракон", 200, 10)):
-        for L_ in (15, 60, 150, 300, 400):
-            hp = boss_hp(nhp, L_); ar = armor_add(L_); to = tough_add(L_)
-            h = hits(hp, ar, to, L_); dmg = boss_dmg(nd, L_); dp, php = to_player(dmg, L_)
-            good = h >= BOSS_HITS * 0.9 and php / dp <= BOSS_PLAYER_HITS + 0.01
+    w("## Перевірка 3: скільки ударів моба витримує гравець\n")
+    w("Стеля гарантує, що звичайний моб убиває щонайменше за 5 ударів, новий вид — за 4, бос — за 3, навіть якщо гравець слабший за свою силу (наприклад, зняв броню). Нижче приклади для еталонного гравця.\n")
+    w("| Хто | Сила | Сира шкода | Ударів до смерті | OK |\n|---|---|---|---|---|")
+    for name, nat, k, cap, mult in (("Зомбі (3)", 3, 0, CAP_PLAIN, dmg_mult), ("Новий вид ярусу 6, власна 8", 8, 6, CAP_KIND, None),
+                                     ("Мутант-зомбі (ярус 11, власна 15)", 15, 11, CAP_KIND, None), ("Бос (власна 20)", 20, 0, CAP_BOSS, "boss")):
+        for L_ in (15, 65, 150, 250):
+            if mult == "boss": raw = nat * (1 + BOSS_DMG_RATE * L_)
+            elif mult is None: raw = nat * dmg_mult(L_) * (1 + KIND_DMG_STEP * k)
+            else: raw = nat * dmg_mult(L_)
+            n = hits_to_die(raw, L_, cap)
+            good = n >= math.ceil(1 / cap - 1e-9)
             ok &= good
-            w(f"| {name} ({nhp}/{nd}) | {L_} | {hp:.0f} | {h:.0f} | {dmg:.1f} | {php / dp:.1f} | {'✓' if good else '✗'} |")
-    w("\nБоси ще отримують: ударну хвилю (кожні 8 с), лють нижче 30 % здоров'я, виклик варти на 66 % і 33 %. Рівень боса не падає.\n")
+            w(f"| {name} | {L_} | {raw:.1f} | {n} | {'✓' if good else '✗'} |")
+    w("")
+    w("## Перевірка 4: боси без зілля, яблук і заклять\n")
+    w(f"| Бос (власне здоров'я) | Рівень | Здоров'я | Ударів гравця | OK |\n|---|---|---|---|---|")
+    for name, nhp in (("Нага TF (120)", 120), ("Візер (300)", 300), ("Ігніс (800)", 800)):
+        for L_ in (15, 100, 250):
+            hp = boss_hp(nhp, L_); h = hits(hp, armor_add(L_), tough_add(L_), L_)
+            good = h >= BOSS_HITS * 0.9
+            ok &= good
+            w(f"| {name} | {L_} | {hp:.0f} | {h:.0f} | {'✓' if good else '✗'} |")
+    w("\nЗдоров'я понад межу гри (1024) стає дільником шкоди, тож боси справді мають стільки, скільки в таблиці.\n")
 
-    w("## Прогресія за рівнями гравця\n")
-    w("Які нові види вже можуть з'явитися замість ванільних (найновіший — найчастіше):\n")
-    w("| Рівень | Шанс заміни | " + " | ".join(FAMILIES[f]["uk"] for f in FAMILIES) + " |\n|---|---|" + "---|" * len(FAMILIES))
-    for L_ in (0, 10, 20, 35, 50, 70, 95, 125, 160, 200, 250, 310, 380, 400):
+    w("## Прогресія: хто з'являється замість ванільних\n")
+    w("| Сила | Шанс заміни | " + " | ".join(FAMILIES[f]["uk"] for f in FAMILIES) + " |\n|---|---|" + "---|" * len(FAMILIES))
+    for L_ in (0, 8, 15, 25, 35, 50, 65, 85, 105, 130, 160, 200, 250, 300, 400):
         cells = []
         for f in FAMILIES:
             un = [v for v in VARIANTS if v["family"] == f and UNLOCK[v["tier"]] <= L_]
-            cells.append(un[-1]["uk"] if un else "—")
-        chance = min(0.7, 0.2 + L_ / 500) if any(UNLOCK[v["tier"]] <= L_ for v in VARIANTS) else 0
-        w(f"| {L_} | {chance * 100:.0f} % | " + " | ".join(cells) + " |")
-    w("\nАтаки, які відкриваються з рівнем у **всіх** мобів (кидок при появі): " + "; ".join(f"{ABILITY_UK[a]} — від {lv} рівня, шанс {int(c * 100)} %" for a, lv, c in SETTINGS["level_abilities"]) + ".\n")
+            cells.append(", ".join(v["uk"] for v in un if v["tier"] == un[-1]["tier"]) if un else "—")
+        any_ = any(UNLOCK[v["tier"]] <= L_ for v in VARIANTS)
+        w(f"| {L_} | {(min(0.55, 0.15 + L_ / 600) if any_ else 0) * 100:.0f} % | " + " | ".join(cells) + " |")
+    w("\nПісля сили 250 нові яруси не відкриваються. Далі ростуть рівні мобів, частка замін і боси, а найсильніші види трапляються частіше.\n")
 
-    w(f"## Нові види ({len(VARIANTS)})\n")
-    w("«На місці» означає, що це той самий ванільний моб з новим ім'ям, спорядженням і механіками. В інших випадках за основу взято істоту з модів збірки.\n")
-    w("| # | Вид | Родина | Рівень (відкриття) | Основа | Механіки | Лут |\n|---|---|---|---|---|---|---|")
+    w(f"## Нові істоти ({len(VARIANTS)})\n")
+    w("| # | Істота | Родина | Ярус (сила) | Мод і поведінка | Додатково від Wilds |\n|---|---|---|---|---|---|")
     for i, v in enumerate(VARIANTS, 1):
-        base = v["entity"] or "на місці (" + FAMILIES[v["family"]]["bases"][0] + ")"
-        mech = v["mech"] or ", ".join(v["abilities"])
-        w(f"| {i} | {v['uk']} | {FAMILIES[v['family']]['uk']} | {v['tier']} ({UNLOCK[v['tier']]}) | `{base}` | {mech} | родина + ярус {band(v['tier'])} |")
-    w("\nПояснення механік: " + "; ".join(f"**{k}** — {t}" for k, t in ABILITY_UK.items()) + ".\n")
+        w(f"| {i} | {v['uk']} (`{v['entity']}`) | {FAMILIES[v['family']]['uk']} | {v['tier']} ({UNLOCK[v['tier']]}) | {v['mech']} | {', '.join(ABILITY_UK[a] for a in v['abilities']) or '—'} |")
+    w("\nВласний природний спавн цих мод-істот і ще " + str(len(GATE_EXTRA)) + " інших (" + ", ".join(f"`{e}` від {l}" for e, l in GATE_EXTRA.items()) + ") чекає, поки поруч не буде гравця такої сили.\n")
 
     w("## Лут\n")
-    w("Кожен новий вид дає свій звичайний лут, а також випадіння з таблиці родини та з таблиці ярусу (ярус = ⌈рівень виду / 2⌉, кидків 1…1+⌈ярус/2⌉, удача і «Здобич» додають). "
-      "Звичайні моби з рівнем мають шанс 12 % + ℓ/1000 на одне випадіння з таблиці родини. Досвід: нові види ×(1 + 0.3·k), боси ×(1 + ℓ/100), звичайні ×(1 + ℓ/200). "
-      "Лут дає лише смерть від гравця; підмога, яку кличуть моби, і уламки після «розпаду» луту не дають.\n")
+    w(f"- Новий вид: зі своїм лутом мода, а також з шансом {int(SETTINGS['kind_loot_chance']*100)} % один предмет родини і з шансом {int(SETTINGS['tier_loot_chance']*100)} % один предмет ярусу (ярус = ⌈рівень виду / 2⌉). Кидок один, удача й «Здобич» кидків не множать.")
+    w(f"- Звичайний моб з рівнем: шанс {int(SETTINGS['plain_loot_chance']*100)} % на один предмет родини. Боси — лише власний лут.")
+    w("- Досвід: нові види ×(1 + 0,1·ярус), звичайні ×(1 + ℓ/400), боси ×(1 + ℓ/200).")
+    w("- **Без** зачарованих золотих яблук, незерових зірок, тотемів і давніх уламків. Незеритовий уламок трапляється лише в ярусі 6 з вагою 2 зі 34.\n")
+    w("| Ярус | Предмети | Середньо штук за кидок | Середньо за вбивство виду |\n|---|---|---|---|")
     for b, entries in TIER_LOOT.items():
-        w(f"- **Ярус {b}** (види {2 * b - 1}–{2 * b}): " + ", ".join(f"`{it}`" for it, *_ in entries))
+        e = expected_items(entries)
+        w(f"| {b} | " + ", ".join(f"`{it}`" for it, *_ in entries) + f" | {e:.1f} | {e * SETTINGS['tier_loot_chance']:.2f} |")
     w("")
     for f, entries in FAMILY_LOOT.items():
         w(f"- **{FAMILIES[f]['uk']}**: " + ", ".join(f"`{it}`" for it, *_ in entries))
     w("\n## Результат перевірки\n")
-    w("Усі етапи відповідають цілям брифу." if ok else "**Є етапи, що не відповідають цілям — див. ✗ вище.**")
+    w("Усі етапи відповідають цілям." if ok else "**Є етапи, що не відповідають цілям — див. ✗ вище.**")
     return "\n".join(o) + "\n", ok
 
 

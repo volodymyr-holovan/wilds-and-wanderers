@@ -1,0 +1,155 @@
+"""Ukrainian for the creature mods added 22.11 (Mutant Monsters, Undead Unleashed, Born in Chaos).
+Writes pack/i18n/uk/<ns>.json; then run i18n.py build. Names agree with the new creatures' names in gen_mob_balance.py."""
+import json, os, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+I18N = os.path.join(HERE, "..", "..", "i18n")
+
+MM = {
+    "advancements.mutantmonsters.burn_zombie_burn.description": "Підпаліть кресалом мутанта-зомбі, поки він лежить",
+    "advancements.mutantmonsters.burn_zombie_burn.title": "Гори, зомбі, гори",
+    "advancements.mutantmonsters.frosty_the_snow_golem.description": "Створіть снігового голема-мутанта за допомогою Хімікату X",
+    "advancements.mutantmonsters.frosty_the_snow_golem.title": "Морозко",
+    "advancements.mutantmonsters.gunpowder_spice.description": "...і всього потроху. Отримайте зілля Хімікату X.",
+    "advancements.mutantmonsters.gunpowder_spice.title": "Порох, прянощі...",
+    "advancements.mutantmonsters.hulk_smash.description": "Убийте мутанта-зомбі Молотом Галка",
+    "advancements.mutantmonsters.hulk_smash.title": "Галк трощить!",
+    "advancements.mutantmonsters.no_bones_about_it.description": "Убийте мутанта-скелета з арбалета в повному обладунку мутанта-скелета",
+    "advancements.mutantmonsters.no_bones_about_it.title": "Без зайвих кісток",
+    "advancements.mutantmonsters.root.description": "Істоти-мутанти й чудовиська. Переможете чи загинете?",
+    "advancements.mutantmonsters.root.title": "Мутанти",
+    "advancements.mutantmonsters.spider_pig_spider_pig.description": "Нагодуйте свиню квашеним павучим оком і киньте в неї Хімікат X",
+    "advancements.mutantmonsters.spider_pig_spider_pig.title": "Павук-свин, павук-свин...",
+    "advancements.mutantmonsters.you_da_bomby.description": "Виведіть кріпера-посіпаку з яйця",
+    "advancements.mutantmonsters.you_da_bomby.title": "Ти — бомба",
+    "block.mutantmonsters.mutant_skeleton_skull": "Череп мутанта-скелета",
+    "effect.mutantmonsters.chemical_x": "Хімікат X",
+    "entity.mutantmonsters.body_part": "Частина тіла",
+    "entity.mutantmonsters.creeper_minion": "Кріпер-посіпака",
+    "entity.mutantmonsters.creeper_minion_egg": "Яйце кріпера-посіпаки",
+    "entity.mutantmonsters.endersoul_clone": "Двійник ендердуші",
+    "entity.mutantmonsters.endersoul_fragment": "Уламок ендердуші",
+    "entity.mutantmonsters.mutant_arrow": "Стріла мутанта",
+    "entity.mutantmonsters.mutant_creeper": "Мутант-кріпер",
+    "entity.mutantmonsters.mutant_enderman": "Мутант-ендермен",
+    "entity.mutantmonsters.mutant_skeleton": "Мутант-скелет",
+    "entity.mutantmonsters.mutant_snow_golem": "Сніговий голем-мутант",
+    "entity.mutantmonsters.mutant_zombie": "Мутант-зомбі",
+    "entity.mutantmonsters.skull_spirit": "Дух черепа",
+    "entity.mutantmonsters.spider_pig": "Павук-свин",
+    "entity.mutantmonsters.throwable_block": "Кинутий блок",
+    "gui.mutantmonsters.creeper_minion_tracker.blast_radius": "Радіус вибуху",
+    "gui.mutantmonsters.creeper_minion_tracker.destroys_blocks": "Руйнує блоки",
+    "gui.mutantmonsters.creeper_minion_tracker.explosion": "Вибух",
+    "gui.mutantmonsters.creeper_minion_tracker.explosion.continuous": "Безперервний",
+    "gui.mutantmonsters.creeper_minion_tracker.explosion.one_time": "Одноразовий",
+    "gui.mutantmonsters.creeper_minion_tracker.health": "Здоров'я",
+    "gui.mutantmonsters.creeper_minion_tracker.ride_on_shoulder": "Сидіти на плечі",
+    "gui.mutantmonsters.creeper_minion_tracker.show_name": "Завжди показувати ім'я",
+    "item.minecraft.lingering_potion.effect.chemical_x": "Тривале зілля Хімікату X",
+    "item.minecraft.potion.effect.chemical_x": "Зілля Хімікату X",
+    "item.minecraft.splash_potion.effect.chemical_x": "Вибухове зілля Хімікату X",
+    "item.minecraft.tipped_arrow.effect.chemical_x": "Стріла Хімікату X",
+    "item.mutantmonsters.creeper_minion_spawn_egg": "Яйце виклику кріпера-посіпаки",
+    "item.mutantmonsters.creeper_minion_tracker": "Пульт кріпера-посіпаки",
+    "item.mutantmonsters.creeper_minion_tracker.tame_success": "%1$s тепер слухається гравця %2$s",
+    "item.mutantmonsters.creeper_shard": "Уламок кріпера",
+    "item.mutantmonsters.endersoul_hand": "Рука ендердуші",
+    "item.mutantmonsters.endersoul_hand.teleport_failed": "Неможливо телепортуватися сюди",
+    "item.mutantmonsters.hulk_hammer": "Молот Галка",
+    "item.mutantmonsters.mutant_creeper_spawn_egg": "Яйце виклику мутанта-кріпера",
+    "item.mutantmonsters.mutant_enderman_spawn_egg": "Яйце виклику мутанта-ендермена",
+    "item.mutantmonsters.mutant_skeleton_arms": "Руки мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_boots": "Чоботи мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_chestplate": "Нагрудник мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_leggings": "Поножі мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_limb": "Кінцівка мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_pelvis": "Таз мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_rib": "Ребро мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_rib_cage": "Грудна клітка мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_shoulder_pad": "Наплічник мутанта-скелета",
+    "item.mutantmonsters.mutant_skeleton_spawn_egg": "Яйце виклику мутанта-скелета",
+    "item.mutantmonsters.mutant_snow_golem_spawn_egg": "Яйце виклику снігового голема-мутанта",
+    "item.mutantmonsters.mutant_zombie_spawn_egg": "Яйце виклику мутанта-зомбі",
+    "item.mutantmonsters.spider_pig_spawn_egg": "Яйце виклику павука-свина",
+    "itemGroup.mutantmonsters.main": "Мутанти",
+    "subtitles.entity.creeper_minion.ambient": "Кріпер-посіпака шипить",
+    "subtitles.entity.creeper_minion.death": "Кріпер-посіпака гине",
+    "subtitles.entity.creeper_minion.hurt": "Кріпер-посіпака поранений",
+    "subtitles.entity.creeper_minion.primed": "Кріпер-посіпака запалюється",
+    "subtitles.entity.creeper_minion_egg.hatch": "Вилуплюється кріпер-посіпака",
+    "subtitles.entity.endersoul_clone.death": "Двійник ендердуші зникає",
+    "subtitles.entity.endersoul_clone.teleport": "Двійник ендердуші телепортується",
+    "subtitles.entity.endersoul_fragment.explode": "Уламок ендердуші вибухає",
+    "subtitles.entity.mutant_creeper.ambient": "Мутант-кріпер шипить",
+    "subtitles.entity.mutant_creeper.charge": "Мутант-кріпер заряджається",
+    "subtitles.entity.mutant_creeper.death": "Мутант-кріпер гине",
+    "subtitles.entity.mutant_creeper.hurt": "Мутант-кріпер поранений",
+    "subtitles.entity.mutant_creeper.primed": "Мутант-кріпер запалюється",
+    "subtitles.entity.mutant_enderman.ambient": "Мутант-ендермен дихає",
+    "subtitles.entity.mutant_enderman.death": "Мутант-ендермен гине",
+    "subtitles.entity.mutant_enderman.hurt": "Мутант-ендермен поранений",
+    "subtitles.entity.mutant_enderman.morph": "Мутант-ендермен змінює подобу",
+    "subtitles.entity.mutant_enderman.scream": "Мутант-ендермен верещить",
+    "subtitles.entity.mutant_enderman.stare": "Мутант-ендермен кричить",
+    "subtitles.entity.mutant_enderman.teleport": "Мутант-ендермен телепортується",
+    "subtitles.entity.mutant_skeleton.ambient": "Мутант-скелет торохтить",
+    "subtitles.entity.mutant_skeleton.death": "Мутант-скелет гине",
+    "subtitles.entity.mutant_skeleton.hurt": "Мутант-скелет поранений",
+    "subtitles.entity.mutant_skeleton.step": "Кроки",
+    "subtitles.entity.mutant_snow_golem.death": "Сніговий голем-мутант гине",
+    "subtitles.entity.mutant_snow_golem.hurt": "Сніговий голем-мутант поранений",
+    "subtitles.entity.mutant_zombie.ambient": "Мутант-зомбі бурчить",
+    "subtitles.entity.mutant_zombie.attack": "Мутант-зомбі атакує",
+    "subtitles.entity.mutant_zombie.death": "Мутант-зомбі гине",
+    "subtitles.entity.mutant_zombie.grunt": "Мутант-зомбі гарчить",
+    "subtitles.entity.mutant_zombie.hurt": "Мутант-зомбі поранений",
+    "subtitles.entity.mutant_zombie.roar": "Мутант-зомбі реве",
+    "subtitles.entity.spider_pig.ambient": "Павук-свин рохкає",
+    "subtitles.entity.spider_pig.death": "Павук-свин гине",
+    "subtitles.entity.spider_pig.hurt": "Павук-свин поранений",
+}
+
+UU = {
+    "entity.wickedness.wraith": "Мара", "item.wickedness.wraith_spawn_egg": "Яйце виклику мари",
+    "subtitles.wraith_death": "Мара зникає назавжди", "subtitles.wraith_scream": "Мара з'являється знову", "subtitles.wraith_vanish": "Мара зникає",
+    "subtitles.wraith_idle": "Мара виє", "subtitles.wraith_hurt": "Мара поранена",
+    "item.wickedness.flamebreather_spawn_egg": "Яйце виклику вогнедиха", "entity.wickedness.flamebreather": "Вогнедих",
+    "subtitles.flamebreather_hurt": "Вогнедих поранений", "effect.wickedness.flame_breathing": "Вогняний подих",
+    "subtitles.flamebreather_attack": "Вогнедих реве", "subtitles.flamebreather_death": "Вогнедих гине", "subtitles.flamebreather_attack_air": "Вогнедих реве",
+    "subtitles.flamebreather_enraged": "Вогнедих лютує", "subtitles.flamebreather_idle": "Вогнедих хрипить",
+    "entity.wickedness.dreadknight": "Лицар жаху", "item.wickedness.dreadknight_spawn_egg": "Яйце виклику лицаря жаху",
+    "item.undead_unleashed.flamebreather_spawn_egg": "Яйце виклику вогнедиха", "entity.undead_unleashed.flamebreather": "Вогнедих",
+    "effect.undead_unleashed.flame_breathing": "Вогняний подих", "item.undead_unleashed.dreadknight_spawn_egg": "Яйце виклику лицаря жаху",
+    "entity.undead_unleashed.dreadknight": "Лицар жаху", "subtitles.dreadknight_idle": "Лицар жаху брязкає", "subtitles.dreadknight_hurt": "Лицар жаху поранений",
+    "item.undead_unleashed.knight_sword": "Лицарський меч", "effect.undead_unleashed.broken_armor": "Зламана броня",
+    "item.undead_unleashed.plate_chestplate": "Латний нагрудник", "item.undead_unleashed.plate_boots": "Латні чоботи",
+    "item.undead_unleashed.plate_leggings": "Латні поножі", "item.undead_unleashed.plate_helmet": "Латний шолом",
+    "item.undead_unleashed.wraith_spawn_egg": "Яйце виклику мари", "entity.undead_unleashed.wraith": "Мара",
+    "item.undead_unleashed.heavy_plating": "Важкі пластини", "attribute.undead_unleashed.projectile_immunity": "Захист від стріл",
+    "item.undead_unleashed.plate_helmet.description_0": "§7+10 % шансу відбити стрілу", "item.undead_unleashed.plate_boots.description_0": "§7+5 % шансу відбити стрілу",
+    "item.undead_unleashed.plate_chestplate.description_0": "§7+20 % шансу відбити стрілу", "item.undead_unleashed.plate_leggings.description_0": "§7+15 % шансу відбити стрілу",
+    "item.undead_unleashed.demon_horn": "Ріг демона", "item.undead_unleashed.knight_sword.description_0": "§7 Більша шкода розмаху",
+    "painting.undead_unleashed.demonfire.author": "fredzik", "painting.undead_unleashed.demonfire.title": "Демонічний вогонь",
+    "item.undead_unleashed.firebreath_projectile_item_placeholder": "Снаряд вогняного подиху", "entity.undead_unleashed.tormentomb": "Мучильна гробниця",
+    "death.attack.tormentomb": "%1$s зазнав(-ла) середньовічних тортур", "item.undead_unleashed.demon_stew": "Демонічна юшка",
+}
+
+BIC = {}  # filled from gen_b56_bic.json (large; kept in its own file)
+
+def main():
+    out = {"mutantmonsters": MM, "undead_unleashed": UU}
+    bic = os.path.join(HERE, "gen_b56_bic.json")
+    if os.path.exists(bic):
+        out["born_in_chaos_v1"] = json.load(open(bic, encoding="utf-8"))
+    for ns, d in out.items():
+        src = json.load(open(os.path.join(I18N, "src", ns + ".json"), encoding="utf-8"))
+        miss = [k for k in src if k not in d]
+        extra = [k for k in d if k not in src]
+        print(f"{ns}: {len(d)} strings, {len(miss)} not translated, {len(extra)} unknown keys {extra[:3]}")
+        json.dump({k: v for k, v in d.items() if k in src}, open(os.path.join(I18N, "uk", ns + ".json"), "w", encoding="utf-8", newline="\n"),
+                  ensure_ascii=False, indent=1)
+
+
+if __name__ == "__main__":
+    main()

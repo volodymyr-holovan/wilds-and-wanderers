@@ -29,6 +29,7 @@ betteroceanmonuments
 betterstrongholds
 blockui
 blueprint
+born_in_chaos_v1
 bountiful
 cataclysm
 chat_heads
@@ -47,6 +48,7 @@ create_dragons_plus
 create_enchantment_industry
 createaddition
 createdeco
+creeperoverhaul
 cristellib
 ctov
 cumulus_menus
@@ -57,6 +59,7 @@ domum_ornamentum
 dungeons_arise
 dynamic_fps
 easy_villagers
+endermanoverhaul
 enderscape
 entityculling
 eternalnether
@@ -103,6 +106,7 @@ moreculling
 mos
 mowziesmobs
 multipiston
+mutantmonsters
 mvs
 naturalist
 naturescompass
@@ -126,6 +130,7 @@ puffish_skills
 reactivemusic
 reeses-sodium-options
 resourcefulconfig
+rottencreatures
 sable
 seamlessores
 searchables
@@ -148,7 +153,9 @@ tectonic
 terralith
 trimmed
 twilightforest
+undead_unleashed
 upgrade_aquatic
+variantsandventures
 veil
 villagersplus
 villagertradingplus
