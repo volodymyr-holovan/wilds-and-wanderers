@@ -11,7 +11,7 @@ python mods-src/twilightforest-completion/build.py --install
 ```
 
 Clones TeamTwilight's repository, checks out `008085c` (the commit 4.8.3345 was built from), applies `patches/` with
-`git am`, builds with Gradle under a JDK 21 and puts `wilds_twilightforest-1.21.1-4.8.3345-w1.jar` into `client/mods`,
+`git am`, builds with Gradle under a JDK 21 and puts `wilds_twilightforest-1.21.1-4.8.3345-w2.jar` into `client/mods`,
 `server/mods` and `testserver/mods` (the official jar there is renamed to `*.jar.replaced`).
 
 To change the completion: build once, work in `_tools/twilightforest-src` on the branch `wilds-completion`, rebuild with

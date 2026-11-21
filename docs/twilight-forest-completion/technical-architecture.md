@@ -28,7 +28,7 @@ python mods-src/twilightforest-completion/build.py --install
 
 - **База** — `008085c660f1f9fc9aad6376ea0dc8080b3c0629` (гілка `1.21.1`, 22.03.2026). Саме з неї зібрано офіційний 4.8.3345: час коміту збігається з часом збірки в `MANIFEST.MF`. Перевірено: перезібраний без патчів jar має побайтово ті самі `.class`, що й jar із CurseForge.
 - **Версія мода** лишається `4.8.3345` (`-PCIRevision=4.8.3345`), тож моди, що залежать від TF, бачать ту саму версію.
-- **Файл** — `wilds_twilightforest-1.21.1-4.8.3345-w1.jar`. Префікс `wilds_` означає власний мод збірки: `build_neo.py` його не видаляє, а `release_client.py` віддає гравцям з GitHub Release. Офіційний TF у `docs/mods.json` має `"where": "replaced"`: запис лишається для історії, але не завантажується й не роздається.
+- **Файл** — `wilds_twilightforest-1.21.1-4.8.3345-w2.jar` (ревізія `wN` росте з кожною зміною патчів). Префікс `wilds_` означає власний мод збірки: `build_neo.py` його не видаляє, а `release_client.py` віддає гравцям з GitHub Release. Офіційний TF у `docs/mods.json` має `"where": "replaced"`: запис лишається для історії, але не завантажується й не роздається.
 - **Потрібно:** Git, JDK 21 (Gradle сам завантажує його в `~/.gradle/jdks`; без JDK 21 скрипт не стартує), інтернет для першої збірки (~800 МБ залежностей).
 
 ## 3. Що змінено в TF (класи)
@@ -50,6 +50,9 @@ python mods-src/twilightforest-completion/build.py --install
 | `world/.../FinalCastleDungeonForgeRoomComponent.java` | спавнер замість таблички |
 | `world/.../FinalCastleDungeonRoom31Component.java` | центр кімнати (для запасного спавнера) |
 | `world/.../FinalCastleUpgrade.java` | оновлення замків на льоту (§5) |
+| `world/.../FinalCastleHints.java` | підказки, як потрапити в альтанку (патч 0004, §8) |
+| `block/entity/spawner/BossSpawnerBlockEntity.java` | гачок `serverWaitingTick` для спавнера, що чекає гравця |
+| `item/CubeTalismanItem.java`, `item/CubeOfAnnihilationItem.java` | описи в підказках предметів |
 | `world/.../type/FinalCastleStructure.java` | списки появи мобів |
 | `events/EntityEvents.java` | натяк на плато замість «WIP»; підписка оновлення замків |
 | `client/model/entity/RuneSovereignModel.java`, `ForgeHarbingerModel.java`, `RuneWardModel.java`, `DebugPose.java` | моделі й анімації; тестовий стенд поз (вмикається лише `-Dtwilightforest.debugPoses=true`) |
@@ -81,7 +84,7 @@ python mods-src/twilightforest-completion/build.py --install
 
 1. Зупинити сервер.
 2. У кожній із тек `client/mods`, `server/mods`, `testserver/mods` (і на Crafty, якщо туди заливали):
-   - перейменувати `wilds_twilightforest-1.21.1-4.8.3345-w1.jar` → `….jar.disabled`;
+   - перейменувати `wilds_twilightforest-1.21.1-4.8.3345-w2.jar` → `….jar.disabled` (попередня ревізія лежить поруч як `…-w1.jar.replaced`: щоб відкотитись лише до `w1`, поверніть їй назву `.jar`);
    - перейменувати `twilightforest-1.21.1-4.8.3345-universal.jar.replaced` → `twilightforest-1.21.1-4.8.3345-universal.jar`.
 
    Оригінали з SHA-256 лежать і в `_backup/twilightforest-4.8.3345-original/` (`SHA256SUMS.txt`, sha256 `493da16d…aba35`).
@@ -98,3 +101,14 @@ python mods-src/twilightforest-completion/build.py --install
 ## 7. Виправлення, внесені після тестів (у патчі 0003)
 
 Див. [changelog.md](changelog.md).
+
+## 8. Підказки біля альтанки (патч 0004, `w2`)
+
+`FinalCastleHints` — лише сервер, без нових блоків, сутностей чи мережевих пакетів.
+
+- **Наступний крок гравця** рахується за інвентарем: є Куб знищення → «кинути в поле»; є Талісман куба → «упіймати Бродячого куба»; інакше → «кузня». Досягнення не враховуються, бо Талісман витрачається, а Куб можна позичити.
+- **Напис**: один `TextDisplay` на 4 рядки (ширина 330, масштаб 1,4, темне тло, повна яскравість; окремі написи на кожен рядок переносили текст і накладались) з тегом `twilightforest_final_castle_hint` над спавнером альтанки (перекладні компоненти, тож мова — клієнтська). Ставить їх сам спавнер: раз на 10 с, якщо напису немає, і лише коли сутності чанка вже завантажено (`areEntitiesLoaded`), щоб не поставити двічі. Тому напис з'являється і в замках, оновлених до `w2`. Зникає, коли спавнер випускає боса; після перемоги спавнера немає, тож напис не повертається.
+- **Підхід**: спавнер раз на секунду дивиться на гравців у квадраті 44 × 44 довкола альтанки (від −6 до +14 по висоті), але поза ареною. Озивається один раз на прихід. Гравцям із `progress_final` не каже нічого.
+- **Клацання по полю**: `PlayerInteractEvent.RightClickBlock`/`LeftClickBlock` (лише `START`). Діє лише на `ForceFieldBlock` усередині частини Кінцевого замку (`getStructureWithPieceAt`). Подію не скасовує: з Кубом у руці мовчить, щоб не заважати кидку.
+- **Частота**: рядок над панеллю раз на 2 с, крок у чаті раз на хвилину на гравця (у пам'яті сервера, після рестарту з нуля).
+- **Відкат лише цієї частини**: повернути `w1` (див. §6). Написи, що вже стоять у світі, лишаться без спавнера-господаря; прибрати їх: `/kill @e[type=text_display,tag=twilightforest_final_castle_hint]`.

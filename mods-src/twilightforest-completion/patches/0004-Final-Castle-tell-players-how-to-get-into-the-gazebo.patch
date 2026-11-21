@@ -1,0 +1,532 @@
+From 8b105679fdb0d667f82484af960c92f384cfe447 Mon Sep 17 00:00:00 2001
+From: volodymyr-holovan <285621215+volodymyr-holovan@users.noreply.github.com>
+Date: Fri, 20 Nov 2026 21:49:53 +0100
+Subject: [PATCH] Final Castle: tell players how to get into the gazebo
+
+Text above the gazebo's spawner, the player's next step when they come up to the
+gazebo or click a force field of the castle, a message on entering the castle, and
+tooltips for the Talisman of the Cube and the Cube of Annihilation.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ .../d91874c9af25bf3e353141f6b1abac2184bcbcb7  |   6 +-
+ .../assets/twilightforest/lang/en_ud.json     |  11 +
+ .../assets/twilightforest/lang/en_us.json     |  11 +
+ .../spawner/BossSpawnerBlockEntity.java       |   7 +
+ .../spawner/FinalBossSpawnerBlockEntity.java  |  15 ++
+ .../twilightforest/data/LangGenerator.java    |  11 +
+ .../twilightforest/events/EntityEvents.java   |   4 +
+ .../java/twilightforest/init/TFItems.java     |   2 +-
+ .../item/CubeOfAnnihilationItem.java          |  10 +
+ .../twilightforest/item/CubeTalismanItem.java |  23 ++
+ .../finalcastle/FinalCastleHints.java         | 224 ++++++++++++++++++
+ 11 files changed, 320 insertions(+), 4 deletions(-)
+ create mode 100644 src/main/java/twilightforest/item/CubeTalismanItem.java
+ create mode 100644 src/main/java/twilightforest/world/components/structures/finalcastle/FinalCastleHints.java
+
+diff --git a/src/generated/resources/.cache/d91874c9af25bf3e353141f6b1abac2184bcbcb7 b/src/generated/resources/.cache/d91874c9af25bf3e353141f6b1abac2184bcbcb7
+index 210b049fe..349d41d72 100644
+--- a/src/generated/resources/.cache/d91874c9af25bf3e353141f6b1abac2184bcbcb7
++++ b/src/generated/resources/.cache/d91874c9af25bf3e353141f6b1abac2184bcbcb7
+@@ -1,6 +1,6 @@
+-// 1.21.1	2026-11-14T17:48:22.8485144	Languages: en_us for mod: twilightforest
+-0f41803d1245f72d9358f12f18a729eb7f6c8e3f assets/twilightforest/lang/en_ud.json
+-f903904d03bd24250b7c1e613c6b72620b2d4e19 assets/twilightforest/lang/en_us.json
++// 1.21.1	2026-11-21T09:29:05.8130387	Languages: en_us for mod: twilightforest
++86468254b1033da034fed5e854c1cc9ac5305927 assets/twilightforest/lang/en_ud.json
++e1a3e071ac7550e3d78fcaa0a1dbdb45cf89fdd4 assets/twilightforest/lang/en_us.json
+ ea7f145b5d6baa274d62b295bbc38926716216d8 assets/twilightforest/tips/alpha_yeti.json
+ 31d12dd44604bd3c937abbc3d606bdd4d209058d assets/twilightforest/tips/anvil_squashing.json
+ caa537d278fb4c0d01e8ba9ff9db8772e00351f3 assets/twilightforest/tips/arctic_armor.json
+diff --git a/src/generated/resources/assets/twilightforest/lang/en_ud.json b/src/generated/resources/assets/twilightforest/lang/en_ud.json
+index 00874b6b5..b2334a384 100644
+--- a/src/generated/resources/assets/twilightforest/lang/en_ud.json
++++ b/src/generated/resources/assets/twilightforest/lang/en_ud.json
+@@ -1135,6 +1135,15 @@
+   "gui.twilightforest.final_castle.end.message": "˙oᵷ ʇǝꞁ sɐɥ ʞsnp ssǝꞁpuǝ sʇᴉ uᴉ ʇsǝɹoℲ ʇɥᵷᴉꞁᴉʍ⟘ ǝɥʇ pꞁǝɥ ɹǝʌǝʇɐɥM ˙ǝuoʇs uᴉɐꞁd oʇ ǝpɐɟ ǝꞁʇsɐɔ ǝɥʇ ɟo sǝunɹ ǝɥ⟘",
+   "gui.twilightforest.final_castle.end.subtitle": "ǝɹoɯ ou sᴉ uᵷᴉǝɹǝʌoS ǝunᴚ ǝɥ⟘",
+   "gui.twilightforest.final_castle.end.title": "sʇɟᴉꞀ ʇɥᵷᴉꞁᴉʍ⟘",
++  "gui.twilightforest.final_castle.entered": "˙ǝꞁʇsɐɔ ǝɥʇ ɥʇɐǝuǝq ǝᵷɹoɟ ǝɥʇ uᴉ suᴉᵷǝq ǝuo oʇ ʎɐʍ ǝɥʇ puɐ 'pꞁǝᴉɟ ʇɐɥʇ sǝsɐɹǝ uoᴉʇɐꞁᴉɥᴉuuⱯ ɟo ǝqnƆ ɐ ʎꞁuO ˙sʇᴉɐʍ uᵷᴉǝɹǝʌoS ǝunᴚ ǝɥʇ 'oqǝzɐᵷ ǝɥʇ ɟo pꞁǝᴉɟ ǝɔɹoɟ ʇǝꞁoᴉʌ ǝɥʇ puᴉɥǝq 'ɟooɹ ǝɥʇ uo d∩",
++  "gui.twilightforest.final_castle.field.door": "(ɯǝɥʇ ʞɔᴉꞁɔ-ʇɥᵷᴉɹ) sɹoop ǝꞁʇsɐɔ ǝɥʇ ɥᵷnoɹɥʇ oᵷ :uǝdo ʇou op spꞁǝᴉɟ ǝɔɹoɟ ǝꞁʇsɐƆ",
++  "gui.twilightforest.final_castle.hint.cube": "uɐɯsᴉꞁɐ⟘ ǝɥʇ + ǝuoʇspǝɹ ɟo ǝꞁɔɹᴉɔ ɐ uᴉ ǝqnƆ ᵷuᴉʌoᴚ ɐ :ǝqnƆ",
++  "gui.twilightforest.final_castle.hint.field": "pꞁǝᴉɟ sᴉɥʇ sǝsɐɹǝ uoᴉʇɐꞁᴉɥᴉuuⱯ ɟo ǝqnƆ ɐ ʎꞁuO",
++  "gui.twilightforest.final_castle.hint.talisman": "ǝꞁʇsɐɔ ǝɥʇ ɥʇɐǝuǝq ǝᵷɹoɟ ǝɥʇ uᴉ 'ɹǝᵷuᴉqɹɐH ǝᵷɹoℲ ǝɥʇ :uɐɯsᴉꞁɐ⟘",
++  "gui.twilightforest.final_castle.hint.title": "oqǝzɐ⅁ s,uᵷᴉǝɹǝʌoS ǝunᴚ ǝɥ⟘",
++  "gui.twilightforest.final_castle.step.break": "˙noʎ oʇ ʞɔɐq sǝɯoɔ puɐ pꞁǝᴉɟ ǝɥʇ sǝsɐɹǝ 'ʞooꞁ noʎ ǝɹǝɥʍ sǝᴉꞁɟ ǝqnɔ ǝɥ⟘ ˙pꞁǝᴉɟ ǝɥʇ ʇɐ ʞooꞁ puɐ ʇᴉ ɥʇᴉʍ ʞɔᴉꞁɔ-ʇɥᵷᴉɹ pꞁoɥ :uoᴉʇɐꞁᴉɥᴉuuⱯ ɟo ǝqnƆ ǝɥʇ ǝʌɐɥ no⅄",
++  "gui.twilightforest.final_castle.step.cube": "˙ǝqnƆ ǝɥʇ ɟo uɐɯsᴉꞁɐ⟘ ǝɥʇ ɥʇᴉʍ ʇᴉ ʞɔᴉꞁɔ-ʇɥᵷᴉɹ uǝɥ⟘ ˙ǝꞁppᴉɯ ǝɥʇ oʇuᴉ sʞꞁɐʍ ǝqnɔ ǝɥʇ :ʞɔɐq dǝʇs puɐ ʞɔoꞁq ʎʇdɯǝ uɐ punoɹɐ ᵷuᴉɹ ɐ uᴉ ʇsnp ǝuoʇspǝɹ 8 ʎɐꞀ ˙sꞁꞁɐɥ ǝꞁʇsɐɔ ǝɥʇ uᴉ ǝqnƆ ᵷuᴉʌoᴚ ɐ ɥɔʇɐɔ :ʇxǝN",
++  "gui.twilightforest.final_castle.step.forge": "˙ǝqnƆ ǝɥʇ ɟo uɐɯsᴉꞁɐ⟘ ɐ sǝʌᴉᵷ ʇᴉ :ɹǝᵷuᴉqɹɐH ǝᵷɹoℲ ǝɥʇ ʇɐǝɟǝp puɐ (ssɐd oʇ sɹoop ǝꞁʇsɐɔ ǝɥʇ ʞɔᴉꞁɔ-ʇɥᵷᴉɹ) uoǝᵷunp ǝɥʇ ɥᵷnoɹɥʇ uʍop o⅁ ˙ǝꞁʇsɐɔ ǝɥʇ ɥʇɐǝuǝq ǝᵷɹoɟ ǝɥʇ :ʇxǝN",
+   "gui.twilightforest.moonworm_queen_jei": "ᵷuᴉɹᴉɐdǝᴚ uǝǝnꝹ ɯɹoʍuooW",
+   "gui.twilightforest.ominous_fire_jei": "ǝɹᴉℲ snouᴉɯO",
+   "gui.twilightforest.optifine.message": "˙ᵷᴉɟuoƆ ʇuǝᴉꞁƆ ǝɥʇ uᴉ pǝꞁqɐsᴉp ǝq ʎɐɯ uǝǝɹɔs sᴉɥ⟘\n\n¡puǝ s,ʇsǝɹoℲ ʇɥᵷᴉꞁᴉʍ⟘ uo ǝꞁqɐʌꞁos ʇou ǝɹɐ sǝnssᴉ pǝʇɐꞁǝɹ-ǝuᴉɟᴉʇdO\n\n˙ʇuǝsǝɹd ꞁꞁᴉʇs sᴉ ᵷnq ǝɥʇ ɟᴉ ǝǝs oʇ uᴉɐᵷɐ ʞɔǝɥɔ puɐ ʇsɹᴉɟ ǝuᴉɟᴉʇdO ǝʌoɯǝɹ ǝsɐǝꞁd 'ᵷnq ɐ ᵷuᴉʇɹodǝɹ ǝɹoɟǝᗺ\n\n˙sǝnssᴉ ɹǝɥʇo ʎuɐɯ puɐ sᵷnq ꞁɐnsᴉʌ ʎʇᴉʇuǝ ʇɹɐdᴉʇꞁnɯ 'sǝɥsɐɹɔ ǝsnɐɔ oʇ uʍouʞ sᴉ ǝuᴉɟᴉʇdO ʇɐɥʇ ǝʇou ǝsɐǝꞁd 'ᵷuᴉpǝǝɔoɹd ǝɹoɟǝᗺ",
+@@ -1192,7 +1201,9 @@
+   "item.twilightforest.crown_splinter": "ɹǝʇuᴉꞁdS uʍoɹƆ",
+   "item.twilightforest.crumble_horn": "uɹoH ǝꞁqɯnɹƆ",
+   "item.twilightforest.cube_of_annihilation": "uoᴉʇɐꞁᴉɥᴉuuⱯ ɟo ǝqnƆ",
++  "item.twilightforest.cube_of_annihilation.desc": "suɹnʇǝɹ uǝɥʇ 'spꞁǝᴉɟ ǝɔɹoɟ puɐ sʞɔᴉɹq ǝꞁʇsɐɔ sǝsɐɹǝ :ʍoɹɥʇ oʇ ǝsn pꞁoH",
+   "item.twilightforest.cube_talisman": "ǝqnƆ ǝɥʇ ɟo uɐɯsᴉꞁɐ⟘",
++  "item.twilightforest.cube_talisman.desc": "ʇsnp ǝuoʇspǝɹ ɟo ǝꞁɔɹᴉɔ ɐ uᴉ ᵷuᴉpuɐʇs ǝqnƆ ᵷuᴉʌoᴚ ɐ ʞɔᴉꞁɔ-ʇɥᵷᴉᴚ",
+   "item.twilightforest.dark_boat": "ʇɐoᗺ pooʍʞɹɐᗡ",
+   "item.twilightforest.dark_chest_boat": "ʇsǝɥƆ ɥʇᴉʍ ʇɐoᗺ pooʍʞɹɐᗡ",
+   "item.twilightforest.death_tome_spawn_egg": "ᵷᵷƎ uʍɐdS ǝɯo⟘ ɥʇɐǝᗡ",
+diff --git a/src/generated/resources/assets/twilightforest/lang/en_us.json b/src/generated/resources/assets/twilightforest/lang/en_us.json
+index c451d45ac..bb0ca6907 100644
+--- a/src/generated/resources/assets/twilightforest/lang/en_us.json
++++ b/src/generated/resources/assets/twilightforest/lang/en_us.json
+@@ -1135,6 +1135,15 @@
+   "gui.twilightforest.final_castle.end.message": "The runes of the castle fade to plain stone. Whatever held the Twilight Forest in its endless dusk has let go.",
+   "gui.twilightforest.final_castle.end.subtitle": "The Rune Sovereign is no more",
+   "gui.twilightforest.final_castle.end.title": "Twilight Lifts",
++  "gui.twilightforest.final_castle.entered": "Up on the roof, behind the violet force field of the gazebo, the Rune Sovereign waits. Only a Cube of Annihilation erases that field, and the way to one begins in the forge beneath the castle.",
++  "gui.twilightforest.final_castle.field.door": "Castle force fields do not open: go through the castle doors (right-click them)",
++  "gui.twilightforest.final_castle.hint.cube": "Cube: a Roving Cube in a circle of redstone + the Talisman",
++  "gui.twilightforest.final_castle.hint.field": "Only a Cube of Annihilation erases this field",
++  "gui.twilightforest.final_castle.hint.talisman": "Talisman: the Forge Harbinger, in the forge beneath the castle",
++  "gui.twilightforest.final_castle.hint.title": "The Rune Sovereign's Gazebo",
++  "gui.twilightforest.final_castle.step.break": "You have the Cube of Annihilation: hold right-click with it and look at the field. The cube flies where you look, erases the field and comes back to you.",
++  "gui.twilightforest.final_castle.step.cube": "Next: catch a Roving Cube in the castle halls. Lay 8 redstone dust in a ring around an empty block and step back: the cube walks into the middle. Then right-click it with the Talisman of the Cube.",
++  "gui.twilightforest.final_castle.step.forge": "Next: the forge beneath the castle. Go down through the dungeon (right-click the castle doors to pass) and defeat the Forge Harbinger: it gives a Talisman of the Cube.",
+   "gui.twilightforest.moonworm_queen_jei": "Moonworm Queen Repairing",
+   "gui.twilightforest.ominous_fire_jei": "Ominous Fire",
+   "gui.twilightforest.optifine.message": "Before proceeding, please note that Optifine is known to cause crashes, multipart entity visual bugs and many other issues.\n\nBefore reporting a bug, please remove Optifine first and check again to see if the bug is still present.\n\nOptifine-related issues are not solvable on Twilight Forest's end!\n\nThis screen may be disabled in the Client Config.",
+@@ -1192,7 +1201,9 @@
+   "item.twilightforest.crown_splinter": "Crown Splinter",
+   "item.twilightforest.crumble_horn": "Crumble Horn",
+   "item.twilightforest.cube_of_annihilation": "Cube of Annihilation",
++  "item.twilightforest.cube_of_annihilation.desc": "Hold use to throw: erases castle bricks and force fields, then returns",
+   "item.twilightforest.cube_talisman": "Talisman of the Cube",
++  "item.twilightforest.cube_talisman.desc": "Right-click a Roving Cube standing in a circle of redstone dust",
+   "item.twilightforest.dark_boat": "Darkwood Boat",
+   "item.twilightforest.dark_chest_boat": "Darkwood Boat with Chest",
+   "item.twilightforest.death_tome_spawn_egg": "Death Tome Spawn Egg",
+diff --git a/src/main/java/twilightforest/block/entity/spawner/BossSpawnerBlockEntity.java b/src/main/java/twilightforest/block/entity/spawner/BossSpawnerBlockEntity.java
+index bdc01616b..58796dd45 100644
+--- a/src/main/java/twilightforest/block/entity/spawner/BossSpawnerBlockEntity.java
++++ b/src/main/java/twilightforest/block/entity/spawner/BossSpawnerBlockEntity.java
+@@ -31,6 +31,9 @@ public abstract class BossSpawnerBlockEntity<T extends Mob & EnforcedHomePoint>
+ 	}
+ 
+ 	public static void tick(Level level, BlockPos pos, BlockState state, BossSpawnerBlockEntity<?> te) {
++		if (!te.spawnedBoss && level instanceof ServerLevel server) {
++			te.serverWaitingTick(server);
++		}
+ 		if (te.spawnedBoss || !te.anyPlayerInRange(level)) {
+ 			return;
+ 		}
+@@ -71,6 +74,10 @@ public abstract class BossSpawnerBlockEntity<T extends Mob & EnforcedHomePoint>
+ 
+ 	public abstract ParticleOptions getSpawnerParticle();
+ 
++	/** Every server tick until the boss is out, whether or not a player is in range. */
++	protected void serverWaitingTick(ServerLevel level) {
++	}
++
+ 	protected void initializeCreature(T myCreature) {
+ 		myCreature.setRestrictionPoint(GlobalPos.of(myCreature.level().dimension(), this.getBlockPos()));
+ 	}
+diff --git a/src/main/java/twilightforest/block/entity/spawner/FinalBossSpawnerBlockEntity.java b/src/main/java/twilightforest/block/entity/spawner/FinalBossSpawnerBlockEntity.java
+index 4b75055e7..d8a39da65 100644
+--- a/src/main/java/twilightforest/block/entity/spawner/FinalBossSpawnerBlockEntity.java
++++ b/src/main/java/twilightforest/block/entity/spawner/FinalBossSpawnerBlockEntity.java
+@@ -2,13 +2,16 @@ package twilightforest.block.entity.spawner;
+ 
+ import net.minecraft.core.BlockPos;
+ import net.minecraft.core.particles.ParticleOptions;
++import net.minecraft.server.level.ServerLevel;
+ import net.minecraft.world.entity.player.Player;
+ import net.minecraft.world.level.Level;
++import net.minecraft.world.level.ServerLevelAccessor;
+ import net.minecraft.world.level.block.state.BlockState;
+ import twilightforest.entity.boss.PlateauBoss;
+ import twilightforest.init.TFBlockEntities;
+ import twilightforest.init.TFEntities;
+ import twilightforest.init.TFParticleType;
++import twilightforest.world.components.structures.finalcastle.FinalCastleHints;
+ 
+ /**
+  * The spawner in the violet gazebo on the Final Castle's roof. TF left it inert ("no spawning for you"); the
+@@ -34,6 +37,18 @@ public class FinalBossSpawnerBlockEntity extends BossSpawnerBlockEntity<PlateauB
+ 		return false;
+ 	}
+ 
++	@Override
++	protected void serverWaitingTick(ServerLevel level) {
++		FinalCastleHints.tickSpawner(level, this.getBlockPos());
++	}
++
++	@Override
++	protected boolean spawnMyBoss(ServerLevelAccessor accessor) {
++		boolean spawned = super.spawnMyBoss(accessor);
++		if (spawned) FinalCastleHints.removeHints(accessor.getLevel(), this.getBlockPos());
++		return spawned;
++	}
++
+ 	@Override
+ 	public ParticleOptions getSpawnerParticle() {
+ 		return TFParticleType.ANNIHILATE.get();
+diff --git a/src/main/java/twilightforest/data/LangGenerator.java b/src/main/java/twilightforest/data/LangGenerator.java
+index 01bc56143..a9e0a725d 100644
+--- a/src/main/java/twilightforest/data/LangGenerator.java
++++ b/src/main/java/twilightforest/data/LangGenerator.java
+@@ -856,6 +856,8 @@ public class LangGenerator extends TFLangProvider {
+ 		this.addEntityType(TFEntities.CUBE_OF_ANNIHILATION, "Cube of Annihilation");
+ 		this.addEntityType(TFEntities.RUNE_WARD, "Rune Ward");
+ 		this.addEntityType(TFEntities.RUNE_BOLT, "Rune Bolt");
++		this.add("item.twilightforest.cube_talisman.desc", "Right-click a Roving Cube standing in a circle of redstone dust");
++		this.add("item.twilightforest.cube_of_annihilation.desc", "Hold use to throw: erases castle bricks and force fields, then returns");
+ 		this.add("entity.twilightforest.roving_cube.slips", "The cube slips away. Lure it into a circle of redstone first.");
+ 		this.addEntityType(TFEntities.THROWN_BLOCK, "Thrown Block");
+ 		this.addEntityType(TFEntities.SLIDER, "Moving Slide Trap");
+@@ -1012,6 +1014,15 @@ public class LangGenerator extends TFLangProvider {
+ 		this.addScreenMessage("progression_end.arrival", "Bare deadrock, and a white castle at its heart. Somewhere far beneath it, a forge still glows.");
+ 		this.addScreenMessage("final_castle.end.title", "Twilight Lifts");
+ 		this.addScreenMessage("final_castle.end.subtitle", "The Rune Sovereign is no more");
++		this.addScreenMessage("final_castle.entered", "Up on the roof, behind the violet force field of the gazebo, the Rune Sovereign waits. Only a Cube of Annihilation erases that field, and the way to one begins in the forge beneath the castle.");
++		this.addScreenMessage("final_castle.hint.title", "The Rune Sovereign's Gazebo");
++		this.addScreenMessage("final_castle.hint.field", "Only a Cube of Annihilation erases this field");
++		this.addScreenMessage("final_castle.hint.cube", "Cube: a Roving Cube in a circle of redstone + the Talisman");
++		this.addScreenMessage("final_castle.hint.talisman", "Talisman: the Forge Harbinger, in the forge beneath the castle");
++		this.addScreenMessage("final_castle.field.door", "Castle force fields do not open: go through the castle doors (right-click them)");
++		this.addScreenMessage("final_castle.step.forge", "Next: the forge beneath the castle. Go down through the dungeon (right-click the castle doors to pass) and defeat the Forge Harbinger: it gives a Talisman of the Cube.");
++		this.addScreenMessage("final_castle.step.cube", "Next: catch a Roving Cube in the castle halls. Lay 8 redstone dust in a ring around an empty block and step back: the cube walks into the middle. Then right-click it with the Talisman of the Cube.");
++		this.addScreenMessage("final_castle.step.break", "You have the Cube of Annihilation: hold right-click with it and look at the field. The cube flies where you look, erases the field and comes back to you.");
+ 		this.addScreenMessage("final_castle.end.message", "The runes of the castle fade to plain stone. Whatever held the Twilight Forest in its endless dusk has let go.");
+ 
+ 		this.addScreenMessage("drying_jei", "Drying Rack");
+diff --git a/src/main/java/twilightforest/events/EntityEvents.java b/src/main/java/twilightforest/events/EntityEvents.java
+index 8ee51625f..bde6149b0 100644
+--- a/src/main/java/twilightforest/events/EntityEvents.java
++++ b/src/main/java/twilightforest/events/EntityEvents.java
+@@ -83,6 +83,7 @@ import twilightforest.util.entities.EntityUtil;
+ import twilightforest.util.entities.OminousFireDamageSource;
+ import twilightforest.world.components.structures.SpawnIndexProvider;
+ import twilightforest.world.components.structures.finalcastle.FinalCastleBossGazeboComponent;
++import twilightforest.world.components.structures.finalcastle.FinalCastleHints;
+ import twilightforest.world.components.structures.finalcastle.FinalCastleUpgrade;
+ import twilightforest.world.components.structures.start.TFStructureStart;
+ import twilightforest.world.components.structures.type.HollowHillStructure;
+@@ -107,6 +108,9 @@ public class EntityEvents {
+ 		NeoForge.EVENT_BUS.addListener(FinalCastleUpgrade::onEntityJoin);
+ 		NeoForge.EVENT_BUS.addListener(FinalCastleUpgrade::onLevelTick);
+ 		NeoForge.EVENT_BUS.addListener(FinalCastleUpgrade::onChunkLoad);
++		NeoForge.EVENT_BUS.addListener(FinalCastleHints::onRightClickBlock);
++		NeoForge.EVENT_BUS.addListener(FinalCastleHints::onLeftClickBlock);
++		NeoForge.EVENT_BUS.addListener(FinalCastleHints::onAdvancement);
+ 		NeoForge.EVENT_BUS.addListener(this::attachLeadToWroughtFence);
+ 		NeoForge.EVENT_BUS.addListener(this::wipeOreMeterOnLeftClick);
+ 		NeoForge.EVENT_BUS.addListener(this::entityHurts);
+diff --git a/src/main/java/twilightforest/init/TFItems.java b/src/main/java/twilightforest/init/TFItems.java
+index 03031ab5f..0f993fcf2 100644
+--- a/src/main/java/twilightforest/init/TFItems.java
++++ b/src/main/java/twilightforest/init/TFItems.java
+@@ -175,7 +175,7 @@ public class TFItems {
+ 	public static final DeferredItem<Item> GIANT_PICKAXE = ITEMS.register("giant_pickaxe", () -> new GiantPickItem(TFToolMaterials.GIANT, new Item.Properties().attributes(GiantPickItem.createGiantAttributes(TFToolMaterials.GIANT, 8, -3.5F))));
+ 	public static final DeferredItem<Item> GIANT_SWORD = ITEMS.register("giant_sword", () -> new GiantSwordItem(TFToolMaterials.GIANT, new Item.Properties().attributes(GiantSwordItem.createGiantAttributes(TFToolMaterials.GIANT, 10, -3.5F))));
+ 	public static final DeferredItem<Item> LAMP_OF_CINDERS = ITEMS.register("lamp_of_cinders", () -> new LampOfCindersItem(new Item.Properties().fireResistant().durability(1024).rarity(Rarity.UNCOMMON)));
+-	public static final DeferredItem<Item> CUBE_TALISMAN = ITEMS.register("cube_talisman", () -> new Item(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)));
++	public static final DeferredItem<Item> CUBE_TALISMAN = ITEMS.register("cube_talisman", () -> new CubeTalismanItem(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)));
+ 	public static final DeferredItem<Item> CUBE_OF_ANNIHILATION = ITEMS.register("cube_of_annihilation", () -> new CubeOfAnnihilationItem(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON)));
+ 	public static final DeferredItem<Item> MOON_DIAL = ITEMS.register("moon_dial", () -> new MoonDialItem(new Item.Properties().rarity(Rarity.UNCOMMON)));
+ 	public static final DeferredItem<Item> POCKET_WATCH = ITEMS.register("pocket_watch", () -> new PocketWatchItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+diff --git a/src/main/java/twilightforest/item/CubeOfAnnihilationItem.java b/src/main/java/twilightforest/item/CubeOfAnnihilationItem.java
+index ddfc321c3..fce519055 100644
+--- a/src/main/java/twilightforest/item/CubeOfAnnihilationItem.java
++++ b/src/main/java/twilightforest/item/CubeOfAnnihilationItem.java
+@@ -1,5 +1,7 @@
+ package twilightforest.item;
+ 
++import net.minecraft.ChatFormatting;
++import net.minecraft.network.chat.Component;
+ import net.minecraft.server.level.ServerLevel;
+ import net.minecraft.world.InteractionHand;
+ import net.minecraft.world.InteractionResult;
+@@ -9,6 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
+ import net.minecraft.world.entity.player.Player;
+ import net.minecraft.world.item.Item;
+ import net.minecraft.world.item.ItemStack;
++import net.minecraft.world.item.TooltipFlag;
+ import net.minecraft.world.item.UseAnim;
+ import net.minecraft.world.level.Level;
+ import org.jetbrains.annotations.Nullable;
+@@ -16,6 +19,7 @@ import twilightforest.entity.projectile.CubeOfAnnihilation;
+ import twilightforest.init.TFDataComponents;
+ import twilightforest.init.TFEntities;
+ 
++import java.util.List;
+ import java.util.UUID;
+ 
+ public class CubeOfAnnihilationItem extends Item {
+@@ -63,6 +67,12 @@ public class CubeOfAnnihilationItem extends Item {
+ 		return null;
+ 	}
+ 
++	@Override
++	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
++		super.appendHoverText(stack, context, tooltip, flag);
++		tooltip.add(Component.translatable("item.twilightforest.cube_of_annihilation.desc").withStyle(ChatFormatting.GRAY));
++	}
++
+ 	@Override
+ 	public int getUseDuration(ItemStack stack, LivingEntity user) {
+ 		return 72000;
+diff --git a/src/main/java/twilightforest/item/CubeTalismanItem.java b/src/main/java/twilightforest/item/CubeTalismanItem.java
+new file mode 100644
+index 000000000..1be719939
+--- /dev/null
++++ b/src/main/java/twilightforest/item/CubeTalismanItem.java
+@@ -0,0 +1,23 @@
++package twilightforest.item;
++
++import net.minecraft.ChatFormatting;
++import net.minecraft.network.chat.Component;
++import net.minecraft.world.item.Item;
++import net.minecraft.world.item.ItemStack;
++import net.minecraft.world.item.TooltipFlag;
++
++import java.util.List;
++
++/** The Talisman of the Cube: catches a Roving Cube settled in a circle of redstone (see {@code RovingCube}). */
++public class CubeTalismanItem extends Item {
++
++	public CubeTalismanItem(Properties properties) {
++		super(properties);
++	}
++
++	@Override
++	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
++		super.appendHoverText(stack, context, tooltip, flag);
++		tooltip.add(Component.translatable("item.twilightforest.cube_talisman.desc").withStyle(ChatFormatting.GRAY));
++	}
++}
+diff --git a/src/main/java/twilightforest/world/components/structures/finalcastle/FinalCastleHints.java b/src/main/java/twilightforest/world/components/structures/finalcastle/FinalCastleHints.java
+new file mode 100644
+index 000000000..024330ab8
+--- /dev/null
++++ b/src/main/java/twilightforest/world/components/structures/finalcastle/FinalCastleHints.java
+@@ -0,0 +1,224 @@
++package twilightforest.world.components.structures.finalcastle;
++
++import com.mojang.brigadier.exceptions.CommandSyntaxException;
++import net.minecraft.ChatFormatting;
++import net.minecraft.advancements.AdvancementHolder;
++import net.minecraft.core.BlockPos;
++import net.minecraft.core.particles.ParticleTypes;
++import net.minecraft.nbt.CompoundTag;
++import net.minecraft.nbt.TagParser;
++import net.minecraft.network.chat.Component;
++import net.minecraft.network.chat.MutableComponent;
++import net.minecraft.server.level.ServerLevel;
++import net.minecraft.server.level.ServerPlayer;
++import net.minecraft.sounds.SoundEvents;
++import net.minecraft.sounds.SoundSource;
++import net.minecraft.world.entity.Display;
++import net.minecraft.world.entity.Entity;
++import net.minecraft.world.entity.EntityType;
++import net.minecraft.world.entity.player.Player;
++import net.minecraft.world.item.Item;
++import net.minecraft.world.level.ChunkPos;
++import net.minecraft.world.level.block.state.BlockState;
++import net.minecraft.world.level.levelgen.structure.Structure;
++import net.minecraft.world.phys.AABB;
++import net.neoforged.neoforge.event.entity.player.AdvancementEvent;
++import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
++import twilightforest.TwilightForestMod;
++import twilightforest.block.ForceFieldBlock;
++import twilightforest.init.TFBlocks;
++import twilightforest.init.TFItems;
++import twilightforest.init.TFSounds;
++import twilightforest.init.TFStructures;
++import twilightforest.util.landmarks.LandmarkUtil;
++
++import java.util.List;
++import java.util.Locale;
++import java.util.Map;
++import java.util.UUID;
++import java.util.concurrent.ConcurrentHashMap;
++
++/**
++ * Tells players how to get into the Rune Sovereign's gazebo (Wilds &amp; Wanderers completion of the castle).
++ * <p>
++ * The way in is a chain: the Forge Harbinger in the forge gives a Talisman of the Cube, the talisman catches a Roving
++ * Cube standing in a circle of redstone and turns it into a Cube of Annihilation, and only that cube erases the violet
++ * force field. Nothing in the castle said so, so players stood at the field with no idea what to do. Now:
++ * <ul>
++ *     <li>text above the gazebo's spawner names the chain (placed by {@link #tickSpawner}, gone once the boss wakes);</li>
++ *     <li>coming up to the gazebo, or clicking any force field of the castle, gives the player's own next step in the
++ *     action bar and in chat, with a sound and a puff of particles;</li>
++ *     <li>entering the castle for the first time explains the whole way in chat.</li>
++ * </ul>
++ */
++public final class FinalCastleHints {
++
++	public static final String HINT_TAG = "twilightforest_final_castle_hint";
++	private static final String KEY = "gui.twilightforest.final_castle.";
++
++	/** Game time until which a player hears nothing more in the action bar / in chat. */
++	private static final Map<UUID, Long> BAR_QUIET = new ConcurrentHashMap<>();
++	private static final Map<UUID, Long> CHAT_QUIET = new ConcurrentHashMap<>();
++	/** Players near a gazebo at the last look, to speak once on arrival rather than every second. */
++	private static final Map<UUID, Long> NEAR_GAZEBO = new ConcurrentHashMap<>();
++
++	private static final int BAR_COOLDOWN = 40, CHAT_COOLDOWN = 20 * 60;
++
++	private FinalCastleHints() {
++	}
++
++	/** What a player still has to do to get into the gazebo. */
++	public enum Step {
++		FORGE, CUBE, BREAK;
++
++		MutableComponent chat() {
++			return Component.translatable(KEY + "step." + this.name().toLowerCase(Locale.ROOT));
++		}
++	}
++
++	public static Step stepFor(Player player) {
++		if (carries(player, TFItems.CUBE_OF_ANNIHILATION.get())) return Step.BREAK;
++		if (carries(player, TFItems.CUBE_TALISMAN.get())) return Step.CUBE;
++		return Step.FORGE;
++	}
++
++	private static boolean carries(Player player, Item item) {
++		return player.getInventory().hasAnyMatching(stack -> stack.is(item));
++	}
++
++	private static boolean hasAdvancement(ServerPlayer player, String name) {
++		AdvancementHolder holder = player.server.getAdvancements().get(TwilightForestMod.prefix(name));
++		return holder != null && player.getAdvancements().getOrStartProgress(holder).isDone();
++	}
++
++	/**
++	 * Says the player's next step: a short line in the action bar (every couple of seconds at most) and the full step
++	 * in chat (once a minute at most).
++	 */
++	private static void tell(ServerPlayer player, Component bar) {
++		long now = player.level().getGameTime();
++		UUID id = player.getUUID();
++		if (BAR_QUIET.getOrDefault(id, Long.MIN_VALUE) <= now) {
++			BAR_QUIET.put(id, now + BAR_COOLDOWN);
++			player.displayClientMessage(bar.copy().withStyle(ChatFormatting.LIGHT_PURPLE), true);
++		}
++		if (CHAT_QUIET.getOrDefault(id, Long.MIN_VALUE) <= now) {
++			CHAT_QUIET.put(id, now + CHAT_COOLDOWN);
++			player.sendSystemMessage(stepFor(player).chat().withStyle(ChatFormatting.LIGHT_PURPLE));
++		}
++	}
++
++	// ---- force fields
++
++	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
++		// throwing the cube at the field is the right thing to do: say nothing over it
++		if (event.getItemStack().is(TFItems.CUBE_OF_ANNIHILATION.get())) return;
++		touchedField(event.getEntity(), event.getPos());
++	}
++
++	public static void onLeftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
++		if (event.getAction() != PlayerInteractEvent.LeftClickBlock.Action.START) return;
++		touchedField(event.getEntity(), event.getPos());
++	}
++
++	private static void touchedField(Player who, BlockPos pos) {
++		if (!(who instanceof ServerPlayer player) || !(player.level() instanceof ServerLevel level)) return;
++		BlockState state = level.getBlockState(pos);
++		if (!(state.getBlock() instanceof ForceFieldBlock) || !inCastle(level, pos)) return;
++
++		long now = level.getGameTime();
++		if (BAR_QUIET.getOrDefault(player.getUUID(), Long.MIN_VALUE) > now) return;
++
++		boolean gazebo = state.is(TFBlocks.VIOLET_FORCE_FIELD.get());
++		level.playSound(null, pos, TFSounds.DOOR_ACTIVATED.get(), SoundSource.BLOCKS, 0.8F, 0.3F);
++		level.sendParticles(player, gazebo ? ParticleTypes.WITCH : ParticleTypes.ENCHANT, false,
++			pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, 12, 0.4D, 0.4D, 0.4D, 0.05D);
++
++		if (gazebo) {
++			tell(player, Component.translatable(KEY + "hint.field"));
++		} else {
++			// the other fields are walls and windows: the way on is through the castle's doors
++			BAR_QUIET.put(player.getUUID(), now + BAR_COOLDOWN);
++			player.displayClientMessage(Component.translatable(KEY + "field.door").withStyle(ChatFormatting.LIGHT_PURPLE), true);
++		}
++	}
++
++	private static boolean inCastle(ServerLevel level, BlockPos pos) {
++		Structure castle = LandmarkUtil.structureForKey(level, TFStructures.FINAL_CASTLE);
++		return castle != null && level.structureManager().getStructureWithPieceAt(pos, castle).isValid();
++	}
++
++	// ---- entering the castle
++
++	public static void onAdvancement(AdvancementEvent.AdvancementEarnEvent event) {
++		if (event.getAdvancement().id().equals(TwilightForestMod.prefix("progress_castle")) && event.getEntity() instanceof ServerPlayer player) {
++			player.sendSystemMessage(Component.translatable(KEY + "entered").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
++		}
++	}
++
++	// ---- the gazebo
++
++	/** Called by the gazebo's spawner on the server every tick while it waits for a player. */
++	public static void tickSpawner(ServerLevel level, BlockPos spawner) {
++		long now = level.getGameTime();
++		if (now % 20L != Math.floorMod(spawner.asLong(), 20L)) return;
++		// entities of a chunk come a moment after it; looking for the text before that would place it twice
++		if (!level.areEntitiesLoaded(ChunkPos.asLong(spawner))) return;
++
++		if (now % 200L < 20L && hints(level, spawner).isEmpty()) placeHints(level, spawner);
++
++		for (ServerPlayer player : level.players()) {
++			if (player.isSpectator() || !player.isAlive()) continue;
++			double dx = Math.abs(player.getX() - (spawner.getX() + 0.5D));
++			double dz = Math.abs(player.getZ() - (spawner.getZ() + 0.5D));
++			double dy = player.getY() - spawner.getY();
++			boolean near = dx < 22.0D && dz < 22.0D && dy > -6.0D && dy < 14.0D && (dx >= 9.5D || dz >= 9.5D);
++			UUID id = player.getUUID();
++			if (!near) {
++				NEAR_GAZEBO.remove(id);
++				continue;
++			}
++			if (NEAR_GAZEBO.put(id, now) != null) continue;
++			if (hasAdvancement(player, "progress_final")) continue;
++			player.playNotifySound(SoundEvents.BEACON_AMBIENT, SoundSource.BLOCKS, 0.6F, 0.6F);
++			tell(player, Component.translatable(KEY + "hint.field"));
++		}
++	}
++
++	private static List<Entity> hints(ServerLevel level, BlockPos spawner) {
++		AABB box = new AABB(spawner).inflate(1.0D, 0.0D, 1.0D).expandTowards(0.0D, 4.0D, 0.0D);
++		return level.getEntities((Entity) null, box, e -> e instanceof Display.TextDisplay && e.getTags().contains(HINT_TAG));
++	}
++
++	/** The text of the hint, as one display: separate ones wrap at their own width and run into each other. */
++	private static final String DISPLAY_NBT = "{id:\"minecraft:text_display\",billboard:\"vertical\",line_width:330,background:-1342177280,"
++		+ "brightness:{sky:15,block:15},view_range:0.75f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],"
++		+ "translation:[0f,0f,0f],scale:[1.4f,1.4f,1.4f]}}";
++
++	private static void placeHints(ServerLevel level, BlockPos spawner) {
++		// siblings take the style of the component they are appended to: the title is a sibling too, not the root
++		MutableComponent text = Component.empty();
++		text.append(Component.translatable(KEY + "hint.title").withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.BOLD));
++		for (String line : new String[]{"hint.field", "hint.cube", "hint.talisman"}) {
++			text.append("\n").append(Component.translatable(KEY + line));
++		}
++		CompoundTag tag;
++		try {
++			tag = TagParser.parseTag(DISPLAY_NBT);
++		} catch (CommandSyntaxException e) {
++			throw new IllegalStateException(e);
++		}
++		tag.putString("text", Component.Serializer.toJson(text, level.registryAccess()));
++		EntityType.create(tag, level).ifPresent(display -> {
++			display.addTag(HINT_TAG);
++			// the text grows upwards from here: four lines at this scale reach about two blocks up
++			display.moveTo(spawner.getX() + 0.5D, spawner.getY() + 1.4D, spawner.getZ() + 0.5D, 0.0F, 0.0F);
++			level.addFreshEntity(display);
++		});
++	}
++
++	/** The boss is awake: the text has done its job. */
++	public static void removeHints(ServerLevel level, BlockPos spawner) {
++		hints(level, spawner).forEach(Entity::discard);
++	}
++}
+-- 
+2.49.0.windows.1
+
