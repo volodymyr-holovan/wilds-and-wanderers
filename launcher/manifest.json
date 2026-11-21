@@ -1,5 +1,5 @@
 {
- "version": "2026.11.21.1",
+ "version": "2026.11.21.2",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -932,21 +932,21 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/wilds_core-0.1.0.jar",
-   "sha1": "d805fc5aadac964d91c15413f94f8db0df3e0729",
-   "size": 384907
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/wilds_core-0.1.0.jar",
+   "sha1": "887af0f9af528f3af3d185996b629131a2ec796f",
+   "size": 446399
   },
   {
-   "file": "wilds_twilightforest-1.21.1-4.8.3345-w1.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/wilds_twilightforest-1.21.1-4.8.3345-w1.jar",
-   "sha1": "f1d018ae9a35ef5b30da4736a1b80eb4a2b1668f",
-   "size": 27280691
+   "file": "wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/wilds_twilightforest-1.21.1-4.8.3345-w2.jar",
+   "sha1": "edca8c289575fb518c180fec18881dd27891c5db",
+   "size": 27292528
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/wilds_wiki-0.2.0.jar",
-   "sha1": "8d75946e8edf877fd5385c0670a8236f58affa80",
-   "size": 1247617
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/wilds_wiki-0.2.0.jar",
+   "sha1": "bb0118c0af6b82afb549b359d2853aae6fdd4c8f",
+   "size": 1249884
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -994,9 +994,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/overrides.zip",
-   "sha1": "00e99533588a2204b105cd2fbf8e0535fce78f77",
-   "size": 28291046
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.2/overrides.zip",
+   "sha1": "454bb76a8267beaaa3ef161e5a90c3f2efd02135",
+   "size": 28470494
   },
   "overrides": [
    {
@@ -1241,13 +1241,13 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "de38f47826e5d5010ce72212f851fd89a6d8bf36",
-    "size": 958069
+    "sha1": "a15c4bbb90fd31d5fedeae10f525b428ddc75dfb",
+    "size": 958721
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "de38f47826e5d5010ce72212f851fd89a6d8bf36",
-    "size": 958069
+    "sha1": "a15c4bbb90fd31d5fedeae10f525b428ddc75dfb",
+    "size": 958721
    },
    {
     "path": "config/minecolonies-server.toml",
@@ -2046,8 +2046,8 @@
    },
    {
     "path": "kubejs/assets/twilightforest/lang/uk_ua.json",
-    "sha1": "c9cac1190bfb178b26471c0f4871cb49520db63d",
-    "size": 3987
+    "sha1": "b80d261465e5f8845531121c4500556182a24197",
+    "size": 6319
    },
    {
     "path": "kubejs/assets/upgrade_aquatic/lang/uk_ua.json",
@@ -2096,8 +2096,8 @@
    },
    {
     "path": "kubejs/assets/wilds/textures/gui/skilltree.png",
-    "sha1": "442650bd9647bc995da201470fb8c26b0882dced",
-    "size": 4862115
+    "sha1": "4f84c9b891a3cf05411216c41e2019ed6f4e8fc4",
+    "size": 5039632
    },
    {
     "path": "kubejs/assets/xaerobetterpvp/lang/uk_ua.json",
