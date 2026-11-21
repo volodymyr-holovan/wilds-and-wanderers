@@ -1,5 +1,5 @@
 {
- "version": "2026.11.18.1",
+ "version": "2026.11.21.1",
  "minecraft": "1.21.1",
  "neoforge": {
   "version": "21.1.264",
@@ -228,16 +228,34 @@
    "size": 33123131
   },
   {
+   "file": "create-central-kitchen-2.6.2b.jar",
+   "url": "https://cdn.modrinth.com/data/btq68HMO/versions/qZxkZR8W/create-central-kitchen-2.6.2b.jar",
+   "sha1": "796355e592455c84c4eee8b7cd998734a9500c0d",
+   "size": 511818
+  },
+  {
    "file": "create-enchantment-industry-2.4.2.jar",
    "url": "https://cdn.modrinth.com/data/JWGBpFUP/versions/qUpvzZ83/create-enchantment-industry-2.4.2.jar",
    "sha1": "4ad5c181c805a548e15892500b07c0c0f88f0734",
    "size": 1283517
   },
   {
+   "file": "create_connected-1.3.3-mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/Vg5TIO6d/versions/Xe7EqzfQ/create_connected-1.3.3-mc1.21.1.jar",
+   "sha1": "96ae45fa44cd7028a31b9613cb672009e811b145",
+   "size": 6786783
+  },
+  {
    "file": "createaddition-1.6.0.jar",
    "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/qPr8V4G2/createaddition-1.6.0.jar",
    "sha1": "87b539d41ed238e98b26c607c0c81a973323147e",
    "size": 1661802
+  },
+  {
+   "file": "createdeco-2.1.3.jar",
+   "url": "https://cdn.modrinth.com/data/sMvUb4Rb/versions/qrcMVoBD/createdeco-2.1.3.jar",
+   "sha1": "93d9eff58b46c6953e907d071e6be4e3ce07be38",
+   "size": 3328498
   },
   {
    "file": "CreateDragonsPlus-1.11.9.jar",
@@ -792,6 +810,12 @@
    "size": 1022684
   },
   {
+   "file": "sliceanddice-4.3.4-neoforge.jar",
+   "url": "https://cdn.modrinth.com/data/GmjmRQ0A/versions/D6mQaFRW/sliceanddice-4.3.4-neoforge.jar",
+   "sha1": "bfcb12d13465caf6743f200fbd755b72705011e4",
+   "size": 1356389
+  },
+  {
    "file": "smallships-neoforge-1.21.1-2.0.2.jar",
    "url": "https://cdn.modrinth.com/data/rGWEHQrP/versions/2iLK0Wz6/smallships-neoforge-1.21.1-2.0.2.jar",
    "sha1": "4d5235f78d94a0feddb58d27546350ca3c999f1e",
@@ -908,21 +932,21 @@
   },
   {
    "file": "wilds_core-0.1.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.18.1/wilds_core-0.1.0.jar",
-   "sha1": "c37b29417df510277f384c122b5b13532db0aa2d",
-   "size": 378397
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/wilds_core-0.1.0.jar",
+   "sha1": "d805fc5aadac964d91c15413f94f8db0df3e0729",
+   "size": 384907
   },
   {
    "file": "wilds_twilightforest-1.21.1-4.8.3345-w1.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.18.1/wilds_twilightforest-1.21.1-4.8.3345-w1.jar",
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/wilds_twilightforest-1.21.1-4.8.3345-w1.jar",
    "sha1": "f1d018ae9a35ef5b30da4736a1b80eb4a2b1668f",
    "size": 27280691
   },
   {
    "file": "wilds_wiki-0.2.0.jar",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.18.1/wilds_wiki-0.2.0.jar",
-   "sha1": "6a03cb85e97cbdbea292e34aad07de1af0de45f8",
-   "size": 1247622
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/wilds_wiki-0.2.0.jar",
+   "sha1": "8d75946e8edf877fd5385c0670a8236f58affa80",
+   "size": 1247617
   },
   {
    "file": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
@@ -970,9 +994,9 @@
  "files": {
   "zip": {
    "file": "overrides.zip",
-   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.18.1/overrides.zip",
-   "sha1": "d1b964614ab72091b291f16f203064f6f89a5721",
-   "size": 28272768
+   "url": "https://github.com/volodymyr-holovan/wilds-and-wanderers/releases/download/pack-2026.11.21.1/overrides.zip",
+   "sha1": "00e99533588a2204b105cd2fbf8e0535fce78f77",
+   "size": 28291046
   },
   "overrides": [
    {
@@ -1041,6 +1065,11 @@
     "size": 147
    },
    {
+    "path": "config/create_connected-common.toml",
+    "sha1": "bebe07c5b33542436a1a0222963880fb592defba",
+    "size": 1754
+   },
+   {
     "path": "config/curios-client.toml",
     "sha1": "a11c1ebd1f824f85ec4b08a68c2a30958c69757f",
     "size": 742
@@ -1057,8 +1086,8 @@
    },
    {
     "path": "config/ftbessentials.snbt",
-    "sha1": "8fad6afe0343e2b4324a2d7aba3a6e9076a3e696",
-    "size": 10749
+    "sha1": "886d9155ad544a9ddd089174ceddba964b6c8ae7",
+    "size": 10370
    },
    {
     "path": "config/ftbquests/quests/chapter_groups.snbt",
@@ -1067,143 +1096,143 @@
    },
    {
     "path": "config/ftbquests/quests/chapters/ae2.snbt",
-    "sha1": "67e42dffd5d50264a3ad4057b0c9a032b7ca9cfe",
-    "size": 14284
+    "sha1": "c68f3f85485dbff70bea58a4022e7a377af413d8",
+    "size": 14458
    },
    {
     "path": "config/ftbquests/quests/chapters/aether.snbt",
-    "sha1": "38192e36e5ddeaf1b8124ef22ee28dbf426f0beb",
-    "size": 10233
+    "sha1": "27d08587016189f7fc183378c65f8ba05c0ad86d",
+    "size": 10445
    },
    {
     "path": "config/ftbquests/quests/chapters/apotheosis.snbt",
-    "sha1": "94826b909264ab74ee761a58de58f21c3144ac5d",
-    "size": 9573
+    "sha1": "ae62a6210ef5793df5f365861a91f7bbd59eaf13",
+    "size": 9773
    },
    {
     "path": "config/ftbquests/quests/chapters/ars.snbt",
-    "sha1": "b049391970315ca4da7736c89f049a9895e4587a",
-    "size": 12557
+    "sha1": "1f2b651c10246d33cd2acd64c3430c6ceb44add7",
+    "size": 12742
    },
    {
     "path": "config/ftbquests/quests/chapters/bestiary.snbt",
-    "sha1": "63ebde5712c61fb63337c0ac8c48e936fb1db837",
-    "size": 10149
+    "sha1": "dc09b2e5c12b1e2c738f3eba7602d3decede1aa9",
+    "size": 10332
    },
    {
     "path": "config/ftbquests/quests/chapters/bosses.snbt",
-    "sha1": "4f66103847e4d0a8f80e9072911543953007880b",
-    "size": 13496
+    "sha1": "e57b679f1c86a9f18d9a98b25fb232ef07bb3726",
+    "size": 13681
    },
    {
     "path": "config/ftbquests/quests/chapters/camping.snbt",
-    "sha1": "588c52fcc76424323bf12cfcf64084b0b7bf5846",
-    "size": 6418
+    "sha1": "7281af2536f0e9c5482413abdb7adfba1520d53e",
+    "size": 6590
    },
    {
     "path": "config/ftbquests/quests/chapters/caves.snbt",
-    "sha1": "3a6312244db16827ac947e2a3a9d82553882a9a2",
-    "size": 8608
+    "sha1": "d11e85c5d44176dfffddc7784f292180e9d6848f",
+    "size": 8780
    },
    {
     "path": "config/ftbquests/quests/chapters/colonies.snbt",
-    "sha1": "666b922649d2d752549504cd5c905dcad271eb13",
-    "size": 12594
+    "sha1": "2019d332e8f81ea885ec1127f38b55539b31f215",
+    "size": 12934
    },
    {
     "path": "config/ftbquests/quests/chapters/create.snbt",
-    "sha1": "7d2cd4e43c3043fac4667bf182a8d3a8b3be3463",
-    "size": 23570
+    "sha1": "5e22bd55cf019f99b225ce56cbd767d3966efa56",
+    "size": 23742
    },
    {
     "path": "config/ftbquests/quests/chapters/create_addons.snbt",
-    "sha1": "f313d61fb5ca7d9c240ef17f43d9b1a1b1fda564",
-    "size": 3671
+    "sha1": "aa49349a1d5094072a4b8d36fb5c5fd7d3310a0f",
+    "size": 7717
    },
    {
     "path": "config/ftbquests/quests/chapters/dragons.snbt",
-    "sha1": "8ef8f404961410a2371959f34f9485450cac0b2c",
-    "size": 6968
+    "sha1": "584313d48d3231905b2e6e993a1d7dd0b036a981",
+    "size": 7152
    },
    {
     "path": "config/ftbquests/quests/chapters/errands.snbt",
-    "sha1": "37cb73c48f5a3c96e68057748bf2f2c48797b17e",
-    "size": 56364
+    "sha1": "770290153c6046d2f1d6588c3c1925e39e3236f2",
+    "size": 56546
    },
    {
     "path": "config/ftbquests/quests/chapters/irons.snbt",
-    "sha1": "590e59e848078f2927c7e463c4fc8c5ec4b13fd7",
-    "size": 13008
+    "sha1": "f19829c1be1cfd72b0b45dd015dc14b520d0aae3",
+    "size": 13226
    },
    {
     "path": "config/ftbquests/quests/chapters/kitchen.snbt",
-    "sha1": "aff90d89c3b8ee5f7cad6743c81c1f52497e4a24",
-    "size": 9991
+    "sha1": "836d1e51067ec959e22bff594a25baf3d81f4277",
+    "size": 10173
    },
    {
     "path": "config/ftbquests/quests/chapters/links.snbt",
-    "sha1": "96c6fb9094ba6ecfdbcdbb7211ff6772568c6941",
-    "size": 4150
+    "sha1": "5a367a2842eee092dfb142a861249189a6811b38",
+    "size": 4321
    },
    {
     "path": "config/ftbquests/quests/chapters/mekanism.snbt",
-    "sha1": "8b7e8d9257f60320f682078b6cbbda22df55dc16",
-    "size": 22923
+    "sha1": "80e4ddf8a2d453777b0d73f3ec9b50690b9ce5d9",
+    "size": 23135
    },
    {
     "path": "config/ftbquests/quests/chapters/nether_end.snbt",
-    "sha1": "adbc2364608d8f1869f4e6999c5b7bf790d82296",
-    "size": 18271
+    "sha1": "1134c84f000e02b8c1f8434e93f7bc8fb9c4bef9",
+    "size": 18452
    },
    {
     "path": "config/ftbquests/quests/chapters/paths.snbt",
-    "sha1": "10f2d9a64f8672d363702b3860a1d5c9634e4006",
-    "size": 5047
+    "sha1": "121863d39a916a7b1f7b8d8c42bb03e354f3e683",
+    "size": 5220
    },
    {
     "path": "config/ftbquests/quests/chapters/peoples.snbt",
-    "sha1": "02205050b20512fce329c3858abfbc6114846f3b",
-    "size": 8807
+    "sha1": "7aa2b991fb2dabe4021a398f9226c4abdf3035c7",
+    "size": 9013
    },
    {
     "path": "config/ftbquests/quests/chapters/seas.snbt",
-    "sha1": "d4f95f2cf65a1c28924c504cdd97e4badddf1606",
-    "size": 12962
+    "sha1": "d000c0805558a632f38c5958b3703d21d1066fa1",
+    "size": 13135
    },
    {
     "path": "config/ftbquests/quests/chapters/start.snbt",
-    "sha1": "fd1c5001f20da8816e624a9e40daa23d66b63236",
-    "size": 6897
+    "sha1": "2ec3fcbe52f3ef9c164391952bcea06f33887ddf",
+    "size": 7104
    },
    {
     "path": "config/ftbquests/quests/chapters/storage.snbt",
-    "sha1": "ada7420bd070889f416486bf55c5ca4a212d38b0",
-    "size": 7911
+    "sha1": "2b9d8e537440f3ebf9491df0d3c2a77997e47f88",
+    "size": 8094
    },
    {
     "path": "config/ftbquests/quests/chapters/survival.snbt",
-    "sha1": "507dbf6c537c17d20d9b725f9b62a9da279e1613",
-    "size": 8835
+    "sha1": "eda3d61d4d97fa45b4021517c4a029e496ef007c",
+    "size": 9017
    },
    {
     "path": "config/ftbquests/quests/chapters/twilight.snbt",
-    "sha1": "51155ff3656cd50b465df068695df27636a43517",
-    "size": 14695
+    "sha1": "7bf4fde5fecf04dc42c009c3f91bf8cf8f672633",
+    "size": 14877
    },
    {
     "path": "config/ftbquests/quests/chapters/village.snbt",
-    "sha1": "863e40de60fbaad284853f0388ebd81d8d30380b",
-    "size": 8046
+    "sha1": "533237ab82b90f3c0a9aca20cf8a2091061cd336",
+    "size": 8223
    },
    {
     "path": "config/ftbquests/quests/chapters/welcome.snbt",
-    "sha1": "72ff48afbb03a619cae2ddb543151d4a14abad70",
-    "size": 4850
+    "sha1": "f9da8f308ecd1c9d31be1d891723c249059f9d3a",
+    "size": 5023
    },
    {
     "path": "config/ftbquests/quests/chapters/wildlife.snbt",
-    "sha1": "cbf449e9f566ac3b739e0d5e2996ed2c6ce24d6d",
-    "size": 4945
+    "sha1": "878ff17578f86703847415884d74d1a3eb095541",
+    "size": 5123
    },
    {
     "path": "config/ftbquests/quests/data.snbt",
@@ -1212,18 +1241,18 @@
    },
    {
     "path": "config/ftbquests/quests/lang/en_us.snbt",
-    "sha1": "407e756d299e930c8d21bf3ff890985777b26cba",
-    "size": 948334
+    "sha1": "de38f47826e5d5010ce72212f851fd89a6d8bf36",
+    "size": 958069
    },
    {
     "path": "config/ftbquests/quests/lang/uk_ua.snbt",
-    "sha1": "407e756d299e930c8d21bf3ff890985777b26cba",
-    "size": 948334
+    "sha1": "de38f47826e5d5010ce72212f851fd89a6d8bf36",
+    "size": 958069
    },
    {
     "path": "config/minecolonies-server.toml",
-    "sha1": "1847ca5bd23236346573da5a1d5712785a7bdba9",
-    "size": 9170
+    "sha1": "1967d968cd119ef089072471b24ddfe3745b0b33",
+    "size": 9169
    },
    {
     "path": "config/nomadictents-common.toml",
@@ -1242,8 +1271,8 @@
    },
    {
     "path": "config/servercore/config.yml",
-    "sha1": "fcb5b3628c2c2917c0e9faf80c84625558074d4a",
-    "size": 11190
+    "sha1": "85bc2c5d0c92c16cd1f233f6fdab3a980b1b8c69",
+    "size": 11296
    },
    {
     "path": "config/servercore/optimizations.yml",
@@ -1441,6 +1470,16 @@
     "size": 2213
    },
    {
+    "path": "kubejs/assets/create_central_kitchen/lang/uk_ua.json",
+    "sha1": "4f80d0dedabfe1da1db00dbe3b4c7f9d51290cfd",
+    "size": 2915
+   },
+   {
+    "path": "kubejs/assets/create_connected/lang/uk_ua.json",
+    "sha1": "54953734f4b7bec9c4ee4e4b337b5a561f2b5008",
+    "size": 2220
+   },
+   {
     "path": "kubejs/assets/create_dragons_plus/lang/uk_ua.json",
     "sha1": "26e6bd0a1b14ed570c980ea082d8f90eef31669c",
     "size": 38285
@@ -1454,6 +1493,11 @@
     "path": "kubejs/assets/createaddition/lang/uk_ua.json",
     "sha1": "61e601db8349881d79e81a7a477b96181257b2c9",
     "size": 4014
+   },
+   {
+    "path": "kubejs/assets/createdeco/lang/uk_ua.json",
+    "sha1": "94f3f7d1dc1729bd46c04f2c5fe402a516161436",
+    "size": 37990
    },
    {
     "path": "kubejs/assets/cristellib/lang/uk_ua.json",
@@ -1732,8 +1776,8 @@
    },
    {
     "path": "kubejs/assets/minecolonies/lang/uk_ua.json",
-    "sha1": "4d142944fcdd761dfee7254124bcd8a430c8151d",
-    "size": 3186
+    "sha1": "df96ce27cd621f30a1105402206ce524e3d65333",
+    "size": 3426
    },
    {
     "path": "kubejs/assets/minecraft/font/alt.json",
@@ -1926,6 +1970,11 @@
     "size": 934
    },
    {
+    "path": "kubejs/assets/sliceanddice/lang/uk_ua.json",
+    "sha1": "70606dca1b5467cefe7469ca5736993dda3c7874",
+    "size": 120
+   },
+   {
     "path": "kubejs/assets/smallships/lang/uk_ua.json",
     "sha1": "0a7619e5638679bd46e632fa6ac04892fbaa364b",
     "size": 20545
@@ -2091,6 +2140,26 @@
     "size": 78
    },
    {
+    "path": "kubejs/data/apotheosis/data_maps/dimension_type/invader_spawn_rules.json",
+    "sha1": "9883d37d7d9bffeae243a3eb760853a59b18a2fb",
+    "size": 1438
+   },
+   {
+    "path": "kubejs/data/apotheosis/loot_modifiers/affix_conversion.json",
+    "sha1": "35ad7600f48cd70bc4557d919d20161283be264c",
+    "size": 344
+   },
+   {
+    "path": "kubejs/data/apotheosis/loot_modifiers/gem_entity_drops.json",
+    "sha1": "29f5607dbd16a9584b69c0995abac59b0dc54459",
+    "size": 535
+   },
+   {
+    "path": "kubejs/data/apotheosis/loot_modifiers/gem_entity_drops_from_real_players.json",
+    "sha1": "bb68963e8d55f2f717dc55fd52f9c817806e47a7",
+    "size": 541
+   },
+   {
     "path": "kubejs/data/cataclysm/curios/entities/slots.json",
     "sha1": "b50c02f4bb12f8b4d6ffc9d66dd893a1d8b34da1",
     "size": 133
@@ -2099,6 +2168,11 @@
     "path": "kubejs/data/cataclysm/curios/slots/hands.json",
     "sha1": "42ec1e7df8b0f70e8dd4d4642d6fc9d89347d1fa",
     "size": 17
+   },
+   {
+    "path": "kubejs/data/createdeco/recipe/placard.json",
+    "sha1": "216a7d2470adc1d6d5c39364910122493a92dcd9",
+    "size": 275
    },
    {
     "path": "kubejs/data/curios/tags/item/belt.json",
@@ -2144,6 +2218,26 @@
     "path": "kubejs/data/dungeons_arise/tags/worldgen/biome/has_structure/plague_asylum_biomes.json",
     "sha1": "cd606300701391c8461c9fca15a6584f424858e3",
     "size": 1155
+   },
+   {
+    "path": "kubejs/data/minecolonies/tags/worldgen/biome/coldbiomes.json",
+    "sha1": "3b778a13e40280e3a078097a4d72f56703ba0153",
+    "size": 281
+   },
+   {
+    "path": "kubejs/data/minecolonies/tags/worldgen/biome/drybiomes.json",
+    "sha1": "3b778a13e40280e3a078097a4d72f56703ba0153",
+    "size": 281
+   },
+   {
+    "path": "kubejs/data/minecolonies/tags/worldgen/biome/humidbiomes.json",
+    "sha1": "3b778a13e40280e3a078097a4d72f56703ba0153",
+    "size": 281
+   },
+   {
+    "path": "kubejs/data/minecolonies/tags/worldgen/biome/temperatebiomes.json",
+    "sha1": "3b778a13e40280e3a078097a4d72f56703ba0153",
+    "size": 281
    },
    {
     "path": "kubejs/data/minecraft/advancement/give_quest_trader_trade.json",
@@ -3112,8 +3206,8 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/category.json",
-    "sha1": "ed1c864e44aa288b75ed73c8b5df7a35cfa65adf",
-    "size": 1152
+    "sha1": "6146df96f966490baad10c0a8c3c7cb0251c2c22",
+    "size": 1149
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/connections.json",
@@ -3127,8 +3221,8 @@
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/experience.json",
-    "sha1": "de709b66ded56bfb7f3251fd16ccb795d1b4e1e9",
-    "size": 1745
+    "sha1": "cda564ad6a80ccd9ae06f7dd8bff99641136a6c0",
+    "size": 1746
    },
    {
     "path": "kubejs/data/wilds/puffish_skills/categories/path/skills.json",
