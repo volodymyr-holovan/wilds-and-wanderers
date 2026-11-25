@@ -21,7 +21,7 @@
       "command": [
         "python",
         "-c",
-        "import urllib.request, hashlib, os, time\nU = 'https://raw.githubusercontent.com/volodymyr-holovan/wilds-and-wanderers/90d01ed9c5548884f26ae085342a9687b781e660/pack/server/night_shutdown.py'\nH = '0b49c94cc1e7f3cbfd90f10583f19a0c1dfed1009bedc2de80529666207a17ba'\nC = '/data/night_shutdown.py'\nos.makedirs('/data', exist_ok=True)\nd = open(C, 'rb').read() if os.path.exists(C) else b''\nif hashlib.sha256(d).hexdigest() != H:\n    for i in range(60):\n        try:\n            d = urllib.request.urlopen(U, timeout=30).read()\n            break\n        except Exception as e:\n            print('download failed, retry:', e, flush=True)\n            time.sleep(10)\n    if hashlib.sha256(d).hexdigest() != H:\n        raise SystemExit('night_shutdown.py: checksum mismatch, not running it')\n    open(C, 'wb').write(d)\nexec(compile(d, C, 'exec'), {'__name__': '__main__'})\n"
+        "import urllib.request, hashlib, os, time\nU = 'https://raw.githubusercontent.com/volodymyr-holovan/wilds-and-wanderers/e1a7c309ae551fd1e6b3929e2fe243f59c490b03/pack/server/night_shutdown.py'\nH = '3fac4c8cfaf8e711dd513e4461650b3171821d65659348c0783e7dec206072f0'\nC = '/data/night_shutdown.py'\nos.makedirs('/data', exist_ok=True)\nd = open(C, 'rb').read() if os.path.exists(C) else b''\nif hashlib.sha256(d).hexdigest() != H:\n    for i in range(60):\n        try:\n            d = urllib.request.urlopen(U, timeout=30).read()\n            break\n        except Exception as e:\n            print('download failed, retry:', e, flush=True)\n            time.sleep(10)\n    if hashlib.sha256(d).hexdigest() != H:\n        raise SystemExit('night_shutdown.py: checksum mismatch, not running it')\n    open(C, 'wb').write(d)\nexec(compile(d, C, 'exec'), {'__name__': '__main__'})\n"
       ]
     }
   },
@@ -37,5 +37,5 @@
       "path": "/"
     }
   ],
-  "x-notes": "Нічне вимкнення Wilds & Wanderers: опівночі (Europe/Berlin) Crafty зберігає світ і зупиняє Minecraft, потім вимикається TrueNAS. Перемикач і журнал — кнопка Web UI / 🌐. Зупинка застосунку теж вимикає функцію. Код: github.com/volodymyr-holovan/wilds-and-wanderers/blob/main/pack/server/night_shutdown.py"
+  "x-notes": "Нічна перерва Wilds & Wanderers: о 00:00 (Europe/Berlin) Crafty зберігає світ і зупиняє Minecraft, о 06:00 запускає знову; TrueNAS працює весь час. Після ввімкнення TrueNAS удень Minecraft запускається сам. Налаштування й журнал — кнопка Web UI / 🌐. Код: github.com/volodymyr-holovan/wilds-and-wanderers/blob/main/pack/server/night_shutdown.py"
 }
