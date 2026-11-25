@@ -1,22 +1,19 @@
-"""Нічне вимкнення: the TrueNAS app that switches the Wilds & Wanderers server box off at night.
+"""Нічна перерва: the TrueNAS app that closes the Wilds & Wanderers Minecraft server for the night (25.11).
 
-At the set time (00:00 by default, in the TZ of the container), when the switch is on:
-  1. Crafty is stopped with a long grace period: Crafty stops the Minecraft server the proper way ("stop": players
-     are saved, the world is saved), waiting up to the server's shutdown timeout;
-  2. once no Minecraft process is left, TrueNAS is shut down through its middleware (system.shutdown), which stops
-     the remaining apps and powers off cleanly.
-If Minecraft does not stop, TrueNAS is NOT switched off (a half-saved world is worse than a night of power).
+TrueNAS itself stays on all night (until 25.11 this app switched the whole box off). When the switch is on:
+  * at the stop time (00:00 by default, in the TZ of the container) Crafty is stopped with a long grace period:
+    Crafty stops Minecraft the proper way ("stop": players saved, world saved), so nobody can join until morning;
+  * at the start time (06:00) Crafty is started again, and Crafty starts Minecraft itself (its server has auto start);
+  * when TrueNAS is switched on (this app starts with it) or the app restarts, the clock decides: inside the open
+    hours (06:00-00:00) Crafty is started if it is not running; inside the night it is stopped, because Crafty would
+    otherwise start Minecraft on its own.
+Only these moments act: in between, a server an admin starts or stops by hand is left as it is.
 
-Docker never brings back a container that was stopped by hand ("docker stop"; the apps' restart policy is
-unless-stopped), so the stopped Crafty containers are written down and, when TrueNAS comes back on (this app starts
-with it), started again; Crafty then starts Minecraft itself (its server has auto start on). If the night stop goes
-wrong and TrueNAS stays on, Crafty is started again at once.
+The switch, both times, "skip tonight", "start now" and a log are on the app's web page (the 🌐 button of the app's
+dashboard widget). Stopping the app also switches the feature off (and leaves Crafty as it is).
 
-The switch, the time and a log are on the app's web page (the 🌐 button of the app's dashboard widget). Stopping the
-app also switches the feature off.
-
-Runs in a privileged container with the host's PID namespace (pid: host): host commands (docker, midclt) run through
-nsenter as root. The page only flips settings; it runs no command a visitor could choose.
+Runs in a privileged container with the host's PID namespace (pid: host): host commands (docker) run through nsenter
+as root. The page only flips settings; it runs no command a visitor could choose.
 """
 import datetime
 import html
@@ -35,9 +32,8 @@ PORT = int(os.environ.get("PORT", "30210"))
 CRAFTY = os.environ.get("CRAFTY_NAME", "crafty")           # part of the Crafty app's container name
 STOP_TIMEOUT = int(os.environ.get("STOP_TIMEOUT", "900"))  # seconds Crafty gets to stop Minecraft
 SERVERS_DIR = os.environ.get("MC_DIR_MARK", "/crafty/servers/")
-WINDOW = 10 * 60                                           # a late start (after a restart) still counts within this
-SETTLE = 10 * 60                                           # nothing happens in the first minutes after a boot
-STARTED = time.time()
+WINDOW = 10 * 60                                           # a stop or start up to this late still runs (the app restarted)
+BOOT_SETTLE = int(os.environ.get("BOOT_SETTLE", "60"))     # at night: let Crafty start before it is stopped again
 LOCK = threading.Lock()
 BUSY = threading.Lock()
 
@@ -47,10 +43,15 @@ def now():
 
 
 def load():
-    state = {"enabled": True, "time": "00:00", "last_run": "", "skip": "", "restart": []}
+    state = {"enabled": True, "stop": "00:00", "start": "06:00", "last_stop": "", "last_start": "", "skip": "", "restart": []}
     try:
         with open(STATE_FILE, encoding="utf-8") as f:
-            state.update(json.load(f))
+            old = json.load(f)
+        if "time" in old and "stop" not in old:      # the night shutdown before 25.11 kept one time
+            old["stop"] = old.pop("time")
+        old.pop("time", None)
+        old.pop("last_run", None)
+        state.update(old)
     except (OSError, ValueError):
         pass
     return state
@@ -100,77 +101,86 @@ def minecraft_pids():
     return found
 
 
-def crafty_containers():
-    r = host("docker", "ps", "--format", "{{.ID}} {{.Names}}")
+def crafty_containers(running_only=True):
+    """[(id, name)] of the Crafty app's containers (the running ones, or all of them)"""
+    args = ["docker", "ps", "--format", "{{.ID}} {{.Names}}"] + ([] if running_only else ["-a"])
+    r = host(*args)
     if r.returncode != 0:
         raise RuntimeError("docker ps: " + (r.stderr or r.stdout).strip()[:200])
     return [line.split(" ", 1) for line in r.stdout.splitlines() if CRAFTY in line.split(" ", 1)[-1]]
 
 
-def start_containers(names, why):
-    """start the Crafty containers the night stop left stopped; True when every one of them runs"""
-    ok = True
-    for name in names:
-        r = host("docker", "start", name, timeout=300)
-        if r.returncode == 0:
-            log(f"{name} запущено ({why}); Crafty сам запустить Minecraft")
-        else:
-            ok = False
-            log(f"{name} не запустився: " + (r.stderr or r.stdout).strip()[:300])
-    return ok
-
-
-def restart_after_boot():
-    """after TrueNAS is switched on: start what the last night stop stopped (docker may still be coming up)"""
-    names = load().get("restart") or []
-    if not names:
-        return
-    for attempt in range(60):
-        try:
-            if host("docker", "info", "--format", "{{.ServerVersion}}", timeout=30).returncode == 0 and start_containers(names, "TrueNAS увімкнено"):
-                state = load()
-                state["restart"] = []
-                save(state)
-                return
-        except Exception as e:
-            log("Запуск Crafty після ввімкнення: " + str(e))
-        time.sleep(20)
-    log("Crafty так і не вдалося запустити після ввімкнення TrueNAS — запустіть застосунок вручну.")
-
-
-def shutdown_truenas():
-    reason = "Нічне вимкнення (Wilds & Wanderers)"
-    for cmd in (["midclt", "call", "system.shutdown", reason], ["midclt", "call", "system.shutdown"]):
-        r = host(*cmd, timeout=60)
-        if r.returncode == 0:
-            return True
-        log("midclt: " + (r.stderr or r.stdout).strip()[:300])
-    return False
-
-
-def run(dry):
-    if not BUSY.acquire(blocking=False):
-        log("вже виконується")
-        return
+def docker_ready():
     try:
-        log("Перевірка (нічого не вимикається)…" if dry else "Нічне вимкнення почалося")
-        try:
-            pids, containers = minecraft_pids(), crafty_containers()
-        except Exception as e:
-            log("Помилка: " + str(e))
-            return
+        return host("docker", "info", "--format", "{{.ServerVersion}}", timeout=30).returncode == 0
+    except Exception:
+        return False
+
+
+def minutes(value):
+    hh, mm = (int(x) for x in value.split(":")[:2])
+    return hh * 60 + mm
+
+
+def is_open(state, t=None):
+    """inside the open hours: from the start time to the stop time (across midnight when the stop comes first)"""
+    t = t or now()
+    m, start, stop = t.hour * 60 + t.minute, minutes(state["start"]), minutes(state["stop"])
+    if start == stop:
+        return True
+    return start <= m < stop if start < stop else (m >= start or m < stop)
+
+
+def open_minecraft(why):
+    """start every Crafty container that is not running; Crafty then starts Minecraft itself"""
+    if not BUSY.acquire(blocking=False):
+        log("вже виконується інша дія")
+        return False
+    try:
+        state = load()
+        running = {name for _, name in crafty_containers()}
+        names = sorted(set(state.get("restart") or []) | {name for _, name in crafty_containers(False)})
+        ok = True
+        for name in names:
+            if name in running:
+                continue
+            r = host("docker", "start", name, timeout=300)
+            if r.returncode == 0:
+                log(f"{name} запущено ({why}); Crafty сам запустить Minecraft")
+            else:
+                ok = False
+                log(f"{name} не запустився: " + (r.stderr or r.stdout).strip()[:300])
+        if ok:
+            state = load()
+            state["restart"] = []
+            save(state)
+            if names and all(n in running for n in names):
+                log(f"Crafty уже працює ({why})")
+        return ok
+    finally:
+        BUSY.release()
+
+
+def close_minecraft(why, dry=False):
+    """stop the Crafty containers with a long grace period: Crafty saves the world and stops Minecraft"""
+    if not BUSY.acquire(blocking=False):
+        log("вже виконується інша дія")
+        return False
+    try:
+        pids, containers = minecraft_pids(), crafty_containers()
         log(f"Сервер Minecraft: {'працює (процес ' + ', '.join(map(str, pids)) + ')' if pids else 'не запущено'}; "
-            f"Crafty: {', '.join(name for _, name in containers) or 'не знайдено'}")
-        nsenter_ok = host("midclt", "call", "system.ready", timeout=30)
-        log("Доступ до TrueNAS: " + ("є" if nsenter_ok.returncode == 0 else "НЕМАЄ — " + (nsenter_ok.stderr or "").strip()[:200]))
+            f"Crafty: {', '.join(name for _, name in containers) or 'не запущено'}")
         if dry:
-            log("Перевірку завершено: опівночі все це спрацює так само, але насправді.")
-            return
+            log("Перевірку завершено: о часі перерви все це спрацює так само, але насправді.")
+            return True
+        if not containers:
+            log(f"Нічого зупиняти ({why}).")
+            return True
         state = load()
         state["restart"] = sorted(set(state.get("restart") or []) | {name for _, name in containers})
         save(state)
         for cid, name in containers:
-            log(f"Зупиняю {name}: Crafty зберігає світ і зупиняє Minecraft (до {STOP_TIMEOUT // 60} хв)…")
+            log(f"Зупиняю {name} ({why}): Crafty зберігає світ і зупиняє Minecraft (до {STOP_TIMEOUT // 60} хв)…")
             r = host("docker", "stop", "-t", str(STOP_TIMEOUT), cid, timeout=STOP_TIMEOUT + 120)
             log(f"{name} зупинено" if r.returncode == 0 else f"{name}: " + (r.stderr or r.stdout).strip()[:300])
         for _ in range(60):
@@ -178,63 +188,89 @@ def run(dry):
                 break
             time.sleep(2)
         left = minecraft_pids()
-        if left:
-            log(f"Minecraft досі працює ({left}): TrueNAS НЕ вимикаю, щоб не зіпсувати світ.")
-            undo()
-            return
-        log("Світ збережено, Minecraft зупинено. Вимикаю TrueNAS…")
-        if not shutdown_truenas():
-            log("Не вдалося вимкнути TrueNAS.")
-            undo()
+        log(f"Minecraft досі працює ({left}) — перевірте Crafty вручну." if left
+            else "Світ збережено, Minecraft зупинено. TrueNAS працює далі.")
+        return not left
     finally:
         BUSY.release()
 
 
-def undo():
-    """the night stop did not end in a shutdown: bring Crafty back now instead of leaving the server down all night"""
-    names = load().get("restart") or []
-    if names and start_containers(names, "TrueNAS лишився ввімкненим"):
-        state = load()
-        state["restart"] = []
-        save(state)
+def at_boot():
+    """TrueNAS was switched on, or the app restarted: put Minecraft where the clock says (docker may still be coming up)"""
+    for _ in range(90):
+        if docker_ready():
+            break
+        time.sleep(10)
+    else:
+        log("Docker так і не запустився: нічого не роблю.")
+        return
+    state = load()
+    if not state["enabled"]:
+        log("Старт: функцію вимкнено, Minecraft лишаю як є.")
+        return
+    try:
+        if is_open(state):
+            open_minecraft("TrueNAS увімкнено вдень")
+        else:
+            # Crafty starts Minecraft by itself when its container comes up: let it, then close for the night
+            time.sleep(BOOT_SETTLE)
+            close_minecraft("TrueNAS увімкнено вночі")
+    except Exception as e:
+        log("Старт: " + str(e))
 
 
-def target_today(state):
-    hh, mm = (int(x) for x in state["time"].split(":"))
+def moment_today(value):
+    hh, mm = (int(x) for x in value.split(":")[:2])
     return now().replace(hour=hh, minute=mm, second=0, microsecond=0)
+
+
+def due(state, key, last_key):
+    """(is the stop or start of today due and not done yet, today's date)"""
+    t = moment_today(state[key])
+    day = f"{t:%Y-%m-%d}"
+    return 0 <= (now() - t).total_seconds() < WINDOW and state.get(last_key) != day, day
+
+
+def tick():
+    """one look at the clock: the stop or the start when its moment has come"""
+    state = load()
+    if not state["enabled"]:
+        return
+    stop_due, day = due(state, "stop", "last_stop")
+    if stop_due:
+        state["last_stop"] = day
+        save(state)
+        if state.get("skip") == day:
+            log("Сьогоднішню нічну перерву пропущено (так вирішили на сторінці).")
+        else:
+            close_minecraft("нічна перерва")
+    state = load()
+    start_due, day = due(state, "start", "last_start")
+    if start_due:
+        state["last_start"] = day
+        save(state)
+        open_minecraft("ранок")
 
 
 def scheduler():
     while True:
         try:
-            state = load()
-            t = target_today(state)
-            today = f"{t:%Y-%m-%d}"
-            due = 0 <= (now() - t).total_seconds() < WINDOW
-            if state["enabled"] and due and state["last_run"] != today and time.time() - STARTED > SETTLE:
-                state["last_run"] = today
-                save(state)
-                if state.get("skip") == today:
-                    log("Сьогоднішнє вимкнення пропущено (так вирішили на сторінці).")
-                else:
-                    run(False)
+            tick()
         except Exception as e:
             log("Помилка планувальника: " + str(e))
         time.sleep(15)
 
 
-def next_run(state):
-    if not state["enabled"]:
-        return None
-    t = target_today(state)
-    if now() >= t or state["last_run"] == f"{t:%Y-%m-%d}":
+def next_moment(state, key, last_key):
+    t = moment_today(state[key])
+    if now() >= t or state.get(last_key) == f"{t:%Y-%m-%d}":
         t += datetime.timedelta(days=1)
     return t
 
 
 PAGE = """<!doctype html>
 <html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Нічне вимкнення</title>
+<title>Нічна перерва</title>
 <style>
 :root{color-scheme:dark}
 body{margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;background:#0d1417;color:#ece6d8}
@@ -254,18 +290,21 @@ pre{white-space:pre-wrap;font:12px/1.5 Consolas,monospace;color:#b8c2bb;max-heig
 .muted{color:#9aa49d;font-size:13px}
 form{display:inline}
 </style></head><body><main>
-<h1>Нічне вимкнення</h1>
-<p class="sub">Сервер Wilds &amp; Wanderers: спершу Minecraft зберігає світ і зупиняється, потім вимикається TrueNAS.</p>
+<h1>Нічна перерва</h1>
+<p class="sub">Сервер Wilds &amp; Wanderers: уночі Minecraft зберігає світ і зупиняється, зранку запускається сам. TrueNAS працює весь час.</p>
 <div class="card"><div class="row">
 <div class="state %(cls)s">%(state)s</div>
 <form method="post" action="/toggle"><button class="big %(btn)s">%(action)s</button></form>
 </div><p class="muted">%(detail)s</p></div>
-<div class="card"><div class="row">
-<form method="post" action="/time">Час вимкнення: <input type="time" name="time" value="%(time)s" required> <button class="ghost">Зберегти</button></form>
-</div><p class="muted">Часовий пояс: %(tz)s. Зараз %(clock)s.</p>
+<div class="card"><form method="post" action="/times"><div class="row">
+<label>Вимкнути о <input type="time" name="stop" value="%(stop)s" required></label>
+<label>Увімкнути о <input type="time" name="start" value="%(start)s" required></label>
+<button class="ghost">Зберегти</button></div></form>
+<p class="muted">Часовий пояс: %(tz)s. Зараз %(clock)s — %(phase)s.</p>
 <div class="row">
 <form method="post" action="/skip"><button class="ghost">%(skip)s</button></form>
-<form method="post" action="/check"><button class="ghost">Перевірити зараз (нічого не вимикає)</button></form>
+<form method="post" action="/open"><button class="ghost">Запустити Minecraft зараз</button></form>
+<form method="post" action="/check"><button class="ghost">Перевірити (нічого не вимикає)</button></form>
 </div></div>
 <div class="card"><pre>%(log)s</pre></div>
 </main></body></html>"""
@@ -273,14 +312,13 @@ form{display:inline}
 
 def render():
     s = load()
-    nxt = next_run(s)
-    today = f"{now():%Y-%m-%d}"
-    skipped = nxt is not None and s.get("skip") == f"{nxt:%Y-%m-%d}"
+    nstop, nstart = next_moment(s, "stop", "last_stop"), next_moment(s, "start", "last_start")
+    skipped = s.get("skip") == f"{nstop:%Y-%m-%d}"
     if s["enabled"]:
-        detail = (f"Наступне вимкнення: {nxt:%d.%m о %H:%M}" + (" — пропускається" if skipped else "") + ". "
-                  "Гравців на сервері в цей момент буде відключено.")
+        detail = (f"Наступна перерва: {nstop:%d.%m о %H:%M}" + (" — пропускається" if skipped else "") +
+                  f", запуск: {nstart:%d.%m о %H:%M}. Гравців на сервері в момент перерви буде відключено.")
     else:
-        detail = "Сервер працюватиме, доки його не вимкнуть вручну."
+        detail = "Minecraft працюватиме, доки його не зупинять вручну."
     try:
         with open(LOG_FILE, encoding="utf-8") as f:
             tail = "\n".join(f.read().splitlines()[-40:][::-1])
@@ -289,9 +327,17 @@ def render():
     return PAGE % dict(
         cls="on" if s["enabled"] else "off", state="Увімкнено" if s["enabled"] else "Вимкнено",
         btn="stop" if s["enabled"] else "go", action="Вимкнути функцію" if s["enabled"] else "Увімкнути функцію",
-        detail=html.escape(detail), time=html.escape(s["time"]), tz=html.escape(os.environ.get("TZ", "UTC")),
-        clock=f"{now():%d.%m.%Y %H:%M}", log=html.escape(tail),
+        detail=html.escape(detail), stop=html.escape(s["stop"]), start=html.escape(s["start"]),
+        tz=html.escape(os.environ.get("TZ", "UTC")), clock=f"{now():%d.%m.%Y %H:%M}",
+        phase="сервер має працювати" if is_open(s) else "нічна перерва", log=html.escape(tail),
         skip="Не пропускати цю ніч" if skipped else "Пропустити цю ніч")
+
+
+def valid(value):
+    hh, mm = (int(x) for x in value.split(":")[:2])
+    if not (0 <= hh < 24 and 0 <= mm < 60):
+        raise ValueError
+    return f"{hh:02d}:{mm:02d}"
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -316,26 +362,23 @@ class Handler(http.server.BaseHTTPRequestHandler):
             s["enabled"] = not s["enabled"]
             save(s)
             log("Функцію " + ("увімкнено" if s["enabled"] else "вимкнено") + " на сторінці")
-        elif path == "/time":
-            value = (form.get("time") or [""])[0]
+        elif path == "/times":
             try:
-                hh, mm = (int(x) for x in value.split(":")[:2])
-                if not (0 <= hh < 24 and 0 <= mm < 60):
-                    raise ValueError
-                s["time"] = f"{hh:02d}:{mm:02d}"
+                s["stop"], s["start"] = valid((form.get("stop") or [""])[0]), valid((form.get("start") or [""])[0])
                 save(s)
-                log("Час вимкнення: " + s["time"])
+                log(f"Перерва: з {s['stop']} до {s['start']}")
             except ValueError:
                 pass
         elif path == "/skip":
-            nxt = next_run(s)
-            if nxt is not None:
-                day = f"{nxt:%Y-%m-%d}"
-                s["skip"] = "" if s.get("skip") == day else day
-                save(s)
-                log(("Пропущу" if s["skip"] else "Не пропускатиму") + f" вимкнення {nxt:%d.%m}")
+            day = f"{next_moment(s, 'stop', 'last_stop'):%Y-%m-%d}"
+            s["skip"] = "" if s.get("skip") == day else day
+            save(s)
+            log(("Пропущу" if s["skip"] else "Не пропускатиму") + f" перерву {day}")
+        elif path == "/open":
+            threading.Thread(target=open_minecraft, args=("запущено на сторінці",), daemon=True).start()
+            time.sleep(3)
         elif path == "/check":
-            threading.Thread(target=run, args=(True,), daemon=True).start()
+            threading.Thread(target=close_minecraft, args=("перевірка", True), daemon=True).start()
             time.sleep(3)
         else:
             self.send_error(404)
@@ -350,8 +393,11 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 def main():
     os.makedirs(DATA, exist_ok=True)
-    log(f"Запущено. Вимкнення {'увімкнено' if load()['enabled'] else 'вимкнено'}, час {load()['time']} ({os.environ.get('TZ', 'UTC')})")
-    threading.Thread(target=restart_after_boot, daemon=True).start()
+    s = load()
+    save(s)
+    log(f"Запущено. Нічна перерва {'увімкнена' if s['enabled'] else 'вимкнена'}: з {s['stop']} до {s['start']} "
+        f"({os.environ.get('TZ', 'UTC')}); TrueNAS більше не вимикається")
+    threading.Thread(target=at_boot, daemon=True).start()
     threading.Thread(target=scheduler, daemon=True).start()
     http.server.ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
 
